@@ -1,0 +1,35 @@
+bookmarks = {
+	bookmark = {
+		name = "BLITZKRIEG_2001"
+		desc = "BLITZKRIEG_2001_DESC"
+		date = 2001.1.1.1
+		picture = "GFX_select_date_2001"
+		default_country = "CHI"
+		default = yes
+
+		# 唯一可玩国家：中国
+		"CHI" = {
+			history = "CHI_MILLENNIUM_DAWN_DESC"
+			ideology = communism
+			ideas = {
+
+
+			}
+			focuses = {
+
+				
+
+			}
+			# ...其他配置（国策、理念等）
+			
+		}
+
+		# 其他所有国家标记为不可选
+		"---" = { 
+			minor = yes 
+			history = "OTHER_MILLENNIUM_DAWN_DESC"
+		}
+		
+		effect = { randomize_weather = 22345 }
+	}
+}
