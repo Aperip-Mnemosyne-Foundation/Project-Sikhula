@@ -2,10 +2,10 @@ bookmarks = {
 	bookmark = {
 		name = "BLITZKRIEG_2001"
 		desc = "BLITZKRIEG_2001_DESC"
-		date = 2001.1.1.1
+		date = 2011.1.1.1
 		picture = "GFX_select_date_2001"
 		default_country = "CHI"
-		default = yes
+		default = no
 
 		# 唯一可玩国家：中国
 		"CHI" = {
