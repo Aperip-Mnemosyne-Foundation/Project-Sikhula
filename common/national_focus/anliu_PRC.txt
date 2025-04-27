@@ -5,7 +5,7 @@ focus_tree = {
         icon = GFX_goal_generic_political_reform
         x = 1
         y = 1
-        cost = 30
+        cost = 15
 
         completion_reward = {
             add_stability = 0.03   # +3%稳定度
