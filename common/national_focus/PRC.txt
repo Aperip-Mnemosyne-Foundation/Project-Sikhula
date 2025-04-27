@@ -22,7 +22,7 @@ focus_tree = {
     focus = {
         id = PRC_prepare_nationalday
         icon = GFX_goal_generic_political_reform
-        x = 1
+        x = 0
         y = 2
         cost = 15
 
