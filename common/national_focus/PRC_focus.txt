@@ -1,0 +1,48 @@
+focus_tree = {
+    id = PRC_focus
+    country = PRC
+
+    default = no
+    shared_focus = no
+
+    # 第一个国策：庆祝祖国49周年生日
+    focus = {
+        id = PRC_celebration_national_day
+        icon = GFX_goal_generic_political_reform
+        x = 0
+        y = 0
+        cost = 15
+        completion_reward = {
+            add_stability = 0.03
+            add_political_power = 100
+        }
+    }
+
+    # 第二个国策：准备特殊的国庆
+    focus = {
+        id = PRC_prepare_nationalday
+        icon = GFX_goal_generic_political_reform
+        x = 0
+        y = -2
+        cost = 15
+        prerequisite = { PRC_celebration_national_day }
+        relative_position_id = { PRC_celebration_national_day }
+        completion_reward = {
+            add_stability = 0.05
+        }
+    }
+
+    # 第三个国策：国庆大阅兵
+    focus = {
+        id = PRC_prepare_military_parade
+        icon = GFX_goal_generic_political_reform
+        x = -1
+        y = -3
+        cost = 5
+        prerequisite = { PRC_prepare_nationalday }
+        relative_position_id = { PRC_prepare_nationalday }
+        completion_reward = {
+            add_army_experience = 10
+        }
+    }
+}
