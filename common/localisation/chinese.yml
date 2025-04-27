@@ -1,3 +1,6 @@
 l_simp_chinese:
   PRC_celebration_national_day: "庆祝祖国49周年生日！"
   PRC_celebration_national_day_desc: "祖国已经四十九岁了……"
+
+  PRC_prepare_nationalday: "准备一次特殊的国庆"
+  PRC_prepare_nationalday_desc: "今年我们需要办一个重大的国庆"
