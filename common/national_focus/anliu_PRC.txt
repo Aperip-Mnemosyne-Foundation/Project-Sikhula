@@ -1,16 +1,30 @@
-｛
-  focus_tree｛
-      id:PRC
-  ｝
-  focus = {
-      id = PRC_celebration_national_day
-      icon = GFX_goal_generic_political_reform
-      x = 1
-      y = 1
-      cost = 30
-      completion_reward = {
-            add_stability = 0.03          # 增         加3%稳 定度
-          add_political_power = 100     # 增          加100政治点
-      }
-  }
-｝
+focus_tree = {
+    id = anliu_PRC
+    focus = {
+        id = PRC_celebration_national_day
+        icon = GFX_goal_generic_political_reform
+        x = 1
+        y = 1
+        cost = 30
+
+        completion_reward = {
+            add_stability = 0.03   # +3%稳定度
+            add_political_power = 100  # +100政治点
+        }
+    }
+
+    focus = {
+        id = PRC_prepare_nationalday
+        icon = GFX_goal_generic_political_reform
+        x = 1
+        y = 2
+        cost = 15
+
+        prerequisite = { PRC_celebration_national_day }
+        relative_position_id = { "PRC_celebration_national_day" }
+
+        completion_reward = {
+            add_stability = 0.05   # +5%稳定度
+        }
+    }
+}
