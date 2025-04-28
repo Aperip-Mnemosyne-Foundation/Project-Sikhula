@@ -18,7 +18,7 @@ focus_tree = {
         }
     }
 
-    # 第二个国策：准备特殊的国庆
+    # 第二个国策：准备一次特殊的国庆
     focus = {
         id = PRC_prepare_nationalday
         icon = GFX_goal_generic_political_reform
@@ -43,6 +43,20 @@ focus_tree = {
         relative_position_id = { PRC_prepare_nationalday }
         completion_reward = {
             add_army_experience = 10
+        }
+    }
+
+    # 第四个国策：同志们辛苦了
+    focus = {
+        id = PRC_thank_for_hard_work
+        icon = GFX_goal_generic_political_reform
+        x = 1
+        y = -3
+        cost = 3
+        prerequisite = { PRC_prepare_nationalday }
+        relative_position_id = { PRC_prepare_nationalday }
+        completion_reward = {
+            add_war_support = 0.05
         }
     }
 }
