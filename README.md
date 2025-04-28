@@ -6,7 +6,8 @@
 
 分工栏（可以自填志愿）:
 
-国策预做组:minato（本地化+国策）
+
+https://docs.qq.com/doc/DSnJBcm5UZkdiWXBw?scene=96c40861054fc599bdc71c269VjBu1
 
 
 
