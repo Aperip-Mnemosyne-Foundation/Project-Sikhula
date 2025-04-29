@@ -49,4 +49,36 @@ focus_tree = {
       country_event = { id = PRC_national_day_ends }
     }
   }
+
+  focus = {
+    id = PRC_country_future
+    icon = GFX_goal_generic_political_reform
+    x = 2
+    y = 0
+    cost = 30
+    prerequisite = {
+      focus = PRC_prepare_military_parade
+      focus = PRC_thank_for_hard_work
+    }
+    available = {
+      has_country_flag = PRC_national_day_done
+      date > 1999.10.10
+    }
+    complete_tooltip = {
+      hidden_effect = {
+        remove_focus = PRC_celebration_national_day
+        remove_focus = PRC_prepare_nationalday
+        remove_focus = PRC_prepare_military_parade
+        remove_focus = PRC_thank_for_hard_work
+      }
+    }
+    completion_reward = {
+      add_building_construction = {
+        type = civilian_factory
+        level = 5
+        instant_build = yes
+      }
+    }
+    show_if_unavailable = yes
+  }
 }
