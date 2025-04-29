@@ -10,5 +10,6 @@ country_event = {
 
   option = {
     name = PRC_national_day_ends_option
+    set_country_flag = PRC_national_day_done
   }
 }
