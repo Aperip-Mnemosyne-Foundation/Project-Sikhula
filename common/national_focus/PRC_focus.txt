@@ -62,7 +62,7 @@ focus_tree = {
     }
     available = {
       has_country_flag = PRC_national_day_done
-      date > 1999.10.10
+      date > 1998.10.10
     }
     complete_tooltip = {
       hidden_effect = {
