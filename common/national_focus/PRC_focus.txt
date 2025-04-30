@@ -17,9 +17,9 @@ focus_tree = {
     id = PRC_prepare_nationalday
     icon = GFX_goal_generic_political_reform
     x = 0
-    y = -2
+    y = 1
     cost = 15
-    prerequisite = { PRC_celebration_national_day }
+    prerequisite = { focus = PRC_celebration_national_day }
     completion_reward = {
       add_stability = 0.05
     }
@@ -29,11 +29,11 @@ focus_tree = {
     id = PRC_prepare_military_parade
     icon = GFX_goal_generic_political_reform
     x = -1
-    y = -3
+    y = 2
     cost = 5
-    prerequisite = { PRC_prepare_nationalday }
+    prerequisite = { focus = PRC_prepare_nationalday }
     completion_reward = {
-      add_army_experience = 10
+      army_experience = 10
     }
   }
 
@@ -41,9 +41,9 @@ focus_tree = {
     id = PRC_thank_for_hard_work
     icon = GFX_goal_generic_political_reform
     x = 1
-    y = -3
+    y = 2
     cost = 3
-    prerequisite = { PRC_prepare_nationalday }
+    prerequisite = { focus = PRC_prepare_nationalday }
     completion_reward = {
       add_war_support = 0.05
       country_event = { id = PRC_national_day_ends }
@@ -53,8 +53,8 @@ focus_tree = {
   focus = {
     id = PRC_country_future
     icon = GFX_goal_generic_political_reform
-    x = 2
-    y = 0
+    x = 0
+    y = 3
     cost = 30
     prerequisite = {
       focus = PRC_prepare_military_parade
@@ -64,21 +64,14 @@ focus_tree = {
       has_country_flag = PRC_national_day_done
       date > 1998.10.10
     }
-    complete_tooltip = {
-      hidden_effect = {
-        remove_focus = PRC_celebration_national_day
-        remove_focus = PRC_prepare_nationalday
-        remove_focus = PRC_prepare_military_parade
-        remove_focus = PRC_thank_for_hard_work
-      }
-    }
+    
     completion_reward = {
-      add_building_construction = {
-        type = civilian_factory
-        level = 5
-        instant_build = yes
-      }
+      # add_building_construction = {
+      #   type = civilian_factory
+      #   level = 5
+      #   instant_build = yes
+      # }
     }
-    show_if_unavailable = yes
+    # show_if_unavailable = yes
   }
 }
