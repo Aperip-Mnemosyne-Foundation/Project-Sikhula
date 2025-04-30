@@ -10,9 +10,7 @@ picture="thumbnail.png"
 replace_path="gfx/loadingscreens"
 replace_path= "common/bookmarks"
 
-dependencies={
-  "Millennium Dawn: A Modern Day Mod"
-}
+
 
 
 supported_version="1.16.*"
