@@ -8,9 +8,12 @@ name="mill"
 picture="thumbnail.png"
 
 replace_path="gfx/loadingscreens"
-replace_path= "common/bookmarks"
-
-
 
 
 supported_version="1.16.*"
+
+dependencies={
+	"basegame" = "1.16.*"
+}
+
+
