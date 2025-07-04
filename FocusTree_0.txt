@@ -1,0 +1,520 @@
+focus_tree = {
+	id = FocusTree_0
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = 
+		}
+	}
+	default = no
+	focus = {
+		id = 海湾战争的警钟
+		icon = GFX_goal_unknown
+		cost = 0.00
+		x = 21
+		y = 1
+
+	}
+	focus = {
+		id = 设立总装备部
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 海湾战争的警钟
+		}
+		x = 18
+		y = 2
+
+	}
+	focus = {
+		id = 禁止军队经商
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 海湾战争的警钟
+		}
+		x = 24
+		y = 2
+
+	}
+	focus = {
+		id = 世纪交替的军改
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 设立总装备部
+		}
+		prerequisite = {
+			focus = 禁止军队经商
+		}
+		x = 21
+		y = 3
+
+	}
+	focus = {
+		id = 推进指挥自动化
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 世纪交替的军改
+		}
+		x = 21
+		y = 4
+
+	}
+	focus = {
+		id = 陆军改革
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 推进指挥自动化
+		}
+		x = 9
+		y = 5
+
+	}
+	focus = {
+		id = 全面推进机械化
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 陆军改革
+		}
+		x = 6
+		y = 6
+
+	}
+	focus = {
+		id = 扩产86步兵战车
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 全面推进机械化
+		}
+		mutually_exclusive = {
+			focus = 改进86A步兵战车
+		}
+		x = 5
+		y = 7
+
+	}
+	focus = {
+		id = 改进86A步兵战车
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 全面推进机械化
+		}
+		mutually_exclusive = {
+			focus = 扩产86步兵战车
+		}
+		x = 7
+		y = 7
+
+	}
+	focus = {
+		id = 加强轻步兵训练
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 陆军改革
+		}
+		x = 12
+		y = 6
+
+	}
+	focus = {
+		id = 扩产81式自动步枪
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 加强轻步兵训练
+		}
+		mutually_exclusive = {
+			focus = 改进95式自动步枪
+		}
+		x = 11
+		y = 7
+
+	}
+	focus = {
+		id = 改进95式自动步枪
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 加强轻步兵训练
+		}
+		mutually_exclusive = {
+			focus = 扩产81式自动步枪
+		}
+		x = 13
+		y = 7
+
+	}
+	focus = {
+		id = 空军革新
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 推进指挥自动化
+		}
+		prerequisite = {
+			focus = 推进指挥自动化
+		}
+		x = 17
+		y = 5
+
+	}
+	focus = {
+		id = 加速研发歼-10
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 空军革新
+		}
+		x = 16
+		y = 6
+
+	}
+	focus = {
+		id = 引进苏27
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 空军革新
+		}
+		x = 18
+		y = 6
+
+	}
+	focus = {
+		id = 近海海军
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 推进指挥自动化
+		}
+		x = 26
+		y = 5
+
+	}
+	focus = {
+		id = 扩产歼轰7
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 近海海军
+		}
+		x = 24
+		y = 6
+
+	}
+	focus = {
+		id = 改进039型潜艇
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 扩产歼轰7
+		}
+		x = 24
+		y = 7
+
+	}
+	focus = {
+		id = 扩产022型导弹艇
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 改进039型潜艇
+		}
+		x = 24
+		y = 8
+
+	}
+	focus = {
+		id = 放眼未来
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 近海海军
+		}
+		x = 28
+		y = 6
+
+	}
+	focus = {
+		id = 远洋技术储备
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 放眼未来
+		}
+		x = 28
+		y = 7
+
+	}
+	focus = {
+		id = 购买航母
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 远洋技术储备
+		}
+		x = 28
+		y = 8
+
+	}
+	focus = {
+		id = 近海防御
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 扩产022型导弹艇
+		}
+		prerequisite = {
+			focus = 购买航母
+		}
+		x = 26
+		y = 9
+
+	}
+	focus = {
+		id = 后勤体系精简化
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 推进指挥自动化
+		}
+		x = 32
+		y = 5
+
+	}
+	focus = {
+		id = 预算管理改革
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 后勤体系精简化
+		}
+		x = 31
+		y = 6
+
+	}
+	focus = {
+		id = 建立现代后勤信息系统
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 预算管理改革
+		}
+		x = 31
+		y = 7
+
+	}
+	focus = {
+		id = 医疗体制改革
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 建立现代后勤信息系统
+		}
+		x = 31
+		y = 8
+
+	}
+	focus = {
+		id = 物资采购制度改革
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 后勤体系精简化
+		}
+		x = 33
+		y = 6
+
+	}
+	focus = {
+		id = 扩产96式坦克
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 改进86A步兵战车
+			focus = 扩产86步兵战车
+		}
+		x = 6
+		y = 8
+
+	}
+	focus = {
+		id = 初步生产99式坦克
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 扩产96式坦克
+		}
+		x = 6
+		y = 9
+
+	}
+	focus = {
+		id = 强化基层指挥组织
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 扩产81式自动步枪
+			focus = 改进95式自动步枪
+		}
+		x = 12
+		y = 8
+
+	}
+	focus = {
+		id = 强化民兵训练与预备役体系
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 强化基层指挥组织
+		}
+		x = 12
+		y = 9
+
+	}
+	focus = {
+		id = 完善新世纪陆军体系
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 强化民兵训练与预备役体系
+			focus = 初步生产99式坦克
+		}
+		x = 9
+		y = 10
+
+	}
+	focus = {
+		id = 国产化战机配件
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 加速研发歼-10
+		}
+		prerequisite = {
+			focus = 引进苏27
+		}
+		x = 17
+		y = 7
+
+	}
+	focus = {
+		id = 扩产新式国产战机
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 国产化战机配件
+		}
+		x = 17
+		y = 8
+
+	}
+	focus = {
+		id = 升级国土防空
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 扩产新式国产战机
+		}
+		x = 17
+		y = 9
+
+	}
+	focus = {
+		id = 追赶先进空军体系
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 升级国土防空
+		}
+		x = 17
+		y = 10
+
+	}
+	focus = {
+		id = 立足空潜快体系
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 近海防御
+		}
+		x = 26
+		y = 10
+
+	}
+	focus = {
+		id = 装备维修保障完善
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 物资采购制度改革
+		}
+		x = 33
+		y = 7
+
+	}
+	focus = {
+		id = 后勤教育和人才培养改革
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 装备维修保障完善
+		}
+		x = 33
+		y = 8
+
+	}
+	focus = {
+		id = 强化二炮部队
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 医疗体制改革
+		}
+		prerequisite = {
+			focus = 后勤教育和人才培养改革
+		}
+		x = 32
+		y = 9
+
+	}
+	focus = {
+		id = 综合后勤支援体系
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 强化二炮部队
+		}
+		x = 32
+		y = 10
+
+	}
+	focus = {
+		id = 整军备战
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = 完善新世纪陆军体系
+		}
+		prerequisite = {
+			focus = 追赶先进空军体系
+		}
+		prerequisite = {
+			focus = 立足空潜快体系
+		}
+		prerequisite = {
+			focus = 综合后勤支援体系
+		}
+		x = 21
+		y = 11
+
+	}
+}
