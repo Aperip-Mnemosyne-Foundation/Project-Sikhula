@@ -4,12 +4,17 @@ focus_tree = {
 		factor = 0
 		modifier = {
 			add = 10
-			tag = 
+			tag = PRC
 		}
 	}
+
+
 	default = no
+
+	continuous_focus_position = { x = 20 y = 1000 }
+	
 	focus = {
-		id = 海湾战争的警钟
+		id = PRC-01
 		icon = GFX_goal_unknown
 		cost = 0.00
 		x = 21
@@ -17,504 +22,502 @@ focus_tree = {
 
 	}
 	focus = {
-		id = 设立总装备部
+		id = PRC-02
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 海湾战争的警钟
+			focus = PRC-01
 		}
 		x = 18
 		y = 2
 
 	}
 	focus = {
-		id = 禁止军队经商
+		id = PRC-03
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 海湾战争的警钟
+			focus = PRC-01
 		}
 		x = 24
 		y = 2
 
 	}
 	focus = {
-		id = 世纪交替的军改
+		id = PRC-04
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 设立总装备部
+			focus = PRC-02
 		}
 		prerequisite = {
-			focus = 禁止军队经商
+			focus = PRC-03
 		}
 		x = 21
 		y = 3
 
 	}
 	focus = {
-		id = 推进指挥自动化
+		id = PRC-05
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 世纪交替的军改
+			focus = PRC-04
 		}
 		x = 21
 		y = 4
 
 	}
 	focus = {
-		id = 陆军改革
+		id = PRC-LAND-01
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 推进指挥自动化
+			focus = PRC-05
 		}
 		x = 9
 		y = 5
 
 	}
 	focus = {
-		id = 全面推进机械化
+		id = PRC-MECH-01
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 陆军改革
+			focus = PRC-LAND-01
 		}
 		x = 6
 		y = 6
 
 	}
 	focus = {
-		id = 扩产86步兵战车
+		id = PRC-MECH-02-L
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 全面推进机械化
+			focus = PRC-MECH-01
 		}
 		mutually_exclusive = {
-			focus = 改进86A步兵战车
+			focus = PRC-MECH-02-R
 		}
 		x = 5
 		y = 7
 
 	}
 	focus = {
-		id = 改进86A步兵战车
+		id = PRC-MECH-02-R
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 全面推进机械化
+			focus = PRC-MECH-01
 		}
 		mutually_exclusive = {
-			focus = 扩产86步兵战车
+			focus = PRC-MECH-02-L
 		}
 		x = 7
 		y = 7
 
 	}
 	focus = {
-		id = 加强轻步兵训练
+		id = PRC-QBB-01
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 陆军改革
+			focus = PRC-LAND-01
 		}
 		x = 12
 		y = 6
 
 	}
 	focus = {
-		id = 扩产81式自动步枪
+		id = PRC-QB-89
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 加强轻步兵训练
+			focus = PRC-QBB-01
 		}
 		mutually_exclusive = {
-			focus = 改进95式自动步枪
+			focus = PRC-QB-95
 		}
 		x = 11
 		y = 7
 
 	}
 	focus = {
-		id = 改进95式自动步枪
+		id = PRC-QB-95
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 加强轻步兵训练
+			focus = PRC-QBB-01
 		}
 		mutually_exclusive = {
-			focus = 扩产81式自动步枪
+			focus = PRC-QB-89
 		}
 		x = 13
 		y = 7
 
 	}
 	focus = {
-		id = 空军革新
+		id = PRC-AIR-01
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 推进指挥自动化
-		}
-		prerequisite = {
-			focus = 推进指挥自动化
+			focus = PRC-05
 		}
 		x = 17
 		y = 5
 
 	}
 	focus = {
-		id = 加速研发歼-10
+		id = PRC-AIR-L
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 空军革新
+			focus = PRC-AIR-01
 		}
 		x = 16
 		y = 6
 
 	}
 	focus = {
-		id = 引进苏27
+		id = PRC-AIR-R
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 空军革新
+			focus = PRC-AIR-01
 		}
 		x = 18
 		y = 6
 
 	}
 	focus = {
-		id = 近海海军
+		id = PRC-SEA-01
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 推进指挥自动化
+			focus = PRC-05
 		}
 		x = 26
 		y = 5
 
 	}
 	focus = {
-		id = 扩产歼轰7
+		id = PRC-SEA-L-01
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 近海海军
+			focus = PRC-SEA-01
 		}
 		x = 24
 		y = 6
 
 	}
 	focus = {
-		id = 改进039型潜艇
+		id = PRC-SEA-L-02
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 扩产歼轰7
+			focus = PRC-SEA-L-02
 		}
 		x = 24
 		y = 7
 
 	}
 	focus = {
-		id = 扩产022型导弹艇
+		id = PRC-SEA-L-03
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 改进039型潜艇
+			focus = PRC-SEA-L-02
 		}
 		x = 24
 		y = 8
 
 	}
 	focus = {
-		id = 放眼未来
+		id = PRC-SEA-R-01
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 近海海军
+			focus = PRC-SEA-01
 		}
 		x = 28
 		y = 6
 
 	}
 	focus = {
-		id = 远洋技术储备
+		id = PRC-SEA-R-02
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 放眼未来
+			focus = PRC-SEA-R-01
 		}
 		x = 28
 		y = 7
 
 	}
 	focus = {
-		id = 购买航母
+		id = PRC-SEA-R-03
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 远洋技术储备
+			focus = PRC-SEA-R-02
 		}
 		x = 28
 		y = 8
 
 	}
 	focus = {
-		id = 近海防御
+		id = PRC-SEA-02
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 扩产022型导弹艇
+			focus = PRC-SEA-L-03
 		}
 		prerequisite = {
-			focus = 购买航母
+			focus = PRC-SEA-R-03
 		}
 		x = 26
 		y = 9
 
 	}
 	focus = {
-		id = 后勤体系精简化
+		id = PRC-BACKUP-01
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 推进指挥自动化
+			focus = PRC-05
 		}
 		x = 32
 		y = 5
 
 	}
 	focus = {
-		id = 预算管理改革
+		id = PRC-BACKUP-L-01
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 后勤体系精简化
-		}
+			focus = PRC-BACKUP-01
 		x = 31
 		y = 6
 
 	}
 	focus = {
-		id = 建立现代后勤信息系统
+		id = PRC-BACKUP-L-02
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 预算管理改革
+			focus = PRC-BACKUP-L-01
 		}
 		x = 31
 		y = 7
 
 	}
 	focus = {
-		id = 医疗体制改革
+		id = PRC-BACKUP-L-03
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 建立现代后勤信息系统
+			focus = PRC-BACKUP-L-02
 		}
 		x = 31
 		y = 8
 
 	}
 	focus = {
-		id = 物资采购制度改革
+		id = PRC-BACKUP-R-01
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 后勤体系精简化
+			focus = PRC-BACKUP-01
 		}
 		x = 33
 		y = 6
 
 	}
 	focus = {
-		id = 扩产96式坦克
+		id = PRC-MECH-02
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 改进86A步兵战车
-			focus = 扩产86步兵战车
+			focus = PRC-MECH-02-L
+			focus = PRC-MECH-02-R
 		}
 		x = 6
 		y = 8
 
 	}
 	focus = {
-		id = 初步生产99式坦克
+		id = PRC-MECH-03
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 扩产96式坦克
+			focus = PRC-MECH-02
 		}
 		x = 6
 		y = 9
 
 	}
 	focus = {
-		id = 强化基层指挥组织
+		id = PRC-QBB-02
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 扩产81式自动步枪
-			focus = 改进95式自动步枪
+			focus = PRC-QB-89
+			focus = PRC-QB-95
 		}
 		x = 12
 		y = 8
 
 	}
 	focus = {
-		id = 强化民兵训练与预备役体系
+		id = PRC-QBB-03
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 强化基层指挥组织
+			focus = PRC-QBB-02
 		}
 		x = 12
 		y = 9
 
 	}
 	focus = {
-		id = 完善新世纪陆军体系
+		id = PRC-LAND-02
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 强化民兵训练与预备役体系
-			focus = 初步生产99式坦克
+			focus = PRC-QBB-03
+			focus = PRC-MECH-03
 		}
 		x = 9
 		y = 10
 
 	}
 	focus = {
-		id = 国产化战机配件
+		id = PRC-AIR-02
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 加速研发歼-10
+			focus = PRC-AIR-L
 		}
 		prerequisite = {
-			focus = 引进苏27
+			focus = PRC-AIR-R
 		}
 		x = 17
 		y = 7
 
 	}
 	focus = {
-		id = 扩产新式国产战机
+		id = PRC-AIR-03
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 国产化战机配件
+			focus = PRC-AIR-02
 		}
 		x = 17
 		y = 8
 
 	}
 	focus = {
-		id = 升级国土防空
+		id = PRC-AIR-04
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 扩产新式国产战机
+			focus = PRC-AIR-03
 		}
 		x = 17
 		y = 9
 
 	}
 	focus = {
-		id = 追赶先进空军体系
+		id = PRC-AIR-05
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 升级国土防空
+			focus = PRC-AIR-04
 		}
 		x = 17
 		y = 10
 
 	}
 	focus = {
-		id = 立足空潜快体系
+		id = PRC-SEA-03
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 近海防御
+			focus = PRC-SEA-02
 		}
 		x = 26
 		y = 10
 
 	}
 	focus = {
-		id = 装备维修保障完善
+		id = PRC-BACKUP-R-02
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 物资采购制度改革
+			focus = PRC-BACKUP-R-01
 		}
 		x = 33
 		y = 7
 
 	}
 	focus = {
-		id = 后勤教育和人才培养改革
+		id = PRC-BACKUP-R-03
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 装备维修保障完善
+			focus = PRC-BACKUP-R-02
 		}
 		x = 33
 		y = 8
 
 	}
 	focus = {
-		id = 强化二炮部队
+		id = PRC-BACKUP-02
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 医疗体制改革
+			focus = PRC-BACKUP-L-03
 		}
 		prerequisite = {
-			focus = 后勤教育和人才培养改革
+			focus = PRC-BACKUP-R-03
 		}
 		x = 32
 		y = 9
 
 	}
 	focus = {
-		id = 综合后勤支援体系
+		id = PRC-BACKUP-03
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 强化二炮部队
+			focus = PRC-BACKUP-02
 		}
 		x = 32
 		y = 10
 
 	}
 	focus = {
-		id = 整军备战
+		id = PRC-MIL-01
 		icon = GFX_goal_unknown
 		cost = 0.00
 		prerequisite = {
-			focus = 完善新世纪陆军体系
+			focus = PRC-LAND-02
 		}
 		prerequisite = {
-			focus = 追赶先进空军体系
+			focus = PRC-AIR-05
 		}
 		prerequisite = {
-			focus = 立足空潜快体系
+			focus = PRC-SEA-03
 		}
 		prerequisite = {
-			focus = 综合后勤支援体系
+			focus = PRC-BACKUP-03
 		}
 		x = 21
 		y = 11
 
+		}
 	}
+
 }
