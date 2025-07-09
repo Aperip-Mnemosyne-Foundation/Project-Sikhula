@@ -1,0 +1,10 @@
+bookmarks = {
+	bookmark = {
+		name = "BLITZKRIEG_NAME"
+		desc = "BLITZKRIEG_DESC"
+		date = 2000.1.1.12
+		picture = "GFX_select_date_2000"
+		default_country = "RPC"
+	
+	}
+}

@@ -1,0 +1,32 @@
+state={
+	id=783
+	name="STATE_783"
+	resources = {
+		tungsten = 100
+		rubber = 24
+		oil = 2
+		steel = 1
+	}
+	history = {
+		owner = VIN
+		add_core_of = VIN
+		victory_points = { 4401 20 }
+		victory_points = { 4341 1 }
+		victory_points = { 7303 1 }
+		victory_points = { 12288 1 }
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 4
+			arms_factory = 1
+			air_base = 5
+			4401 = { naval_base = 8 }
+		}
+	}
+	provinces={
+		1248 1285 1300 1328 1396 1400 1423 1605 4223 4255 4284 4334 4341 4363 4401 4405 7229 7238 7271 7303 7331 7347 7380 10137 10162 10180 10232 10261 10309 12109 12133 12176 12204 12232 12288 
+	}
+	manpower=48655544
+	buildings_max_level_factor=1.000
+	
+	state_category = large_city
+}
