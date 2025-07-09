@@ -6,9 +6,9 @@ state={
 	}
 
 	history={
-		owner = SSD
+		owner = SUD
 		add_core_of = SUD
-		add_core_of = SSD
+		add_core_of = SUD
 		buildings = {
 			infrastructure = 1
 		}

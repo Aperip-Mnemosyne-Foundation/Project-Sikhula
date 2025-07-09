@@ -11,7 +11,7 @@ state = {
 	history = {
 		owner = AFG
 		add_core_of = AFG
-		add_core_of = TAL
+		add_core_of = AFG
 		victory_points = { 12831 1 }	#khost
 		victory_points = { 10781 2 }	#pol
 		victory_points = { 10852 1 }	#charikar
@@ -22,7 +22,7 @@ state = {
 			industrial_complex = 1
 			arms_factory = 1
 		}
-		TAL = {
+		AFG = {
 			set_province_controller = 10781
 		}
 	}

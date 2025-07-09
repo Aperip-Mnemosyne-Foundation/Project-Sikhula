@@ -3,9 +3,9 @@ state={
 	name="STATE_1055"
 	
 	history = {
-		owner = TAL
+		owner = AFG
 		add_core_of = AFG
-		add_core_of = TAL
+		add_core_of = AFG
 		victory_points = { 5064 5 }		#Kandahar
 		victory_points = { 4949 2 }		#lashkar
 		buildings = {

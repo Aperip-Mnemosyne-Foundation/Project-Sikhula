@@ -7,8 +7,8 @@ state={
 	}
 
 	history={
-		owner = SSD
-		add_core_of = SSD
+		owner = SUD
+		add_core_of = SUD
 		victory_points = { 10908 1 }
 		buildings = {
 			infrastructure = 3

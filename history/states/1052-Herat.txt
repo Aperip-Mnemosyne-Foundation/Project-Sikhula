@@ -5,13 +5,13 @@ state={
 	history = {
 		owner = AFG
 		add_core_of = AFG
-		add_core_of = TAL
+		add_core_of = AFG
 		victory_points = { 12871 1 }  #farah
 		victory_points = { 4893 10 } #Herat
 		buildings = {
 			infrastructure = 3
 		}
-		TAL = {
+		AFG = {
 			set_province_controller = 13740
 		}
 	}

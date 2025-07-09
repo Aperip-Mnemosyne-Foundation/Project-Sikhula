@@ -3,8 +3,8 @@ state={
 	name="STATE_1054"
 	
 	history = {
-		owner = TAL
-		add_core_of = TAL
+		owner = AFG
+		add_core_of = AFG
 		add_core_of = AFG
 		victory_points = { 1948 1 }		#Zaranj
 		buildings = {
