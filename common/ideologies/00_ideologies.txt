@@ -1,7 +1,7 @@
 ideologies = {
 
 
-	I0 = {
+	RADICALSOCIALISM = {
 
 		types = {
 		    T0 = {}
@@ -9,11 +9,11 @@ ideologies = {
 		}
 
 		dynamic_faction_names = {
-			"FACTION_NAME_I0_1"
-			"FACTION_NAME_I0_2"
-			"FACTION_NAME_I0_3"
-			"FACTION_NAME_I0_4"
-			"FACTION_NAME_I0_5"
+			"FACTION_NAME_RADICALSOCIALISM_1"
+			"FACTION_NAME_RADICALSOCIALISM_2"
+			"FACTION_NAME_RADICALSOCIALISM_3"
+			"FACTION_NAME_RADICALSOCIALISM_4"
+			"FACTION_NAME_RADICALSOCIALISM_5"
 		}
 
 		color = { 132 0 255 }
@@ -38,7 +38,7 @@ ideologies = {
 		can_be_boosted = no
 	}
 	
-	I1 = {
+	DEMOCRATICSOCIALISM = {
 
 		types = {
 		    T1 = {}
@@ -46,11 +46,11 @@ ideologies = {
 		}
 
 		dynamic_faction_names = {
-			"FACTION_NAME_I1_1"
-			"FACTION_NAME_I1_2"
-			"FACTION_NAME_I1_3"
-			"FACTION_NAME_I1_4"
-			"FACTION_NAME_I1_5"
+			"FACTION_NAME_DEMOCRATICSOCIALISM_1"
+			"FACTION_NAME_DEMOCRATICSOCIALISM_2"
+			"FACTION_NAME_DEMOCRATICSOCIALISM_3"
+			"FACTION_NAME_DEMOCRATICSOCIALISM_4"
+			"FACTION_NAME_DEMOCRATICSOCIALISM_5"
 		}
 
 		color = { 100 40 100 }
@@ -75,7 +75,7 @@ ideologies = {
 		can_be_boosted = no
 	}
 	
-	I2 = {
+	SOCIALDEMOOCRACY = {
 
 		types = {
 		    T2 = {}
@@ -83,11 +83,11 @@ ideologies = {
 		}
 
 		dynamic_faction_names = {
-			"FACTION_NAME_I2_1"
-			"FACTION_NAME_I2_2"
-			"FACTION_NAME_I2_3"
-			"FACTION_NAME_I2_4"
-			"FACTION_NAME_I2_5"
+			"FACTION_NAME_SOCIALDEMOOCRACY_1"
+			"FACTION_NAME_SOCIALDEMOOCRACY_2"
+			"FACTION_NAME_SOCIALDEMOOCRACY_3"
+			"FACTION_NAME_SOCIALDEMOOCRACY_4"
+			"FACTION_NAME_SOCIALDEMOOCRACY_5"
 		}
 
 		color =  {117 85 117}
@@ -113,7 +113,7 @@ ideologies = {
 		can_be_boosted = no
 	}
 
-	I3 = {
+	FREEMARKETLIBERALISM = {
 
 		types = {
 		    T3 = {}
@@ -121,11 +121,11 @@ ideologies = {
 		}
 
 		dynamic_faction_names = {
-			"FACTION_NAME_I3_1"
-			"FACTION_NAME_I3_2"
-			"FACTION_NAME_I3_3"
-			"FACTION_NAME_I3_4"
-			"FACTION_NAME_I3_5"
+			"FACTION_NAME_FREEMARKETLIBERALISM_1"
+			"FACTION_NAME_FREEMARKETLIBERALISM_2"
+			"FACTION_NAME_FREEMARKETLIBERALISM_3"
+			"FACTION_NAME_FREEMARKETLIBERALISM_4"
+			"FACTION_NAME_FREEMARKETLIBERALISM_5"
 		}
 
 		color = { 255 170 255 }
@@ -151,7 +151,7 @@ ideologies = {
 		can_be_boosted = no
 	}
 
-	I4 = {
+	FULLAUTONOMISM = {
 
 		types = {
 		    T4 = {}
@@ -159,11 +159,11 @@ ideologies = {
 		}
 
 		dynamic_faction_names = {
-			"FACTION_NAME_I4_1"
-			"FACTION_NAME_I4_2"
-			"FACTION_NAME_I4_3"
-			"FACTION_NAME_I4_4"
-			"FACTION_NAME_I4_5"
+			"FACTION_NAME_FULLAUTONOMISM_1"
+			"FACTION_NAME_FULLAUTONOMISM_2"
+			"FACTION_NAME_FULLAUTONOMISM_3"
+			"FACTION_NAME_FULLAUTONOMISM_4"
+			"FACTION_NAME_FULLAUTONOMISM_5"
 		}
 
 		color = { 255 170 170 }
@@ -189,7 +189,7 @@ ideologies = {
 		can_be_boosted = no
 	}
 
-	I5 = {
+	CONSERVATISM = {
 
 		types = {
 		    T5 = {}
@@ -197,12 +197,12 @@ ideologies = {
 		}
 
 		dynamic_faction_names = {
-			"FACTION_NAME_I5_1"
-			"FACTION_NAME_I5_2"
-			"FACTION_NAME_I5_3"
-			"FACTION_NAME_I5_4"
-			"FACTION_NAME_I5_5"
-			"FACTION_NAME_I5_6"
+			"FACTION_NAME_CONSERVATISM_1"
+			"FACTION_NAME_CONSERVATISM_2"
+			"FACTION_NAME_CONSERVATISM_3"
+			"FACTION_NAME_CONSERVATISM_4"
+			"FACTION_NAME_CONSERVATISM_5"
+			"FACTION_NAME_CONSERVATISM_6"
 		}
 
 		color = { 102 204 255 }
@@ -270,7 +270,7 @@ ideologies = {
 	}
 
 
-	I7 = {
+	DICTAT0RIALABSOLUTISM = {
 
 		types = {
 		    T7 = {}
@@ -278,11 +278,11 @@ ideologies = {
 		}
 
 		dynamic_faction_names = {
-			"FACTION_NAME_I7_1"
-			"FACTION_NAME_I7_2"
-			"FACTION_NAME_I7_3"
-			"FACTION_NAME_I7_4"
-			"FACTION_NAME_I7_5"
+			"FACTION_NAME_DICTAT0RIALABSOLUTISM_1"
+			"FACTION_NAME_DICTAT0RIALABSOLUTISM_2"
+			"FACTION_NAME_DICTAT0RIALABSOLUTISM_3"
+			"FACTION_NAME_DICTAT0RIALABSOLUTISM_4"
+			"FACTION_NAME_DICTAT0RIALABSOLUTISM_5"
 		}
 
 		color = { 255 86 86  }
@@ -309,7 +309,7 @@ ideologies = {
 
 	
 
-	I8 = {
+	NATIONALISM = {
 
 		types = {
 		    T8 = {}
@@ -317,11 +317,11 @@ ideologies = {
 		}
 
 		dynamic_faction_names = {
-			"FACTION_NAME_I8_1"
-			"FACTION_NAME_I8_2"
-			"FACTION_NAME_I8_3"
-			"FACTION_NAME_I8_4"
-			"FACTION_NAME_I8_5"
+			"FACTION_NAME_NATIONALISM_1"
+			"FACTION_NAME_NATIONALISM_2"
+			"FACTION_NAME_NATIONALISM_3"
+			"FACTION_NAME_NATIONALISM_4"
+			"FACTION_NAME_NATIONALISM_5"
 		}
 
 		color = { 255 0 0  }
@@ -349,7 +349,7 @@ ideologies = {
 
 
 
-	I9 = {
+	FUNDAMENTALISM = {
 
 		types = {
 		    T9 = {}
@@ -357,11 +357,11 @@ ideologies = {
 		}
 
 		dynamic_faction_names = {
-			"FACTION_NAME_I9_1"
-			"FACTION_NAME_I9_2"
-			"FACTION_NAME_I9_3"
-			"FACTION_NAME_I9_4"
-			"FACTION_NAME_I9_5"
+			"FACTION_NAME_FUNDAMENTALISM_1"
+			"FACTION_NAME_FUNDAMENTALISM_2"
+			"FACTION_NAME_FUNDAMENTALISM_3"
+			"FACTION_NAME_FUNDAMENTALISM_4"
+			"FACTION_NAME_FUNDAMENTALISM_5"
 		}
 
 		color =  { 127 0 0  }

@@ -1,0 +1,6 @@
+spriteTypes = {
+    SpriteType = {
+		name = "GFX_focus_goals_PRC_01_FS_9TH"
+		texturefile = "gfx/icons/goals/PRC/PRC_01_FS_9TH.png"
+	}
+}

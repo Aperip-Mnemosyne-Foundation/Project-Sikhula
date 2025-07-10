@@ -1,0 +1,201 @@
+focus_tree = {
+	id = PRC_01
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			tag = PRC
+		}
+	}
+	default = no
+
+	continuous_focus_position = { x=12 y=1500 }
+	focus = {
+		id = PRC_01_FS_NEWYEAR
+		icon = GFX_focus_goals_PRC_01_FS_NEWYEAR
+		cost = 1.00
+		x = 4
+		y = 1
+
+	}
+	focus = {
+		id = PRC_01_FS_TYR
+		icon = GFX_focus_goals_PRC_01_FS_TYR
+		cost = 0.00
+		x = 9
+		y = 1
+		available = {
+			custom_trigger_tooltip = {
+				always = no # event
+				tooltip = "PRC_01_FS_TYR_a_tt"
+			}
+		}
+
+	}
+	focus = {
+		id = PRC_01_FS_AEE
+		icon = GFX_focus_goals_PRC_01_FS_AEE
+		cost = 0.00
+		prerequisite = {
+			focus = PRC_01_FS_NEWYEAR
+		}
+		x = 4
+		y = 2
+
+	}
+	focus = {
+		id = PRC_01_FS_IE
+		icon = GFX_focus_goals_PRC_01_FS_IE
+		cost = 0.00
+		prerequisite = {
+			focus = PRC_01_FS_AEE
+		}
+		x = 2
+		y = 3
+
+	}
+	focus = {
+		id = PRC_01_FS_RMB
+		icon = GFX_focus_goals_PRC_01_FS_RMB
+		cost = 0.00
+		prerequisite = {
+			focus = PRC_01_FS_AEE
+		}
+		x = 4
+		y = 3
+
+	}
+	focus = {
+		id = PRC_01_FS_IP
+		icon = GFX_focus_goals_PRC_01_FS_IP
+		cost = 0.00
+		prerequisite = {
+			focus = PRC_01_FS_AEE
+		}
+		x = 6
+		y = 3
+
+	}
+	focus = {
+		id = PRC_01_FS_ANC
+		icon = GFX_focus_goals_PRC_01_FS_ANC
+		cost = 0.00
+		prerequisite = {
+			focus = PRC_01_FS_IP
+		}
+		prerequisite = {
+			focus = PRC_01_FS_RMB
+		}
+		prerequisite = {
+			focus = PRC_01_FS_IE
+		}
+		x = 4
+		y = 4
+
+	}
+	focus = {
+		id = PRC_01_FS_BTS
+		icon = GFX_focus_goals_PRC_01_FS_BTS
+		cost = 0.00
+		prerequisite = {
+			focus = PRC_01_FS_ANC
+		}
+		x = 3
+		y = 5
+
+	}
+	focus = {
+		id = PRC_01_FS_3Y
+		icon = GFX_focus_goals_PRC_01_FS_3Y
+		cost = 0.00
+		prerequisite = {
+			focus = PRC_01_FS_ANC
+		}
+		x = 5
+		y = 5
+
+	}
+	focus = {
+		id = PRC_01_FS_PZR
+		icon = GFX_focus_goals_PRC_01_FS_PZR
+		cost = 0.00
+		prerequisite = {
+			focus = PRC_01_FS_BTS
+		}
+		prerequisite = {
+			focus = PRC_01_FS_3Y
+		}
+		x = 4
+		y = 6
+
+	}
+	focus = {
+		id = PRC_01_FS_MC
+		icon = GFX_focus_goals_PRC_01_FS_MC
+		cost = 0.00
+		prerequisite = {
+			focus = PRC_01_FS_TYR
+		}
+		x = 9
+		y = 2
+
+	}
+	focus = {
+		id = PRC_01_FS_CWY
+		icon = GFX_focus_goals_PRC_01_FS_CWY
+		cost = 0.00
+		prerequisite = {
+			focus = PRC_01_FS_MC
+		}
+		x = 8
+		y = 3
+
+	}
+	focus = {
+		id = PRC_01_FS_AIO
+		icon = GFX_focus_goals_PRC_01_FS_AIO
+		cost = 0.00
+		prerequisite = {
+			focus = PRC_01_FS_MC
+		}
+		x = 10
+		y = 3
+
+	}
+	focus = {
+		id = PRC_01_FS_HU
+		icon = GFX_focus_goals_PRC_01_FS_HU
+		cost = 0.00
+		prerequisite = {
+			focus = PRC_01_FS_CWY
+		}
+		prerequisite = {
+			focus = PRC_01_FS_AIO
+		}
+		x = 9
+		y = 4
+
+	}
+	focus = {
+		id = PRC_01_FS_RBT
+		icon = GFX_focus_goals_PRC_01_FS_RBT
+		cost = 0.00
+		prerequisite = {
+			focus = PRC_01_FS_HU
+		}
+		x = 9
+		y = 5
+
+	}
+	focus = {
+		id = PRC_01_FS_9TH
+		icon = GFX_focus_goals_PRC_01_FS_9TH
+		cost = 0.00
+		prerequisite = {
+			focus = PRC_01_FS_PZR
+		}
+		x = 4
+		y = 7
+
+	}
+}
