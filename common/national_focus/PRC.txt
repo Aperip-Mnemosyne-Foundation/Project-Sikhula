@@ -9,12 +9,12 @@ focus_tree = {
 		}
 	}
 	default = no
-	continuous_focus_position = { x = 20 y = 2000 }
+	continuous_focus_position = { x = 70 y = 1520 }
 	focus = {
 		id = PRC_00_MR_01
 		icon = GFX_focus_goals_PRC_00_MR_01
 		cost = 0.00
-		x = 21
+		x = 9
 		y = 1
 		available = {	
 		}
@@ -101,7 +101,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PRC_00_MR_05
 		}
-		x = -12
+		x = -3
 		y = 1
 		relative_position_id = PRC_00_MR_05
 		available = {	
@@ -118,7 +118,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PRC_00_MR_LAND_01
 		}
-		x = -3
+		x = 3
 		y = 1
 		relative_position_id = PRC_00_MR_LAND_01
 		available = {	
@@ -173,10 +173,11 @@ focus_tree = {
 		icon = GFX_focus_goals_PRC_00_MR_QBB_01
 		cost = 0.00
 		prerequisite = {
-			focus = PRC_00_MR_LAND_01
+			focus = PRC_00_MR_QB_81
+			focus = PRC_00_MR_QB_95
 		}
-		x = 3
-		y = 1
+		x = 0
+		y = 2
 		relative_position_id = PRC_00_MR_LAND_01
 		available = {	
 		}
@@ -190,14 +191,14 @@ focus_tree = {
 		icon = GFX_focus_goals_PRC_00_MR_QB_81
 		cost = 0.00
 		prerequisite = {
-			focus = PRC_00_MR_QBB_01
+			focus = PRC_00_MR_LAND_01
 		}
 		mutually_exclusive = {
 			focus = PRC_00_MR_QB_95
 		}
 		x = -1
 		y = 1
-		relative_position_id = PRC_00_MR_QBB_01
+		relative_position_id = PRC_00_MR_LAND_01
 		available = {	
 		}
 		completion_reward = {
@@ -210,14 +211,14 @@ focus_tree = {
 		icon = GFX_focus_goals_PRC_00_MR_QB_95
 		cost = 0.00
 		prerequisite = {
-			focus = PRC_00_MR_QBB_01
+			focus = PRC_00_MR_LAND_01
 		}
 		mutually_exclusive = {
 			focus = PRC_00_MR_QB_89
 		}
 		x = 1
 		y = 1
-		relative_position_id = PRC_00_MR_QBB_01
+		relative_position_id = PRC_00_MR_LAND_01
 		available = {	
 		}
 		completion_reward = {
@@ -232,7 +233,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PRC_00_MR_05
 		}
-		x = -4
+		x = 3
 		y = 1
 		relative_position_id = PRC_00_MR_05
 		available = {	
@@ -283,7 +284,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PRC_00_MR_05
 		}
-		x = 4
+		x = -7
 		y = 1
 		relative_position_id = PRC_00_MR_05
 		available = {	
@@ -300,7 +301,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PRC_00_MR_SEA_01
 		}
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = PRC_00_MR_SEA_01 
 		available = {	
@@ -351,7 +352,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PRC_00_MR_SEA_01
 		}
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = PRC_00_MR_SEA_01 
 		available = {	
@@ -422,7 +423,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PRC_00_MR_05
 		}
-		x = 12
+		x = 7
 		y = 1
 		relative_position_id = PRC_00_MR_05
 		available = {	
@@ -439,7 +440,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PRC_00_MR_BACKUP_01
 		}
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = PRC_00_MR_BACKUP_01
 		available = {	
@@ -490,7 +491,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PRC_00_MR_BACKUP_01
 		}
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = PRC_00_MR_BACKUP_01
 		available = {	
@@ -540,11 +541,10 @@ focus_tree = {
 		icon = GFX_focus_goals_PRC_00_MR_QBB_02
 		cost = 0.00
 		prerequisite = {
-			focus = PRC_00_MR_QB_81
-			focus = PRC_00_MR_QB_95
+			focus = PRC_00_MR_QBB_01
 		}
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = PRC_00_MR_QBB_01
 		available = {	
 		}
@@ -574,9 +574,11 @@ focus_tree = {
 		id = PRC_00_MR_LAND_02
 		icon = GFX_focus_goals_PRC_00_MR_LAND_02
 		cost = 0.00
+		prerequisite = {	
+			focus = PRC_00_MR_MECH_03
+		}
 		prerequisite = {
 			focus = PRC_00_MR_QBB_03
-			focus = PRC_00_MR_MECH_03
 		}
 		x = 0
 		y = 5
