@@ -1,0 +1,195 @@
+focus_tree = {
+	id = FocusTree_0
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = PRC
+		}
+	}
+	default = no
+
+	continuous_focus_position = { x=12 y=1500 }
+	focus = {
+		id = PRC_NEWYEAR
+		icon = GFX_goal_unknown
+		cost = 1.00
+		x = 4
+		y = 1
+
+	}
+	focus = {
+		id = PRC_TYR
+		icon = GFX_goal_unknown
+		cost = 0.00
+		x = 9
+		y = 1
+
+	}
+	focus = {
+		id = PRC_AEE
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = PRC_NEWYEAR
+		}
+		x = 4
+		y = 2
+
+	}
+	focus = {
+		id = PRC_IE
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = PRC_AEE
+		}
+		x = 2
+		y = 3
+
+	}
+	focus = {
+		id = PRC_RMB
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = PRC_AEE
+		}
+		x = 4
+		y = 3
+
+	}
+	focus = {
+		id = PRC_IP
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = PRC_AEE
+		}
+		x = 6
+		y = 3
+
+	}
+	focus = {
+		id = PRC_ANC
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = PRC_IP
+		}
+		prerequisite = {
+			focus = PRC_RMB
+		}
+		prerequisite = {
+			focus = PRC_IE
+		}
+		x = 4
+		y = 4
+
+	}
+	focus = {
+		id = PRC_BTS
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = PRC_ANC
+		}
+		x = 3
+		y = 5
+
+	}
+	focus = {
+		id = PRC_3Y
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = PRC_ANC
+		}
+		x = 5
+		y = 5
+
+	}
+	focus = {
+		id = PRC_PZR
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = PRC_BTS
+		}
+		prerequisite = {
+			focus = PRC_3Y
+		}
+		x = 4
+		y = 6
+
+	}
+	focus = {
+		id = PRC_MC
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = PRC_TYR
+		}
+		x = 9
+		y = 2
+
+	}
+	focus = {
+		id = PRC_CWY
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = PRC_MC
+		}
+		x = 8
+		y = 3
+
+	}
+	focus = {
+		id = PRC_AIO
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = PRC_MC
+		}
+		x = 10
+		y = 3
+
+	}
+	focus = {
+		id = PRC_HU
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = PRC_CWY
+		}
+		prerequisite = {
+			focus = PRC_AIO
+		}
+		x = 9
+		y = 4
+
+	}
+	focus = {
+		id = PRC_RBT
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = PRC_HU
+		}
+		x = 9
+		y = 5
+
+	}
+	focus = {
+		id = PRC_9TH
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = PRC_PZR
+		}
+		x = 4
+		y = 7
+
+	}
+}
