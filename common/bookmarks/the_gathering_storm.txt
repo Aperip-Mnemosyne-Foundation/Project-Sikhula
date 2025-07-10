@@ -4,18 +4,18 @@ bookmarks = {
 		desc = "1998_DESC"
 		date = 1998.1.1.12
 		picture = "GFX_select_date_1998"
-		default_country = "RPC"
+		default_country = "PRC"
 		default = yes
 		
-		"RPC"={
-			history = "RPC_2025_DESC"
+		"PRC"={
+			history = "PRC_2025_DESC"
 			ideology = Power_Authoritarianism
 			available = YES
 			ideas = {
 				
 			}
 			focuses = {
-				RPC_bookmark_bg
+				PRC_bookmark_bg
 				goals_bookmark_bg
 				
 			}
