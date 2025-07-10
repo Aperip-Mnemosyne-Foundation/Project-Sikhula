@@ -238,8 +238,35 @@ spriteTypes = {
 	
 	spriteType = {
 		name = "GFX_select_date_bg"
-		texturefile = "gfx/interface/select_date_bg.dds"
+		texturefile = "gfx/interface/win98web/web.png"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tiled_win98_desc_bg"
+		size= { x=190 y=190 }
+		textureFile = "gfx/interface/win98web/tiled_win98_desc_bg.dds"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	spriteType = {
+		name = "GFX_win98_ASEF"
+		texturefile = "gfx/interface/win98web/ASEF.png"
+	}
+
+	spriteType = {
+		name = "GFX_button_back"
+		texturefile = "gfx/interface/win98web/back.dds"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	spriteType = {
+		name = "GFX_button_win98_221x34"
+		texturefile = "gfx/interface/win98web/button_win98_221x34.dds"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate.lua"
 	}
 	
 	spriteType = {

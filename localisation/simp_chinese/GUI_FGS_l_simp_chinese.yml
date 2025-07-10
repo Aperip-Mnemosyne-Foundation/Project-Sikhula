@@ -1,0 +1,5 @@
+﻿l_simp_chinese: 
+ # 注意此爲frontendgamesetupview.gui本地化 請勿在此填寫無關内容 
+ ASPF_FE_SELECT_SCENARIO: "http://ASEF.hoi4/gamesetup%20scenario%20window/1998"
+ ASPF_ENTER_FE_SELECT_SCENARIO: "了解更多"
+ 
