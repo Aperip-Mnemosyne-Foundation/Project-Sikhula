@@ -26,7 +26,7 @@ scripted_gui = {
 			conf_button_click = {
 				clr_global_flag = conf_right
 				clear_array = global.ConfPasswordArray
-				conf_ini = yes
+				check_conf_ini = yes
 				reckon_conf = yes
 				#set_variable = { global.ConfPasswordClickTimes =2 }
 			    if = {
