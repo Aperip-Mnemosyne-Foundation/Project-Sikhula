@@ -1,3 +1,4 @@
+#!gfx:interface\ASEF\icons\goals\PRC\01_goals.gfx
 focus_tree = {
 	id = PRC_01
 	country = {
@@ -22,8 +23,11 @@ focus_tree = {
 		id = PRC_01_FS_TYR
 		icon = GFX_focus_goals_PRC_01_FS_TYR
 		cost = 0.00
-		x = 9
+		x = 12
 		y = 1
+		allow_branch = {
+			has_country_flag = PRC_01_FS_TYR_ALLOW
+		}
 		available = {
 			custom_trigger_tooltip = {
 				always = no # event
@@ -136,9 +140,9 @@ focus_tree = {
 		prerequisite = {
 			focus = PRC_01_FS_TYR
 		}
-		x = 9
+		x = 0
 		y = 2
-
+		relative_position_id = PRC_01_FS_TYR
 	}
 	focus = {
 		id = PRC_01_FS_CWY
@@ -147,9 +151,9 @@ focus_tree = {
 		prerequisite = {
 			focus = PRC_01_FS_MC
 		}
-		x = 8
-		y = 3
-
+		x = -2
+		y = 1
+        relative_position_id = PRC_01_FS_MC
 	}
 	focus = {
 		id = PRC_01_FS_AIO
@@ -158,9 +162,9 @@ focus_tree = {
 		prerequisite = {
 			focus = PRC_01_FS_MC
 		}
-		x = 10
-		y = 3
-
+		x = 2
+		y = 1
+        relative_position_id = PRC_01_FS_MC
 	}
 	focus = {
 		id = PRC_01_FS_HU
@@ -172,9 +176,9 @@ focus_tree = {
 		prerequisite = {
 			focus = PRC_01_FS_AIO
 		}
-		x = 9
-		y = 4
-
+		x = 0
+		y = 2
+        relative_position_id = PRC_01_FS_MC
 	}
 	focus = {
 		id = PRC_01_FS_RBT
@@ -183,9 +187,9 @@ focus_tree = {
 		prerequisite = {
 			focus = PRC_01_FS_HU
 		}
-		x = 9
-		y = 5
-
+		x = 0
+		y = 2
+        relative_position_id = PRC_01_FS_HU
 	}
 	focus = {
 		id = PRC_01_FS_9TH

@@ -540,12 +540,215 @@ guiTypes = {
 		}
 
 		instantTextBoxType = {
+			name = "ADDRESS"
+			position = { x = -208 y = 94 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "ADDRESS"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "FILE"
+			position = { x = -218 y = 26 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "FILE"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "EDIT"
+			position = { x = -178 y = 26 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "EDIT"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+		instantTextBoxType = {
+			name = "VIEW"
+			position = { x = -138 y = 26 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "VIEW"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "GO"
+			position = { x = -98 y = 26 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "GO"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "FAVORITES"
+			position = { x = -58 y = 26 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "FAVORITES"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "TOOLS"
+			position = { x = -18 y = 26 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "TOOLS"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "HELP"
+			position = { x = 22 y = 26 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "HELP"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+
+		instantTextBoxType = {
 			name = "BACK"
-			position = { x = -207 y = 67 }
+			position = { x = -207 y = 68 }
 			textureFile = ""
 			font = "hoi4_typewriter16"
 			borderSize = {x = 0 y = 0}
 			text = "BACK"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "FORWARD"
+			position = { x = -137 y = 68 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "FORWARD"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "STOP"
+			position = { x = -69 y = 68 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "STOP"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "REFRESH"
+			position = { x = -15 y = 68 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "REFRESH"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "HOME"
+			position = { x = 38 y = 68 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "HOME"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "SEARCH2"
+			position = { x = 99 y = 68 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "SEARCH2"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "FAVORITES2"
+			position = { x = 152 y = 68 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "FAVORITES"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "HISTORY"
+			position = { x = 206 y = 68 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "HISTORY"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "PRINT"
+			position = { x = 265 y = 68 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "PRINT"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "INTERNET"
+			position = { x = 695 y = 837 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "INTERNET"
 			maxWidth = 500
 			maxHeight = 30
 			format = center
