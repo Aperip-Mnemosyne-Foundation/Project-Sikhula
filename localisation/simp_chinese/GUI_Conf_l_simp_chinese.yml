@@ -6,3 +6,5 @@
  CONF_RIGHT: "§G密码对了!杂鱼~§!"
  CONF_WMA: "开启水印"
  CONF_WMB: "关闭水印"
+ CONF_FTA: "开启国策"
+ CONF_FTB: "关闭国策"

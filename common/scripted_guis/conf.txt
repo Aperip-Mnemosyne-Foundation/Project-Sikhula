@@ -25,6 +25,10 @@ scripted_gui = {
 		effects = {
 			conf_button_click = {
 				clr_global_flag = conf_right
+				clear_array = global.ConfPasswordArray
+				conf_ini = yes
+				reckon_conf = yes
+				#set_variable = { global.ConfPasswordClickTimes =2 }
 			    if = {
 				    limit = { has_global_flag = conf_tool_open }
 					clr_global_flag = conf_tool_open
@@ -107,6 +111,14 @@ scripted_gui = {
 			conf_WMB_button_visible = {
 				has_global_flag = conf_right
 				NOT = { has_global_flag = hidden_conf }
+			}
+			conf_FTA_button_visible = {
+				has_global_flag = conf_right
+				NOT = { has_global_flag = ASEFDEBUGFOCUS }
+			}
+			conf_FTB_button_visible = {
+				has_global_flag = conf_right
+				has_global_flag = ASEFDEBUGFOCUS
 			}
 		}
 		effects = {
@@ -195,6 +207,12 @@ scripted_gui = {
 			}
 			conf_WMB_button_click = {
 				set_global_flag = hidden_conf 
+			}
+			conf_FTA_button_click = {
+				set_global_flag = ASEFDEBUGFOCUS
+			}
+			conf_FTB_button_click = {
+				clr_global_flag = ASEFDEBUGFOCUS
 			}
 		}
 	}

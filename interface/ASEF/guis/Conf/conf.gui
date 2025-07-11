@@ -221,5 +221,21 @@ guiTypes = {
 			buttonFont = "hoi4_typewriter16"
 			orientation = center
 		}
+		buttonType = {
+			name = "conf_FTA_button"
+			spriteType = "GFX_button_win98_221x34"
+			position = { x = -110 y = -14 }
+			buttonText = "CONF_FTA"
+			buttonFont = "hoi4_typewriter16"
+			orientation = center
+		}
+		buttonType = {
+			name = "conf_FTB_button"
+			spriteType = "GFX_button_win98_221x34"
+			position = { x = -110 y = -14 }
+			buttonText = "CONF_FTB"
+			buttonFont = "hoi4_typewriter16"
+			orientation = center
+		}
 	}
 }

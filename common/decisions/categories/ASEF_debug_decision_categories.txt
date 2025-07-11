@@ -5,7 +5,7 @@ DEBUG_FOCUS_decisions = {
 	}
 	visible = {
 		is_debug  = yes
-		has_global_flag = ASEFDEBUG
+		has_global_flag = ASEFDEBUGFOCUS
 	}
 	visible_when_empty = yes
 	priority = 9999
