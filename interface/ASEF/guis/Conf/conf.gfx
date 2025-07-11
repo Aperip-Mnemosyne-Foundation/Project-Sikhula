@@ -1,0 +1,16 @@
+spriteTypes = {    
+	spriteType = {
+		name = "GFX_conf_bg"
+		texturefile = "gfx/interface/conf/bg.png"
+	}
+	spriteType = {
+		name = "GFX_conf_110_bg"
+		texturefile = "gfx/interface/conf/110_bg.png"
+	}
+	spriteType = {
+		name = "GFX_button_conf"
+		texturefile = "gfx/interface/conf/button_ASEF.dds"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+}

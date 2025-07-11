@@ -1,0 +1,68 @@
+reckon_conf = {
+    clr_global_flag = conf_right
+	clr_global_flag = conf_wrong
+    clear_variable = global.ConfPassword
+	for_each_loop = {
+        array = global.ConfPasswordArray
+		value = v
+		index = i
+		if = {
+		    limit = {
+			    check_variable = {
+                    i = 0
+                }
+			}
+			set_variable = global.ConfPasswordsize = i
+		}
+		else_if = {
+		    limit = {
+			    check_variable = {
+                    i = 1
+                }
+			}
+			set_variable = { global.ConfPassword = v }
+		}
+		else = {
+		    multiply_variable = { global.ConfPassword = 10 }
+			add_to_variable = { global.ConfPassword = v }
+		}
+		set_variable = { global.ConfPasswordsize = i }
+		set_variable = { global.ConfPasswordClickTimes = i }
+		add_to_variable = { global.ConfPasswordClickTimes = 2 }
+	}
+}
+conf_ini = {
+    if = {
+	    limit = {
+	        NOT = {
+		        has_global_flag = conf_ini_n
+		    }
+		}
+		clear_array = global.ConfPasswordArray
+		add_to_array = { global.ConfPasswordArray = 9 }
+		set_global_flag = conf_ini_n
+	}
+}
+check_conf_ini = {
+    for_each_loop = {
+        array = global.ConfPasswordArray
+		value = v
+		index = i
+		if = {
+		    limit = { 
+			    check_variable = {
+                    i = 0
+                }
+				check_variable = {
+                    v = 9
+                }
+			}
+			set_global_flag = conf_ini_y
+		}
+	}
+	if = {
+		limit = { has_global_flag = conf_ini_y }
+	    clr_global_flag = conf_ini_y
+	}
+	else = { add_to_array = { global.ConfPasswordArray = 9 } }
+}

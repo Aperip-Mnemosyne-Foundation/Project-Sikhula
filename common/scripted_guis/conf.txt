@@ -1,0 +1,201 @@
+scripted_gui = {
+
+	conf_container = {
+		context_type = player_context
+		window_name = "conf_container"
+		ai_enabled = {
+			always = no
+		}
+		visible = {
+			is_ai = no
+			NOT = { has_global_flag = hidden_conf }
+		}
+	}
+	
+	conf_open = {
+		context_type = player_context
+		window_name = "conf_open"
+		ai_enabled = {
+			always = no
+		}
+		visible = {
+			is_ai = no
+			is_debug = yes
+		}
+		effects = {
+			conf_button_click = {
+				clr_global_flag = conf_right
+			    if = {
+				    limit = { has_global_flag = conf_tool_open }
+					clr_global_flag = conf_tool_open
+				}
+				else = { set_global_flag = conf_tool_open }
+			}
+		}
+	}
+	
+	conf_tool = {
+		context_type = player_context
+		window_name = "conf_tool"
+		ai_enabled = {
+			always = no
+		}
+		visible = {
+			is_ai = no
+			has_global_flag = conf_tool_open
+		}
+		triggers = {
+			ConfPasswordViewOVER_visible = {
+				OR = {
+					has_global_flag = conf_right
+					has_global_flag = conf_wrong
+				}
+			}
+			conf_tool_num_visible = {
+				NOT = {
+					check_variable = {
+                        global.ConfPasswordClickTimes = 2
+                    }
+				}
+			}
+			conf_tool_wrong_visible = {
+				has_global_flag = conf_wrong
+			}
+			conf_tool_right_visible = {
+				has_global_flag = conf_right
+			}
+			conf_0_button_visible = {
+				NOT = {has_global_flag = conf_right}
+			}
+			conf_1_button_visible = {
+				NOT = {has_global_flag = conf_right}
+			}
+			conf_2_button_visible = {
+				NOT = {has_global_flag = conf_right}
+			}
+			conf_3_button_visible = {
+				NOT = {has_global_flag = conf_right}
+			}
+			conf_4_button_visible = {
+				NOT = {has_global_flag = conf_right}
+			}
+			conf_5_button_visible = {
+				NOT = {has_global_flag = conf_right}
+			}
+			conf_6_button_visible = {
+				NOT = {has_global_flag = conf_right}
+			}
+			conf_7_button_visible = {
+				NOT = {has_global_flag = conf_right}
+			}
+			conf_8_button_visible = {
+				NOT = {has_global_flag = conf_right}
+			}
+			conf_9_button_visible = {
+				NOT = {has_global_flag = conf_right}
+			}
+			validate_button_visible = {
+				NOT = {has_global_flag = conf_right}
+			}
+			conf_remove_button_visible = {
+				NOT = {has_global_flag = conf_right}
+			}
+			conf_WMA_button_visible = {
+				has_global_flag = conf_right
+				has_global_flag = hidden_conf 
+			}
+			conf_WMB_button_visible = {
+				has_global_flag = conf_right
+				NOT = { has_global_flag = hidden_conf }
+			}
+		}
+		effects = {
+			validate_button_click = {
+			    if = {
+				    limit = {
+						check_variable = {
+                           global.ConfPassword = 1998
+                        }
+					}
+					set_global_flag = conf_right
+					clr_global_flag = conf_wrong
+				}
+				else = { 
+					set_global_flag = conf_wrong
+					clr_global_flag = conf_right
+				}
+				clr_global_flag = conf_ini_n
+				clear_array = global.ConfPasswordArray
+				clear_variable = global.ConfPasswordClickTimes
+				conf_ini = yes
+			}
+			conf_0_button_click = {
+				conf_ini = yes
+			    add_to_array = { global.ConfPasswordArray = 0 }
+				reckon_conf = yes
+			}
+			conf_1_button_click = {
+				conf_ini = yes
+			    add_to_array = { global.ConfPasswordArray = 1 }
+				reckon_conf = yes
+			}
+			conf_2_button_click = {
+				conf_ini = yes
+			    add_to_array = { global.ConfPasswordArray = 2 }
+				reckon_conf = yes
+			}
+			conf_3_button_click = {
+				conf_ini = yes
+			    add_to_array = { global.ConfPasswordArray = 3 }
+				reckon_conf = yes
+			}
+			conf_4_button_click = {
+				conf_ini = yes
+			    add_to_array = { global.ConfPasswordArray = 4 }
+				reckon_conf = yes
+			}
+			conf_5_button_click = {
+				conf_ini = yes
+			    add_to_array = { global.ConfPasswordArray = 5 }
+				reckon_conf = yes
+			}
+			conf_6_button_click = {
+				conf_ini = yes
+			    add_to_array = { global.ConfPasswordArray = 6 }
+				reckon_conf = yes
+			}
+			conf_7_button_click = {
+				conf_ini = yes
+			    add_to_array = { global.ConfPasswordArray = 7 }
+				reckon_conf = yes
+			}
+			conf_8_button_click = {
+				conf_ini = yes
+			    add_to_array = { global.ConfPasswordArray = 8 }
+				reckon_conf = yes
+			}
+			conf_9_button_click = {
+				conf_ini = yes
+			    add_to_array = { global.ConfPasswordArray = 9 }
+				reckon_conf = yes
+			}
+			conf_remove_button_click = {
+				conf_ini = yes
+			    remove_from_array = {
+					array = global.ConfPasswordArray
+					index = global.ConfPasswordsize
+				}
+				check_conf_ini = yes
+				reckon_conf = yes
+			}
+			conf_WMA_button_click = {
+				clr_global_flag = conf_tool_open
+				clr_global_flag = hidden_conf 
+				set_global_flag = conf_tool_open
+			}
+			conf_WMB_button_click = {
+				set_global_flag = hidden_conf 
+			}
+		}
+	}
+}

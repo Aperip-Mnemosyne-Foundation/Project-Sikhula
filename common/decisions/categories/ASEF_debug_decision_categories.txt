@@ -1,0 +1,12 @@
+DEBUG_FOCUS_decisions = {
+	icon = GFX_win98_thumbnail
+	allowed = {
+		
+	}
+	visible = {
+		is_debug  = yes
+		has_global_flag = ASEFDEBUG
+	}
+	visible_when_empty = yes
+	priority = 9999
+}

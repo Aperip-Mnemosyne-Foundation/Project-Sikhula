@@ -1,0 +1,225 @@
+guiTypes = {
+	containerWindowType = {
+		name = "conf_container"
+		position = { x = 0 y = 0 }
+		size = { width = 2560 height = 1440 }
+		moveable = no
+		orientation = CENTER
+		origo = center
+		clipping = no
+		alwaystransparent = yes
+		background = {
+			name = "conf_bg"
+			spriteType ="GFX_conf_bg"
+			alwaystransparent = yes
+		}
+	}
+	
+	containerWindowType = {
+		name = "conf_open"
+		position = { x = -185 y = 0 }
+		size = { width = 50 height = 50 }
+		moveable = no
+		orientation = lower_right
+		origo = lower_right
+		clipping = yes
+		alwaystransparent = no
+		buttonType = {
+			name = "conf_button"
+			spriteType = "GFX_button_conf"
+			position = { x = 0 y = 0 }
+		}
+	}
+	
+	containerWindowType = {
+		name = "conf_tool"
+		position = { x = 0 y = 0 }
+		size = { width = 240 height = 300 }
+		moveable = yes
+		orientation = CENTER
+		origo = center
+		clipping = yes
+		alwaystransparent = no
+		show_position = { x=0 y=0 }
+		hide_position = { x=-20 y=-6000 }
+		animation_time = 1
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		background = {
+			name = "conf_tool_bg"
+			spriteType ="GFX_tiled_win98_desc_bg"
+		}
+		instantTextBoxType = {
+			name = "conf_tool_title"
+			position = { x = 0 y = 4 }
+			textureFile = ""
+			font = hoi4_typewriter22
+			borderSize = {x = 0 y = 0}
+			text = "CONFTOOLTITLE"
+			maxWidth = 240
+			maxHeight = 30
+			format = center
+		}
+		buttonType = {
+			name = "validate_button"
+			spriteType = "GFX_button_win98_34x34"
+			position = { x = -65 y = 100 }
+			buttonText = "ASPFCONFVALIDATE"
+			buttonFont = "hoi4_typewriter16"
+			orientation = center
+		}
+		iconType = {
+			name = "ConfPasswordView"
+			spriteType = "GFX_conf_110_bg"
+			position = { x =-55 y = -84 }
+			format = centre
+			orientation = center
+		    origo = center
+		}
+		buttonType = {
+			name = "conf_1_button"
+			spriteType = "GFX_button_win98_34x34"
+			position = { x = -65 y = -44 }
+			buttonText = "1"
+			buttonFont = "hoi4_typewriter16"
+			orientation = center
+		}
+		buttonType = {
+			name = "conf_2_button"
+			spriteType = "GFX_button_win98_34x34"
+			position = { x = -17 y = -44 }
+			buttonText = "2"
+			buttonFont = "hoi4_typewriter16"
+			orientation = center
+		}
+		buttonType = {
+			name = "conf_3_button"
+			spriteType = "GFX_button_win98_34x34"
+			position = { x = 31 y = -44 }
+			buttonText = "3"
+			buttonFont = "hoi4_typewriter16"
+			orientation = center
+		}
+		buttonType = {
+			name = "conf_4_button"
+			spriteType = "GFX_button_win98_34x34"
+			position = { x = -65 y = 4 }
+			buttonText = "4"
+			buttonFont = "hoi4_typewriter16"
+			orientation = center
+		}
+		buttonType = {
+			name = "conf_5_button"
+			spriteType = "GFX_button_win98_34x34"
+			position = { x = -17 y = 4 }
+			buttonText = "5"
+			buttonFont = "hoi4_typewriter16"
+			orientation = center
+		}
+		buttonType = {
+			name = "conf_6_button"
+			spriteType = "GFX_button_win98_34x34"
+			position = { x = 31 y = 4 }
+			buttonText = "6"
+			buttonFont = "hoi4_typewriter16"
+			orientation = center
+		}
+		buttonType = {
+			name = "conf_7_button"
+			spriteType = "GFX_button_win98_34x34"
+			position = { x = -65 y = 52 }
+			buttonText = "7"
+			buttonFont = "hoi4_typewriter16"
+			orientation = center
+		}
+		buttonType = {
+			name = "conf_8_button"
+			spriteType = "GFX_button_win98_34x34"
+			position = { x = -17 y = 52 }
+			buttonText = "8"
+			buttonFont = "hoi4_typewriter16"
+			orientation = center
+		}
+		buttonType = {
+			name = "conf_9_button"
+			spriteType = "GFX_button_win98_34x34"
+			position = { x = 31 y = 52 }
+			buttonText = "9"
+			buttonFont = "hoi4_typewriter16"
+			orientation = center
+		}
+		buttonType = {
+			name = "conf_0_button"
+			spriteType = "GFX_button_win98_34x34"
+			position = { x = -17 y = 100 }
+			buttonText = "0"
+			buttonFont = "hoi4_typewriter16"
+			orientation = center
+		}
+		buttonType = {
+			name = "conf_remove_button"
+			spriteType = "GFX_button_win98_34x34"
+			position = { x = 31 y = 100 }
+			buttonText = "ASPFCONFREMOVE"
+			buttonFont = "hoi4_typewriter16"
+			orientation = center
+		}
+		instantTextBoxType = {
+			name = "conf_tool_num"
+			position = { x = 0 y = 67 }
+			textureFile = ""
+			font = hoi4_typewriter22
+			borderSize = {x = 0 y = 0}
+			text = "[?global.ConfPassword]"
+			maxWidth = 240
+			maxHeight = 30
+			format = center
+		}
+		iconType = {
+			name = "ConfPasswordViewOVER"
+			spriteType = "GFX_conf_110_bg"
+			position = { x =-55 y = -84 }
+			format = centre
+			orientation = center
+		    origo = center
+		}
+		instantTextBoxType = {
+			name = "conf_tool_wrong"
+			position = { x = 0 y = 68 }
+			textureFile = ""
+			font = hoi4_typewriter16
+			borderSize = {x = 0 y = 0}
+			text = "CONF_WRONG"
+			maxWidth = 240
+			maxHeight = 30
+			format = center
+		}
+		instantTextBoxType = {
+			name = "conf_tool_right"
+			position = { x = 0 y = 68 }
+			textureFile = ""
+			font = hoi4_typewriter16
+			borderSize = {x = 0 y = 0}
+			text = "CONF_RIGHT"
+			maxWidth = 240
+			maxHeight = 30
+			format = center
+		}
+		buttonType = {
+			name = "conf_WMA_button"
+			spriteType = "GFX_button_win98_221x34"
+			position = { x = -110 y = -50 }
+			buttonText = "CONF_WMA"
+			buttonFont = "hoi4_typewriter16"
+			orientation = center
+		}
+		buttonType = {
+			name = "conf_WMB_button"
+			spriteType = "GFX_button_win98_221x34"
+			position = { x = -110 y = -50 }
+			buttonText = "CONF_WMB"
+			buttonFont = "hoi4_typewriter16"
+			orientation = center
+		}
+	}
+}

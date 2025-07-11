@@ -241,6 +241,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/win98web/web.png"
 	}
 
+	spriteType = {
+		name = "GFX_win98_BN_bg"
+		texturefile = "gfx/interface/win98web/win98_BN_bg.png"
+	}
+
+	spriteType = {
+		name = "GFX_win98_thumbnail"
+		texturefile = "gfx/interface/win98web/thumbnail.png"
+	}
+
 	corneredTileSpriteType = {
 		name = "GFX_tiled_win98_desc_bg"
 		size= { x=190 y=190 }
@@ -265,6 +275,13 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_button_win98_221x34"
 		texturefile = "gfx/interface/win98web/button_win98_221x34.dds"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	spriteType = {
+		name = "GFX_button_win98_34x34"
+		texturefile = "gfx/interface/win98web/button_win98_34x34.dds"
 		noOfFrames = 1
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
