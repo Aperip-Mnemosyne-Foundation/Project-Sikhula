@@ -7,7 +7,7 @@ guiTypes = {
 		
 		background = {
 			name = "Background"
-			quadTextureSprite ="GFX_tiled_plain_bg2"
+			quadTextureSprite ="GFX_tiled_win98_desc_bg"
 		}
 		
 		instantTextboxType = {
@@ -19,6 +19,7 @@ guiTypes = {
 			text = "NATIONAL_FOCUS_TITLE"
 			maxWidth = 500
 			maxHeight = 20
+			text_color_code = b
 			format = left
 		}
 
@@ -128,13 +129,13 @@ guiTypes = {
 
 			background = {
 				name = "Background"
-				quadTextureSprite ="GFX_tiled_bg"
+				quadTextureSprite ="GFX_tiled_win98_dark_bg"
 			}
 
-			background = {
-				name = "Background"
-				quadTextureSprite ="GFX_tiled_focus_bg"
-			}
+			#background = {
+			#	name = "Background"
+			#	quadTextureSprite ="GFX_tiled_focus_bg"
+			#}
 			
 			containerWindowType = {
 				name = "techtree_stripes"

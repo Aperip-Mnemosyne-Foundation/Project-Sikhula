@@ -260,6 +260,15 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
 	}
 
+	corneredTileSpriteType = {
+		name = "GFX_tiled_win98_dark_bg"
+		size= { x=190 y=190 }
+		textureFile = "gfx/interface/win98web/tiled_win98_dark_bg.dds"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
 	spriteType = {
 		name = "GFX_win98_ASEF"
 		texturefile = "gfx/interface/win98web/ASEF.png"
