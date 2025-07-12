@@ -270,8 +270,8 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_win98_ASEF"
-		texturefile = "gfx/interface/win98web/ASEF.png"
+		name = "GFX_win98_ASPF"
+		texturefile = "gfx/interface/win98web/ASPF.png"
 	}
 
 	spriteType = {

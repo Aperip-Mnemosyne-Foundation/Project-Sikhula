@@ -787,8 +787,8 @@ guiTypes = {
 		}
 
 		iconType = {
-			name = "ASEF_icon"
-			spriteType = "GFX_win98_ASEF"
+			name = "ASPF_icon"
+			spriteType = "GFX_win98_ASPF"
 			position = { x = -190 y = -270 }
 			format = centre
 			orientation = center

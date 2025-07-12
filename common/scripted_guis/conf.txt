@@ -114,11 +114,11 @@ scripted_gui = {
 			}
 			conf_FTA_button_visible = {
 				has_global_flag = conf_right
-				NOT = { has_global_flag = ASEFDEBUGFOCUS }
+				NOT = { has_global_flag = ASPFDEBUGFOCUS }
 			}
 			conf_FTB_button_visible = {
 				has_global_flag = conf_right
-				has_global_flag = ASEFDEBUGFOCUS
+				has_global_flag = ASPFDEBUGFOCUS
 			}
 		}
 		effects = {
@@ -209,10 +209,10 @@ scripted_gui = {
 				set_global_flag = hidden_conf 
 			}
 			conf_FTA_button_click = {
-				set_global_flag = ASEFDEBUGFOCUS
+				set_global_flag = ASPFDEBUGFOCUS
 			}
 			conf_FTB_button_click = {
-				clr_global_flag = ASEFDEBUGFOCUS
+				clr_global_flag = ASPFDEBUGFOCUS
 			}
 		}
 	}
