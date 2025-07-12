@@ -1,0 +1,14 @@
+spriteTypes = {    
+	spriteType = {
+		name = "GFX_98_TB_L"
+		texturefile = "gfx/interface/win98web/TB_L.png"
+	}
+	spriteType = {
+		name = "GFX_98_TB"
+		texturefile = "gfx/interface/win98web/TB.png"
+	}
+	spriteType = {
+		name = "GFX_98_TB_R"
+		texturefile = "gfx/interface/win98web/TB_R.png"
+	}
+}

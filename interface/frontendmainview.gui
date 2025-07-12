@@ -19,6 +19,33 @@ guiTypes = {
 			quadTextureSprite ="GFX_frontend_bg"
 			alwaystransparent = yes
 		}
+
+		iconType = {
+			name = "98_TB"
+			position = { x = -171 y = -270 }
+			spriteType = "GFX_98_TB"
+			centerposition = yes
+			orientation = CENTER_DOWN
+			scale = 0.8
+		}
+
+		iconType = {
+			name = "98_TB_R"
+			position = { x = -171 y = -270 }
+			spriteType = "GFX_98_TB_R"
+			centerposition = yes
+			orientation = LOWER_RIGHT
+			scale = 0.8
+		}
+
+		iconType = {
+			name = "98_TB_L"
+			position = { x = 202 y = -270 }
+			spriteType = "GFX_98_TB_L"
+			centerposition = yes
+			orientation = LOWER_LEFT
+			scale = 0.8
+		}
 		
 	}
 	
@@ -26,16 +53,15 @@ guiTypes = {
 		name = "owned_dlc_item"
 		size = { width = 50 height = 50 }
 		
-		buttonType =
-		{
-			position = { x = -230 y = 0 }
+		buttonType ={
+			position = { x = -2300 y = 0 }
 			name ="dlc_button"
 			spriteType = "GFX_frontend_banner_dlc018"
 		}
 		
 		iconType = {
 			name = "glowup"
-			position = { x = -50 y = -21 }
+			position = { x = -5000 y = -21 }
 			spriteType = "GFX_spirit_glow"
 			scale = 0.8
 			#hide = yes
@@ -44,7 +70,7 @@ guiTypes = {
 		buttonType = {
 			name = "owned_tick"
 			spriteType = "GFX_BPT_area_defense_setting_tick"
-			position = { x = -6 y = 1 }
+			position = { x = -600 y = 1 }
 			Orientation = center_left
 			scale = 0.56
 			alwaysTransparent = yes
@@ -54,7 +80,7 @@ guiTypes = {
 		buttonType = {
 			name = "enabled_tick"
 			spriteType = "GFX_general_check"
-			position = { x = 28 y = 24 }
+			position = { x = 2800 y = 24 }
 			Orientation = center_left
 			alwaysTransparent = yes
 		}
@@ -65,9 +91,8 @@ guiTypes = {
 		name = "unowned_dlc_item"
 		size = { width = 50 height = 50 }
 		
-		buttonType =
-		{
-			position = { x = -230 y = 0 }
+		buttonType ={
+			position = { x = -2300 y = 0 }
 			name ="dlc_button"
 			spriteType = "GFX_frontend_banner_dlc018"
 		}
@@ -75,7 +100,7 @@ guiTypes = {
 		buttonType = {
 			name = "owned_tick"
 			spriteType = "GFX_BPT_area_defense_setting_tick"
-			position = { x = -6 y = 1 }
+			position = { x = -6000 y = 1 }
 			Orientation = center_left
 			scale = 0.56
 			alwaysTransparent = yes
@@ -85,7 +110,7 @@ guiTypes = {
 		buttonType = {
 			name = "enabled_tick"
 			spriteType = "GFX_general_check"
-			position = { x = 28 y = 24 }
+			position = { x = 28000 y = 24 }
 			Orientation = center_left
 			alwaysTransparent = yes
 		}
@@ -95,7 +120,7 @@ guiTypes = {
 	### MAIN MENU PANEL (DLC Ownership) 
 	containerWindowType = {
 		name  ="mainmenu_dlc_ownership"
-		position = { x=5 y =0 }
+		position = { x=50000 y =0 }
 		size = { width = 370 height = 582}
 		Orientation = lower_left
 		origo = lower_left
@@ -121,8 +146,7 @@ guiTypes = {
 		animation_time = 1000
 		size = { width = 256 height = 768}
 		
-		iconType =
-		{
+		iconType ={
 			name ="frontend_game_logo"
 			spriteType = "GFX_frontend_game_logo"
 			position = { x= 20 y = 20 }
@@ -163,8 +187,7 @@ guiTypes = {
 			pdx_tooltip = "MENU_ACHIEVEMENTS"
 		}
 
-		iconType =
-		{
+		iconType ={
 			name ="frontend_dev_logo"
 			spriteType = "GFX_frontend_dev_logo"
 			position = { x= 15 y = 15 }
