@@ -8,7 +8,7 @@ bookmarks = {
 		default = yes
 		
 		"PRC"={
-			history = "PRC_2025_DESC"
+			history = "1998_PRC_DESC"
 			ideology = Power_Authoritarianism
 			available = YES
 			ideas = {
