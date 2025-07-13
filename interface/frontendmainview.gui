@@ -302,10 +302,10 @@ guiTypes = {
 	### MAIN MENU PANEL (bottom)
 	containerWindowType = {
 		name ="mainmenu_panel_bottom"
-		position = { x=0 y =0}
-		size = { width = 320 height = 450 }
-		Orientation = CENTER
-		Origo = center		
+		position = { x=0 y =-60}
+		size = { width = 332 height = 559 }
+		Orientation = lower_left
+		Origo = lower_left		
 
 		positionType = {
 			name = "subscription_size"
@@ -314,7 +314,13 @@ guiTypes = {
 				
 		background = {
 			name = "Background"		
-			quadTextureSprite ="GFX_tiled_window"
+			quadTextureSprite ="GFX_98_start_bg"
+		}
+
+		iconType = {
+			name = "WINDOWS98T"
+			quadTextureSprite ="GFX_windows98"
+			position = { x=4 y =2}
 		}
 			
 		ButtonType = {
@@ -347,7 +353,7 @@ guiTypes = {
 		instantTextBoxType = {
 
 			name ="version_label"
-			position = { x = 35 y = 411 }
+			position = { x = 35 y = 540 }
 			textureFile = ""
 			font = "hoi_18b"
 			borderSize = {x = 0 y = 0}
@@ -355,6 +361,7 @@ guiTypes = {
 			format = centre
 			maxWidth = 250
 			maxHeight = 20	
+			text_color_code = b
 		}
 
 		positionType = {
