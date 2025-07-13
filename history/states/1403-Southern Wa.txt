@@ -5,7 +5,7 @@ state={
 		7647 
 	}
 	history={
-		owner = WAT
+		owner = BRM
 		add_core_of = WAT
 		add_core_of = BRM
 		buildings = {

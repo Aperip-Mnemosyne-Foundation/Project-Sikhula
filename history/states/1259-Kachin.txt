@@ -4,7 +4,7 @@ state={
 	name="STATE_1259"
 
 	history={
-		owner = KLA
+		owner = BRM
 		add_core_of = KLA
 		add_core_of = BRM
 		buildings = {

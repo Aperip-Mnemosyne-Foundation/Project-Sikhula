@@ -71,4 +71,12 @@ spriteTypes = {
 		name = "GFX_focus_goals_PRC_00_MR_BACKUP_L_03"
 		texturefile = "gfx/icons/goals/PRC/PRC_00_MR_BACKUP_L_03.png"
 	}
+	SpriteType = {
+		name = "GFX_focus_goals_PRC_00_MR_MECH_01"
+		texturefile = "gfx/icons/goals/PRC/PRC_00_MR_MECH_01.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_goals_PRC_00_MR_QBB_02"
+		texturefile = "gfx/icons/goals/PRC/PRC_00_MR_QBB_02.png"
+	}
 }

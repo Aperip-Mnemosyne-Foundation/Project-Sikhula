@@ -1,0 +1,22 @@
+﻿l_simp_chinese:
+ # TAG 以及 人名 按照字母表排序 文閒用1空格
+ # 此文件只寫 country_leader
+ # GER
+ GER_HelmutKohl: "赫尔穆特 科尔"
+ GER_RomanHerzog: "罗曼 赫尔佐克"
+ # IRQ
+ IRQ_SaddamHussein: "萨达姆 侯赛因"
+ # ISR
+ ISR_BenjaminNetanyahu: "本雅明 内塔尼亚胡"
+ ISR_EzerWeizman: "埃泽尔 魏茨曼"
+ # PER
+ PER_KhameneiAyatollahSeyyedAli: "阿亚图拉 赛义德 阿里 哈梅内伊"
+ PER_SeyyedMohammadKhatami: "赛义德 穆罕默德 哈塔米"
+ # PRC
+ PRC_BoXilai: "薄 熙来"
+ PRC_HuJintao: "胡 锦涛"
+ PRC_JiangZemin: "江 泽民"
+ PRC_ZengQinghong: "曾 庆洪"
+ # UAE
+ UAE_SheikhaMohammedbinRashidAlMaktoum: "谢赫 穆罕默德 本 拉希德 阿勒马克图姆"
+ UAE_SheikhaZayedBinSultanAlnahayan: "谢赫 扎耶德 本 苏丹 阿勒纳哈扬"

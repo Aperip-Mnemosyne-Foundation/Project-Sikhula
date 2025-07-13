@@ -8,7 +8,7 @@ tags={
 	"National Focuses"
 	"Technologies"
 }
-name="A single spark can start a prairie fire"
+name="A Single Spark Prairie Fire"
 replace_path="common/countries"
 replace_path="common/country_tags"
 replace_path="common/decisions"

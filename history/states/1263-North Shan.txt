@@ -4,7 +4,7 @@ state={
 	name="STATE_1263"
 
 	history={
-		owner = SSA
+		owner = BRM
 		add_core_of = SSA
 		add_core_of = BRM
 		victory_points = {

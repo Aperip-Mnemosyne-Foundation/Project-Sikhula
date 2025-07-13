@@ -5,7 +5,7 @@ state={
 		1197 1934 4087 4318 4996 14920 14922 14923 14924 
 	}
 	history={
-		owner = KLA
+		owner = BRM
 		add_core_of = KLA
 		add_core_of = BRM
 		buildings = {

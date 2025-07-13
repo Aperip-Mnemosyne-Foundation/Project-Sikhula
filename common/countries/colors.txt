@@ -1160,8 +1160,8 @@ ATH = {
 	color_ui = rgb { 91 25 25 }
 }
 KOR = {
-	color = rgb { 77 100 175 }
-	color_ui = rgb { 77 100 175 }
+	color = rgb { 46 81 129 }
+	color_ui = rgb { 46 81 129 }
 }
 LFM = {
 	color = rgb { 40 72 104 }
