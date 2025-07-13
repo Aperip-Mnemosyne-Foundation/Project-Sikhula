@@ -122,7 +122,8 @@ guiTypes = {
 		instantTextBoxType = {
 			name ="pol_power"
 			position = { x= 120 y = 9 }
-			font = "hoi_18mbs"
+			font = "hoi_18b"
+			text_color_code = b
 			text = "999"
 			format = center
 			maxWidth = 50
@@ -147,7 +148,8 @@ guiTypes = {
 		instantTextBoxType = {
 			name ="manpower"
 			position = { x= 352 y = 9 }
-			font = "hoi_18mbs"
+			font = "hoi_18b"
+			text_color_code = b
 			text = "9999"
 			format = center
 			maxWidth = 57
@@ -172,7 +174,8 @@ guiTypes = {
 		instantTextBoxType = {
 			name ="stability"
 			position = { x= 180 y = 9 }
-			font = "hoi_18mbs"
+			font = "hoi_18b"
+			text_color_code = b
 			text = "100%"
 			format = right
 			maxWidth = 57
@@ -197,7 +200,8 @@ guiTypes = {
 		instantTextBoxType = {
 			name ="war_support"
 			position = { x= 253 y = 9 }
-			font = "hoi_18mbs"
+			font = "hoi_18b"
+			text_color_code = b
 			text = "100%"
 			format = right
 			maxWidth = 57
@@ -387,7 +391,8 @@ guiTypes = {
 		instantTextBoxType = {
 			name ="industrial_capacity"
 			position = { x= 438 y = 9 } 
-			font = "hoi_18mbs"
+			font = "hoi_18b"
+			text_color_code = b
 			text = "12/12/12"
 			format = center
 			maxWidth = 50
@@ -414,7 +419,8 @@ guiTypes = {
 		instantTextBoxType = {
 			name ="convoys_count"
 			position = { x= 662 y = 5 }
-			font = "hoi_18mbs"
+			font = "hoi_18b"
+			text_color_code = b
 			text = "0"
 			format = center
 			maxWidth = 44
@@ -449,7 +455,8 @@ guiTypes = {
 		instantTextBoxType = {
 			name ="fuel_value"
 			position = { x= 513 y = 5 }
-			font = "hoi_18mbs"
+			font = "hoi_18b"
+			text_color_code = b
 			text = "999d"
 			format = center
 			maxWidth = 48
@@ -484,7 +491,8 @@ guiTypes = {
 		instantTextBoxType = {
 			name ="supply_value"
 			position = { x= 586 y = 5 }
-			font = "hoi_18mbs"
+			font = "hoi_18b"
+			text_color_code = b
 			text = "999d"
 			format = center
 			maxWidth = 48
