@@ -19,4 +19,36 @@ spriteTypes = {
 		name = "GFX_windows98"
 		texturefile = "gfx/interface/win98web/windows98.png"
 	}
+
+	textSpriteType = {
+		name = "GFX_98startwindowbutton"
+		textureFile = "gfx/interface/win98web/98startwindowbutton.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	SpriteType = {
+		name = "GFX_98startwindowbutton_highlight"
+		textureFile = "gfx/interface/win98web/98startwindowbutton_transparent.dds"
+
+		animation = {
+			animationmaskfile = "gfx/interface/win98web/98startwindowbutton_white.dds"
+			animationtexturefile = "gfx/interface/win98web/98startwindowbutton_highlight.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1				# in seconds
+			animationdelay = 0.5			# in seconds
+			animationblendmode = "normal"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_98starticons"
+		texturefile = "gfx/interface/win98web/98starticons.png"
+	}
 }
