@@ -237,5 +237,21 @@ guiTypes = {
 			buttonFont = "hoi4_typewriter16"
 			orientation = center
 		}
+		buttonType = {
+			name = "conf_ECA_button"
+			spriteType = "GFX_button_win98_221x34"
+			position = { x = -110 y = 22 }
+			buttonText = "CONF_ECA"
+			buttonFont = "hoi4_typewriter16"
+			orientation = center
+		}
+		buttonType = {
+			name = "conf_ECB_button"
+			spriteType = "GFX_button_win98_221x34"
+			position = { x = -110 y = 22 }
+			buttonText = "CONF_ECB"
+			buttonFont = "hoi4_typewriter16"
+			orientation = center
+		}
 	}
 }

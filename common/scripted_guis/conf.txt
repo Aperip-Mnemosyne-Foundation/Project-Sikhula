@@ -120,6 +120,14 @@ scripted_gui = {
 				has_global_flag = conf_right
 				has_global_flag = ASPFDEBUGFOCUS
 			}
+			conf_ECA_button_visible = {
+				has_global_flag = conf_right
+				NOT = { has_global_flag = ECOPEN }
+			}
+			conf_ECB_button_visible = {
+				has_global_flag = conf_right
+				has_global_flag = ECOPEN
+			}
 		}
 		effects = {
 			validate_button_click = {
@@ -213,6 +221,12 @@ scripted_gui = {
 			}
 			conf_FTB_button_click = {
 				clr_global_flag = ASPFDEBUGFOCUS
+			}
+			conf_ECA_button_click = {
+				set_global_flag = ECOPEN
+			}
+			conf_ECB_button_click = {
+				clr_global_flag = ECOPEN
 			}
 		}
 	}

@@ -111,4 +111,16 @@ spriteTypes = {
 		name = "GFX_focus_goals_PRC_00_MR_SEA_02"
 		texturefile = "gfx/icons/goals/PRC/PRC_00_MR_SEA_02.png"
 	}
+	SpriteType = {
+		name = "GFX_focus_goals_PRC_00_MR_QBB_01"
+		texturefile = "gfx/icons/goals/PRC/PRC_00_MR_QBB_01.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_goals_PRC_00_MR_MECH_02"
+		texturefile = "gfx/icons/goals/PRC/PRC_00_MR_MECH_02.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_goals_PRC_00_MR_MECH_03"
+		texturefile = "gfx/icons/goals/PRC/PRC_00_MR_MECH_03.png"
+	}
 }

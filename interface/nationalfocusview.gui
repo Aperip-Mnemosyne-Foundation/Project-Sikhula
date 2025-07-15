@@ -533,14 +533,15 @@ guiTypes = {
 		
 		instantTextboxType = {
 			name = "name"
-			position = { x = 15 y = 58 }
-			font = "hoi_16mbs"
+			position = { x = -13 y = 62 }
+			font = "Youhei"
 			text = ""
-			maxWidth = 147
+			maxWidth = 200
 			maxHeight = 20
 			format = center
 			vertical_alignment = center 			
 			alwaystransparent = yes
+
 		}
 
 		iconType = {

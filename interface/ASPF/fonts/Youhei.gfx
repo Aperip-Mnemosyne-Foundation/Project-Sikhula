@@ -1,0 +1,10 @@
+bitmapfonts = {
+    bitmapfont = {
+		name = "Youhei"
+		fontfiles = { 
+			"gfx/fonts/Youhei/Youhei_0"	
+		}
+	    color = 0x00000000
+		border_color = 0x00000000
+	}
+}

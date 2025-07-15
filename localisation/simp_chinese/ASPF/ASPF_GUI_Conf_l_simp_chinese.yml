@@ -8,3 +8,5 @@
  CONF_WMB: "关闭水印"
  CONF_FTA: "开启国策"
  CONF_FTB: "关闭国策"
+ CONF_ECA: "开启经济"
+ CONF_ECB: "关闭经济"

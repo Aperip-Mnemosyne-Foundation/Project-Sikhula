@@ -236,64 +236,7 @@ spriteTypes = {
                 effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
         }
 	
-	spriteType = {
-		name = "GFX_select_date_bg"
-		texturefile = "gfx/interface/win98web/web.png"
-	}
-
-	spriteType = {
-		name = "GFX_win98_BN_bg"
-		texturefile = "gfx/interface/win98web/win98_BN_bg.png"
-	}
-
-	spriteType = {
-		name = "GFX_win98_thumbnail"
-		texturefile = "gfx/interface/win98web/thumbnail.png"
-	}
-
-	corneredTileSpriteType = {
-		name = "GFX_tiled_win98_desc_bg"
-		size= { x=190 y=190 }
-		textureFile = "gfx/interface/win98web/tiled_win98_desc_bg.dds"
-		borderSize = { x=64 y=64 }
-		tilingCenter = yes
-		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
-	}
-
-	corneredTileSpriteType = {
-		name = "GFX_tiled_win98_dark_bg"
-		size= { x=190 y=190 }
-		textureFile = "gfx/interface/win98web/tiled_win98_dark_bg.dds"
-		borderSize = { x=64 y=64 }
-		tilingCenter = yes
-		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
-	}
-
-	spriteType = {
-		name = "GFX_win98_ASPF"
-		texturefile = "gfx/interface/win98web/ASPF.png"
-	}
-
-	spriteType = {
-		name = "GFX_button_back"
-		texturefile = "gfx/interface/win98web/back.dds"
-		noOfFrames = 1
-		effectFile = "gfx/FX/buttonstate.lua"
-	}
-
-	spriteType = {
-		name = "GFX_button_win98_221x34"
-		texturefile = "gfx/interface/win98web/button_win98_221x34.dds"
-		noOfFrames = 1
-		effectFile = "gfx/FX/buttonstate.lua"
-	}
-
-	spriteType = {
-		name = "GFX_button_win98_34x34"
-		texturefile = "gfx/interface/win98web/button_win98_34x34.dds"
-		noOfFrames = 1
-		effectFile = "gfx/FX/buttonstate.lua"
-	}
+	
 	
 	spriteType = {
 		name = "GFX_select_date_1936"
