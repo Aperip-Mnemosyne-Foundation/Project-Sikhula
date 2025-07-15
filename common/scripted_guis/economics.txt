@@ -1,0 +1,17 @@
+scripted_gui = {
+
+	economics_main = {
+		context_type = player_context
+		window_name = "economics_main"
+		parent_window_name = "countryinternationalmarketview"
+		ai_enabled = {
+			always = no
+		}
+		visible = {
+			is_ai = no
+		}
+		effects = {
+		    
+		}
+	}
+}

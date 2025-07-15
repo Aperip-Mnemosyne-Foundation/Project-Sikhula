@@ -122,11 +122,13 @@ scripted_gui = {
 			}
 			conf_ECA_button_visible = {
 				has_global_flag = conf_right
-				NOT = { has_global_flag = ECOPEN }
+				NOT = { has_country_flag = ECOPEN }
+				always = no
 			}
 			conf_ECB_button_visible = {
 				has_global_flag = conf_right
-				has_global_flag = ECOPEN
+				has_country_flag = ECOPEN
+				always = no
 			}
 		}
 		effects = {
@@ -223,10 +225,10 @@ scripted_gui = {
 				clr_global_flag = ASPFDEBUGFOCUS
 			}
 			conf_ECA_button_click = {
-				set_global_flag = ECOPEN
+				set_country_flag = ECOPEN
 			}
 			conf_ECB_button_click = {
-				clr_global_flag = ECOPEN
+				clr_country_flag = ECOPEN
 			}
 		}
 	}

@@ -1,0 +1,14 @@
+spriteTypes = {    
+	spriteType = {
+		name = "GFX_gamemenu_bg"
+		texturefile = "gfx/interface/win98web/gamemenu.png"
+	}
+    spriteType = {
+		name = "GFX_gamemenu2_bg"
+		texturefile = "gfx/interface/win98web/gamemenu2.png"
+	}
+    spriteType = {
+		name = "GFX_close_button_98"
+		textureFile = "gfx/interface/win98web/web_close_button.png"
+	}
+}

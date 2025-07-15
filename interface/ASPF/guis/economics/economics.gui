@@ -1,0 +1,15 @@
+guiTypes = {
+	containerWindowType = {
+		name = "economics_main"
+		position = { x=0 y=33 }
+		size = { width = 657 height = 1327 }
+		moveable = no
+		orientation = upper_left
+		origo = upper_left
+		clipping = yes
+		background = {
+			name = "economics_main_bg"
+			spriteType ="GFX_gamemenu2_bg"
+		}
+	}
+}
