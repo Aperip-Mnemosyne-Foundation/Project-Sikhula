@@ -1,0 +1,8 @@
+PRC_EC_SMES = {
+    icon = GFX_idea_unknown
+    enable = { always = yes }
+    remove_trigger = {
+        always = no
+    }
+	civilian_factory_use = ROOT.ECCP_set
+}

@@ -139,4 +139,32 @@ spriteTypes = {
 		name = "GFX_focus_goals_PRC_00_MR_SEA_03"
 		texturefile = "gfx/icons/goals/PRC/PRC_00_MR_SEA_03.png"
 	}
+	SpriteType = {
+		name = "GFX_focus_goals_PRC_00_MR_BACKUP_L_02"
+		texturefile = "gfx/icons/goals/PRC/PRC_00_MR_BACKUP_L_02.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_goals_PRC_00_MR_MECH_02_L"
+		texturefile = "gfx/icons/goals/PRC/PRC_00_MR_MECH_02_L.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_goals_PRC_00_MR_MECH_02_R"
+		texturefile = "gfx/icons/goals/PRC/PRC_00_MR_MECH_02_R.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_goals_PRC_00_MR_BACKUP_03"
+		texturefile = "gfx/icons/goals/PRC/PRC_00_MR_BACKUP_03.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_goals_PRC_00_MR_BACKUP_R_03"
+		texturefile = "gfx/icons/goals/PRC/PRC_00_MR_BACKUP_R_03.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_goals_PRC_00_MR_QBB_03"
+		texturefile = "gfx/icons/goals/PRC/PRC_00_MR_QBB_03.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_goals_PRC_00_MR_LAND_02"
+		texturefile = "gfx/icons/goals/PRC/PRC_00_MR_LAND_02.png"
+	}
 }

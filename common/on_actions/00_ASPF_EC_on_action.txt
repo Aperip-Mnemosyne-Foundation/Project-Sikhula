@@ -1,0 +1,26 @@
+on_actions = {
+    on_daily = {
+		effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				EC_cre = yes
+				EC_ccp = yes
+				EC_cpe = yes
+				EC_cdg = yes
+				EC_ccp2 = yes
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				EC_ceg = yes	
+			}
+		}
+	}
+}

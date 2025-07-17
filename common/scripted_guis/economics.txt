@@ -13,5 +13,95 @@ scripted_gui = {
 		effects = {
 		    
 		}
+		triggers = {
+			economics_ECTP_text_3_visible = {
+				check_variable = {
+					ROOT.ECTP_SHOW_r = 3
+				}
+			}
+			economics_ECTP_text_2_visible = {
+				check_variable = {
+					ROOT.ECTP_SHOW_r = 2
+				}
+			}
+			economics_ECTP_text_1_visible = {
+				check_variable = {
+					ROOT.ECTP_SHOW_r = 1
+				}
+			}
+		}
+	}
+	
+	
+
+
+
+
+	ECCP_set_gui = {
+		window_name = "ECCP_set_gui_window"
+		context_type = player_context
+		parent_window_name = "economics_ECCP_window"
+		ai_enabled = {
+			always = no
+		}
+		visible = {
+			is_ai = no
+		}
+		dynamic_lists = {
+			ECCP_set_gui_custom_slider_grid = {
+				array = ROOT.ECCP_slider_buttons
+				change_scope = no
+				entry_container = ECCP_set_gui_custom_slider_container
+				index = i
+				value = v
+			}
+		}
+		properties = {
+			ECCP_set_gui_slider_dot = {
+				x = ROOT.ECCP_slider_dot_x
+			}
+			ECCP_set_gui_custom_slider_icon = {
+				frame = ROOT.ECCP_button_frame
+			}
+		}
+		effects = {
+			ECCP_set_gui_custom_slider_icon_click = {
+				set_variable = { ROOT.ECCP_current_int = v }
+				set_ECCP = yes
+			}
+			ECCP_set_gui_slider_limit_left_click = {
+				add_to_variable = { ROOT.ECCP_current_int = -1 }
+				clamp_variable = {
+					var = ROOT.ECCP_current_int
+					min = 0
+					max = 100
+				}
+				set_ECCP = yes
+			}
+			ECCP_set_gui_slider_limit_right_click = {
+				add_to_variable = { ROOT.ECCP_current_int = 1 }
+				clamp_variable = {
+					var = ROOT.ECCP_current_int
+					min = 0
+					max = 100
+				}
+				set_ECCP = yes
+			}
+		}
+		triggers = {
+			ECCP_set_gui_custom_slider_icon_visible = {
+				if = {
+					limit = {
+						check_variable = {
+							ROOT.ECCP_current_int = v
+						}
+					}
+					set_temp_variable = { ROOT.ECCP_button_frame =  2 }
+				}
+				else = {
+					set_temp_variable = { ROOT.ECCP_button_frame =  1 }
+				}
+			}
+		}
 	}
 }

@@ -80,6 +80,7 @@ guiTypes = {
 		position = { x= 560 y=10 }
 		maxWidth = 400 #600 #320
 		maxHeight = 256
+		text_color_code = b
 	}
 
 	# Offset by +4 +4 because GUI has layout depending on it.
@@ -521,7 +522,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "error_log_win"
-		position = { x=-192 y=-30}	
+		position = { x=-198 y=-30}	
 		Orientation = lower_right
 
 		buttonType = {
@@ -535,7 +536,7 @@ guiTypes = {
 		buttonType = {
 			name = "error_log_button"
 			quadTextureSprite = "GFX_error_log_button"
-			position = { x= 0 y = 00 }
+			position = { x= 0 y = 100 }
 			text = "ERROR"
 			buttonFont = "hoi_18mbs"
 			Orientation = "LOWER_RIGHT"

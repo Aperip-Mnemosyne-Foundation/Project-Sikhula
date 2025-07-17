@@ -95,6 +95,31 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_pol_faction_icon_bg"
+		texturefile = "gfx/interface/win98web/pol_faction_icon_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_pol_partyinfo_bg"
+		texturefile = "gfx/interface/win98web/pol_partyinfo_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_pol_partygrid_bg"
+		texturefile = "gfx/interface/win98web/pol_partygrid_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_seg_zone"
+		texturefile = "gfx/interface/win98web/seg_zone.png"
+	}
+
+	spriteType = {
+		name = "GFX_goals_icon_bg"
+		texturefile = "gfx/interface/win98web/goals_icon_bg.png"
+	}
+
+	spriteType = {
 		name = "GFX_win98_ASPF"
 		texturefile = "gfx/interface/win98web/ASPF.png"
 	}
@@ -106,17 +131,22 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 
-	spriteType = {
+	textSpriteType = {
 		name = "GFX_button_win98_221x34"
 		texturefile = "gfx/interface/win98web/button_win98_221x34.dds"
-		noOfFrames = 1
-		effectFile = "gfx/FX/buttonstate.lua"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	textSpriteType = {
+		name = "GFX_button_win98_34x34"
+		texturefile = "gfx/interface/win98web/button_win98_34x34.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
 
 	spriteType = {
-		name = "GFX_button_win98_34x34"
-		texturefile = "gfx/interface/win98web/button_win98_34x34.dds"
-		noOfFrames = 1
-		effectFile = "gfx/FX/buttonstate.lua"
+		name = "generic_box_125_b"
+		texturefile = "gfx/interface/win98web/generic_box_125_b.dds"
 	}
 }

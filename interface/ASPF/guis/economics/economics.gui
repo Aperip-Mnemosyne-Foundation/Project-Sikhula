@@ -11,5 +11,243 @@ guiTypes = {
 			name = "economics_main_bg"
 			spriteType ="GFX_gamemenu2_bg"
 		}
+		containerWindowType = {
+			name = "economics_ECTP_window"
+			background = {
+				name = "background"
+				spriteType = "generic_box_125_b"
+			}
+			size = { width = 100% height = 100% }
+			position = {x = 7 y = 200}
+			instantTextBoxType = {
+				name = "economics_ECTP_text_3"
+				position = { x = 20 y = 0 }
+			    font = "hoi4_typewriter22"
+			    borderSize = {x = 0 y = 0}
+			    text = "[?ROOT.ECTP_SHOW]B"
+			    maxWidth = 100
+			    maxHeight = 20
+			    format = right
+			    text_color_code = W
+			}
+			instantTextBoxType = {
+				name = "economics_ECTP_text_2"
+				position = { x = 20 y = 0 }
+			    font = "hoi4_typewriter22"
+			    borderSize = {x = 0 y = 0}
+			    text = "[?ROOT.ECTP_SHOW]M"
+			    maxWidth = 100
+			    maxHeight = 20
+			    format = right
+			    text_color_code = W
+			}
+			instantTextBoxType = {
+				name = "economics_ECTP_text_1"
+				position = { x = 20 y = 0 }
+			    font = "hoi4_typewriter22"
+			    borderSize = {x = 0 y = 0}
+			    text = "[?ROOT.ECTP_SHOW]K"
+			    maxWidth = 100
+			    maxHeight = 20
+			    format = right
+			    text_color_code = W
+			}
+		}
+		containerWindowType = {
+			name = "economics_ECRE_window"
+			background = {
+				name = "background"
+				spriteType = "generic_box_125_b"
+			}
+			size = { width = 100% height = 100% }
+			position = {x = 7 y = 230}
+			instantTextBoxType = {
+				name = "economics_ECRE_text"
+				position = { x = 20 y = 0 }
+			    font = "hoi4_typewriter22"
+			    borderSize = {x = 0 y = 0}
+			    text = "[?ROOT.ECRE_SHOW]"
+			    maxWidth = 100
+			    maxHeight = 20
+			    format = right
+			    text_color_code = W
+			}
+		}
+		containerWindowType = {
+			name = "economics_ECEG_window"
+			background = {
+				name = "background"
+				spriteType = "generic_box_125_b"
+			}
+			size = { width = 100% height = 100% }
+			position = {x = 7 y = 260}
+			instantTextBoxType = {
+				name = "economics_ECEG_text"
+				position = { x = 20 y = 0 }
+			    font = "hoi4_typewriter22"
+			    borderSize = {x = 0 y = 0}
+			    text = "[?ROOT.ECEG]"
+			    maxWidth = 100
+			    maxHeight = 20
+			    format = right
+			    text_color_code = W
+			}
+		}
+		containerWindowType = {
+			name = "economics_ECCP_window"
+			background = {
+				name = "background"
+				spriteType = "generic_box_125_b"
+			}
+			size = { width = 100% height = 100% }
+			position = {x = 7 y = 290}
+			instantTextBoxType = {
+				name = "economics_ECCP_text"
+				position = { x = 20 y = 0 }
+			    font = "hoi4_typewriter22"
+			    borderSize = {x = 0 y = 0}
+			    text = "[?ROOT.ECCP]"
+			    maxWidth = 100
+			    maxHeight = 20
+			    format = right
+			    text_color_code = W
+			}
+		}
+		containerWindowType = {
+			name = "economics_ECDG_window"
+			background = {
+				name = "background"
+				spriteType = "generic_box_125_b"
+			}
+			size = { width = 100% height = 100% }
+			position = {x = 7 y = 320}
+			instantTextBoxType = {
+				name = "economics_ECDG_text"
+				position = { x = 20 y = 0 }
+			    font = "hoi4_typewriter22"
+			    borderSize = {x = 0 y = 0}
+			    text = "[?ROOT.ECDG_SHOW]"
+			    maxWidth = 100
+			    maxHeight = 20
+			    format = right
+			    text_color_code = W
+			}
+		}
+		containerWindowType = {
+			name = "economics_EC_PE_window"
+			background = {
+				name = "background"
+				spriteType = "generic_box_125_b"
+			}
+			size = { width = 100% height = 100% }
+			position = {x = 7 y = 350}
+			instantTextBoxType = {
+				name = "economics_EC_PE_text"
+				position = { x = 20 y = 0 }
+			    font = "hoi4_typewriter22"
+			    borderSize = {x = 0 y = 0}
+			    text = "[?ROOT.EC_PE]"
+			    maxWidth = 100
+			    maxHeight = 20
+			    format = right
+			    text_color_code = W
+			}
+		}
+		containerWindowType = {
+			name = "economics_ECSB_window"
+			background = {
+				name = "background"
+				spriteType = "generic_box_125_b"
+			}
+			size = { width = 100% height = 100% }
+			position = {x = 7 y = 380}
+			instantTextBoxType = {
+				name = "economics_ECSB_text"
+				position = { x = 20 y = 0 }
+			    font = "hoi4_typewriter22"
+			    borderSize = {x = 0 y = 0}
+			    text = "[?ROOT.ECSB]"
+			    maxWidth = 100
+			    maxHeight = 20
+			    format = right
+			    text_color_code = W
+			}
+		}
+		containerWindowType = {
+			name = "economics_ECPB_window"
+			background = {
+				name = "background"
+				spriteType = "generic_box_125_b"
+			}
+			size = { width = 100% height = 100% }
+			position = {x = 7 y = 410}
+			instantTextBoxType = {
+				name = "economics_ECPB_text"
+				position = { x = 20 y = 0 }
+			    font = "hoi4_typewriter22"
+			    borderSize = {x = 0 y = 0}
+			    text = "[?ROOT.ECPB]"
+			    maxWidth = 100
+			    maxHeight = 20
+			    format = right
+			    text_color_code = W
+			}
+		}
+	}
+
+
+    containerWindowType = {
+		name = "ECCP_set_gui_window"
+		position = { x = 130 y = 3}	
+		size = { width = 800 height= 600 }
+		orientation = upper_left
+		origo = upper_left
+		buttonType = {
+			name = "ECCP_set_gui_slider_limit_left"
+			spriteType = "GFX_econ_crt_slider_limit_left"
+			position = { x = 0 y = 0 }
+		}
+		buttonType = {
+			name = "ECCP_set_gui_slider_limit_right"
+			spriteType = "GFX_econ_crt_slider_limit_right"
+			position = { x = 429 y = 0 }
+		}
+		gridboxtype = {
+			name = "ECCP_set_gui_custom_slider_grid"
+			position = { x = -380 y = 6 }
+			size = { width = 100% height = 100% }
+			slotsize = { width = 4 height = 7 }
+			max_slots_horizontal = 101
+			max_slots_vertical = 1
+			add_horizontal = yes
+		}
+		iconType = { 
+			name = "ECCP_set_gui_slider_dot"
+			quadTextureSprite = "GFX_slider_dot"
+			position = { x = 0 y = 10 }
+			centerPosition = yes
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "economics_ECCP_set_percentage_text"
+			position = { x = 400 y = -2 }
+			font = "hoi4_typewriter22"
+			borderSize = {x = 0 y = 0}
+			text = "[?ROOT.ECCP_current_int]"
+			maxWidth = 100
+			maxHeight = 20
+			format = right
+			text_color_code = W
+		}
+	}
+	containerWindowType = {
+		name = "ECCP_set_gui_custom_slider_container"
+		position = { x = 0 y = 0 }
+		buttonType = { 
+			name = "ECCP_set_gui_custom_slider_icon"
+			quadTextureSprite = "GFX_set_slider"
+			frame = 1
+			clicksound = "click_scroll"
+		}
 	}
 }

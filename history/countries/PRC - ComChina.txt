@@ -1,0 +1,40 @@
+﻿capital = 608 # Peking
+
+# oob = "PRC_1998_oob"
+
+set_research_slots = 4
+
+# Starting tech
+set_technology = {
+
+}
+set_politics = {
+	ruling_party = DEMOCRATICSOCIALISM
+	last_election = "1998.1.1"
+    #election_frequency = 60
+	elections_allowed = no
+}
+
+set_popularities = {
+	DEMOCRATICSOCIALISM = 100
+}
+
+# start_ideas
+add_ideas = {
+   
+}
+
+recruit_character = PRC_JiangZemin
+
+set_country_flag = secondleadershow_PRC_HuJintao #secondleader
+# game_start_vars_setting
+  # Ec.
+    set_variable = { ROOT.ECCP_current_int = 60 }
+    set_ECCP = yes
+    set_variable = { ROOT.ECPB = 91 }
+    EC_cre = yes
+	EC_ccp = yes
+	EC_cpe = yes
+	EC_cdg = yes
+	EC_ccp2 = yes
+	EC_ceg = yes

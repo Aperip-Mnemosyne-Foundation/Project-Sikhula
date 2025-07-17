@@ -1,0 +1,406 @@
+EC_cre = {
+	#计算实体经济
+	set_variable = {
+		ROOT.ECSB = ROOT.num_of_civilian_factories
+	}
+	set_variable = {
+		ROOT.ECRE = ROOT.ECSB
+	}
+	if = {
+		limit = { 
+			NOT = { has_variable = ROOT.ECPB }
+		}
+		set_variable = {
+			ROOT.ECPB = 0
+		}
+	}
+	if = {
+		limit = { 
+			has_variable = ROOT.ECPB_mem
+		}
+		set_variable = {
+			ROOT.ECPB_cbef = ROOT.ECPB_mem
+		}
+	}
+	else = {
+		set_variable = {
+			ROOT.ECPB_cbef = 0
+		}
+	}
+	subtract_from_variable = {
+		ROOT.ECPB_cbef = ROOT.ECPB
+	}
+	multiply_variable = {
+		ROOT.ECPB_cbef = -1
+	}
+	add_offsite_building = {
+		type = industrial_complex
+		level = ROOT.ECPB_cbef
+	}
+	subtract_from_variable = {
+		ROOT.ECSB = ROOT.ECPB
+	}
+	set_variable = {
+		ROOT.ECPB_mem = ROOT.ECPB
+	}
+	set_variable = {
+		ROOT.ECRE_SHOW = ROOT.ECRE
+	}
+}
+EC_ccp = {
+	#计算国家人口
+	set_variable = {
+		ROOT.ECTP = ROOT.max_manpower_k
+	}
+	set_variable = {
+		ROOT.ECTP_SHOW = ROOT.ECTP
+	}
+	if = {
+		limit = { 
+			check_variable = {
+				ROOT.ECTP_SHOW < 1000
+			}
+		}
+		set_variable = {
+			ROOT.ECTP_SHOW_r = 1
+		}
+		multiply_variable = {
+			ROOT.ECTP_SHOW = 100
+		}
+		round_variable = ROOT.ECTP_SHOW
+		divide_variable = {
+			ROOT.ECTP_SHOW = 100
+		}
+	}
+    else_if = {
+		limit = { 
+			check_variable = {
+				ROOT.ECTP_SHOW < 1000000
+			}
+		}
+		set_variable = {
+			ROOT.ECTP_SHOW_r = 2
+		}
+		divide_variable = {
+			ROOT.ECTP_SHOW = 1000
+		}
+		multiply_variable = {
+			ROOT.ECTP_SHOW = 100
+		}
+		round_variable = ROOT.ECTP_SHOW
+		divide_variable = {
+			ROOT.ECTP_SHOW = 100
+		}
+	}
+	else = {
+		set_variable = {
+			ROOT.ECTP_SHOW_r = 3
+		}
+		divide_variable = {
+			ROOT.ECTP_SHOW = 1000000
+		}
+		multiply_variable = {
+			ROOT.ECTP_SHOW = 100
+		}
+		round_variable = ROOT.ECTP_SHOW
+		divide_variable = {
+			ROOT.ECTP_SHOW = 100
+		}
+	}
+}
+EC_cpe = {
+	#计算人均经济
+	set_variable = {
+		ROOT.ECRE_c1 = ROOT.ECRE
+	}
+	if = {
+		limit = {
+			check_variable = {
+				ROOT.ECRE_c1 < 10
+			}
+		}
+		set_variable = {
+			ROOT.ECRE_c1_r = 100000
+		}
+		multiply_variable = {
+		    ROOT.ECRE_c1 = ROOT.ECRE_c1_r
+	    }
+	}
+	else_if = {
+		limit = { 
+			check_variable = {
+				ROOT.ECRE_c1 < 100
+			}
+		}
+		set_variable = {
+			ROOT.ECRE_c1_r = 10000
+		}
+		multiply_variable = {
+		    ROOT.ECRE_c1 = ROOT.ECRE_c1_r
+	    }
+	}
+	else_if = {
+		limit = { 
+			check_variable = {
+				ROOT.ECRE_c1 < 1000
+			}
+		}
+		set_variable = {
+			ROOT.ECRE_c1_r = 1000
+		}
+		multiply_variable = {
+		    ROOT.ECRE_c1 = ROOT.ECRE_c1_r
+	    }
+	}
+	else_if = {
+		limit = { 
+			check_variable = {
+				ROOT.ECRE_c1 < 10000
+			}
+		}
+		set_variable = {
+			ROOT.ECRE_c1_r = 100
+		}
+		multiply_variable = {
+		    ROOT.ECRE_c1 = ROOT.ECRE_c1_r
+	    }
+	}
+	else = {
+		set_variable = {
+			ROOT.ECRE_c1_r = 10
+		}
+		multiply_variable = {
+		    ROOT.ECRE_c1 = ROOT.ECRE_c1_r
+	    }
+	}
+    divide_variable = {
+		ROOT.ECRE_c1 = ROOT.ECTP
+	}
+	set_variable = {
+		ROOT.ECRE_c1_r_c = 100000
+	}
+	divide_variable = {
+		ROOT.ECRE_c1_r_c = ROOT.ECRE_c1_r
+	}
+	multiply_variable = {
+		ROOT.ECRE_c1 = ROOT.ECRE_c1_r_c
+	}
+	set_variable = {
+		ROOT.EC_PE = ROOT.ECRE_c1
+	}
+}
+EC_ceg = {
+	#计算经济增长速度（人均）（每月计算)
+	if = {
+		limit = { 
+			check_variable = {
+				ROOT.EC_PE_A^num = 500
+			}
+		}
+        remove_from_array = {
+            array = ROOT.EC_PE_A
+            index = 0
+        }
+	}
+	add_to_array = {
+		array = ROOT.EC_PE_A
+		value = ROOT.EC_PE
+	}
+	set_variable = {
+		ROOT.EC_PE_num = ROOT.EC_PE_A^num
+	}
+	set_variable = {
+		ROOT.EC_PE_A_ibef = ROOT.EC_PE_num
+	}
+	add_to_variable = {
+		ROOT.EC_PE_A_ibef = -1
+	}
+	set_variable = {
+		ROOT.EC_PE_cnow = ROOT.EC_PE_A^ROOT.EC_PE_A_ibef
+	}
+	if = {
+		limit = {
+            check_variable = {
+				ROOT.EC_PE_A_ibef > 0
+			}
+		}
+        add_to_variable = {
+		    ROOT.EC_PE_A_ibef = -1
+	    }
+	}
+	set_variable = {
+		ROOT.EC_PE_cbef = ROOT.EC_PE_A^ROOT.EC_PE_A_ibef
+	}
+	set_variable = {
+		ROOT.EC_PE_c1 = ROOT.EC_PE_cnow
+	}
+	subtract_from_variable = {
+		ROOT.EC_PE_c1 = ROOT.EC_PE_cbef
+	}
+	multiply_variable = {
+		ROOT.EC_PE_c1 = 10000
+	}
+	if = {
+		limit = { 
+			check_variable = {
+				ROOT.EC_PE_cbef = 0
+			}
+		}
+		divide_variable = {
+		    ROOT.EC_PE_c1 = ROOT.EC_PE_cnow
+	    }
+	}
+	else = {
+		divide_variable = {
+		    ROOT.EC_PE_c1 = ROOT.EC_PE_cbef
+	    }
+	}
+	set_variable = {
+		ROOT.ECEG = ROOT.EC_PE_c1
+	}
+	set_variable = {
+		ROOT.ECEG_A_imax = ROOT.ECEG_A^num
+	}
+	if = {
+		limit = { 
+			check_variable = {
+				ROOT.ECEG_A_imax = 500
+			}
+		}
+        remove_from_array = {
+            array = ROOT.ECEG_A
+            index = 0
+        }
+	}
+	add_to_array = {
+		array = ROOT.ECEG_A
+		value = ROOT.ECEG
+	}
+}
+EC_cdg ={
+	#消费品需求计算
+	set_variable = {
+		ROOT.ECTP_cdg = ROOT.ECTP
+	}
+	divide_variable = {
+		ROOT.ECTP_cdg = 100
+	}
+	set_variable = {
+		ROOT.ECRE_cdg = ROOT.ECRE
+	}
+	divide_variable = {
+		ROOT.ECRE_cdg = 100
+	}
+	set_variable = {
+		ROOT.EC_cdg_c = ROOT.ECRE_cdg
+	}
+	multiply_variable = {
+		ROOT.EC_cdg_c = ROOT.ECTP_cdg
+	}
+	divide_variable = {
+		ROOT.EC_cdg_c = 200
+	}
+	set_variable = {
+		ROOT.ECEG_cdg = 300
+	}
+	add_to_variable = {
+		ROOT.ECEG_cdg = ROOT.ECEG
+	}
+	multiply_variable = {
+		ROOT.EC_cdg_c = ROOT.ECEG_cdg
+	}
+	set_variable = {
+		ROOT.ECDG = ROOT.EC_cdg_c
+	}
+	set_variable = {
+		ROOT.ECDG_SHOW = ROOT.ECDG
+	}
+	round_variable = ROOT.ECDG_SHOW
+}
+EC_ccp2 = {
+	#计算消费品生产量
+	set_variable = {
+		ROOT.ECCP_set_percentage = ROOT.ECCP_current_int
+	}
+	divide_variable = {
+		ROOT.ECCP_set_percentage = 100
+	}
+	set_variable = {
+		ROOT.ECCP_set_fac = ROOT.ECRE
+	}
+	multiply_variable = {
+		ROOT.ECCP_set_fac = ROOT.ECCP_set_percentage
+	}
+	set_variable = {
+		ROOT.ECCP_set = ROOT.ECCP_set_fac
+	}
+	set_variable = {
+		ROOT.ECCP_ccp2_c = ROOT.ECCP_set
+	}
+	if = {
+		limit = {
+			has_variable = ROOT.ECCP_r
+		}
+		multiply_variable = {
+			ROOT.ECCP_ccp2_c = ROOT.ECCP_r
+		}
+	}
+	else = {
+		set_variable = {
+			ROOT.ECCP_r = 1
+		}
+		multiply_variable = {
+			ROOT.ECCP_ccp2_c = ROOT.ECCP_r
+		}
+	}
+	multiply_variable = {
+		ROOT.ECCP_ccp2_c = 400
+	}
+	set_variable = {
+		ROOT.ECCP = ROOT.ECCP_ccp2_c
+	}
+	add_dynamic_modifier = { modifier = PRC_EC_SMES }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+set_ECCP = {
+	set_variable = { ROOT.ECCP_slider_dot_x = 20 }
+	for_loop_effect = {
+		start = 0
+		end = 101
+		value = val
+		add_to_array = { ROOT.ECCP_slider_buttons = val }
+	}
+	set_variable = { ROOT.ECCP_dot_x = ROOT.ECCP_current_int }
+	multiply_variable = { ROOT.ECCP_dot_x = 4 }
+	add_to_variable = { ROOT.ECCP_dot_x = 20 }
+	set_variable = { ROOT.ECCP_slider_dot_x = ROOT.ECCP_dot_x }
+	EC_ccp2 = yes
+	force_update_dynamic_modifier = yes
+}

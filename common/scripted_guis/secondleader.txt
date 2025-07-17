@@ -1,0 +1,33 @@
+scripted_gui = {
+	political_attached_window = {
+		context_type = selected_country_context
+		window_name = "political_attached_window"
+		parent_window_token = selected_country_view_diplomacy
+		#parent_window_name = political_attached_window_instance
+		visible = {
+		}
+		triggers = {
+		}
+		properties = {
+			second_leader_portrait = {
+				image = "[GetPortrait]"
+			}
+		}
+	}
+	political_attached2_window = {
+		context_type = player_context
+		window_name = "political_attached2_window"
+		#parent_window_token = selected_country_view_diplomacy
+		parent_window_name = "secondleader_view"
+		visible = {
+		}
+		triggers = {
+		}
+		properties = {
+			second_leader_portrait2 = {
+				image = "[GetPortrait2]"
+			}
+		}
+	}
+}
+

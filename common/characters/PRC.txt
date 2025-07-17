@@ -1,0 +1,16 @@
+characters = {
+	PRC_JiangZemin = {
+		name = PRC_JiangZemin
+		portraits = {
+			civilian = {
+				large = GFX_portrait_PRC_JiangZemin
+			}
+		}
+		country_leader = {
+			ideology = DEMOCRATICSOCIALISM_PRC_SCC
+			traits = { 
+		    }
+			expire = "2018.1.1.1"
+		}     
+	}
+}

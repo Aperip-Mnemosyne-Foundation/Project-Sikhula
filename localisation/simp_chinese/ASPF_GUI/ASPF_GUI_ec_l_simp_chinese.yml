@@ -1,0 +1,45 @@
+﻿l_simp_chinese: 
+ MARKET_LABEL: "国家经济"
+ INTERNATIONAL_MARKET_TOPBAR_BUTTON_TOOLTIP: "了解当前国家经济态势，并对国家财政进行管理。"
+ ECTF: "国家财政资金余额"
+ ECTP: "国家常住人口总量" # OK
+ ECRE: "国家实体经济总量" # OK
+ ECEG: "月度经济增长速度" # OK
+ ECSB: "国内国有企业总量" # OK
+ ECPB: "国内民营企业总量" # OK
+ ECHI: "国内高新产业总量"
+ ECND: "国债发行债务欠款"
+ ECIR: "国债当前实时利率"
+ ECCP: "月度消费品生产量" # OK
+ ECCP_set: "消费品生产占用量" # OK
+ ECDG: "月度消费品需求量" # OK
+ ECAE: "国家平均教育水平"
+ ECEN: "未受教育"
+ ECES: "小学学历"
+ ECEJ: "初中学历"
+ ECEH: "高中学历"
+ ECEU: "本科学历"
+ ECEM: "硕士学历"
+ ECEP: "博士学历"
+ ECIR: "文盲率"
+ ECLV: "经济水平"
+ ECTR: "经济信任"
+ ECCR: "政府信誉"
+ ECSW: "社会福利发放开销"
+ ECME: "国家武装力量开销"
+ ECIM: "基础设施维护开销"
+ ECRI: "国家科研投资开销"
+ ECEI: "国家教育投资开销"
+ ECSW_set: "社会福利发放"
+ ECME_set: "国家武装力量"
+ ECIM_set: "基础设施维护"
+ ECRI_set: "国家科研投资"
+ ECEI_set: "国家教育投资"
+ EC_HTP: "高新技术点数"
+ ECDR: "税率"
+ ECMS: "月收入"
+ ECDS: "日收入"
+ ECMS_TC: "本月收入"
+ EC_PE: "人均经济" #OK
+ EC_PE_A: "经济曲线" #OKV
+ ECEG_A: "经济增长曲线" #OK

@@ -11,4 +11,22 @@ spriteTypes = {
 		name = "GFX_close_button_98"
 		textureFile = "gfx/interface/win98web/web_close_button.png"
 	}
+	
+	spriteType = {
+		name = "GFX_slider_dot"
+		textureFile = "gfx/interface/ec/econ_crt_slider_dot.dds"
+	}
+	spriteType = {
+		name = "GFX_set_slider"
+		textureFile = "gfx/interface/ec/set_slider.png"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_econ_crt_slider_limit_left"
+		texturefile = "gfx/interface/ec/econ_crt_slider_limit_left.dds"
+	}
+	spriteType = {
+		name = "GFX_econ_crt_slider_limit_right"
+		texturefile = "gfx/interface/ec/econ_crt_slider_limit_right.dds"
+	}
 }
