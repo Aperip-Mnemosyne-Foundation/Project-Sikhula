@@ -1,5 +1,6 @@
 ﻿l_simp_chinese:
  # TAG 以及 人名 按照字母表排序 文閒用1空格
+ SecondLeaderDesc: "[GetSecondLeaderDesc]"
  # 此文件只寫 country_leader
  # GER
  GER_HelmutKohl: "赫尔穆特 科尔"

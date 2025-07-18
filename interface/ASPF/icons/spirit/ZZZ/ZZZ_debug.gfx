@@ -1,0 +1,7 @@
+spriteTypes = {	
+
+	SpriteType = {
+		name = "GFX_idea_ZZZ_100X80"
+		texturefile = "gfx/icons/spirit/ZZZ/100X80.png"
+	}
+}

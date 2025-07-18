@@ -1,5 +1,4 @@
-PRC_EC_SMES = {
-    icon = GFX_idea_unknown
+EC_dynamic_modifiers = {
     enable = { always = yes }
     remove_trigger = {
         always = no

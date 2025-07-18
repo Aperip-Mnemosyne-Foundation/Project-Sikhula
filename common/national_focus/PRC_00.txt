@@ -9,7 +9,7 @@ focus_tree = {
 		}
 	}
 	default = no
-	continuous_focus_position = { x = 70 y = 1520 }
+	continuous_focus_position = { x = 70 y = 1620 }
 	focus = {
 		id = PRC_00_MR_01
 		icon = GFX_focus_goals_PRC_00_MR_01

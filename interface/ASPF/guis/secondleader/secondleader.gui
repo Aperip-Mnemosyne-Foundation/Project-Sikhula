@@ -17,7 +17,7 @@ guiTypes = {
 			name = "diplo_leader_frame"
 			position = { x = 10 y = 110 }
 			spriteType = "GFX_diplo_leader_frame"
-			pdx_tooltip = "[GetSecondLeaderDesc]"
+			pdx_tooltip = "SecondLeaderDesc"
 		}
 	}
 	containerWindowType = {
@@ -33,7 +33,7 @@ guiTypes = {
 			scale = 1
 			#pdx_tooltip = "second_leader_name"
 			#pdx_tooltip_delayed = "second_leader_desc"
-			pdx_tooltip = "[GetSecondLeaderDesc]"
+			pdx_tooltip = "SecondLeaderDesc"
 		}
 		iconType = {
 			name = "leader_frame2"
@@ -50,6 +50,7 @@ guiTypes = {
 			maxHeight = 20
 			format = center
 			vertical_alignment = center
+			pdx_tooltip = "SecondLeaderDesc"
 		}
 	}
 }
