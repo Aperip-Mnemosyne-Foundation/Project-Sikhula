@@ -120,6 +120,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_spirit_icon_bg"
+		texturefile = "gfx/interface/win98web/spirit_icon_bg.png"
+	}
+
+	spriteType = {
 		name = "GFX_win98_ASPF"
 		texturefile = "gfx/interface/win98web/ASPF.png"
 	}
@@ -148,5 +153,34 @@ spriteTypes = {
 	spriteType = {
 		name = "generic_box_125_b"
 		texturefile = "gfx/interface/win98web/generic_box_125_b.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_scroll_track_horisontal_2"
+		size= {x = 5 y = 5 }
+		texturefile = "gfx/interface/scroll/scrollbar_horisontal_2.dds"
+		borderSize = { x=2 y=2 }
+	}
+
+	spriteType = {
+		name = "GFX_scroll_drager_2"
+		texturefile = "gfx/interface/scroll/scroll_drager_2.dds"
+		
+	}
+#effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	spriteType = {
+		name = "GFX_scroll_right_2"
+		texturefile = "gfx/interface/scroll/scroll_right_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_scroll_left_2"
+		texturefile = "gfx/interface/scroll/scroll_left_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_scroll2_over"
+		texturefile = "gfx/interface/scroll/scoll2_over.png"
+		
 	}
 }

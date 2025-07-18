@@ -490,8 +490,8 @@ guiTypes = {
 		}
 		containerWindowType = {
 			name = "national_spirit"
-			position = { x = 0 y = 753 }
-			size = { width = 360 height = 50 }
+			position = { x = 8 y = 274 }
+			size = { width = 360 height = 200 }
 			clipping = no
 						
 			instantTextboxType = {
@@ -504,13 +504,19 @@ guiTypes = {
 				alwaystransparent = yes
 			}
 			
+			iconType = {
+				name = "spirit_icon_bg"
+				spriteType = "GFX_spirit_icon_bg"
+				position = { x=-2 y = 16 }		
+			}
 			
 			containerWindowType = {
 				name = "national_spirit_container"
-				position = { x = 99 y = 16 }
-				size = { width = 364 height = 74 }
-				verticalScrollbar = "right_vertical_slider"
-				
+				position = { x = 3 y = 15 }
+				clipping = yes
+                horizontalScrollbar = "bottom_horizontal_slider_2"
+                margin = { top = 0 left = 0 bottom = 0 right = 0 }
+				size = { width = 237 height = 100 }
 				background = {
 					name = "Background"
 					quadTextureSprite ="GFX_tiled_window_transparent"
@@ -518,21 +524,30 @@ guiTypes = {
 				
 				gridboxtype = {
 					name = "spirit_grid"
-					position = { x = 1 y = 2 }
-					size = { width = 354 height = 68 }
-					slotsize = { width = 59 height = 68 }
-					max_slots = { x = 6 y = 1 }
+					position = { x = 27 y = 11 }
+					size = { width = 110 height = 100 }
+					slotsize = { width = 122 height = 1 }
+					max_slots = { x = 999 y = 1 }
 					format = "UPPER_LEFT"
 				}
 				gridboxtype = {
 					name = "spirit_grid_over_defined"
 					position = { x = 10 y = 1 }
 					size = { width = 330 height = 68 }
-					slotsize = { width = 33 height = 34 }
+					slotsize = { width = 1 height = 34 }
 					max_slots_horizontal = 10
 					format = "UPPER_LEFT"
 				}
 			}
+
+			iconType = {
+				name = "spiritscroll2_over"
+				spriteType = "GFX_scroll2_over"
+				position = { x=-2 y = 100 }	
+				alwaystransparent = yes	
+			}
+
+			
 		}
 		iconType = {
 			name = "leader"

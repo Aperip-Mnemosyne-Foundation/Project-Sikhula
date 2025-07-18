@@ -1,8 +1,8 @@
 ideas = {
 
 	country = {
-		ZZZ_100X80ZZZ_100X80_1 = {
-			picture = GFX_idea_ZZZ_100X80
+		ZZZ_110X90_1 = {
+			picture = ZZZ_110X90
 			allowed = {
 				always = no
 			}
@@ -16,8 +16,8 @@ ideas = {
 			rule = {
 			}
 		}
-		ZZZ_100X80ZZZ_100X80_2 = {
-			picture = GFX_idea_ZZZ_100X80
+		ZZZ_110X90_2 = {
+			picture = ZZZ_110X90
 			allowed = {
 				always = no
 			}
@@ -31,8 +31,8 @@ ideas = {
 			rule = {
 			}
 		}
-		ZZZ_100X80ZZZ_100X80_3 = {
-			picture = GFX_idea_ZZZ_100X80
+		ZZZ_110X900_3 = {
+			picture = ZZZ_110X90
 			allowed = {
 				always = no
 			}
