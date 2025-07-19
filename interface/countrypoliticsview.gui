@@ -464,10 +464,10 @@ guiTypes = {
 			
 			instantTextboxType = {
 				name = "title"
-				position = { x = 128 y = 33 }
+				position = { x = 118 y = 33 }
 				font = "Youhei18"
 				text = "POLITICS_ACTIVE_GOAL"
-				maxWidth = 200
+				maxWidth = 220
 				maxHeight = 20
 				format = center
 				alwaystransparent = yes
