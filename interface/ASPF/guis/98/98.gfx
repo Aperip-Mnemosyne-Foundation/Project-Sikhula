@@ -120,6 +120,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_goals_icon_over"
+		texturefile = "gfx/interface/win98web/goals_icon_over.png"
+	}
+
+	spriteType = {
 		name = "GFX_spirit_icon_bg"
 		texturefile = "gfx/interface/win98web/spirit_icon_bg.png"
 	}
@@ -182,5 +187,17 @@ spriteTypes = {
 		name = "GFX_scroll2_over"
 		texturefile = "gfx/interface/scroll/scoll2_over.png"
 		
+	}
+
+	textSpriteType = {
+		name = "GFX_98_government_button"
+		textureFile = "gfx/interface/win98web/government_button.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_politic_ideas_over"
+		texturefile = "gfx/interface/win98web/politic_ideas_over.png"
 	}
 }

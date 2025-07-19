@@ -419,7 +419,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_categories"
 		texturefile = "gfx/interface/idea_categories.dds"
-		noOfFrames = 6
+		noOfFrames = 7
 	}
 
 	spriteType = {
@@ -462,7 +462,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_icon_collaboration"
-		texturefile = "gfx/interface/occupation/collaboration_icon.dds"
+		texturefile = "gfx/interface/collaboration_icon.dds"
 	}
 	spriteType = {
 		name = "GFX_icon_collaboration_and_exiles"
@@ -691,9 +691,5 @@ spriteTypes = {
 	}
 	
 
-    #ideologyideologyideologyideologyideologyideologyideologyideology
-	spriteType = {
-		name = "GFX_ideology_DEMOCRATICSOCIALISM_PRC_SCC"
-		texturefile = "gfx/interface/ideologies/subideologies/DEMOCRATICSOCIALISM_PRC_SCC.png"
-	}
+    
 }

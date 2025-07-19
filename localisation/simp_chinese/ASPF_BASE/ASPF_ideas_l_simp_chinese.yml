@@ -1,0 +1,17 @@
+﻿l_simp_chinese:
+
+ laws: "法律"
+ laws_MO: "兵役法律"
+ laws_EU: "教育法律"
+ laws_NS: "国安法律"
+ laws_LR: "劳工法律"
+ laws_NH: "民族法律"
+ laws_IG: "移民法律"
+ minister: "政府"
+ minister_FA: "外交部长"
+ minister_EC: "经济部长"
+ minister_IN: "内政部长"
+ minister_DE: "国防部长"
+ minister_CO: "建设部长"
+ minister_IT: "工信部长"
+ military: "军事"

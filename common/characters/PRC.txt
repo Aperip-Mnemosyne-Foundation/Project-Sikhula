@@ -7,7 +7,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			ideology = DEMOCRATICSOCIALISM_PRC_SCC
+			ideology = AUTHORITARIANSOCIALISM_PRC_SCC
 			traits = { 
 		    }
 			expire = "2018.1.1.1"
