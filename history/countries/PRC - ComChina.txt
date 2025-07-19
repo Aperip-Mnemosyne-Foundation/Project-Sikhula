@@ -21,7 +21,7 @@ set_popularities = {
 
 # start_ideas
 add_ideas = {
-   
+   PRC_laggingarmy01 # 落后的军队
 }
 
 recruit_character = PRC_JiangZemin

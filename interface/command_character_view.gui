@@ -1,37 +1,39 @@
 guiTypes = {
 	containerWindowType = {
 		name = "command_character_view_window"
-		position = { x = -356 y = 80 }	
-		show_position = { x = 540 y = 80 }
+		position = { x = 0 y = 80 }	
+		show_position = { x = 657 y = 80 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
-		animation_time = 300
+		animation_time = 700
 		size = { width=500 height=590 }
 		show_sound = open_sub_window
 
 		background = {
 			name = "Background"		
-			quadTextureSprite ="GFX_tiled_plain_bg"
+			quadTextureSprite ="GFX_gamemenu3_bg"
 		}
 
 		instantTextboxType = {
 			name = "title"
-			position = { x = 0 y = 4 }
-			font = "hoi_20b"
-			text = "Characters Place Holder"
+			position = { x = 8 y = 5 }
+			font = "hoi4_typewriter22"
+			text = "Economic Laws"
 			maxWidth = 450
 			maxHeight = 20
-			format = center
+			format = LEFT
+			text_color_code = W
 		}
 
 		instantTextboxType = {
 			name = "switch"
-			position = { x = 0 y = 26 }
-			font = "hoi_18b"
-			text = "Switch out Character Place Holder"
+			position = { x = -110 y = 6 }
+			font = "hoi4_typewriter16"
+			text = "Switch out Henschel"
 			maxWidth = 450
 			maxHeight = 20
-			format = center
+			format = RIGHT
+			text_color_code = W
 		}
 
 		containerWindowType = {
@@ -113,8 +115,8 @@ guiTypes = {
 
 		buttonType = {
 			name = "close"
-			position = { x = -50 y = 5 }
-			quadTextureSprite ="GFX_closebutton"
+			position = { x = -153 y = 6 }
+			quadTextureSprite ="GFX_close_button_98"
 			buttonFont = "Main_14_black"
 			shortcut = "ESCAPE"
 			Orientation = "UPPER_RIGHT"

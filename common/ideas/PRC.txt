@@ -1,0 +1,70 @@
+ideas = {
+
+	country = {
+		PRC_laggingarmy01 = {
+			picture = PRC_laggingarmy01 # 落后的军队
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				training_time_factor = 0.3
+				air_superiority_bonus_in_combat = -0.9
+				army_attack_factor = -0.5
+				army_defence_factor = -0.5
+				army_strength_factor = -0.3
+				army_org_factor = -0.2
+				breakthrough_factor = -0.3
+				combat_width_factor = 0.5
+				experience_loss_factor = 0.2
+				land_night_attack = 0.7
+				max_planning_factor = -0.6
+				org_loss_when_moving = 0.5
+				planning_speed = -0.5
+				naval_invasion_prep_speed = -20
+				naval_invasion_capacity = -20
+				convoy_escort_efficiency = -0.5
+				convoy_raiding_efficiency_factor = -0.5
+				convoy_retreat_speed = -0.5
+				critical_receive_chance = 0.7
+				mines_planting_by_fleets_factor = -0.1
+				mines_sweeping_by_fleets_factor = -0.1
+				naval_accidents_chance = 1
+				naval_coordination = -0.6
+				naval_enemy_fleet_size_ratio_penalty_factor = -0.7
+				navy_weather_penalty = 1
+				night_spotting_chance = -0.7
+				navy_org = -0.1
+				spotting_chance = -0.7
+				air_carrier_night_penalty_reduction_factor = 1
+				fighter_sortie_efficiency = -0.5
+				air_accidents_factor = 1
+				air_agility_factor = -0.2
+				air_attack_factor = -0.5
+				air_defence_factor = -0.1
+				air_interception_detect_factor = -0.4
+				naval_strike_targetting_factor = -0.4
+				air_escort_efficiency = -0.4
+				port_strike = -0.6
+				air_close_air_support_org_damage_factor = -0.5
+				air_bombing_targetting = -0.8
+				air_cas_efficiency = -0.8
+				air_strategic_bomber_night_penalty = 1 
+				air_weather_penalty = 1
+				air_untrained_pilots_penalty_factor = -0.1
+				army_bonus_air_superiority_factor = -0.9
+				strategic_bomb_visibility = 0.5
+				air_training_xp_gain_factor = -0.8
+				air_mission_xp_gain_factor = -0.8
+				experience_gain_navy_unit = -0.9
+				experience_gain_navy_unit_factor = -0.9
+				experience_gain_army_unit_factor = -0.3
+			}
+			rule = {
+			}
+		}
+	}
+}

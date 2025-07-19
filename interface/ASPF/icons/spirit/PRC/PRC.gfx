@@ -1,0 +1,7 @@
+spriteTypes = {	
+
+	SpriteType = {
+		name = "GFX_idea_PRC_laggingarmy01"
+		texturefile = "gfx/icons/spirit/PRC/PRC_laggingarmy01.png"
+	}
+}

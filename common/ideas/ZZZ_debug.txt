@@ -31,7 +31,7 @@ ideas = {
 			rule = {
 			}
 		}
-		ZZZ_110X900_3 = {
+		ZZZ_110X90_3 = {
 			picture = ZZZ_110X90
 			allowed = {
 				always = no

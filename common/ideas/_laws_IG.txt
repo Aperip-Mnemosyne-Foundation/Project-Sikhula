@@ -1,0 +1,62 @@
+ideas = {
+    laws_IG = {
+	    law = yes
+		use_list_view = yes
+		
+		
+		
+		
+		laws_IG_CB = { # 关闭边境口岸
+			cost = 0
+			removal_cost = -1
+			level = 2
+			available = {
+				custom_trigger_tooltip = {
+				    tooltip = ASPF_LAWS_IG_AVAILABLE_TT
+					always = no
+				}
+			}
+			modifier = {
+				foreign_subversive_activites = -0.4
+				custom_modifier_tooltip = ASPF_LAWS_IG_CB_MODIFIER_ID_TT
+				hidden_modifier = {
+				    airforce_intel_decryption_bonus = -0.1
+				    army_intel_decryption_bonus = -0.2
+				    civilian_intel_decryption_bonus = -0.4
+				    navy_intel_decryption_bonus = -0.1
+				}
+				enemy_operative_intel_extraction_rate = -0.5
+				non_core_manpower = -0.98
+				trade_opinion_factor = -0.9
+				custom_modifier_tooltip = ASPF_LAWS_IG_CB_MODIFIER_EC_TT
+			}
+			cancel_if_invalid = no
+		}
+		
+		laws_IG_SL = { # 严格限制审查
+			cost = 0
+			removal_cost = -1
+			level = 1
+			available = {
+				custom_trigger_tooltip = {
+				    tooltip = ASPF_LAWS_IG_AVAILABLE_TT
+					always = no
+				}
+			}
+			modifier = {
+				foreign_subversive_activites = -0.1
+				custom_modifier_tooltip = ASPF_LAWS_IG_SL_MODIFIER_ID_TT
+				hidden_modifier = {
+				    airforce_intel_decryption_bonus = -0.05
+				    army_intel_decryption_bonus = -0.05
+				    civilian_intel_decryption_bonus = -0.1
+				    navy_intel_decryption_bonus = -0.05
+				}
+				enemy_operative_intel_extraction_rate = -0.2
+				non_core_manpower = -0.95
+				custom_modifier_tooltip = ASPF_LAWS_IG_SL_MODIFIER_EC_TT
+			}
+			cancel_if_invalid = no
+		}
+	}
+}
