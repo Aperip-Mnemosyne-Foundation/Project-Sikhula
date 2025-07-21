@@ -141,15 +141,17 @@ guiTypes = {
 	containerWindowType = {
 		name  ="mainmenu_panel_upperleft"
 		position = { x=0 y =-2000 }
-		show_position = { x=0 y =-1 }
+		show_position = { x=0 y =0 }
 		animation_type = decelerated
 		animation_time = 1000
-		size = { width = 256 height = 768}
-		
+		size = { width = 611 height = 304}
+		Orientation = center
+		#origo = center
 		iconType ={
 			name ="frontend_game_logo"
 			spriteType = "GFX_frontend_game_logo"
-			position = { x= 20 y = 20 }
+			position = { x= 0 y = 0 }
+			centerposition = yes
 		}
 		
 	}
@@ -174,30 +176,30 @@ guiTypes = {
 	containerWindowType = {
 		name ="mainmenu_panel_upperright"
 		position = { x=0 y =-1 }
-		show_position = { x=-256 y =-1 }
+		show_position = { x=-256000 y =-1 }
 		animation_type = decelerated
 		animation_time = 1000					
 		size = { width = 256 height = 768}
 		Orientation = upper_right
 
-		ButtonType = {
-			name = "achievements_button"
-			position = { x = -50 y = 25 }
-			quadTextureSprite ="achievements"
-			pdx_tooltip = "MENU_ACHIEVEMENTS"
-		}
+		#ButtonType = {
+			#name = "achievements_button"
+			#position = { x = -50 y = 25 }
+			#quadTextureSprite ="achievements"
+			#pdx_tooltip = "MENU_ACHIEVEMENTS"
+		#}
 
-		iconType ={
-			name ="frontend_dev_logo"
-			spriteType = "GFX_frontend_dev_logo"
-			position = { x= 15 y = 15 }
-		}
+		#iconType ={
+			#name ="frontend_dev_logo"
+			#spriteType = "GFX_frontend_dev_logo"
+			#position = { x= 15 y = 15 }
+		#}
 		
-		iconType ={
-			name ="pdx_int_logo"
-			spriteType = "GFX_pdx_int_logo"
-			position = { x= 135 y = 15 }
-		}		
+		#iconType ={
+			#name ="pdx_int_logo"
+			#spriteType = "GFX_pdx_int_logo"
+			#position = { x= 135 y = 15 }
+		#}		
 		
 	}		
 

@@ -10,3 +10,7 @@
  CONF_FTB: "关闭国策"
  CONF_ECA: "开启经济"
  CONF_ECB: "关闭经济"
+ LOAD_PRC_00: "加载军改阶段国策树"
+ LOAD_PRC_01: "加载第一阶段国策树"
+ LOAD_PRC_01_FS_TYR: "控制洪水国策"
+ LOAD_PRC_02: "加载第二阶段国策树"

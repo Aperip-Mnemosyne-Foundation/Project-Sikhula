@@ -17,7 +17,19 @@ focus_tree = {
 		cost = 1.00
 		x = 4
 		y = 1
-
+		completion_reward = {
+			if = { # 隨便放到這測試，記得刪
+	            limit =  {
+			        has_country_leader = {
+	                    character = PRC_JiangZemin
+                    }
+		        }
+                set_country_leader_portrait = {
+	                ideology = AUTHORITARIANSOCIALISM
+	                portrait = GFX_portrait_PRC_JiangZemin_2000 # 给江泽民换脑袋
+                }
+	        }
+		}
 	}
 	focus = {
 		id = PRC_01_FS_TYR

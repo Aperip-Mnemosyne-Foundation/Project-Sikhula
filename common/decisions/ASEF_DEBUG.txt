@@ -74,4 +74,28 @@ DEBUG_FOCUS_decisions = {
 			}		
 		}
 	}
+	
+	LOAD_PRC_02 = {
+		icon = GFX_win98_thumbnail
+		allowed = {
+			original_tag = PRC
+        }
+		visible = {
+			original_tag = PRC
+			is_debug = yes
+		}
+		available = {
+			original_tag = PRC
+			is_debug = yes
+		}
+		cost = 0
+		fire_only_once = no
+		complete_effect = {
+			load_focus_tree = {
+                tree = PRC_02
+                keep_completed = yes
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
 }
