@@ -6,7 +6,7 @@ set_research_slots = 4
 
 # Starting tech
 set_technology = {
-
+# 等科技出来再写
 }
 set_politics = {
 	ruling_party = AUTHORITARIANSOCIALISM
@@ -23,18 +23,40 @@ set_popularities = {
 add_ideas = {
    PRC_laggingarmy01 # 落后的军队
 }
+# start_laws
+add_ideas = {
+    laws_MO_GEN04 # 兵役法律
+	laws_IG_GEN04 # 移民法律
+}
 
 recruit_character = PRC_JiangZemin
 
-set_country_flag = secondleadershow_PRC_HuJintao #secondleader
+set_country_flag = secondleadershow_PRC_HuJintao # secondleader 胡锦涛
 # game_start_vars_setting
   # Ec.
-    set_variable = { ROOT.ECCP_current_int = 60 }
+    set_variable = { ROOT.ECCP_current_int = 60 } # 开局消费品占用比例
     set_ECCP = yes
-    set_variable = { ROOT.ECPB = 91 }
+    set_variable = { ROOT.ECPB = 91 } # 开局给民营工厂
     EC_cre = yes
 	EC_ccp = yes
 	EC_cpe = yes
 	EC_cdg = yes
 	EC_ccp2 = yes
 	EC_ceg = yes
+	
+	
+
+2000.1.1 = {
+    if = {
+	    limit = {
+		    has_ideology = AUTHORITARIANSOCIALISM_PRC_SCC
+			has_country_leader = {
+	            character = PRC_JiangZemin
+            }
+		}
+        set_country_leader_portrait = {
+	        ideology = AUTHORITARIANSOCIALISM
+	        portrait = GFX_portrait_PRC_JiangZemin_2000 # 给江泽民换脑袋
+        }
+	}
+}

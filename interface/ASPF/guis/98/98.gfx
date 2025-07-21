@@ -200,4 +200,9 @@ spriteTypes = {
 		name = "GFX_politic_ideas_over"
 		texturefile = "gfx/interface/win98web/politic_ideas_over.png"
 	}
+
+	spriteType = {
+		name = "GFX_pol_goal_bg_over"
+		texturefile = "gfx/interface/win98web/pol_goal_bg_over.dds"
+	}
 }

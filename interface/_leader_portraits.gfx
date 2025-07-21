@@ -63,6 +63,10 @@ spriteTypes = {
 		texturefile = "gfx/images/leaders/PRC/PRC_JiangZemin.png"
 	}
 	spriteType = {
+		name = GFX_portrait_PRC_JiangZemin_2000
+		texturefile = "gfx/images/leaders/PRC/PRC_JiangZemin_2000.png"
+	}
+	spriteType = {
 		name = GFX_portrait_PRC_ZengQinghong
 		texturefile = "gfx/images/leaders/PRC/PRC_ZengQinghong.png"
 	}

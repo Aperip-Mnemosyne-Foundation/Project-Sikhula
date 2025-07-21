@@ -377,18 +377,46 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "active_goal"
-			position = { x = 289 y = 289 }
-			size = { width = 330 height = 50 }
-			clipping = no
+			position = { x = 253 y = 289 }
+			size = { width = 395 height = 95 }
+			clipping = yes
 						
 			background = {
 				name = "Background"		
 				spriteType ="GFX_pol_goal_bg"
 			}
 			
+            iconType = {
+				name = "goals_icon_bg"
+				position = { x = 29000 y = 47 }	
+				centerposition = yes		
+				spriteType = "GFX_goals_icon_bg"
+			}
+			
+			iconType = {
+				name = "goal_icon"
+				position = { x = 64 y = 62 }
+				centerposition = yes			
+				spriteType = "GFX_goal_unknown"
+				scale = 0.68
+			}
+
+			iconType = {
+				name = "pol_goal_over"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_goals_icon_over"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "pol_goal_bg_over"
+				position = { x = 36 y = 0 }			
+				spriteType = "GFX_pol_goal_bg_over"
+			}
+
 			buttonType = {
 				name = "add_national_goal_button"
-				position = { x = 99 y = 4 }
+				position = { x = 135 y = 4 }
 				spriteType = "GFX_add_national_goal_button"
 				clicksound = click_default
 			}
@@ -419,29 +447,14 @@ guiTypes = {
 
 			iconType = {
 				name = "continuous_glow"
-				position = { x = -16 y = -6 }
+				position = { x = -16000 y = -6 }
 				quadTextureSprite = "GFX_ongoing_focus_goal_polview"
 				scale = 0.9
 			}
 
 			iconType = {
-				name = "goals_icon_bg"
-				position = { x = 29 y = 47 }	
-				centerposition = yes		
-				spriteType = "GFX_goals_icon_bg"
-			}
-			
-			iconType = {
-				name = "goal_icon"
-				position = { x = 28 y = 54 }
-				centerposition = yes			
-				spriteType = "GFX_goal_unknown"
-				scale = 0.57
-			}
-
-			iconType = {
 				name = "continuous_small_glow"
-				position = { x = 104 y = 12 }
+				position = { x = 104000 y = 12 }
 				quadTextureSprite = "GFX_ongoing_focus_goal_icon"
 				alwaystransparent = yes
 			}
@@ -464,7 +477,7 @@ guiTypes = {
 			
 			instantTextboxType = {
 				name = "title"
-				position = { x = 118 y = 33 }
+				position = { x = 154 y = 33 }
 				font = "Youhei18"
 				text = "POLITICS_ACTIVE_GOAL"
 				maxWidth = 220
@@ -478,7 +491,7 @@ guiTypes = {
 			iconType = {
 				name = "progress"
 				spriteType = "GFX_activegoal_progress"
-				position = { x=99 y = 84 }		
+				position = { x=135 y = 84 }		
 			}
 			
 			iconType = {
@@ -489,13 +502,7 @@ guiTypes = {
 			}		
 			
 			
-			iconType = {
-				name = "pol_goal_over"
-				position = { x = -36 y = 0 }
-				spriteType = "GFX_goals_icon_over"
-				alwaystransparent = yes
-				orientation = UPPER_LEFT
-			}
+			
 		}
 		containerWindowType = {
 			name = "national_spirit"

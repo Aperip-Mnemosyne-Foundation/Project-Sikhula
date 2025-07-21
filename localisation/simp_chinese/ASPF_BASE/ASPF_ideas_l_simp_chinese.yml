@@ -22,11 +22,35 @@
  
  # 专属ideas注明TAG按A到Z排序
   
- # 法律
+ # 法律 #######
  
- # 移民法律
- 
+ # 兵役法律 #
+ ASPF_LAWS_MO_AVAILABLE_TT: "兵役法律不能被手动修改。"
  # gen
  
- laws_IG_CB: "关闭边境口岸"
- laws_IG_SL: "严格限制审查"
+ laws_MO_GEN06: "非军事化模式"
+ laws_MO_GEN05: "志愿募兵制度"
+ laws_MO_GEN04: "志愿义务结合"
+ laws_MO_GEN03: "抽签形式义务"
+ laws_MO_GEN02: "适龄义务征召"
+ laws_MO_GEN01: "全体强制义务"
+ 
+ # 移民法律 #
+ ASPF_LAWS_IG_AVAILABLE_TT: "移民法律不能被手动修改。"
+ # gen
+ 
+ laws_IG_GEN05: "关闭边境口岸"
+ ASPF_LAWS_IG_GEN05_MODIFIER_ID_TT: "情报泄露概率: 大幅降低"
+ ASPF_LAWS_IG_GEN05_MODIFIER_EC_TT: "经济输入界限: 大幅降低"
+ laws_IG_GEN04: "严格限制审查"
+ ASPF_LAWS_IG_GEN04_MODIFIER_ID_TT: "情报泄露概率: 较大降低"
+ ASPF_LAWS_IG_GEN04_MODIFIER_EC_TT: "经济输入界限: 较大降低"
+ laws_IG_GEN03: "适度移民监管"
+ ASPF_LAWS_IG_GEN03_MODIFIER_ID_TT: "情报泄露概率: 略微降低"
+ ASPF_LAWS_IG_GEN03_MODIFIER_EC_TT: "经济输入界限: 略微降低"
+ laws_IG_GEN02: "宽松移民限制"
+ ASPF_LAWS_IG_GEN02_MODIFIER_ID_TT: "情报泄露概率: 略微提高"
+ ASPF_LAWS_IG_GEN02_MODIFIER_EC_TT: "经济输入界限: 略微提高"
+ laws_IG_GEN01: "完全开放边境"
+ ASPF_LAWS_IG_GEN01_MODIFIER_ID_TT: "情报泄露概率: 大幅提高"
+ ASPF_LAWS_IG_GEN01_MODIFIER_EC_TT: "经济输入界限: 大幅提高"
