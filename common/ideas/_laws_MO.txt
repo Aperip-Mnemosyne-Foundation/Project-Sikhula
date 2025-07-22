@@ -6,10 +6,11 @@ ideas = {
 		
 		
 		
-		laws_MO_GEN06 = { # 非軍事化模式
+		laws_MO_GEN05 = { # 非軍事化模式
+		    picture = laws_MO_GEN05 # GFX_idea_laws_MO_GEN05
 			cost = 0
 			removal_cost = -1
-			level = 2
+			level = 5
 			available = {
 				custom_trigger_tooltip = {
 				    tooltip = ASPF_LAWS_MO_AVAILABLE_TT
@@ -19,31 +20,16 @@ ideas = {
 			modifier = {
 				conscription = 0
 				war_support = -0.05
-				custom_modifier_tooltip = ASPF_LAWS_MO_GEN06_MODIFIER_DE_TT
+				custom_modifier_tooltip = ASPF_LAWS_MO_GEN05_MODIFIER_DE_TT
 			}
 			cancel_if_invalid = no
 		}
 		
-		laws_MO_GEN05 = { # 志願募兵制度
+		laws_MO_GEN04 = { # 志願募兵制度
+		    picture = laws_MO_GEN05 # GFX_idea_laws_MO_GEN04
 			cost = 0
 			removal_cost = -1
-			level = 1
-			available = {
-				custom_trigger_tooltip = {
-				    tooltip = ASPF_LAWS_MO_AVAILABLE_TT
-					always = no
-				}
-			}
-			modifier = {
-				conscription = 0.002
-			}
-			cancel_if_invalid = no
-		}
-		
-		laws_MO_GEN04 = { # 志願義務結合
-			cost = 0
-			removal_cost = -1
-			level = 1
+			level = 4
 			available = {
 				custom_trigger_tooltip = {
 				    tooltip = ASPF_LAWS_MO_AVAILABLE_TT
@@ -56,10 +42,11 @@ ideas = {
 			cancel_if_invalid = no
 		}
 		
-		laws_MO_GEN03 = { # 抽籤形式義務
+		laws_MO_GEN03 = { # 志願義務結合
+		    picture = laws_MO_GEN04 # GFX_idea_laws_MO_GEN03
 			cost = 0
 			removal_cost = -1
-			level = 1
+			level = 3
 			available = {
 				custom_trigger_tooltip = {
 				    tooltip = ASPF_LAWS_MO_AVAILABLE_TT
@@ -68,16 +55,15 @@ ideas = {
 			}
 			modifier = {
 				conscription = 0.01
-				training_time_factor = 0.1
-				stability_factor = -0.1
 			}
 			cancel_if_invalid = no
 		}
 		
 		laws_MO_GEN02 = { # 適齡義務徵召
+		    picture = laws_MO_GEN02 # GFX_idea_laws_MO_GEN02
 			cost = 0
 			removal_cost = -1
-			level = 1
+			level = 2
 			available = {
 				custom_trigger_tooltip = {
 				    tooltip = ASPF_LAWS_MO_AVAILABLE_TT
@@ -85,7 +71,7 @@ ideas = {
 				}
 			}
 			modifier = {
-				conscription = 0.03
+				conscription = 0.025
 				training_time_factor = 0.2
 				stability_factor = -0.1
 			}
@@ -93,6 +79,7 @@ ideas = {
 		}
 		
 		laws_MO_GEN01 = { # 全體義務强制
+		    picture = laws_MO_GEN01 # GFX_idea_laws_MO_GEN01
 			cost = 0
 			removal_cost = -1
 			level = 1
@@ -103,7 +90,7 @@ ideas = {
 				}
 			}
 			modifier = {
-				conscription = 0.08
+				conscription = 0.05
 				training_time_factor = 0.5
 				stability_factor = -0.3
 			}

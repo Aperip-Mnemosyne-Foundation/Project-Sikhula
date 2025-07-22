@@ -25,7 +25,7 @@ idea_categories = {
 	
 	laws = {
 		slot = laws_MO # 兵役
-		slot = laws_EU # 教育
+		slot = laws_TR # 贸易
 		slot = laws_NS # 国安
 		slot = laws_LR # 劳工
 		slot = laws_NH # 民族

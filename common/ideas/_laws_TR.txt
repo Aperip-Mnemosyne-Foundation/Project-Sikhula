@@ -1,0 +1,148 @@
+ideas = {
+    laws_TR = {
+	    law = yes
+		use_list_view = yes
+		
+		
+		
+		
+		laws_TR_GEN05 = { # 完全关闭贸易
+		    picture = laws_TR_GEN05 # GFX_idea_laws_TR_GEN05
+			cost = 0
+			removal_cost = -1
+			level = 5
+			available = {
+				custom_trigger_tooltip = {
+				    tooltip = ASPF_LAWS_TR_AVAILABLE_TT
+					always = no
+				}
+			}
+			rule = {
+				can_access_market = no
+			}
+			modifier = {
+				min_export = 0
+				foreign_subversive_activites = -0.2
+				custom_modifier_tooltip = ASPF_LAWS_IG_GEN05_MODIFIER_ID_TT
+				hidden_modifier = {
+				    airforce_intel_decryption_bonus = -0.05
+				    army_intel_decryption_bonus = -0.1
+				    civilian_intel_decryption_bonus = -0.2
+				    navy_intel_decryption_bonus = -0.05
+				}
+				enemy_operative_intel_extraction_rate = -0.2
+				trade_opinion_factor = -1
+			}
+			cancel_if_invalid = no
+		}
+		
+		laws_TR_GEN04 = { # 允许有限贸易
+		    picture = laws_TR_GEN04 # GFX_idea_laws_TR_GEN04
+			cost = 0
+			removal_cost = -1
+			level = 4
+			available = {
+				custom_trigger_tooltip = {
+				    tooltip = ASPF_LAWS_TR_AVAILABLE_TT
+					always = no
+				}
+			}
+			modifier = {
+				min_export = 0.2
+				foreign_subversive_activites = -0.1
+				custom_modifier_tooltip = ASPF_LAWS_IG_GEN04_MODIFIER_ID_TT
+				hidden_modifier = {
+				    airforce_intel_decryption_bonus = -0.025
+				    army_intel_decryption_bonus = -0.05
+				    civilian_intel_decryption_bonus = -0.1
+				    navy_intel_decryption_bonus = -0.025
+				}
+				enemy_operative_intel_extraction_rate = -0.1
+				trade_opinion_factor = -0.5
+			}
+			cancel_if_invalid = no
+		}
+		
+		laws_TR_GEN03 = { # 控制平衡贸易
+		    picture = laws_TR_GEN03 # GFX_idea_laws_TR_GEN03
+			cost = 0
+			removal_cost = -1
+			level = 3
+			available = {
+				custom_trigger_tooltip = {
+				    tooltip = ASPF_LAWS_TR_AVAILABLE_TT
+					always = no
+				}
+			}
+			modifier = {
+				min_export = 0.4
+				foreign_subversive_activites = -0.05
+				custom_modifier_tooltip = ASPF_LAWS_IG_GEN03_MODIFIER_ID_TT
+				hidden_modifier = {
+				    airforce_intel_decryption_bonus = -0.013
+				    army_intel_decryption_bonus = -0.025
+				    civilian_intel_decryption_bonus = -0.05
+				    navy_intel_decryption_bonus = -0.013
+				}
+				enemy_operative_intel_extraction_rate = -0.05
+				trade_opinion_factor = 0
+			}
+			cancel_if_invalid = no
+		}
+		
+		laws_TR_GEN02 = { # 自由开放贸易
+		    picture = laws_TR_GEN02 # GFX_idea_laws_TR_GEN02
+			cost = 0
+			removal_cost = -1
+			level = 2
+			available = {
+				custom_trigger_tooltip = {
+				    tooltip = ASPF_LAWS_TR_AVAILABLE_TT
+					always = no
+				}
+			}
+			modifier = {
+				min_export = 0.6
+				foreign_subversive_activites = 0.1
+				custom_modifier_tooltip = ASPF_LAWS_IG_GEN02_MODIFIER_ID_TT
+				hidden_modifier = {
+				    airforce_intel_decryption_bonus = 0.025
+				    army_intel_decryption_bonus = 0.05
+				    civilian_intel_decryption_bonus = 0.1
+				    navy_intel_decryption_bonus = 0.025
+				}
+				enemy_operative_intel_extraction_rate = 0.1
+				trade_opinion_factor = 0.5
+			}
+			cancel_if_invalid = no
+		}
+		
+		laws_TR_GEN01 = { # 完全自由贸易
+		    picture = laws_TR_GEN01 # GFX_idea_laws_TR_GEN01
+			cost = 0
+			removal_cost = -1
+			level = 1
+			available = {
+				custom_trigger_tooltip = {
+				    tooltip = ASPF_LAWS_TR_AVAILABLE_TT
+					always = no
+				}
+			}
+			modifier = {
+				min_export = 0.8
+				foreign_subversive_activites = 0.2
+				custom_modifier_tooltip = ASPF_LAWS_IG_GEN01_MODIFIER_ID_TT
+				hidden_modifier = {
+				    airforce_intel_decryption_bonus = 0.05
+				    army_intel_decryption_bonus = 0.1
+				    civilian_intel_decryption_bonus = 0.2
+				    navy_intel_decryption_bonus = 0.05
+				}
+				enemy_operative_intel_extraction_rate = 0.2
+				trade_opinion_factor = 1
+			}
+			cancel_if_invalid = no
+		}
+		
+	}
+}
