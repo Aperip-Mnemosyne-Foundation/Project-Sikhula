@@ -194,7 +194,7 @@ EC_ceg = {
 	if = {
 		limit = { 
 			check_variable = {
-				ROOT.EC_PE_A^num = 500
+				ROOT.EC_PE_A^num = 17
 			}
 		}
         remove_from_array = {
@@ -264,7 +264,7 @@ EC_ceg = {
 	if = {
 		limit = { 
 			check_variable = {
-				ROOT.ECEG_A_imax = 500
+				ROOT.ECEG_A_imax = 17
 			}
 		}
         remove_from_array = {
@@ -361,8 +361,288 @@ EC_ccp2 = {
 	}
 	add_dynamic_modifier = { modifier = EC_dynamic_modifiers }
 }
+ECOA_graph = { # 經濟總量曲綫
+	clear_array = ROOT.ECOA_y_label
+	set_variable = { ROOT.ECOA_min = ROOT.ECOA_numbers^0 }
+	set_variable = { ROOT.ECOA_max = ROOT.ECOA_numbers^0 }
+	for_each_loop = {
+		array = ROOT.ECOA_numbers
+		value = v
+		if = {
+			limit = {
+                check_variable = {
+					v > ROOT.ECOA_max
+				}
+			}
+			set_variable = {
+				ROOT.ECOA_max = v
+			}
+		}
+		if = {
+			limit = { 
+				check_variable = {
+					v < ROOT.ECOA_min
+				}
+			}
+			set_variable = {
+				ROOT.ECOA_min = v
+			}
+		}
+	}
+	set_variable = {
+		ROOT.ECOA_min_show = ROOT.ECOA_min
+	}
+	set_variable = {
+		ROOT.ECOA_max_show = ROOT.ECOA_max
+	}
+	multiply_variable = { ROOT.ECOA_max = 1.1 }
+	divide_variable = { ROOT.ECOA_min = 1.1 }
+	set_variable = { ROOT.ECOA_range = ROOT.ECOA_max }
+	subtract_from_variable = { ROOT.ECOA_range = ROOT.ECOA_min }
+	set_variable = { ROOT.ECOA_display_increment = ROOT.ECOA_range }
+	divide_variable = { ROOT.ECOA_display_increment = 4 }
+	set_variable = { ROOT.ECOA_band_display = ROOT.ECOA_min }
+	for_loop_effect = {
+		end = 5
+		add_to_array = { ROOT.ECOA_y_label = ROOT.ECOA_band_display index = 0 }
+		add_to_variable = { ROOT.ECOA_band_display = ROOT.ECOA_display_increment }
+	}
+	divide_variable = { ROOT.ECOA_range = 100 }
+	clear_array = ROOT.ECOA_graph_frames
+	for_each_loop = {
+		array = ROOT.ECOA_numbers
+		value = v
+		index = i
+		set_variable = {
+			ROOT.ECOA_size = ROOT.ECOA_numbers^num
+		}
+		add_to_variable = {
+			ROOT.ECOA_size = -1
+		}
+		if = {
+			limit = { 
+				NOT = {
+					check_variable = {
+						i = ROOT.ECOA_size
+					}
+				}
+			}
+			set_variable = {
+			    ROOT.ECOA_n = v
+		    }
+		    set_variable = {
+			    ROOT.ECOA_lidx = i
+		    }
+		    add_to_variable = {
+		    	ROOT.ECOA_lidx = 1
+		    }
+		    set_variable = {
+		    	ROOT.ECOA_l = ROOT.ECOA_numbers^ECOA_lidx
+		    }
+			subtract_from_variable = { ROOT.ECOA_n = ROOT.ECOA_min }
+			subtract_from_variable = { ROOT.ECOA_l = ROOT.ECOA_min }
+			divide_variable = { ROOT.ECOA_n = ROOT.ECOA_range }
+			divide_variable = { ROOT.ECOA_l = ROOT.ECOA_range }
+			round_variable = ROOT.ECOA_n 
+			round_variable = ROOT.ECOA_l
+			set_variable = { ROOT.ECOA_endpoints = ROOT.ECOA_n }
+			multiply_variable = { ROOT.ECOA_endpoints = 1000 }
+			add_to_variable = { ROOT.ECOA_endpoints = ROOT.ECOA_l }
+			add_to_array = { ROOT.ECOA_graph_frames = ROOT.ECOA_endpoints }
+		}
+	}
+	
+}
 
-
+date_ECOA = { # 這個是用來記錄時間的
+	if = {
+		limit = {
+            NOT = {
+				has_variable = ROOT.ECOA_months
+			}
+		}
+		set_variable = {
+			ROOT.ECOA_months = 1
+		}
+	}
+	else = {
+		add_to_variable = {
+			ROOT.ECOA_months = 1
+		}
+	}
+	set_variable = {
+		ROOT.ECOA_year_n = 1998
+	}
+	if = {
+		limit = { 
+			NOT = {
+				has_variable = ROOT.ECOA_Mnum
+			}
+		}
+		set_variable = {
+			ROOT.ECOA_Mnum = 1
+		}
+	}
+	else = {
+		add_to_variable = {
+		    ROOT.ECOA_Mnum = 1
+	    }
+	}
+	if = {
+		limit = { 
+			check_variable = {
+				ROOT.ECOA_Mnum > 12
+			}
+		}
+		set_variable = {
+			ROOT.ECOA_Mnum = 1
+		}
+	}
+	set_variable = {
+		ROOT.ECOA_year_l = ROOT.ECOA_year_n
+	}
+	add_to_variable = {
+		ROOT.ECOA_year_l = -1
+	}
+	set_variable = {
+		ROOT.ECOA_year_b = ROOT.ECOA_year_n
+	}
+	add_to_variable = {
+		ROOT.ECOA_year_b = -2
+	}
+	set_variable = {
+		ROOT.ECOA_year_g = ROOT.ECOA_year_n
+	}
+	add_to_variable = {
+		ROOT.ECOA_year_g = -1998
+	}
+	set_variable = {
+		ROOT.ECOA_months_g = 0
+	}
+	add_to_variable = {
+		ROOT.ECOA_months_g = ECOA_months
+	}
+	set_variable = {
+		ROOT.ECOA_months_spare_c = 12
+	}
+	multiply_variable = {
+		ROOT.ECOA_months_spare_c = ROOT.ECOA_year_g
+	}
+	set_variable = {
+		ROOT.ECOA_months_spare = ROOT.ECOA_months_g
+	}
+	subtract_from_variable = {
+		ROOT.ECOA_months_spare = ROOT.ECOA_months_spare_c
+	}
+	set_variable = {
+		ROOT.ECOA_Y5 = ROOT.ECOA_year_n
+	}
+	add_to_variable = {
+		ROOT.ECOA_months_spare = -1
+	}
+	if = {
+		limit = { 
+			check_variable = {
+				ROOT.ECOA_months_spare > 4
+			}
+		}
+		set_variable = {
+			ROOT.ECOA_Y4 = ROOT.ECOA_year_n
+		}
+	}
+	else = {
+		set_variable = {
+			ROOT.ECOA_Y4 = ECOA_year_l
+		}
+	}
+	if = {
+		limit = { 
+			check_variable = {
+				ROOT.ECOA_months_spare > 8
+			}
+		}
+		set_variable = {
+			ROOT.ECOA_Y3 = ROOT.ECOA_year_n
+		}
+	}
+	else = {
+		set_variable = {
+			ROOT.ECOA_Y3 = ROOT.ECOA_year_l
+		}
+	}
+	set_variable = {
+		ROOT.ECOA_Y2 = ROOT.ECOA_year_l
+	}
+	if = {
+		limit = { 
+			check_variable = {
+				ROOT.ECOA_months_spare > 4
+			}
+		}
+		set_variable = {
+			ROOT.ECOA_Y1 = ROOT.ECOA_year_l
+		}
+	}
+	else = {
+		set_variable = {
+			ROOT.ECOA_Y1 = ROOT.ECOA_year_b
+		}
+	}
+	set_variable = {
+		ROOT.ECOA_M5 = ROOT.ECOA_months_spare
+	}
+	set_variable = {
+		ROOT.ECOA_M4 = ROOT.ECOA_months_spare
+	}
+	add_to_variable = {
+		ROOT.ECOA_M4 = -4
+	}
+	if = {
+		limit = { 
+			check_variable = {
+				ROOT.ECOA_M4 < 0
+			}
+		}
+		add_to_variable = {
+			ROOT.ECOA_M4 = 12
+		}
+	}
+	set_variable = {
+		ROOT.ECOA_M3 = ROOT.ECOA_months_spare
+	}
+	add_to_variable = {
+		ROOT.ECOA_M3 = -8
+	}
+	if = {
+		limit = { 
+			check_variable = {
+				ROOT.ECOA_M3 < 0
+			}
+		}
+		add_to_variable = {
+			ROOT.ECOA_M3 = 12
+		}
+	}
+	set_variable = {
+		ROOT.ECOA_M2 = ROOT.ECOA_months_spare
+	}
+	set_variable = {
+		ROOT.ECOA_M1 = ROOT.ECOA_months_spare
+	}
+	add_to_variable = {
+		ROOT.ECOA_M1 = -4
+	}
+	if = {
+		limit = { 
+			check_variable = {
+				ROOT.ECOA_M1 < 0
+			}
+		}
+		add_to_variable = {
+			ROOT.ECOA_M1 = 12
+		}
+	}
+}
 
 
 
@@ -398,7 +678,7 @@ set_ECCP = {
 		add_to_array = { ROOT.ECCP_slider_buttons = val }
 	}
 	set_variable = { ROOT.ECCP_dot_x = ROOT.ECCP_current_int }
-	multiply_variable = { ROOT.ECCP_dot_x = 4 }
+	multiply_variable = { ROOT.ECCP_dot_x = 2 }
 	add_to_variable = { ROOT.ECCP_dot_x = 20 }
 	set_variable = { ROOT.ECCP_slider_dot_x = ROOT.ECCP_dot_x }
 	EC_ccp2 = yes

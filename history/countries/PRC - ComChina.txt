@@ -25,7 +25,8 @@ add_ideas = {
 }
 # start_laws
 add_ideas = {
-    laws_MO_GEN04 # 兵役法律
+    laws_MO_GEN03 # 兵役法律
+	laws_TR_GEN03 # 贸易法律
 	laws_IG_GEN04 # 移民法律
 }
 
@@ -44,7 +45,27 @@ set_country_flag = secondleadershow_PRC_HuJintao # secondleader 胡锦涛
 	EC_ccp2 = yes
 	EC_ceg = yes
 	
+	# 历史17月经济总量
+	add_to_array = { ROOT.ECOA_numbers = 205 }
+	add_to_array = { ROOT.ECOA_numbers = 220 }
+	add_to_array = { ROOT.ECOA_numbers = 200 }
+	add_to_array = { ROOT.ECOA_numbers = 220 }
+	add_to_array = { ROOT.ECOA_numbers = 200 }
+	add_to_array = { ROOT.ECOA_numbers = 200 }
+	add_to_array = { ROOT.ECOA_numbers = 200 }
+	add_to_array = { ROOT.ECOA_numbers = 200 }
+	add_to_array = { ROOT.ECOA_numbers = 240 }
+	add_to_array = { ROOT.ECOA_numbers = 200 }
+	add_to_array = { ROOT.ECOA_numbers = 200 }
+	add_to_array = { ROOT.ECOA_numbers = 210 }
+	add_to_array = { ROOT.ECOA_numbers = 200 }
+	add_to_array = { ROOT.ECOA_numbers = 200 }
+	add_to_array = { ROOT.ECOA_numbers = 220 }
+	add_to_array = { ROOT.ECOA_numbers = 201 }
+	add_to_array = { ROOT.ECOA_numbers = 207 }
+	ECOA_graph = yes
 	
+	date_ECOA = yes
 
 2000.1.1 = {
     if = {

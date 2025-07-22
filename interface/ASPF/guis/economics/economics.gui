@@ -18,7 +18,7 @@ guiTypes = {
 				spriteType = "generic_box_125_b"
 			}
 			size = { width = 100% height = 100% }
-			position = {x = 7 y = 200}
+			position = {x = 7 y = 300}
 			instantTextBoxType = {
 				name = "economics_ECTP_text_3"
 				position = { x = 20 y = 0 }
@@ -60,7 +60,7 @@ guiTypes = {
 				spriteType = "generic_box_125_b"
 			}
 			size = { width = 100% height = 100% }
-			position = {x = 7 y = 230}
+			position = {x = 7 y = 330}
 			instantTextBoxType = {
 				name = "economics_ECRE_text"
 				position = { x = 20 y = 0 }
@@ -80,7 +80,7 @@ guiTypes = {
 				spriteType = "generic_box_125_b"
 			}
 			size = { width = 100% height = 100% }
-			position = {x = 7 y = 260}
+			position = {x = 7 y = 360}
 			instantTextBoxType = {
 				name = "economics_ECEG_text"
 				position = { x = 20 y = 0 }
@@ -100,7 +100,7 @@ guiTypes = {
 				spriteType = "generic_box_125_b"
 			}
 			size = { width = 100% height = 100% }
-			position = {x = 7 y = 290}
+			position = {x = 7 y = 390}
 			instantTextBoxType = {
 				name = "economics_ECCP_text"
 				position = { x = 20 y = 0 }
@@ -120,7 +120,7 @@ guiTypes = {
 				spriteType = "generic_box_125_b"
 			}
 			size = { width = 100% height = 100% }
-			position = {x = 7 y = 320}
+			position = {x = 7 y = 420}
 			instantTextBoxType = {
 				name = "economics_ECDG_text"
 				position = { x = 20 y = 0 }
@@ -140,7 +140,7 @@ guiTypes = {
 				spriteType = "generic_box_125_b"
 			}
 			size = { width = 100% height = 100% }
-			position = {x = 7 y = 350}
+			position = {x = 7 y = 450}
 			instantTextBoxType = {
 				name = "economics_EC_PE_text"
 				position = { x = 20 y = 0 }
@@ -160,7 +160,7 @@ guiTypes = {
 				spriteType = "generic_box_125_b"
 			}
 			size = { width = 100% height = 100% }
-			position = {x = 7 y = 380}
+			position = {x = 7 y = 480}
 			instantTextBoxType = {
 				name = "economics_ECSB_text"
 				position = { x = 20 y = 0 }
@@ -180,7 +180,7 @@ guiTypes = {
 				spriteType = "generic_box_125_b"
 			}
 			size = { width = 100% height = 100% }
-			position = {x = 7 y = 410}
+			position = {x = 7 y = 510}
 			instantTextBoxType = {
 				name = "economics_ECPB_text"
 				position = { x = 20 y = 0 }
@@ -191,6 +191,135 @@ guiTypes = {
 			    maxHeight = 20
 			    format = right
 			    text_color_code = W
+			}
+		}
+		containerWindowType = {
+			name = "ECOA_graph_container"
+			position = { x = 12 y = 4 }
+			iconType = {
+				name = "ECOA_bg"
+				spriteType = "GFX_ECOA_bg"
+				position = { x = -5 y = 0 }
+			}
+			iconType = {
+				name = "ECOA_line_bg"
+				spriteType = "GFX_econ_line_graph_bg"
+				position = { x = 62 y = 53 }
+			}
+			gridboxtype = {
+				name = "ECOA_line_segments"
+				position = { x = 71 y = 53 }
+				size = { width = 0 height = 200 }
+				slotsize = { width = 10 height = 200 }
+				max_slots_horizontal = 16
+				add_horizontal = yes
+			}
+			gridboxtype = {
+				name = "ECOA_value_labels"
+				position = { x = 31 y = 38 }
+				size = { width = 0 height = 25 }
+				slotsize = { width = 10 height = 25 }
+				max_slots_horizontal = 1
+				add_horizontal = no
+			}		
+			instantTextboxType = {
+				name = "ECOA_TITLE"
+				position = { x = -5 y = 10 }
+				font = "Youhei18"
+				text = "ECOA_TITLE"
+				maxWidth = 255
+				format = center
+				text_color_code = W
+			}
+			instantTextboxType = {
+				name = "ECOA_Y1"
+				position = { x = -60 y =154 }
+				font = "hoi4_typewriter22"
+				text = "[?ROOT.ECOA_Y1]"
+				maxWidth = 250
+				format = center
+				text_color_code = W
+			}
+			instantTextboxType = {
+				name = "ECOA_Y2"
+				position = { x = -20 y =154 }
+				font = "hoi4_typewriter22"
+				text = "[?ROOT.ECOA_Y2]"
+				maxWidth = 250
+				format = center
+				text_color_code = W
+			}
+			instantTextboxType = {
+				name = "ECOA_Y3"
+				position = { x = 20 y =154 }
+				font = "hoi4_typewriter22"
+				text = "[?ROOT.ECOA_Y3]"
+				maxWidth = 250
+				format = center
+				text_color_code = W
+			}
+			instantTextboxType = {
+				name = "ECOA_Y4"
+				position = { x = 60 y =154 }
+				font = "hoi4_typewriter22"
+				text = "[?ROOT.ECOA_Y4]"
+				maxWidth = 250
+				format = center
+				text_color_code = W
+			}
+			instantTextboxType = {
+				name = "ECOA_Y5"
+				position = { x = 100 y =154 }
+				font = "hoi4_typewriter22"
+				text = "[?ROOT.ECOA_Y5]"
+				maxWidth = 250
+				format = center
+				text_color_code = W
+			}
+			instantTextboxType = {
+				name = "ECOA_M1"
+				position = { x = -60 y =168 }
+				font = "hoi4_typewriter22"
+				text = "[ECOA_M1]"
+				maxWidth = 250
+				format = center
+				text_color_code = W
+			}
+			instantTextboxType = {
+				name = "ECOA_M2"
+				position = { x = -20 y =168 }
+				font = "hoi4_typewriter22"
+				text = "[ECOA_M2]"
+				maxWidth = 250
+				format = center
+				text_color_code = W
+			}
+			instantTextboxType = {
+				name = "ECOA_M3"
+				position = { x = 20 y =168 }
+				font = "hoi4_typewriter22"
+				text = "[ECOA_M3]"
+				maxWidth = 250
+				format = center
+				text_color_code = W
+			}
+			instantTextboxType = {
+				name = "ECOA_M4"
+				position = { x = 60 y =168 }
+				font = "hoi4_typewriter22"
+				text = "[ECOA_M4]"
+				maxWidth = 250
+				format = center
+				text_color_code = W
+			}
+			instantTextboxType = {
+				name = "ECOA_M5"
+				position = { x = 100 y =168 }
+				font = "hoi4_typewriter22"
+				text = "[ECOA_M5]"
+				maxWidth = 250
+				format = center
+				text_color_code = W
 			}
 		}
 	}
@@ -210,13 +339,13 @@ guiTypes = {
 		buttonType = {
 			name = "ECCP_set_gui_slider_limit_right"
 			spriteType = "GFX_econ_crt_slider_limit_right"
-			position = { x = 429 y = 0 }
+			position = { x = 229 y = 0 }
 		}
 		gridboxtype = {
 			name = "ECCP_set_gui_custom_slider_grid"
 			position = { x = -380 y = 6 }
 			size = { width = 100% height = 100% }
-			slotsize = { width = 4 height = 7 }
+			slotsize = { width = 2 height = 7 }
 			max_slots_horizontal = 101
 			max_slots_vertical = 1
 			add_horizontal = yes
@@ -230,12 +359,40 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "economics_ECCP_set_percentage_text"
-			position = { x = 400 y = -2 }
+			position = { x = 170 y = -2 }
 			font = "hoi4_typewriter22"
 			borderSize = {x = 0 y = 0}
 			text = "[?ROOT.ECCP_current_int]"
 			maxWidth = 100
 			maxHeight = 20
+			format = right
+			text_color_code = W
+		}
+		
+	}
+	containerWindowType = {
+		name = "econ_line_segment_green"
+		iconType = {
+			name = "line_segment"
+			spriteType = "GFX_econ_line_graph_segment_green"
+			position = { x = 0 y = 0 }
+		}
+		
+	}
+	containerWindowType = {
+		name = "econ_line_labels_ECOA"
+
+		iconType = {
+			name = "horizontal_bar"
+			spriteType = "GFX_econ_graph_horizontal_bar"
+			position = { x = 0 y = 15 }
+		}
+		instantTextboxType = {
+			name = "horizontal_bar_label"
+			position = { x = -35 y = -1}
+			font = "hoi4_typewriter16"
+			text = "$[?ECOA_y_label^i|1]B"
+			maxWidth = 70
 			format = right
 			text_color_code = W
 		}

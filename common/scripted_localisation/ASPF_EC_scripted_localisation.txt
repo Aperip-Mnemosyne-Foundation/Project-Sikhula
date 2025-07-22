@@ -1,3 +1,30 @@
-defined_text = { 
-	
+defined_text = {
+	name = ECOA_M1
+	text = {
+		localization_key = "econ_month_[?ECOA_M1]"
+	}
+}
+defined_text = {
+	name = ECOA_M2
+	text = {
+		localization_key = "econ_month_[?ECOA_M2]"
+	}
+}
+defined_text = {
+	name = ECOA_M3
+	text = {
+		localization_key = "econ_month_[?ECOA_M3]"
+	}
+}
+defined_text = {
+	name = ECOA_M4
+	text = {
+		localization_key = "econ_month_[?ECOA_M4]"
+	}
+}
+defined_text = {
+	name = ECOA_M5
+	text = {
+		localization_key = "econ_month_[?ECOA_M5]"
+	}
 }

@@ -33,4 +33,27 @@ spriteTypes = {
 		name = "GFX_econ_crt_slider_limit_right"
 		texturefile = "gfx/interface/ec/econ_crt_slider_limit_right.dds"
 	}
+	progressbartype = {
+		name = GFX_econ_line_graph_segment_green
+		steps = 1000000
+		color = { 0.010 0.100 0.25 0.0 }
+		colortwo = { 0.52 0.92 0.56 1 }
+		size = {
+			x = 10
+			y = 100
+		}
+		effectFile = "gfx/FX/line_graph_2.lua"
+	}
+	spriteType = {
+		name = "GFX_econ_line_graph_bg"
+		texturefile = "gfx/interface/ec/line_graph_chart.dds"
+	}
+	spriteType = {
+		name = "GFX_ECOA_bg"
+		texturefile = "gfx/interface/ec/ECOA_bg.png"
+	}
+	spriteType = {
+		name = "GFX_econ_graph_horizontal_bar"
+		texturefile = "gfx/interface/ec/graph_horizontal_bar.dds"
+	}
 }

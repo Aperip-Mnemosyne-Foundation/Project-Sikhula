@@ -34,7 +34,7 @@
  laws_MO_GEN01: "全体强制义务"
  
  # 贸易法律 #
- ASPF_laws_TR_AVAILABLE_TT: "贸易法律不能被手动修改。"
+ ASPF_LAWS_TR_AVAILABLE_TT: "贸易法律不能被手动修改。"
  # gen
  laws_TR_GEN05: "完全关闭贸易"
  laws_TR_GEN04: "允许有限贸易"
@@ -43,7 +43,7 @@
  laws_TR_GEN01: "完全自由贸易"
  
  # 国安法律 #
- ASPF_laws_NS_AVAILABLE_TT: "国安法律不能被手动修改。"
+ ASPF_LAWS_NS_AVAILABLE_TT: "国安法律不能被手动修改。"
  # gen
  laws_NS_GEN05: "人权自由保障"
  laws_NS_GEN04: "适度公安管理"
@@ -52,7 +52,7 @@
  laws_NS_GEN01: "国家战时管制"
  
  # 劳工法律 #
- ASPF_laws_LR_AVAILABLE_TT: "劳工法律不能被手动修改。"
+ ASPF_LAWS_LR_AVAILABLE_TT: "劳工法律不能被手动修改。"
  # gen
  laws_LR_GEN05: "工人奴化权利"
  laws_LR_GEN04: "工人有限权利"
@@ -61,7 +61,7 @@
  laws_LR_GEN01: "工人自由权利"
  
  # 民族法律 #
- ASPF_laws_NH_AVAILABLE_TT: "民族法律不能被手动修改。"
+ ASPF_LAWS_NH_AVAILABLE_TT: "民族法律不能被手动修改。"
  # gen
  laws_NH_GEN05: "放逐少数民族"
  laws_NH_GEN04: "民族有限权利"

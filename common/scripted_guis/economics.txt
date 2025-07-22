@@ -30,6 +30,22 @@ scripted_gui = {
 				}
 			}
 		}
+		dynamic_lists = {
+			# ECOA
+			ECOA_line_segments = {
+				array = ROOT.ECOA_graph_frames
+				entry_container = econ_line_segment_green
+				value = ROOT.segment_frame
+				index = ROOT.segment_idx
+			}
+			ECOA_value_labels = {
+				array = ROOT.ECOA_y_label
+				entry_container = econ_line_labels_ECOA
+			}
+		}
+		properties = {
+			line_segment = { frame = segment_frame }
+		}
 	}
 	
 	

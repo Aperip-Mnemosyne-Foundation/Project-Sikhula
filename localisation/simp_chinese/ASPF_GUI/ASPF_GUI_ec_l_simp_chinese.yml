@@ -43,3 +43,16 @@
  EC_PE: "人均经济" #OK
  EC_PE_A: "经济曲线" #OKV
  ECEG_A: "经济增长曲线" #OK
+ econ_month_0: "Jan"
+ econ_month_1: "Feb"
+ econ_month_2: "Mar"
+ econ_month_3: "Apr"
+ econ_month_4: "May"
+ econ_month_5: "Jun"
+ econ_month_6: "Jul"
+ econ_month_7: "Aug"
+ econ_month_8: "Sep"
+ econ_month_9: "Oct"
+ econ_month_10: "Nov"
+ econ_month_11: "Dec"
+ ECOA_TITLE: "经济总量：$[?ECOA_numbers^16|1]B"
