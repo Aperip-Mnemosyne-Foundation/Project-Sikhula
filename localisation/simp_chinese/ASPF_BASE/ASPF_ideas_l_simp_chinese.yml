@@ -28,19 +28,29 @@
  ASPF_LAWS_MO_AVAILABLE_TT: "兵役法律不能被手动修改。"
  # gen
  laws_MO_GEN05: "非军事化模式"
+ laws_MO_GEN05_desc: "为了带来和平，我们经历了许多烦扰。如今若停止努力，便永远得不到和平\n——托马斯·艾略特"
  laws_MO_GEN04: "志愿募兵制度"
+ laws_MO_GEN04_desc: "想和平的人就得准备战争\n——威吉修斯"
  laws_MO_GEN03: "志愿义务结合"
+ laws_MO_GEN03_desc: "国虽大，好战必亡；天下虽安，忘战必危\n——《司马法》"
  laws_MO_GEN02: "适龄义务征召"
+ laws_MO_GEN02_desc: "战争让征服者获得对被征服者提出任何要求的权利\n——尤里乌斯·凯撒"
  laws_MO_GEN01: "全体强制义务"
+ laws_MO_GEN01_desc: "死神在勇敢者的马刀和刺刀前退却\n——苏沃洛夫"
  
  # 贸易法律 #
  ASPF_LAWS_TR_AVAILABLE_TT: "贸易法律不能被手动修改。"
  # gen
  laws_TR_GEN05: "完全关闭贸易"
+ laws_TR_GEN05_desc: "当外国商品涌入时，我们的工人将沦为乞丐\n——亨利·克莱"
  laws_TR_GEN04: "允许有限贸易"
+ laws_TR_GEN04_desc: "任何国家都不应过度依赖外国供应必需品，尤其是军事物资\n——亚历山大·汉密尔顿"
  laws_TR_GEN03: "控制平衡贸易"
+ laws_TR_GEN03_desc: "如果一件东西在购买时所费的代价比在家内生产时所费的小，就永远不会想要在家内生产\n——《国富论》"
  laws_TR_GEN02: "自由开放贸易"
+ laws_TR_GEN02_desc: "关起门来搞建设不会成功，开放带来进步\n——邓小平"
  laws_TR_GEN01: "完全自由贸易"
+ laws_TR_GEN01_desc: "国际贸易是和平最强大的引擎\n——理查德·科布登"
  
  # 国安法律 #
  ASPF_LAWS_NS_AVAILABLE_TT: "国安法律不能被手动修改。"

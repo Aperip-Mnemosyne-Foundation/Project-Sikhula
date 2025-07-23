@@ -13,7 +13,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_01
 		icon = GFX_focus_goals_PRC_00_MR_01
-		cost = 2
+		cost = 1
 		x = 9
 		y = 1
 		available = {	
@@ -26,7 +26,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_02
 		icon = GFX_focus_goals_PRC_00_MR_02
-		cost = 0.00
+		cost = 3
 		prerequisite = {
 			focus = PRC_00_MR_01
 		}
@@ -43,7 +43,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_03
 		icon = GFX_focus_goals_PRC_00_MR_03
-		cost = 0.00
+		cost = 3
 		prerequisite = {
 			focus = PRC_00_MR_01
 		}
@@ -60,7 +60,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_04
 		icon = GFX_focus_goals_PRC_00_MR_04
-		cost = 0.00
+		cost = 2
 		prerequisite = {
 			focus = PRC_00_MR_02
 		}
@@ -80,7 +80,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_05
 		icon = GFX_focus_goals_PRC_00_MR_05
-		cost = 0.00
+		cost = 3
 		prerequisite = {
 			focus = PRC_00_MR_04
 		}
@@ -97,7 +97,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_LAND_01
 		icon = GFX_focus_goals_PRC_00_MR_LAND_01
-		cost = 0.00
+		cost = 2
 		prerequisite = {
 			focus = PRC_00_MR_05
 		}
@@ -114,7 +114,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_MECH_01
 		icon = GFX_focus_goals_PRC_00_MR_MECH_01
-		cost = 0.00
+		cost = 2
 		prerequisite = {
 			focus = PRC_00_MR_LAND_01
 		}
@@ -131,7 +131,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_MECH_02_L
 		icon = GFX_focus_goals_PRC_00_MR_MECH_02_L
-		cost = 0.00
+		cost = 2
 		prerequisite = {
 			focus = PRC_00_MR_MECH_01
 		}
@@ -151,7 +151,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_MECH_02_R
 		icon = GFX_focus_goals_PRC_00_MR_MECH_02_R
-		cost = 0.00
+		cost = 2
 		prerequisite = {
 			focus = PRC_00_MR_MECH_01
 		}
@@ -171,7 +171,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_QBB_01
 		icon = GFX_focus_goals_PRC_00_MR_QBB_01
-		cost = 0.00
+		cost = 2
 		prerequisite = {
 			focus = PRC_00_MR_QB_81
 			focus = PRC_00_MR_QB_95
@@ -189,7 +189,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_QB_81
 		icon = GFX_focus_goals_PRC_00_MR_QB_81
-		cost = 0.00
+		cost = 2
 		prerequisite = {
 			focus = PRC_00_MR_LAND_01
 		}
@@ -209,12 +209,12 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_QB_95
 		icon = GFX_focus_goals_PRC_00_MR_QB_95
-		cost = 0.00
+		cost = 2
 		prerequisite = {
 			focus = PRC_00_MR_LAND_01
 		}
 		mutually_exclusive = {
-			focus = PRC_00_MR_QB_89
+			focus = PRC_00_MR_QB_81
 		}
 		x = 1
 		y = 1
@@ -229,7 +229,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_AIR_01
 		icon = GFX_focus_goals_PRC_00_MR_AIR_01
-		cost = 0.00
+		cost = 2
 		prerequisite = {
 			focus = PRC_00_MR_05
 		}
@@ -246,7 +246,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_AIR_L
 		icon = GFX_focus_goals_PRC_00_MR_AIR_L
-		cost = 0.00
+		cost = 2
 		prerequisite = {
 			focus = PRC_00_MR_AIR_01
 		}
@@ -263,7 +263,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_AIR_R
 		icon = GFX_focus_goals_PRC_00_MR_AIR_R
-		cost = 0.00
+		cost = 2
 		prerequisite = {
 			focus = PRC_00_MR_AIR_01
 		}
@@ -280,7 +280,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_SEA_01
 		icon = GFX_focus_goals_PRC_00_MR_SEA_01
-		cost = 0.00
+		cost = 2
 		prerequisite = {
 			focus = PRC_00_MR_05
 		}
@@ -297,7 +297,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_SEA_L_01
 		icon = GFX_focus_goals_PRC_00_MR_SEA_L_01
-		cost = 0.00
+		cost = 2
 		prerequisite = {
 			focus = PRC_00_MR_SEA_01
 		}
@@ -314,7 +314,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_SEA_L_02
 		icon = GFX_focus_goals_PRC_00_MR_SEA_L_02
-		cost = 0.00
+		cost = 2
 		prerequisite = {
 			focus = PRC_00_MR_SEA_L_01
 		}
@@ -331,7 +331,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_SEA_L_03
 		icon = GFX_focus_goals_PRC_00_MR_SEA_L_03
-		cost = 0.00
+		cost = 2
 		prerequisite = {
 			focus = PRC_00_MR_SEA_L_02
 		}
@@ -348,7 +348,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_SEA_R_01
 		icon = GFX_focus_goals_PRC_00_MR_SEA_R_01
-		cost = 0.00
+		cost = 2
 		prerequisite = {
 			focus = PRC_00_MR_SEA_01
 		}
@@ -365,7 +365,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_SEA_R_02
 		icon = GFX_focus_goals_PRC_00_MR_SEA_R_02
-		cost = 0.00
+		cost = 2
 		prerequisite = {
 			focus = PRC_00_MR_SEA_R_01
 		}
@@ -382,7 +382,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_SEA_R_03
 		icon = GFX_focus_goals_PRC_00_MR_SEA_R_03
-		cost = 0.00
+		cost = 2
 		prerequisite = {
 			focus = PRC_00_MR_SEA_R_02
 		}
@@ -399,7 +399,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_SEA_02
 		icon = GFX_focus_goals_PRC_00_MR_SEA_02
-		cost = 0.00
+		cost = 3
 		prerequisite = {
 			focus = PRC_00_MR_SEA_L_03
 		}
@@ -419,7 +419,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_BACKUP_01
 		icon = GFX_focus_goals_PRC_00_MR_BACKUP_01
-		cost = 0.00
+		cost = 2
 		prerequisite = {
 			focus = PRC_00_MR_05
 		}
@@ -436,7 +436,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_BACKUP_L_01
 		icon = GFX_focus_goals_PRC_00_MR_BACKUP_L_01
-		cost = 0.00
+		cost = 2
 		prerequisite = {
 			focus = PRC_00_MR_BACKUP_01
 		}
@@ -453,7 +453,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_BACKUP_L_02
 		icon = GFX_focus_goals_PRC_00_MR_BACKUP_L_02
-		cost = 0.00
+		cost = 2
 		prerequisite = {
 			focus = PRC_00_MR_BACKUP_L_01
 		}
@@ -470,7 +470,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_BACKUP_L_03
 		icon = GFX_focus_goals_PRC_00_MR_BACKUP_L_03
-		cost = 0.00
+		cost = 2
 		prerequisite = {
 			focus = PRC_00_MR_BACKUP_L_02
 		}
@@ -487,7 +487,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_BACKUP_R_01
 		icon = GFX_focus_goals_PRC_00_MR_BACKUP_R_01
-		cost = 0.00
+		cost = 2
 		prerequisite = {
 			focus = PRC_00_MR_BACKUP_01
 		}
@@ -504,7 +504,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_MECH_02
 		icon = GFX_focus_goals_PRC_00_MR_MECH_02
-		cost = 0.00
+		cost = 2
 		prerequisite = {
 			focus = PRC_00_MR_MECH_02_L
 			focus = PRC_00_MR_MECH_02_R
@@ -522,7 +522,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_MECH_03
 		icon = GFX_focus_goals_PRC_00_MR_MECH_03
-		cost = 0.00
+		cost = 3
 		prerequisite = {
 			focus = PRC_00_MR_MECH_02
 		}
@@ -539,7 +539,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_QBB_02
 		icon = GFX_focus_goals_PRC_00_MR_QBB_02
-		cost = 0.00
+		cost = 2
 		prerequisite = {
 			focus = PRC_00_MR_QBB_01
 		}
@@ -556,7 +556,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_QBB_03
 		icon = GFX_focus_goals_PRC_00_MR_QBB_03
-		cost = 0.00
+		cost = 3
 		prerequisite = {
 			focus = PRC_00_MR_QBB_02
 		}
@@ -573,7 +573,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_LAND_02
 		icon = GFX_focus_goals_PRC_00_MR_LAND_02
-		cost = 0.00
+		cost = 3
 		prerequisite = {	
 			focus = PRC_00_MR_MECH_03
 		}
@@ -593,7 +593,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_AIR_02
 		icon = GFX_focus_goals_PRC_00_MR_AIR_02
-		cost = 0.00
+		cost = 2
 		prerequisite = {
 			focus = PRC_00_MR_AIR_L
 		}
@@ -613,7 +613,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_AIR_03
 		icon = GFX_focus_goals_PRC_00_MR_AIR_03
-		cost = 0.00
+		cost = 3
 		prerequisite = {
 			focus = PRC_00_MR_AIR_02
 		}
@@ -630,7 +630,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_AIR_04
 		icon = GFX_focus_goals_PRC_00_MR_AIR_04
-		cost = 0.00
+		cost = 3
 		prerequisite = {
 			focus = PRC_00_MR_AIR_03
 		}
@@ -647,7 +647,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_AIR_05
 		icon = GFX_focus_goals_PRC_00_MR_AIR_05
-		cost = 0.00
+		cost = 3
 		prerequisite = {
 			focus = PRC_00_MR_AIR_04
 		}
@@ -664,7 +664,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_SEA_03
 		icon = GFX_focus_goals_PRC_00_MR_SEA_03
-		cost = 0.00
+		cost = 3
 		prerequisite = {
 			focus = PRC_00_MR_SEA_02
 		}
@@ -681,7 +681,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_BACKUP_R_02
 		icon = GFX_focus_goals_PRC_00_MR_BACKUP_R_02
-		cost = 0.00
+		cost = 2
 		prerequisite = {
 			focus = PRC_00_MR_BACKUP_R_01
 		}
@@ -698,7 +698,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_BACKUP_R_03
 		icon = GFX_focus_goals_PRC_00_MR_BACKUP_R_03
-		cost = 0.00
+		cost = 2
 		prerequisite = {
 			focus = PRC_00_MR_BACKUP_R_02
 		}
@@ -715,7 +715,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_BACKUP_02
 		icon = GFX_focus_goals_PRC_00_MR_BACKUP_02
-		cost = 0.00
+		cost = 3
 		prerequisite = {
 			focus = PRC_00_MR_BACKUP_L_03
 		}
@@ -735,7 +735,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_BACKUP_03
 		icon = GFX_focus_goals_PRC_00_MR_BACKUP_03
-		cost = 0.00
+		cost = 3
 		prerequisite = {
 			focus = PRC_00_MR_BACKUP_02
 		}
@@ -752,7 +752,7 @@ focus_tree = {
 	focus = {
 		id = PRC_00_MR_MIL_01
 		icon = GFX_focus_goals_PRC_00_MR_MIL_01
-		cost = 0.00
+		cost = 1
 		prerequisite = {
 			focus = PRC_00_MR_LAND_02
 		}
