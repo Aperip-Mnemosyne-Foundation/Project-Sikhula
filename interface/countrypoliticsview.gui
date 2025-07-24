@@ -1100,7 +1100,7 @@ guiTypes = {
 			
 		iconType = {
 			name = "icon"
-			position = { x = 39 y = 37 }
+			position = { x = 41 y = 37 }
 			spriteType = "GFX_placeholder_bordered"
 			centerposition = yes
 			alwaystransparent = yes

@@ -1,11 +1,10 @@
+
 defined_text = { 
 	name = GetPortrait
 		
 	text = {
 		trigger = {
-			THIS = {
-				has_country_flag = secondleadershow_PRC_HuJintao
-			}
+			has_country_flag = secondleadershow_PRC_HuJintao
 		}
 		localization_key = "GFX_portrait_PRC_HuJintao"
 	}
@@ -15,29 +14,11 @@ defined_text = {
 }
 
 defined_text = { 
-	name = GetPortrait2
+	name = GetSecondLeaderName
 		
 	text = {
 		trigger = {
-			ROOT = {
-				has_country_flag = secondleadershow_PRC_HuJintao
-			}
-		}
-		localization_key = "GFX_portrait_PRC_HuJintao"
-	}
-	text = {
-	    localization_key = "GFX_leader_unknown"
-	}
-}
-
-defined_text = { 
-	name = GetSecondLeader
-		
-	text = {
-		trigger = {
-			THIS = {
-				has_country_flag = secondleadershow_PRC_HuJintao
-			}
+			has_country_flag = secondleadershow_PRC_HuJintao
 		}
 		localization_key = "PRC_HuJintao"
 	}
@@ -45,6 +26,21 @@ defined_text = {
 	    localization_key = "LEADER_UNKNOWN"
 	}
 }
+
+defined_text = { 
+	name = GetSecondLeaderText
+		
+	text = {
+		trigger = {
+			has_country_flag = secondleadershow_PRC_HuJintao
+		}
+		localization_key = "PRC_HuJintao_text"
+	}
+	text = {
+	    localization_key = "LEADER_UNKNOWN"
+	}
+}
+
 defined_text = { 
 	name = GetSecondLeaderDesc
 		
@@ -52,7 +48,7 @@ defined_text = {
 		trigger = {
 			has_country_flag = secondleadershow_PRC_HuJintao
 		}
-		localization_key = "PRC_HuJintao_secondleader_desc"
+		localization_key = "PRC_HuJintao_desc"
 	}
 	text = {
 	    localization_key = "LEADER_UNKNOWN"

@@ -40,7 +40,7 @@ guiTypes = {
 
 		iconType = {
 			name = "98_TB_L"
-			position = { x = 202 y = -270 }
+			position = { x = 220 y = -270 }
 			spriteType = "GFX_98_TB_L"
 			centerposition = yes
 			orientation = LOWER_LEFT
@@ -206,22 +206,168 @@ guiTypes = {
 	### SINGLE PLAYER MENU
 	containerWindowType = {
 		name = "mainmenu_single_player"
-		position = { x=0 y =0}
-		size = { width = 320 height = 395}
-		Orientation = CENTER
-		Origo = center	
+		position = { x=0 y =-60}
+		size = { width = 332 height = 559 }
+		Orientation = lower_left
+		Origo = lower_left
 				
 		background = {
 			name = "Background"		
-			quadTextureSprite ="GFX_tiled_window"
+			quadTextureSprite ="GFX_98_start_bg"
+			alwaystransparent = yes
+		}
+
+		clipping = no
+
+		iconType = {
+			name = "menusp_bg"
+			quadTextureSprite ="GFX_menusp_bg"
+			position = { x=332 y =113}
+			alwaystransparent = yes
+		}
+
+        # 假裝 
+		
+
+        iconType = {
+			name = "WINDOWS98T"
+			quadTextureSprite ="GFX_windows98"
+			position = { x=12 y =11}
+			alwaystransparent = yes
+		}
+		ButtonType = {
+            name = "ASPF_QQADD"
+            position = { x=63 y=61 }
+            quadTextureSprite ="GFX_98startwindowbutton"
+            web_link = "https://qun.qq.com/universal-share/share?ac=1&authKey=YfExOoI7CAHrtyIweP7f2gJ19j6Bd7en7Xteg7qQfn%2BTIojQFcV0pfEL0U3SvFO%2F&busi_data=eyJncm91cENvZGUiOiIxMDUxNTg5MjU4IiwidG9rZW4iOiJLUHRPNjNUMC96Q0swZzBqYi9OdU14T1N1NSt1M3U1UWdSMjlORnNTSi9aVVJqUVR3ZTZ3eWdrMmQ0UlFtK3lRIiwidWluIjoiMTgxNDg2ODk0OCJ9&data=NvAcKKkQcCvMt8NJhER8VMDwFnZeJWWoUXwyXEtCFby3Jvyi73c-DN3ke2Tid9WQPByK_Goi79Ce5RVtwLddpA&svctype=4&tempid=h5_group_info"
+            font = "hoi4_typewriter22"			
+			text = "ASPF_QQADD"				
+			clicksound = click_default			
+			oversound = ui_menu_over
+			alwaystransparent = yes
+        }
+		ButtonType = {
+            name = "ASPF_ENCYCLOPEDIAS"
+            position = { x=63 y=11 }
+            quadTextureSprite ="GFX_98startwindowbutton"
+            web_link = ""
+            font = "hoi4_typewriter22"			
+			text = "ASPF_ENCYCLOPEDIAS"				
+			clicksound = click_default			
+			oversound = ui_menu_over
+			alwaystransparent = yes
+        }	
+		ButtonType = {
+			name = "single_player_button"
+			position = { x = 63 y = 131 }
+			quadTextureSprite ="GFX_98startwindowbutton"
+			font = "hoi4_typewriter22"			
+			text = "FE_SINGLE_PLAYER"				
+			clicksound = click_default			
+			oversound = ui_menu_over
+			alwaystransparent = yes
+		}
+		ButtonType = {
+			name = "multi_player_button"
+			position = { x = 63 y = 181 }
+			quadTextureSprite ="GFX_98startwindowbutton"
+			font = "hoi4_typewriter22"			
+			text = "FE_MULTI_PLAYER"			
+			clicksound = click_default
+			oversound = ui_menu_over
+			alwaystransparent = yes
+		}
+		ButtonType = {
+			name = "settings_button"
+			position = { x = 63 y = 231 }
+			quadTextureSprite ="GFX_98startwindowbutton"	
+			buttonText = "OPTIONS"
+			buttonFont = "hoi4_typewriter22"
+			clicksound = click_default
+			oversound = ui_menu_over
+			alwaystransparent = yes
 		}
 		
+		buttonType = {
+			name = "career_profile_button"
+			position = { x = 63 y = 281 }
+			quadTextureSprite ="GFX_98startwindowbutton"
+			buttonText = "MENU_BAR_CAREER_PROFILE"
+			buttonFont = "hoi4_typewriter22"
+			clicksound = click_default
+			oversound = ui_menu_over
+			alwaystransparent = yes
+		}	
+		buttonType = {
+			name = "friends_button"
+			position = { x = 63 y = 331 }
+			quadTextureSprite ="GFX_98startwindowbutton"
+			buttonText = "MENU_BAR_FRIENDS"
+			buttonFont = "hoi4_typewriter22"
+			clicksound = click_default
+			oversound = ui_menu_over
+			alwaystransparent = yes
+		}
+		ButtonType = {
+			name = "credits_button"
+			position = {  x = 63 y = 381 }
+			quadTextureSprite ="GFX_98startwindowbutton"	
+			buttonText = "FE_CREDITS"
+			buttonFont = "hoi4_typewriter22"
+			clicksound = click_default
+			oversound = ui_menu_over
+			alwaystransparent = yes
+		}
+		ButtonType = {
+			name = "nudge_button"
+			position = { x = 63 y = 501 }
+			quadTextureSprite ="GFX_98startwindowbutton"	
+			buttonText = "Nudge!"
+			buttonFont = "hoi4_typewriter22"
+			alwaystransparent = yes
+		}
+		ButtonType = {
+			name = "exit_button"
+			position = { x = 63 y = 451 }
+			quadTextureSprite ="GFX_98startwindowbutton"
+			font = "hoi4_typewriter22"			
+			text = "FE_EXIT"			
+			clicksound = click_default
+			oversound = ui_menu_over
+			alwaystransparent = yes
+		}
+
+
+		
+
+
+		iconType = {
+			name = "98starticons"
+			position = { x = 91 y = 257 }
+			spriteType = "GFX_98starticons"
+			centerposition = yes
+			orientation = upper_left
+			alwaysTransparent = yes
+		}
+		# 假裝
+
+		ButtonType = { #蓋住
+			name = "sp_back_button"
+			position = { x = 0 y = -1440 }
+			quadTextureSprite ="GFX_menu_air"
+			#font = "hoi4_typewriter22"	
+			#buttonText = "ASPFMENUBACK"
+			clicksound = click_close
+			oversound = ui_menu_over
+			shortcut = "ESCAPE"
+		}
+
 		ButtonType = {
 			name = "sp_continue_button"
-			position = { x = 16 y = 18 }
-			quadTextureSprite ="GFX_main_lobby_button"	
+			position = { x = 337 y = 118 }
+			quadTextureSprite ="GFX_98startwindowbutton"
+			font = "hoi4_typewriter22"		
 			buttonText = "FE_CONTINUE"
-			buttonFont = "hoi_24header"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
@@ -229,7 +375,7 @@ guiTypes = {
 		iconType = {
 			name = "sp_continue_flag_left"
 			quadTextureSprite ="GFX_flag_small2_not_masked"
-			position = { x= 35 y = 22 }
+			position = { x= 35000 y = 22 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
@@ -237,7 +383,7 @@ guiTypes = {
 		iconType = {
 			name = "sp_continue_flag_left_overlay"
 			quadTextureSprite ="GFX_flag_small2_not_masked"
-			position = { x= 35 y = 22 }
+			position = { x= 35000 y = 22 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
@@ -245,7 +391,7 @@ guiTypes = {
 		iconType = {
 			name = "sp_continue_flag_right"
 			quadTextureSprite ="GFX_flag_small2_not_masked"
-			position = { x= 245 y = 22 }
+			position = { x= 245000 y = 22 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
@@ -253,51 +399,42 @@ guiTypes = {
 		iconType = {
 			name = "sp_continue_flag_right_overlay"
 			quadTextureSprite ="GFX_flag_small2_not_masked"
-			position = { x= 245 y = 22 }
+			position = { x= 245000 y = 22 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
 		
 		ButtonType = {
 			name = "sp_new_button"
-			position = { x = 16 y = 58 }
-			quadTextureSprite ="GFX_main_lobby_button"	
+			position = { x = 337 y = 168 }
+			quadTextureSprite ="GFX_98startwindowbutton"
+			font = "hoi4_typewriter22"	
 			buttonText = "FE_NEW"
-			buttonFont = "hoi_24header"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
 		
 		ButtonType = {
 			name = "sp_load_button"
-			position = {  x = 16 y = 98 }
-			quadTextureSprite ="GFX_main_lobby_button"	
+			position = {  x = 337 y = 218 }
+			quadTextureSprite ="GFX_98startwindowbutton"
+			font = "hoi4_typewriter22"		
 			buttonText = "MENU_BAR_LOAD"
-			buttonFont = "hoi_24header"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
 		
 		ButtonType = {
 			name = "sp_tutorial_button"
-			position = { x = 16 y = 138}
-			quadTextureSprite ="GFX_main_lobby_button"	
+			position = { x = 337 y = 268}
+			quadTextureSprite ="GFX_98startwindowbutton"
+			font = "hoi4_typewriter22"		
 			buttonText = "FE_TUTORIAL"
-			buttonFont = "hoi_24header"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
 		
-		ButtonType = {
-			name = "sp_back_button"
-			position = { x = 16 y = 218 }
-			quadTextureSprite ="GFX_main_lobby_button"	
-			buttonText = "BACK"
-			buttonFont = "hoi_24header"
-			clicksound = click_close
-			oversound = ui_menu_over
-			shortcut = "ESCAPE"
-		}
+		
 	}
 
 	### MAIN MENU PANEL (bottom)
@@ -380,13 +517,13 @@ guiTypes = {
 		instantTextBoxType = {
 
 			name ="version_label"
-			position = { x = 205 y = 567 }
+			position = { x = 210 y = 567 }
 			textureFile = ""
 			font = "hoi_18b"
 			text_color_code = b
 			borderSize = {x = 0 y = 0}
 			text = "ALPHA"	
-			format = centre
+			format = left
 			maxWidth = 250
 			maxHeight = 20	
 			

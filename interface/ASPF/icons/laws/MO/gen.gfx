@@ -1,0 +1,22 @@
+spriteTypes = {	
+
+	SpriteType = {
+		name = "GFX_idea_laws_MO_GEN05"
+		texturefile = "gfx/icons/laws/MO/gen/laws_MO_GEN05.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_laws_MO_GEN04"
+		texturefile = "gfx/icons/laws/MO/gen/laws_MO_GEN04.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_laws_MO_GEN03"
+		texturefile = "gfx/icons/laws/MO/gen/laws_MO_GEN03.png"
+	}SpriteType = {
+		name = "GFX_idea_laws_MO_GEN02"
+		texturefile = "gfx/icons/laws/MO/gen/laws_MO_GEN02.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_laws_MO_GEN01"
+		texturefile = "gfx/icons/laws/MO/gen/laws_MO_GEN01.png"
+	}
+}

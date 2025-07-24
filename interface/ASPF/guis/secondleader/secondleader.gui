@@ -17,7 +17,8 @@ guiTypes = {
 			name = "diplo_leader_frame"
 			position = { x = 10 y = 110 }
 			spriteType = "GFX_diplo_leader_frame"
-			pdx_tooltip = "SecondLeaderDesc"
+			pdx_tooltip = "SecondLeaderText"
+			pdx_tooltip_delayed = "SecondLeaderDesc"
 		}
 	}
 	containerWindowType = {
@@ -33,7 +34,8 @@ guiTypes = {
 			scale = 1
 			#pdx_tooltip = "second_leader_name"
 			#pdx_tooltip_delayed = "second_leader_desc"
-			pdx_tooltip = "SecondLeaderDesc"
+			pdx_tooltip = "SecondLeaderText"
+			pdx_tooltip_delayed = "SecondLeaderDesc"
 		}
 		iconType = {
 			name = "leader_frame2"
@@ -45,12 +47,13 @@ guiTypes = {
 			name = "secondleader_name"
 			position = { x = 19 y = 272 }
 			font = "hoi_18mbs"
-			text = "[GetSecondLeader]"
+			text = "SecondLeaderName"
 			maxWidth = 155
 			maxHeight = 20
 			format = center
 			vertical_alignment = center
-			pdx_tooltip = "SecondLeaderDesc"
+			pdx_tooltip = "SecondLeaderText"
+			pdx_tooltip_delayed = "SecondLeaderDesc"
 		}
 	}
 }

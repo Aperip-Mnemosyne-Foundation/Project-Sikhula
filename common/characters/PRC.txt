@@ -8,6 +8,7 @@ characters = {
 		}
 		country_leader = {
 			ideology = AUTHORITARIANSOCIALISM_PRC_SCC
+			desc = PRC_JiangZemin_desc
 			traits = { 
 		    }
 			expire = "2018.1.1.1"
