@@ -322,6 +322,10 @@ guiTypes = {
 				text_color_code = W
 			}
 		}
+		containerWindowType = {
+			name = "economics_education_window"	
+			position = {x = 7 y = 700}
+		}
 	}
 
 

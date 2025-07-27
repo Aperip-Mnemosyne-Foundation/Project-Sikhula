@@ -66,6 +66,15 @@ set_country_flag = secondleadershow_PRC_HuJintao # secondleader 胡锦涛
 	ECOA_graph = yes
 	
 	date_ECOA = yes
+	
+	# EDU
+	set_variable = { ROOT.EDUL_ECES = 200000 }
+	set_variable = { ROOT.EDUL_ECEJ = 400000 }
+	set_variable = { ROOT.EDUL_ECEH = 300000 }
+	set_variable = { ROOT.EDUL_ECEU = 100000 }
+	set_variable = { ROOT.EDUL_ECEM = 50000 }
+	set_variable = { ROOT.EDUL_ECEP = 20000 }
+	refresh_education_piechart = yes
 
 2000.1.1 = {
     if = {

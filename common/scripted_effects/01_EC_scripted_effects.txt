@@ -684,3 +684,113 @@ set_ECCP = {
 	EC_ccp2 = yes
 	force_update_dynamic_modifier = yes
 }
+
+refresh_education_piechart = {
+	clear_variable = ROOT.pie_chart_var_ECEN
+	clear_variable = ROOT.pie_chart_var_ECES
+	clear_variable = ROOT.pie_chart_var_ECEJ
+	clear_variable = ROOT.pie_chart_var_ECEH
+	clear_variable = ROOT.pie_chart_var_ECEU
+	clear_variable = ROOT.pie_chart_var_ECEM
+	clear_variable = ROOT.pie_chart_var_ECEP
+	clear_variable = ROOT.total_EDUL
+	set_variable = {
+		ROOT.EDUL_ECEN = ROOT.ECTP
+	}
+	subtract_from_variable = {
+		ROOT.EDUL_ECEN = ROOT.EDUL_ECES
+	}
+	subtract_from_variable = {
+		ROOT.EDUL_ECEN = ROOT.EDUL_ECEJ
+	}
+	subtract_from_variable = {
+		ROOT.EDUL_ECEN = ROOT.EDUL_ECEH
+	}
+	subtract_from_variable = {
+		ROOT.EDUL_ECEN = ROOT.EDUL_ECEU
+	}
+	subtract_from_variable = {
+		ROOT.EDUL_ECEN = ROOT.EDUL_ECEM
+	}
+	subtract_from_variable = {
+		ROOT.EDUL_ECEN = ROOT.EDUL_ECEP
+	}
+
+	add_to_variable = { ROOT.total_EDUL = ROOT.EDUL_ECEN }
+	add_to_variable = { ROOT.total_EDUL = ROOT.EDUL_ECES }
+	add_to_variable = { ROOT.total_EDUL = ROOT.EDUL_ECEJ }
+	add_to_variable = { ROOT.total_EDUL = ROOT.EDUL_ECEH }
+	add_to_variable = { ROOT.total_EDUL = ROOT.EDUL_ECEU }
+	add_to_variable = { ROOT.total_EDUL = ROOT.EDUL_ECEM }
+	add_to_variable = { ROOT.total_EDUL = ROOT.EDUL_ECEP }
+
+	set_variable = { ROOT.pie_chart_var_ECEP = ROOT.EDUL_ECEP }
+	divide_variable = { ROOT.pie_chart_var_ECEP = ROOT.total_EDUL }
+	multiply_variable = { ROOT.pie_chart_var_ECEP = 100 }
+	round_variable = ROOT.pie_chart_var_ECEP
+	
+	set_variable = { ROOT.pie_chart_var_ECEM = ROOT.EDUL_ECEM}
+	divide_variable = { ROOT.pie_chart_var_ECEM = ROOT.total_EDUL }
+	multiply_variable = { ROOT.pie_chart_var_ECEM = 100 }
+	round_variable = ROOT.pie_chart_var_ECEM
+	add_to_variable = { ROOT.pie_chart_var_ECEM = ROOT.pie_chart_var_ECEP }
+
+	set_variable = { ROOT.pie_chart_var_ECEU = ROOT.EDUL_ECEU }
+	divide_variable = { ROOT.pie_chart_var_ECEU = ROOT.total_EDUL }
+	multiply_variable = { ROOT.pie_chart_var_ECEU = 100 }
+	round_variable = ROOT.pie_chart_var_ECEU
+	add_to_variable = { ROOT.pie_chart_var_ECEU = ROOT.pie_chart_var_ECEM}
+
+	set_variable = { ROOT.pie_chart_var_ECEH = ROOT.EDUL_ECEH }
+	divide_variable = { ROOT.pie_chart_var_ECEH = ROOT.total_EDUL }
+	multiply_variable = { ROOT.pie_chart_var_ECEH = 100 }
+	round_variable = ROOT.pie_chart_var_ECEH
+	add_to_variable = { ROOT.pie_chart_var_ECEH = ROOT.pie_chart_var_ECEU }
+
+	set_variable = { ROOT.pie_chart_var_ECEJ = ROOT.EDUL_ECEJ }
+	divide_variable = { ROOT.pie_chart_var_ECEJ = ROOT.total_EDUL }
+	multiply_variable = { ROOT.pie_chart_var_ECEJ = 100 }
+	round_variable = ROOT.pie_chart_var_ECEJ
+	add_to_variable = { ROOT.pie_chart_var_ECEJ =ROOT.pie_chart_var_ECEH }
+
+	set_variable = { ROOT.pie_chart_var_ECES = ROOT.EDUL_ECES }
+	divide_variable = { ROOT.pie_chart_var_ECES = ROOT.total_EDUL }
+	multiply_variable = { ROOT.pie_chart_var_ECES = 100 }
+	round_variable = ROOT.pie_chart_var_ECES
+	add_to_variable = { ROOT.pie_chart_var_ECES = ROOT.pie_chart_var_ECEJ }
+
+	set_variable = { ROOT.pie_chart_var_ECEN = ROOT.EDUL_ECEN }
+	divide_variable = { ROOT.pie_chart_var_ECEN = ROOT.total_EDUL }
+	multiply_variable = { ROOT.pie_chart_var_ECEN = 100 }
+	round_variable = ROOT.pie_chart_var_ECEN
+	add_to_variable = { ROOT.pie_chart_var_ECEN = ROOT.pie_chart_var_ECES }
+
+    set_variable = {
+		ROOT.EDUL_ECEN_SHOW = ROOT.EDUL_ECEN
+	}
+	set_variable = {
+		ROOT.EDUL_ECES_SHOW = ROOT.EDUL_ECES
+	}
+	set_variable = {
+		ROOT.EDUL_ECEJ_SHOW = ROOT.EDUL_ECEJ
+	}
+	set_variable = {
+		ROOT.EDUL_ECEH_SHOW = ROOT.EDUL_ECEH
+	}
+	set_variable = {
+		ROOT.EDUL_ECEU_SHOW = ROOT.EDUL_ECEU
+	}
+	set_variable = {
+		ROOT.EDUL_ECEM_SHOW = ROOT.EDUL_ECEM
+	}
+	set_variable = {
+		ROOT.EDUL_ECEP_SHOW = ROOT.EDUL_ECEP
+	}
+	round_variable = ROOT.EDUL_ECEN_SHOW
+	round_variable = ROOT.EDUL_ECES_SHOW
+	round_variable = ROOT.EDUL_ECEJ_SHOW
+	round_variable = ROOT.EDUL_ECEH_SHOW
+	round_variable = ROOT.EDUL_ECEU_SHOW
+	round_variable = ROOT.EDUL_ECEM_SHOW
+	round_variable = ROOT.EDUL_ECEP_SHOW
+}

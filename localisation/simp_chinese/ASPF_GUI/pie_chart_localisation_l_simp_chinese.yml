@@ -1,0 +1,4 @@
+﻿l_simp_chinese:
+ pie_chart_factory_num_text:0 " £mil_factory: [?ROOT.num_of_military_factories]\n £civ_factory: [?ROOT.num_of_civilian_factories]\n £dockyard_icon: [?ROOT.num_of_naval_factories]"
+ pie_chart_resource_num_text:0 " £resources_strip|1 : [?ROOT.resource_produced@oil]        £resources_strip|2 : [?ROOT.resource_produced@aluminium]\n £resources_strip|3 : [?ROOT.resource_produced@rubber]             £resources_strip|4 : [?ROOT.resource_produced@tungsten]\n £resources_strip|5 : [?ROOT.resource_produced@steel]        £resources_strip|6 : [?ROOT.resource_produced@chromium]\n"
+

@@ -9,14 +9,16 @@ focus_tree = {
 		}
 	}
 	default = no
-
+    shared_focus = PRC_00_MR_01
 	continuous_focus_position = { x=12 y=1500 }
 	focus = {
 		id = PRC_01_FS_NEWYEAR
 		icon = GFX_focus_goals_PRC_01_FS_NEWYEAR
 		cost = 1.00
-		x = 4
-		y = 1
+		x = -9
+		y = -4
+		
+		relative_position_id = PRC_00_MR_LAND_01
 		completion_reward = {
 			if = { # 隨便放到這測試，記得刪
 	            limit =  {
@@ -35,8 +37,9 @@ focus_tree = {
 		id = PRC_01_FS_TYR
 		icon = GFX_focus_goals_PRC_01_FS_TYR
 		cost = 0.00
-		x = 12
-		y = 1
+		x = -15
+		y = -4
+		relative_position_id = PRC_00_MR_LAND_01
 		allow_branch = {
 			has_country_flag = PRC_01_FS_TYR_ALLOW
 		}
@@ -55,8 +58,9 @@ focus_tree = {
 		prerequisite = {
 			focus = PRC_01_FS_NEWYEAR
 		}
-		x = 4
-		y = 2
+		x = 0
+		y = 1
+		relative_position_id = PRC_01_FS_NEWYEAR
 
 	}
 	focus = {
@@ -66,9 +70,9 @@ focus_tree = {
 		prerequisite = {
 			focus = PRC_01_FS_AEE
 		}
-		x = 2
-		y = 3
-
+		x = -2
+		y = 1
+		relative_position_id = PRC_01_FS_AEE
 	}
 	focus = {
 		id = PRC_01_FS_RMB
@@ -77,9 +81,9 @@ focus_tree = {
 		prerequisite = {
 			focus = PRC_01_FS_AEE
 		}
-		x = 4
-		y = 3
-
+		x = 0
+		y = 1
+		relative_position_id = PRC_01_FS_AEE
 	}
 	focus = {
 		id = PRC_01_FS_IP
@@ -88,9 +92,9 @@ focus_tree = {
 		prerequisite = {
 			focus = PRC_01_FS_AEE
 		}
-		x = 6
-		y = 3
-
+		x = 2
+		y = 1
+		relative_position_id = PRC_01_FS_AEE
 	}
 	focus = {
 		id = PRC_01_FS_ANC
@@ -105,9 +109,9 @@ focus_tree = {
 		prerequisite = {
 			focus = PRC_01_FS_IE
 		}
-		x = 4
-		y = 4
-
+		x = 0
+		y = 2
+		relative_position_id = PRC_01_FS_AEE
 	}
 	focus = {
 		id = PRC_01_FS_BTS
@@ -116,9 +120,9 @@ focus_tree = {
 		prerequisite = {
 			focus = PRC_01_FS_ANC
 		}
-		x = 3
-		y = 5
-
+		x = -1
+		y = 1
+		relative_position_id = PRC_01_FS_ANC
 	}
 	focus = {
 		id = PRC_01_FS_3Y
@@ -127,9 +131,9 @@ focus_tree = {
 		prerequisite = {
 			focus = PRC_01_FS_ANC
 		}
-		x = 5
-		y = 5
-
+		x = 1
+		y = 1
+		relative_position_id = PRC_01_FS_ANC
 	}
 	focus = {
 		id = PRC_01_FS_PZR
@@ -141,9 +145,9 @@ focus_tree = {
 		prerequisite = {
 			focus = PRC_01_FS_3Y
 		}
-		x = 4
-		y = 6
-
+		x = 0
+		y = 2
+		relative_position_id = PRC_01_FS_ANC
 	}
 	focus = {
 		id = PRC_01_FS_MC
@@ -210,8 +214,8 @@ focus_tree = {
 		prerequisite = {
 			focus = PRC_01_FS_PZR
 		}
-		x = 4
-		y = 7
-
+		x = 0
+		y = 1
+		relative_position_id = PRC_01_FS_PZR
 	}
 }

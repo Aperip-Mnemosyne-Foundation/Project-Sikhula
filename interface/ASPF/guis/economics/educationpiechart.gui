@@ -1,0 +1,148 @@
+guiTypes = {
+	
+
+	containerWindowType = {
+		name = "education_piechart_container"
+		size = {
+			width = 100%
+			height = 320
+		}
+		position = { x=0 y =0 }
+
+		buttonType = {
+			name = "refresh_button"
+			spriteType = "GFX_browser_refresh"
+			position = { x = 45200 y = 6 }
+		}
+		containerWindowType = {
+			name = "edu_bg_left"
+			position = {x = 0 y = -10}
+			size = {
+				width = 200
+				height = 220
+			}
+			clipping = yes
+			iconType = {
+				name = "ECOA_bg"
+				spriteType = "GFX_ECOA_bg"
+				position = { x = 5 y = 5 }
+			}
+		}
+
+		containerWindowType = {
+			name = "edu_bg_right"
+			position = {x = 60 y = -10}
+			size = {
+				width = 1000
+				height = 220
+			}
+			clipping = yes
+			iconType = {
+				name = "ECOA_bg"
+				spriteType = "GFX_ECOA_bg"
+				position = { x = -5 y = 5 }
+			}
+		}
+
+		instantTextboxType = {
+			name = "edu_TITLE"
+			position = { x = 30 y = 5 }
+			font = "Youhei18"
+			text = "EDU_TITLE"
+			maxWidth = 255
+			format = center
+			text_color_code = W
+		}
+
+		containerWindowType = {
+			name = "education_piechart"
+			position = { x=15 y =32 }
+			origo = center
+			scale = 0.5
+			iconType = {
+				name = "pie_chart_ECEN"
+				quadTextureSprite = "GFX_pie_progress_ECEN"
+				alwaystransparent = yes
+				frame = 0
+			}
+			iconType = {
+				name = "pie_chart_ECES"
+				quadTextureSprite = "GFX_pie_progress_ECES"
+				alwaystransparent = yes
+				frame = 0
+			}
+			iconType = {
+				name = "pie_chart_ECEJ"
+				quadTextureSprite = "GFX_pie_progress_ECEJ"
+				alwaystransparent = yes
+				frame = 0
+			}
+			iconType = {
+				name = "pie_chart_ECEH"
+				quadTextureSprite = "GFX_pie_progress_ECEH"
+				alwaystransparent = yes
+				frame = 0
+			}
+			iconType = {
+				name = "pie_chart_ECEU"
+				quadTextureSprite = "GFX_pie_progress_ECEU"
+				alwaystransparent = yes
+				frame = 0
+			}
+			iconType = {
+				name = "pie_chart_ECEM"
+				quadTextureSprite = "GFX_pie_progress_ECEM"
+				alwaystransparent = yes
+				frame = 0
+			}
+			iconType = {
+				name = "pie_chart_ECEP"
+				quadTextureSprite = "GFX_pie_progress_ECEP"
+				alwaystransparent = yes
+				frame = 0
+			}
+		}
+
+		iconType = {
+			name = "pie_chart_overlay"
+			quadTextureSprite = "GFX_pie_overlay"
+			alwaystransparent = yes
+			position = { x = 90 y = 107 }
+			scale = 1.48
+			centerposition = yes
+		}
+
+		
+		instantTextboxType = {
+			name = "pie_chart_ECU_num"
+			position = { x = 170 y = 50 }
+			font = "hoi_20b"
+			text = "pie_chart_EDU_text"
+			maxWidth = 400
+			maxHeight = 250
+			format = left
+		}
+
+
+
+		iconType = {
+			name = "ring_progressbar"
+			quadTextureSprite = "GFX_ring_progressbar"
+			alwaystransparent = yes
+			frame = 0
+			position = { x = 26200 y = 42 }
+		}
+
+		instantTextboxType = {
+			name = "ring_progressbar_num"
+			position = { x = 31200 y = 92 }
+			font = "hoi_36header"
+			text = "[?ring_progressbar|Y0]"
+			maxWidth = 400
+			maxHeight = 250
+			format = left
+		}
+
+	}
+
+}

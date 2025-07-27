@@ -14,6 +14,7 @@
  ECCP_set: "消费品生产占用量" # OK
  ECDG: "月度消费品需求量" # OK
  ECAE: "国家平均教育水平"
+ EDU_TITLE: "教育情况"
  ECEN: "未受教育"
  ECES: "小学学历"
  ECEJ: "初中学历"
@@ -56,3 +57,4 @@
  econ_month_10: "Nov"
  econ_month_11: "Dec"
  ECOA_TITLE: "经济总量：$[?ECOA_numbers^16|1]B"
+ pie_chart_EDU_text: " £|1 $ECEN$: [?ROOT.EDUL_ECEN_SHOW]K\n £|2 $ECES$: [?ROOT.EDUL_ECES_SHOW]K\n £|3 $ECEJ$: [?ROOT.EDUL_ECEJ_SHOW]K\n £|4 $ECEH$: [?ROOT.EDUL_ECEH_SHOW]K\n £|5 $ECEU$: [?ROOT.EDUL_ECEU_SHOW]K\n £|6 $ECEM$: [?ROOT.EDUL_ECEM_SHOW]K\n £|7 $ECEP$: [?ROOT.EDUL_ECEP_SHOW]K\n"

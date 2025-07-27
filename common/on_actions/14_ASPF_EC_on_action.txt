@@ -11,6 +11,7 @@ on_actions = {
 				EC_cdg = yes
 				EC_ccp2 = yes
 				ECOA_graph = yes
+				refresh_education_piechart = yes
 			}
 		}
 	}
@@ -26,6 +27,7 @@ on_actions = {
 				EC_cdg = yes
 				EC_ccp2 = yes
 				ECOA_graph = yes
+				refresh_education_piechart = yes
 			}
 		}
 	}

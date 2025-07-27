@@ -1,0 +1,67 @@
+spriteTypes = {
+	
+
+	spriteType = {
+		name = "GFX_pie_overlay"
+		texturefile = "gfx/interface/pie_chart/pie_overlay.png"
+	}
+
+	progressbartype = {
+		name = "GFX_ring_progressbar"
+		textureFile1 = "gfx/interface/pie_chart/ring_positive_full.dds"
+		textureFile2 = "gfx/interface/pie_chart/ring_positive_empty.dds"
+		size = { x = 132 y = 134 }
+		effectFile = "gfx/FX/progress_radial.lua"
+	}
+
+	progressbartype = {
+		name = "GFX_pie_progress_ECEN"
+		textureFile1 = "gfx/interface/pie_chart/pie_progress_ECEN.png"
+		textureFile2 = "gfx/interface/pie_chart/pie_progress_empty.png"
+		size = { x = 300 y = 300 }
+		effectFile = "gfx/FX/progress_radial.lua"
+	}
+	progressbartype = {
+		name = "GFX_pie_progress_ECES"
+		textureFile1 = "gfx/interface/pie_chart/pie_progress_ECES.png"
+		textureFile2 = "gfx/interface/pie_chart/pie_progress_empty.png"
+		size = { x = 300 y = 300 }
+		effectFile = "gfx/FX/progress_radial.lua"
+	}
+	progressbartype = {
+		name = "GFX_pie_progress_ECEJ"
+		textureFile1 = "gfx/interface/pie_chart/pie_progress_ECEJ.png"
+		textureFile2 = "gfx/interface/pie_chart/pie_progress_empty.png"
+		size = { x = 300 y = 300 }
+		effectFile = "gfx/FX/progress_radial.lua"
+	}
+	progressbartype = {
+		name = "GFX_pie_progress_ECEH"
+		textureFile1 = "gfx/interface/pie_chart/pie_progress_ECEH.png"
+		textureFile2 = "gfx/interface/pie_chart/pie_progress_empty.png"
+		size = { x = 300 y = 300 }
+		effectFile = "gfx/FX/progress_radial.lua"
+	}
+	progressbartype = {
+		name = "GFX_pie_progress_ECEU"
+		textureFile1 = "gfx/interface/pie_chart/pie_progress_ECEU.png"
+		textureFile2 = "gfx/interface/pie_chart/pie_progress_empty.png"
+		size = { x = 300 y = 300 }
+		effectFile = "gfx/FX/progress_radial.lua"
+	}
+	progressbartype = {
+		name = "GFX_pie_progress_ECEM"
+		textureFile1 = "gfx/interface/pie_chart/pie_progress_ECEM.png"
+		textureFile2 = "gfx/interface/pie_chart/pie_progress_empty.png"
+		size = { x = 300 y = 300 }
+		effectFile = "gfx/FX/progress_radial.lua"
+	}
+	progressbartype = {
+		name = "GFX_pie_progress_ECEP"
+		textureFile1 = "gfx/interface/pie_chart/pie_progress_ECEP.png"
+		textureFile2 = "gfx/interface/pie_chart/pie_progress_empty.png"
+		size = { x = 300 y = 300 }
+		effectFile = "gfx/FX/progress_radial.lua"
+	}
+
+}

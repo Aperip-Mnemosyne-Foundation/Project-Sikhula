@@ -1,0 +1,53 @@
+scripted_gui = {
+	
+	
+	education_piechart = {
+		window_name = "education_piechart_container"
+		context_type = player_context
+		parent_window_name = "economics_education_window"
+		visible = {
+			is_ai = no
+			#always = no # 没做好
+		}
+		
+		properties = {
+
+			ring_progressbar = {
+				frame = ring_progressbar
+			}
+
+			pie_chart_ECEN = {
+				frame = 100
+			}
+			pie_chart_ECES = {
+				frame = pie_chart_var_ECES
+			}
+			pie_chart_ECEJ = {
+				frame = pie_chart_var_ECEJ
+			}
+			pie_chart_ECEH = {
+				frame = pie_chart_var_ECEH
+			}
+			pie_chart_ECEU = {
+				frame = pie_chart_var_ECEU
+			}
+			pie_chart_ECEM = {
+				frame = pie_chart_var_ECEM
+			}
+			pie_chart_ECEP = {
+				frame = pie_chart_var_ECEP
+			}
+
+		}
+		
+		effects = {
+			refresh_button_click = {
+				refresh_education_piechart = yes
+			}
+		}
+
+
+	}
+
+}
+
