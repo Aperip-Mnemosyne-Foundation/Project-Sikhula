@@ -136,7 +136,7 @@
 			focus = PRC_00_MR_MECH_01
 		}
 		mutually_exclusive = {
-			shared_focus = PRC_00_MR_MECH_02_R
+			focus = PRC_00_MR_MECH_02_R
 		}
 		x = -1
 		y = 1
@@ -156,7 +156,7 @@
 			focus = PRC_00_MR_MECH_01
 		}
 		mutually_exclusive = {
-			shared_focus = PRC_00_MR_MECH_02_L
+			focus = PRC_00_MR_MECH_02_L
 		}
 		x = 1
 		y = 1
@@ -174,7 +174,7 @@
 		cost = 2
 		prerequisite = {
 			focus = PRC_00_MR_QB_81
-			shared_focus = PRC_00_MR_QB_95
+			focus = PRC_00_MR_QB_95
 		}
 		x = 0
 		y = 2
@@ -194,7 +194,7 @@
 			focus = PRC_00_MR_LAND_01
 		}
 		mutually_exclusive = {
-			shared_focus = PRC_00_MR_QB_95
+			focus = PRC_00_MR_QB_95
 		}
 		x = -1
 		y = 1
@@ -214,7 +214,7 @@
 			focus = PRC_00_MR_LAND_01
 		}
 		mutually_exclusive = {
-			shared_focus = PRC_00_MR_QB_81
+			focus = PRC_00_MR_QB_81
 		}
 		x = 1
 		y = 1
@@ -507,7 +507,7 @@
 		cost = 2
 		prerequisite = {
 			focus = PRC_00_MR_MECH_02_L
-			shared_focus = PRC_00_MR_MECH_02_R
+			focus = PRC_00_MR_MECH_02_R
 		}
 		x = 0
 		y = 2
@@ -575,7 +575,7 @@
 		icon = GFX_focus_goals_PRC_00_MR_LAND_02
 		cost = 3
 		prerequisite = {	
-			shared_focus = PRC_00_MR_MECH_03
+			focus = PRC_00_MR_MECH_03
 		}
 		prerequisite = {
 			focus = PRC_00_MR_QBB_03

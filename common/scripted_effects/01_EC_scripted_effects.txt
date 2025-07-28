@@ -359,7 +359,7 @@ EC_ccp2 = {
 	set_variable = {
 		ROOT.ECCP = ROOT.ECCP_ccp2_c
 	}
-	add_dynamic_modifier = { modifier = EC_dynamic_modifiers }
+	add_dynamic_modifier = { modifier = ECCP_dynamic_modifiers }
 }
 ECOA_graph = { # 經濟總量曲綫
 	clear_array = ROOT.ECOA_y_label

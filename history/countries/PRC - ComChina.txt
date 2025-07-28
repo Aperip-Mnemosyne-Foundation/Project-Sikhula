@@ -27,6 +27,9 @@ add_ideas = {
 add_ideas = {
     laws_MO_GEN03 # 兵役法律
 	laws_TR_GEN02 # 贸易法律
+	laws_NS_GEN03 # 国安法律
+	laws_LR_GEN03 # 劳工法律
+	laws_NH_GEN02 # 民族法律
 	laws_IG_GEN04 # 移民法律
 }
 

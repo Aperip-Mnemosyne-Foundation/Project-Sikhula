@@ -1,4 +1,4 @@
-EC_dynamic_modifiers = {
+ECCP_dynamic_modifiers = {
     enable = { always = yes }
     remove_trigger = {
         always = no

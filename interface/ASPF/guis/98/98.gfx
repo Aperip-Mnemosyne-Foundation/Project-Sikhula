@@ -20,6 +20,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/win98web/TB_R.png"
 	}
 	spriteType = {
+		name = "GFX_98_TB_C"
+		texturefile = "gfx/interface/win98web/TB_C.png"
+	}
+	spriteType = {
 		name = "GFX_98_start_bg"
 		texturefile = "gfx/interface/win98web/start_bg.png"
 	}
@@ -102,9 +106,33 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
 	}
 
+	corneredTileSpriteType = {
+		name = "GFX_tiled_partybox_bg"
+		size= { x=190 y=190 }
+		textureFile = "gfx/interface/win98web/pol_partybox_bg.dds"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
 	spriteType = {
 		name = "GFX_pol_faction_icon_bg"
 		texturefile = "gfx/interface/win98web/pol_faction_icon_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_pol_circle"
+		texturefile = "gfx/interface/win98web/circle.dds"
+	}
+
+	spriteType = {
+		name = "GFX_pol_slash"
+		texturefile = "gfx/interface/win98web/slash.png"
+	}
+
+	spriteType = {
+		name = "GFX_pol_straightness"
+		texturefile = "gfx/interface/win98web/straightness.png"
 	}
 
 	spriteType = {
@@ -115,6 +143,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_pol_partygrid_bg"
 		texturefile = "gfx/interface/win98web/pol_partygrid_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_pol_pie_over"
+		texturefile = "gfx/interface/win98web/pie_over.png"
 	}
 
 	spriteType = {

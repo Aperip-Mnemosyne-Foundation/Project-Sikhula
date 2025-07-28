@@ -9,24 +9,26 @@ bookmarks = {
 		
 		"PRC"={
 			history = "1998_PRC_DESC"
-			ideology = Power_Authoritarianism
-			available = YES
+			ideology = AUTHORITARIANSOCIALISM
+			available = yes
 			ideas = {
-				
+				PRC_laggingarmy01
+				PRC_laggingarmy01
+				PRC_laggingarmy01
+				PRC_laggingarmy01
 			}
 			focuses = {
-				PRC_bookmark_bg
-				goals_bookmark_bg
-				
+				PRC_00_MR_BACKUP_L_03
+				PRC_00_MR_BACKUP_L_03
+				PRC_00_MR_BACKUP_L_03
 			}
-			
 		}
 		
 		
 		
 
 		"---"={
-			history = "OTHER_1998_DESC"
+			history = "1998_OTHER_DESC"
 		}
 
 

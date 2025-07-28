@@ -1,0 +1,7 @@
+defined_text = {
+	name = GETPARTYINFOMORE
+	text = {
+		localization_key = "PARTYINFOMOREGEN"
+	}
+}
+

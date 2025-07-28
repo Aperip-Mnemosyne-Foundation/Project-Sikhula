@@ -1,0 +1,95 @@
+ideas = {
+    laws_LR = {
+	    law = yes
+		use_list_view = yes
+		
+		
+		
+		
+		laws_LR_GEN05 = { # 
+		    picture = laws_LR_GEN05 # GFX_idea_laws_LR_GEN05
+			cost = 0
+			removal_cost = -1
+			level = 5
+			allowed_to_remove = {
+				custom_trigger_tooltip = {
+				    tooltip = ASPF_LAWS_LR_AVAILABLE_TT
+					always = no
+				}
+			}
+			modifier = {
+				
+			}
+			cancel_if_invalid = no
+		}
+		
+		laws_LR_GEN04 = { # 
+		    picture = laws_LR_GEN04 # GFX_idea_laws_LR_GEN04
+			cost = 0
+			removal_cost = -1
+			level = 4
+			allowed_to_remove = {
+				custom_trigger_tooltip = {
+				    tooltip = ASPF_LAWS_LR_AVAILABLE_TT
+					always = no
+				}
+			}
+			modifier = {
+				
+			}
+			cancel_if_invalid = no
+		}
+		
+		laws_LR_GEN03 = { # 
+		    picture = laws_LR_GEN03 # GFX_idea_laws_LR_GEN03
+			cost = 0
+			removal_cost = -1
+			level = 3
+			allowed_to_remove = {
+				custom_trigger_tooltip = {
+				    tooltip = ASPF_LAWS_LR_AVAILABLE_TT
+					always = no
+				}
+			}
+			modifier = {
+				
+			}
+			cancel_if_invalid = no
+		}
+		
+		laws_LR_GEN02 = { # 
+		    picture = laws_LR_GEN02 # GFX_idea_laws_LR_GEN02
+			cost = 0
+			removal_cost = -1
+			level = 2
+			allowed_to_remove = {
+				custom_trigger_tooltip = {
+				    tooltip = ASPF_LAWS_LR_AVAILABLE_TT
+					always = no
+				}
+			}
+			modifier = {
+				
+			}
+			cancel_if_invalid = no
+		}
+		
+		laws_LR_GEN01 = { # 
+		    picture = laws_LR_GEN01 # GFX_idea_laws_LR_GEN01
+			cost = 0
+			removal_cost = -1
+			level = 1
+			allowed_to_remove = {
+				custom_trigger_tooltip = {
+				    tooltip = ASPF_LAWS_LR_AVAILABLE_TT
+					always = no
+				}
+			}
+			modifier = {
+				
+			}
+			cancel_if_invalid = no
+		}
+		
+	}
+}

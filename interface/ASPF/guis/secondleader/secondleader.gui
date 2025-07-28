@@ -55,5 +55,48 @@ guiTypes = {
 			pdx_tooltip = "SecondLeaderText"
 			pdx_tooltip_delayed = "SecondLeaderDesc"
 		}
+		instantTextboxType = {
+			name = "partyinfo"
+			position = { x = 344 y = 182 }
+			font = "Youhei"
+			text = "PARTYINFO"
+			maxWidth = 155
+			maxHeight = 20
+			format = LEFT
+		}
+		instantTextboxType = {
+			name = "partyinfomore"
+			position = { x = 338 y = 196 }
+			font = "Youhei"
+			text = "PARTYINFOMORE"
+			maxWidth = 155
+			maxHeight = 20
+			format = LEFT
+		}
+		instantTextboxType = {
+			name = "partyinfocountry"
+			position = { x = 190 y = 56 }
+			font = "Youhei18"
+			text = "PARTYINFOCOUNTRY"
+			maxWidth = 200
+			maxHeight = 20
+			format = LEFT
+			text_color_code = b
+		}
+		containerWindowType = {
+			name = "partyinfoGPWINDOW"
+			position = { x = 328 y = 210 }
+			size = { width = 160 height =14 }
+			clipping = yes
+			instantTextboxType = {
+			    name = "partyinfoGP"
+			    position = { x = 0 y = 0 }
+			    font = "Youhei"
+			    text = "PARTYINFOGP"
+			    maxWidth = 160
+			    maxHeight = 20
+			    format = LEFT
+		    }
+		}
 	}
 }

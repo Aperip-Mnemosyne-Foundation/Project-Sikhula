@@ -107,8 +107,8 @@ guiTypes = {
 			name = "pie_chart_overlay"
 			quadTextureSprite = "GFX_pie_overlay"
 			alwaystransparent = yes
-			position = { x = 90 y = 107 }
-			scale = 1.48
+			position = { x = 89 y = 107 }
+			scale = 1.5
 			centerposition = yes
 		}
 

@@ -1,0 +1,94 @@
+ideas = {
+    laws_NH = {
+	    law = yes
+		use_list_view = yes
+		
+		
+		
+		
+		laws_NH_GEN05 = { # 
+		    picture = laws_NH_GEN05 # GFX_idea_laws_NH_GEN05
+			cost = 0
+			removal_cost = -1
+			level = 5
+			allowed_to_remove = {
+				custom_trigger_tooltip = {
+				    tooltip = ASPF_LAWS_NH_AVAILABLE_TT
+					always = no
+				}
+			}
+			modifier = {
+				
+			}
+			cancel_if_invalid = no
+		}
+		
+		laws_NH_GEN04 = { # 
+		    picture = laws_NH_GEN04 # GFX_idea_laws_NH_GEN04
+			cost = 0
+			removal_cost = -1
+			level = 4
+			allowed_to_remove = {
+				custom_trigger_tooltip = {
+				    tooltip = ASPF_LAWS_NH_AVAILABLE_TT
+					always = no
+				}
+			}
+			modifier = {
+				
+			}
+			cancel_if_invalid = no
+		}
+		
+		laws_NH_GEN03 = { # 
+		    picture = laws_NH_GEN03 # GFX_idea_laws_NH_GEN03
+			cost = 0
+			removal_cost = -1
+			level = 3
+			allowed_to_remove = {
+				custom_trigger_tooltip = {
+				    tooltip = ASPF_LAWS_NH_AVAILABLE_TT
+					always = no
+				}
+			}
+			modifier = {
+				
+			}
+			cancel_if_invalid = no
+		}
+		
+		laws_NH_GEN02 = { # 
+		    picture = laws_NH_GEN02 # GFX_idea_laws_NH_GEN02
+			cost = 0
+			removal_cost = -1
+			level = 2
+			allowed_to_remove = {
+				custom_trigger_tooltip = {
+				    tooltip = ASPF_LAWS_NH_AVAILABLE_TT
+					always = no
+				}
+			}
+			modifier = {
+				
+			}
+			cancel_if_invalid = no
+		}
+		
+		laws_NH_GEN01 = { # 
+		    picture = laws_NH_GEN01 # GFX_idea_laws_NH_GEN01
+			cost = 0
+			removal_cost = -1
+			level = 1
+			allowed_to_remove = {
+				custom_trigger_tooltip = {
+				    tooltip = ASPF_LAWS_NH_AVAILABLE_TT
+					always = no
+				}
+			}
+			modifier = {
+				
+			}
+			cancel_if_invalid = no
+		}
+	}
+}

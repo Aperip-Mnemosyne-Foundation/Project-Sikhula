@@ -1,0 +1,9 @@
+﻿l_simp_chinese: 
+
+ POLPARTYINFOTITLE: "政治局势"
+ pol_ideology_more: "@cnm@cnm@cnm@cnm@cnm@cnm@cnm支持者在\n  当前执掌了意识形态的\n    主要领导力量。"
+ PARTYINFO: "[ROOT.GetRulingParty]"
+ PARTYINFOMORE: "[GETPARTYINFOMORE]"
+ PARTYINFOMOREGEN: "是我国当前的执政党"
+ PARTYINFOGP: "指导思想为[?country_leader.GetIdeologyGroup]。"
+ PARTYINFOCOUNTRY: "[ROOT.GetAdjective]"

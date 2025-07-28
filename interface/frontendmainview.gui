@@ -226,6 +226,13 @@ guiTypes = {
 			alwaystransparent = yes
 		}
 
+		iconType = {
+			name = "WINDOWS98TB_C2"
+			quadTextureSprite ="GFX_98_TB_C"
+			position = { x=2 y =564}
+			scale = 0.8
+		}
+
         # 假裝 
 		
 
@@ -364,7 +371,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "sp_continue_button"
-			position = { x = 337 y = 118 }
+			position = { x = 336 y = 117 }
 			quadTextureSprite ="GFX_98startwindowbutton"
 			font = "hoi4_typewriter22"		
 			buttonText = "FE_CONTINUE"
@@ -406,7 +413,7 @@ guiTypes = {
 		
 		ButtonType = {
 			name = "sp_new_button"
-			position = { x = 337 y = 168 }
+			position = { x = 336 y = 167 }
 			quadTextureSprite ="GFX_98startwindowbutton"
 			font = "hoi4_typewriter22"	
 			buttonText = "FE_NEW"
@@ -416,7 +423,7 @@ guiTypes = {
 		
 		ButtonType = {
 			name = "sp_load_button"
-			position = {  x = 337 y = 218 }
+			position = {  x = 336 y = 217 }
 			quadTextureSprite ="GFX_98startwindowbutton"
 			font = "hoi4_typewriter22"		
 			buttonText = "MENU_BAR_LOAD"
@@ -426,7 +433,7 @@ guiTypes = {
 		
 		ButtonType = {
 			name = "sp_tutorial_button"
-			position = { x = 337 y = 268}
+			position = { x = 336 y = 267}
 			quadTextureSprite ="GFX_98startwindowbutton"
 			font = "hoi4_typewriter22"		
 			buttonText = "FE_TUTORIAL"
@@ -463,6 +470,13 @@ guiTypes = {
 			name = "WINDOWS98T"
 			quadTextureSprite ="GFX_windows98"
 			position = { x=12 y =11}
+		}
+
+		iconType = {
+			name = "WINDOWS98TB_C"
+			quadTextureSprite ="GFX_98_TB_C"
+			position = { x=2 y =564}
+			scale = 0.8
 		}
 
 		ButtonType = {

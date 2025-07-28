@@ -514,29 +514,42 @@ guiTypes = {
 		animation_time = 1
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
+        containerWindowType = {
+		    name ="gamesetup_scenario_window_overlay_window"
+		    size = { width = 1080 height = 860 }
+		    clipping = yes
+		    moveable = no
+		    position = { x=0 y=24 }
+			iconType = {
+			    name ="gamesetup_scenario_window_overlay"
+			    spriteType = "GFX_select_date_bg"
+			    position = { x= 0 y = -24 }
+		    }
+		}
+		
 
 		instantTextBoxType = {
 			name = "title"
-			position = { x = -45 y = 4 }
+			position = { x = 20 y = 4 }
 			textureFile = ""
 			font = "hoi_18b"
 			borderSize = {x = 0 y = 0}
 			text = "ASPF_FE_SELECT_SCENARIO"
 			maxWidth = 500
 			maxHeight = 30
-			format = center
+			format = left
 		}
 
 		instantTextBoxType = {
 			name = "search"
-			position = { x = 62 y = 93 }
+			position = { x = 93 y = 93 }
 			textureFile = ""
 			font = "hoi4_typewriter22"
 			borderSize = {x = 0 y = 0}
 			text = "ASPF_FE_SELECT_SCENARIO"
 			maxWidth = 500
 			maxHeight = 30
-			format = center
+			format = left
 		}
 
 		instantTextBoxType = {
@@ -719,12 +732,12 @@ guiTypes = {
 		}
 
 		instantTextBoxType = {
-			name = "HISTORY"
+			name = "HISTORY2"
 			position = { x = 206 y = 68 }
 			textureFile = ""
 			font = "hoi4_typewriter16"
 			borderSize = {x = 0 y = 0}
-			text = "HISTORY"
+			text = "HISTORY2"
 			maxWidth = 500
 			maxHeight = 30
 			format = center
@@ -837,10 +850,10 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "bookmark_desc"
-			position = { x = 59 y = 450 }
+			position = { x = 48 y = 440 }
 			font = "hoi4_typewriter16"
 			borderSize = {x = 0 y = 0}
-			maxWidth = 978
+			maxWidth = 984
 			maxHeight = 30
 			format = left
 		}
@@ -894,22 +907,267 @@ guiTypes = {
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
 
+		containerWindowType = {
+		    name ="gamesetup_scenario_window_overlay_window"
+		    size = { width = 1080 height = 860 }
+		    clipping = yes
+		    moveable = no
+		    position = { x=0 y=24 }
+			iconType = {
+			    name ="gamesetup_scenario_window_overlay"
+			    spriteType = "GFX_select_date_bg"
+			    position = { x= 0 y = -24 }
+		    }
+		}
+		
+
 		instantTextBoxType = {
 			name = "title"
-			position = { x = 435 y = 12 }
+			position = { x = 20 y = 4 }
 			textureFile = ""
-			font = "hoi_24header"
+			font = "hoi_18b"
 			borderSize = {x = 0 y = 0}
-			text = "FE_SELECT_COUNTRY"
-			maxWidth = 340
+			text = "ASPF_FE_SELECT_COUNTRY"
+			maxWidth = 500
 			maxHeight = 30
-			format = centre
+			format = left
 		}
+
+		instantTextBoxType = {
+			name = "search"
+			position = { x = 93 y = 93 }
+			textureFile = ""
+			font = "hoi4_typewriter22"
+			borderSize = {x = 0 y = 0}
+			text = "ASPF_FE_SELECT_COUNTRY"
+			maxWidth = 1000
+			maxHeight = 30
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "ADDRESS"
+			position = { x = -208 y = 94 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "ADDRESS"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "FILE"
+			position = { x = -218 y = 26 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "FILE"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "EDIT"
+			position = { x = -178 y = 26 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "EDIT"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+		instantTextBoxType = {
+			name = "VIEW"
+			position = { x = -138 y = 26 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "VIEW"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "GO"
+			position = { x = -98 y = 26 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "GO"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "FAVORITES"
+			position = { x = -58 y = 26 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "FAVORITES"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "TOOLS"
+			position = { x = -18 y = 26 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "TOOLS"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "HELP"
+			position = { x = 22 y = 26 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "HELP"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "BACK"
+			position = { x = -207 y = 68 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "BACK"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "FORWARD"
+			position = { x = -137 y = 68 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "FORWARD"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "STOP"
+			position = { x = -69 y = 68 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "STOP"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "REFRESH"
+			position = { x = -15 y = 68 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "REFRESH"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "HOME"
+			position = { x = 38 y = 68 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "HOME"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "SEARCH2"
+			position = { x = 99 y = 68 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "SEARCH2"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "FAVORITES2"
+			position = { x = 152 y = 68 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "FAVORITES"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "HISTORY2"
+			position = { x = 206 y = 68 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "HISTORY2"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "PRINT"
+			position = { x = 265 y = 68 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "PRINT"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "INTERNET"
+			position = { x = 695 y = 837 }
+			textureFile = ""
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			text = "INTERNET"
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}
+
+		
 
 		background = {
 			name = "single_player_country_bg"
 			quadTextureSprite ="GFX_select_date_bg"
 		}
+
+		
 
 		ButtonType = {
 			name = "back_button"
