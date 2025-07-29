@@ -768,7 +768,7 @@ spriteTypes = {
 	
 	spriteType = {
 		name = "GFX_idea_unknown"
-		textureFile = "gfx/interface/ideas/idea_unknown.dds"
+		textureFile = "gfx/icons/laws/unknown.png"
 		legacy_lazy_load = no
 	}
 	
