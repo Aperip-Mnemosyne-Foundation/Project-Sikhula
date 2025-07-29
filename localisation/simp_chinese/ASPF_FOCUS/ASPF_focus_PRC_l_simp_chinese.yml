@@ -189,3 +189,219 @@
  PRC_01_FS_RBT: "江从红龙"
  PRC_01_FS_RBT_desc: "当前线传来洪灾停止的消息时，这意味着历经千千万万个日夜，中华民族再一次的挺过来了！这条自中华民族诞生起便存在的河流——长江——再一次地被我们征服了！我们不怕任何天灾人祸！任何灾难在中华民族面前不过历史尘埃罢了…进行完了长篇感慨之后我们本应该进行总结报告。不过在总结报告之前，我们需要反思一个问题：为什么这次洪灾会突然爆发？为什么之前的大坝没有起任何作用？我们已经派往专家人员进行测查，而得出的结果不出我们所料……因此我们现在只有一种选择，即重新建造长江大坝。"
 
+
+
+ # PRC 02
+ # 第二阶段 SS
+ PRC_02_SS_01: ""  #######
+ PRC_02_SS_01_desc: ""
+
+ PRC_02_SS_IT_01: "" #######
+ PRC_02_SS_IT_01_desc: ""
+
+ PRC_02_SS_IT_L_01: ""
+ PRC_02_SS_IT_L_01_desc: ""
+
+ PRC_02_SS_IT_C_01: ""
+ PRC_02_SS_IT_C_01_desc: ""
+
+ PRC_02_SS_IT_R_01: ""
+ PRC_02_SS_IT_R_01_desc: ""
+
+ PRC_02_SS_IT_L_02: ""
+ PRC_02_SS_IT_L_02_desc: ""
+
+ PRC_02_SS_IT_L_03: ""
+ PRC_02_SS_IT_L_03_desc: ""
+
+ PRC_02_SS_IT_C_03: ""
+ PRC_02_SS_IT_C_03_desc: ""
+
+ PRC_02_SS_IT_C_02: ""
+ PRC_02_SS_IT_C_02_desc: ""
+
+ PRC_02_SS_IT_C_02_L: ""
+ PRC_02_SS_IT_C_02_L_desc: ""
+
+ PRC_02_SS_IT_C_02_R: ""
+ PRC_02_SS_IT_C_02_R_desc: ""
+
+ PRC_02_SS_IT_R_02: ""
+ PRC_02_SS_IT_R_02_desc: ""
+
+ PRC_02_SS_IT_R_03: ""
+ PRC_02_SS_IT_R_03_desc: ""
+
+ PRC_02_SS_IT_02: ""
+ PRC_02_SS_IT_02_desc: ""
+
+ PRC_02_SS_GR_01: "" #######
+ PRC_02_SS_GR_01_desc: ""
+
+ PRC_02_SS_GR_L_01: ""
+ PRC_02_SS_GR_L_01_desc: ""
+
+ PRC_02_SS_GR_L_02: ""
+ PRC_02_SS_GR_L_02_desc: ""
+
+ PRC_02_SS_GR_L_03: ""
+ PRC_02_SS_GR_L_03_desc: ""
+
+ PRC_02_SS_GR_C_01: ""
+ PRC_02_SS_GR_C_01_desc: ""
+
+ PRC_02_SS_GR_C_02: ""
+ PRC_02_SS_GR_C_02_desc: ""
+
+ PRC_02_SS_GR_C_03: ""
+ PRC_02_SS_GR_C_03_desc: ""
+
+ PRC_02_SS_GR_R_01: ""
+ PRC_02_SS_GR_R_01_desc: ""
+
+ PRC_02_SS_GR_R_02: ""
+ PRC_02_SS_GR_R_02_desc: ""
+
+ PRC_02_SS_GR_R_03: ""
+ PRC_02_SS_GR_R_03_desc: ""
+
+ PRC_02_SS_GR_02: ""
+ PRC_02_SS_GR_02_desc: ""
+
+ PRC_02_SS_GR_03: ""
+ PRC_02_SS_GR_03_desc: ""
+
+ PRC_02_SS_GR_ED_01: ""
+ PRC_02_SS_GR_ED_01_desc: ""
+
+ PRC_02_SS_GR_ED_02_L: ""
+ PRC_02_SS_GR_ED_02_L_desc: ""
+
+ PRC_02_SS_GR_ED_02_R: ""
+ PRC_02_SS_GR_ED_02_R_desc: ""
+
+ PRC_02_SS_GR_ED_03: ""
+ PRC_02_SS_GR_ED_03_desc: ""
+
+ PRC_02_SS_GR_ED_04_L: ""
+ PRC_02_SS_GR_ED_04_L_desc: ""
+
+ PRC_02_SS_GR_ED_05_L: ""
+ PRC_02_SS_GR_ED_05_L_desc: ""
+
+ PRC_02_SS_GR_ED_04_R: ""
+ PRC_02_SS_GR_ED_04_R_desc: ""
+
+ PRC_02_SS_GR_ED_05_R: ""
+ PRC_02_SS_GR_ED_05_R_desc: ""
+
+ PRC_02_SS_GR_ED_06: ""
+ PRC_02_SS_GR_ED_06_desc: ""
+
+ PRC_02_SS_GR_BC_01: ""
+ PRC_02_SS_GR_BC_01_desc: ""
+
+ PRC_02_SS_GR_BC_02_L: ""
+ PRC_02_SS_GR_BC_02_L_desc: ""
+
+ PRC_02_SS_GR_BC_03_L: ""
+ PRC_02_SS_GR_BC_03_L_desc: ""
+
+ PRC_02_SS_GR_BC_05_L: ""
+ PRC_02_SS_GR_BC_05_L_desc: ""
+
+ PRC_02_SS_GR_BC_06_L: ""
+ PRC_02_SS_GR_BC_06_L_desc: ""
+
+ PRC_02_SS_GR_BC_02_R: ""
+ PRC_02_SS_GR_BC_02_R_desc: ""
+
+ PRC_02_SS_GR_BC_03_C: ""
+ PRC_02_SS_GR_BC_03_C_desc: ""
+
+ PRC_02_SS_GR_BC_04_C: ""
+ PRC_02_SS_GR_BC_04_C_desc: ""
+
+ PRC_02_SS_GR_BC_06_C: ""
+ PRC_02_SS_GR_BC_06_C_desc: ""
+
+ PRC_02_SS_GR_BC_03_R: ""
+ PRC_02_SS_GR_BC_03_R_desc: ""
+
+ PRC_02_SS_GR_BC_L_04: ""
+ PRC_02_SS_GR_BC_L_04_desc: ""
+
+ PRC_02_SS_GR_BC_L_05: ""
+ PRC_02_SS_GR_BC_L_05_desc: ""
+
+ PRC_02_SS_GR_BC_R_04: ""
+ PRC_02_SS_GR_BC_R_04_desc: ""
+
+ PRC_02_SS_GR_BC_R_05: ""
+ PRC_02_SS_GR_BC_R_05_desc: ""
+
+ PRC_02_SS_GR_BC_06_R: ""
+ PRC_02_SS_GR_BC_06_R_desc: ""
+
+ PRC_02_SS_GR_LS_01: ""
+ PRC_02_SS_GR_LS_01_desc: ""
+
+ PRC_02_SS_GR_LS_03_A: ""
+ PRC_02_SS_GR_LS_03_A_desc: ""
+
+ PRC_02_SS_GR_LS_03_B: ""
+ PRC_02_SS_GR_LS_03_B_desc: ""
+
+ PRC_02_SS_GR_LS_03_C: ""
+ PRC_02_SS_GR_LS_03_C_desc: ""
+
+ PRC_02_SS_GR_LS_03_D: ""
+ PRC_02_SS_GR_LS_03_D_desc: ""
+
+ PRC_02_SS_GR_LS_05_L: ""
+ PRC_02_SS_GR_LS_05_L_desc: ""
+
+ PRC_02_SS_GR_LS_05_R: ""
+ PRC_02_SS_GR_LS_05_R_desc: ""
+
+ PRC_02_SS_GR_LS_06: ""
+ PRC_02_SS_GR_LS_06_desc: ""
+
+ PRC_02_SS_MC_01: "" #######
+ PRC_02_SS_MC_01_desc: ""
+
+ PRC_02_SS_MC_L_01: ""
+ PRC_02_SS_MC_L_01_desc: ""
+
+ PRC_02_SS_MC_C_01: ""
+ PRC_02_SS_MC_C_01_desc: ""
+
+ PRC_02_SS_MC_R_01: ""
+ PRC_02_SS_MC_R_01_desc: ""
+
+ PRC_02_SS_MC_L_02: ""
+ PRC_02_SS_MC_L_02_desc: ""
+
+ PRC_02_SS_MC_L_03: ""
+ PRC_02_SS_MC_L_03_desc: ""
+
+ PRC_02_SS_MC_C_03: ""
+ PRC_02_SS_MC_C_03_desc: ""
+
+ PRC_02_SS_MC_C_02: ""
+ PRC_02_SS_MC_C_02_desc: ""
+
+ PRC_02_SS_MC_C_02_L: ""
+ PRC_02_SS_MC_C_02_L_desc: ""
+
+ PRC_02_SS_MC_C_02_R: ""
+ PRC_02_SS_MC_C_02_R_desc: ""
+
+ PRC_02_SS_MC_R_02: ""
+ PRC_02_SS_MC_R_02_desc: ""
+
+ PRC_02_SS_MC_R_03: ""
+ PRC_02_SS_MC_R_03_desc: ""
+
+ PRC_02_SS_MC_02: ""
+ PRC_02_SS_MC_02_desc: ""
