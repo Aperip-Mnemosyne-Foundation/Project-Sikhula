@@ -1,0 +1,67 @@
+spriteTypes = {
+    SpriteType = {
+        name = "GFX_focus_goals_PRC_04_FW_01"
+        texturefile = "gfx/icons/goals/PRC/PRC_04_FW_01.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_PRC_04_FW_02"
+        texturefile = "gfx/icons/goals/PRC/PRC_04_FW_02.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_PRC_04_FW_03_A"
+        texturefile = "gfx/icons/goals/PRC/PRC_04_FW_03_A.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_PRC_04_FW_03_B"
+        texturefile = "gfx/icons/goals/PRC/PRC_04_FW_03_B.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_PRC_04_FW_03_C"
+        texturefile = "gfx/icons/goals/PRC/PRC_04_FW_03_C.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_PRC_04_FW_04_A"
+        texturefile = "gfx/icons/goals/PRC/PRC_04_FW_04_A.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_PRC_04_FW_04_B"
+        texturefile = "gfx/icons/goals/PRC/PRC_04_FW_04_B.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_PRC_04_FW_04_C"
+        texturefile = "gfx/icons/goals/PRC/PRC_04_FW_04_C.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_PRC_04_FW_04_D"
+        texturefile = "gfx/icons/goals/PRC/PRC_04_FW_04_D.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_PRC_04_FW_05_A"
+        texturefile = "gfx/icons/goals/PRC/PRC_04_FW_05_A.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_PRC_04_FW_05_B"
+        texturefile = "gfx/icons/goals/PRC/PRC_04_FW_05_B.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_PRC_04_FW_05_C"
+        texturefile = "gfx/icons/goals/PRC/PRC_04_FW_05_C.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_PRC_04_FW_05_D"
+        texturefile = "gfx/icons/goals/PRC/PRC_04_FW_05_D.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_PRC_04_FW_06_A"
+        texturefile = "gfx/icons/goals/PRC/PRC_04_FW_06_A.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_PRC_04_FW_06_B"
+        texturefile = "gfx/icons/goals/PRC/PRC_04_FW_06_B.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_PRC_04_FW_07"
+        texturefile = "gfx/icons/goals/PRC/PRC_04_FW_07.png"
+    }
+}
+

@@ -1,0 +1,482 @@
+#!gfx:interface\ASPF\icons\goals\PRC\03_goals.gfx
+focus_tree = {
+	id = PRC_03
+	country = {
+		factor = 0
+		modifier = {
+			add = 1
+			tag = PRC
+		}
+	}
+	default = no
+    shared_focus = PRC_00_MR_01
+	continuous_focus_position = { x=12 y=1800 }
+	focus = {
+		id = PRC_03_TS_FL_01
+		icon = GFX_focus_goals_PRC_03_TS_FL_01
+		cost = 1.00
+		x = -9
+		y = -4
+		relative_position_id = PRC_00_MR_LAND_01
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_03_TS_FL_02
+		icon = GFX_focus_goals_PRC_03_TS_FL_02
+		cost = 1.00
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = PRC_03_TS_FL_01
+		}
+		relative_position_id = PRC_03_TS_FL_01
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_03_TS_FL_L_03
+		icon = GFX_focus_goals_PRC_03_TS_FL_L_03
+		cost = 1.00
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = PRC_03_TS_FL_02
+		}
+		relative_position_id = PRC_03_TS_FL_02
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_03_TS_FL_L_04_L
+		icon = GFX_focus_goals_PRC_03_TS_FL_L_04_L
+		cost = 1.00
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = PRC_03_TS_FL_L_03
+		}
+		relative_position_id = PRC_03_TS_FL_L_03
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_03_TS_FL_L_04_R
+		icon = GFX_focus_goals_PRC_03_TS_FL_L_04_R
+		cost = 1.00
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = PRC_03_TS_FL_L_03
+		}
+		relative_position_id = PRC_03_TS_FL_L_03
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_03_TS_FL_L_05
+		icon = GFX_focus_goals_PRC_03_TS_FL_L_05
+		cost = 1.00
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = PRC_03_TS_FL_L_04_L
+		}
+		prerequisite = {
+			focus = PRC_03_TS_FL_L_04_R
+		}
+		relative_position_id = PRC_03_TS_FL_L_03
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_03_TS_FL_L_06
+		icon = GFX_focus_goals_PRC_03_TS_FL_L_06
+		cost = 1.00
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = PRC_03_TS_FL_L_05
+		}
+		relative_position_id = PRC_03_TS_FL_L_05
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_03_TS_FL_L_07
+		icon = GFX_focus_goals_PRC_03_TS_FL_L_07
+		cost = 1.00
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = PRC_03_TS_FL_L_06
+		}
+		relative_position_id = PRC_03_TS_FL_L_06
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_03_TS_FL_R_03
+		icon = GFX_focus_goals_PRC_03_TS_FL_R_03
+		cost = 1.00
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = PRC_03_TS_FL_02
+		}
+		relative_position_id = PRC_03_TS_FL_02
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_03_TS_FL_R_04_L
+		icon = GFX_focus_goals_PRC_03_TS_FL_R_04_L
+		cost = 1.00
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = PRC_03_TS_FL_R_03
+		}
+		relative_position_id = PRC_03_TS_FL_R_03
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_03_TS_FL_R_05_L
+		icon = GFX_focus_goals_PRC_03_TS_FL_R_05_L
+		cost = 1.00
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = PRC_03_TS_FL_R_04_L
+		}
+		prerequisite = {
+			focus = PRC_03_TS_FL_R_04_R
+		}
+		mutually_exclusive = {
+			focus = PRC_03_TS_FL_R_05_R
+		}
+		relative_position_id = PRC_03_TS_FL_R_04_L
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_03_TS_FL_R_04_R
+		icon = GFX_focus_goals_PRC_03_TS_FL_R_04_R
+		cost = 1.00
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = PRC_03_TS_FL_R_03
+		}
+		relative_position_id = PRC_03_TS_FL_R_03
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_03_TS_FL_R_05_R
+		icon = GFX_focus_goals_PRC_03_TS_FL_R_05_R
+		cost = 1.00
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = PRC_03_TS_FL_R_04_L
+		}
+		prerequisite = {
+			focus = PRC_03_TS_FL_R_04_R
+		}
+		mutually_exclusive = {
+			focus = PRC_03_TS_FL_R_05_L
+		}
+		relative_position_id = PRC_03_TS_FL_R_04_R
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_03_TS_FL_R_06
+		icon = GFX_focus_goals_PRC_03_TS_FL_R_06
+		cost = 1.00
+		x = 0
+		y = 3
+		prerequisite = {
+			focus = PRC_03_TS_FL_R_05_L
+			focus = PRC_03_TS_FL_R_05_R
+		}
+		relative_position_id = PRC_03_TS_FL_R_03
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_03_TS_FL_R_07
+		icon = GFX_focus_goals_PRC_03_TS_FL_R_07
+		cost = 1.00
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = PRC_03_TS_FL_R_06
+		}
+		relative_position_id = PRC_03_TS_FL_R_06
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_03_TS_FL_08
+		icon = GFX_focus_goals_PRC_03_TS_FL_08
+		cost = 1.00
+		x = 0
+		y = 6
+		prerequisite = {
+			focus = PRC_03_TS_FL_L_07
+		}
+		prerequisite = {
+			focus = PRC_03_TS_FL_R_07
+		}
+		relative_position_id = PRC_03_TS_FL_02
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_03_TS_FL_09
+		icon = GFX_focus_goals_PRC_03_TS_FL_09
+		cost = 1.00
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = PRC_03_TS_FL_08
+		}
+		relative_position_id = PRC_03_TS_FL_08
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_03_TS_ED_01
+		icon = GFX_focus_goals_PRC_03_TS_ED_01
+		cost = 1.00
+		x = -7
+		y = 0
+		relative_position_id = PRC_03_TS_FL_01
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_03_TS_ED_R_02_L
+		icon = GFX_focus_goals_PRC_03_TS_ED_R_02_L
+		cost = 1.00
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = PRC_03_TS_ED_01
+		}
+		relative_position_id = PRC_03_TS_ED_01
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_03_TS_ED_R_03_L
+		icon = GFX_focus_goals_PRC_03_TS_ED_R_03_L
+		cost = 1.00
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = PRC_03_TS_ED_R_02_L
+		}
+		relative_position_id = PRC_03_TS_ED_R_02_L
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_03_TS_ED_R_02_R
+		icon = GFX_focus_goals_PRC_03_TS_ED_R_02_R
+		cost = 1.00
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = PRC_03_TS_ED_01
+		}
+		relative_position_id = PRC_03_TS_ED_01
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_03_TS_ED_R_03_R
+		icon = GFX_focus_goals_PRC_03_TS_ED_R_03_R
+		cost = 1.00
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = PRC_03_TS_ED_R_02_R
+		}
+		relative_position_id = PRC_03_TS_ED_R_02_R
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_03_TS_ED_04
+		icon = GFX_focus_goals_PRC_03_TS_ED_04
+		cost = 1.00
+		x = 0
+		y = 3
+		prerequisite = {
+			focus = PRC_03_TS_ED_R_03_L
+		}
+		prerequisite = {
+			focus = PRC_03_TS_ED_R_03_R
+		}
+		relative_position_id = PRC_03_TS_ED_01
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_03_TS_ED_05
+		icon = GFX_focus_goals_PRC_03_TS_ED_05
+		cost = 1.00
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = PRC_03_TS_ED_04
+		}
+		relative_position_id = PRC_03_TS_ED_04
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_03_TS_ED_L_06
+		icon = GFX_focus_goals_PRC_03_TS_ED_L_06
+		cost = 1.00
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = PRC_03_TS_ED_05
+		}
+		relative_position_id = PRC_03_TS_ED_05
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_03_TS_ED_R_06
+		icon = GFX_focus_goals_PRC_03_TS_ED_R_06
+		cost = 1.00
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = PRC_03_TS_ED_05
+		}
+		relative_position_id = PRC_03_TS_ED_05
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_03_TS_ED_07_A
+		icon = GFX_focus_goals_PRC_03_TS_ED_07_A
+		cost = 1.00
+		x = -3
+		y = 2
+		prerequisite = {
+			focus = PRC_03_TS_ED_L_06
+		}
+		prerequisite = {
+			focus = PRC_03_TS_ED_R_06
+		}
+		relative_position_id = PRC_03_TS_ED_05
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_03_TS_ED_07_B
+		icon = GFX_focus_goals_PRC_03_TS_ED_07_B
+		cost = 1.00
+		x = -1
+		y = 2
+		prerequisite = {
+			focus = PRC_03_TS_ED_L_06
+		}
+		prerequisite = {
+			focus = PRC_03_TS_ED_R_06
+		}
+		relative_position_id = PRC_03_TS_ED_05
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_03_TS_ED_07_C
+		icon = GFX_focus_goals_PRC_03_TS_ED_07_C
+		cost = 1.00
+		x = 1
+		y = 2
+		prerequisite = {
+			focus = PRC_03_TS_ED_L_06
+		}
+		prerequisite = {
+			focus = PRC_03_TS_ED_R_06
+		}
+		relative_position_id = PRC_03_TS_ED_05
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_03_TS_ED_07_D
+		icon = GFX_focus_goals_PRC_03_TS_ED_07_D
+		cost = 1.00
+		x = 3
+		y = 2
+		prerequisite = {
+			focus = PRC_03_TS_ED_L_06
+		}
+		prerequisite = {
+			focus = PRC_03_TS_ED_R_06
+		}
+		relative_position_id = PRC_03_TS_ED_05
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_03_TS_ED_L_08
+		icon = GFX_focus_goals_PRC_03_TS_ED_L_08
+		cost = 1.00
+		x = -2
+		y = 3
+		prerequisite = {
+			focus = PRC_03_TS_ED_07_A
+		}
+		prerequisite = {
+			focus = PRC_03_TS_ED_07_B
+		}
+		relative_position_id = PRC_03_TS_ED_05
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_03_TS_ED_R_08
+		icon = GFX_focus_goals_PRC_03_TS_ED_R_08
+		cost = 1.00
+		x = 2
+		y = 3
+		prerequisite = {
+			focus = PRC_03_TS_ED_07_C
+		}
+		prerequisite = {
+			focus = PRC_03_TS_ED_07_D
+		}
+		relative_position_id = PRC_03_TS_ED_05
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_03_TS_ED_09
+		icon = GFX_focus_goals_PRC_03_TS_ED_09
+		cost = 1.00
+		x = 0
+		y = 4
+		prerequisite = {
+			focus = PRC_03_TS_ED_L_08
+		}
+		prerequisite = {
+			focus = PRC_03_TS_ED_R_08
+		}
+		relative_position_id = PRC_03_TS_ED_05
+		completion_reward = {
+		}
+	}
+}
+
+

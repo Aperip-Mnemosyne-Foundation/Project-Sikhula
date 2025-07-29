@@ -1,4 +1,4 @@
-#!gfx:interface\ASPF\icons\goals\PRC\01_goals.gfx
+#!gfx:interface\ASPF\icons\goals\PRC\02_goals.gfx
 focus_tree = {
 	id = PRC_02
 	country = {

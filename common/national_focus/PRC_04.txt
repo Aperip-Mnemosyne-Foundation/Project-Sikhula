@@ -1,0 +1,255 @@
+#!gfx:interface\ASPF\icons\goals\PRC\04_goals.gfx
+focus_tree = {
+	id = PRC_04
+	country = {
+		factor = 0
+		modifier = {
+			add = 1
+			tag = PRC
+		}
+	}
+	default = no
+	continuous_focus_position = { x=12 y=1800 }
+	focus = {
+		id = PRC_04_FW_01
+		icon = GFX_focus_goals_PRC_04_FW_01
+		cost = 1.00
+		x = 8
+		y = 2
+		#relative_position_id = PRC_00_MR_LAND_01
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_04_FW_02
+		icon = GFX_focus_goals_PRC_04_FW_02
+		cost = 1.00
+		x = 0
+		y = 2
+		relative_position_id = PRC_04_FW_01
+		prerequisite = {
+			focus = PRC_04_FW_01
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_04_FW_03_A
+		icon = GFX_focus_goals_PRC_04_FW_03_A
+		cost = 1.00
+		x = -4
+		y = 2
+		relative_position_id = PRC_04_FW_02
+		prerequisite = {
+			focus = PRC_04_FW_02
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_04_FW_03_B
+		icon = GFX_focus_goals_PRC_04_FW_03_B
+		cost = 1.00
+		x = 0
+		y = 2
+		relative_position_id = PRC_04_FW_02
+		prerequisite = {
+			focus = PRC_04_FW_02
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_04_FW_03_C
+		icon = GFX_focus_goals_PRC_04_FW_03_C
+		cost = 1.00
+		x = 4
+		y = 2
+		relative_position_id = PRC_04_FW_02
+		prerequisite = {
+			focus = PRC_04_FW_02
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_04_FW_04_A
+		icon = GFX_focus_goals_PRC_04_FW_04_A
+		cost = 1.00
+		x = -6
+		y = 4
+		relative_position_id = PRC_04_FW_02
+		prerequisite = {
+			focus = PRC_04_FW_03_A
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_04_FW_04_B
+		icon = GFX_focus_goals_PRC_04_FW_04_B
+		cost = 1.00
+		x = -2
+		y = 4
+		relative_position_id = PRC_04_FW_02
+		prerequisite = {
+			focus = PRC_04_FW_03_A
+		}
+		prerequisite = {
+			focus = PRC_04_FW_03_B
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_04_FW_04_C
+		icon = GFX_focus_goals_PRC_04_FW_04_C
+		cost = 1.00
+		x = 2
+		y = 4
+		relative_position_id = PRC_04_FW_02
+		prerequisite = {
+			focus = PRC_04_FW_03_B
+		}
+		prerequisite = {
+			focus = PRC_04_FW_03_C
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_04_FW_04_D
+		icon = GFX_focus_goals_PRC_04_FW_04_D
+		cost = 1.00
+		x = 6
+		y = 4
+		relative_position_id = PRC_04_FW_02
+		prerequisite = {
+			focus = PRC_04_FW_03_C
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_04_FW_05_A
+		icon = GFX_focus_goals_PRC_04_FW_05_A
+		cost = 1.00
+		x = -6
+		y = 6
+		relative_position_id = PRC_04_FW_02
+		prerequisite = {
+			focus = PRC_04_FW_04_A
+		}
+		prerequisite = {
+			focus = PRC_04_FW_04_B
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_04_FW_05_B
+		icon = GFX_focus_goals_PRC_04_FW_05_B
+		cost = 1.00
+		x = -2
+		y = 6
+		relative_position_id = PRC_04_FW_02
+		prerequisite = {
+			focus = PRC_04_FW_04_A
+		}
+		prerequisite = {
+			focus = PRC_04_FW_04_B
+		}
+		prerequisite = {
+			focus = PRC_04_FW_04_C
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_04_FW_05_C
+		icon = GFX_focus_goals_PRC_04_FW_05_C
+		cost = 1.00
+		x = 2
+		y = 6
+		relative_position_id = PRC_04_FW_02
+		prerequisite = {
+			focus = PRC_04_FW_04_B
+		}
+		prerequisite = {
+			focus = PRC_04_FW_04_C
+		}
+		prerequisite = {
+			focus = PRC_04_FW_04_D
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_04_FW_05_D
+		icon = GFX_focus_goals_PRC_04_FW_05_D
+		cost = 1.00
+		x = 6
+		y = 6
+		relative_position_id = PRC_04_FW_02
+		prerequisite = {
+			focus = PRC_04_FW_04_C
+		}
+		prerequisite = {
+			focus = PRC_04_FW_04_D
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_04_FW_06_A
+		icon = GFX_focus_goals_PRC_04_FW_06_A
+		cost = 1.00
+		x = -4
+		y = 8
+		relative_position_id = PRC_04_FW_02
+		prerequisite = {
+			focus = PRC_04_FW_05_A
+		}
+		prerequisite = {
+			focus = PRC_04_FW_05_B
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_04_FW_06_B
+		icon = GFX_focus_goals_PRC_04_FW_06_B
+		cost = 1.00
+		x = 4
+		y = 8
+		relative_position_id = PRC_04_FW_02
+		prerequisite = {
+			focus = PRC_04_FW_05_C
+		}
+		prerequisite = {
+			focus = PRC_04_FW_05_D
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = PRC_04_FW_07
+		icon = GFX_focus_goals_PRC_04_FW_07
+		cost = 1.00
+		x = 0
+		y = 10
+		relative_position_id = PRC_04_FW_02
+		prerequisite = {
+			focus = PRC_04_FW_06_A
+		}
+		prerequisite = {
+			focus = PRC_04_FW_06_B
+		}
+		completion_reward = {
+		}
+	}
+}
+
+
+
+
