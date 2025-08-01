@@ -1,7 +1,13 @@
 ﻿l_simp_chinese:
- PRC: "中国"
- PRC_DEF: "中国"
- PRC_ADJ: "中国"
+ # A to Z
+ # JAP
+ JAP: "日本"
+ JAP_DEF: "日本"
+ JAP_ADJ: "日本"
+ # PRC
+ PRC: "中华"
+ PRC_DEF: "中华"
+ PRC_ADJ: "中华"
  PRC_AUTHORITARIANSOCIALISM: "中华人民共和国"
  PRC_AUTHORITARIANSOCIALISM_DEF: "中华人民共和国"
  PRC_AUTHORITARIANSOCIALISM_ADJ: "中华人民共和国"

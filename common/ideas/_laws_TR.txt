@@ -48,7 +48,7 @@ ideas = {
 				}
 			}
 			modifier = {
-				min_export = 0.2
+				min_export = 0.25
 				foreign_subversive_activites = -0.1
 				custom_modifier_tooltip = ASPF_LAWS_IG_GEN04_MODIFIER_ID_TT
 				hidden_modifier = {
@@ -75,7 +75,7 @@ ideas = {
 				}
 			}
 			modifier = {
-				min_export = 0.4
+				min_export = 0.5
 				foreign_subversive_activites = -0.05
 				custom_modifier_tooltip = ASPF_LAWS_IG_GEN03_MODIFIER_ID_TT
 				hidden_modifier = {
@@ -102,7 +102,7 @@ ideas = {
 				}
 			}
 			modifier = {
-				min_export = 0.6
+				min_export = 0.75
 				foreign_subversive_activites = 0.1
 				custom_modifier_tooltip = ASPF_LAWS_IG_GEN02_MODIFIER_ID_TT
 				hidden_modifier = {
@@ -129,7 +129,7 @@ ideas = {
 				}
 			}
 			modifier = {
-				min_export = 0.8
+				min_export = 1
 				foreign_subversive_activites = 0.2
 				custom_modifier_tooltip = ASPF_LAWS_IG_GEN01_MODIFIER_ID_TT
 				hidden_modifier = {
