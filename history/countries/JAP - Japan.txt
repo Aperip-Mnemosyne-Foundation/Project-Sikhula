@@ -1,0 +1,28 @@
+capital = 1332 
+set_politics = {
+	ruling_party = GIRLSBANDISM
+	last_election = "1998.1.1"
+    #election_frequency = 60
+	elections_allowed = no
+}
+set_popularities = {
+	GIRLSBANDISM = 100
+}
+
+# start_ideas
+add_ideas = {
+   
+}
+# start_laws
+add_ideas = {
+    laws_MO_GEN05 # 兵役法律
+	laws_TR_GEN05 # 贸易法律
+	laws_NS_GEN05 # 国安法律
+	laws_LR_GEN05 # 劳工法律
+	laws_NH_GEN05 # 民族法律
+	laws_IG_GEN05 # 移民法律
+}
+
+recruit_character = JAP_ChihayaAnon
+
+set_country_flag = secondleadershow_PRC_HuJintao # secondleader 胡锦涛

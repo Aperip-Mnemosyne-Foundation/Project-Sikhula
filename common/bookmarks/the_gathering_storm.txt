@@ -24,7 +24,22 @@ bookmarks = {
 			}
 		}
 		
-		
+		"JAP"={
+			history = "1998_JAP_DESC"
+			ideology = GIRLSBANDISM
+			available = yes
+			ideas = {
+				PRC_laggingarmy01
+				PRC_laggingarmy01
+				PRC_laggingarmy01
+				PRC_laggingarmy01
+			}
+			focuses = {
+				PRC_00_MR_BACKUP_L_03
+				PRC_00_MR_BACKUP_L_03
+				PRC_00_MR_BACKUP_L_03
+			}
+		}
 		
 
 		"---"={

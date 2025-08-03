@@ -35,6 +35,13 @@ spriteTypes = {
 		name = GFX_portrait_ISR_EzerWeizman
 		texturefile = "gfx/images/leaders/ISR/ISR_EzerWeizman.png"
 	}
+	
+	## JAP ##
+
+	spriteType = {
+		name = GFX_portrait_JAP_ChihayaAnon
+		texturefile = "gfx/images/leaders/JAP/JAP_ChihayaAnon.png"
+	}
 
 	## PER ##
 

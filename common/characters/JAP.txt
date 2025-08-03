@@ -1,0 +1,17 @@
+characters = {
+	JAP_ChihayaAnon = {
+		name = JAP_ChihayaAnon
+		portraits = {
+			civilian = {
+				large = GFX_portrait_JAP_ChihayaAnon
+			}
+		}
+		country_leader = {
+			ideology = GIRLSBANDISM_JAP_MYGO
+			desc = JAP_ChihayaAnon_desc
+			traits = { 
+		    }
+			expire = "2018.1.1.1"
+		}     
+	}
+}
