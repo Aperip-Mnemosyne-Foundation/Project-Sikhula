@@ -3,7 +3,13 @@ guiTypes = {
 	containerWindowType = {
 		name = "nationalfocusview"
 		position = { x=0 y=80 }		
-		size = { width = 2560 height = 1360 }
+		show_position = { x=0 y =80 }
+		hide_position = { x=0 y=1361 }
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 1000
+		clipping = yes
+		size = { width=2560 height=1360 }
 		
 		background = {
 			name = "Background"
