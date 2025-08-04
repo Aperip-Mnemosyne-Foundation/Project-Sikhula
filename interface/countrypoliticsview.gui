@@ -35,8 +35,8 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "political_title"
-			position = { x = 9 y = 5 }
-			font = "hoi4_typewriter22"
+			position = { x = 9 y = 7 }
+			font = "Youhei18"
 			borderSize = {x = 0 y = 0}
 			text = "POLITICAL_POLITICAL"
 			maxWidth = 440

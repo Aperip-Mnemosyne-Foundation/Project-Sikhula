@@ -621,6 +621,53 @@ guiTypes = {
            # position = { x=-19 y = -17 }
        # }
     }
+
+	extendedScrollbarType = {
+        name = "bottom_horizontal_slider_air"
+        position = { x = 0 y = -6 }
+        size = { width = 14 height = 7 }
+        tileSize = { width = 14 height = 7}
+        maxValue =1
+        minValue =0
+        stepSize =0.01
+        startValue = 0
+        horizontal = yes
+        orientation = lower_left
+        origo = lower_left
+
+        background = {
+            name = "Background"    
+            quadTextureSprite = "GFX_scroll_track_horisontal_2"
+            position = { x=-2 y = 20000 }    
+        }
+        
+        slider = {
+            name = "Slider"    
+            quadTextureSprite = "GFX_scroll_drager_2"
+            position = { x=9990 y = 0 }  
+			size = { width = 14 height = 7 } 
+			clipping = yes         
+        }
+
+        #track = {
+        #    name = "Track"
+        #    quadTextureSprite = "GFX_scroll_track_horisontal_2"
+        #    position = { x=0 y = 3 }
+        #   alwaystransparent = yes
+        #}    
+
+        #decreaseButton = {
+            #name = "Decrease"
+            #quadTextureSprite = "GFX_scroll_left_2"
+            #position = { x=3 y = 1 }
+        #}
+        
+        #increaseButton = {
+           # name = "Increase"
+           # quadTextureSprite = "GFX_scroll_right_2"
+           # position = { x=-19 y = -17 }
+       # }
+    }
 }
 
 default_clicksound = "click_default"

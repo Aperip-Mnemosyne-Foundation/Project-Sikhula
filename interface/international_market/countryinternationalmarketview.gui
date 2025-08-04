@@ -28,8 +28,8 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "International_market_title"
-			position = { x = 9 y = 5 }
-			font = "hoi4_typewriter22"
+			position = { x = 9 y = 7 }
+			font = "Youhei18"
 			borderSize = {x = 0 y = 0}
 			text = "MARKET_LABEL"
 			maxWidth = 440

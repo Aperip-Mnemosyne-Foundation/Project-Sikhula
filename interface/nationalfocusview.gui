@@ -2,24 +2,23 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "nationalfocusview"
-		position = { x=-3 y=78 }		
-		size = { width = 100%% height = 100%% }
+		position = { x=0 y=80 }		
+		size = { width = 2560 height = 1360 }
 		
 		background = {
 			name = "Background"
-			quadTextureSprite ="GFX_tiled_win98_desc_bg"
+			quadTextureSprite ="GFX_tiled_win98_ovfc_bg"
 		}
 		
 		instantTextboxType = {
 			name = "national_focus_title"
-			position = { x = 45 y = 8 }
-			textureFile = ""
-			font = "hoi_36header"
+			position = { x = 9 y = 7 }
+			font = "Youhei18"
 			borderSize = {x = 0 y = 0}
 			text = "NATIONAL_FOCUS_TITLE"
 			maxWidth = 500
 			maxHeight = 20
-			text_color_code = b
+			text_color_code = W
 			format = left
 		}
 
@@ -27,7 +26,7 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "find_view"
-			position = { x=-344 y=8 }
+			position = { x=-344000 y=8 }
 			size = { width=385 height=300 }
 			Orientation = upper_right
 			clipping = no
@@ -92,16 +91,16 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "zoom_slider_container"
-			position = {x=-233 y=10}	
+			position = {x=-295 y=16}	
 			Orientation = UPPER_RIGHT
 			size = {width=244 height=37}
 			
 			buttonType = {
 				name = "zoom_out"
-				position = { x = 35 y = 0 }
+				position = { x = -24 y = 0 }
 				quadTextureSprite = "GFX_focus_zoom_in"
 				centerposition = yes
-				Orientation = CENTER
+				Orientation = UPPER_RIGHT
 				tooltip = FOCUS_ZOOM_SLIDER_TOOLTIP
 				shortcut = "PAGE_UP"
 			}
@@ -110,26 +109,38 @@ guiTypes = {
 				position = { x = 0 y = 0 }
 				quadTextureSprite = "GFX_focus_zoom_out"
 				centerposition = yes
-				Orientation = CENTER
+				Orientation = UPPER_RIGHT
 				tooltip = FOCUS_ZOOM_SLIDER_TOOLTIP
 				shortcut = "PAGE_DOWN"
 			}
+		}
+
+		buttonType = {
+			name = "close_button"
+			position = { x = -17 y = 16 }
+			quadTextureSprite ="GFX_close_button_98"
+			buttonFont = "Main_14_black"
+			centerposition = yes
+			shortcut = "ESCAPE"
+			Orientation = "UPPER_RIGHT"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
 		}
 
 		### end zoom slider
 		
 		containerWindowType = {
 			name = "tree"
-			position = { x=0 y=47 }
+			position = { x=0 y=35 }
 			size = { width = 100%% height = 100%% }
-			margin = { top = 0 left = 0 bottom = 0 right = 0}
+			margin = { top = 0 left = 6 bottom = 6 right = 6}
 			drag_scroll = { left middle }
-			verticalScrollbar = "right_vertical_slider"
-			horizontalScrollbar = "bottom_horizontal_slider"
+			verticalScrollbar = "bottom_horizontal_slider_air"
+			horizontalScrollbar = "bottom_horizontal_slider_air"
 
 			background = {
 				name = "Background"
-				quadTextureSprite ="GFX_tiled_win98_dark_bg"
+				quadTextureSprite ="GFX_tiled_win98_wefc_bg"
 			}
 
 			#background = {
@@ -397,16 +408,7 @@ guiTypes = {
 			}
 		}
 		
-		buttonType = {
-			name = "close_button"
-			position = { x = -45 y = 13 }
-			quadTextureSprite ="GFX_closebutton"
-			buttonFont = "Main_14_black"
-			shortcut = "ESCAPE"
-			Orientation = "UPPER_RIGHT"
-			clicksound = click_close
-			pdx_tooltip = "CLOSE"
-		}
+		
 		
 		containerWindowType = {
 			name = "shortcut_grid_container"
@@ -427,7 +429,7 @@ guiTypes = {
 		
 		buttonType = {
 			name = "toggle_shortcuts"
-			position = { x = 17 y = -56 }
+			position = { x = 17 y = -560000 }
 			quadTextureSprite ="GFX_production_line_arrow_left"
 			buttonFont = "Main_14_black"
 			orientation = lower_left
