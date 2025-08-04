@@ -15,6 +15,12 @@ guiTypes = {
 			name = "Background"
 			quadTextureSprite ="GFX_tiled_win98_ovfc_bg"
 		}
+
+		iconType ={
+			name ="nationalfocusview_bg"
+			spriteType = "GFX_tiled_win98_ovfc_bg"
+			position = {x=0 y=0}
+		}
 		
 		instantTextboxType = {
 			name = "national_focus_title"
