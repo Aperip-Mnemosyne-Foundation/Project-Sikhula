@@ -1,0 +1,15 @@
+set_politics = {
+	ruling_party = AUTHORITARIANSOCIALISM
+	last_election = "1998.1.1"
+    #election_frequency = 60
+	elections_allowed = no
+}
+
+set_popularities = {
+	AUTHORITARIANSOCIALISM = 100
+}
+    
+    set_variable = {
+		global.ECOA_year_n = 1998
+	}
+	date_ECOA = yes

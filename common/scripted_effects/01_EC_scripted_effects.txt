@@ -458,192 +458,235 @@ date_ECOA = { # 這個是用來記錄時間的
 	if = {
 		limit = {
             NOT = {
-				has_variable = ROOT.ECOA_months
+				has_variable = global.ECOA_months
 			}
 		}
 		set_variable = {
-			ROOT.ECOA_months = 1
+			global.ECOA_months = 0
 		}
 	}
 	else = {
 		add_to_variable = {
-			ROOT.ECOA_months = 1
+			global.ECOA_months = 1
 		}
 	}
-	set_variable = {
-		ROOT.ECOA_year_n = 1998
-	}
+	log = "FUCKDATE1"
+    #########
 	if = {
 		limit = { 
 			NOT = {
-				has_variable = ROOT.ECOA_Mnum
+				has_variable = global.ECOA_Mnum
 			}
 		}
 		set_variable = {
-			ROOT.ECOA_Mnum = 1
+			global.ECOA_Mnum = 0
 		}
 	}
 	else = {
 		add_to_variable = {
-		    ROOT.ECOA_Mnum = 1
+		    global.ECOA_Mnum = 1
 	    }
 	}
+	log = "FUCKDATE2"
+	#########
 	if = {
 		limit = { 
 			check_variable = {
-				ROOT.ECOA_Mnum > 12
+				global.ECOA_Mnum > 11
 			}
 		}
 		set_variable = {
-			ROOT.ECOA_Mnum = 1
+			global.ECOA_Mnum = 0
 		}
+		add_to_variable = {
+			global.ECOA_year_n = 1
+		}
+		log = "FUCKDATENEWYEAR"
 	}
 	set_variable = {
-		ROOT.ECOA_year_l = ROOT.ECOA_year_n
+		global.ECOA_year_l = global.ECOA_year_n
 	}
 	add_to_variable = {
-		ROOT.ECOA_year_l = -1
+		global.ECOA_year_l = -1
 	}
 	set_variable = {
-		ROOT.ECOA_year_b = ROOT.ECOA_year_n
+		global.ECOA_year_b = global.ECOA_year_n
 	}
 	add_to_variable = {
-		ROOT.ECOA_year_b = -2
+		global.ECOA_year_b = -2
 	}
 	set_variable = {
-		ROOT.ECOA_year_g = ROOT.ECOA_year_n
+		global.ECOA_year_g = global.ECOA_year_n
 	}
 	add_to_variable = {
-		ROOT.ECOA_year_g = -1998
+		global.ECOA_year_g = -1998
 	}
 	set_variable = {
-		ROOT.ECOA_months_g = 0
+		global.ECOA_months_g = 0
 	}
 	add_to_variable = {
-		ROOT.ECOA_months_g = ECOA_months
+		global.ECOA_months_g = global.ECOA_months
 	}
 	set_variable = {
-		ROOT.ECOA_months_spare_c = 12
+		global.ECOA_months_spare_c = 12
 	}
 	multiply_variable = {
-		ROOT.ECOA_months_spare_c = ROOT.ECOA_year_g
+		global.ECOA_months_spare_c = global.ECOA_year_g
 	}
 	set_variable = {
-		ROOT.ECOA_months_spare = ROOT.ECOA_months_g
+		global.ECOA_months_spare = global.ECOA_months_g
 	}
 	subtract_from_variable = {
-		ROOT.ECOA_months_spare = ROOT.ECOA_months_spare_c
+		global.ECOA_months_spare = global.ECOA_months_spare_c
 	}
 	set_variable = {
-		ROOT.ECOA_Y5 = ROOT.ECOA_year_n
+		global.ECOA_Y5 = global.ECOA_year_n
 	}
-	add_to_variable = {
-		ROOT.ECOA_months_spare = -1
+	set_variable = {
+		global.ECOA_months_spare = global.ECOA_Mnum
 	}
+	#add_to_variable = {
+	#	global.ECOA_months_spare = -1
+	#}
 	if = {
 		limit = { 
 			check_variable = {
-				ROOT.ECOA_months_spare > 4
+				global.ECOA_months_spare > 4
 			}
 		}
 		set_variable = {
-			ROOT.ECOA_Y4 = ROOT.ECOA_year_n
+			global.ECOA_Y4 = global.ECOA_year_n
 		}
 	}
 	else = {
 		set_variable = {
-			ROOT.ECOA_Y4 = ECOA_year_l
+			global.ECOA_Y4 = global.ECOA_year_l
 		}
 	}
 	if = {
 		limit = { 
 			check_variable = {
-				ROOT.ECOA_months_spare > 8
+				global.ECOA_months_spare > 8
 			}
 		}
 		set_variable = {
-			ROOT.ECOA_Y3 = ROOT.ECOA_year_n
+			global.ECOA_Y3 = global.ECOA_year_n
 		}
 	}
 	else = {
 		set_variable = {
-			ROOT.ECOA_Y3 = ROOT.ECOA_year_l
+			global.ECOA_Y3 = global.ECOA_year_l
 		}
 	}
 	set_variable = {
-		ROOT.ECOA_Y2 = ROOT.ECOA_year_l
+		global.ECOA_Y2 = global.ECOA_year_l
 	}
 	if = {
 		limit = { 
 			check_variable = {
-				ROOT.ECOA_months_spare > 4
+				global.ECOA_months_spare > 4
 			}
 		}
 		set_variable = {
-			ROOT.ECOA_Y1 = ROOT.ECOA_year_l
+			global.ECOA_Y1 = global.ECOA_year_l
 		}
 	}
 	else = {
 		set_variable = {
-			ROOT.ECOA_Y1 = ROOT.ECOA_year_b
+			global.ECOA_Y1 = global.ECOA_year_b
 		}
 	}
 	set_variable = {
-		ROOT.ECOA_M5 = ROOT.ECOA_months_spare
+		global.ECOA_M5 = global.ECOA_months_spare
 	}
 	set_variable = {
-		ROOT.ECOA_M4 = ROOT.ECOA_months_spare
+		global.ECOA_M4 = global.ECOA_months_spare
 	}
 	add_to_variable = {
-		ROOT.ECOA_M4 = -4
+		global.ECOA_M4 = -4
 	}
 	if = {
 		limit = { 
 			check_variable = {
-				ROOT.ECOA_M4 < 0
+				global.ECOA_M4 < 0
 			}
 		}
 		add_to_variable = {
-			ROOT.ECOA_M4 = 12
+			global.ECOA_M4 = 12
 		}
 	}
 	set_variable = {
-		ROOT.ECOA_M3 = ROOT.ECOA_months_spare
+		global.ECOA_M3 = global.ECOA_months_spare
 	}
 	add_to_variable = {
-		ROOT.ECOA_M3 = -8
+		global.ECOA_M3 = -8
 	}
 	if = {
 		limit = { 
 			check_variable = {
-				ROOT.ECOA_M3 < 0
+				global.ECOA_M3 < 0
 			}
 		}
 		add_to_variable = {
-			ROOT.ECOA_M3 = 12
+			global.ECOA_M3 = 12
 		}
 	}
 	set_variable = {
-		ROOT.ECOA_M2 = ROOT.ECOA_months_spare
+		global.ECOA_M2 = global.ECOA_months_spare
 	}
 	set_variable = {
-		ROOT.ECOA_M1 = ROOT.ECOA_months_spare
+		global.ECOA_M1 = global.ECOA_months_spare
 	}
 	add_to_variable = {
-		ROOT.ECOA_M1 = -4
+		global.ECOA_M1 = -4
 	}
 	if = {
 		limit = { 
 			check_variable = {
-				ROOT.ECOA_M1 < 0
+				global.ECOA_M1 < 0
 			}
 		}
 		add_to_variable = {
-			ROOT.ECOA_M1 = 12
+			global.ECOA_M1 = 12
 		}
 	}
+	
 }
 
+DATE_COUNTRY_GET_EFFECTS = {
+	set_variable = {
+		ROOT.ECOA_M1 = global.ECOA_M1
+	}
+	set_variable = {
+		ROOT.ECOA_M2 = global.ECOA_M2
+	}
+	set_variable = {
+		ROOT.ECOA_M3 = global.ECOA_M3
+	}
+	set_variable = {
+		ROOT.ECOA_M4 = global.ECOA_M4
+	}
+	set_variable = {
+		ROOT.ECOA_M5 = global.ECOA_M5
+	}
+}
+DATE_MONTHS_INI = {
+	set_variable = {
+		ROOT.ECOA_M1 = 8
+	}
+	set_variable = {
+		ROOT.ECOA_M2 = 0
+	}
+	set_variable = {
+		ROOT.ECOA_M3 = 4
+	}
+	set_variable = {
+		ROOT.ECOA_M4 = 8
+	}
+	set_variable = {
+		ROOT.ECOA_M5 = 0
+	}
+}
 
 
 

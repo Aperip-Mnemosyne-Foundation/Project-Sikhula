@@ -235,7 +235,7 @@ guiTypes = {
 				name = "ECOA_Y1"
 				position = { x = -60 y =154 }
 				font = "hoi4_typewriter22"
-				text = "[?ROOT.ECOA_Y1]"
+				text = "[?global.ECOA_Y1]"
 				maxWidth = 250
 				format = center
 				text_color_code = W
@@ -244,7 +244,7 @@ guiTypes = {
 				name = "ECOA_Y2"
 				position = { x = -20 y =154 }
 				font = "hoi4_typewriter22"
-				text = "[?ROOT.ECOA_Y2]"
+				text = "[?global.ECOA_Y2]"
 				maxWidth = 250
 				format = center
 				text_color_code = W
@@ -253,7 +253,7 @@ guiTypes = {
 				name = "ECOA_Y3"
 				position = { x = 20 y =154 }
 				font = "hoi4_typewriter22"
-				text = "[?ROOT.ECOA_Y3]"
+				text = "[?global.ECOA_Y3]"
 				maxWidth = 250
 				format = center
 				text_color_code = W
@@ -262,7 +262,7 @@ guiTypes = {
 				name = "ECOA_Y4"
 				position = { x = 60 y =154 }
 				font = "hoi4_typewriter22"
-				text = "[?ROOT.ECOA_Y4]"
+				text = "[?global.ECOA_Y4]"
 				maxWidth = 250
 				format = center
 				text_color_code = W
@@ -271,7 +271,7 @@ guiTypes = {
 				name = "ECOA_Y5"
 				position = { x = 100 y =154 }
 				font = "hoi4_typewriter22"
-				text = "[?ROOT.ECOA_Y5]"
+				text = "[?global.ECOA_Y5]"
 				maxWidth = 250
 				format = center
 				text_color_code = W
