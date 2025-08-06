@@ -536,6 +536,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_goal_unknown"
 			centerposition = yes
 			Orientation = CENTER_DOWN
+			origo = CENTER_DOWN
 		}
 		
 		iconType = {
