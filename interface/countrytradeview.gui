@@ -2,38 +2,57 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "countrytradeview"
-		position = { x=-606 y=78}	
-		show_position = { x=-6 y =78 }
+		position = { x=-657 y=80}
+		show_position = { x=0 y =80 }
+		hide_position = { x=-657 y=80 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
-		animation_time = 300	
-		size = { width=550 height=100%% }
-		
-		#hide_sound = menu_close_window
+		animation_time = 700
+		clipping = yes
+		size = { width=657 height=1360 }
+
+		hide_sound = menu_close_window
 		show_sound = menu_open_window
-		
+
 		background = {
 			name = "Background"
-			quadTextureSprite ="GFX_tiled_window_1b_border"
+			spriteType ="GFX_gamemenu_bg"
 		}
 
-		iconType ={
-			name ="production_header_bg"
-			spriteType = "GFX_header_bg"
-			position = { x= 5 y = 07 }
+		iconType = {
+			name ="countrydecisionview_bg"
+			spriteType = "GFX_gamemenu_bg"
+			position = { x= 0 y = 0 }
 			Orientation = "UPPER_LEFT"
 		}
 
+		#iconType ={
+		#	name ="production_header_bg"
+		#	spriteType = "GFX_header_bg"
+		#	position = { x= 5 y = 07 }
+		#	Orientation = "UPPER_LEFT"
+		#}
+
 		instantTextboxType = {
 			name = "trade_title"
-			position = { x = 45 y = 8 }
-			textureFile = ""
-			font = "hoi_36header"
+			position = { x = 9 y = 7 }
+			font = "Youhei18"
 			borderSize = {x = 0 y = 0}
 			text = "TRADE_TRADE"
 			maxWidth = 440
 			maxHeight = 20
 			format = left
+			text_color_code = W
+		}			
+			
+		buttonType = {
+			name = "close_button"
+			position = { x = 302 y = -674 }
+			orientation = center
+			quadTextureSprite ="GFX_close_button_98"
+			buttonFont = "Main_14_black"
+			shortcut = "ESCAPE"
+			clicksound = click_close
 		}
 
 		iconType = {
@@ -326,16 +345,16 @@ guiTypes = {
 			}
 		}
 		
-		buttonType = {
-			name = "close_button"
-			position = { x = -43 y = 9 }
-			quadTextureSprite ="GFX_closebutton"
-			buttonFont = "Main_14_black"
-			shortcut = "ESCAPE"
-			Orientation = "UPPER_RIGHT"
-			clicksound = click_close
-			pdx_tooltip = "CLOSE"
-		}
+		#buttonType = {
+		#	name = "close_button"
+		#	position = { x = -43 y = 9 }
+		#	quadTextureSprite ="GFX_closebutton"
+		#	buttonFont = "Main_14_black"
+		#	shortcut = "ESCAPE"
+		#	Orientation = "UPPER_RIGHT"
+		#	clicksound = click_close
+		#	pdx_tooltip = "CLOSE"
+		#}
 	}
 	
 	containerWindowType = {

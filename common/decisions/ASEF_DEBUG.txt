@@ -146,3 +146,24 @@ DEBUG_FOCUS_decisions = {
 		}
 	}
 }
+
+DEBUG_EVENT_decisions = {
+
+	SHOW_TEST_EVENT_01 = {
+		icon = GFX_win98_thumbnail
+		allowed = {
+        }
+		visible = {
+			is_debug = yes
+		}
+		available = {
+			is_debug = yes
+			always = no
+		}
+		cost = 0
+		fire_only_once = no
+		complete_effect = {
+			country_event = test_event.1
+		}
+	}
+}

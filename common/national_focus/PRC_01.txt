@@ -183,8 +183,8 @@ focus_tree = {
         relative_position_id = PRC_01_FS_MC
 	}
 	focus = {
-		id = PRC_01_FS_HU
-		icon = GFX_focus_goals_PRC_01_FS_HU
+		id = PRC_01_FS_RBT
+		icon = GFX_focus_goals_PRC_01_FS_RBT
 		cost = 0.00
 		prerequisite = {
 			focus = PRC_01_FS_CWY
@@ -193,19 +193,8 @@ focus_tree = {
 			focus = PRC_01_FS_AIO
 		}
 		x = 0
-		y = 2
+		y = 4
         relative_position_id = PRC_01_FS_MC
-	}
-	focus = {
-		id = PRC_01_FS_RBT
-		icon = GFX_focus_goals_PRC_01_FS_RBT
-		cost = 0.00
-		prerequisite = {
-			focus = PRC_01_FS_HU
-		}
-		x = 0
-		y = 2
-        relative_position_id = PRC_01_FS_HU
 	}
 	focus = {
 		id = PRC_01_FS_9TH

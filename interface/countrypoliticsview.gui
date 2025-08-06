@@ -979,18 +979,26 @@ guiTypes = {
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
 		animation_time = 700
-		size = { width=500 height=590 }
+		size = { width=500 height=1360 }
 		show_sound = open_sub_window
 		
 		background = {
 			name = "Background"		
 			quadTextureSprite ="GFX_gamemenu3_bg"
 		}
+
+		iconType = {
+			name ="political_ideas_window_bg"
+			spriteType = "GFX_gamemenu3_bg"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
 		
 		instantTextboxType = {
 			name = "title"
-			position = { x = 8 y = 5 }
-			font = "hoi4_typewriter22"
+			position = { x = 9 y = 7 }
+			font = "Youhei18"
+			borderSize = {x = 0 y = 0}
 			text = "Economic Laws"
 			maxWidth = 450
 			maxHeight = 20

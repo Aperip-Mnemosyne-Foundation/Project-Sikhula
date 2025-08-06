@@ -120,15 +120,13 @@ scripted_gui = {
 				has_global_flag = conf_right
 				has_global_flag = ASPFDEBUGFOCUS
 			}
-			conf_ECA_button_visible = {
+			conf_EVA_button_visible = {
 				has_global_flag = conf_right
-				NOT = { has_country_flag = ECOPEN }
-				always = no
+				NOT = { has_global_flag = ASPFDEBUGEVENT }
 			}
-			conf_ECB_button_visible = {
+			conf_EVB_button_visible = {
 				has_global_flag = conf_right
-				has_country_flag = ECOPEN
-				always = no
+				has_global_flag = ASPFDEBUGEVENT
 			}
 		}
 		effects = {
@@ -224,11 +222,11 @@ scripted_gui = {
 			conf_FTB_button_click = {
 				clr_global_flag = ASPFDEBUGFOCUS
 			}
-			conf_ECA_button_click = {
-				set_country_flag = ECOPEN
+			conf_EVA_button_click = {
+				set_global_flag = ASPFDEBUGEVENT
 			}
-			conf_ECB_button_click = {
-				clr_country_flag = ECOPEN
+			conf_EVB_button_click = {
+				clr_global_flag = ASPFDEBUGEVENT
 			}
 		}
 	}
