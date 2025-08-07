@@ -1,0 +1,15 @@
+
+defined_text = { 
+	name = LOAD_PRC_01_FS_TYR_SL
+		
+	text = {
+		trigger = {
+			has_country_flag = PRC_01_FS_TYR_ALLOW
+		}
+		localization_key = "LOAD_PRC_01_FS_TYR_N"
+	}
+	text = {
+	    localization_key = "LOAD_PRC_01_FS_TYR_Y"
+	}
+}
+

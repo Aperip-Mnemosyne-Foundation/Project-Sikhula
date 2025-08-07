@@ -10,18 +10,23 @@ DEBUG_FOCUS_decisions = {
 			is_debug = yes
 		}
 		available = {
-			original_tag = PRC
-			is_debug = yes
-			always = no
+			hidden_trigger = {
+				original_tag = PRC
+			    is_debug = yes
+			    NOT = {has_focus_tree = PRC_00}
+				always = no
+			}
 		}
 		cost = 0
 		fire_only_once = no
 		complete_effect = {
-			load_focus_tree = {
-                tree = PRC_00
-                keep_completed = yes
+			hidden_effect = {
+				load_focus_tree = {
+                    tree = PRC_00
+                    keep_completed = yes
+			    }
+			    mark_focus_tree_layout_dirty = yes
 			}
-			mark_focus_tree_layout_dirty = yes
 		}
 	}
 	
@@ -35,17 +40,22 @@ DEBUG_FOCUS_decisions = {
 			is_debug = yes
 		}
 		available = {
-			original_tag = PRC
-			is_debug = yes
+			hidden_trigger = {
+				original_tag = PRC
+			    is_debug = yes
+			    NOT = {has_focus_tree = PRC_01}
+			}
 		}
 		cost = 0
 		fire_only_once = no
 		complete_effect = {
-			load_focus_tree = {
-                tree = PRC_01
-                keep_completed = yes
+			hidden_effect = {
+				load_focus_tree = {
+                    tree = PRC_01
+                    keep_completed = yes
+			    }
+			    mark_focus_tree_layout_dirty = yes
 			}
-			mark_focus_tree_layout_dirty = yes
 		}
 	}
 
@@ -59,20 +69,25 @@ DEBUG_FOCUS_decisions = {
 			is_debug = yes
 		}
 		available = {
-			original_tag = PRC
-			is_debug = yes
+			hidden_trigger = {
+				original_tag = PRC
+			    is_debug = yes
+			    has_focus_tree = PRC_01
+			}
 		}
 		cost = 0
 		fire_only_once = no
 		complete_effect = {
-			mark_focus_tree_layout_dirty = yes
-			if = {
-				limit = { has_country_flag = PRC_01_FS_TYR_ALLOW }
-				clr_country_flag = PRC_01_FS_TYR_ALLOW 
+			hidden_effect = {
+				if = {
+				    limit = { has_country_flag = PRC_01_FS_TYR_ALLOW }
+				    clr_country_flag = PRC_01_FS_TYR_ALLOW 
+		    	}
+		    	else = {
+		    		set_country_flag = PRC_01_FS_TYR_ALLOW
+		    	}
+		    	mark_focus_tree_layout_dirty = yes
 			}
-			else = {
-				set_country_flag = PRC_01_FS_TYR_ALLOW
-			}		
 		}
 	}
 	
@@ -86,17 +101,22 @@ DEBUG_FOCUS_decisions = {
 			is_debug = yes
 		}
 		available = {
-			original_tag = PRC
-			is_debug = yes
+			hidden_trigger = {
+				original_tag = PRC
+			    is_debug = yes
+			    NOT = {has_focus_tree = PRC_02}
+			}
 		}
 		cost = 0
 		fire_only_once = no
 		complete_effect = {
-			load_focus_tree = {
-                tree = PRC_02
-                keep_completed = yes
+			hidden_effect = {
+				load_focus_tree = {
+                    tree = PRC_02
+                    keep_completed = yes
+			    }
+			    mark_focus_tree_layout_dirty = yes
 			}
-			mark_focus_tree_layout_dirty = yes
 		}
 	}
 	LOAD_PRC_03 = {
@@ -109,17 +129,22 @@ DEBUG_FOCUS_decisions = {
 			is_debug = yes
 		}
 		available = {
-			original_tag = PRC
-			is_debug = yes
+			hidden_trigger = {
+				original_tag = PRC
+			    is_debug = yes
+			    NOT = {has_focus_tree = PRC_03}
+			}
 		}
 		cost = 0
 		fire_only_once = no
 		complete_effect = {
-			load_focus_tree = {
-                tree = PRC_03
-                keep_completed = yes
+			hidden_effect = {
+				load_focus_tree = {
+                    tree = PRC_03
+                    keep_completed = yes
+			    }
+			    mark_focus_tree_layout_dirty = yes
 			}
-			mark_focus_tree_layout_dirty = yes
 		}
 	}
 	LOAD_PRC_04 = {
@@ -132,17 +157,22 @@ DEBUG_FOCUS_decisions = {
 			is_debug = yes
 		}
 		available = {
-			original_tag = PRC
-			is_debug = yes
+			hidden_trigger = {
+				original_tag = PRC
+			    is_debug = yes
+			    NOT = {has_focus_tree = PRC_04}
+			}
 		}
 		cost = 0
 		fire_only_once = no
 		complete_effect = {
-			load_focus_tree = {
-                tree = PRC_04
-                keep_completed = yes
+			hidden_effect = {
+				load_focus_tree = {
+                    tree = PRC_04
+                    keep_completed = yes
+			    }
+			    mark_focus_tree_layout_dirty = yes
 			}
-			mark_focus_tree_layout_dirty = yes
 		}
 	}
 }
