@@ -25,4 +25,4 @@ add_ideas = {
 
 recruit_character = JAP_ChihayaAnon
 
-set_country_flag = secondleadershow_PRC_HuJintao # secondleader 胡锦涛
+# set_country_flag = secondleadershow_PRC_HuJintao # secondleader 胡锦涛
