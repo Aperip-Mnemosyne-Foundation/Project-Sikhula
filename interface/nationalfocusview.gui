@@ -535,6 +535,7 @@ guiTypes = {
 			position = { x = 5 y = -108 }
 			quadTextureSprite = "GFX_goal_unknown"
 			centerposition = yes
+			alwaystransparent = yes
 			Orientation = CENTER_DOWN
 			origo = CENTER_DOWN
 		}
