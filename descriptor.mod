@@ -1,4 +1,4 @@
-version="v0.0.1"
+version="0.0.1"
 tags={
 	"Military"
 	"Ideologies"

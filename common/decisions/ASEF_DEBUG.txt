@@ -193,7 +193,41 @@ DEBUG_EVENT_decisions = {
 		cost = 0
 		fire_only_once = no
 		complete_effect = {
-			country_event = test_event.1
+			country_event = ASPF_DEBUG.1
+		}
+	}
+	SHOW_TEST_EVENT_02 = {
+		icon = GFX_win98_thumbnail
+		allowed = {
+        }
+		visible = {
+			is_debug = yes
+		}
+		available = {
+			is_debug = yes
+			always = no
+		}
+		cost = 0
+		fire_only_once = no
+		complete_effect = {
+			country_event = ASPF_DEBUG.2
+		}
+	}
+	SHOW_TEST_EVENT_03 = {
+		icon = GFX_win98_thumbnail
+		allowed = {
+        }
+		visible = {
+			is_debug = yes
+		}
+		available = {
+			is_debug = yes
+			always = no
+		}
+		cost = 0
+		fire_only_once = no
+		complete_effect = {
+			country_event = ASPF_DEBUG.3
 		}
 	}
 }

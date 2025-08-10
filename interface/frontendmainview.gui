@@ -4,10 +4,10 @@ guiTypes = {
 		name ="frontend_background"
 		position = { x=0 y =0 }	
 		size = { 
-			width = 1920 
+			width = 2560 
 			height = 1440 
 			min = { width = 100% height = 100% }
-			max = { width = 100% height = 10000 }
+			max = { width = 100% height = 100% }
 			preserve_aspect_ratio = yes
 		}
 		Orientation = center
@@ -22,7 +22,7 @@ guiTypes = {
 
 		iconType = {
 			name = "98_TB"
-			position = { x = -171 y = -270 }
+			position = { x = -171 y = -30 }
 			spriteType = "GFX_98_TB"
 			centerposition = yes
 			orientation = CENTER_DOWN
@@ -31,7 +31,7 @@ guiTypes = {
 
 		iconType = {
 			name = "98_TB_R"
-			position = { x = -171 y = -270 }
+			position = { x = -171 y = -30 }
 			spriteType = "GFX_98_TB_R"
 			centerposition = yes
 			orientation = LOWER_RIGHT
@@ -40,7 +40,7 @@ guiTypes = {
 
 		iconType = {
 			name = "98_TB_L"
-			position = { x = 220 y = -270 }
+			position = { x = 220 y = -30 }
 			spriteType = "GFX_98_TB_L"
 			centerposition = yes
 			orientation = LOWER_LEFT
