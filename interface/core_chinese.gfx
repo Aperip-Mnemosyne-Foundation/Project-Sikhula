@@ -377,17 +377,12 @@ bitmapfonts = {
 	bitmapfont_override = {
 		name = "tahoma_60"
 		fontfiles = { 
-			"gfx/fonts/chinese/hoi_mapfont4_1of11EX"
-			"gfx/fonts/chinese/hoi_mapfont4_2of11EX"
-			"gfx/fonts/chinese/hoi_mapfont4_3of11EX"
-			"gfx/fonts/chinese/hoi_mapfont4_4of11EX"
-			"gfx/fonts/chinese/hoi_mapfont4_5of11EX"
-			"gfx/fonts/chinese/hoi_mapfont4_6of11EX"
-			"gfx/fonts/chinese/hoi_mapfont4_7of11EX"
-			"gfx/fonts/chinese/hoi_mapfont4_8of11EX"
-			"gfx/fonts/chinese/hoi_mapfont4_9of11EX"
-			"gfx/fonts/chinese/hoi_mapfont4_10of11EX"
-			"gfx/fonts/chinese/hoi_mapfont4_11of11EX"
+			"gfx/fonts/xiaozhuan/xiaozhuan_0"
+			"gfx/fonts/xiaozhuan/xiaozhuan_1"
+			"gfx/fonts/xiaozhuan/xiaozhuan_2"
+			"gfx/fonts/xiaozhuan/xiaozhuan_3"
+			"gfx/fonts/xiaozhuan/xiaozhuan_4"
+			"gfx/fonts/xiaozhuan/xiaozhuan_5"
 		}
 	languages = { "l_simp_chinese" } 
 	}
