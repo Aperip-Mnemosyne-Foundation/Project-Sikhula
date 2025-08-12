@@ -395,6 +395,9 @@ focus_tree = {
 			focus = PRC_02_SS_GR_03
 		}
 		relative_position_id = PRC_02_SS_GR_03
+		allow_branch = {
+			has_completed_focus = PRC_02_SS_GR_03
+		}
 		completion_reward = {
 		}
 	}
@@ -521,6 +524,9 @@ focus_tree = {
 			focus = PRC_02_SS_GR_03
 		}
 		relative_position_id = PRC_02_SS_GR_03
+		allow_branch = {
+			has_completed_focus = PRC_02_SS_GR_03
+		}
 		completion_reward = {
 		}
 	}
@@ -738,6 +744,9 @@ focus_tree = {
 			focus = PRC_02_SS_GR_03
 		}
 		relative_position_id = PRC_02_SS_GR_03
+		allow_branch = {
+			has_completed_focus = PRC_02_SS_GR_03
+		}
 		completion_reward = {
 		}
 	}
