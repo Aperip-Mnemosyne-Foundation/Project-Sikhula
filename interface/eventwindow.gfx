@@ -1,6 +1,29 @@
 spriteTypes = {
 
 	spriteType = {
+		name = "GFX_event_move"
+		texturefile = "gfx/interface/ASPF_event/move.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_head"
+		texturefile = "gfx/interface/ASPF_event/head.png"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_event_midsection"
+		size = { x = 1080 y = 66 }		
+		textureFile = "gfx/interface/ASPF_event/midsection.png"
+		borderSize = { x = 540 y = 16 }	
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_event_bottom"
+		texturefile = "gfx/interface/ASPF_event/bottom.png"
+	}
+
+	spriteType = {
 		name = "GFX_event_news_pic_overlay"
 		texturefile = "gfx/interface/event_news_pic_overlay.dds"
 	}
@@ -17,7 +40,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_event_option_entry"
-		texturefile = "gfx/interface/event_option_entry.dds"
+		texturefile = "gfx/interface/ASPF_event/air.png"
 	}
 
 	corneredTileSpriteType = {

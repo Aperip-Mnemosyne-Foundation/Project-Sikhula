@@ -6,7 +6,7 @@ country_event = {
 	id = ASPF_DEBUG.1
 	title = ASPF_DEBUG.1.t
 	desc = ASPF_DEBUG.1.desc
-	picture = GFX_report_event_ASPF_DEBUG
+	picture = GFX_event_report_ASPF_DEBUG
 	is_triggered_only = yes
 	fire_only_once = no
     hidden = no
@@ -36,7 +36,7 @@ country_event = {
 	id = ASPF_DEBUG.2
 	title = ASPF_DEBUG.2.t
 	desc = ASPF_DEBUG.2.desc
-	picture = GFX_report_event_ASPF_DEBUG
+	picture = GFX_event_report_ASPF_DEBUG
 	is_triggered_only = yes
 	fire_only_once = no
     hidden = no
@@ -66,7 +66,7 @@ country_event = {
 	id = ASPF_DEBUG.3
 	title = ASPF_DEBUG.3.t
 	desc = ASPF_DEBUG.3.desc
-	picture = GFX_report_event_ASPF_DEBUG
+	picture = GFX_event_report_ASPF_DEBUG
 	is_triggered_only = yes
 	fire_only_once = no
     hidden = no
@@ -79,24 +79,12 @@ country_event = {
 	option = {
 		name = "ASPF_DEBUG.3.b"
 	}
-	option = {
-		name = "ASPF_DEBUG.3.c"
-	}
-	option = {
-		name = "ASPF_DEBUG.3.d"
-	}
-	option = {
-		name = "ASPF_DEBUG.3.e"
-	}
-	option = {
-		name = "ASPF_DEBUG.3.f"
-	}
 }
 news_event = {
 	id = ASPF_DEBUG.4
 	title = ASPF_DEBUG.4.t
 	desc = ASPF_DEBUG.4.desc
-	picture = GFX_report_event_ASPF_DEBUG
+	picture = GFX_event_report_ASPF_DEBUG
 	is_triggered_only = yes
 	fire_only_once = no
     hidden = no

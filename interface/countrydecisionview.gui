@@ -432,13 +432,13 @@ guiTypes = {
 
 		iconType = {
 			name = "btn_progress_good"
-			position = {x=9 y=28}
+			position = {x=9000 y=28}
 			spriteType = "GFX_decision_item_progress_good"
 		}
 
 		iconType = {
 			name = "btn_progress_bad"
-			position = {x=9 y=28}
+			position = {x=9000 y=28}
 			spriteType = "GFX_decision_item_progress_bad"
 		}
 
@@ -452,39 +452,41 @@ guiTypes = {
 			name = "name_text"
 			position = { x = 35 y = 2 }
 			textureFile = ""
-			font = "Youhei"
+			font = "Youheiw"
 			borderSize = { x = 0 y = 0 }
 			text = ""
 			maxWidth = 330
 			maxHeight = 32
 			format = left
 			vertical_alignment = center
+			text_color_code = b
 		}
 
 		iconType = {
 			name = "target_flag"	
-			position = { x= 32 y = 17 }			
+			position = { x= 3200 y = 17 }			
 			quadTextureSprite = "GFX_flag_small2_not_masked"
 			scale = 0.5
 		}
 		iconType = {
 			name = "target_flag_frame"
 			quadTextureSprite = "GFX_small_flag_frame_thin2"
-			position = { x= 30 y = 15 }
+			position = { x= 3000 y = 15 }
 			alwaystransparent = yes
 			scale = 0.5
 		}
 
 		instantTextboxType = {
 			name = "cost_and_timer_text"
-			position = { x = 112 y = 9 }
+			position = { x = 35 y = 0 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "Youheiw"
 			borderSize = { x = 0 y = 0 }
-			text = "999"
-			maxWidth = 320
+			text = ""
+			maxWidth = 330
 			maxHeight = 32
 			format = right
+			vertical_alignment = center
 		}
 		
 		buttonType = {
@@ -499,7 +501,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "targeted_decision_item"
 		position = { x=0 y=0 }
-		size = { width=100% height=40 }
+		size = { width=100% height=31 }
 		clipping = no
 
 		iconType = {
@@ -508,46 +510,55 @@ guiTypes = {
 			spriteType = "GFX_decision_item_bg"
 		}
 
+		buttonType = {
+			name = "btn_select"
+			position = {x=0 y=0}
+			spriteType = "GFX_decision_select_icon_strip"
+			clicksound = decisions_ui_checkbox
+			frame = 2
+		}
+
 		iconType = {
 			name = "btn_progress_good"
-			position = {x=9 y=28}
+			position = {x=9000 y=28}
 			spriteType = "GFX_decision_item_progress_good"
 		}
 
 		iconType = {
 			name = "btn_progress_bad"
-			position = {x=9 y=28}
+			position = {x=90000 y=28}
 			spriteType = "GFX_decision_item_progress_bad"
 		}
 	
 		iconType = {
 			name = "icon"
-			position = {x=15 y=0}
+			position = {x=3 y=3}
 			spriteType = "GFX_decision_unknown"
 		}
 
 		instantTextboxType = {
 			name = "name_text"
-			position = { x = 62 y = 2 }
+			position = { x = 60 y = 2 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "Youheiw"
 			borderSize = { x = 0 y = 0 }
 			text = ""
-			maxWidth = 280
+			maxWidth = 330
 			maxHeight = 32
 			format = left
 			vertical_alignment = center
+			text_color_code = b
 		}
 
 		iconType = {
 			name = "target_flag"
 			quadTextureSprite ="GFX_flag_small"
-			position = { x= 30 y = 12}
+			position = { x= 30 y = 5}
 		}
 
 		iconType = {
 			name = "timer_icon"
-			position = {x=492 y=15}
+			position = {x=4920 y=15}
 			spriteType = "GFX_decision_timer_icon_strip"
 			frame = 1
 			centerposition = yes
@@ -556,7 +567,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "timer_text"
-			position = { x = 405 y = 9 }
+			position = { x = 4050 y = 9 }
 			textureFile = ""
 			font = "hoi_16mbs"
 			borderSize = { x = 0 y = 0 }
@@ -568,7 +579,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "cost_and_timer_text"
-			position = { x = 112 y = 9 }
+			position = { x = 11200 y = 9 }
 			textureFile = ""
 			font = "hoi_16mbs"
 			borderSize = { x = 0 y = 0 }
@@ -580,26 +591,17 @@ guiTypes = {
 		
 		buttonType = {
 			name = "track_decision_checkbox"
-			position = { x = 437 y = 7 }
+			position = { x = 368 y = 4 }
 			quadTextureSprite = "GFX_checkbox_small4"
 			clicksound = click_checkbox
 			frame = 2
 		}
-
-		buttonType = {
-			name = "btn_select"
-			position = {x=465 y=4}
-			spriteType = "GFX_decision_select_icon_strip"
-			clicksound = click_default
-			frame = 2
-		}
-
 	}
 
 	containerWindowType = {
 		name = "timed_decision_item"
 		position = { x=0 y=0 }
-		size = { width=100% height=40 }
+		size = { width=100% height=31 }
 		clipping = no
 
 		iconType = {
@@ -610,53 +612,61 @@ guiTypes = {
 
 		iconType = {
 			name = "btn_progress_good"
-			position = {x=9 y=28}
+			position = {x=30 y=17}
 			spriteType = "GFX_decision_item_progress_good"
 		}
 
 		iconType = {
 			name = "btn_progress_bad"
-			position = {x=9 y=28}
+			position = {x=30 y=17}
 			spriteType = "GFX_decision_item_progress_bad"
+		}
+
+		buttonType = {
+			name = "btn_select"
+			position = {x=0 y=0}
+			spriteType = "GFX_decision_select_icon_strip"
+			clicksound = decisions_ui_checkbox
+			frame = 2
 		}
 
 		iconType = {
 			name = "icon"
-			position = {x=32 y=20}
+			position = {x=3 y=3}
 			spriteType = "GFX_decision_unknown"
-			centerposition = yes
 		}
 
 		iconType = {
 			name = "target_flag"	
-			position = { x= 32 y = 17 }			
+			position = { x= 32000 y = 17 }			
 			quadTextureSprite = "GFX_flag_small2_not_masked"
 			scale = 0.5
 		}
 		iconType = {
 			name = "target_flag_frame"
 			quadTextureSprite = "GFX_small_flag_frame_thin2"
-			position = { x= 30 y = 15 }
+			position = { x= 30000 y = 15 }
 			alwaystransparent = yes
 			scale = 0.5
 		}
 
 		instantTextboxType = {
 			name = "name_text"
-			position = { x = 62 y = 2 }
+			position = { x = 30 y = -5 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "Youheiw"
 			borderSize = { x = 0 y = 0 }
 			text = ""
-			maxWidth = 300
+			maxWidth = 330
 			maxHeight = 32
 			format = left
 			vertical_alignment = center
+			text_color_code = b
 		}
 
 		iconType = {
 			name = "timer_icon"
-			position = {x=492 y=15}
+			position = {x=380 y=17}
 			spriteType = "GFX_decision_timer_icon_strip"
 			frame = 1
 			centerposition = yes
@@ -665,34 +675,28 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "timer_text"
-			position = { x = 405 y = 9 }
+			position = { x = 300 y = -4 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "Youheiw"
 			borderSize = { x = 0 y = 0 }
 			text = "999"
 			maxWidth = 70
 			maxHeight = 32
+			vertical_alignment = center
 			format = right
 		}
 
 		instantTextboxType = {
 			name = "cost_and_timer_text"
-			position = { x = 135 y = 9 }
+			position = { x = 270 y = -4 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "Youheiw"
 			borderSize = { x = 0 y = 0 }
 			text = "999"
-			maxWidth = 320
+			maxWidth = 100
 			maxHeight = 32
+			vertical_alignment = center
 			format = right
-		}
-
-		buttonType = {
-			name = "btn_select"
-			position = {x=465 y=6}
-			spriteType = "GFX_decision_select_icon_strip"
-			clicksound = decisions_ui_checkbox
-			frame = 2
 		}
 	}
 
@@ -700,7 +704,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "on_map_decision_locator_item"
 		position = { x=0 y=0 }
-		size = { width=100% height=41 }
+		size = { width=100% height=31 }
 		clipping = no
 
 		iconType = {
@@ -712,27 +716,27 @@ guiTypes = {
 
 		iconType = {
 			name = "decision_icon"
-			position = {x=32 y=20}
+			position = {x=3 y=3}
 			spriteType = "GFX_decision_infiltrate_state"
-			centerposition = yes
 		}
 
 		instantTextboxType = {
 			name = "name_text"
-			position = { x = 62 y = 12 }
+			position = { x = 35 y = 2 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "Youheiw"
 			borderSize = { x = 0 y = 0 }
 			text = ""
-			maxWidth = 395
-			maxHeight = 20
-			fixedsize = yes
+			maxWidth = 330
+			maxHeight = 32
 			format = left
+			vertical_alignment = center
+			text_color_code = b
 		}
 
 		iconType = {
 			name = "zoom_icon"
-			position = {x=462 y=4}
+			position = {x=358 y=-1}
 			spriteType = "GFX_locator_item_icon"
 		}
 	}

@@ -1,0 +1,6 @@
+spriteTypes = {
+    SpriteType = {
+        name = "GFX_event_report_ASPF_DEBUG"
+        texturefile = "gfx/images/events/report/ASPF_DEBUG.png"
+    }
+}

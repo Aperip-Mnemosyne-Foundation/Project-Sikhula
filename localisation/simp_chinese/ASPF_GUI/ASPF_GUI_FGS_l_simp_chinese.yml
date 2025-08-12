@@ -20,4 +20,5 @@
  ASPF_ENCYCLOPEDIAS: "模组百科"
  MANAGE_EXILED_GOVERNMENTS2: "政府斡旋"
  ASPFMENUBACK: "关闭侧栏"
- ASPF_FE_SELECT_COUNTRY: "http://ASPF.hoi4/gamesetup%20scenario%20window/1998/countries/"
+ ASPF_FE_SELECT_COUNTRY: "http://ASPF.hoi4/gamesetup%20scenario%20window/1998/countries"
+ ASPF_EVENT_TITLE: "https://mail.ASPF.hoi4/mail/0/inbox"
