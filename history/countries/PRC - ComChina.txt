@@ -49,12 +49,7 @@ recruit_character = PRC_FuQuanyou
 recruit_character = PRC_ShiYunsheng
 recruit_character = PRC_LiuShunyao
 
-# start_military
-activate_advisor = PRC_FuQuanyou_military_army_chief
-activate_advisor = PRC_ShiYunsheng_military_navy_chief
-activate_advisor = PRC_LiuShunyao_military_air_chief
 
-set_country_flag = military_ini
 
 # game_start_vars_setting
   # Ec.

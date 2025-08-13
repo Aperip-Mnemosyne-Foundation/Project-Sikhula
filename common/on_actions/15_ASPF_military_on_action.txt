@@ -1,0 +1,22 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = {
+					NOT = {
+						has_country_flag = military_ini
+					}
+				}
+				if = {
+					limit = { 
+						original_tag = PRC
+					}
+					activate_advisor = PRC_FuQuanyou_military_army_chief
+                    activate_advisor = PRC_ShiYunsheng_military_navy_chief
+                    activate_advisor = PRC_LiuShunyao_military_air_chief
+				}
+                set_country_flag = military_ini
+			}
+		}
+	}
+}
