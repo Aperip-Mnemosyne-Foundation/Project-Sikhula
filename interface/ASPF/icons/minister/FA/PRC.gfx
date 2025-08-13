@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_PRC_QianQichen_minister_FA"
+		texturefile = "gfx/icons/minister/FA/PRC/PRC_QianQichen.png"
+	}
+}

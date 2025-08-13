@@ -32,10 +32,30 @@ add_ideas = {
 	laws_NH_GEN02 # 民族法律
 	laws_IG_GEN04 # 移民法律
 }
+# start_minister
+add_ideas = {
+    PRC_QianQichen_minister_FA # 外交部长
+	PRC_ShengHuaren_minister_EC # 经济部长
+	PRC_YuZhengsheng_minister_CO # 建设部长
+	PRC_ChiHaotian_minister_DE # 国防部长
+	PRC_DuojiCairang_minister_IN # 内政部长
+	PRC_WuJichuan_minister_IT # 工信部长
+}
 
-recruit_character = PRC_JiangZemin
-
+recruit_character = PRC_JiangZemin # country_leader
 set_country_flag = secondleadershow_PRC_HuJintao # secondleader 胡锦涛
+
+recruit_character = PRC_FuQuanyou
+recruit_character = PRC_ShiYunsheng
+recruit_character = PRC_LiuShunyao
+
+# start_military
+activate_advisor = PRC_FuQuanyou_military_army_chief
+activate_advisor = PRC_ShiYunsheng_military_navy_chief
+activate_advisor = PRC_LiuShunyao_military_air_chief
+
+set_country_flag = military_ini
+
 # game_start_vars_setting
   # Ec.
     set_variable = { ROOT.ECCP_current_int = 60 } # 开局消费品占用比例

@@ -1,0 +1,65 @@
+characters = { 
+# 陆军 # ###############################################################
+	PRC_FuQuanyou = {
+		name = PRC_FuQuanyou
+		portraits = {
+			civilian = {
+				small = GFX_portrait_PRC_FuQuanyou_military_army_chief
+			}
+			army = {
+			    small = GFX_portrait_PRC_FuQuanyou_military_army_chief
+			}
+		}
+		advisor = {
+			slot = army_chief
+			ledger = army
+			idea_token = PRC_FuQuanyou_military_army_chief
+			allowed = { original_tag = PRC }
+			available = { military_army_chief_available = yes }
+			traits = {}
+			cost = 0
+        }			
+	}
+# 海军 # ###############################################################
+	PRC_ShiYunsheng = {
+		name = PRC_ShiYunsheng
+		portraits = {
+			civilian = {
+				small = GFX_portrait_PRC_ShiYunsheng_military_navy_chief
+			}
+			army = {
+			    small = GFX_portrait_PRC_ShiYunsheng_military_navy_chief
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			ledger = navy
+			idea_token = PRC_ShiYunsheng_military_navy_chief
+			allowed = { original_tag = PRC }
+			available = { military_navy_chief_available = yes }
+			traits = {}
+			cost = 0
+        }			
+	}
+# 空军 # ###############################################################
+	PRC_LiuShunyao = {
+		name = PRC_LiuShunyao
+		portraits = {
+			civilian = {
+				small = GFX_portrait_PRC_LiuShunyao_military_air_chief
+			}
+			army = {
+			    small = GFX_portrait_PRC_LiuShunyao_military_air_chief
+			}
+		}
+		advisor = {
+			slot = air_chief
+			ledger = air
+			idea_token = PRC_LiuShunyao_military_air_chief
+			allowed = { original_tag = PRC }
+			available = { military_air_chief_available = yes }
+			traits = {}
+			cost = 0
+        }			
+	}
+}

@@ -1,0 +1,11 @@
+ideas = {
+    minister_IN = { # PRC
+	    PRC_DuojiCairang_minister_IN = {
+		    name = PRC_DuojiCairang
+			cancel_if_invalid = no
+			allowed = { original_tag = PRC }
+			available = { minister_IN_available = yes }
+			traits = {}
+		}
+	}
+}

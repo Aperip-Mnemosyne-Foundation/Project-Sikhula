@@ -1,0 +1,11 @@
+ideas = {
+    minister_FA = { # PRC
+	    PRC_QianQichen_minister_FA = {
+		    name = PRC_QianQichen
+			cancel_if_invalid = no
+			allowed = { original_tag = PRC }
+			available = { minister_FA_available = yes }
+			traits = {}
+		}
+	}
+}

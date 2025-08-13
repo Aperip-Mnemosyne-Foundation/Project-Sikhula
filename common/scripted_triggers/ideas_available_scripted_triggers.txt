@@ -1,0 +1,63 @@
+minister_FA_available = {
+    custom_trigger_tooltip = {
+		tooltip = minister_FA_available
+		always = no
+	}
+}
+minister_EC_available = {
+    custom_trigger_tooltip = {
+		tooltip = minister_EC_available
+		always = no
+	}
+}
+minister_IN_available = {
+    custom_trigger_tooltip = {
+		tooltip = minister_IN_available
+		always = no
+	}
+}
+minister_DE_available = {
+    custom_trigger_tooltip = {
+		tooltip = minister_DE_available
+		always = no
+	}
+}
+minister_CO_available = {
+    custom_trigger_tooltip = {
+		tooltip = minister_CO_available
+		always = no
+	}
+}
+minister_IT_available = {
+    custom_trigger_tooltip = {
+		tooltip = minister_IT_available
+		always = no
+	}
+}
+military_army_chief_available = {
+    custom_trigger_tooltip = {
+		tooltip = military_army_chief_available
+		if = { 
+		    limit = { has_country_flag = military_ini }
+			always = no
+		}	
+	}
+}
+military_navy_chief_available = {
+    custom_trigger_tooltip = {
+		tooltip = military_navy_chief_available
+		if = { 
+		    limit = { has_country_flag = military_ini }
+			always = no
+		}	
+	}
+}
+military_air_chief_available = {
+    custom_trigger_tooltip = {
+		tooltip = military_air_chief_available
+		if = { 
+		    limit = { has_country_flag = military_ini }
+			always = no
+		}	
+	}
+}

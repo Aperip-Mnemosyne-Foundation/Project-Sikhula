@@ -1,0 +1,11 @@
+ideas = {
+    minister_CO = { # PRC
+	    PRC_YuZhengsheng_minister_CO = {
+		    name = PRC_YuZhengsheng
+			cancel_if_invalid = no
+			allowed = { original_tag = PRC }
+			available = { minister_CO_available = yes }
+			traits = {}
+		}
+	}
+}

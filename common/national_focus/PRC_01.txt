@@ -31,6 +31,7 @@ focus_tree = {
 	                portrait = GFX_portrait_PRC_JiangZemin_2000 # 给江泽民换脑袋
                 }
 	        }
+			activate_advisor = PRC_FuQuanyou_military_army_chief
 		}
 	}
 	focus = {
