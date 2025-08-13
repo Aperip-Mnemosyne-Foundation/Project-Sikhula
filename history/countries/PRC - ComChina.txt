@@ -42,14 +42,18 @@ add_ideas = {
 	PRC_WuJichuan_minister_IT # 工信部长
 }
 
-recruit_character = PRC_JiangZemin # country_leader
-set_country_flag = secondleadershow_PRC_HuJintao # secondleader 胡锦涛
-
 recruit_character = PRC_FuQuanyou
 recruit_character = PRC_ShiYunsheng
 recruit_character = PRC_LiuShunyao
 
+activate_advisor = PRC_FuQuanyou_military_army_chief
+activate_advisor = PRC_ShiYunsheng_military_navy_chief
+activate_advisor = PRC_LiuShunyao_military_air_chief
 
+set_country_flag = military_ini
+
+recruit_character = PRC_JiangZemin # country_leader
+set_country_flag = secondleadershow_PRC_HuJintao # secondleader 胡锦涛
 
 # game_start_vars_setting
   # Ec.
@@ -95,7 +99,7 @@ recruit_character = PRC_LiuShunyao
 	refresh_education_piechart = yes
 	
 	DATE_MONTHS_INI = yes
-	DATE_COUNTRY_GET_EFFECT = yes
+	DATE_COUNTRY_GET_EFFECTS = yes
 
 2000.1.1 = {
     if = {

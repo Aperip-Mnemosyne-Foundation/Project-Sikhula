@@ -20,18 +20,7 @@ focus_tree = {
 		
 		relative_position_id = PRC_00_MR_LAND_01
 		completion_reward = {
-			if = { # 隨便放到這測試，記得刪
-	            limit =  {
-			        has_country_leader = {
-	                    character = PRC_JiangZemin
-                    }
-		        }
-                set_country_leader_portrait = {
-	                ideology = AUTHORITARIANSOCIALISM
-	                portrait = GFX_portrait_PRC_JiangZemin_2000 # 给江泽民换脑袋
-                }
-	        }
-			activate_advisor = PRC_FuQuanyou_military_army_chief
+			
 		}
 	}
 	focus = {

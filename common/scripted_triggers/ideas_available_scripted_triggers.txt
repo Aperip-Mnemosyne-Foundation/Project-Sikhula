@@ -34,30 +34,3 @@ minister_IT_available = {
 		always = no
 	}
 }
-military_army_chief_available = {
-    custom_trigger_tooltip = {
-		tooltip = military_army_chief_available
-		if = { 
-		    limit = { has_country_flag = military_ini }
-			always = no
-		}	
-	}
-}
-military_navy_chief_available = {
-    custom_trigger_tooltip = {
-		tooltip = military_navy_chief_available
-		if = { 
-		    limit = { has_country_flag = military_ini }
-			always = no
-		}	
-	}
-}
-military_air_chief_available = {
-    custom_trigger_tooltip = {
-		tooltip = military_air_chief_available
-		if = { 
-		    limit = { has_country_flag = military_ini }
-			always = no
-		}	
-	}
-}
