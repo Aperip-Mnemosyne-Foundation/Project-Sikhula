@@ -15,7 +15,7 @@ characters = {
 			ledger = army
 			idea_token = PRC_FuQuanyou_military_army_chief
 			allowed = { original_tag = PRC }
-			available = { custom_trigger_tooltip = { tooltip = military_army_chief_available if = { limit = { NOT = { has_character = PRC_FuQuanyou } } always = no} } }
+			available = { custom_trigger_tooltip = { tooltip = military_air_chief_available is_army_chief = yes } }
 			traits = {}
 			cost = 0
 			can_be_fired = no
@@ -37,7 +37,7 @@ characters = {
 			ledger = navy
 			idea_token = PRC_ShiYunsheng_military_navy_chief
 			allowed = { original_tag = PRC }
-			available = { custom_trigger_tooltip = { tooltip = military_navy_chief_available if = { limit = { NOT = { has_character = PRC_ShiYunsheng } } always = no} } }
+			available = { custom_trigger_tooltip = { tooltip = military_air_chief_available is_navy_chief = yes } }
 			traits = {}
 			cost = 0
 			can_be_fired = no
@@ -59,7 +59,7 @@ characters = {
 			ledger = air
 			idea_token = PRC_LiuShunyao_military_air_chief
 			allowed = { original_tag = PRC }
-			available = { custom_trigger_tooltip = { tooltip = military_air_chief_available if = { limit = { NOT = { has_character = PRC_LiuShunyao } } always = no} } }
+			available = { custom_trigger_tooltip = { tooltip = military_air_chief_available is_air_chief = yes } }
 			traits = {}
 			cost = 0
 			can_be_fired = no

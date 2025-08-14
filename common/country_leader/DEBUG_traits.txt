@@ -1,0 +1,27 @@
+leader_traits = {
+
+	DEBUG_TRAIT_01 = {
+		random = no
+		custom_modifier_tooltip = DEBUG_TRAIT_01_tt
+		hidden_modifier = {
+			opinion_gain_monthly_factor = 1
+			lend_lease_tension = -1
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	DEBUG_TRAIT_02 = {
+		random = no
+		custom_modifier_tooltip = DEBUG_TRAIT_02_tt
+		hidden_modifier = {
+			opinion_gain_monthly_factor = 1
+			lend_lease_tension = -1
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+}
