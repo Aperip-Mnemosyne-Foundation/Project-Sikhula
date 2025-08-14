@@ -114,6 +114,7 @@ DEBUG_FOCUS_decisions = {
 				load_focus_tree = {
                     tree = PRC_02
                     keep_completed = yes
+				    copy_completed_from = PRC
 			    }
 			    mark_focus_tree_layout_dirty = yes
 			}

@@ -10,6 +10,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/ASPF_event/head.png"
 	}
 
+	spriteType = {
+		name = "GFX_event_close"
+		texturefile = "gfx/interface/ASPF_event/close.png"
+	}
+
 	corneredTileSpriteType = {
 		name = "GFX_event_midsection"
 		size = { x = 1080 y = 66 }		
@@ -30,7 +35,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_event_news_bg"
-		texturefile = "gfx/interface/event_news_bg.dds"
+		texturefile = "gfx/interface/win98web/web.png"
 	}
 
 	spriteType = {

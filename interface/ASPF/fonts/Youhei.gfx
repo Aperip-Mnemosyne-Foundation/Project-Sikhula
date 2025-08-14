@@ -18,7 +18,7 @@ bitmapfonts = {
 	bitmapfont = {
 		name = "Youhei18"
 		fontfiles = { 
-			"gfx/fonts/Youhei18/Youhei18_0"	
+			"gfx/fonts/Youhei/Youhei18_0"	
 		}
 	    color = 0xffffffff
 		border_color = 0x00000000

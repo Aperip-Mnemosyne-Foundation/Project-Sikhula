@@ -516,7 +516,7 @@ guiTypes = {
 		hide_animation_type = accelerated
         containerWindowType = {
 		    name ="gamesetup_scenario_window_overlay_window"
-		    size = { width = 1080 height = 860 }
+		    size = { width = 1080 height = 836 }
 		    clipping = yes
 		    moveable = no
 		    position = { x=0 y=24 }
@@ -525,6 +525,13 @@ guiTypes = {
 			    spriteType = "GFX_select_date_bg"
 			    position = { x= 0 y = -24 }
 		    }
+		}
+
+		iconType = {
+			name = "gamesetup_scenario_window_bg_over"
+			spriteType ="GFX_event_move"
+			position = {x = 0 y = 0}
+			alwaystransparent = yes
 		}
 		
 
@@ -909,7 +916,7 @@ guiTypes = {
 
 		containerWindowType = {
 		    name ="gamesetup_scenario_window_overlay_window"
-		    size = { width = 1080 height = 860 }
+		    size = { width = 1080 height = 836 }
 		    clipping = yes
 		    moveable = no
 		    position = { x=0 y=24 }
@@ -918,6 +925,13 @@ guiTypes = {
 			    spriteType = "GFX_select_date_bg"
 			    position = { x= 0 y = -24 }
 		    }
+		}
+
+		iconType = {
+			name = "gamesetup_interesting_countries_bg_over"
+			spriteType ="GFX_event_move"
+			position = {x = 0 y = 0}
+			alwaystransparent = yes
 		}
 		
 

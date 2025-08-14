@@ -7,3 +7,5 @@
  PARTYINFOMOREGEN: "是我国当前的执政党"
  PARTYINFOGP: "指导思想为[?country_leader.GetIdeologyGroup]。"
  PARTYINFOCOUNTRY: "[ROOT.GetAdjective]"
+ HotList: "今日热榜"
+ NEWSHEADER: "§t新闻§!@cnm  @cnm国内@cnm  @cnm国际@cnm  @cnm经济@cnm  @cnm社会@cnm  @cnm法治@cnm  @cnm图片@cnm  @cnm文娱@cnm  @cnm科技@cnm  @cnm生活@cnm  @cnm军事@cnm  @cnm快看@cnm  @cnm更多"

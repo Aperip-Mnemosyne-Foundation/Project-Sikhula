@@ -1,0 +1,11 @@
+bitmapfonts = {
+    bitmapfont = {
+		name = "Yundong"
+		fontfiles = { 
+			"gfx/fonts/Yundong/Yundong_0"	
+			"gfx/fonts/Yundong/Yundong_1"	
+		}
+	    color = 0xffffffff
+		border_color = 0x00000000
+	}
+}

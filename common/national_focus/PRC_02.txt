@@ -383,6 +383,7 @@ focus_tree = {
 		}
 		relative_position_id = PRC_02_SS_GR_02
 		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 	focus = {

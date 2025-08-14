@@ -478,7 +478,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "cost_and_timer_text"
-			position = { x = 35 y = 0 }
+			position = { x = 3500 y = 0 }
 			textureFile = ""
 			font = "Youheiw"
 			borderSize = { x = 0 y = 0 }
@@ -675,12 +675,12 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "timer_text"
-			position = { x = 300 y = -4 }
+			position = { x = 268 y = -4 }
 			textureFile = ""
 			font = "Youheiw"
 			borderSize = { x = 0 y = 0 }
 			text = "999"
-			maxWidth = 70
+			maxWidth = 100
 			maxHeight = 32
 			vertical_alignment = center
 			format = right
@@ -688,7 +688,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "cost_and_timer_text"
-			position = { x = 270 y = -4 }
+			position = { x = 268 y = -4 }
 			textureFile = ""
 			font = "Youheiw"
 			borderSize = { x = 0 y = 0 }

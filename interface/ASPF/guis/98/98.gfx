@@ -121,6 +121,24 @@ spriteTypes = {
 	}
 
 	corneredTileSpriteType = {
+		name = "GFX_tiled_win98_line_bg"
+		size= { x=190 y=190 }
+		textureFile = "gfx/interface/win98web/tiled_win98_line_bg.dds"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tiled_win98_line"
+		size= { x=190 y=190 }
+		textureFile = "gfx/interface/win98web/tiled_win98_line.dds"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	corneredTileSpriteType = {
 		name = "GFX_tiled_partybox_bg"
 		size= { x=190 y=190 }
 		textureFile = "gfx/interface/win98web/pol_partybox_bg.dds"
