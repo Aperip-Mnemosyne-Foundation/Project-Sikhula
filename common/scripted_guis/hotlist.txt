@@ -1,0 +1,20 @@
+scripted_gui = {
+
+	economics_main = {
+		context_type = player_context
+		window_name = "News_hotlist"
+		parent_window_name= "newshotlistviwe"
+		ai_enabled = {
+			always = no
+		}
+		visible = {
+			always = no
+		}
+		dynamic_lists = {
+			News_hotlist_grid = {
+				array = ROOT.super_event_list
+				entry_container = News_hotlist_entry
+			}
+		}
+	}
+}

@@ -4,4 +4,10 @@ defined_text = {
 		localization_key = "PARTYINFOMOREGEN"
 	}
 }
+defined_text = {
+	name = newshotlistviweline01
+	text = {
+		localization_key = "name_super_event_[?super_event_list^1]"
+	}
+}
 

@@ -1,0 +1,40 @@
+guiTypes = {
+    containerWindowType = {
+		name = "News_hotlist"
+        position = { x = 0 y = 0 } 
+        containerWindowType = {
+		    name = "News_hotlist_container"
+            position = { x = 0 y = 50 } 
+            gridboxtype = {
+				name = "News_hotlist_grid"
+				position = { x = 0 y = 0 }
+				size = { width = 25 height = 25 }
+				slotsize = { width = 10 height = 30 }
+				max_slots_horizontal = 1
+                max_slots_vertical = 11
+				add_horizontal = no
+			}	
+        }
+    }
+    containerWindowType = {
+		name = "News_hotlist_entry"
+        instantTextboxType = {
+			name = "News_hotlist_entry_list_num"
+			position = { x = -180 y = 0 }
+			font = "Youhei24"
+			text = "[?i]."
+			maxWidth = 200
+			format = right
+			text_color_code = b
+		}
+		instantTextboxType = {
+			name = "News_hotlist_entry_sp_name"
+			position = { x = 20 y = 0 }
+			font = "Youhei24"
+			text = "name_super_event_[?super_event_list^i]"
+			maxWidth = 300
+			format = left
+			text_color_code = b
+		}
+	}
+}

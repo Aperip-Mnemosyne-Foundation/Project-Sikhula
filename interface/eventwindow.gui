@@ -928,14 +928,16 @@ guiTypes = {
 					name = "title"
 					position = { x = 5 y = 5 }
 					textureFile = ""
-					font = "Yundong"
+					font = "Youhei32"
 					borderSize = {x = 0 y = 0}
-					text = "HotList"
+					#text = "HotList"
 					maxWidth = 500
 					maxHeight = 30
 					format = left
 					text_color_code = b
 				}
+
+				
 			}
 
 			# 后面全是上面的装饰

@@ -23,4 +23,20 @@ bitmapfonts = {
 	    color = 0xffffffff
 		border_color = 0x00000000
 	}
+	bitmapfont = {
+		name = "Youhei24"
+		fontfiles = { 
+			"gfx/fonts/Youhei/Youhei24_0"	
+		}
+	    color = 0xffffffff
+		border_color = 0x00000000
+	}
+	bitmapfont = {
+		name = "Youhei32"
+		fontfiles = { 
+			"gfx/fonts/Youhei/Youhei32_0"	
+		}
+	    color = 0xffffffff
+		border_color = 0x00000000
+	}
 }
