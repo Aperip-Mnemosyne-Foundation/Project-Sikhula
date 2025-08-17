@@ -1,0 +1,9 @@
+﻿l_simp_chinese:
+ # 人名 按照字母表排序 文閒用1空格
+ #SecondLeaderName: "[GetSecondLeaderName]" # 人名为<name>
+ #SecondLeaderText: "[GetSecondLeaderName]\n[GetSecondLeaderText]" # 特质为<name>_text
+ #SecondLeaderDesc: "[GetSecondLeaderDesc]" # 介绍为<name>_desc
+ # 此文件只寫 country_leader
+ # JAP
+ JAP_ChihayaAnon: "千早 爱音"
+ 

@@ -1,0 +1,11 @@
+ideas = {
+    military_CN = { # PRC
+	    PRC_ShiYunsheng_military_CN = {
+		    name = PRC_ShiYunsheng
+			cancel_if_invalid = no
+			allowed = { original_tag = PRC }
+			available = { military_CN_available = yes }
+			traits = {}
+		}
+	}
+}

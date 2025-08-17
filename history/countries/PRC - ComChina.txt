@@ -21,7 +21,9 @@ set_popularities = {
 
 # start_ideas
 add_ideas = {
-   PRC_laggingarmy01 # 落后的军队
+   PRC_idea_laggingarmy_01
+   PRC_idea_centralgovernmentofthecpc_01
+   PRC_idea_asiafinancialceisisimpact_01
 }
 # start_laws
 add_ideas = {
@@ -42,13 +44,14 @@ add_ideas = {
 	PRC_WuJichuan_minister_IT # 工信部长
 }
 
-recruit_character = PRC_FuQuanyou
-recruit_character = PRC_ShiYunsheng
-recruit_character = PRC_LiuShunyao
-
-activate_advisor = PRC_FuQuanyou_military_army_chief
-activate_advisor = PRC_ShiYunsheng_military_navy_chief
-activate_advisor = PRC_LiuShunyao_military_air_chief
+add_ideas = {
+    PRC_FuQuanyou_military_CA
+	PRC_ShiYunsheng_military_CN
+	PRC_LiuShunyao_military_CF
+	PRC_FourMinistries_military_MA
+	PRC_HeZhonglin_military_MN
+	PRC_ZhengShenxia_military_MF
+}
 
 set_country_flag = military_ini
 

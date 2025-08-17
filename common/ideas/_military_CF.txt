@@ -1,0 +1,11 @@
+ideas = {
+    military_CF = { # PRC
+	    PRC_LiuShunyao_military_CF = {
+		    name = PRC_LiuShunyao
+			cancel_if_invalid = no
+			allowed = { original_tag = PRC }
+			available = { military_CF_available = yes }
+			traits = {}
+		}
+	}
+}

@@ -1,0 +1,11 @@
+ideas = {
+    military_MA = { # PRC
+	    PRC_FourMinistries_military_MA = {
+		    name = PRC_FourMinistries
+			cancel_if_invalid = no
+			allowed = { original_tag = PRC }
+			available = { military_MA_available = yes }
+			traits = {}
+		}
+	}
+}

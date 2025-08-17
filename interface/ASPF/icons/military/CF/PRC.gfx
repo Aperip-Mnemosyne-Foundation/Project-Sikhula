@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_PRC_LiuShunyao_military_CF"
+		texturefile = "gfx/icons/military/CF/PRC/PRC_LiuShunyao.png"
+	}
+}

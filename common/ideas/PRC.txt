@@ -1,8 +1,8 @@
 ideas = {
 
 	country = {
-		PRC_laggingarmy01 = {
-			picture = PRC_laggingarmy01 # 落后的军队
+		PRC_idea_laggingarmy_01 = {
+			picture = PRC_idea_laggingarmy_01 # 军队落后
 			allowed = {
 				always = no
 			}
@@ -65,6 +65,26 @@ ideas = {
 			}
 			rule = {
 			}
+		}
+		PRC_idea_asiafinancialceisisimpact_01 = {
+			picture = PRC_idea_asiafinancialceisisimpact_01 # 风声鹤唳
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		}
+		PRC_idea_centralgovernmentofthecpc_01 = {
+			picture = PRC_idea_centralgovernmentofthecpc_01 # 宦海腐流
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
 		}
 	}
 }

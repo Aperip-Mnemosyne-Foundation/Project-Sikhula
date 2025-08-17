@@ -436,7 +436,7 @@ guiTypes = {
 						
 		containerWindowType = {
 			name = "autonomy_progress_view"
-			position = { x = 170 y = 242 }
+			position = { x = 17000 y = 242 }
 			size = { width = 245 height = 55 }
 			clipping = no
 
@@ -690,8 +690,8 @@ guiTypes = {
 				
 				gridboxtype = {
 					name = "spirit_grid"
-					position = { x = 29 y = 11 }
-					size = { width = 110 height = 100 }
+					position = { x = 0 y = 6 }
+					size = { width = 1 height = 100 }
 					slotsize = { width = 119 height = 1 }
 					max_slots = { x = 999 y = 1 }
 					format = "UPPER_LEFT"

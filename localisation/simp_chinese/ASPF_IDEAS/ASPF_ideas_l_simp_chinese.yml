@@ -1,0 +1,46 @@
+﻿l_simp_chinese:
+
+ cannotbemanuallymodified: "不能被手动修改。"
+
+ laws: "法律"
+ 
+ laws_MO: "兵役法律"
+ laws_TR: "贸易法律"
+ laws_NS: "国安法律"
+ laws_LR: "劳工法律"
+ laws_NH: "民族法律"
+ laws_IG: "移民法律"
+ 
+ minister: "政府"
+ 
+ minister_FA: "外交部长"
+ minister_EC: "经济部长"
+ minister_IN: "内政部长"
+ minister_DE: "国防部长"
+ minister_CO: "建设部长"
+ minister_IT: "工信部长"
+ 
+ minister_FA_available: "$minister_FA$$cannotbemanuallymodified$"
+ minister_EC_available: "$minister_EC$$cannotbemanuallymodified$"
+ minister_IN_available: "$minister_IN$$cannotbemanuallymodified$"
+ minister_DE_available: "$minister_DE$$cannotbemanuallymodified$"
+ minister_CO_available: "$minister_CO$$cannotbemanuallymodified$"
+ minister_IT_available: "$minister_IT$$cannotbemanuallymodified$"
+ 
+ military: "军事"
+ 
+ military_MA: "陆军部长"
+ military_CA: "陆军参谋"
+ military_MN: "海军部长"
+ military_CN: "海军参谋"
+ military_MF: "空军部长"
+ military_CF: "空军参谋"
+ 
+ military_MA_available: "$military_MA$$cannotbemanuallymodified$"
+ military_CA_available: "$military_CA$$cannotbemanuallymodified$"
+ military_MN_available: "$military_MN$$cannotbemanuallymodified$"
+ military_CN_available: "$military_CN$$cannotbemanuallymodified$"
+ military_MF_available: "$military_MF$$cannotbemanuallymodified$"
+ military_CF_available: "$military_CF$$cannotbemanuallymodified$"
+ 
+ 

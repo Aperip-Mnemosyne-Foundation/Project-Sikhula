@@ -1,7 +1,15 @@
 spriteTypes = {	
 
 	SpriteType = {
-		name = "GFX_idea_PRC_laggingarmy01"
-		texturefile = "gfx/icons/spirit/PRC/PRC_laggingarmy01.png"
+		name = "GFX_idea_PRC_idea_laggingarmy_01"
+		texturefile = "gfx/icons/spirit/PRC/PRC_idea_laggingarmy_01.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_PRC_idea_asiafinancialceisisimpact_01"
+		texturefile = "gfx/icons/spirit/PRC/PRC_idea_asiafinancialceisisimpact_01.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_PRC_idea_centralgovernmentofthecpc_01"
+		texturefile = "gfx/icons/spirit/PRC/PRC_idea_centralgovernmentofthecpc_01.png"
 	}
 }

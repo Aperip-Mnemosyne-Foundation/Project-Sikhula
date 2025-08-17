@@ -34,3 +34,40 @@ minister_IT_available = {
 		always = no
 	}
 }
+
+military_CA_available = {
+    custom_trigger_tooltip = {
+		tooltip = military_CA_available
+		always = no
+	}
+}
+military_CF_available = {
+    custom_trigger_tooltip = {
+		tooltip = military_CF_available
+		always = no
+	}
+}
+military_CN_available = {
+    custom_trigger_tooltip = {
+		tooltip = military_CN_available
+		always = no
+	}
+}
+military_MA_available = {
+    custom_trigger_tooltip = {
+		tooltip = military_MA_available
+		always = no
+	}
+}
+military_MF_available = {
+    custom_trigger_tooltip = {
+		tooltip = military_MF_available
+		always = no
+	}
+}
+military_MN_available = {
+    custom_trigger_tooltip = {
+		tooltip = military_MN_available
+		always = no
+	}
+}

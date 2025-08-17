@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_PRC_FuQuanyou_military_CA"
+		texturefile = "gfx/icons/military/CA/PRC/PRC_FuQuanyou.png"
+	}
+}

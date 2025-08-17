@@ -1,6 +1,0 @@
-spriteTypes = {
-	spriteType = {
-		name = "GFX_portrait_PRC_FuQuanyou_military_army_chief"
-		texturefile = "gfx/icons/military/army_chief/PRC/PRC_FuQuanyou.png"
-	}
-}

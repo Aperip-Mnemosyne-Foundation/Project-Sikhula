@@ -1,0 +1,11 @@
+ideas = {
+    military_CA = { # PRC
+	    PRC_FuQuanyou_military_CA = {
+		    name = PRC_FuQuanyou
+			cancel_if_invalid = no
+			allowed = { original_tag = PRC }
+			available = { military_CA_available = yes }
+			traits = {}
+		}
+	}
+}

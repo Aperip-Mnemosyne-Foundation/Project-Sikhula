@@ -12,10 +12,10 @@ bookmarks = {
 			ideology = AUTHORITARIANSOCIALISM
 			available = yes
 			ideas = {
-				PRC_laggingarmy01
-				PRC_laggingarmy01
-				PRC_laggingarmy01
-				PRC_laggingarmy01
+				PRC_idea_laggingarmy_01
+				PRC_idea_laggingarmy_01
+				PRC_idea_laggingarmy_01
+				PRC_idea_laggingarmy_01
 			}
 			focuses = {
 				PRC_00_MR_BACKUP_L_03
@@ -29,10 +29,10 @@ bookmarks = {
 			ideology = GIRLSBANDISM
 			available = yes
 			ideas = {
-				PRC_laggingarmy01
-				PRC_laggingarmy01
-				PRC_laggingarmy01
-				PRC_laggingarmy01
+				PRC_idea_laggingarmy_01
+				PRC_idea_laggingarmy_01
+				PRC_idea_laggingarmy_01
+				PRC_idea_laggingarmy_01
 			}
 			focuses = {
 				PRC_00_MR_BACKUP_L_03

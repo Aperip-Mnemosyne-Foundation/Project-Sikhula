@@ -1,0 +1,10 @@
+﻿l_simp_chinese:
+ # 人名 按照字母表排序 文閒用1空格
+ #SecondLeaderName: "[GetSecondLeaderName]" # 人名为<name>
+ #SecondLeaderText: "[GetSecondLeaderName]\n[GetSecondLeaderText]" # 特质为<name>_text
+ #SecondLeaderDesc: "[GetSecondLeaderDesc]" # 介绍为<name>_desc
+ # 此文件只寫 country_leader
+ # GER
+ GER_HelmutKohl: "赫尔穆特 科尔"
+ GER_RomanHerzog: "罗曼 赫尔佐克"
+ GER_RomanHerzog_desc: "事实证明，多么贫瘠的土地也能开出希望的花朵；事实也这样证明了：在恐怖体质下的国家也会有自由斗士和民主政治家。就比如德国。\n\n1934年出生的他并没有被希特勒的“高明手段”所欺诈而成为民族主义的傀儡。\n\n13岁的他已经学会了大部分都拉丁语，战后也继续保持着这种天才般的学习速度，1965年的他已经担任柏林自由大学法学系的主任，这样看来他一辈子也不会去接触其他事务：他已经事业有成，没有理由去从头再来。\n\n但在1970年入基民党的他似乎不会再有大成就，但仅仅二十年，他就成为了德意志的总统——\n\n虽然总统只是德意志的象征。"

@@ -1,0 +1,11 @@
+ideas = {
+    military_MF = { # PRC
+	    PRC_ZhengShenxia_military_MF = {
+		    name = PRC_ZhengShenxia
+			cancel_if_invalid = no
+			allowed = { original_tag = PRC }
+			available = { military_MF_available = yes }
+			traits = {}
+		}
+	}
+}

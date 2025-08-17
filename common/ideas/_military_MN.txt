@@ -1,0 +1,11 @@
+ideas = {
+    military_MN = { # PRC
+	    PRC_HeZhonglin_military_MN = {
+		    name = PRC_HeZhonglin
+			cancel_if_invalid = no
+			allowed = { original_tag = PRC }
+			available = { military_MN_available = yes }
+			traits = {}
+		}
+	}
+}
