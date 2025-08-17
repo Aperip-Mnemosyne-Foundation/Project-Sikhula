@@ -342,7 +342,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "bottom_Window"
 			position = { x=0 y=225 }	
-			size = { width = 1080 height = 600 }
+			size = { width = 1080 height = 323 }
 			moveable = no
 			clipping = no
 			Orientation = UPPER_LEFT
@@ -365,7 +365,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 			    name = "INTERNET"
-			    position = { x = 695 y = 577 }
+			    position = { x = 695 y = 300 }
 			    textureFile = ""
 			    font = "hoi4_typewriter16"
 			    borderSize = {x = 0 y = 0}
@@ -391,7 +391,7 @@ guiTypes = {
 			iconType = {
 				name ="event_picture"
 				spriteType = "GFX_report_event_001"
-				position = { x = 18 y = -554 }
+				position = { x = 18 y = -277 }
 				Orientation = "LOWER_LEFT"
 				origo = "LOWER_LEFT"			
 			}
@@ -399,7 +399,7 @@ guiTypes = {
 			iconType = {
 				name ="seg_zone_eventview_04"
 				spriteType = "GFX_seg_zone"
-				position = { x = 560 y = -592 }
+				position = { x = 560 y = -315 }
 				Orientation = "LOWER_LEFT"
 				origo = "LOWER_LEFT"			
 			}
@@ -407,7 +407,7 @@ guiTypes = {
 			iconType = {
 				name ="seg_zone_eventview_03"
 				spriteType = "GFX_seg_zone"
-				position = { x = 491 y = -592 }
+				position = { x = 491 y = -315 }
 				Orientation = "LOWER_LEFT"
 				origo = "LOWER_LEFT"			
 			}
@@ -415,7 +415,7 @@ guiTypes = {
 			iconType = {
 				name ="seg_zone_eventview_02"
 				spriteType = "GFX_seg_zone"
-				position = { x = 252 y = -592 }
+				position = { x = 252 y = -315 }
 				Orientation = "LOWER_LEFT"
 				origo = "LOWER_LEFT"			
 			}
@@ -423,7 +423,7 @@ guiTypes = {
 			iconType = {
 				name ="seg_zone_eventview_01"
 				spriteType = "GFX_seg_zone"
-				position = { x = 13 y = -592 }
+				position = { x = 13 y = -315 }
 				Orientation = "LOWER_LEFT"
 				origo = "LOWER_LEFT"			
 			}
