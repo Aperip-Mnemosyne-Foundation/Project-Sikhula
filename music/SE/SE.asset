@@ -1,0 +1,13 @@
+
+music = {
+	name = "music_SE_1"
+	file = "SE/SE_1.ogg"
+	volume = 1
+}
+
+music = {
+	name = "music_SE_1"
+	file = "SE/SE_2.ogg"
+	volume = 1
+}
+

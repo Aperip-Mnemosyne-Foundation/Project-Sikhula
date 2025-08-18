@@ -1,0 +1,15 @@
+music_station = "SE"
+
+music = {
+    song =  "music_SE_1"
+	chance = {
+	    modifier = { factor = 0 }
+	}
+}
+
+music = {
+    song =  "music_SE_2"
+	chance = {
+	    modifier = { factor = 0 }
+	}
+}
