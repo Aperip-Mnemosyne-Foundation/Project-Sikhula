@@ -1,0 +1,14 @@
+spriteTypes = {    
+	spriteType = {
+		name = "GFX_SE_image_0"
+		texturefile = "gfx/images/SE/SE_image_0.png"
+	}
+    spriteType = {
+		name = "GFX_SE_image_1"
+		texturefile = "gfx/images/SE/SE_image_1.png"
+	}
+    spriteType = {
+		name = "GFX_SE_image_2"
+		texturefile = "gfx/images/SE/SE_image_2.png"
+	}
+}

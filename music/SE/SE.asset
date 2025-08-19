@@ -6,7 +6,7 @@ music = {
 }
 
 music = {
-	name = "music_SE_1"
+	name = "music_SE_2"
 	file = "SE/SE_2.ogg"
 	volume = 1
 }
