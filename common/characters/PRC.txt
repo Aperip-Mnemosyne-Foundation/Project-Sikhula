@@ -1,17 +1,333 @@
 characters = {
+
+    PRC_BoXilai = {
+		name = PRC_BoXilai
+		portraits = {
+			civilian = {
+				large = GFX_portrait_large_civilian_PRC_BoXilai
+			}
+		}
+		country_leader = {
+			ideology = NOIDEOLOGIE_NOIDEOLOGIESUBTYPE
+			desc = PRC_BoXilai_desc
+			traits = {}
+			expire = "2018.1.1.1"
+		}     
+	}
+	
+    PRC_ChiHaotian = {
+		name = PRC_ChiHaotian
+		portraits = {
+			army = {
+				large = GFX_portrait_large_army_PRC_ChiHaotian
+			}
+		}
+		corps_commander = {
+            traits = {}
+            skill = 1
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 1
+            visible = { tag = PRC }
+        }     
+	}
+	
+    PRC_DuTiehuan = {
+		name = PRC_DuTiehuan
+		portraits = {
+			army = {
+				large = GFX_portrait_large_army_PRC_DuTiehuan
+			}
+		}
+		corps_commander = {
+            traits = {}
+            skill = 1
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 1
+            visible = { tag = PRC }
+        }     
+	}
+	
+    PRC_FuQuanyou = {
+		name = PRC_FuQuanyou
+		portraits = {
+			army = {
+				large = GFX_portrait_large_army_PRC_FuQuanyou
+			}
+		}
+		corps_commander = {
+            traits = {}
+            skill = 1
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 1
+            visible = { tag = PRC }
+        }     
+	}
+	
+    PRC_GuoBoxiong = {
+		name = PRC_GuoBoxiong
+		portraits = {
+			army = {
+				large = GFX_portrait_large_army_PRC_GuoBoxiong
+			}
+		}
+		corps_commander = {
+            traits = {}
+            skill = 1
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 1
+            visible = { tag = PRC }
+        }     
+	}
+	
+	PRC_HuJintao = {
+		name = PRC_HuJintao
+		portraits = {
+			civilian = {
+				large = GFX_portrait_large_civilian_PRC_HuJintao
+			}
+		}
+		country_leader = {
+			ideology = NOIDEOLOGIE_NOIDEOLOGIESUBTYPE
+			desc = PRC_HuJintao_desc
+			traits = {}
+			expire = "2018.1.1.1"
+		}     
+	}
+	
 	PRC_JiangZemin = {
 		name = PRC_JiangZemin
 		portraits = {
 			civilian = {
-				large = GFX_portrait_PRC_JiangZemin
+				large = GFX_portrait_large_civilian_PRC_JiangZemin
 			}
 		}
 		country_leader = {
 			ideology = AUTHORITARIANSOCIALISM_PRC_SCC
 			desc = PRC_JiangZemin_desc
-			traits = { 
-		    }
+			traits = {}
 			expire = "2018.1.1.1"
 		}     
 	}
+	
+	PRC_LiangGuanglie = {
+		name = PRC_LiangGuanglie
+		portraits = {
+			army = {
+				large = GFX_portrait_large_army_PRC_LiangGuanglie
+			}
+		}
+		corps_commander = {
+            traits = {}
+            skill = 1
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 1
+            visible = { tag = PRC }
+        }     
+	}
+	
+	PRC_LiaoQianlong = {
+		name = PRC_LiaoQianlong
+		portraits = {
+			army = {
+				large = GFX_portrait_large_army_PRC_LiaoQianlong
+			}
+		}
+		corps_commander = {
+            traits = {}
+            skill = 1
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 1
+            visible = { tag = PRC }
+        }     
+	}
+	
+	PRC_LiQianyuan = {
+		name = PRC_LiQianyuan
+		portraits = {
+			army = {
+				large = GFX_portrait_large_army_PRC_LiQianyuan
+			}
+		}
+		corps_commander = {
+            traits = {}
+            skill = 1
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 1
+            visible = { tag = PRC }
+        }     
+	}
+	
+	PRC_LiuShutian = {
+		name = PRC_LiuShutian
+		portraits = {
+			army = {
+				large = GFX_portrait_large_army_PRC_LiuShutian
+			}
+		}
+		corps_commander = {
+            traits = {}
+            skill = 1
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 1
+            visible = { tag = PRC }
+        }     
+	}
+	
+	PRC_LiXinliang = {
+		name = PRC_LiXinliang
+		portraits = {
+			army = {
+				large = GFX_portrait_large_army_PRC_LiXinliang
+			}
+		}
+		corps_commander = {
+            traits = {}
+            skill = 1
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 1
+            visible = { tag = PRC }
+        }     
+	}
+	
+	PRC_WangChengbin = {
+		name = PRC_WangChengbin
+		portraits = {
+			army = {
+				large = GFX_portrait_large_army_PRC_WangChengbin
+			}
+		}
+		corps_commander = {
+            traits = {}
+            skill = 1
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 1
+            visible = { tag = PRC }
+        }     
+	}
+	
+	PRC_WangKe = {
+		name = PRC_WangKe
+		portraits = {
+			army = {
+				large = GFX_portrait_large_army_PRC_WangKe
+			}
+		}
+		corps_commander = {
+            traits = {}
+            skill = 1
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 1
+            visible = { tag = PRC }
+        }     
+	}
+	
+	PRC_WangRuilin = {
+		name = PRC_WangRuilin
+		portraits = {
+			army = {
+				large = GFX_portrait_large_army_PRC_WangRuilin
+			}
+		}
+		corps_commander = {
+            traits = {}
+            skill = 1
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 1
+            visible = { tag = PRC }
+        }     
+	}
+	
+	PRC_YuYongbo = {
+		name = PRC_YuYongbo
+		portraits = {
+			army = {
+				large = GFX_portrait_large_army_PRC_YuYongbo
+			}
+		}
+		corps_commander = {
+            traits = {}
+            skill = 1
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 1
+            visible = { tag = PRC }
+        }     
+	}
+	
+	PRC_ZengQinghong = {
+		name = PRC_ZengQinghong
+		portraits = {
+			civilian = {
+				large = GFX_portrait_large_civilian_PRC_ZengQinghong
+			}
+		}
+		country_leader = {
+			ideology = NOIDEOLOGIE_NOIDEOLOGIESUBTYPE
+			desc = PRC_ZengQinghong_desc
+			traits = {}
+			expire = "2018.1.1.1"
+		}     
+	}
+	
+	PRC_ZhangWannian = {
+		name = PRC_ZhangWannian
+		portraits = {
+			army = {
+				large = GFX_portrait_large_army_PRC_ZhangWannian
+			}
+		}
+		corps_commander = {
+            traits = {}
+            skill = 1
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 1
+            visible = { tag = PRC }
+        }     
+	}
+	
+	PRC_ZhuQi = {
+		name = PRC_ZhuQi
+		portraits = {
+			army = {
+				large = GFX_portrait_large_army_PRC_ZhuQi
+			}
+		}
+		corps_commander = {
+            traits = {}
+            skill = 1
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 1
+            visible = { tag = PRC }
+        }     
+	}
+	
 }

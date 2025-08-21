@@ -3,7 +3,7 @@ l_simp_chinese:
  #SecondLeaderName: "[GetSecondLeaderName]" # 人名为<name>
  #SecondLeaderText: "[GetSecondLeaderName]\n[GetSecondLeaderText]" # 特质为<name>_text
  #SecondLeaderDesc: "[GetSecondLeaderDesc]" # 介绍为<name>_desc
- # 此文件只寫 country_leader
+ # 此文件只寫 leaders
  # UAE
  UAE_SheikhaMohammedbinRashidAlMaktoum: "谢赫 穆罕默德 本 拉希德 阿勒马克图姆"
  UAE_SheikhaZayedBinSultanAlnahayan: "谢赫 扎耶德 本 苏丹 阿勒纳哈扬"

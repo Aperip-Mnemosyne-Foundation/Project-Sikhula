@@ -1,0 +1,73 @@
+spriteTypes = {
+    # 示例 # # 人名 按照字母表排序
+	## <TAG> ##
+
+	# spriteType = {
+		# name = GFX_portrait_large_army_<TAG>_<NAME>
+		# texturefile = "gfx/images/leaders/large_army/<TAG>/<TAG>_<NAME>.png"
+	# }
+
+	## PRC ##
+
+	spriteType = {
+		name = GFX_portrait_large_army_PRC_ChiHaotian
+		texturefile = "gfx/images/leaders/large_army/PRC/PRC_ChiHaotian.png"
+	}
+	spriteType = {
+		name = GFX_portrait_large_army_PRC_DuTiehuan
+		texturefile = "gfx/images/leaders/large_army/PRC/PRC_DuTiehuan.png"
+	}
+	spriteType = {
+		name = GFX_portrait_large_army_PRC_FuQuanyou
+		texturefile = "gfx/images/leaders/large_army/PRC/PRC_FuQuanyou.png"
+	}
+	spriteType = {
+		name = GFX_portrait_large_army_PRC_GuoBoxiong
+		texturefile = "gfx/images/leaders/large_army/PRC/PRC_GuoBoxiong.png"
+	}
+	spriteType = {
+		name = GFX_portrait_large_army_PRC_LiangGuanglie
+		texturefile = "gfx/images/leaders/large_army/PRC/PRC_LiangGuanglie.png"
+	}
+	spriteType = {
+		name = GFX_portrait_large_army_PRC_LiaoQianlong
+		texturefile = "gfx/images/leaders/large_army/PRC/PRC_LiaoQianlong.png"
+	}
+	spriteType = {
+		name = GFX_portrait_large_army_PRC_LiQianyuan
+		texturefile = "gfx/images/leaders/large_army/PRC/PRC_LiQianyuan.png"
+	}
+	spriteType = {
+		name = GFX_portrait_large_army_PRC_LiuShutian
+		texturefile = "gfx/images/leaders/large_army/PRC/PRC_LiuShutian.png"
+	}
+	spriteType = {
+		name = GFX_portrait_large_army_PRC_LiXinliang
+		texturefile = "gfx/images/leaders/large_army/PRC/PRC_LiXinliang.png"
+	}
+	spriteType = {
+		name = GFX_portrait_large_army_PRC_WangChengbin
+		texturefile = "gfx/images/leaders/large_army/PRC/PRC_WangChengbin.png"
+	}
+	spriteType = {
+		name = GFX_portrait_large_army_PRC_WangKe
+		texturefile = "gfx/images/leaders/large_army/PRC/PRC_WangKe.png"
+	}
+	spriteType = {
+		name = GFX_portrait_large_army_PRC_WangRuilin
+		texturefile = "gfx/images/leaders/large_army/PRC/PRC_WangRuilin.png"
+	}
+	spriteType = {
+		name = GFX_portrait_large_army_PRC_YuYongbo
+		texturefile = "gfx/images/leaders/large_army/PRC/PRC_YuYongbo.png"
+	}
+	spriteType = {
+		name = GFX_portrait_large_army_PRC_ZhangWannian
+		texturefile = "gfx/images/leaders/large_army/PRC/PRC_ZhangWannian.png"
+	}
+	spriteType = {
+		name = GFX_portrait_large_army_PRC_ZhuQi
+		texturefile = "gfx/images/leaders/large_army/PRC/PRC_ZhuQi.png"
+	}
+
+}

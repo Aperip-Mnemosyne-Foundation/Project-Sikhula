@@ -3,7 +3,7 @@ characters = {
 		name = JAP_ChihayaAnon
 		portraits = {
 			civilian = {
-				large = GFX_portrait_JAP_ChihayaAnon
+				large = GFX_portrait_large_civilian_JAP_ChihayaAnon
 			}
 		}
 		country_leader = {

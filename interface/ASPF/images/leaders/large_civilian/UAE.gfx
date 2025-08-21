@@ -1,0 +1,21 @@
+spriteTypes = {
+    # 示例 # # 人名 按照字母表排序
+	## <TAG> ##
+
+	# spriteType = {
+		# name = GFX_portrait_large_civilian_<TAG>_<NAME>
+		# texturefile = "gfx/images/leaders/large_civilian/<TAG>/<TAG>_<NAME>.png"
+	# }
+
+	## UAE ##
+
+	spriteType = {
+		name = GFX_portrait_large_civilian_UAE_SheikhaMohammedbinRashidAlMaktoum
+		texturefile = "gfx/images/leaders/large_civilian/UAE/UAE_SheikhaMohammedbinRashidAlMaktoum.png"
+	}
+	spriteType = {
+		name = GFX_portrait_large_civilian_UAE_SheikhaZayedBinSultanAlnahayan
+		texturefile = "gfx/images/leaders/large_civilian/UAE/UAE_SheikhaZayedBinSultanAlnahayan.png"
+	}
+
+}

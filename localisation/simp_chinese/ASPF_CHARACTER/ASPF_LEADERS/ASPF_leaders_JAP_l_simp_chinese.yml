@@ -3,7 +3,7 @@
  #SecondLeaderName: "[GetSecondLeaderName]" # 人名为<name>
  #SecondLeaderText: "[GetSecondLeaderName]\n[GetSecondLeaderText]" # 特质为<name>_text
  #SecondLeaderDesc: "[GetSecondLeaderDesc]" # 介绍为<name>_desc
- # 此文件只寫 country_leader
+ # 此文件只寫 leaders
  # JAP
  JAP_ChihayaAnon: "千早 爱音"
  

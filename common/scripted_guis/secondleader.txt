@@ -10,7 +10,7 @@ scripted_gui = {
 		}
 		properties = {
 			second_leader_portrait = {
-				image = "[GetPortrait]"
+				image = "[GetSecondLeaderPortrait]"
 			}
 		}
 	}

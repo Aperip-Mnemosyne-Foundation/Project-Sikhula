@@ -1,0 +1,34 @@
+spriteTypes = {
+    # 示例 # # 人名 按照字母表排序
+	## <TAG> ##
+
+	# spriteType = {
+		# name = GFX_portrait_large_civilian_<TAG>_<NAME>
+		# texturefile = "gfx/images/leaders/large_civilian/<TAG>/<TAG>_<NAME>.png"
+	# }
+
+	## PRC ##
+
+	spriteType = {
+		name = GFX_portrait_large_civilian_PRC_BoXilai
+		texturefile = "gfx/images/leaders/large_civilian/PRC/PRC_BoXilai.png"
+	}
+
+	spriteType = {
+		name = GFX_portrait_large_civilian_PRC_HuJintao
+		texturefile = "gfx/images/leaders/large_civilian/PRC/PRC_HuJintao.png"
+	}
+	spriteType = {
+		name = GFX_portrait_large_civilian_PRC_JiangZemin
+		texturefile = "gfx/images/leaders/large_civilian/PRC/PRC_JiangZemin.png"
+	}
+	spriteType = {
+		name = GFX_portrait_large_civilian_PRC_JiangZemin_2000
+		texturefile = "gfx/images/leaders/large_civilian/PRC/PRC_JiangZemin_2000.png"
+	}
+	spriteType = {
+		name = GFX_portrait_large_civilian_PRC_ZengQinghong
+		texturefile = "gfx/images/leaders/large_civilian/PRC/PRC_ZengQinghong.png"
+	}
+
+}

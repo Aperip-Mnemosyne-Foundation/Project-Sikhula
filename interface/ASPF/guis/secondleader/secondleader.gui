@@ -55,7 +55,7 @@ guiTypes = {
 			pdx_tooltip = "SecondLeaderText"
 			pdx_tooltip_delayed = "SecondLeaderDesc"
 		}
-		instantTextboxType = {
+		instantTextboxType = { # 借位
 			name = "partyinfo"
 			position = { x = 344 y = 182 }
 			font = "Youhei"

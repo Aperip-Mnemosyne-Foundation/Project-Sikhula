@@ -3,7 +3,7 @@
  #SecondLeaderName: "[GetSecondLeaderName]" # 人名为<name>
  #SecondLeaderText: "[GetSecondLeaderName]\n[GetSecondLeaderText]" # 特质为<name>_text
  #SecondLeaderDesc: "[GetSecondLeaderDesc]" # 介绍为<name>_desc
- # 此文件只寫 country_leader
+ # 此文件只寫 leaders
  # PER
  PER_KhameneiAyatollahSeyyedAli: "阿亚图拉 赛义德 阿里 哈梅内伊"
  PER_SeyyedMohammadKhatami: "赛义德 穆罕默德 哈塔米"

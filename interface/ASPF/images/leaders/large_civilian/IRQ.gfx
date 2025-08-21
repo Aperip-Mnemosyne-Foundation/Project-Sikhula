@@ -1,0 +1,17 @@
+spriteTypes = {
+    # 示例 # # 人名 按照字母表排序
+	## <TAG> ##
+
+	# spriteType = {
+		# name = GFX_portrait_large_civilian_<TAG>_<NAME>
+		# texturefile = "gfx/images/leaders/large_civilian/<TAG>/<TAG>_<NAME>.png"
+	# }
+
+	## IRQ ##
+
+	spriteType = {
+		name = GFX_portrait_large_civilian_IRQ_SaddamHussein
+		texturefile = "gfx/images/leaders/large_civilian/IRQ/IRQ_SaddamHussein.png"
+	}
+
+}
