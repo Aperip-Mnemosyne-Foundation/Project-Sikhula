@@ -1,0 +1,19 @@
+add_namespace = PRC_focus_reports
+
+
+
+country_event = {
+	id = PRC_focus_reports.1
+	title = PRC_focus_reports.1.t
+	desc = PRC_focus_reports.1.desc
+	picture = GFX_event_report_PRC_focus_reports_1
+	is_triggered_only = yes
+	fire_only_once = no
+    hidden = no
+	major = no
+    immediate = {
+    }
+	option = {
+		name = "PRC_focus_reports.1.a"
+	}
+}

@@ -134,7 +134,7 @@ recruit_character = PRC_ZhuQi
 		}
         set_country_leader_portrait = {
 	        ideology = AUTHORITARIANSOCIALISM
-	        portrait = GFX_portrait_PRC_JiangZemin_2000 # 给江泽民换脑袋
+	        portrait = GFX_portrait_large_civilian_PRC_JiangZemin_2000 # 给江泽民换脑袋
         }
 	}
 }

@@ -1,0 +1,6 @@
+spriteTypes = {
+    SpriteType = {
+        name = "GFX_event_report_PRC_focus_reports_1"
+        texturefile = "gfx/images/events/report/PRC_focus_reports/1.png"
+    }
+}
