@@ -85,6 +85,15 @@ spriteTypes = {
 	}
 
 	corneredTileSpriteType = {
+		name = "GFX_tiled_win98_ovfc_ov"
+		size= { x=190 y=190 }
+		textureFile = "gfx/interface/win98web/tiled_win98_ovfc_ov.dds"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	corneredTileSpriteType = {
 		name = "GFX_tiled_win98_desc_bg"
 		size= { x=190 y=190 }
 		textureFile = "gfx/interface/win98web/tiled_win98_desc_bg.dds"
@@ -121,6 +130,11 @@ spriteTypes = {
 	}
 
 	corneredTileSpriteType = {
+		name = "GFX_1_air"
+		textureFile = "gfx/interface/1_air.png"
+	}
+
+	corneredTileSpriteType = {
 		name = "GFX_tiled_win98_line_bg"
 		size= { x=190 y=190 }
 		textureFile = "gfx/interface/win98web/tiled_win98_line_bg.dds"
@@ -133,6 +147,15 @@ spriteTypes = {
 		name = "GFX_tiled_win98_line"
 		size= { x=190 y=190 }
 		textureFile = "gfx/interface/win98web/tiled_win98_line.dds"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tiled_win98_wccl_bg"
+		size= { x=190 y=190 }
+		textureFile = "gfx/interface/win98web/tiled_win98_wccl_bg.dds"
 		borderSize = { x=64 y=64 }
 		tilingCenter = yes
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
@@ -222,6 +245,13 @@ spriteTypes = {
 	}
 
 	textSpriteType = {
+		name = "GFX_button_win98_start164x34"
+		texturefile = "gfx/interface/win98web/button_win98_start164x34.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	textSpriteType = {
 		name = "GFX_button_win98_34x34"
 		texturefile = "gfx/interface/win98web/button_win98_34x34.dds"
 		noOfFrames = 3
@@ -277,6 +307,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_pol_goal_bg_over"
 		texturefile = "gfx/interface/win98web/pol_goal_bg_over.dds"
+	}
+
+	spriteType = {
+		name = "GFX_national_focus_detail_view_top"
+		texturefile = "gfx/interface/win98web/national_focus_detail_view_top.png"
 	}
 
 	spriteType = {

@@ -447,6 +447,8 @@ guiTypes = {
 			orientation = lower_left
 			pdx_tooltip = "CONSTRUCTION_MINIMIZE"
 		}
+
+		containerWindowType = { name = "nationalFocusTreeOverWindow" background = { name = "bg" quadTextureSprite = "GFX_tiled_win98_ovfc_ov" alwaystransparent = yes } size = {width = 100% height = 100%} }
 		
 	}
 
@@ -686,85 +688,116 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "national_focus_detail_view"
-		position = { x=500 y=100 }
+		position = { x=0 y=0 }
 		size = { width = 550 height = 550 }
-		Orientation = UPPER_LEFT
+		Orientation = center
+		origo = center
 		moveable = yes
-		clipping = no
+		clipping = yes
 		fade_time = 500
 		fade_type = linear
+
+		
+
+		iconType = {
+			name = "focus_can_start_bg"
+			position = { x = 98 y = 185 }
+			spriteType = "GFX_focus_can_start"
+			alwaystransparent = yes
+			centerposition = yes
+		}
+
+		buttonType = {
+			name = "start"
+			quadTextureSprite = "GFX_button_win98_start164x34"
+			buttonText = ""
+			buttonFont = "Youhei18"
+			position = { x=16 y=174 }
+			clicksound = select_focus
+			shortcut = "RETURN"
+		}
+
+		iconType = {
+			name = "symbol"
+			position = { x = 98 y = 140 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+			centerposition = yes
+		}
+
+		iconType ={
+			name ="national_focus_detail_view_top"
+			spriteType = "GFX_national_focus_detail_view_top"
+			position = { x= 4 y = 4 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
 		
 		show_sound = pop_up
 
 		background = {
 			name = "Background"
-			#SpriteType ="GFX_technology_info_bg"
-			SpriteType = "GFX_tiled_window_thin_border2"
+			quadTextureSprite = "GFX_tiled_win98_dark_bg"
+			#quadTextureSprite = "GFX_tiled_win98_ovfc_ov"
 		}
-		
+		containerWindowType = { name = "national_focus_detail_view_nationalFocusTreeOverWindow" background = { name = "bg" quadTextureSprite = "GFX_tiled_win98_ovfc_ov" alwaystransparent = yes } size = {width = 100% height = 100%} }
 		iconType ={
 			name ="info_top_win"
 			spriteType = "GFX_tech_info_top_win"
-			position = { x= 1 y = 1 }
+			position = { x= 1 y = 99991 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
 
 		buttonType = {
 			name = "close"
-			quadTextureSprite = "GFX_closebutton"
-			buttonFont = "vic_18"
-			position = { x=-43 y=9 }
+			position = { x = -17 y = 16 }
+			quadTextureSprite ="GFX_close_button_98"
+			buttonFont = "Main_14_black"
+			centerposition = yes
 			shortcut = "ESCAPE"
 			Orientation = "UPPER_RIGHT"
-			pdx_tooltip = "CLOSE"
 			clicksound = click_close
+			pdx_tooltip = "CLOSE"
 		}
 
 		instantTextboxType = {
 			name = "name"
-			position = { x = 30 y = 12 }
-			textureFile = ""
-			font = "hoi_24header"
+			position = { x = 9 y = 7 }
+			font = "Youhei18"
 			borderSize = {x = 0 y = 0}
-			text = ""
-			maxWidth = 450
-			maxHeight = 30
-			format = center
+			maxWidth = 500
+			maxHeight = 20
+			format = left
 			fixedsize = yes		
-			text_color_code = b
+			text_color_code = W
 		}
-		iconType = {
-			name = "symbol"
-			position = { x = 105 y = 140 }
-			spriteType = "GFX_goal_unknown"
-			alwaystransparent = yes
-			centerposition = yes
-		}
-		iconType = {
-			name = "prerequisites_bg"
-			position = { x = 205 y = 92 }
-			spriteType = "GFX_generic_bg_307x113"
-			alwaystransparent = yes
-		}		
+		containerWindowType = { position = { x = 192 y = 45 } name = "prerequisites_bg_w" background = { name = "bg" quadTextureSprite = "GFX_tiled_win98_wccl_bg" alwaystransparent = yes } size = {width = 341 height = 119} }
+		#iconType = {
+		#	name = "prerequisites_bg"
+		#	position = { x = 205 y = 92 }
+		#	spriteType = "GFX_generic_bg_307x113"
+		#	alwaystransparent = yes
+		#}		
 		instantTextboxType = {
 			name = "prerequisites"
-			position = { x = 215 y = 100 }
+			position = { x = 203 y = 56 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "Youheiw"
 			borderSize = {x = 0 y = 0}
 			text = ""
-			maxWidth = 287
-			maxHeight = 100
-			scrollbarType = standardtext_slider
-			text_color_code = b
+			maxWidth = 320
+			maxHeight = 103
+			scrollbarType = standardtext_slider_air
+			text_color_code = w
+			format = left
 		}
 
 
 		containerWindowType = {
 			name = "statsarea"
-			position = { x=20 y=220 }
-			size = { width = 97%% height = 98%% }
+			position = { x=16 y=220 }
+			size = { width = 97%% height = 97%% }
 			horizontalScrollbar = "bottom_horizontal_slider"
 			verticalScrollbar = "right_vertical_slider"
 			margin = { top = 4 left = 13 bottom = 0 right = 5}
@@ -772,34 +805,35 @@ guiTypes = {
 			
 			background = {
 				name = "Background"
-				quadTextureSprite ="GFX_tiled_paper_bg2"
+				quadTextureSprite ="GFX_tiled_partybox_bg"
 			}
 			
 		}
 		instantTextboxType = {
 			name = "desc"
-			position = { x = 34 y = 250 }
+			position = { x = 16 y = 228 }
 			textureFile = ""
-			font = "hoi_18mbs"
-			borderSize = {x = 5 y = 0}
+			font = "Youhei16"
+			borderSize = {x = 12 y = 0 }
 			text = "Description"
-			maxWidth = 485
-			maxHeight = 70
-			format = center
+			maxWidth = 528
+			maxHeight = 144
+			format = left
 			text_color_code = b
+			scrollbarType = "standardtext_slider_air"
 		}
 
 		iconType = {
 			name = "reward_bg"
-			position = { x = 84 y = 363 }
-			spriteType = "GFX_unit_list_header"
+			position = { x = 75 y = 373 }
+			spriteType = "GFX_decision_item_bg"
 		}		
 		
 		instantTextboxType = {
 			name = "reward_label"
-			position = { x = 34 y = 370 }
+			position = { x = 34 y = 380 }
 			textureFile = ""
-			font = "hoi_18mbs"
+			font = "Youhei18"
 			borderSize = {x = 0 y = 0}
 			text = "FOCUS_REWARD"
 			maxWidth = 485
@@ -809,217 +843,244 @@ guiTypes = {
 		
 		instantTextboxType = {
 			name = "reward"
-			position = { x = 50 y = 397 }
+			position = { x = 50 y = 409 }
 			textureFile = ""
-			font = "hoi_16mbs"
+			font = "Youheiw"
 			borderSize = {x = 0 y = 0}
 			text = ""
 			maxWidth = 455
-			maxHeight = 138
-			scrollbarType = standardtext_slider
+			maxHeight = 120
+			scrollbarType = standardtext_slider_air
 			text_color_code = b
 #			format = center
-		}
-		
-		buttonType = {
-			name = "start"
-			quadTextureSprite = "GFX_button_123x34"
-			buttonText = "START_FOCUS"
-			buttonFont = "hoi_20b"
-			position = { x=390 y=53 }
-			clicksound = select_focus
-			shortcut = "RETURN"
-		}
-		
-		iconType = {
-			name = "research_progressbar"
-			spriteType = "GFX_prod_progress_bar3"
-			position = { x=209 y=59 }
 		}
 
 		iconType = {
 			name = "research_progressbar_frame"
-			spriteType = "GFX_production_progressbar_frame2"
-			position = { x=205 y=57 }
+			spriteType = "GFX_production_progressbar_frame91"
+			position = { x=192 y=174 }
 		}		
+
+		iconType = {
+			name = "research_progressbar"
+			spriteType = "GFX_prod_progress_bar91"
+			position = { x=197 y=178 }
+		}
 		
 		instantTextboxType = {
 			name = "status"
-			position = { x = 208 y = 60 }
-			font = "hoi_20b"
+			position = { x = 192 y = 183 }
+			font = "Youhei16"
 			borderSize = {x = 0 y = 0}
 			text = ""
-			maxWidth = 170
+			maxWidth = 342
 			maxHeight = 13
 			format = center
+			text_color_code = W
 		}
 	}
 	
 	containerWindowType = {
 		name = "coninuous_focus_detail_view"
-		position = { x=500 y=100 }
+		position = { x=0 y=0 }
 		size = { width = 550 height = 550 }
-		Orientation = UPPER_LEFT
+		Orientation = center
+		origo = center
 		moveable = yes
-		clipping = no
+		clipping = yes
 		fade_time = 500
 		fade_type = linear
+
 		
-		show_sound = pop_up
-
-		background = {
-			name = "Background"
-			#SpriteType ="GFX_technology_info_bg"
-			SpriteType = "GFX_tiled_window_thin_border2"
-		}
-		
-		iconType ={
-			name ="info_top_win"
-			spriteType = "GFX_tech_info_top_win"
-			position = { x= 1 y = 1 }
-			Orientation = "UPPER_LEFT"
-			alwaystransparent = yes
-		}
-
-		buttonType = {
-			name = "close"
-			quadTextureSprite = "GFX_closebutton"
-			buttonFont = "vic_18"
-			position = { x=-43 y=9 }
-			shortcut = "ESCAPE"
-			Orientation = "UPPER_RIGHT"
-			pdx_tooltip = "CLOSE"
-			clicksound = click_close
-		}
-
-
-		instantTextboxType = {
-			name = "name"
-			position = { x = 30 y = 12 }
-			textureFile = ""
-			font = "hoi_24header"
-			borderSize = {x = 0 y = 0}
-			text = ""
-			maxWidth = 450
-			maxHeight = 30
-			format = center	
-			text_color_code = b	
-		}
-		iconType = {
-			name = "symbol"
-			position = { x = 42 y = 88 }
-			spriteType = "GFX_goal_unknown"
-			alwaystransparent = yes
-		}
-		iconType = {
-			name = "prerequisites_bg"
-			position = { x = 205 y = 92 }
-			spriteType = "GFX_generic_bg_307x113"
-			alwaystransparent = yes
-		}		
-		instantTextboxType = {
-			name = "prerequisites"
-			position = { x = 215 y = 100 }
-			textureFile = ""
-			font = "hoi_16mbs"
-			borderSize = {x = 0 y = 0}
-			text = ""
-			maxWidth = 287
-			maxHeight = 100
-			scrollbarType = standardtext_slider
-			text_color_code = b
-		}
-
-
-		containerWindowType = {
-			name = "statsarea"
-			position = { x=20 y=220 }
-			size = { width = 97%% height = 98%% }
-			horizontalScrollbar = "bottom_horizontal_slider"
-			verticalScrollbar = "right_vertical_slider"
-			margin = { top = 4 left = 13 bottom = 0 right = 5}
-			clipping = yes
-			
-			background = {
-				name = "Background"
-				quadTextureSprite ="GFX_tiled_paper_bg2"
-			}
-			
-		}
-		instantTextboxType = {
-			name = "desc"
-			position = { x = 34 y = 250 }
-			textureFile = ""
-			font = "hoi_18mbs"
-			borderSize = {x = 5 y = 0}
-			text = "Description"
-			maxWidth = 485
-			maxHeight = 70
-			format = center
-			text_color_code = b
-		}
 
 		iconType = {
-			name = "reward_bg"
-			position = { x = 84 y = 363 }
-			spriteType = "GFX_unit_list_header"
-		}		
-		
-		instantTextboxType = {
-			name = "reward_label"
-			position = { x = 34 y = 370 }
-			textureFile = ""
-			font = "hoi_18mbs"
-			borderSize = {x = 0 y = 0}
-			text = "FOCUS_REWARD"
-			maxWidth = 485
-			maxHeight = 70
-			format = center
+			name = "focus_can_start_bg"
+			position = { x = 98 y = 185 }
+			spriteType = "GFX_focus_can_start"
+			alwaystransparent = yes
+			centerposition = yes
 		}
-		
-		instantTextboxType = {
-			name = "reward"
-			position = { x = 50 y = 397 }
-			textureFile = ""
-			font = "hoi_16mbs"
-			borderSize = {x = 0 y = 0}
-			text = ""
-			maxWidth = 455
-			maxHeight = 138
-			scrollbarType = standardtext_slider
-#			format = center
-            text_color_code = b
-		}
-		
 
 		buttonType = {
 			name = "start"
-			quadTextureSprite = "GFX_button_123x34"
 			buttonText = "START_FOCUS"
-			buttonFont = "hoi_20b"
-			position = { x=390 y=53 }
+			quadTextureSprite = "GFX_button_win98_start164x34"
+			buttonFont = "Youhei18"
+			position = { x=16 y=174 }
 			clicksound = select_focus
 			shortcut = "RETURN"
 		}
 
 		buttonType = {
 			name = "stop"
-			quadTextureSprite = "GFX_button_123x34"
 			buttonText = "STOP_FOCUS"
-			buttonFont = "hoi_20b"
-			position = { x=390 y=53 }
-			clicksound = click_default
+			quadTextureSprite = "GFX_button_win98_start164x34"
+			buttonFont = "Youhei18"
+			position = { x=16 y=174 }
+			clicksound = select_focus
+			shortcut = "RETURN"
+		}
+
+		iconType = {
+			name = "symbol"
+			position = { x = 98 y = 140 }
+			spriteType = "GFX_goal_unknown"
+			alwaystransparent = yes
+			centerposition = yes
+		}
+
+		iconType ={
+			name ="national_focus_detail_view_top"
+			spriteType = "GFX_national_focus_detail_view_top"
+			position = { x= 4 y = 4 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		
+		show_sound = pop_up
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_win98_dark_bg"
+			#quadTextureSprite = "GFX_tiled_win98_ovfc_ov"
+		}
+		containerWindowType = { name = "national_focus_detail_view_nationalFocusTreeOverWindow" background = { name = "bg" quadTextureSprite = "GFX_tiled_win98_ovfc_ov" alwaystransparent = yes } size = {width = 100% height = 100%} }
+		iconType ={
+			name ="info_top_win"
+			spriteType = "GFX_tech_info_top_win"
+			position = { x= 1 y = 99991 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+
+		buttonType = {
+			name = "close"
+			position = { x = -17 y = 16 }
+			quadTextureSprite ="GFX_close_button_98"
+			buttonFont = "Main_14_black"
+			centerposition = yes
+			shortcut = "ESCAPE"
+			Orientation = "UPPER_RIGHT"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
+
+		instantTextboxType = {
+			name = "name"
+			position = { x = 9 y = 7 }
+			font = "Youhei18"
+			borderSize = {x = 0 y = 0}
+			maxWidth = 500
+			maxHeight = 20
+			format = left
+			fixedsize = yes		
+			text_color_code = W
+		}
+		containerWindowType = { position = { x = 192 y = 45 } name = "prerequisites_bg_w" background = { name = "bg" quadTextureSprite = "GFX_tiled_win98_wccl_bg" alwaystransparent = yes } size = {width = 341 height = 119} }
+		#iconType = {
+		#	name = "prerequisites_bg"
+		#	position = { x = 205 y = 92 }
+		#	spriteType = "GFX_generic_bg_307x113"
+		#	alwaystransparent = yes
+		#}		
+		instantTextboxType = {
+			name = "prerequisites"
+			position = { x = 203 y = 56 }
+			textureFile = ""
+			font = "Youheiw"
+			borderSize = {x = 0 y = 0}
+			text = ""
+			maxWidth = 320
+			maxHeight = 103
+			scrollbarType = standardtext_slider_air
+			text_color_code = w
+			format = left
+		}
+
+
+		containerWindowType = {
+			name = "statsarea"
+			position = { x=16 y=220 }
+			size = { width = 97%% height = 97%% }
+			horizontalScrollbar = "bottom_horizontal_slider"
+			verticalScrollbar = "right_vertical_slider"
+			margin = { top = 4 left = 13 bottom = 0 right = 5}
+			clipping = yes
+			
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_tiled_partybox_bg"
+			}
+			
+		}
+		instantTextboxType = {
+			name = "desc"
+			position = { x = 16 y = 228 }
+			textureFile = ""
+			font = "Youhei16"
+			borderSize = {x = 12 y = 0 }
+			text = "Description"
+			maxWidth = 528
+			maxHeight = 144
+			format = left
+			text_color_code = b
+			scrollbarType = "standardtext_slider_air"
+		}
+
+		iconType = {
+			name = "reward_bg"
+			position = { x = 75 y = 373 }
+			spriteType = "GFX_decision_item_bg"
+		}		
+		
+		instantTextboxType = {
+			name = "reward_label"
+			position = { x = 34 y = 380 }
+			textureFile = ""
+			font = "Youhei18"
+			borderSize = {x = 0 y = 0}
+			text = "FOCUS_REWARD"
+			maxWidth = 485
+			maxHeight = 70
+			format = center
+		}
+		
+		instantTextboxType = {
+			name = "reward"
+			position = { x = 50 y = 409 }
+			textureFile = ""
+			font = "Youheiw"
+			borderSize = {x = 0 y = 0}
+			text = ""
+			maxWidth = 455
+			maxHeight = 120
+			scrollbarType = standardtext_slider_air
+			text_color_code = b
+#			format = center
+		}
+
+		iconType = {
+			name = "research_progressbar_frame"
+			spriteType = "GFX_production_progressbar_frame91"
+			position = { x=192 y=174 }
+		}		
+
+		iconType = {
+			name = "research_progressbar"
+			spriteType = "GFX_prod_progress_bar91"
+			position = { x=197 y=178 }
 		}
 		
 		instantTextboxType = {
 			name = "status"
-			position = { x = 208 y = 60 }
-			font = "hoi_20b"
+			position = { x = 192 y = 183 }
+			font = "Youhei16"
 			borderSize = {x = 0 y = 0}
 			text = ""
-			maxWidth = 170
+			maxWidth = 342
 			maxHeight = 13
 			format = center
+			text_color_code = W
 		}
 	}
 	

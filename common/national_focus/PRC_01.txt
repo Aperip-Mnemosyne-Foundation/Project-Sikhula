@@ -20,7 +20,6 @@ focus_tree = {
 		
 		relative_position_id = PRC_00_MR_LAND_01
 		completion_reward = {
-			
 		}
 	}
 	focus = {

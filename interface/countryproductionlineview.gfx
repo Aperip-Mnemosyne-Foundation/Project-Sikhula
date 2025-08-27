@@ -497,6 +497,11 @@ spriteTypes = {
 		name = "GFX_production_progressbar_frame2"
 		textureFile = "gfx//interface//production_progressbar_frame2.dds"
 	}	
+
+	spriteType = {
+		name = "GFX_production_progressbar_frame91"
+		textureFile = "gfx/interface/production_progressbar_frame91.dds"
+	}
 	
 	progressbartype = {
 		name = "GFX_prod_progress_bar3"
@@ -506,7 +511,17 @@ spriteTypes = {
 		textureFile2 = "gfx\\interface\\prod_progress_bar3_bg.dds"
 		size = { x = 166 y = 21 }
 		effectFile = "gfx/FX/progress_startend.lua"
-	}		
+	}
+	
+	progressbartype = {
+		name = "GFX_prod_progress_bar91"
+		color = { 35 23 205 1 }
+		colortwo = { 0 0 0 0 }
+		#textureFile1 = "gfx\\interface\\prod_progress_bar3.dds"
+		#textureFile2 = "gfx\\interface\\prod_progress_bar3_bg.dds"
+		size = { x = 332 y = 24 }
+		effectFile = "gfx/FX/progress_startend.lua"
+	}
 
 	progressbartype = {
 		name = "GFX_prod_progress_bar2_red"
