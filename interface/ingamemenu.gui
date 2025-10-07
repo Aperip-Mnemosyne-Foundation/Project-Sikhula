@@ -2,55 +2,100 @@ guiTypes = {
 	######### MENU  ###################################
 	containerWindowType = {
 		name = "ingamemenu"
-		position = { x = 0 y = 0 }	
-		size = { width = 320 height = 475}
-		Orientation = center
-		Origo = center		
+		position = { x=0 y =-30}
+		size = { width = 332 height = 559 }
+		Orientation = lower_left
+		Origo = lower_left		
 		fade_time = 500
 		fade_type = linear
 		show_sound = click_expand
-		
+		clipping = no
 		background = {
 			name = "Background"		
-			quadTextureSprite ="GFX_tiled_window"
+			quadTextureSprite ="GFX_98_start_bg"
+			alwaystransparent = yes
 		}
-			
+		
+		buttonType = {
+			name = "menu_close_button"
+			position = { x = 0 y = -1440 }
+			quadTextureSprite ="GFX_menu_air"
+			#font = "hoi4_typewriter22"	
+			#buttonText = "ASPFMENUBACK"
+			clicksound = click_close
+			oversound = ui_menu_over
+			shortcut = "ESCAPE"
+		}
+		iconType = {
+			name = "WINDOWS98TB_C"
+			quadTextureSprite ="GFX_98_TB_C"
+			position = { x=2 y =564}
+			scale = 0.8
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "WINDOWS98T"
+			quadTextureSprite ="GFX_windows98"
+			position = { x=12 y =11}
+		}
+
+		ButtonType = {
+            name = "ASPF_QQADD"
+            position = { x=63 y=61 }
+            quadTextureSprite ="GFX_98startwindowbutton"
+            web_link = "https://qun.qq.com/universal-share/share?ac=1&authKey=YfExOoI7CAHrtyIweP7f2gJ19j6Bd7en7Xteg7qQfn%2BTIojQFcV0pfEL0U3SvFO%2F&busi_data=eyJncm91cENvZGUiOiIxMDUxNTg5MjU4IiwidG9rZW4iOiJLUHRPNjNUMC96Q0swZzBqYi9OdU14T1N1NSt1M3U1UWdSMjlORnNTSi9aVVJqUVR3ZTZ3eWdrMmQ0UlFtK3lRIiwidWluIjoiMTgxNDg2ODk0OCJ9&data=NvAcKKkQcCvMt8NJhER8VMDwFnZeJWWoUXwyXEtCFby3Jvyi73c-DN3ke2Tid9WQPByK_Goi79Ce5RVtwLddpA&svctype=4&tempid=h5_group_info"
+            font = "hoi4_typewriter22"			
+			text = "ASPF_QQADD"				
+			clicksound = click_default			
+			oversound = ui_menu_over
+        }
+
+		ButtonType = {
+            name = "ASPF_ENCYCLOPEDIAS"
+            position = { x=63 y=11 }
+            quadTextureSprite ="GFX_98startwindowbutton"
+            web_link = ""
+            font = "hoi4_typewriter22"			
+			text = "ASPF_ENCYCLOPEDIAS"				
+			clicksound = click_default			
+			oversound = ui_menu_over
+        }
 		buttonType = {
 			name = "menu_load_button"
-			position = { x = 16 y = 18 }
-			quadTextureSprite ="GFX_main_lobby_button"	
+			position = { x = 63 y = 131 }
+			quadTextureSprite ="GFX_98startwindowbutton"
+			font = "hoi4_typewriter22"
 			buttonText = "MENU_BAR_LOAD_GAME"
-			buttonFont = "hoi_24header"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
 		
 		buttonType = {
 			name = "menu_save_button"
-			position = { x = 16 y = 58 }
-			quadTextureSprite ="GFX_main_lobby_button"	
+			position = { x = 63 y = 181 }
+			quadTextureSprite ="GFX_98startwindowbutton"
+			font = "hoi4_typewriter22"			
 			buttonText = "MENU_BAR_SAVE_GAME"
-			buttonFont = "hoi_24header"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
 		
 		buttonType = {
 			name = "menu_gamesettings_button"
-			position = { x = 16 y = 98}
-			quadTextureSprite ="GFX_main_lobby_button"	
+			position = { x = 63 y = 231 }
+			quadTextureSprite ="GFX_98startwindowbutton"		
 			buttonText = "MENU_BAR_GAME_OPTIONS"
-			buttonFont = "hoi_24header"
+			buttonFont = "hoi4_typewriter22"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
 		
 		buttonType = {
 			name = "menu_playthrough_stats_button"
-			position = { x = 16 y = 138}
-			quadTextureSprite ="GFX_main_lobby_button"	
+			position = { x = 63 y = 281 }
+			quadTextureSprite ="GFX_98startwindowbutton"
+			buttonFont = "hoi4_typewriter22"
 			buttonText = "MENU_BAR_PLAYTHROUGH_STATS"
-			buttonFont = "hoi_24header"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
@@ -66,10 +111,10 @@ guiTypes = {
 		
 		buttonType = {
 			name = "menu_wiki_button"
-			position = { x = 16 y = 178}
-			quadTextureSprite ="GFX_main_lobby_button"	
+			position = { x = 63 y = 331 }
+			quadTextureSprite ="GFX_98startwindowbutton"
+			buttonFont = "hoi4_typewriter22"	
 			buttonText = "MENU_BAR_GAME_WIKI"
-			buttonFont = "hoi_24header"
 			clicksound = click_default
 			oversound = ui_menu_over
 			web_link = ""
@@ -77,40 +122,31 @@ guiTypes = {
 		
 		buttonType = {
 			name = "menu_resign_button"
-			position = { x = 16 y = 218}
-			quadTextureSprite ="GFX_main_lobby_button"	
+			position = {  x = 63 y = 381 }
+			quadTextureSprite ="GFX_98startwindowbutton"
+			buttonFont = "hoi4_typewriter22"
 			buttonText = "MENU_BAR_GAME_RESIGN"
-			buttonFont = "hoi_24header"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
 
 		buttonType = {
 			name = "menu_quit_button"
-			position = {  x = 16 y = 258 }
-			quadTextureSprite ="GFX_main_lobby_button"	
+			position = { x = 63 y = 451 }
+			quadTextureSprite ="GFX_98startwindowbutton"
+			font = "hoi4_typewriter22"
 			buttonText = "MENU_BAR_QUIT"
-			buttonFont = "hoi_24header"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
 				
-		buttonType = {
-			name = "menu_close_button"
-			position = { x = 16 y = 340 }
-			quadTextureSprite ="GFX_main_lobby_button"	
-			buttonFont = "hoi_24header"
-			buttonText = "CLOSE"
-			shortcut = "ESCAPE"
-			clicksound = click_default
-			oversound = ui_menu_over
-		}
+		
 
 		## facebook etc.
 
         containerWindowType = {
             name = "first_row"
-			position = { x=88 y=380 }
+			position = { x=11188 y=380 }
             ButtonType = {
                 name = "homepage_button"
                 position = { x=0 y=0 }
@@ -148,7 +184,7 @@ guiTypes = {
         }
         containerWindowType = {
             name = "second_row"
-			position = { x=70 y=418 }
+			position = { x=11170 y=418 }
             ButtonType = {
                 name = "bluesky_button"
                 position = { x=0 y=0 }
@@ -202,6 +238,15 @@ guiTypes = {
 			position = { x = 299 y = 389 }
 			quadTextureSprite ="achievements"
 			pdx_tooltip = "MENU_ACHIEVEMENTS"
+		}
+
+		iconType = {
+			name = "98starticons"
+			position = { x = 91 y = 257 }
+			spriteType = "GFX_98starticons"
+			centerposition = yes
+			orientation = upper_left
+			alwaysTransparent = yes
 		}
 	}
 	

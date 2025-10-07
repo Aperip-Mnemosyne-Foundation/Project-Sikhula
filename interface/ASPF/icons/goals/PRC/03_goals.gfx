@@ -2,134 +2,167 @@ spriteTypes = {
     SpriteType = {
         name = "GFX_focus_goals_PRC_03_TS_FL_01"
         texturefile = "gfx/icons/goals/PRC/PRC_03_TS_FL_01.png"
+        transparencecheck = yes
     }
     SpriteType = {
         name = "GFX_focus_goals_PRC_03_TS_FL_02"
         texturefile = "gfx/icons/goals/PRC/PRC_03_TS_FL_02.png"
+        transparencecheck = yes
     }
     SpriteType = {
         name = "GFX_focus_goals_PRC_03_TS_FL_L_03"
         texturefile = "gfx/icons/goals/PRC/PRC_03_TS_FL_L_03.png"
+        transparencecheck = yes
     }
     SpriteType = {
         name = "GFX_focus_goals_PRC_03_TS_FL_L_04_L"
         texturefile = "gfx/icons/goals/PRC/PRC_03_TS_FL_L_04_L.png"
+        transparencecheck = yes
     }
     SpriteType = {
         name = "GFX_focus_goals_PRC_03_TS_FL_L_04_R"
         texturefile = "gfx/icons/goals/PRC/PRC_03_TS_FL_L_04_R.png"
+        transparencecheck = yes
     }
     SpriteType = {
         name = "GFX_focus_goals_PRC_03_TS_FL_L_05"
         texturefile = "gfx/icons/goals/PRC/PRC_03_TS_FL_L_05.png"
+        transparencecheck = yes
     }
     SpriteType = {
         name = "GFX_focus_goals_PRC_03_TS_FL_L_06"
         texturefile = "gfx/icons/goals/PRC/PRC_03_TS_FL_L_06.png"
+        transparencecheck = yes
     }
     SpriteType = {
         name = "GFX_focus_goals_PRC_03_TS_FL_L_07"
         texturefile = "gfx/icons/goals/PRC/PRC_03_TS_FL_L_07.png"
+        transparencecheck = yes
     }
     SpriteType = {
         name = "GFX_focus_goals_PRC_03_TS_FL_R_03"
         texturefile = "gfx/icons/goals/PRC/PRC_03_TS_FL_R_03.png"
+        transparencecheck = yes
     }
     SpriteType = {
         name = "GFX_focus_goals_PRC_03_TS_FL_R_04_L"
         texturefile = "gfx/icons/goals/PRC/PRC_03_TS_FL_R_04_L.png"
+        transparencecheck = yes
     }
     SpriteType = {
         name = "GFX_focus_goals_PRC_03_TS_FL_R_05_L"
         texturefile = "gfx/icons/goals/PRC/PRC_03_TS_FL_R_05_L.png"
+        transparencecheck = yes
     }
     SpriteType = {
         name = "GFX_focus_goals_PRC_03_TS_FL_R_04_R"
         texturefile = "gfx/icons/goals/PRC/PRC_03_TS_FL_R_04_R.png"
+        transparencecheck = yes
     }
     SpriteType = {
         name = "GFX_focus_goals_PRC_03_TS_FL_R_05_R"
         texturefile = "gfx/icons/goals/PRC/PRC_03_TS_FL_R_05_R.png"
+        transparencecheck = yes
     }
     SpriteType = {
         name = "GFX_focus_goals_PRC_03_TS_FL_R_06"
         texturefile = "gfx/icons/goals/PRC/PRC_03_TS_FL_R_06.png"
+        transparencecheck = yes
     }
     SpriteType = {
         name = "GFX_focus_goals_PRC_03_TS_FL_R_07"
         texturefile = "gfx/icons/goals/PRC/PRC_03_TS_FL_R_07.png"
+        transparencecheck = yes
     }
     SpriteType = {
         name = "GFX_focus_goals_PRC_03_TS_FL_08"
         texturefile = "gfx/icons/goals/PRC/PRC_03_TS_FL_08.png"
+        transparencecheck = yes
     }
     SpriteType = {
         name = "GFX_focus_goals_PRC_03_TS_FL_09"
         texturefile = "gfx/icons/goals/PRC/PRC_03_TS_FL_09.png"
+        transparencecheck = yes
     }
     SpriteType = {
         name = "GFX_focus_goals_PRC_03_TS_ED_01"
         texturefile = "gfx/icons/goals/PRC/PRC_03_TS_ED_01.png"
+        transparencecheck = yes
     }
     SpriteType = {
         name = "GFX_focus_goals_PRC_03_TS_ED_R_02_L"
         texturefile = "gfx/icons/goals/PRC/PRC_03_TS_ED_R_02_L.png"
+        transparencecheck = yes
     }
     SpriteType = {
         name = "GFX_focus_goals_PRC_03_TS_ED_R_03_L"
         texturefile = "gfx/icons/goals/PRC/PRC_03_TS_ED_R_03_L.png"
+        transparencecheck = yes
     }
     SpriteType = {
         name = "GFX_focus_goals_PRC_03_TS_ED_R_02_R"
         texturefile = "gfx/icons/goals/PRC/PRC_03_TS_ED_R_02_R.png"
+        transparencecheck = yes
     }
     SpriteType = {
         name = "GFX_focus_goals_PRC_03_TS_ED_R_03_R"
         texturefile = "gfx/icons/goals/PRC/PRC_03_TS_ED_R_03_R.png"
+        transparencecheck = yes
     }
     SpriteType = {
         name = "GFX_focus_goals_PRC_03_TS_ED_04"
         texturefile = "gfx/icons/goals/PRC/PRC_03_TS_ED_04.png"
+        transparencecheck = yes
     }
     SpriteType = {
         name = "GFX_focus_goals_PRC_03_TS_ED_05"
         texturefile = "gfx/icons/goals/PRC/PRC_03_TS_ED_05.png"
+        transparencecheck = yes
     }
     SpriteType = {
         name = "GFX_focus_goals_PRC_03_TS_ED_L_06"
         texturefile = "gfx/icons/goals/PRC/PRC_03_TS_ED_L_06.png"
+        transparencecheck = yes
     }
     SpriteType = {
         name = "GFX_focus_goals_PRC_03_TS_ED_R_06"
         texturefile = "gfx/icons/goals/PRC/PRC_03_TS_ED_R_06.png"
+        transparencecheck = yes
     }
     SpriteType = {
         name = "GFX_focus_goals_PRC_03_TS_ED_07_A"
         texturefile = "gfx/icons/goals/PRC/PRC_03_TS_ED_07_A.png"
+        transparencecheck = yes
     }
     SpriteType = {
         name = "GFX_focus_goals_PRC_03_TS_ED_07_B"
         texturefile = "gfx/icons/goals/PRC/PRC_03_TS_ED_07_B.png"
+        transparencecheck = yes
     }
     SpriteType = {
         name = "GFX_focus_goals_PRC_03_TS_ED_07_C"
         texturefile = "gfx/icons/goals/PRC/PRC_03_TS_ED_07_C.png"
+        transparencecheck = yes
     }
     SpriteType = {
         name = "GFX_focus_goals_PRC_03_TS_ED_07_D"
         texturefile = "gfx/icons/goals/PRC/PRC_03_TS_ED_07_D.png"
+        transparencecheck = yes
     }
     SpriteType = {
         name = "GFX_focus_goals_PRC_03_TS_ED_L_08"
         texturefile = "gfx/icons/goals/PRC/PRC_03_TS_ED_L_08.png"
+        transparencecheck = yes
     }
     SpriteType = {
         name = "GFX_focus_goals_PRC_03_TS_ED_R_08"
         texturefile = "gfx/icons/goals/PRC/PRC_03_TS_ED_R_08.png"
+        transparencecheck = yes
     }
     SpriteType = {
         name = "GFX_focus_goals_PRC_03_TS_ED_09"
         texturefile = "gfx/icons/goals/PRC/PRC_03_TS_ED_09.png"
+        transparencecheck = yes
     }
 }
 

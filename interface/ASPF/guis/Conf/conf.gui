@@ -17,7 +17,7 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "conf_open"
-		position = { x = -185 y = 0 }
+		position = { x = -185 y = -100 }
 		size = { width = 50 height = 50 }
 		moveable = no
 		orientation = lower_right

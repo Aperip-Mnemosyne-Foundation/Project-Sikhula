@@ -610,14 +610,14 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "dark_overlay"
-		position = { x = 0 y = 0 }
+		position = { x = 10000 y = 0 }
 		size = { width = 123 height = 456 }
 		moveable = no
 
-		background = {
-			name = "background"
-			quadTextureSprite ="GFX_in_game_menu_dark_overlay"
-		}
+		#background = {
+			#name = "background"
+			#quadTextureSprite ="GFX_in_game_menu_dark_overlay"
+		#}
 	}
 
 	extendedScrollbarType = {

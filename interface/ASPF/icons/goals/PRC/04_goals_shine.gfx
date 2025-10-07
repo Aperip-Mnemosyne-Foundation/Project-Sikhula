@@ -29,6 +29,7 @@ spriteTypes = {
             animationtexturescale = { x = 1.0 y = 1.0 }
         }
         legacy_lazy_load = no
+        transparencecheck = yes
     }
 ###############################################################################################
     SpriteType = {
@@ -60,6 +61,7 @@ spriteTypes = {
             animationtexturescale = { x = 1.0 y = 1.0 }
         }
         legacy_lazy_load = no
+        transparencecheck = yes
     }
 ###############################################################################################
     SpriteType = {
@@ -91,6 +93,7 @@ spriteTypes = {
             animationtexturescale = { x = 1.0 y = 1.0 }
         }
         legacy_lazy_load = no
+        transparencecheck = yes
     }
 ###############################################################################################
     SpriteType = {
@@ -122,6 +125,7 @@ spriteTypes = {
             animationtexturescale = { x = 1.0 y = 1.0 }
         }
         legacy_lazy_load = no
+        transparencecheck = yes
     }
 ###############################################################################################
     SpriteType = {
@@ -153,6 +157,7 @@ spriteTypes = {
             animationtexturescale = { x = 1.0 y = 1.0 }
         }
         legacy_lazy_load = no
+        transparencecheck = yes
     }
 ###############################################################################################
     SpriteType = {
@@ -184,6 +189,7 @@ spriteTypes = {
             animationtexturescale = { x = 1.0 y = 1.0 }
         }
         legacy_lazy_load = no
+        transparencecheck = yes
     }
 ###############################################################################################
     SpriteType = {
@@ -215,6 +221,7 @@ spriteTypes = {
             animationtexturescale = { x = 1.0 y = 1.0 }
         }
         legacy_lazy_load = no
+        transparencecheck = yes
     }
 ###############################################################################################
     SpriteType = {
@@ -246,6 +253,7 @@ spriteTypes = {
             animationtexturescale = { x = 1.0 y = 1.0 }
         }
         legacy_lazy_load = no
+        transparencecheck = yes
     }
 ###############################################################################################
     SpriteType = {
@@ -277,6 +285,7 @@ spriteTypes = {
             animationtexturescale = { x = 1.0 y = 1.0 }
         }
         legacy_lazy_load = no
+        transparencecheck = yes
     }
 ###############################################################################################
     SpriteType = {
@@ -308,6 +317,7 @@ spriteTypes = {
             animationtexturescale = { x = 1.0 y = 1.0 }
         }
         legacy_lazy_load = no
+        transparencecheck = yes
     }
 ###############################################################################################
     SpriteType = {
@@ -339,6 +349,7 @@ spriteTypes = {
             animationtexturescale = { x = 1.0 y = 1.0 }
         }
         legacy_lazy_load = no
+        transparencecheck = yes
     }
 ###############################################################################################
     SpriteType = {
@@ -370,6 +381,7 @@ spriteTypes = {
             animationtexturescale = { x = 1.0 y = 1.0 }
         }
         legacy_lazy_load = no
+        transparencecheck = yes
     }
 ###############################################################################################
     SpriteType = {
@@ -401,6 +413,7 @@ spriteTypes = {
             animationtexturescale = { x = 1.0 y = 1.0 }
         }
         legacy_lazy_load = no
+        transparencecheck = yes
     }
 ###############################################################################################
     SpriteType = {
@@ -432,6 +445,7 @@ spriteTypes = {
             animationtexturescale = { x = 1.0 y = 1.0 }
         }
         legacy_lazy_load = no
+        transparencecheck = yes
     }
 ###############################################################################################
     SpriteType = {
@@ -463,6 +477,7 @@ spriteTypes = {
             animationtexturescale = { x = 1.0 y = 1.0 }
         }
         legacy_lazy_load = no
+        transparencecheck = yes
     }
 ###############################################################################################
     SpriteType = {
@@ -494,6 +509,7 @@ spriteTypes = {
             animationtexturescale = { x = 1.0 y = 1.0 }
         }
         legacy_lazy_load = no
+        transparencecheck = yes
     }
 }
 

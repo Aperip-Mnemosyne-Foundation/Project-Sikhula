@@ -512,8 +512,7 @@ guiTypes = {
 		position = { x=0 y=0 }
 		size = { width = 165 height = 128 }
 		clipping = no
-
-		
+		transparencecheck = yes
 		iconType = {
 			name = "continuous_glow"
 			position = { x = 17 y = -40 }
@@ -537,7 +536,6 @@ guiTypes = {
 			position = { x = 5 y = -108 }
 			quadTextureSprite = "GFX_goal_unknown"
 			centerposition = yes
-			alwaystransparent = yes
 			Orientation = CENTER_DOWN
 			origo = CENTER_DOWN
 		}
