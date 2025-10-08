@@ -37,6 +37,7 @@ guiTypes = {
 			name = "WINDOWS98T"
 			quadTextureSprite ="GFX_windows98"
 			position = { x=12 y =11}
+			alwaystransparent = yes
 		}
 
 		ButtonType = {

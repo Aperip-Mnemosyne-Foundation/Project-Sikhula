@@ -7,7 +7,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "MapmodesInterface_Ingame"
-		position = { x=-631 y=-244 }
+		position = { x=-631 y=-274 }
 		size = { width=314 height=31 }
 		Orientation = lower_RIGHT
 		containerWindowType = {

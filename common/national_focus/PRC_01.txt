@@ -11,14 +11,33 @@ focus_tree = {
 	default = no
     shared_focus = PRC_00_MR_01
 	continuous_focus_position = { x=12 y=1500 }
+	initial_show_position = {
+		x = 0 y = 0
+	}
 	focus = {
 		id = PRC_01_FS_NEWYEAR
 		icon = GFX_focus_goals_PRC_01_FS_NEWYEAR
 		cost = 1
-		x = -9
-		y = -4
-		
-		relative_position_id = PRC_00_MR_LAND_01
+		x = -12
+		y = 0
+		offset = {
+			x = -6 y = 0
+			trigger = {
+				has_country_flag = PRC_01_FS_TYR_ALLOW
+			}
+		}
+		offset = {
+			x = 3 y = 0 trigger = { NOT = { has_completed_focus =  PRC_00_MR_05 } }
+		}
+		offset = {
+			trigger = {
+				has_country_flag = PRC_01_FS_TYR_ALLOW
+				NOT = { has_completed_focus =  PRC_00_MR_05 }
+				has_focus_tree = PRC_01
+			}
+			x = 3
+		}
+		relative_position_id = PRC_00_MR_01
 		completion_reward = {
 		}
 	}
@@ -26,9 +45,19 @@ focus_tree = {
 		id = PRC_01_FS_TYR
 		icon = GFX_focus_goals_PRC_01_FS_TYR
 		cost = 0.00
-		x = -15
-		y = -4
-		relative_position_id = PRC_00_MR_LAND_01
+		x = -12
+		y = 0
+		offset = {
+			x = 3 y = 0 trigger = { NOT = { has_completed_focus =  PRC_00_MR_05 } }
+		}
+		offset = {
+			trigger = {
+				has_country_flag = PRC_01_FS_TYR_ALLOW
+				NOT = { has_completed_focus =  PRC_00_MR_05 }
+			}
+			x = 3
+		}
+		relative_position_id = PRC_00_MR_01
 		allow_branch = {
 			has_country_flag = PRC_01_FS_TYR_ALLOW
 		}
@@ -157,7 +186,7 @@ focus_tree = {
 			focus = PRC_01_FS_MC
 		}
 		x = -2
-		y = 1
+		y = 2
         relative_position_id = PRC_01_FS_MC
 	}
 	focus = {
@@ -168,7 +197,7 @@ focus_tree = {
 			focus = PRC_01_FS_MC
 		}
 		x = 2
-		y = 1
+		y = 2
         relative_position_id = PRC_01_FS_MC
 	}
 	focus = {

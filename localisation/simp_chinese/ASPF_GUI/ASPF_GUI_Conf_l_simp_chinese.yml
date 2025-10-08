@@ -20,6 +20,7 @@
  LOAD_PRC_02: "加载第二阶段国策树"
  LOAD_PRC_03: "加载第三阶段国策树"
  LOAD_PRC_04: "加载战一阶段国策树"
+ LOAD_PRC_05: "加载战败阶段国策树"
  
  DEBUG_EVENT_decisions: "事件测试"
  

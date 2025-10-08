@@ -15,9 +15,22 @@ focus_tree = {
 		id = PRC_02_SS_01
 		icon = GFX_focus_goals_PRC_02_SS_01
 		cost = 1.00
-		x = -15
-		y = -4
-		relative_position_id = PRC_00_MR_LAND_01
+		x = -18
+		y = 0
+		offset = {
+			x = 0 y = 3 trigger = { NOT = {has_completed_focus = PRC_02_SS_GR_03 } }
+		}
+		offset = {
+			x = 6 y = -3 trigger = { NOT = { has_completed_focus =  PRC_00_MR_05 } }
+		}
+		offset = {
+			trigger = {
+				has_completed_focus = PRC_02_SS_GR_03
+				NOT = { has_completed_focus =  PRC_00_MR_05 }
+			}
+			y = 3
+		}
+		relative_position_id = PRC_00_MR_01
 		completion_reward = {
 		}
 	}

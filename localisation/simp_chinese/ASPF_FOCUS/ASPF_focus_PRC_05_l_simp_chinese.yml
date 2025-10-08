@@ -1,0 +1,103 @@
+﻿l_simp_chinese: 
+ # 注意此为PRC_05国策本地化 请勿在此填写无关内容 
+ # 国策的ID为 TAG_FOCUSTREEID_PROJECT_ID 
+ 
+ 
+ 
+ # PRC 05
+ PRC_05_NP_00: "中华民族伟大复兴的重要里程碑"
+ PRC_05_NP_00_desc: ""
+
+ PRC_05_NP_01: "启动全国战后救援与重建工程"
+ PRC_05_NP_01_desc: ""
+
+ PRC_05_NP_02_A: "推动地方协同应急救援"
+ PRC_05_NP_02_A_desc: ""
+
+ PRC_05_NP_02_B: "修复并保障国家主干交通网络畅通"
+ PRC_05_NP_02_B_desc: ""
+
+ PRC_05_NP_03_A: "建设临时安置与过渡住房"
+ PRC_05_NP_03_A_desc: ""
+
+ PRC_05_NP_03_B: "全面恢复国家通信网络"
+ PRC_05_NP_03_B_desc: ""
+
+ PRC_05_NP_04: "新时代国家复兴投资方案"
+ PRC_05_NP_04_desc: ""
+
+ PRC_05_RO_00: "改革开放的再出发"
+ PRC_05_RO_00_desc: ""
+
+ PRC_05_RO_01: "融入世界经济体系"
+ PRC_05_RO_01_desc: ""
+
+ PRC_05_RO_02_A: "农村财政改革与农补制度建立"
+ PRC_05_RO_02_A_desc: ""
+
+ PRC_05_RO_02_B: "中央国资委成立"
+ PRC_05_RO_02_B_desc: ""
+
+ PRC_05_RO_02_C: "国企股份化改革"
+ PRC_05_RO_02_C_desc: ""
+
+ PRC_05_RO_02_D: "电力体制重构"
+ PRC_05_RO_02_D_desc: ""
+
+ PRC_05_RO_03_L: "农产市场自由化"
+ PRC_05_RO_03_L_desc: ""
+
+ PRC_05_RO_03_C: "混合所有制改革"
+ PRC_05_RO_03_C_desc: ""
+
+ PRC_05_RO_03_R: "电力竞价上网机制"
+ PRC_05_RO_03_R_desc: ""
+
+ PRC_05_RO_04_L: "全面金融体制改革"
+ PRC_05_RO_04_L_desc: ""
+
+ PRC_05_RO_04_R: "对外贸易体制改革"
+ PRC_05_RO_04_R_desc: ""
+
+ PRC_05_RO_05_A: "银行股份制改革"
+ PRC_05_RO_05_A_desc: ""
+
+ PRC_05_RO_05_B: "开放外资金融机构市场"
+ PRC_05_RO_05_B_desc: ""
+
+ PRC_05_RO_05_C: "外贸企业自主经营权改革"
+ PRC_05_RO_05_C_desc: ""
+
+ PRC_05_RO_05_D: "关税减让与出口自由化"
+ PRC_05_RO_05_D_desc: ""
+
+ PRC_05_RO_06_L: "人民币汇率市场化"
+ PRC_05_RO_06_L_desc: ""
+
+ PRC_05_RO_06_R: "贸易便利化改革"
+ PRC_05_RO_06_R_desc: ""
+
+ PRC_05_RO_07_L: "完善知识产权体系"
+ PRC_05_RO_07_L_desc: ""
+
+ PRC_05_RO_07_R: "建立知识产权法院"
+ PRC_05_RO_07_R_desc: ""
+
+ PRC_05_RO_08: "东方金融新纪元"
+ PRC_05_RO_08_desc: ""
+
+ PRC_05_RO_09: "疯狂噜噜噜噜"
+ PRC_05_RO_09_desc: ""
+
+ PRC_05_RO_10: "发动第二次文化大革命！"
+ PRC_05_RO_10_desc: ""
+
+ PRC_05_RO_11: "实现共产主义目标！"
+ PRC_05_RO_11_desc: ""
+
+ PRC_05_TB_00: "加速青藏建设"
+ PRC_05_TB_00_desc: ""
+
+ PRC_05_NW_00: "启动南水北调工程"
+ PRC_05_NW_00_desc: ""
+

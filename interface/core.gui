@@ -566,13 +566,13 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "error_log_win"
-		position = { x=-198 y=-30}	
-		Orientation = lower_right
+		position = { x=0 y=-62}	
+		Orientation = lower_left
 
 		buttonType = {
 			name = "this_is_dog"
 			quadTextureSprite = "GFX_dog"
-			position = { x= 10 y = -90 }
+			position = { x= 0 y = -90 }
 			text = ""
 			clicksound = click_dog
 		}
@@ -580,10 +580,10 @@ guiTypes = {
 		buttonType = {
 			name = "error_log_button"
 			quadTextureSprite = "GFX_error_log_button"
-			position = { x= 0 y = 100 }
+			position = { x= -4 y = 0 }
 			text = "ERROR"
-			buttonFont = "hoi_18mbs"
-			Orientation = "LOWER_RIGHT"
+			buttonFont = "Youheiw"
+			Orientation = "CENTER"
 			clicksound = click_dog
 		}
 		

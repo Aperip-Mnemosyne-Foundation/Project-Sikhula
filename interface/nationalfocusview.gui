@@ -549,10 +549,10 @@ guiTypes = {
 		
 		instantTextboxType = {
 			name = "name"
-			position = { x = -13 y = 62 }
+			position = { x = 8 y = 62 }
 			font = "Youhei"
 			text = ""
-			maxWidth = 200
+			maxWidth = 159
 			maxHeight = 20
 			format = center
 			vertical_alignment = center 			

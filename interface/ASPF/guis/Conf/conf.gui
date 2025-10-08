@@ -17,11 +17,11 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "conf_open"
-		position = { x = -185 y = -100 }
+		position = { x = 0 y = 0 }
 		size = { width = 50 height = 50 }
 		moveable = no
-		orientation = lower_right
-		origo = lower_right
+		orientation = center
+		origo = center
 		clipping = yes
 		alwaystransparent = no
 		buttonType = {
