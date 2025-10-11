@@ -1,0 +1,104 @@
+agriculturalDevelopment_baseDaily = {
+	color_type = good
+	value_type = number
+	precision = 2
+	category = country
+	postfix = daily
+}
+agriculturalDevelopment_factor = {
+	color_type = good
+	value_type = percentage_in_hundred
+	precision = 2
+	category = country
+}
+forestryDevelopment_baseDaily = {
+	color_type = good
+	value_type = number
+	precision = 2
+	category = country
+	postfix = daily
+}
+forestryDevelopment_factor = {
+	color_type = good
+	value_type = percentage_in_hundred
+	precision = 2
+	category = country
+}
+fisheriesDevelopment_baseDaily = {
+	color_type = good
+	value_type = number
+	precision = 2
+	category = country
+	postfix = daily
+}
+fisheriesDevelopment_factor = {
+	color_type = good
+	value_type = percentage_in_hundred
+	precision = 2
+	category = country
+}
+livestockIndustrialDevelopment_baseDaily = {
+	color_type = good
+	value_type = number
+	precision = 2
+	category = country
+	postfix = daily
+}
+livestockIndustrialDevelopment_factor = {
+	color_type = good
+	value_type = percentage_in_hundred
+	precision = 2
+	category = country
+}
+lightIndustrialDevelopment_baseDaily = {
+	color_type = good
+	value_type = number
+	precision = 2
+	category = country
+	postfix = daily
+}
+lightIndustrialDevelopment_factor = {
+	color_type = good
+	value_type = percentage_in_hundred
+	precision = 2
+	category = country
+}
+heavyIndustrialDevelopment_baseDaily = {
+	color_type = good
+	value_type = number
+	precision = 2
+	category = country
+	postfix = daily
+}
+heavyIndustrialDevelopment_factor = {
+	color_type = good
+	value_type = percentage_in_hundred
+	precision = 2
+	category = country
+}
+highTechnologyIndustrialDevelopment_baseDaily = {
+	color_type = good
+	value_type = number
+	precision = 2
+	category = country
+	postfix = daily
+}
+highTechnologyIndustrialDevelopment_factor = {
+	color_type = good
+	value_type = percentage_in_hundred
+	precision = 2
+	category = country
+}
+environmentalDevelopment_baseDaily = {
+	color_type = good
+	value_type = number
+	precision = 2
+	category = country
+	postfix = daily
+}
+environmentalDevelopment_factor = {
+	color_type = good
+	value_type = percentage_in_hundred
+	precision = 2
+	category = country
+}

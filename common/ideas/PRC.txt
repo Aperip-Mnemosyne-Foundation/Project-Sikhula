@@ -75,6 +75,14 @@ ideas = {
 				always = yes
 			}
 			removal_cost = -1
+			modifier = {
+			    economicCredibility = -0.2
+				governmentCredibility = -0.2
+				highTechnologyIndustrialDevelopment_factor = -40
+				highTechnologyIndustrialDevelopment_baseDaily = -0.01
+				socialWelfareExpenditure_factor = 20
+				highTechnologyToints_factor = -20
+			}
 		}
 		PRC_idea_centralgovernmentofthecpc_01 = {
 			picture = PRC_idea_centralgovernmentofthecpc_01 # 宦海腐流
@@ -85,6 +93,13 @@ ideas = {
 				always = yes
 			}
 			removal_cost = -1
+			modifier = {
+			    fiscalRevenue_factor = -30
+			    fiscalExpenditure_factor = 30
+			    governmentCredibility = -0.4
+			    political_power_cost = 1
+				party_popularity_stability_factor = 0.3
+			}
 		}
 	}
 }

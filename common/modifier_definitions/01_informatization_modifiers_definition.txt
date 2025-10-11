@@ -1,0 +1,31 @@
+informatization_level = {
+	color_type = good
+	value_type = number
+	precision = 2
+	category = country
+}
+highTechnologyToints_baseDaily = {
+	color_type = good
+	value_type = number
+	precision = 2
+	category = country
+	postfix = daily
+}
+highTechnologyToints_factor = {
+	color_type = good
+	value_type = percentage_in_hundred
+	precision = 2
+	category = country
+}
+cybersecurityIndex_base = {
+	color_type = good
+	value_type = number
+	precision = 2
+	category = country
+}
+cybersecurityIndex_factor = {
+	color_type = good
+	value_type = percentage_in_hundred
+	precision = 2
+	category = country
+}

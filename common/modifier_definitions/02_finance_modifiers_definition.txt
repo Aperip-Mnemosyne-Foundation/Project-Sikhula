@@ -1,0 +1,57 @@
+fiscalRevenue_factor = {
+	color_type = good
+	value_type = percentage_in_hundred
+	precision = 2
+	category = country
+}
+fiscalExpenditure_factor = {
+	color_type = bad
+	value_type = percentage_in_hundred
+	precision = 2
+	category = country
+}
+monetaryValue = {
+	color_type = good
+	value_type = number
+	precision = 2
+	category = country
+}
+militaryExpenditure_baseDaily = {
+	color_type = bad
+	value_type = number
+	precision = 2
+	category = country
+	postfix = daily
+}
+militaryExpenditure_factor = {
+	color_type = bad
+	value_type = percentage_in_hundred
+	precision = 2
+	category = country
+}
+educationExpenditure_baseDaily = {
+	color_type = bad
+	value_type = number
+	precision = 2
+	category = country
+	postfix = daily
+}
+educationExpenditure_factor = {
+	color_type = bad
+	value_type = percentage_in_hundred
+	precision = 2
+	category = country
+}
+socialWelfareExpenditure_baseDaily = {
+	color_type = bad
+	value_type = number
+	precision = 2
+	category = country
+	postfix = daily
+}
+socialWelfareExpenditure_factor = {
+	color_type = bad
+	value_type = percentage_in_hundred
+	precision = 2
+	category = country
+}
