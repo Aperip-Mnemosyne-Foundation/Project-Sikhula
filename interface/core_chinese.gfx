@@ -377,12 +377,24 @@ bitmapfonts = {
 	bitmapfont_override = {
 		name = "tahoma_60"
 		fontfiles = { 
-			"gfx/fonts/xiaozhuan/xiaozhuan_0"
-			"gfx/fonts/xiaozhuan/xiaozhuan_1"
-			"gfx/fonts/xiaozhuan/xiaozhuan_2"
-			"gfx/fonts/xiaozhuan/xiaozhuan_3"
-			"gfx/fonts/xiaozhuan/xiaozhuan_4"
-			"gfx/fonts/xiaozhuan/xiaozhuan_5"
+			"gfx/fonts/CytS200/CytS200_0"
+			"gfx/fonts/CytS200/CytS200_1"
+			"gfx/fonts/CytS200/CytS200_2"
+			"gfx/fonts/CytS200/CytS200_3"
+			"gfx/fonts/CytS200/CytS200_4"
+			"gfx/fonts/CytS200/CytS200_5"
+			"gfx/fonts/CytS200/CytS200_6"
+			"gfx/fonts/CytS200/CytS200_7"
+			"gfx/fonts/CytS200/CytS200_8"
+			"gfx/fonts/CytS200/CytS200_9"
+			"gfx/fonts/CytS200/CytS200_10"
+			"gfx/fonts/CytS200/CytS200_11"
+			"gfx/fonts/CytS200/CytS200_12"
+			"gfx/fonts/CytS200/CytS200_13"
+			"gfx/fonts/CytS200/CytS200_14"
+			"gfx/fonts/CytS200/CytS200_15"
+			"gfx/fonts/CytS200/CytS200_16"
+			"gfx/fonts/CytS200/CytS200_17"
 		}
 	languages = { "l_simp_chinese" } 
 	}
