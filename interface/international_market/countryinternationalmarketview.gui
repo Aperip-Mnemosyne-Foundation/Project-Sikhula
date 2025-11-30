@@ -2,49 +2,46 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "countryinternationalmarketview"
-		position = { x=-657 y=80}
-		show_position = { x=0 y =80 }
-		hide_position = { x=-657 y=80 }
+		position = { x=-606 y=78}
+		show_position = { x=-6 y =78 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
-		animation_time = 500
-		clipping = yes
-		size = { width=657 height=1360 }
+		animation_time = 300
+		size = { width=550 height=100%% }
 
-		hide_sound = menu_close_window
+		#hide_sound = menu_close_window
 		show_sound = menu_open_window
 
 		background = {
 			name = "Background"
-			spriteType ="GFX_gamemenu_bg"
+			spriteType ="GFX_tiled_bg"
 		}
 
-		#iconType = {
-			#name ="production_header_bg"
-			#spriteType = "GFX_header_bg"
-			#position = { x= 5 y = 9907 }
-			#Orientation = "UPPER_LEFT"
-		#}
+		iconType = {
+			name ="production_header_bg"
+			spriteType = "GFX_header_bg"
+			position = { x= 5 y = 07 }
+			Orientation = "UPPER_LEFT"
+		}
 
 		instantTextboxType = {
 			name = "International_market_title"
-			position = { x = 9 y = 7 }
-			font = "Youhei18"
+			position = { x = 45 y = 8 }
+			font = "hoi_36header"
 			borderSize = {x = 0 y = 0}
 			text = "MARKET_LABEL"
 			maxWidth = 440
 			maxHeight = 20
 			format = left
-			text_color_code = W
 		}
 
 		buttonType = {
 			name = "close_button"
-			position = { x = 302 y = -674 }
-			orientation = center
-			quadTextureSprite ="GFX_close_button_98"
+			position = { x = -43 y = 9 }
+			quadTextureSprite ="GFX_closebutton"
 			buttonFont = "Main_14_black"
 			shortcut = "ESCAPE"
+			Orientation = "UPPER_RIGHT"
 			clicksound = click_close
 		}
 
@@ -52,19 +49,19 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "top_values"
-			position = { x= 9 y = 4700}
+			position = { x= 9 y = 47}
 			clipping = no
 			Orientation = UPPER_LEFT
 
-			#iconType ={
-				#name ="top_bg"
-				#quadTextureSprite = "GFX_deployment_binding"
-				#Orientation = "UPPER_LEFT"
-			#}
+			iconType ={
+				name ="top_bg"
+				quadTextureSprite = "GFX_deployment_binding"
+				Orientation = "UPPER_LEFT"
+			}
 
 			instantTextboxType = {
 				name = "civ_convoy_allocation"
-				position = { x = 20 y = 997 }
+				position = { x = 20 y = 7 }
 				font = "hoi_18mbs"
 				text = "Allocated: Placeholder 999"
 				maxWidth = 180
@@ -75,7 +72,7 @@ guiTypes = {
 
 			instantTextboxType = {
 				name = "cic_bank_value"
-				position = { x = 210 y = 9997 }
+				position = { x = 210 y = 7 }
 				font = "hoi_18mbs"
 				text = "Bank: Placeholder 999"
 				maxWidth = 320
@@ -118,14 +115,14 @@ guiTypes = {
 		iconType = {
 			name = "tabs_background"
 			quadTextureSprite ="GFX_tab_diplomacy_bg"
-			position = { x = 15 y = 99121 }
+			position = { x = 15 y = 121 }
 			alwaystransparent = yes
 		}
 
 		buttonType = {
 			name = "buyer_tab_button"
 			quadTextureSprite = "GFX_Access_&_buy_equipment"
-			position = { x=15 y=9980 }
+			position = { x=15 y=80 }
 			buttonText = "INTERNATIONAL_MARKET_BUY_EQUIPMENT_TAB"
 			font = "hoi_18mbs"
 		}
@@ -133,7 +130,7 @@ guiTypes = {
 		buttonType = {
 			name = "seller_tab_button"
 			quadTextureSprite = "GFX_Add_equipment_to_markete"
-			position = { x=275 y=9980 }
+			position = { x=275 y=80 }
 			buttonText = "INTERNATIONAL_MARKET_SELL_EQUIPMENT_TAB"
 			font = "hoi_18mbs"
 		}
@@ -153,12 +150,12 @@ guiTypes = {
 			background = {
 				name = "Background"
 				spriteType ="GFX_market_ui"
-				position = { x= 5 y = 99175}
+				position = { x= 5 y = 175}
 			}
 
 			containerWindowType = {
 				name = "contracts_grid_container"
-				position = { x = 0 y = 9350 }
+				position = { x = 0 y = 350 }
 				size = { width=100%% height=100%% }
 				verticalScrollbar = "right_vertical_slider"
 				scroll_wheel_factor = 40
@@ -181,7 +178,7 @@ guiTypes = {
 				}
 
 				background = {
-					name = "test"
+					name = "background_overlay"
 					quadTextureSprite ="GFX_tiled_generic_overlay_bg1_small"
 				}
 
@@ -197,7 +194,7 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "market_access_overview_button_container"
-				position = { x = 350 y = 9200 }
+				position = { x = 350 y = 200 }
 
 				buttonType = {
 					name = "market_access_overview_button"
@@ -231,7 +228,7 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "market_options_container"
-				position = { x= 350 y = 9240}
+				position = { x= 350 y = 240}
 
 				buttonType = {
 					name = "market_options_button"
@@ -274,7 +271,7 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "market_stockpile_window_container"
-				position = { x = 0 y = 18870 }
+				position = { x = 0 y = 170 }
 				size = { width=100%% height=100%%}
 				positionType = {
 					name = "position"
@@ -295,7 +292,7 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "purchase_equipment_window_container"
-				position = { x = 88880 y = 170 }
+				position = { x = 0 y = 170 }
 				size = { width=100%% height=100%%}
 				positionType = {
 					name = "position"
@@ -311,14 +308,14 @@ guiTypes = {
 			iconType ={
 				name ="diplomacy_bottom"
 				spriteType = "GFX_main_screens_bottom"
-				position = { x = 3000 y = -55 }
+				position = { x = 3 y = -55 }
 				Orientation = "LOWER_LEFT"
 			}
 
 			buttonType = {
 				name = "diplo_view_button"
 				quadTextureSprite = "GFX_button_221x34"
-				position = { x=15000 y=-50 }
+				position = { x=150 y=-50 }
 				buttonText = "INTERNATIONAL_MARKET_OPEN_DIPLO_VIEW"
 				font = "hoi_18mbs"
 				Orientation = "LOWER_LEFT"
@@ -328,7 +325,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "active_purchase_contract_entry"
-		position = { x=08888 y=0 }
+		position = { x=0 y=0 }
 		size = { width=508 height= 130 }
 		clipping = no
 
@@ -489,7 +486,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "cic_progress_info"
-			position = { x=23788 y=45 }
+			position = { x=237 y=45 }
 
 			containerWindowType = {
 				name = "civ_info"
@@ -563,7 +560,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "contract_equipment_icons"
-			position = { x = 8880 y = 85 }
+			position = { x = 0 y = 85 }
 			size = { width=400 height=43 }
 
 			OverlappingElementsBoxType = {
@@ -584,13 +581,13 @@ guiTypes = {
 		iconType = {
 			name = "icon"
 			spriteType = "GFX_intel_ledger_eq_icon"
-			position = { x=8880 y=0 }
+			position = { x=0 y=0 }
 			alwaystransparent = yes
 		}
 
 		instantTextboxType = {
 			name = "amount"
-			position = { x = 8842 y = 18 }
+			position = { x = 42 y = 18 }
 			font = "hoi_16mbs"
 			text = "00"
 			maxWidth = 30

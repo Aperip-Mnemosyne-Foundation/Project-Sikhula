@@ -13,8 +13,8 @@ bitmapfonts = {
 		textcolors = {
 			G = { 86 172 91 }
 			R = { 222 86 70 }
-			Y = { 255 140 0 }
-			H = { 255 140 0 }
+			Y = { 238 201 35 }
+			H = { 238 201 35 }
 			T = { 255 255 255 }
 		}
 	}
@@ -47,6 +47,14 @@ bitmapfonts = {
 		languages = { "l_simp_chinese" }
 	}
 
+		bitmapfont_override = {
+		name = "loadscreen_header"
+		fontfiles = {
+			"gfx/fonts/korean/hoi_30header_kor"
+		}
+		languages = { "l_korean" }
+	}
+
 	bitmapfont = {
 		name = "loadscreen_tip"
 #		path = "gfx/fonts/hoi_24header"
@@ -62,8 +70,8 @@ bitmapfonts = {
 		textcolors = {
 			G = { 86 172 91 }
 			R = { 222 86 70 }
-			Y = { 255 140 0 }
-			H = { 255 140 0 }
+			Y = { 238 201 35 }
+			H = { 238 201 35 }
 			T = { 255 255 255 }
 		}
 	}
@@ -95,5 +103,12 @@ bitmapfonts = {
 		}
 		languages = { "l_simp_chinese" }
 	}
-	
+
+	bitmapfont_override = {
+		name = "loadscreen_tip"
+		fontfiles = { 
+			"gfx/fonts/korean/hoi_24header_kor"
+		}
+		languages = { "l_korean" } 
+	}
 }

@@ -577,13 +577,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/operatives/agencies/intelligence_agency_logo_RAJ_RAW.dds"
 		noOfFrames = 2
 	}
-
-
-
-
-
-
-
+	spriteType = {
+		name = "GFX_intelligence_agency_logo_JAP_Kempeitai"
+		texturefile = "gfx/interface/operatives/agencies/intelligence_agency_logo_JAP_Kempeitai.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_logo_PRC_central_social_affairs_department"
+		texturefile = "gfx/interface/operatives/agencies/intelligence_agency_logo_PRC_central_social_affairs_department.dds"
+		noOfFrames = 2
+	}
 
 	
 	#generic

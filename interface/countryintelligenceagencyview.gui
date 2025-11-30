@@ -2,57 +2,49 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "countryintelligenceagencyview"
-		position = { x=-657 y=80}
-		show_position = { x=0 y =80 }
-		hide_position = { x=-657 y=80 }
+		position = { x = -606 y = 78 }
+		show_position = { x= -6 y = 78 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
-		animation_time = 700
-		clipping = yes
-		size = { width=657 height=1360 }
-
+		animation_time = 300
+		size = { width = 550 height = 100%% }
+		
 		hide_sound = menu_close_window
 		show_sound = menu_open_window
-
+		
 		background = {
 			name = "Background"
-			spriteType ="GFX_gamemenu_bg"
+			spriteType ="GFX_tiled_bg"
 		}
 
 		iconType = {
-			name ="countrydecisionview_bg"
-			spriteType = "GFX_gamemenu_bg"
-			position = { x= 0 y = 0 }
+			name ="production_header_bg"
+			spriteType = "GFX_header_bg"
+			position = { x = 5 y = 7 }
 			Orientation = "UPPER_LEFT"
-		}
-
-		#iconType = {
-		#	name ="production_header_bg"
-		#	spriteType = "GFX_header_bg"
-		#	position = { x = 5 y = 7 }
-		#	Orientation = "UPPER_LEFT"
-		#}	
+		}	
 		
 		instantTextboxType = {
 			name = "intelligenceagencyview_title"
-			position = { x = 9 y = 7 }
-			font = "Youhei18"
+			position = { x = 45 y = 8 }
+			textureFile = ""
+			font = "hoi_36header"
 			borderSize = {x = 0 y = 0}
 			text = "INTELLIGENCEAGENCYVIEW_TITLE"
 			maxWidth = 440
 			maxHeight = 20
-			format = left
-			text_color_code = W
+			format = left	
 		}			
-			
+		
 		buttonType = {
 			name = "close_button"
-			position = { x = 302 y = -674 }
-			orientation = center
-			quadTextureSprite ="GFX_close_button_98"
+			position = { x = -43 y = 9 }
+			quadTextureSprite ="GFX_closebutton"
 			buttonFont = "Main_14_black"
 			shortcut = "ESCAPE"
+			Orientation = "UPPER_RIGHT"
 			clicksound = click_close
+			pdx_tooltip = "CLOSE"
 		}
 		
 		@window_width = 520
@@ -132,6 +124,15 @@ guiTypes = {
 				buttonType = {
 					name = "spymaster_button"
 					position = { x = -18 y = 54 }
+					quadTextureSprite ="GFX_spymaster_button"
+					buttonFont = "hoi_16mbs"
+					Orientation = "LOWER_LEFT"
+					clicksound = click_default
+				}
+				
+				buttonType = {
+					name = "faction_button"
+					position = { x = 150 y = 54 }
 					quadTextureSprite ="GFX_spymaster_button"
 					buttonFont = "hoi_16mbs"
 					Orientation = "LOWER_LEFT"
@@ -717,6 +718,17 @@ guiTypes = {
 			maxWidth = 94
 			alwaystransparent = yes			
 		}
+		
+		instantTextboxType = {
+			name = "opportunities"
+			position = { x = 0 y = 50 }
+			font = "hoi4_typewriter16"
+			text = "AGENCY_BRANCHES"
+			format = center
+			maxWidth = 94
+			alwaystransparent = yes	
+			hide = yes
+		}
 	}
 	
 	containerWindowType = {
@@ -724,7 +736,7 @@ guiTypes = {
 		position = { x = -4 y = 6 }
 		size = { width = 21 height = 21 }
 		
-		iconType = {
+		buttonType = {
 			name = "upgrade_icon"
 			spriteType = "GFX_agency_upgrade_researched_icon"
 			frame = 1
@@ -1006,16 +1018,25 @@ guiTypes = {
 			position = { x = 10 y = 24 }
 		}
 		
-		iconType = {
+		buttonType = {
 			name = "upgrade_icon_frame"
 			spriteType = "GFX_upgrade_frame_1_unavailable"
 			position = { x = 23 y = -26 }
 			alwaystransparent = yes
 		}
-		iconType = {
+
+		buttonType = {
 			name = "upgrade_icon"
 			spriteType = "GFX_agency_upgrade_icon_ph1"
 			position = { x = 58 y = -22 }
+		}
+
+		
+		iconType = {
+			name = "faction_icon"
+			spriteType = "GFX_faction_logo_generic_democratic"
+			position = { x = 5 y = 5}
+			hide = yes
 		}
 
 

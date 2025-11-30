@@ -60,4 +60,9 @@ spriteTypes = {
 		noOfFrames = 2
 	}
 
+	spriteType = {
+		name = "GFX_PLACEHOLDER_plus_button"
+		texturefile = "gfx/interface/buttons/placeholder_plus.dds"
+		legacy_lazy_load = no
+	}
 }

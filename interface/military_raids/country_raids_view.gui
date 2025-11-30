@@ -1018,7 +1018,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "raid_filter"
-		position = { x = -76 y = -265 }
+		position = { x = -76 y = -235 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
 		animation_time = 300

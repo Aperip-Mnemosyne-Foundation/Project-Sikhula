@@ -285,6 +285,30 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_bg_dlc049"
+		texturefile = "gfx/interface/career_profile/bg_no_compromise_no_surrender.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	spriteType = {
+		name = "GFX_bg_dlc049_owned"
+		texturefile = "gfx/interface/career_profile/bg_no_compromise_no_surrender_owned.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	spriteType = {
+		name = "GFX_bg_dlc049_simp_chinese"
+		texturefile = "gfx/interface/career_profile/bg_no_compromise_no_surrender_china.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	spriteType = {
+		name = "GFX_bg_dlc049_owned_simp_chinese"
+		texturefile = "gfx/interface/career_profile/bg_no_compromise_no_surrender_china_owned.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	spriteType = {
 		name = "GFX_career_profile_bg_default"
 		texturefile = "gfx/interface/career_profile/career_profile_bg_default.dds"
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"

@@ -369,22 +369,19 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_airoverview_button"
 		texturefile = "gfx/interface/topbar/airoverview_button.dds"
-		noOfFrames = 3
-		effectFile = "gfx/FX/buttonstate_onlydisable.lua"	
+		noOfFrames = 2		
 	}	
 	
 	spriteType = {
 		name = "GFX_navyoverview_button"
 		texturefile = "gfx/interface/topbar/navyoverview_button.dds"
-		noOfFrames = 3
-		effectFile = "gfx/FX/buttonstate_onlydisable.lua"		
+		noOfFrames = 2		
 	}	
 	
 	spriteType = {
 		name = "GFX_armyoverview_button"
 		texturefile = "gfx/interface/topbar/armyoverview_button.dds"
-		noOfFrames = 3
-		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 2		
 	}
 	
 	spriteType = {
@@ -425,8 +422,5 @@ spriteTypes = {
 		alwaystransparent = yes
 		effectFile = "gfx/FX/buttonstate_blendframes.lua"
 	}
-	spriteType = {
-		name = "GFX_TBCOVER"
-		texturefile = "gfx/interface/topbar/TB_COVER.png"
-	}
+	
 }

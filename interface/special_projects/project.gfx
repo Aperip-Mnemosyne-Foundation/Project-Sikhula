@@ -126,6 +126,11 @@ spriteTypes = {
 		noOfFrames = 3
 	}
 	spriteType = {
+		name = "GFX_mapicon_naval_headquarter"
+		texturefile = "gfx/interface/special_project/mapicon_naval_headquarter.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
 		name = "GFX_projact_approval_stamp"
 		texturefile = "gfx/interface/special_project/projact_approval_stamp.dds"
 	}
@@ -424,6 +429,18 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_sp_naval_underway_replenishment"
 		texturefile = "gfx/interface/special_project/project_icons/sp_naval_underway_replenishment.dds"
+	}
+	spriteType = {
+		name = "GFX_sp_naval_support_ships"
+		texturefile = "gfx/interface/special_project/project_icons/sp_naval_support_ships.dds"
+	}
+	spriteType = {
+		name = "GFX_sp_naval_escort_carrier"
+		texturefile = "gfx/interface/special_project/project_icons/sp_naval_escort_carrier.dds"
+	}
+	spriteType = {
+		name = "GFX_sp_naval_submarine_carrier"
+		texturefile = "gfx/interface/special_project/project_icons/sp_naval_submarine_carrier.dds"
 	}
 
 

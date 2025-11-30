@@ -50,7 +50,7 @@ guiTypes = {
 			iconType = {
 				name = "progress_attacker"
 				spriteType = "GFX_navalcombat_bar_progress_attacker"
-				position = { x=230 y=133 }
+				position = { x=227 y=133 }
 			}
 			iconType = {
 				name = "progress_defender"
@@ -353,7 +353,7 @@ guiTypes = {
 			
 			buttonType = {
 				name = "disengage"
-				position = {x=386 y=155}
+				position = {x=387 y=155}
 				spriteType = "GFX_hold"
 				pdx_tooltip = "DISENGAGE_FROM_COMBAT"
 			}

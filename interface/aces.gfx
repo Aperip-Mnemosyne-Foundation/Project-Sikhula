@@ -400,4 +400,93 @@ spriteTypes = {
 		texturefile = "gfx/aces/RAJ_Ranga_Reddy_ace.dds"
 	}
 
+
+
+
+  #####            #    
+ #     # ######   # #   
+ #       #       #   #  
+  #####  #####  #     # 
+       # #      ####### 
+ #     # #      #     # 
+  #####  ###### #     # 
+                        
+
+##### CHI #####
+
+
+	spriteType = {
+		name = "GFX_CHI_ace_Chin_Shui"
+		texturefile = "gfx/aces/CHI_Chan_Sui_Tin_ace.dds" 
+	}
+	spriteType = {
+		name = "GFX_CHI_ace_Hazel_Lee"
+		texturefile = "gfx/aces/CHI_Hazel_Ying_Lee_ace.dds" 
+	}
+	spriteType = {
+		name = "GFX_CHI_ace_Huang_Xinrui"
+		texturefile = "gfx/aces/CHI_Huang_Xinrui_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ace_Huang_Panyang"
+		texturefile = "gfx/aces/CHI_John_Wong_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ace_Liu_Zhesheng"
+		texturefile = "gfx/aces/CHI_Liu_Ch_Sheng_ace.dds" 
+	}
+	spriteType = {
+		name = "GFX_CHI_ace_Liu_Chuikang"
+		texturefile = "gfx/aces/CHI_Liu_Chui_Kang_ace.dds" 
+	}
+	spriteType = {
+		name = "GFX_CHI_ace_Margaret_Gee"
+		texturefile = "gfx/aces/CHI_Maggie_Gee_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ace_Yue_Yiqin"
+		texturefile = "gfx/aces/CHI_Yue_Yiqin_ace.dds"
+	}
+
+
+##### JAP #####
+
+	spriteType = {
+		name = "GFX_JAP_ace_Chitoshi_Isozaki"
+		texturefile = "gfx/aces/JAP_Chitoshi_Isozaki_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_ace_Hideki_Shingo"
+		texturefile = "gfx/aces/JAP_Hideki_Shingo_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_ace_Kaneyoshi_Muto"
+		texturefile = "gfx/aces/JAP_Kaneyoshi_Muto_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_ace_Naoshi_Kanno"
+		texturefile = "gfx/aces/JAP_Naoshi_Kanno_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_ace_Nobuo_Fujita"
+		texturefile = "gfx/aces/JAP_Nobuo_Fujita_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_ace_Saburo_Sakai"
+		texturefile = "gfx/aces/JAP_Saburo_Sakai_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_ace_Tateo_Kato"
+		texturefile = "gfx/aces/JAP_Tateo_Kato_ace.dds"
+	}
+	spriteType = {
+		name = "GFX_JAP_ace_Tetsuzo_Iwamoto"
+		texturefile = "gfx/aces/JAP_Tetsuzo_Iwamoto_ace.dds"
+	}
+
+
+
+
+
+
 }

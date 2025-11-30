@@ -1077,7 +1077,7 @@ guiTypes = {
 				
 				instantTextBoxType = {
 					name = "autosave_tocloud_title"
-					position = { x = 64 y = 112 }
+					position = { x = 64 y = 10 }
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 0 y =0}
@@ -2589,7 +2589,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "autosave_tocloud_title"
-					position = { x = 74 y = 69 }
+					position = { x = 74 y = 55 }
 					textureFile = ""
 					font = "hoi_18mbs"
 					borderSize = {x = 0 y =0}
@@ -2603,7 +2603,7 @@ guiTypes = {
 				
 				checkboxType = {
 					name = "autosave_tocloud"
-					position = { x = 30 y = 64}
+					position = { x = 30 y = 50}
 					quadTextureSprite ="GFX_generic_checkbox"
 					Orientation = "UPPER_LEFT"
 					clicksound = click_checkbox
@@ -2611,7 +2611,7 @@ guiTypes = {
 				
 				instantTextBoxType = {
 					name = "allow_hotjoin_title"
-					position = { x = 274 y = 68 }
+					position = { x = 274 y = 54 }
 					textureFile = ""
 					font = "hoi_18mbs"
 					borderSize = {x = 0 y =0}
@@ -2624,7 +2624,7 @@ guiTypes = {
 				
 				checkboxType = {
 					name = "allow_hotjoin"
-					position = { x = 230 y = 64}
+					position = { x = 230 y = 50}
 					quadTextureSprite ="GFX_generic_checkbox"
 					Orientation = "UPPER_LEFT"
 					clicksound = click_checkbox
@@ -2633,7 +2633,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "career_cloud_title"
-					position = { x = 74 y = 105 }
+					position = { x = 74 y = 88 }
 					textureFile = ""
 					font = "hoi_18mbs"
 					borderSize = {x = 0 y =0}
@@ -2646,7 +2646,7 @@ guiTypes = {
 				
 				checkboxType = {
 					name = "career_cloud_active"
-					position = { x = 30 y = 100 }
+					position = { x = 30 y = 86 }
 					quadTextureSprite ="GFX_generic_checkbox"
 					Orientation = "UPPER_LEFT"
 					clicksound = click_checkbox
@@ -2654,7 +2654,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "allow_coop_title"
-					position = { x = 74 y = 142 }
+					position = { x = 74 y = 125 }
 					textureFile = ""
 					font = "hoi_18mbs"
 					borderSize = {x = 0 y =0}
@@ -2668,7 +2668,7 @@ guiTypes = {
 				
 				checkboxType = {
 					name = "allow_coop"
-					position = { x = 30 y = 137}
+					position = { x = 30 y = 120}
 					quadTextureSprite ="GFX_generic_checkbox"
 					Orientation = "UPPER_LEFT"
 					clicksound = click_checkbox
@@ -2676,7 +2676,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "nato_counters_title"
-					position = { x = 74 y = 179 }
+					position = { x = 274 y = 125 }
 					textureFile = ""
 					font = "hoi_18mbs"
 					borderSize = {x = 0 y =0}
@@ -2689,7 +2689,7 @@ guiTypes = {
 				
 				checkboxType = {
 					name = "nato_counters_active"
-					position = { x = 30 y = 174 }
+					position = { x = 230 y = 120 }
 					quadTextureSprite ="GFX_generic_checkbox"
 					Orientation = "UPPER_LEFT"
 					clicksound = click_checkbox
@@ -2697,7 +2697,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "pause_on_popup_title"
-					position = { x = 74 y = 216 }
+					position = { x = 74 y = 199 }
 					textureFile = ""
 					font = "hoi_18mbs"
 					borderSize = {x = 0 y =0}
@@ -2711,7 +2711,51 @@ guiTypes = {
 				
 				checkboxType = {
 					name = "pause_on_popup_active"
-					position = { x = 30 y = 211 }
+					position = { x = 30 y = 194 }
+					quadTextureSprite ="GFX_generic_checkbox"
+					Orientation = "UPPER_LEFT"
+					clicksound = click_checkbox
+				}
+				
+				instantTextBoxType = {
+					name = "always_show_regions_title"
+					position = { x = 74 y = 310 }
+					textureFile = ""
+					font = "hoi_18mbs"
+					borderSize = {x = 0 y =0}
+					text = "ALWAYS_SHOW_REGIONS"
+					maxWidth = 300
+					maxHeight = 20						
+					format = left
+					vertical_alignment = center	
+					pdx_tooltip = ALWAYS_SHOW_REGIONS_DESC
+				}	
+				
+				checkboxType = {
+					name = "always_show_regions"
+					position = { x = 30 y = 305 }
+					quadTextureSprite ="GFX_generic_checkbox"
+					Orientation = "UPPER_LEFT"
+					clicksound = click_checkbox
+				}
+				
+				instantTextBoxType = {
+					name = "lock_map_tooltip_title"
+					position = { x = 74 y = 161 }
+					textureFile = ""
+					font = "hoi_18mbs"
+					borderSize = {x = 0 y =0}
+					text = "LOCK_MAP_TOOLTIP"
+					maxWidth = 300
+					maxHeight = 20						
+					format = left
+					vertical_alignment = center	
+					pdx_tooltip = LOCK_MAP_TOOLTIP_DESC
+				}	
+				
+				checkboxType = {
+					name = "lock_map_tooltip"
+					position = { x = 30 y = 156 }
 					quadTextureSprite ="GFX_generic_checkbox"
 					Orientation = "UPPER_LEFT"
 					clicksound = click_checkbox
@@ -2741,7 +2785,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "external_browser_title"
-					position = { x = 74 y = 253 }
+					position = { x = 74 y = 236 }
 					textureFile = ""
 					font = "hoi_18mbs"
 					borderSize = {x = 0 y =0}
@@ -2754,7 +2798,7 @@ guiTypes = {
 				
 				checkboxType = {
 					name = "external_browser_active"
-					position = { x = 30 y = 248 }
+					position = { x = 30 y = 231 }
 					quadTextureSprite ="GFX_generic_checkbox"
 					Orientation = "UPPER_LEFT"
 					clicksound = click_checkbox
@@ -2762,7 +2806,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "home_wiki_title"
-					position = { x = 74 y = 290 }
+					position = { x = 74 y = 273 }
 					textureFile = ""
 					font = "hoi_18mbs"
 					borderSize = {x = 0 y =0}
@@ -2775,7 +2819,7 @@ guiTypes = {
 				
 				checkboxType = {
 					name = "home_wiki_active"
-					position = { x = 30 y = 285 }
+					position = { x = 30 y = 268 }
 					quadTextureSprite ="GFX_generic_checkbox"
 					Orientation = "UPPER_LEFT"
 					clicksound = click_checkbox

@@ -2289,15 +2289,14 @@ spriteTypes = {
 
 
 
-	###########################
-	###########################
-	###########################
-	###########################
-	########### TOA ###########
-	###########################
-	###########################
-	###########################
-	###########################
+########  #######     ###    
+   ##    ##     ##   ## ##   
+   ##    ##     ##  ##   ##  
+   ##    ##     ## ##     ## 
+   ##    ##     ## ######### 
+   ##    ##     ## ##     ## 
+   ##     #######  ##     ## 
+
 
 	### Decision Category Icons ### 
 
@@ -2763,6 +2762,204 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_RAJ_decision_investment_defenses_icon"
 		texturefile = "gfx/interface/decisions/RAJ_decision_investment_defenses_icon.dds"
+	}
+
+
+
+
+				####	#####	 ###
+			   #   		#		#	#
+				####	###		#####
+					#	#		#	#
+			   #####	#####	#	#
+	
+			    ### JAPAN ###
+		## Decision Category Pictures ##
+	spriteType = {
+		name = "GFX_decision_cat_picture_JAP_state_shinto"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_JAP_state_shinto.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_cat_picture_form_greater_mongolia"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_form_greater_mongolia.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_cat_picture_JAP_workers_celebrating"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_JAP_workers_celebrating.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_cat_picture_form_united_hui_state"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_form_united_hui_state.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_cat_picture_JAP_kokutai"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_JAP_kokutai.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_cat_picture_JAP_trial"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_JAP_trial.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_cat_picture_JAP_greater_east_asia_co_prosperity_sphere"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_JAP_greater_east_asia_co_prosperity_sphere.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_cat_picture_JAP_government_censors"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_JAP_government_censors.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_cat_picture_JAP_imperial_soldiers"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_JAP_imperial_soldiers.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_cat_picture_JAP_imperial_influence_diet"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_JAP_imperial_influence_diet.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_cat_picture_JAP_imperial_influence_hirohito"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_JAP_imperial_influence_hirohito.dds"
+	}
+
+
+## Decision icons ##
+	spriteType = {
+		name = "GFX_decision_coal"
+		texturefile = "gfx/interface/decisions/decision_coal.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_generic_planted_spear"
+		texturefile = "gfx/interface/decisions/decision_generic_planted_spear.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_JAP_establish_empire_of_vietnam"
+		texturefile = "gfx/interface/decisions/decision_JAP_establish_empire_of_vietnam.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_JAP_establish_kingdom_of_kampuchea"
+		texturefile = "gfx/interface/decisions/decision_JAP_establish_kingdom_of_kampuchea.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_JAP_establish_kingdom_of_luang_prabang"
+		texturefile = "gfx/interface/decisions/decision_JAP_establish_kingdom_of_luang_prabang.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_JAP_establish_state_of_ceylon"
+		texturefile = "gfx/interface/decisions/decision_JAP_establish_state_of_ceylon.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_JAP_army_faction"
+		texturefile = "gfx/interface/decisions/decision_JAP_army_faction.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_JAP_civic_faction"
+		texturefile = "gfx/interface/decisions/decision_JAP_civic_faction.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_JAP_naval_faction"
+		texturefile = "gfx/interface/decisions/decision_JAP_naval_faction.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_JAP_zaibatsu_faction"
+		texturefile = "gfx/interface/decisions/decision_JAP_zaibatsu_faction.dds"
+	}
+
+
+## Decision cat icons ##
+	spriteType = {
+		name = "GFX_decision_category_JAP_imperial_glory_blue"
+		texturefile = "gfx/interface/decisions/decision_category_JAP_imperial_glory_blue.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_category_JAP_imperial_glory_red"
+		texturefile = "gfx/interface/decisions/decision_category_JAP_imperial_glory_red.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_category_JAP_state_shintoism"
+		texturefile = "gfx/interface/decisions/decision_category_JAP_state_shintoism.dds"
+	}
+
+
+	    ### PRC Communist China ###
+	## Decision icons ##
+
+	spriteType = {
+		name = "GFX_decision_generic_guerilla_base_0"
+		texturefile = "gfx/interface/decisions/decision_generic_guerilla_base_0.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_generic_guerilla_base_1"
+		texturefile = "gfx/interface/decisions/decision_generic_guerilla_base_1.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_generic_guerilla_base_2"
+		texturefile = "gfx/interface/decisions/decision_generic_guerilla_base_2.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_generic_guerilla_base"
+		texturefile = "gfx/interface/decisions/decision_generic_guerilla_base.dds"
+	}
+	spriteType = {
+		name = "GFX_decisions_generic_sabotage"
+		texturefile = "gfx/interface/decisions/decisions_generic_sabotage.dds"
+	}
+	spriteType = {
+		name = "GFX_decisions_generic_infiltration_0"
+		texturefile = "gfx/interface/decisions/decisions_generic_infiltration_0.dds"
+	}
+	spriteType = {
+		name = "GFX_decisions_generic_infiltration_1"
+		texturefile = "gfx/interface/decisions/decisions_generic_infiltration_1.dds"
+	}
+	spriteType = {
+		name = "GFX_decisions_generic_infiltration_2"
+		texturefile = "gfx/interface/decisions/decisions_generic_infiltration_2.dds"
+	}
+	spriteType = {
+		name = "GFX_decisions_generic_infiltration_3"
+		texturefile = "gfx/interface/decisions/decisions_generic_infiltration_3.dds"
+	}
+	spriteType = {
+		name = "GFX_decisions_generic_infiltration"
+		texturefile = "gfx/interface/decisions/decisions_generic_infiltration.dds"
+	}
+
+		 ### PHILIPPINES ###
+	## Decision Category Pictures ##
+	spriteType = {
+		name = "GFX_decision_cat_picture_PHI_american_intervention"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_PHI_american_intervention.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_cat_picture_form_maphilindo"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_form_maphilindo.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_cat_picture_spanish_america"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_spanish_america.dds"
+	}
+
+
+	    ### China ###
+	## Decision icons ##
+	spriteType = {
+		name = "GFX_decisions_generic_counter_infiltration"
+		texturefile = "gfx/interface/decisions/decisions_generic_counter_infiltration.dds"
+	}
+	spriteType = {
+		name = "GFX_decisions_generic_counter_infiltration_0"
+		texturefile = "gfx/interface/decisions/decisions_generic_counter_infiltration_0.dds"
+	}
+	spriteType = {
+		name = "GFX_decisions_generic_counter_infiltration_1"
+		texturefile = "gfx/interface/decisions/decisions_generic_counter_infiltration_1.dds"
+	}
+	spriteType = {
+		name = "GFX_decisions_generic_counter_infiltration_2"
+		texturefile = "gfx/interface/decisions/decisions_generic_counter_infiltration_2.dds"
+	}
+	spriteType = {
+		name = "GFX_decisions_generic_counter_infiltration_3"
+		texturefile = "gfx/interface/decisions/decisions_generic_counter_infiltration_3.dds"
 	}
 
 }

@@ -2,57 +2,37 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "countrylogisticsview"
-		position = { x=-657 y=80}
-		show_position = { x=0 y =80 }
-		hide_position = { x=-657 y=80 }
+		position = { x=-606 y=78 }	
+		show_position = { x=-6 y =78 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
-		animation_time = 700
-		clipping = yes
-		size = { width=657 height=1360 }
-
-		hide_sound = menu_close_window
+		animation_time = 300
+		size = { width=550 height=100%% }
+		
+		#hide_sound = menu_close_window
 		show_sound = menu_open_window
-
+		
 		background = {
 			name = "Background"
-			spriteType ="GFX_gamemenu_bg"
+			quadTextureSprite ="GFX_tiled_window_1b_border"
 		}
 
-		iconType = {
-			name ="countrydecisionview_bg"
-			spriteType = "GFX_gamemenu_bg"
-			position = { x= 0 y = 0 }
+		iconType ={
+			name ="logistics_header_bg"
+			spriteType = "GFX_header_bg"
+			position = { x= 5 y = 07 }
 			Orientation = "UPPER_LEFT"
-		}
-
-		#iconType ={
-		#	name ="logistics_header_bg"
-		#	spriteType = "GFX_header_bg"
-		#	position = { x= 5 y = 07 }
-		#	Orientation = "UPPER_LEFT"
-		#}	
+		}	
 		
 		instantTextboxType = {
 			name = "logistics_title"
-			position = { x = 9 y = 7 }
-			font = "Youhei18"
+			position = { x = 45 y = 8 }
+			font = "hoi_36header"
 			borderSize = {x = 0 y = 0}
 			text = "LOGISTICS_LOGISTICS_LABEL"
-			maxWidth = 440
+			maxWidth = 400
 			maxHeight = 20
-			format = left
-			text_color_code = W
-		}			
-			
-		buttonType = {
-			name = "close_button"
-			position = { x = 302 y = -674 }
-			orientation = center
-			quadTextureSprite ="GFX_close_button_98"
-			buttonFont = "Main_14_black"
-			shortcut = "ESCAPE"
-			clicksound = click_close
+			format = left	
 		}
 		
 		iconType = {
@@ -70,8 +50,8 @@ guiTypes = {
 		}
 
 		containerWindowType = {
-			name = "resources"
-			position = { x = 18 y = 53 }
+			name = "resource_strip_container"
+			position = { x = 20 y = 46 }
 			size = { width = -20 height = 25 }
 
 			iconType ={
@@ -84,10 +64,10 @@ guiTypes = {
 			gridBoxType = {
 				orientation = "CENTER_UP"
 				name = "resources_grid"
-				position = { x = -210 y = 1 }
+				position = { x = -250 y = 4 }
 				size = { width = 100% height = 100% }
 				slotsize = { width = 70 height = 31 }
-				max_slots = { x = 6 y = 1 }
+				max_slots = { x = 7 y = 1 }
 				add_horizontal = no
 				format = "UPPER_LEFT"
 			}
@@ -626,16 +606,16 @@ guiTypes = {
 			}
 		}
 		
-		#buttonType = {
-		#	name = "close_button"
-		#	position = { x = -43 y = 10 }
-		#	quadTextureSprite ="GFX_closebutton"
-		#	buttonFont = "hoi_16mbs"
-		#	shortcut = "ESCAPE"
-		#	Orientation = "UPPER_RIGHT"
-		#	clicksound = click_close
-		#	pdx_tooltip = "CLOSE"
-		#}
+		buttonType = {
+			name = "close_button"
+			position = { x = -43 y = 10 }
+			quadTextureSprite ="GFX_closebutton"
+			buttonFont = "hoi_16mbs"
+			shortcut = "ESCAPE"
+			Orientation = "UPPER_RIGHT"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
 		
 		
 		

@@ -62,6 +62,18 @@ spriteTypes = {
 		name = "GFX_portrait_CHI_wang_ganchang"
 		texturefile = "gfx/leaders/scientists/portrait_CHI_wang_ganchang.dds"
 	}
+	spriteType = {
+		name = "GFX_portrait_CHI_chu_chia_jen"
+		texturefile = "gfx/leaders/scientists/portrait_CHI_chu_chia_jen.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CHI_wong_tsu"
+		texturefile = "gfx/leaders/scientists/portrait_CHI_wong_tsu.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_CHI_xu_tingyao"
+		texturefile = "gfx/leaders/scientists/portrait_CHI_xu_tingyao.dds"
+	}
 
 	## DEN ##
 	spriteType = {
@@ -303,6 +315,45 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_portrait_JAP_yoji_ito"
 		texturefile = "gfx/leaders/scientists/portrait_JAP_yoji_ito.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_JAP_yuzuru_hiraga_scientist"
+		texturefile = "gfx/leaders/scientists/portrait_JAP_yuzuru_hiraga_scientist.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_JAP_hideo_iwakuro_scientist"
+		texturefile = "gfx/leaders/scientists/portrait_JAP_hideo_iwakuro_scientist.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_JAP_yoshitoshi_tokugawa_scientist"
+		texturefile = "gfx/leaders/scientists/portrait_JAP_yoshitoshi_tokugawa_scientist.dds"
+	}
+
+
+	## PRC ##
+
+	spriteType = {
+		name = "GFX_portrait_PRC_he_zehui"
+		texturefile = "gfx/leaders/scientists/portrait_PRC_he_zehui.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_PRC_qian_sanqiang"
+		texturefile = "gfx/leaders/scientists/portrait_PRC_qian_sanqiang.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_PRC_qian_xuesan"
+		texturefile = "gfx/leaders/scientists/portrait_PRC_qian_xuesan.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_PRC_wang_shusheng"
+		texturefile = "gfx/leaders/scientists/portrait_PRC_wang_shusheng.dds"
+	}
+
+	## PHI ##
+
+	spriteType = {
+		name = "GFX_portrait_PHI_emma_rotor"
+		texturefile = "gfx/leaders/scientists/portrait_PHI_emma_rotor.dds"
 	}
 
 

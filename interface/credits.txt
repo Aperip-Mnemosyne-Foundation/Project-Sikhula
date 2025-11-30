@@ -1,135 +1,563 @@
-﻿#A Single Spark Prairie Fire
+﻿#Hearts of Iron IV:
+#No Compromise, No Surrender
 
-#Mod Director
-FXG
+#Game Director
+Peter Nicholson
 
------------------------------------------------------------------------------------------
+#Producers
+Martin Svenblad  
+Hedvig Skagh  
+Milica Maricic
 
-#CODE TEAM
+#Tech Lead
+Erik Nikko
 
-#MANAGEMENT TEAM
+#Release Engineer
+Benjamin Larsson
 
-#Code Lead
-CzXieDdan
-
-#PROGRAMMERS
-
-#Focus Tree
-CzXieDdan
-Iallemege
-
-#GUI Code
-CzXieDdan
-
-#Map
-Herobrine
-
------------------------------------------------------------------------------------------
-
-#DESIGN TEAM
-
-#MANAGEMENT TEAM
+#Programmers
+Björn Persson Mattsson  
+Erik Nikko  
+Jan Takac  
+Jacob Johansson  
+Jonathan Lundgren  
+Robert Khalikov  
+Tao Chen  
+Virani Baskurt  
+Frank van Summeren  
+Teo Silverhjelm  
+Andres Ricardo Chamarra   
+Niels Uiterwijk
 
 #Design Lead
-FXG
+Thomas Årnfelt  
+Amy Stephenson-Dickinson
 
-#DESIGNERS
+#Designer
+Tomasz Żwirski  
+Jack Berggren Elers  
+Jamie Wood
 
-#Backstory
-FXG
+#UX Designer
+Peter Johannesson  
+Linnea Rydh
 
-#Focus
-CzXieDdan
-FXG
+#Content Designers
+Daniel Sandin  
+Eilidh MacRuaidhri  
+Gareth Kay  
+Jonathan Ramström  
+Manuel Molina Grande  
+Malin Hallgren  
+Viktor Dahlberg  
+Lily Lindstrand Hogan  
+Anna Loberg  
+Drikus Kuiper  
+Jean Noblet-Sidwall  
+Mats Larsson
 
------------------------------------------------------------------------------------------
+#Additional Content Design
+Marijn Vroegh  
+Hektor Årnfelt Ramström
 
-#ART TEAM
+#Artists 2D
+Jimmy Laskowski  
+Marie Sommerdahl  
+Ana Gomes
 
-#MANAGEMENT TEAM
+#Artist 3D
+John Gustafsson 
 
-#Art Lead
-Haxzl AZHE
+#QA Testers
+Gustav Nenzén  
+Vedran Uzelac  
+Niklas Ivarsson  
+Ayoub Elmekki
 
-#PRODUCERS
+#Studio Management
+#Studio Manager
+Niels Uiterwijk
 
-#Focus Icons
-AL4
-CzXieDdan
-Haxzl AZHE
-Valer0chka
-白毛萝莉少年2.0
-米兰倒吊人牢墨
-小王，系佳门（真）
-向远逐光
+#Operations Manager
+Hedvig Skagh
 
-#GUI 2D Art
-CzXieDdan
-Haxzl AZHE
-起司
+#Art Manager
+Bijoy Thomas
 
-#Law Icons
-米兰倒吊人牢墨
+#Community Team
+Per Bonomi  
+Michaela Aicardi  
+Nicholas Hubert (Chakerathe)  
+Klara Joelsson Träff  
+Fraser Johnstone  
+Lizzie Dong  
+Miaosen Teng
 
-#Leader Images
-Haxzl AZHE
-随地
+#Paradox Interactive
 
-#National Spirit Icons
-CzXieDdan
+#Product Management Team
 
------------------------------------------------------------------------------------------
+#Business Owner
+Fredrik Sellden
 
-#WEITING TEAM
+#Production Team
 
-#MANAGEMENT TEAM
+#Release Managers
+Louise Mutel  
+Nicole Savage  
+Becky Gelson  
+Ida Ankarstrand
 
-#Writing Lead
-永遠のプリンセスの守護者
+#Localization Producers
+Nick Citkoŭ
+Michael Radnitz
 
-#LOCALISATION
+#Marketing
 
-#Simp Chinese
-永遠のプリンセスの守護者
+#Product Marketing Management
+Hanna Holmgren
 
-#TEXTS WRITIERS
+#Marketing Creative Producers
+Oskar Petrén
+Niklas Johansson
 
-#Backstory Texts
+#Paid Media
+Henrik Bonnichsen  
+Linn Yngvesson  
+Anton Rask
+Sofia Lundstedt Radetzki
 
-#Focus Texts
+#Public Relations
+Troy Goodfellow
 
-#Law Texts
+#Marketing Growth
+June Low
 
-#Leader Texts
+#Social Video Production
+Alexander Eliasson  
+Benjamin Magnus Kajfasz  
+Marcus Paulsson  
+Felicia Holmgren Fondelius
 
-#National Spirit Texts
+#Influencer Relations
+Jonathan Whitley  
+Dennis Johnni
 
-#Party&Ideology Texts
+#Web Services
+Jonas Stenqvist  
+Josef Widoff
 
------------------------------------------------------------------------------------------
+#Customer Support
+Christian Arvidsson
 
-The following individuals and organizations either participated in
-the creation of the work or contribute support during production.
-Although a small number may no longer be part of the production
-team,they are also listed here in recognition of their in volvement.
+#Marketing Automation Specialist
+Annie Alström
 
------------------------------------------------------------------------------------------
+#Researchers
+Agata Macuba
+Filip Stenback
 
+#Data Scientists
+Cláudio Rosa
 
+#Partner Account Managers
+Jackson Downing 
 
+#Partner Marketing Manager
+Kimberly Trapnell
 
+#Commercial Manager
+Peter Skog
 
+#Community Program Specialist
+Erik Jakobsson
 
+#Social Media Specialist
+Preethi Doddy
 
+#Audio
 
+#Head of Audio
+Franco Freda
 
+#Audio Producer
+Samet Atasoy
 
+#Sound Designers
+Leon Lopez Moral
 
+#Music
 
+#Music composed and produced by:
+Andreas Waldetoft & Philip Wareborn
 
+#Orchestration:
+Philip Wareborn & Andreas Waldetoft
 
+#Soloists:
+Sandro Friedrich (Ethnic Flutes)  
+Vicent Granell Verdeguer (Trumpet)  
+Hannah Zhang (Erhu & Vln)  
+Simon Huber (Cello)  
+Mats Andersson (Nylon Guitar)  
+Pontus Karlsson (Percussion)
 
+#Build Team
 
+#Director of Tech and Services
+Leif Dellmar
+
+#Head of Platforms
+David Drake
+
+#Tech Lead
+Per Hasselström
+
+#Build Engineers
+Alexander Fast  
+Henrik Lindgren  
+Tadgh Wagstaff  
+Vjola Velikaj
+
+#Test Automation Engineers
+Albin Wallin  
+Yaroslav Hetman
+
+#Infrastructure
+
+#Tech Lead
+Philip Adams
+
+#Engineers
+Javier Jarpa Boscan  
+Rohit Thomas  
+Layla Manley
+
+#External Partners
+
+#Art
+Rocketbrush Studio
+
+#Technology
+Heroic Labs - Nakama
+
+#Localisation
+
+General Administration and Project Management:
+Native Prime SAS
+
+Senior Project Managers:
+Julia Othlinghaus-Wulhorst
+Maren Garn
+Friedrich Klemme
+
+Localization & QA Tools:
+Friedrich Klemme
+Michael Waaler
+Dieter Pfeil
+Julia Othlinghaus-Wulhorst
+
+#Simplified Chinese
+LangLink - Localization Solutions
+
+Project Manager:
+Troy Ye
+
+Translators:
+ShaoYang
+ol123489
+Gannod-Kitkut
+yinzhang1017
+Haximodor He
+DesertEagleF
+Miller Mei
+Isabelle Du
+(more to be added soon)
+
+#Spanish
+QLOC S.A.
+Project Manager:
+Paulina Bacia-Banaszek
+
+Translators:
+Alicia del Fresno Orellana
+Belén Heras Albares
+Itziar Ugarte Lechuga
+Maira Belmonte de Rueda
+Pablo Burgos González
+Xurxo Ferreirós Gómez
+Sergi Escrivà Morant
+
+Proofreaders / Editors:
+Cristina Herraiz Olivas
+Javier García Hurtado
+
+#French
+Native Prime SAS
+
+Project Managers:
+Carine Mathey
+Brice Lehoux
+Edgar Renaud
+
+Translators:
+Clémentine Rayer
+Fanny Guédez
+Victor Autet
+
+Proofreaders / Editors:
+Morgane Le Boucher
+
+#German
+Native Prime SAS
+
+Project Managers:
+Maren Garn, Julia Othlinghaus-Wulhorst, Dieter Pfeil
+
+Translators:
+Kai Bagehorn
+Christian Meier
+
+Proofreaders / Edtitors:
+Thomas Christiansen
+
+#Polish
+QLOC S.A.
+
+Project Manager:
+Paulina Bacia-Banaszek
+
+Translators:
+Łukasz Zieliński
+Maciej Masłoń
+Marek Gałązka
+
+Proofreaders / Editors:
+Monika Buraczyńska
+Monika Chojnowska
+Robert Zygmunt
+
+#Russian
+The Most Games 
+
+Project Manager:
+Alexander Loktionov
+
+Translators:
+Igor Vasilyev
+Nikita Antonov
+Maksim Onishchenko
+Alexander Skachkov
+Vasilii Firsov
+Alexander Larin
+Pavel Nikolenko
+Nikolai Kondratenko
+Alyona Aksyonova
+Maksim Mihailov
+Andrei Cherkovski
+
+Proofreaders / Editors:
+Maria Yunger
+
+#Brazilian Portuguese
+Native Prime SAS
+
+Project Manager:
+Mateus Andrade
+
+Translators:
+Vinicius Fugita
+
+Proofreaders / Editors:
+Ramon D. Ferreira
+Sandra Smith
+
+#Japanese
+Active Gaming Media, Inc.
+
+Project Manager:
+Clément Sonntag
+James Davis
+
+Linguist
+Shuji Seika
+Rei Yoshino
+
+Editor
+Yo Shin
+
+#Korean
+Native Prime SAS
+
+Project Manager:
+Dooyoung Kim
+
+Translators:
+Younghun Sim
+Seonggyu Park
+Kangbong Yang
+Houn Jeong
+
+Proofreaders / Editors:
+Dooyoung Kim
+Inho Choe
+Joonho Kim
+Seojun Ahn
+Jaehyuk Chung
+Sanghyuk Park
+Bongjun Choe
+Jaeyoung Yu
+Minseok Kahm
+Seongjin Yun
+Chungwan Lee
+
+#Quality Assurance
+QLOC S.A.
+
+#General Manager
+Adam Piesiak
+
+#Head of Business Development
+Paweł Książek
+
+#Business Development Manager
+Weronika Purgal
+
+#Director of Quality Assurance
+Sergiusz Ślosarczyk
+
+#QA Operations Manager
+Pawel Strzelczyk
+
+#Lead QA Project Manager
+Jakub Dudkowski
+
+#QA Project Manager
+Kacper Bugaj
+
+#QA Lab Managers
+Piotr Badurek
+Emil Lubowicki
+Tomasz Prusicki
+
+#Learning & Development Coordinator
+Aleksandra Grigorian-Kopka
+
+#Learning & Development Specialists
+Michał Grabuś
+Damian Jasiński
+
+#QA Team Leaders
+Krystian Bas
+Marta Czekalska
+Mateusz Kuriata
+Marcin Oprządek
+Michał Staniszewski
+
+#QA Testers
+Dawid Bolewski
+Karol Kaczor
+Krzysztof Owczarek
+Mateusz Rosłaniec
+Michał Szcześniak
+Aleksander Taras
+Dariusz Winczewski
+Tomasz Wypych
+
+#IT Director
+Artur Szczurzyński
+
+#Senior Moderators
+Fanstar 1  
+Grazik  
+Kasper "ChatKat" Smolders
+
+#Moderators
+Marijn "marijn211" Vroegh
+Felix “Kongou”
+Marc “DJFlannas” Docherty
+Joris “Blackdeath_LP” Dröge
+Lady Valentina "Lady Shion" Valentine-Ortiz  
+Bennet “Avemew”
+Artemis
+Cruz "Ash" Fantauzzo
+Sir Arthur Wellesley	  
+Zi Yao (Terence) Zhang
+
+#Korean Language mod team
+
+#Project Leads
+Hyunho Ryu (Catnyangi)
+
+#Moderators
+K8 (Railgun)  
+vkdlsejghf  
+Han Myeong-ho (Frosty)  
+Estern_spy
+
+#Contributors
+DENEV  
+Europa  
+AllAllAllA  
+UG  
+Junhyeon4267  
+Na-peng  
+GRGBU  
+Radovan Pavlovic  
+Kim-Bright  
+Logite-c  
+EngineerBeans  
+PODO  
+Horangye2  
+Neostigmine  
+DOHYUNS2  
+KSLAYJ  
+WKPHNZZ  
+Boring Person  
+MindKR  
+Rancerd  
+Snowden  
+Kudryavka  
+FG  
+Cucumburger  
+NSAIDs  
+Uiopp  
+Herzland  
+Qhtjd123123  
+A17-Tetrarch  
+BOBK235  
+Wrinos  
+readingsnail
+
+#Beta Testers
+Jonathan Bagley
+Guilherme Zottele  
+William P. Corr  
+Jakub Mozgawa  
+Jan Peter Dijkstra  
+Francesco 'FrancescoT' Teruzzi  
+Borna Hlousek  
+Jimmy Williams  
+Edgars Ancītis  
+Miguel Martínez Olmos  
+Yanjie Feng  
+Brian Haddad  
+Voigt  
+Wayne Sparks  
+Thomas Albert Foster  
+Jason Pitruzzello  
+Ethan "156" Mayer  
+Dave "Axe99" Long  
+Andy Rowland  
+Théo "Vorondil" Rosier  
+Thomas Perry  
+Maddison "Zarathustra_the" Reddie-Clifford  
+Bengt "Hjalfnar_HGV" Weiberg  
+John Shelton  
+JAPG  
+Nickay
+
+----------------
 
 #Hearts of Iron IV: Graveyard of Empires
 

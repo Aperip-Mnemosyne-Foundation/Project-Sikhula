@@ -18,6 +18,13 @@ bitmapfonts = {
 		}
 		languages = { "l_simp_chinese" }
 	}
+	bitmapfont_override = {
+		name = "standard_font"
+		fontfiles = {
+			"gfx/fonts/korean/hoi_16mbs"
+		}
+		languages = { "l_korean" }
+	}
 
 	bitmapfont = {
 		name = "chat_input_font"
@@ -34,6 +41,13 @@ bitmapfonts = {
 			"gfx/fonts/chinese/standard_4of4"
 		}
 		languages = { "l_simp_chinese" }
+	}
+	bitmapfont_override = {
+		name = "chat_input_font"
+		fontfiles = {
+			"gfx/fonts/korean/hoi_16mbs"
+		}
+		languages = { "l_korean" }
 	}
 	
 }

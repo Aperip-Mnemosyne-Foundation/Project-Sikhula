@@ -71,7 +71,6 @@ spriteTypes = {
 		texturefile = "gfx//interface//theater//theatre_naval_control_panel.dds"
 		noOfFrames = 3
 	}
-
 	
 	spriteType = {
 		name = "GFX_theatre_dropdown_middle"

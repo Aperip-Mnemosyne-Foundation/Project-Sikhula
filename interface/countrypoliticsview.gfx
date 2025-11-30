@@ -194,6 +194,16 @@ spriteTypes = {
 		textureFile = "gfx/interface/autonomy/autonomy_eu_member_icon.dds"
 	}
 	
+	spriteType = {
+		name = "GFX_autonomy_sea_warlord_subject_icon"
+		textureFile = "gfx/interface/autonomy/sea_warlord_subject_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_autonomy_sea_integrated_warlord_subject_icon"
+		textureFile = "gfx/interface/autonomy/sea_integrated_warlord_subject_icon.dds"
+	}
+	
 	#-------------
 
 	spriteType = {
@@ -419,7 +429,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_categories"
 		texturefile = "gfx/interface/idea_categories.dds"
-		noOfFrames = 7
+		noOfFrames = 6
 	}
 
 	spriteType = {
@@ -462,7 +472,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_icon_collaboration"
-		texturefile = "gfx/interface/collaboration_icon.dds"
+		texturefile = "gfx/interface/occupation/collaboration_icon.dds"
 	}
 	spriteType = {
 		name = "GFX_icon_collaboration_and_exiles"
@@ -591,6 +601,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_pol_view_bg_no_dlc"
+		textureFile = "gfx//interface//pol_view_bg_no_dlc.dds"
+	}
+
+	spriteType = {
 		name = "GFX_add_pol_idea_button"
 		textureFile = "gfx//interface//add_pol_idea_button.dds"
 	}
@@ -621,7 +636,7 @@ spriteTypes = {
 	
 	pieChartType = {
 		name = "GFX_political_chart"
-		size = 76
+		size = 27
 	}
 	
 	pieChartType = {
@@ -647,9 +662,9 @@ spriteTypes = {
 		name = "GFX_activegoal_progress"
 		color = { 0.0 0.5 0.0 }
 		colortwo = { 1.0 0.0 0.0 }
-		textureFile1 = "gfx/interface/pol_goal_progress.dds"
-		textureFile2 = "gfx/interface/pol_goal_progress_bg.dds"
-		size = { x = 254 y = 5 }
+		textureFile1 = "gfx//interface//pol_goal_progress.dds"
+		textureFile2 = "gfx//interface//pol_goal_progress_bg.dds"
+		size = { x = 237 y = 6 }
 		effectFile = "gfx/FX/progress_startend.lua"
 		horizontal = yes
 	}
@@ -690,6 +705,4 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate_blendframes.lua"
 	}
 	
-
-    
 }

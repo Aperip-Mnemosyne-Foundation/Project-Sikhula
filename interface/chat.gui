@@ -31,8 +31,7 @@ guiTypes = {
 				name ="chat"
 				position = { x = 15 y = 15 }
 				backGround=""
-				size = { x=323 y =250}
-				Orientation = "UPPER_LEFT"
+				size = { x=385 y =290}
 				spacing = 2
 				scrollbartype = "standardlistbox_slider"
 				borderSize = {x = 0 y = 0}

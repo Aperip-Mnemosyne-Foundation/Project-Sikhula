@@ -2,28 +2,20 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "countryconstructionsview"
-		position = { x=-657 y=80}
-		show_position = { x=0 y =80 }
-		hide_position = { x=-657 y=80 }
+		position = { x=-606 y=78 }
+		show_position = { x=-9 y =78 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
-		animation_time = 700
-		clipping = yes
-		size = { width=657 height=1360 }
+		animation_time = 300
+		size = { width=550 height=100%% }
+		clipping = no
 
-		hide_sound = menu_close_window
+		#hide_sound = menu_close_window
 		show_sound = menu_open_window
 
 		background = {
 			name = "Background"
-			spriteType ="GFX_gamemenu_bg"
-		}
-
-		iconType = {
-			name ="countrydecisionview_bg"
-			spriteType = "GFX_gamemenu_bg"
-			position = { x= 0 y = 0 }
-			Orientation = "UPPER_LEFT"
+			quadTextureSprite ="GFX_tiled_window_thin_border"
 		}
 
 		iconType ={
@@ -33,23 +25,23 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 		}
 
-		#iconType ={
-		#	name ="production_header_bg"
-		#	spriteType = "GFX_construction_header_bg"
-		#	position = { x= 10 y = 5 }
-		#	Orientation = "UPPER_LEFT"
-		#}
+		iconType ={
+			name ="production_header_bg"
+			spriteType = "GFX_construction_header_bg"
+			position = { x= 10 y = 5 }
+			Orientation = "UPPER_LEFT"
+		}
 
 		instantTextboxType = {
 			name = "construction_title"
-			position = { x = 9 y = 7 }
-			font = "Youhei18"
-			borderSize = {x = 0 y = 0}
+			position = { x = 45 y = 8 }
+			textureFile = ""
+			font = "hoi_36header"
+			borderSize = { x = 0 y = 0 }
 			text = "CONSTRUCTION_VIEW_LABLE"
-			maxWidth = 440
+			maxWidth = 400
 			maxHeight = 20
 			format = left
-			text_color_code = W
 		}
 		
 		containerWindowType = {
@@ -227,24 +219,47 @@ guiTypes = {
 				hide = yes # Remove this line to show CIC bank info in the Constructions view.
 			}
 
-			iconType = {
-				name = "construction_speed_icon"
-				position = { x = 264 y = 45 }
-				spriteType = "GFX_construction_speed_icon"
-			}
+			containerWindowType = {
+				name = "speed_container"
+				position = { x = 260 y = -10  }
+				size = { width = 100 height = 30 }
+				clipping = no
 
-			instantTextboxType = {
-				name = "construction_speed_value"
-				position = { x = 315 y = 44 }
-				textureFile = ""
-				font = "hoi_18mbs"
-				borderSize = { x = 0 y = 0 }
-				text = "99"
-				maxWidth = 70
-				maxHeight = 20
-				format = right
-			}
+				iconType = {
+					name = "construction_speed_icon"
+					position = { x = 0 y = 45 }
+					spriteType = "GFX_construction_speed_icon"
+				}
 
+				instantTextboxType = {
+					name = "construction_speed_value"
+					position = { x = -10 y = 44 }
+					textureFile = ""
+					font = "hoi_18mbs"
+					borderSize = { x = 0 y = 0 }
+					text = "99"
+					maxWidth = 70
+					maxHeight = 20
+					format = right
+				}
+
+				containerWindowType = {
+					name = "resource_strip_container"
+					position = { x=30 y=36 }
+					size = { width = 70 height = 30 }
+
+					gridBoxType = {
+						orientation = "CENTER_UP"
+						name = "resources_grid"
+						position = { x = 0 y = 4 }
+						size = { width = 100% height = 100% }
+						slotsize = { width = 70 height = 31 }
+						max_slots = { x = 7 y = 1 }
+						add_horizontal = no
+						format = "UPPER_LEFT"
+					}
+				}
+			}
 		}
 
 		instantTextboxType = {
@@ -504,31 +519,29 @@ guiTypes = {
 
 		buttonType = {
 			name = "minimize"
-			position = { x = 270 y = -674 }
-			orientation = center
+			position = { x = 57 y = 10 }
 			quadTextureSprite ="GFX_production_line_arrow_left"
 			buttonFont = "Main_14_black"
-			#Orientation = "UPPER_RIGHT"
+			Orientation = "UPPER_RIGHT"
 			pdx_tooltip = "CONSTRUCTION_MINIMIZE"
 		}
 
 		buttonType = {
 			name = "expand"
-			position = { x = 270 y = -674 }
-			orientation = center
+			position = { x = 60 y = 10 }
 			quadTextureSprite ="GFX_production_line_arrow_right"
 			buttonFont = "Main_14_black"
-			#Orientation = "UPPER_RIGHT"
+			Orientation = "UPPER_RIGHT"
 			pdx_tooltip = "CONSTRUCTION_EXPAND"
 		}
 
 		buttonType = {
 			name = "close_button"
-			position = { x = 302 y = -674 }
-			orientation = center
-			quadTextureSprite ="GFX_close_button_98"
+			position = { x = 107 y = 9 }
+			quadTextureSprite ="GFX_closebutton"
 			buttonFont = "Main_14_black"
 			shortcut = "ESCAPE"
+			Orientation = "UPPER_RIGHT"
 			clicksound = click_close
 		}
 
