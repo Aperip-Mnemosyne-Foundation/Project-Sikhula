@@ -8,7 +8,7 @@ tags={
 	"National Focuses"
 	"Technologies"
 }
-name="A Single Spark Prairie Fire"
+name="Project Sikhula"
 replace_path="common/countries"
 replace_path="common/country_tags"
 replace_path="common/characters"
