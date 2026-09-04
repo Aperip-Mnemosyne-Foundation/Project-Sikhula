@@ -3,9 +3,9 @@ guiTypes = {
 	containerWindowType = {
 		name = "global_alerticon_window"
 		position = { x=0 y=0 }
-		size = { width=25 height=25 }
+		size = { width=43 height=38 }
 		moveable = no
-		Orientation = LOWER_LEFT
+		Orientation = UPPER_LEFT
 		
 		buttonType = {
 			name = "icon"
@@ -17,14 +17,14 @@ guiTypes = {
 		iconType = {
 			name ="red_alert_glow"
 			spriteType = "GFX_red_alert_glow"	
-			position = { x =0 y = 9990 }
+			position = { x =0 y = 0 }
 			alwaystransparent = yes
 		}			
 
 		iconType = {
 			name ="yellow_alert_glow"
 			spriteType = "GFX_yellow_alert_glow"	
-			position = { x =0 y = 9990 }
+			position = { x =0 y = 0 }
 			alwaystransparent = yes
 		}
 
@@ -39,17 +39,17 @@ guiTypes = {
 
 	positionType = {
 		name = "alerticon_startposition"
-		position = { x = 203 y = 1414 }
+		position = { x = 662 y = 38 }
 	}
 
 	positionType = {
 		name = "alerticon_startposition_extended"
-		position = { x = 203 y = 1414 }
+		position = { x = 718 y = 38 }
 	}
 	
 	positionType = {
 		name = "alerticon_offset"
-		position = { x = 28 y = 44 }
+		position = { x = 48 y = 44 }
 	}
 
 	# This one is used to figure out when we nead to break and start adding icons on the next row (only x is used)

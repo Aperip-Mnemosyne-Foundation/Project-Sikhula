@@ -8,342 +8,81 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "EventWindow"
-		size = { width=1080 height=24 }
-		Orientation = center
-		origo = center
-		clipping = no
+		position = { x=-282 y=-310 }	
+		size = { width = 581 height =427 }
 		moveable = yes
-		position = { x=0 y=0 }
+		Orientation = CENTER		
+		
 		show_sound = event_popup
 		hide_sound = menu_close_window
 		
 		background = {
 			name = "Background"	
-			spriteType ="GFX_event_move"
-		}
-
-		iconType = {
-			name = "EventWindow_bg_over"
-			spriteType ="GFX_event_move"
-			position = {x = 0 y = 0}
-			alwaystransparent = yes
+			spriteType ="GFX_tiled_window_transparent"
 		}
 
 		containerWindowType = {
 			name = "top_Window"
-			position = { x=0 y=24 }	
-			size = { width = 1080 height = 123 }
-			moveable = no
+			position = { x=0 y=0 }	
+			size = { width = 581 height =121 }
+			moveable = yes
 			Orientation = UPPER_LEFT
-			clipping = no
 
 			background = {
 				name = "Background"	
-				spriteType ="GFX_event_head"
+				spriteType ="GFX_event_report_top_win"
 			}			
-			iconType = {
-			    name = "EventWindow_top_Window_bg_over1"
-			    spriteType ="GFX_event_head"
-			    position = {x = 0 y = 0}
-		    }
-			iconType = {
-			    name = "EventWindow_top_Window_bg_over2"
-			    spriteType ="GFX_event_head"
-			    position = {x = 0 y = 123}
-		    }
-			iconType = {
-			    name = "EventWindow_top_Window_bg_over3"
-			    spriteType ="GFX_event_head"
-			    position = {x = 0 y = 246}
-		    }
-
+		
 			instantTextBoxType = {
 				name = "Title"
-				position = { x = 19 y = 104 }
-				font = "Youhei18"
+				position = { x = 14 y = 70 }
+				font = "hoi4_typewriter22"
 				borderSize = {x = 0 y = 0}
 				text = "Title text here!"	
 				maxWidth = 551
 				maxHeight = 32
-				format = left
-				text_color_code = b
+				format = centre
 			}
 
 			buttonType = {
 				name = "btn_minimize"
-				position = {x=-55 y=-18}
+				position = {x=10 y=45}
 				spriteType = "GFX_event_button_minimize"
 				clicksound = click_default
 				pdx_tooltip = "MINIMIZE_EVENT"
-				origo = UPPER_RIGHT
-				orientation = UPPER_RIGHT
-			}
-
-			# 后面全是上面的装饰
-
-			containerWindowType = {
-			    name = "top_rubbish"
-				position = { x=0 y=-24 }	
-				instantTextBoxType = {
-					name = "title"
-					position = { x = 20 y = 4 }
-					textureFile = ""
-					font = "hoi_18b"
-					borderSize = {x = 0 y = 0}
-					text = "ASPF_EVENT_TITLE"
-					maxWidth = 500
-					maxHeight = 30
-					format = left
-				}
-
-				instantTextBoxType = {
-					name = "search"
-					position = { x = 93 y = 93 }
-					textureFile = ""
-					font = "hoi4_typewriter22"
-					borderSize = {x = 0 y = 0}
-					text = "ASPF_EVENT_TITLE"
-					maxWidth = 1000
-					maxHeight = 30
-					format = left
-				}
-
-				instantTextBoxType = {
-					name = "ADDRESS"
-					position = { x = -208 y = 94 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "ADDRESS"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
-
-				instantTextBoxType = {
-					name = "FILE"
-					position = { x = -218 y = 26 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "FILE"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
-
-				instantTextBoxType = {
-					name = "EDIT"
-					position = { x = -178 y = 26 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "EDIT"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
-				instantTextBoxType = {
-					name = "VIEW"
-					position = { x = -138 y = 26 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "VIEW"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
-
-				instantTextBoxType = {
-					name = "GO"
-					position = { x = -98 y = 26 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "GO"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
-
-				instantTextBoxType = {
-					name = "FAVORITES"
-					position = { x = -58 y = 26 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "FAVORITES"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
-
-				instantTextBoxType = {
-					name = "TOOLS"
-					position = { x = -18 y = 26 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "TOOLS"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
-
-				instantTextBoxType = {
-					name = "HELP"
-					position = { x = 22 y = 26 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "HELP"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
-
-				instantTextBoxType = {
-					name = "BACK"
-					position = { x = -207 y = 68 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "BACK"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
-
-				instantTextBoxType = {
-					name = "FORWARD"
-					position = { x = -137 y = 68 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "FORWARD"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
-
-				instantTextBoxType = {
-					name = "STOP"
-					position = { x = -69 y = 68 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "STOP"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
-
-				instantTextBoxType = {
-					name = "REFRESH"
-					position = { x = -15 y = 68 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "REFRESH"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
-
-				instantTextBoxType = {
-					name = "HOME"
-					position = { x = 38 y = 68 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "HOME"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
-
-				instantTextBoxType = {
-					name = "SEARCH2"
-					position = { x = 99 y = 68 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "SEARCH2"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
-
-				instantTextBoxType = {
-					name = "FAVORITES2"
-					position = { x = 152 y = 68 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "FAVORITES"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
-		
-				instantTextBoxType = {
-					name = "HISTORY2"
-					position = { x = 206 y = 68 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "HISTORY2"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
-
-				instantTextBoxType = {
-					name = "PRINT"
-					position = { x = 265 y = 68 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "PRINT"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
 			}
 		}
 
 		containerWindowType = {
 			name = "midsection"
-			position = { x=0 y=147 }	
-			size = { width = 1080 height = 100 }
-			moveable = no
+			position = { x=0 y=121 }	
+			size = { width = 580 height = 100 }
+			moveable = yes
 			clipping = no
 			Orientation = UPPER_LEFT
 
 			background = {
 				name = "Background"	
-				quadTextureSprite ="GFX_event_midsection"
+				quadTextureSprite ="GFX_event_report_tileable_midsection"
 			}
 
 			instantTextBoxType = {
 				name = "Description"
-				position = { x = 18 y = 4 }
-				font = "Youheiw"
+				position = { x = 31 y = 0 }
+				font = "hoi4_typewriter16"
 				borderSize = {x = 0 y = 0}
 				text = "Long text here!"	
-				maxWidth = 776
-				maxHeight = 1440
+				maxWidth = 512
+				maxHeight = 230
 				format = left
-				text_color_code = b
 			}	
 		}			
 
 		containerWindowType = {
 			name = "bottom_Window"
-			position = { x=0 y=225 }	
-			size = { width = 1080 height = 323 }
-			moveable = no
+			position = { x=0 y=221 }	
+			size = { width = 581 height = 206 }
+			moveable = yes
 			clipping = no
 			Orientation = UPPER_LEFT
 
@@ -354,96 +93,32 @@ guiTypes = {
 
 			background = {
 				name = "Background"	
-				spriteType ="GFX_event_bottom"
+				spriteType ="GFX_event_report_bottom_win"
 			}
-
-			iconType = {
-				name ="event_bottom_bg"
-				spriteType = "GFX_event_bottom"
-				position = { x = 0 y = 0 }			
-			}
-
-			instantTextBoxType = {
-			    name = "INTERNET"
-			    position = { x = 695 y = 300 }
-			    textureFile = ""
-			    font = "hoi4_typewriter16"
-			    borderSize = {x = 0 y = 0}
-			    text = "INTERNET"
-			    maxWidth = 500
-			    maxHeight = 30
-			    format = center
-		    }
-
-			instantTextBoxType = {
-			    name = "attachment"
-			    position = { x = 18 y = 18 }
-			    textureFile = ""
-			    font = "Youhei18"
-			    borderSize = {x = 0 y = 0}
-			    text = "Attachment:(1/1)"
-			    maxWidth = 500
-			    maxHeight = 30
-			    format =left
-				text_color_code = b
-		    }
 
 			iconType = {
 				name ="event_picture"
 				spriteType = "GFX_report_event_001"
-				position = { x = 18 y = -277 }
-				Orientation = "LOWER_LEFT"
-				origo = "LOWER_LEFT"			
-			}
-
-			iconType = {
-				name ="seg_zone_eventview_04"
-				spriteType = "GFX_seg_zone"
-				position = { x = 560 y = -315 }
-				Orientation = "LOWER_LEFT"
-				origo = "LOWER_LEFT"			
-			}
-
-			iconType = {
-				name ="seg_zone_eventview_03"
-				spriteType = "GFX_seg_zone"
-				position = { x = 491 y = -315 }
-				Orientation = "LOWER_LEFT"
-				origo = "LOWER_LEFT"			
-			}
-
-			iconType = {
-				name ="seg_zone_eventview_02"
-				spriteType = "GFX_seg_zone"
-				position = { x = 252 y = -315 }
-				Orientation = "LOWER_LEFT"
-				origo = "LOWER_LEFT"			
-			}
-
-			iconType = {
-				name ="seg_zone_eventview_01"
-				spriteType = "GFX_seg_zone"
-				position = { x = 13 y = -315 }
-				Orientation = "LOWER_LEFT"
-				origo = "LOWER_LEFT"			
+				position = { x = 5 y = 5 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes				
 			}
 
 			iconType = {
 				name ="event_pic_clip"
 				spriteType = "GFX_event_pic_clip"
-				position = { x = -3000 y = 35 }
-				Orientation = "LOWER_LEFT"
+				position = { x = -3 y = 35 }
+				Orientation = "UPPER_LEFT"
 			}
 
 
 			gridBoxType = {
 				name = "options_grid"
-				position = { x = -268 y = -296 }
-				size = { width = 250 height = 46 }
-				slotsize = { width = 250 height = 46 }
+				position = { x = 215 y = -1 }
+				size = { width = 300 height = 30 }
+				slotsize = { width = 300 height = 47 }
 				max_slots_horizontal = 1
-				Orientation = "LOWER_RIGHT"
-				origo = "LOWER_RIGHT"
+				format = "UPPER_LEFT"
 			}
 		}
 
@@ -793,12 +468,10 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "EventWindow_News"
-		size = { width=1080 height=860 }
-		Orientation = center
-		origo = center
-		clipping = yes
+		position = { x=-282 y=-310 }	
+		size = { width = 528 height = 595 }
 		moveable = yes
-		position = { x=0 y=0 }
+		Orientation = CENTER
 		show_sound = world_news_effect
 		hide_sound = menu_close_window
 		
@@ -808,416 +481,75 @@ guiTypes = {
 		}
 
 		containerWindowType = {
-		    name ="EventWindow_News_overlay_window"
-		    size = { width = 1080 height = 836 }
-		    clipping = yes
-		    moveable = no
-		    position = { x=0 y=24 }
-			iconType = {
-			    name ="gamesetup_scenario_window_overlay"
-			    spriteType = "GFX_select_date_bg"
-			    position = { x= 0 y = -24 }
-		    }
-		}
-
-		iconType = {
-			name = "EventWindow_bg_over"
-			spriteType ="GFX_event_move"
-			position = {x = 0 y = 0}
-			alwaystransparent = yes
-		}
-
-		iconType = {
-			name = "EventWindow_ASPF_icon"
-			spriteType ="GFX_win98_ASPF"
-			position = {x = 12 y = 128}
-			#alwaystransparent = yes
-			scale = 0.35
-		}
-
-		instantTextBoxType = {
-			name = "Header"
-			position = { x = 175 y = 145 }
-			font = "Youhei18"
-			borderSize = {x = 0 y = 0}
-			text = "NEWSHEADER"	
-			maxWidth = 2000
-			maxHeight = 36
-			format = left
-			text_color_code = b
-		}
-
-		containerWindowType = {
-			name = "newsline"
-			background = {
-				name = "bg"
-				quadTextureSprite = "GFX_tiled_win98_line"
-			}
-			size = {width = 1056 height = 64}
-			position = {x = 12 y = 180}
-		}
-
-		containerWindowType = {
 			name = "top_Window"
-			position = { x=6 y=125 }	
-			size = { width = 1080 height = 123 }
-			moveable = no
+			position = { x=0 y=0 }	
+			size = { width = 581 height =121 }
 			Orientation = UPPER_LEFT
-			clipping = no
 
-			iconType = {
+			iconType =
+			{
 				name ="event_picture"
 				spriteType = "GFX_news_event_001"
-				position = { x = 13 y = 110 }
+				position = { x = 59 y = 91 }
 				Orientation = "UPPER_LEFT"
-				#alwaystransparent = yes
+				alwaystransparent = yes
 			}
 			
 			iconType = {
 				name ="event_picture_overlay"
 				spriteType = "GFX_event_news_pic_overlay"
-				position = { x = 59 y = 91000 }
+				position = { x = 59 y = 91 }
 				Orientation = "UPPER_LEFT"
 				alwaystransparent = yes
 			}			
 			
 			instantTextBoxType = {
 				name = "Title"
-				position = { x = 13 y = 63 }
-				font = "Yundong"
+				position = { x = 12 y = 260 }
+				font = "hoi4_typewriter22"
 				borderSize = {x = 0 y = 0}
 				text = "Title text here!"	
-				maxWidth = 2000
-				maxHeight = 36
-				format = left
-				text_color_code = b
+				maxWidth = 490
+				maxHeight = 32
+				format = centre
 			}
 			
 			buttonType = {
 				name = "btn_minimize"
-				position = {x=-61 y=-119}
+				position = {x=10 y=10}
 				spriteType = "GFX_event_button_minimize"
 				clicksound = click_default
-				pdx_tooltip = "MINIMIZE_EVENT"
-				origo = UPPER_RIGHT
-				orientation = UPPER_RIGHT
 			}
-
-			buttonType = {
-				name = "btn_close"
-				position = {x=-28 y=-119}
-				spriteType = "GFX_event_close"
-				clicksound = click_default
-				pdx_tooltip = "MINIMIZE_EVENT"
-				origo = UPPER_RIGHT
-				orientation = UPPER_RIGHT
-				alwaystransparent = yes
-			}
-
-			# 榜
-
-			containerWindowType = {
-				name = "newshotlistviwe"
-				background = {
-					name = "bg"
-					quadTextureSprite = "GFX_tiled_win98_line_bg"
-				}
-				size = {width = 253 height = 388}
-				position = {x = 802 y = 110}
-				instantTextBoxType = {
-					name = "title"
-					position = { x = 5 y = 5 }
-					textureFile = ""
-					font = "Youhei32"
-					borderSize = {x = 0 y = 0}
-					#text = "HotList"
-					maxWidth = 500
-					maxHeight = 30
-					format = left
-					text_color_code = b
-				}
-
-				
-			}
-
-			# 后面全是上面的装饰
-
-			containerWindowType = {
-			    name = "top_rubbish"
-				position = { x=-6 y=-125 }	
-				instantTextBoxType = {
-					name = "title"
-					position = { x = 20 y = 4 }
-					textureFile = ""
-					font = "hoi_18b"
-					borderSize = {x = 0 y = 0}
-					text = "ASPF_NEWS_TITLE"
-					maxWidth = 500
-					maxHeight = 30
-					format = left
-				}
-
-				instantTextBoxType = {
-					name = "search"
-					position = { x = 93 y = 93 }
-					textureFile = ""
-					font = "hoi4_typewriter22"
-					borderSize = {x = 0 y = 0}
-					text = "ASPF_NEWS_TITLE"
-					maxWidth = 1000
-					maxHeight = 30
-					format = left
-				}
-
-				instantTextBoxType = {
-					name = "ADDRESS"
-					position = { x = -208 y = 94 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "ADDRESS"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
-
-				instantTextBoxType = {
-					name = "FILE"
-					position = { x = -218 y = 26 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "FILE"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
-
-				instantTextBoxType = {
-					name = "EDIT"
-					position = { x = -178 y = 26 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "EDIT"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
-				instantTextBoxType = {
-					name = "VIEW"
-					position = { x = -138 y = 26 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "VIEW"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
-
-				instantTextBoxType = {
-					name = "GO"
-					position = { x = -98 y = 26 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "GO"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
-
-				instantTextBoxType = {
-					name = "FAVORITES"
-					position = { x = -58 y = 26 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "FAVORITES"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
-
-				instantTextBoxType = {
-					name = "TOOLS"
-					position = { x = -18 y = 26 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "TOOLS"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
-
-				instantTextBoxType = {
-					name = "HELP"
-					position = { x = 22 y = 26 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "HELP"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
-
-				instantTextBoxType = {
-					name = "BACK"
-					position = { x = -207 y = 68 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "BACK"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
-
-				instantTextBoxType = {
-					name = "FORWARD"
-					position = { x = -137 y = 68 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "FORWARD"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
-
-				instantTextBoxType = {
-					name = "STOP"
-					position = { x = -69 y = 68 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "STOP"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
-
-				instantTextBoxType = {
-					name = "REFRESH"
-					position = { x = -15 y = 68 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "REFRESH"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
-
-				instantTextBoxType = {
-					name = "HOME"
-					position = { x = 38 y = 68 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "HOME"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
-
-				instantTextBoxType = {
-					name = "SEARCH2"
-					position = { x = 99 y = 68 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "SEARCH2"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
-
-				instantTextBoxType = {
-					name = "FAVORITES2"
-					position = { x = 152 y = 68 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "FAVORITES"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
-		
-				instantTextBoxType = {
-					name = "HISTORY2"
-					position = { x = 206 y = 68 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "HISTORY2"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
-
-				instantTextBoxType = {
-					name = "PRINT"
-					position = { x = 265 y = 68 }
-					textureFile = ""
-					font = "hoi4_typewriter16"
-					borderSize = {x = 0 y = 0}
-					text = "PRINT"
-					maxWidth = 500
-					maxHeight = 30
-					format = center
-				}
-
-				instantTextBoxType = {
-		       	    name = "INTERNET"
-		        	position = { x = 695 y = 837 }
-		        	textureFile = ""
-		        	font = "hoi4_typewriter16"
-		        	borderSize = {x = 0 y = 0}
-		        	text = "INTERNET"
-		        	maxWidth = 500
-		        	maxHeight = 30
-		        	format = center
-		        }
-			}
-
-			
 		}
 
 		containerWindowType = {
 			name = "midsection"
-			position = { x=0 y=0 }	
-			size = { width = 1080 height = 385 }
+			position = { x=0 y=121 }	
+			size = { width = 580 height = 385 }
 			Orientation = UPPER_LEFT
 		
 			instantTextBoxType = {
 				name = "Description"
-				position = { x = 19 y = 635 }
-				font = "Youhei18"
+				position = { x = 39 y = 170 }
+				font = "hoi4_typewriter16"
 				borderSize = {x = 0 y = 0}
 				text = "Long text here!"	
-				maxWidth = 1042
+				maxWidth = 460
 				maxHeight = 230
 				format = left
-				text_color_code = b
 			}	
 		}			
 
 
 		containerWindowType = {
 			name = "bottom_Window"
-			position = { x=0 y=0 }	
-			size = { width = 1080 height =860 }
+			position = { x=0 y=221 }	
+			size = { width = 581 height = 405 }
 			Orientation = UPPER_LEFT
-			clipping = no
 
 			gridBoxType = {
 				name = "options_grid"
-				position = { x = 1058 y = -401 }
+				position = { x = 80 y = -1 }
 				size = { width = 300 height = 30 }
 				slotsize = { width = 300 height = 47 }
 				max_slots_horizontal = 1
@@ -1228,7 +560,7 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "event_option_entry"
-		size = { width = 250 height = 46 }
+		size = { width = 300 height = 47 }
 		clipping = no
 		
 		background = {
@@ -1238,13 +570,12 @@ guiTypes = {
 		
 		instantTextBoxType = {
 			name = "Name"
-			position = { x = 0 y = 0 }
-			font = "Youheiw"
-			maxWidth = 250
-			maxHeight = 46
+			position = { x = 5 y = 0 }
+			font = "hoi_20bs"
+			maxWidth = 340
+			maxHeight = 40
 			format = center
 			vertical_alignment = center
-			text_color_code = b
 			alwaystransparent = yes
 		}
 	}
