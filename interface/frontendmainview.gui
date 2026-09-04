@@ -1,67 +1,6 @@
 guiTypes = {
 
-	containerWindowType = {
-		name ="frontend_background"
-		position = { x=0 y =0 }	
-		size = { 
-			width = 1920 
-			height = 1440 
-			min = { width = 100% height = 100% }
-			max = { width = 100% height = 10000 }
-			preserve_aspect_ratio = yes
-		}
-		Orientation = center
-		Origo = center
-		clipping = no 
-		
-		background = {
-			name = "Background"		
-			quadTextureSprite ="GFX_frontend_bg"
-			alwaystransparent = yes
-		}
-		
-	}
-	
-	containerWindowType = {
-		name = "owned_dlc_item"
-		size = { width = 50 height = 50 }
-		
-		buttonType =
-		{
-			position = { x = -230 y = 0 }
-			name ="dlc_button"
-			spriteType = "GFX_frontend_banner_dlc018"
-		}
-		
-		iconType = {
-			name = "glowup"
-			position = { x = -50 y = -21 }
-			spriteType = "GFX_spirit_glow"
-			scale = 0.8
-			#hide = yes
-		}
-		
-		buttonType = {
-			name = "owned_tick"
-			spriteType = "GFX_BPT_area_defense_setting_tick"
-			position = { x = -6 y = 1 }
-			Orientation = center_left
-			scale = 0.56
-			alwaysTransparent = yes
-			#hide = yes
-		}
-		
-		buttonType = {
-			name = "enabled_tick"
-			spriteType = "GFX_general_check"
-			position = { x = 28 y = 24 }
-			Orientation = center_left
-			alwaysTransparent = yes
-		}
-		
-	}
-	
-	containerWindowType = {
+    containerWindowType = {
 		name = "change_background"
 		size = { width = 100 height = 40 }
 		position = { x = -20 y = -20 }
@@ -70,50 +9,55 @@ guiTypes = {
 
 		buttonType = {
 			name ="change_background_button"
-			position = { x = -206 y = -24 }
-			
+			position = { x = 206 y = -24 }
+			shortcut = b
 			quadTextureSprite = "GFX_button_238x38"
 			buttonText = "CHANGE_BACKGROUND"
-			buttonFont = "hoi_24header"
+			buttonFont = "AAGCZYRL18"
 			Orientation = center
 		}
 
 		containerWindowType = {
 			name = "background_selection"
 			size = { width = 238 height = 700 }
-			position = { x = -156 y = -700 }
-			margin = { top = 18 bottom = 13 left = 8}
+			position = { x = -120 y = -639 }
+			margin = { top = 14 bottom = 13 left = 0}
 
 			background = {
 				name = "Background"
-				quadTextureSprite ="GFX_tiled_window2_1b_border"
+				quadTextureSprite ="GFX_tiled_SPinckEXwthSCLPMini_bg"
 			}
 			
 			checkboxType = {
 					name = "select_all_checkbox"
-					position = { x = 13 y = 0 }
+					position = { x = 14 y = 0 }
 					quadTextureSprite ="GFX_generic_checkbox"
 					buttonText = ""
-					buttonFont = "Main_14_black"
+					buttonFont = "AAGCZYRL14"
 					clicksound = click_checkbox
 				}
 			instantTextBoxType={
-					position = {x = 53 y = 6 }
+					position = {x = 56 y = 6 }
 					name = "select_all_label"
-					font = "hoi_18mbs"
+					font = "AAGCZYRL18"
 					borderSize = {x = 0 y = 0}	
-					maxWidth = 150
+					maxWidth = 130
 					maxHeight = 18
-					text = "SELECT_ALL"	
+					text = "SELECTALL"	
 					orientation = "UPPER_LEFT"
 					format = left
 					
 			}
-						
+			
+			positionType = {
+				name = "interval_input_widget_position"
+				position = { x = 110 y = 4 }
+			}
+			
 		containerWindowType = {
 			name = "background_selection_list"
-			size = { width = 230 height = 576 }
-			position = { x = 0 y = 90 }
+			size = { width = 230 height = 628 }
+			position = { x = 0 y = 36 }
 			verticalScrollbar = "right_vertical_slider"
 			scroll_wheel_factor = 63
 			smooth_scrolling = yes
@@ -123,10 +67,10 @@ guiTypes = {
 			}
 			
 				gridBoxType = {
-					position = { x = 9 y = 0 }
+					position = { x = 17 y = 0 }
 					name = "available_backgrounds"
-					size = { width = 200 height = 0 }
-					slotsize = { width = 200 height = 150 }
+					size = { width = 210 height = 0 }
+					slotsize = { width = 217 height = 125 }
 					max_slots_horizontal = 1		
 				}
 
@@ -147,7 +91,7 @@ guiTypes = {
 		
 		containerWindowType = {
 		name = "highlight"
-		size = { width = 192 height = 144 }
+		size = { width = 210 height = 118 }
 			background = {
 				name = "glowup"
 				quadTextureSprite = "GFX_tiled_frame_selected"
@@ -157,12 +101,98 @@ guiTypes = {
 	}
 
 	containerWindowType = {
+		name ="frontend_background"
+		position = { x=0 y =0 }	
+		size = { 
+			width = 2560 
+			height = 1440 
+			min = { width = 100% height = 100% }
+			max = { width = 100% height = 100% }
+			preserve_aspect_ratio = yes
+		}
+		Orientation = center
+		Origo = center
+		clipping = no 
+		
+		background = {
+			name = "Background"		
+			quadTextureSprite ="GFX_frontend_bg"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "98_TB"
+			position = { x = -171 y = -30 }
+			spriteType = "GFX_98_TB"
+			centerposition = yes
+			orientation = CENTER_DOWN
+			scale = 0.8
+		}
+
+		iconType = {
+			name = "98_TB_R"
+			position = { x = -171 y = -30 }
+			spriteType = "GFX_98_TB_R"
+			centerposition = yes
+			orientation = LOWER_RIGHT
+			scale = 0.8
+		}
+
+		iconType = {
+			name = "98_TB_L"
+			position = { x = 220 y = -30 }
+			spriteType = "GFX_98_TB_L"
+			centerposition = yes
+			orientation = LOWER_LEFT
+			scale = 0.8
+		}
+		
+	}
+	
+	containerWindowType = {
+		name = "owned_dlc_item"
+		size = { width = 50 height = 50 }
+		
+		buttonType ={
+			position = { x = -2300 y = 0 }
+			name ="dlc_button"
+			spriteType = "GFX_frontend_banner_dlc018"
+		}
+		
+		iconType = {
+			name = "glowup"
+			position = { x = -5000 y = -21 }
+			spriteType = "GFX_spirit_glow"
+			scale = 0.8
+			#hide = yes
+		}
+		
+		buttonType = {
+			name = "owned_tick"
+			spriteType = "GFX_BPT_area_defense_setting_tick"
+			position = { x = -6000 y = 1 }
+			Orientation = center_left
+			scale = 0.56
+			alwaysTransparent = yes
+			#hide = yes
+		}
+		
+		buttonType = {
+			name = "enabled_tick"
+			spriteType = "GFX_general_check"
+			position = { x = 2800 y = 24 }
+			Orientation = center_left
+			alwaysTransparent = yes
+		}
+		
+	}
+	
+	containerWindowType = {
 		name = "unowned_dlc_item"
 		size = { width = 50 height = 50 }
 		
-		buttonType =
-		{
-			position = { x = -230 y = 0 }
+		buttonType ={
+			position = { x = -2300 y = 0 }
 			name ="dlc_button"
 			spriteType = "GFX_frontend_banner_dlc018"
 		}
@@ -170,7 +200,7 @@ guiTypes = {
 		buttonType = {
 			name = "owned_tick"
 			spriteType = "GFX_BPT_area_defense_setting_tick"
-			position = { x = -6 y = 1 }
+			position = { x = -6000 y = 1 }
 			Orientation = center_left
 			scale = 0.56
 			alwaysTransparent = yes
@@ -180,7 +210,7 @@ guiTypes = {
 		buttonType = {
 			name = "enabled_tick"
 			spriteType = "GFX_general_check"
-			position = { x = 28 y = 24 }
+			position = { x = 28000 y = 24 }
 			Orientation = center_left
 			alwaysTransparent = yes
 		}
@@ -189,37 +219,39 @@ guiTypes = {
 	
 	### MAIN MENU PANEL (DLC Ownership) 
 	containerWindowType = {
-		name = "mainmenu_dlc_ownership"
-		position = { x=5 y =0 }
-		size = { width = 370 height = 684}
+		name  ="mainmenu_dlc_ownership"
+		position = { x=50000 y =0 }
+		size = { width = 370 height = 582}
 		Orientation = lower_left
 		origo = lower_left
 		
 		gridBoxType = {
 			name = "potential_dlc_list"
-			position = { x = 0 y = 0}
+			position = { x = 9990 y = 0}
 			size = { width = 50 height = 300 }
 			#Orientation = upper_left
 			slotsize = {width=50 height=51 }
 			max_slots_vertical = 1
 			format = "RIGHT"
 		}
+		
 	}
 	
 	### MAIN MENU PANEL (upperleft)
 	containerWindowType = {
 		name  ="mainmenu_panel_upperleft"
-		position = { x=0 y =-200 }
-		show_position = { x=0 y =-1 }
+		position = { x=0 y =-2000 }
+		show_position = { x=0 y =0 }
 		animation_type = decelerated
 		animation_time = 1000
-		size = { width = 256 height = 768}
-		
-		iconType =
-		{
+		size = { width = 611 height = 304}
+		Orientation = center
+		#origo = center
+		iconType ={
 			name ="frontend_game_logo"
 			spriteType = "GFX_frontend_game_logo"
-			position = { x= 20 y = 20 }
+			position = { x= 0 y = 0 }
+			centerposition = yes
 		}
 		
 	}
@@ -244,54 +276,205 @@ guiTypes = {
 	containerWindowType = {
 		name ="mainmenu_panel_upperright"
 		position = { x=0 y =-1 }
-		show_position = { x=-256 y =-1 }
+		show_position = { x=-256000 y =-1 }
 		animation_type = decelerated
 		animation_time = 1000					
 		size = { width = 256 height = 768}
 		Orientation = upper_right
 
-		ButtonType = {
-			name = "achievements_button"
-			position = { x = -50 y = 25 }
-			quadTextureSprite ="achievements"
-			pdx_tooltip = "MENU_ACHIEVEMENTS"
-		}
+		#ButtonType = {
+			#name = "achievements_button"
+			#position = { x = -50 y = 25 }
+			#quadTextureSprite ="achievements"
+			#pdx_tooltip = "MENU_ACHIEVEMENTS"
+		#}
 
-		iconType =
-		{
-			name ="frontend_dev_logo"
-			spriteType = "GFX_frontend_dev_logo"
-			position = { x= 15 y = 15 }
-		}
+		#iconType ={
+			#name ="frontend_dev_logo"
+			#spriteType = "GFX_frontend_dev_logo"
+			#position = { x= 15 y = 15 }
+		#}
 		
-		iconType =
-		{
-			name ="pdx_int_logo"
-			spriteType = "GFX_pdx_int_logo"
-			position = { x= 135 y = 15 }
-		}		
+		#iconType ={
+			#name ="pdx_int_logo"
+			#spriteType = "GFX_pdx_int_logo"
+			#position = { x= 135 y = 15 }
+		#}		
 		
 	}		
 
 	### SINGLE PLAYER MENU
 	containerWindowType = {
 		name = "mainmenu_single_player"
-		position = { x=0 y =0}
-		size = { width = 320 height = 395}
-		Orientation = CENTER
-		Origo = center	
+		position = { x=0 y =-60}
+		size = { width = 332 height = 559 }
+		Orientation = lower_left
+		Origo = lower_left
 				
 		background = {
 			name = "Background"		
-			quadTextureSprite ="GFX_tiled_window"
+			quadTextureSprite ="GFX_98_start_bg"
+			alwaystransparent = yes
+		}
+
+		clipping = no
+
+		iconType = {
+			name = "menusp_bg"
+			quadTextureSprite ="GFX_menusp_bg"
+			position = { x=332 y =113}
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "WINDOWS98TB_C2"
+			quadTextureSprite ="GFX_98_TB_C"
+			position = { x=2 y =564}
+			scale = 0.8
+		}
+
+        # 假裝 
+		
+
+        iconType = {
+			name = "WINDOWS98T"
+			quadTextureSprite ="GFX_windows98"
+			position = { x=12 y =11}
+			alwaystransparent = yes
+		}
+		ButtonType = {
+            name = "ASPF_QQADD"
+            position = { x=63 y=61 }
+            quadTextureSprite ="GFX_98startwindowbutton"
+            web_link = "https://qun.qq.com/universal-share/share?ac=1&authKey=YfExOoI7CAHrtyIweP7f2gJ19j6Bd7en7Xteg7qQfn%2BTIojQFcV0pfEL0U3SvFO%2F&busi_data=eyJncm91cENvZGUiOiIxMDUxNTg5MjU4IiwidG9rZW4iOiJLUHRPNjNUMC96Q0swZzBqYi9OdU14T1N1NSt1M3U1UWdSMjlORnNTSi9aVVJqUVR3ZTZ3eWdrMmQ0UlFtK3lRIiwidWluIjoiMTgxNDg2ODk0OCJ9&data=NvAcKKkQcCvMt8NJhER8VMDwFnZeJWWoUXwyXEtCFby3Jvyi73c-DN3ke2Tid9WQPByK_Goi79Ce5RVtwLddpA&svctype=4&tempid=h5_group_info"
+            font = "hoi4_typewriter22"			
+			text = "ASPF_QQADD"				
+			clicksound = click_default			
+			oversound = ui_menu_over
+			alwaystransparent = yes
+        }
+		ButtonType = {
+            name = "ASPF_ENCYCLOPEDIAS"
+            position = { x=63 y=11 }
+            quadTextureSprite ="GFX_98startwindowbutton"
+            web_link = ""
+            font = "hoi4_typewriter22"			
+			text = "ASPF_ENCYCLOPEDIAS"				
+			clicksound = click_default			
+			oversound = ui_menu_over
+			alwaystransparent = yes
+        }	
+		ButtonType = {
+			name = "single_player_button"
+			position = { x = 63 y = 131 }
+			quadTextureSprite ="GFX_98startwindowbutton"
+			font = "hoi4_typewriter22"			
+			text = "FE_SINGLE_PLAYER"				
+			clicksound = click_default			
+			oversound = ui_menu_over
+			alwaystransparent = yes
+		}
+		ButtonType = {
+			name = "multi_player_button"
+			position = { x = 63 y = 181 }
+			quadTextureSprite ="GFX_98startwindowbutton"
+			font = "hoi4_typewriter22"			
+			text = "FE_MULTI_PLAYER"			
+			clicksound = click_default
+			oversound = ui_menu_over
+			alwaystransparent = yes
+		}
+		ButtonType = {
+			name = "settings_button"
+			position = { x = 63 y = 231 }
+			quadTextureSprite ="GFX_98startwindowbutton"	
+			buttonText = "OPTIONS"
+			buttonFont = "hoi4_typewriter22"
+			clicksound = click_default
+			oversound = ui_menu_over
+			alwaystransparent = yes
 		}
 		
+		buttonType = {
+			name = "career_profile_button"
+			position = { x = 63 y = 281 }
+			quadTextureSprite ="GFX_98startwindowbutton"
+			buttonText = "MENU_BAR_CAREER_PROFILE"
+			buttonFont = "hoi4_typewriter22"
+			clicksound = click_default
+			oversound = ui_menu_over
+			alwaystransparent = yes
+		}	
+		buttonType = {
+			name = "friends_button"
+			position = { x = 63 y = 331 }
+			quadTextureSprite ="GFX_98startwindowbutton"
+			buttonText = "MENU_BAR_FRIENDS"
+			buttonFont = "hoi4_typewriter22"
+			clicksound = click_default
+			oversound = ui_menu_over
+			alwaystransparent = yes
+		}
+		ButtonType = {
+			name = "credits_button"
+			position = {  x = 63 y = 381 }
+			quadTextureSprite ="GFX_98startwindowbutton"	
+			buttonText = "FE_CREDITS"
+			buttonFont = "hoi4_typewriter22"
+			clicksound = click_default
+			oversound = ui_menu_over
+			alwaystransparent = yes
+		}
+		ButtonType = {
+			name = "nudge_button"
+			position = { x = 63 y = 501 }
+			quadTextureSprite ="GFX_98startwindowbutton"	
+			buttonText = "Nudge!"
+			buttonFont = "hoi4_typewriter22"
+			alwaystransparent = yes
+		}
+		ButtonType = {
+			name = "exit_button"
+			position = { x = 63 y = 451 }
+			quadTextureSprite ="GFX_98startwindowbutton"
+			font = "hoi4_typewriter22"			
+			text = "FE_EXIT"			
+			clicksound = click_default
+			oversound = ui_menu_over
+			alwaystransparent = yes
+		}
+
+
+		
+
+
+		iconType = {
+			name = "98starticons"
+			position = { x = 91 y = 257 }
+			spriteType = "GFX_98starticons"
+			centerposition = yes
+			orientation = upper_left
+			alwaysTransparent = yes
+		}
+		# 假裝
+
+		ButtonType = { #蓋住
+			name = "sp_back_button"
+			position = { x = 0 y = -1440 }
+			quadTextureSprite ="GFX_menu_air"
+			#font = "hoi4_typewriter22"	
+			#buttonText = "ASPFMENUBACK"
+			clicksound = click_close
+			oversound = ui_menu_over
+			shortcut = "ESCAPE"
+		}
+
 		ButtonType = {
 			name = "sp_continue_button"
-			position = { x = 16 y = 18 }
-			quadTextureSprite ="GFX_main_lobby_button"	
+			position = { x = 336 y = 117 }
+			quadTextureSprite ="GFX_98startwindowbutton"
+			font = "hoi4_typewriter22"		
 			buttonText = "FE_CONTINUE"
-			buttonFont = "hoi_24header"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
@@ -299,7 +482,7 @@ guiTypes = {
 		iconType = {
 			name = "sp_continue_flag_left"
 			quadTextureSprite ="GFX_flag_small2_not_masked"
-			position = { x= 35 y = 22 }
+			position = { x= 35000 y = 22 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
@@ -307,7 +490,7 @@ guiTypes = {
 		iconType = {
 			name = "sp_continue_flag_left_overlay"
 			quadTextureSprite ="GFX_flag_small2_not_masked"
-			position = { x= 35 y = 22 }
+			position = { x= 35000 y = 22 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
@@ -315,7 +498,7 @@ guiTypes = {
 		iconType = {
 			name = "sp_continue_flag_right"
 			quadTextureSprite ="GFX_flag_small2_not_masked"
-			position = { x= 245 y = 22 }
+			position = { x= 245000 y = 22 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
@@ -323,76 +506,106 @@ guiTypes = {
 		iconType = {
 			name = "sp_continue_flag_right_overlay"
 			quadTextureSprite ="GFX_flag_small2_not_masked"
-			position = { x= 245 y = 22 }
+			position = { x= 245000 y = 22 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
 		
 		ButtonType = {
 			name = "sp_new_button"
-			position = { x = 16 y = 58 }
-			quadTextureSprite ="GFX_main_lobby_button"	
+			position = { x = 336 y = 167 }
+			quadTextureSprite ="GFX_98startwindowbutton"
+			font = "hoi4_typewriter22"	
 			buttonText = "FE_NEW"
-			buttonFont = "hoi_24header"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
 		
 		ButtonType = {
 			name = "sp_load_button"
-			position = {  x = 16 y = 98 }
-			quadTextureSprite ="GFX_main_lobby_button"	
+			position = {  x = 336 y = 217 }
+			quadTextureSprite ="GFX_98startwindowbutton"
+			font = "hoi4_typewriter22"		
 			buttonText = "MENU_BAR_LOAD"
-			buttonFont = "hoi_24header"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
 		
 		ButtonType = {
 			name = "sp_tutorial_button"
-			position = { x = 16 y = 138}
-			quadTextureSprite ="GFX_main_lobby_button"	
+			position = { x = 336 y = 267}
+			quadTextureSprite ="GFX_98startwindowbutton"
+			font = "hoi4_typewriter22"		
 			buttonText = "FE_TUTORIAL"
-			buttonFont = "hoi_24header"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
 		
-		ButtonType = {
-			name = "sp_back_button"
-			position = { x = 16 y = 218 }
-			quadTextureSprite ="GFX_main_lobby_button"	
-			buttonText = "BACK"
-			buttonFont = "hoi_24header"
-			clicksound = click_close
-			oversound = ui_menu_over
-			shortcut = "ESCAPE"
-		}
+		
 	}
 
 	### MAIN MENU PANEL (bottom)
 	containerWindowType = {
 		name ="mainmenu_panel_bottom"
-		position = { x=0 y =0}
-		size = { width = 320 height = 450 }
-		Orientation = CENTER
-		Origo = center		
+		position = { x=0 y =-60}
+		size = { width = 332 height = 559 }
+		Orientation = lower_left
+		Origo = lower_left		
+		
 
 		positionType = {
 			name = "subscription_size"
-			position = { x = 320 y = 575 }
+			position = { x = 332 y = 559 }
 		}
 				
 		background = {
 			name = "Background"		
-			quadTextureSprite ="GFX_tiled_window"
+			quadTextureSprite ="GFX_98_start_bg"
+			alwaystransparent = yes
 		}
+
+		clipping = no
+
+		iconType = {
+			name = "WINDOWS98T"
+			quadTextureSprite ="GFX_windows98"
+			position = { x=12 y =11}
+		}
+
+		iconType = {
+			name = "WINDOWS98TB_C"
+			quadTextureSprite ="GFX_98_TB_C"
+			position = { x=2 y =564}
+			scale = 0.8
+		}
+
+		ButtonType = {
+            name = "ASPF_QQADD"
+            position = { x=63 y=61 }
+            quadTextureSprite ="GFX_98startwindowbutton"
+            web_link = "https://qun.qq.com/universal-share/share?ac=1&authKey=YfExOoI7CAHrtyIweP7f2gJ19j6Bd7en7Xteg7qQfn%2BTIojQFcV0pfEL0U3SvFO%2F&busi_data=eyJncm91cENvZGUiOiIxMDUxNTg5MjU4IiwidG9rZW4iOiJLUHRPNjNUMC96Q0swZzBqYi9OdU14T1N1NSt1M3U1UWdSMjlORnNTSi9aVVJqUVR3ZTZ3eWdrMmQ0UlFtK3lRIiwidWluIjoiMTgxNDg2ODk0OCJ9&data=NvAcKKkQcCvMt8NJhER8VMDwFnZeJWWoUXwyXEtCFby3Jvyi73c-DN3ke2Tid9WQPByK_Goi79Ce5RVtwLddpA&svctype=4&tempid=h5_group_info"
+            font = "hoi4_typewriter22"			
+			text = "ASPF_QQADD"				
+			clicksound = click_default			
+			oversound = ui_menu_over
+        }
+
+		ButtonType = {
+            name = "ASPF_ENCYCLOPEDIAS"
+            position = { x=63 y=11 }
+            quadTextureSprite ="GFX_98startwindowbutton"
+            web_link = ""
+            font = "hoi4_typewriter22"			
+			text = "ASPF_ENCYCLOPEDIAS"				
+			clicksound = click_default			
+			oversound = ui_menu_over
+        }
 			
 		ButtonType = {
 			name = "single_player_button"
-			position = { x = 16 y = 18 }
-			quadTextureSprite ="GFX_main_lobby_button"
-			font = "hoi_24header"			
+			position = { x = 63 y = 131 }
+			quadTextureSprite ="GFX_98startwindowbutton"
+			font = "hoi4_typewriter22"			
 			text = "FE_SINGLE_PLAYER"				
 			clicksound = click_default			
 			oversound = ui_menu_over
@@ -400,56 +613,58 @@ guiTypes = {
 
 		ButtonType = {
 			name = "multi_player_button"
-			position = { x = 16 y = 58}
-			quadTextureSprite ="GFX_main_lobby_button"
-			font = "hoi_24header"			
+			position = { x = 63 y = 181 }
+			quadTextureSprite ="GFX_98startwindowbutton"
+			font = "hoi4_typewriter22"			
 			text = "FE_MULTI_PLAYER"			
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
 
 		@warn_icon_x = 280
-		iconType = {
-			name = "single_player_button_warn"
-			position = { x = @warn_icon_x y = 22 }
-			spriteType = "GFX_missing_dlc_warning_sign"
-		}
+		#iconType = {
+		#	name = "single_player_button_warn"
+		#	position = { x = @warn_icon_x y = 22 }
+		#	spriteType = "GFX_missing_dlc_warning_sign"
+		#}
 
 		instantTextBoxType = {
 
 			name ="version_label"
-			position = { x = 0 y = 411 }
+			position = { x = 210 y = 567 }
 			textureFile = ""
 			font = "hoi_18b"
+			text_color_code = b
 			borderSize = {x = 0 y = 0}
 			text = "ALPHA"	
-			format = centre
-			maxWidth = 320
+			format = left
+			maxWidth = 250
 			maxHeight = 20	
+			
 		}
 
 		positionType = {
 			name = "version_label_subscription_position"
-			position = { x = 0 y = 539 }
+			position = { x = 210 y = 567 }
 		}
 		
 		
 		ButtonType = {
 			name = "settings_button"
-			position = { x = 16 y = 98 }
-			quadTextureSprite ="GFX_main_lobby_button"	
+			position = { x = 63 y = 231 }
+			quadTextureSprite ="GFX_98startwindowbutton"	
 			buttonText = "OPTIONS"
-			buttonFont = "hoi_24header"
+			buttonFont = "hoi4_typewriter22"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
 		
 		buttonType = {
 			name = "career_profile_button"
-			position = { x = 16 y = 138 }
-			quadTextureSprite ="GFX_main_lobby_button"
+			position = { x = 63 y = 281 }
+			quadTextureSprite ="GFX_98startwindowbutton"
 			buttonText = "MENU_BAR_CAREER_PROFILE"
-			buttonFont = "hoi_24header"
+			buttonFont = "hoi4_typewriter22"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
@@ -465,37 +680,37 @@ guiTypes = {
 		
 		buttonType = {
 			name = "friends_button"
-			position = { x = 16 y = 178 }
-			quadTextureSprite ="GFX_main_lobby_button"
+			position = { x = 63 y = 331 }
+			quadTextureSprite ="GFX_98startwindowbutton"
 			buttonText = "MENU_BAR_FRIENDS"
-			buttonFont = "hoi_24header"
+			buttonFont = "hoi4_typewriter22"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
 
 		ButtonType = {
 			name = "credits_button"
-			position = {  x = 16 y = 218 }
-			quadTextureSprite ="GFX_main_lobby_button"	
+			position = {  x = 63 y = 381 }
+			quadTextureSprite ="GFX_98startwindowbutton"	
 			buttonText = "FE_CREDITS"
-			buttonFont = "hoi_24header"
+			buttonFont = "hoi4_typewriter22"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
 		
 		ButtonType = {
 			name = "nudge_button"
-			position = { x = 16 y = 258 }
-			quadTextureSprite ="GFX_main_lobby_button"	
+			position = { x = 63 y = 501 }
+			quadTextureSprite ="GFX_98startwindowbutton"	
 			buttonText = "Nudge!"
-			buttonFont = "hoi_24header"
+			buttonFont = "hoi4_typewriter22"
 		}
 
 		ButtonType = {
 			name = "exit_button"
-			position = { x = 16 y = 300 }
-			quadTextureSprite ="GFX_main_lobby_button"
-			font = "hoi_24header"			
+			position = { x = 63 y = 451 }
+			quadTextureSprite ="GFX_98startwindowbutton"
+			font = "hoi4_typewriter22"			
 			text = "FE_EXIT"			
 			clicksound = click_default
 			oversound = ui_menu_over
@@ -503,14 +718,23 @@ guiTypes = {
 		}
 
 		iconType = {
+			name = "98starticons"
+			position = { x = 91 y = 257 }
+			spriteType = "GFX_98starticons"
+			centerposition = yes
+			orientation = upper_left
+			alwaysTransparent = yes
+		}
+
+		iconType = {
 			name = "subscription_divider"
-			position = { x = 4 y = 336 }
+			position = { x = 4000 y = 336 }
 			spriteType = "GFX_main_lobby_divider"
 		}
 
 		containerWindowType = {
 			name = "subscription_widget"
-			position = { x = 16 y = 352 }
+			position = { x = 16000 y = 352 }
 			size = { width = 288 height = 108 }
 
 			ButtonType = {
@@ -524,26 +748,8 @@ guiTypes = {
 		}
 
 		containerWindowType = {
-			name = "subscription_widget_simp_chinese"
-			position = { x = 16 y = 352 }
-			size = { width = 288 height = 108 }
-			hide = yes
-
-			ButtonType = {
-				name = "show_subscription"
-				position = { x = 0 y = 0 }
-				quadTextureSprite = "GFX_subscription_widget_chinese"
-				frame = 10
-				buttonText = "SUBSCRIPTION_WIDGET_SIMP_CHINESE"
-				buttonFont = "hoi_24header"
-				multiline = yes
-				web_link = "https://cn.heartsofiron.com/add-ons"
-			}
-		}
-
-		containerWindowType = {
 			name = "subscription_widget_subscribed"
-			position = { x = 16 y = 352 }
+			position = { x = 16000 y = 352 }
 			size = { width = 288 height = 108 }
 
 			ButtonType = {
@@ -626,7 +832,7 @@ guiTypes = {
 		}
         containerWindowType = {
             name = "first_row"
-			position = { x=48 y=-17 }
+			position = { x=48000 y=-17 }
             ButtonType = {
                 name = "homepage_button"
                 position = { x=0 y=0 }
@@ -664,7 +870,7 @@ guiTypes = {
         }
         containerWindowType = {
             name = "second_row"
-			position = { x=30 y=19 }
+			position = { x=30000 y=19 }
             ButtonType = {
                 name = "bluesky_button"
                 position = { x=0 y=0 }
