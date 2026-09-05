@@ -330,4 +330,19 @@ characters = {
         }     
 	}
 	
+	PRC_ZhuRongji = {
+		name = PRC_ZhuRongji
+		portraits = {
+			civilian = {
+				large = GFX_portrait_large_civilian_PRC_ZhuRongji
+			}
+		}
+		country_leader = {
+			ideology = NOIDEOLOGIE_NOIDEOLOGIESUBTYPE
+			desc = PRC_ZhuRongji_desc
+			traits = {}
+			expire = "2018.1.1.1"
+		}     
+	}
+	
 }

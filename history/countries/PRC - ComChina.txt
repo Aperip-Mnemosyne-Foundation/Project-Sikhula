@@ -55,8 +55,9 @@ add_ideas = {
 
 set_country_flag = military_ini
 
-recruit_character = PRC_JiangZemin # country_leader 江泽民
-set_country_flag = secondleadershow_PRC_HuJintao # secondleader 胡锦涛
+recruit_character = PRC_JiangZemin # country_leader 江 泽民
+# set_country_flag = secondleadershow_PRC_HuJintao # secondleader 胡 锦涛
+set_country_flag = secondleadershow_PRC_ZhuRongji # secondleader 朱 镕基
 
 # 招募除领导人以外的角色 党魁用 promote_character
 
@@ -78,6 +79,7 @@ recruit_character = PRC_YuYongbo
 recruit_character = PRC_ZengQinghong
 recruit_character = PRC_ZhangWannian
 recruit_character = PRC_ZhuQi
+recruit_character = PRC_ZhuRongji
 
 # game_start_vars_setting
   # Ec.

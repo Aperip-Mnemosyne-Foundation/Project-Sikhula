@@ -30,5 +30,9 @@ spriteTypes = {
 		name = GFX_portrait_large_civilian_PRC_ZengQinghong
 		texturefile = "gfx/images/leaders/large_civilian/PRC/PRC_ZengQinghong.png"
 	}
+	spriteType = {
+		name = GFX_portrait_large_civilian_PRC_ZhuRongji
+		texturefile = "gfx/images/leaders/large_civilian/PRC/PRC_ZhuRongji.png"
+	}
 
 }

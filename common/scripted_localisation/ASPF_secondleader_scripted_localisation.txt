@@ -1,4 +1,3 @@
-
 defined_text = { 
 	name = GetSecondLeaderPortrait
 		
@@ -7,6 +6,12 @@ defined_text = {
 			has_country_flag = secondleadershow_PRC_HuJintao
 		}
 		localization_key = "GFX_portrait_large_civilian_PRC_HuJintao"
+	}
+	text = {
+		trigger = {
+			has_country_flag = secondleadershow_PRC_ZhuRongji
+		}
+		localization_key = "GFX_portrait_large_civilian_PRC_ZhuRongji"
 	}
 	text = {
 	    localization_key = "GFX_leader_unknown"
@@ -23,6 +28,12 @@ defined_text = {
 		localization_key = "PRC_HuJintao"
 	}
 	text = {
+		trigger = {
+			has_country_flag = secondleadershow_PRC_ZhuRongji
+		}
+		localization_key = "PRC_ZhuRongji"
+	}
+	text = {
 	    localization_key = "LEADER_UNKNOWN"
 	}
 }
@@ -37,6 +48,12 @@ defined_text = {
 		localization_key = "PRC_HuJintao_text"
 	}
 	text = {
+		trigger = {
+			has_country_flag = secondleadershow_PRC_ZhuRongji
+		}
+		localization_key = "PRC_ZhuRongji_text"
+	}
+	text = {
 	    localization_key = "LEADER_UNKNOWN"
 	}
 }
@@ -49,6 +66,12 @@ defined_text = {
 			has_country_flag = secondleadershow_PRC_HuJintao
 		}
 		localization_key = "PRC_HuJintao_desc"
+	}
+	text = {
+		trigger = {
+			has_country_flag = secondleadershow_PRC_ZhuRongji
+		}
+		localization_key = "PRC_ZhuRongji_desc"
 	}
 	text = {
 	    localization_key = "LEADER_UNKNOWN"
