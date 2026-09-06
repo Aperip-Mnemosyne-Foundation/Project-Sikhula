@@ -9,55 +9,50 @@ guiTypes = {
 
 		buttonType = {
 			name ="change_background_button"
-			position = { x = 206 y = -24 }
-			shortcut = b
+			position = { x = -206 y = -24 }
+			
 			quadTextureSprite = "GFX_button_238x38"
 			buttonText = "CHANGE_BACKGROUND"
-			buttonFont = "AAGCZYRL18"
+			buttonFont = "hoi_24header"
 			Orientation = center
 		}
 
 		containerWindowType = {
 			name = "background_selection"
 			size = { width = 238 height = 700 }
-			position = { x = -120 y = -639 }
-			margin = { top = 14 bottom = 13 left = 0}
+			position = { x = -156 y = -700 }
+			margin = { top = 18 bottom = 13 left = 8}
 
 			background = {
 				name = "Background"
-				quadTextureSprite ="GFX_tiled_SPinckEXwthSCLPMini_bg"
+				quadTextureSprite ="GFX_tiled_window2_1b_border"
 			}
 			
 			checkboxType = {
 					name = "select_all_checkbox"
-					position = { x = 14 y = 0 }
+					position = { x = 13 y = 0 }
 					quadTextureSprite ="GFX_generic_checkbox"
 					buttonText = ""
-					buttonFont = "AAGCZYRL14"
+					buttonFont = "Main_14_black"
 					clicksound = click_checkbox
 				}
 			instantTextBoxType={
-					position = {x = 56 y = 6 }
+					position = {x = 53 y = 6 }
 					name = "select_all_label"
-					font = "AAGCZYRL18"
+					font = "hoi_18mbs"
 					borderSize = {x = 0 y = 0}	
-					maxWidth = 130
+					maxWidth = 150
 					maxHeight = 18
-					text = "SELECTALL"	
+					text = "SELECT_ALL"	
 					orientation = "UPPER_LEFT"
 					format = left
 					
 			}
-			
-			positionType = {
-				name = "interval_input_widget_position"
-				position = { x = 110 y = 4 }
-			}
-			
+						
 		containerWindowType = {
 			name = "background_selection_list"
-			size = { width = 230 height = 628 }
-			position = { x = 0 y = 36 }
+			size = { width = 230 height = 576 }
+			position = { x = 0 y = 90 }
 			verticalScrollbar = "right_vertical_slider"
 			scroll_wheel_factor = 63
 			smooth_scrolling = yes
@@ -67,10 +62,10 @@ guiTypes = {
 			}
 			
 				gridBoxType = {
-					position = { x = 17 y = 0 }
+					position = { x = 9 y = 0 }
 					name = "available_backgrounds"
-					size = { width = 210 height = 0 }
-					slotsize = { width = 217 height = 125 }
+					size = { width = 200 height = 0 }
+					slotsize = { width = 200 height = 150 }
 					max_slots_horizontal = 1		
 				}
 
@@ -91,7 +86,7 @@ guiTypes = {
 		
 		containerWindowType = {
 		name = "highlight"
-		size = { width = 210 height = 118 }
+		size = { width = 192 height = 144 }
 			background = {
 				name = "glowup"
 				quadTextureSprite = "GFX_tiled_frame_selected"
