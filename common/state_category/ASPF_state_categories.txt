@@ -1,58 +1,58 @@
 state_categories={
 	wasteland = {
 		local_building_slots = 0
-		state_production_speed_power_plant_factor = -1
-		state_production_speed_nuclear_reactor_factor = -1
-		state_production_speed_energy_farm_factor = -1
+		#state_production_speed_power_plant_factor = -1
+		#state_production_speed_nuclear_reactor_factor = -1
+		#state_production_speed_energy_farm_factor = -1
 		color = { 20 20 20 }
 	}
 	enclave = {
 		local_building_slots = 0
-		state_production_speed_power_plant_factor = -1
-		state_production_speed_nuclear_reactor_factor = -1
-		state_production_speed_energy_farm_factor = -1
+		#state_production_speed_power_plant_factor = -1
+		#state_production_speed_nuclear_reactor_factor = -1
+		#state_production_speed_energy_farm_factor = -1
 		color = { 255 0 0 }
 	}
 	tiny_island = {
 		local_building_slots = 0
-		state_production_speed_power_plant_factor = -1
-		state_production_speed_nuclear_reactor_factor = -1
-		state_production_speed_energy_farm_factor = -1
+		#state_production_speed_power_plant_factor = -1
+		#state_production_speed_nuclear_reactor_factor = -1
+		#state_production_speed_energy_farm_factor = -1
 		color = { 50 50 50 }
 	}
 	small_island = {
 		local_building_slots = 1
-		state_production_speed_power_plant_factor = -1
-		state_production_speed_nuclear_reactor_factor = -1
-		state_production_speed_energy_farm_factor = -1
+		#state_production_speed_power_plant_factor = -1
+		#state_production_speed_nuclear_reactor_factor = -1
+		#state_production_speed_energy_farm_factor = -1
 		color = { 255 0 0 }
 	}
 	pastoral = {
 		local_building_slots = 1
-		state_production_speed_power_plant_factor = -1
-		state_production_speed_nuclear_reactor_factor = -1
-		state_production_speed_energy_farm_factor = -1
+		#state_production_speed_power_plant_factor = -1
+		#state_production_speed_nuclear_reactor_factor = -1
+		#state_production_speed_energy_farm_factor = -1
 		color = { 255 150 60 }
 	}
 	rural = {
 		local_building_slots = 2
-		state_production_speed_power_plant_factor = -1
-		state_production_speed_nuclear_reactor_factor = -1
-		state_production_speed_energy_farm_factor = -1
+		#state_production_speed_power_plant_factor = -1
+		#state_production_speed_nuclear_reactor_factor = -1
+		#state_production_speed_energy_farm_factor = -1
 		color = { 240 210 0 }
 	}
 	village = {
 		local_building_slots = 3
-		state_production_speed_power_plant_factor = -0.75
-		state_production_speed_nuclear_reactor_factor = -0.75
-		state_production_speed_energy_farm_factor = -0.75
+		#state_production_speed_power_plant_factor = -0.75
+		#state_production_speed_nuclear_reactor_factor = -0.75
+		#state_production_speed_energy_farm_factor = -0.75
 		color = { 0 225 0 }
 	}
 	town = {
 		local_building_slots = 4
-		state_production_speed_power_plant_factor = -0.5
-		state_production_speed_nuclear_reactor_factor = -0.5
-		state_production_speed_energy_farm_factor = -0.5
+		#state_production_speed_power_plant_factor = -0.5
+		#state_production_speed_nuclear_reactor_factor = -0.5
+		#state_production_speed_energy_farm_factor = -0.5
 		color = { 0 250 30 }
 	}
 	large_town = {

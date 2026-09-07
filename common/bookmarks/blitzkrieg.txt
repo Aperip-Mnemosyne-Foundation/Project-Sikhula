@@ -4,7 +4,12 @@ bookmarks = {
 		desc = "BLITZKRIEG_DESC"
 		date = 2000.1.1.12
 		picture = "GFX_select_date_2000"
-		default_country = "RPC"
-	
+		default_country = PRC
+		effect = {
+			randomize_weather = 12345
+		}
+		"---"={
+			history = "1998_OTHER_DESC"
+		}
 	}
 }

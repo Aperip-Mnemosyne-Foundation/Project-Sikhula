@@ -48,8 +48,8 @@ should_initiate_resistance = {
 	}
 	NOT = { is_core_of = FROM } # never for our cores
 	NOT = {
-		check_variable = { nationality = 900 } # Barely inhabited TAAF islands
-		check_variable = { nationality = 999 } # Antarctic/No Culture States
+		#check_variable = { nationality = 900 } # Barely inhabited TAAF islands
+		#check_variable = { nationality = 999 } # Antarctic/No Culture States
 		check_variable = { state_population < 100 } # States with Culture that only have like 3 people in a weather station
 	}
 }

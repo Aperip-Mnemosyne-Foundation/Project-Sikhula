@@ -14,7 +14,7 @@ state={
 			10440 = { naval_base = 1 }
 			1513 = { naval_base = 1 }
 		}
-		add_core_of = BAH
+		# add_core_of = BAH
 	}
 	
 	provinces={

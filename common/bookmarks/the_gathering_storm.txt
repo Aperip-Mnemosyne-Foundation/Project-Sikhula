@@ -4,13 +4,13 @@ bookmarks = {
 		desc = "1998_DESC"
 		date = 1998.1.1.12
 		picture = "GFX_select_date_1998"
-		default_country = "PRC"
+		default_country = PRC
 		default = yes
 		
-		"PRC"={
+		PRC = {
 			history = "1998_PRC_DESC"
 			ideology = AUTHORITARIANSOCIALISM
-			available = yes
+			# available = yes
 			ideas = {
 				PRC_idea_laggingarmy_01
 				PRC_idea_laggingarmy_01
@@ -24,10 +24,10 @@ bookmarks = {
 			}
 		}
 		
-		"JAP"={
+		JAP = {
 			history = "1998_JAP_DESC"
 			ideology = GIRLSBANDISM
-			available = yes
+			# available = yes
 			ideas = {
 				PRC_idea_laggingarmy_01
 				PRC_idea_laggingarmy_01

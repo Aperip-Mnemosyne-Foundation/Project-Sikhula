@@ -5,9 +5,9 @@
 set_research_slots = 4
 
 # Starting tech
-set_technology = {
+# set_technology = {
 # 等科技出来再写
-}
+# }
 set_politics = {
 	ruling_party = AUTHORITARIANSOCIALISM
 	last_election = "1998.1.1"

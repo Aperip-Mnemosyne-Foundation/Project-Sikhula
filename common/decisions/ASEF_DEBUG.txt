@@ -13,7 +13,7 @@ DEBUG_FOCUS_decisions = {
 			hidden_trigger = {
 				original_tag = PRC
 			    is_debug = yes
-			    NOT = {has_focus_tree = PRC_00}
+			    #NOT = {has_focus_tree = PRC_00}
 				always = no
 			}
 		}
@@ -21,10 +21,10 @@ DEBUG_FOCUS_decisions = {
 		fire_only_once = no
 		complete_effect = {
 			hidden_effect = {
-				load_focus_tree = {
-                    tree = PRC_00
-                    keep_completed = yes
-			    }
+				#load_focus_tree = {
+               #     tree = PRC_00
+                #    keep_completed = yes
+			    #}
 			    mark_focus_tree_layout_dirty = yes
 			}
 		}
@@ -114,7 +114,7 @@ DEBUG_FOCUS_decisions = {
 				load_focus_tree = {
                     tree = PRC_02
                     keep_completed = yes
-				    copy_completed_from = PRC
+				    #copy_completed_from = PRC
 			    }
 			    mark_focus_tree_layout_dirty = yes
 			}

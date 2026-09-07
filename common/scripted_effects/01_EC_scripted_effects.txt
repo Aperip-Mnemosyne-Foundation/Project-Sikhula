@@ -404,7 +404,7 @@ ECOA_graph = { # 經濟總量曲綫
 	set_variable = { ROOT.ECOA_band_display = ROOT.ECOA_min }
 	for_loop_effect = {
 		end = 5
-		add_to_array = { ROOT.ECOA_y_label = ROOT.ECOA_band_display index = 0 }
+		add_to_array = { array = ROOT.ECOA_y_label value = ROOT.ECOA_band_display index = 0 }
 		add_to_variable = { ROOT.ECOA_band_display = ROOT.ECOA_display_increment }
 	}
 	divide_variable = { ROOT.ECOA_range = 100 }

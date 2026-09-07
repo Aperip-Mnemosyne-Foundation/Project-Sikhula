@@ -9,7 +9,7 @@
 	reset_on_civilwar = no
 
 	initial_show_position = {
-		focus = industrial_effort
+		x=0 y=0
 	}
 
 	

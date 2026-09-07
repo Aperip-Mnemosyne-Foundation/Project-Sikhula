@@ -12,7 +12,7 @@ reckon_conf = {
                     i = 0
                 }
 			}
-			set_variable = global.ConfPasswordsize = i
+			set_variable = { global.ConfPasswordsize = i }
 		}
 		else_if = {
 		    limit = {
