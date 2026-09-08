@@ -13,7 +13,7 @@ guiTypes = {
 
 		hide_sound = menu_close_window
 		show_sound = menu_open_window
-		
+
 		background = {
 			name = "Background"
 			spriteType ="GFX_gamemenu_bg"
@@ -79,9 +79,33 @@ guiTypes = {
 			spriteType = "GFX_pol_view_bg"
 			position = { x= 0 y = 4444 }
 			Orientation = "UPPER_LEFT"
+		}	
+
+		iconType ={
+			name ="pol_faction_icon_bg"
+			spriteType = "GFX_pol_faction_icon_bg"
+			position = { x= 34800 y = 39 }
+			Orientation = "UPPER_LEFT"
+			size = { width = 70 height = 72}
 		}
 
-        	containerWindowType = {
+		iconType ={
+			name ="pol_partyinfo_bg"
+			spriteType = "GFX_pol_partyinfo_bg"
+			position = { x= 42000 y = 39 }
+			Orientation = "UPPER_LEFT"
+			size = { width = 70 height = 72}
+		}
+
+		iconType ={
+			name ="pol_partygrid_bg"
+			spriteType = "GFX_pol_partygrid_bg"
+			position = { x= 348000 y =113 }
+			Orientation = "UPPER_LEFT"
+			size = { width = 70 height = 72}
+		}
+
+		containerWindowType = {
 			name = "pol_partybox"
 			position = { x= 344 y =35 }
 			clipping = yes
@@ -187,8 +211,17 @@ guiTypes = {
 			        position = { x= 35 y =-13 }		       
 		        }
 			}
-		}	
-		
+		}
+
+		iconType ={
+			name ="pol_faction_icon"
+			spriteType = "GFX_pol_factions_strip"
+			position = { x= 579 y = 116 }
+			Orientation = "UPPER_LEFT"
+			frame = 1
+			#rotation = -0.28
+		}
+
 		iconType ={
 			name ="seg_zone_icon1"
 			spriteType = "GFX_seg_zone"
@@ -208,18 +241,12 @@ guiTypes = {
 		iconType ={
 			name ="seg_zone_icon3"
 			spriteType = "GFX_seg_zone"
-			position = { x= 6 y =285 }]
+			position = { x= 6 y =285 }
 			Orientation = "UPPER_LEFT"
 			frame = 1
 		}
 
-		iconType ={
-			name ="pol_faction_icon"
-			spriteType = "GFX_pol_factions_strip"
-			position = { x= 19 y = 305 }
-			Orientation = "UPPER_LEFT"
-			frame = 1
-		}
+		
 
 		containerWindowType = {
 			name = "chart_explanation"
@@ -286,10 +313,12 @@ guiTypes = {
 				alwaystransparent = yes
 			}
 		}
+
+		
 		
 		containerWindowType = {
 			name = "ruling_party_info"
-			position = { x = 88 y = 305 }
+			position = { x =418  y = 40 }
 			size = { width = 255 height = 60 }
 			clipping = no
 					
@@ -311,7 +340,7 @@ guiTypes = {
 				maxHeight = 20
 				format = RIGHT
 			}
-			
+
 			instantTextboxType = {
 				name = "ideology_more"
 				position = { x = 80 y = 37 }
@@ -321,10 +350,12 @@ guiTypes = {
 				maxHeight = 20
 				format = left
 			}
+
+			
 			
 			instantTextboxType = {
 				name = "elections"
-				position = { x = 9 y = 999999 }
+				position = { x = 9 y = 1900000 }
 				font = "hoi_16mbs"
 				text = "elections"
 				maxWidth = 250
@@ -332,122 +363,24 @@ guiTypes = {
 				vertical_alignment = center
 			}
 			
-			containerWindowType = {
-				name = "faction"
-				position = { x = 100000 y = -50}
-				size = { width = 175 height = 20 }
-				clipping = no
-
-				containerWindowType = {
-					name = "no_faction"
-					size = { width = 100%% height = 100% }
-
-					buttonType = {
-						name = "new_faction_button"
-						quadTextureSprite = "GFX_factions_button"
-						position = { x = -8 y = -12 }
-						buttonFont = "hoi_16mbs"
-						buttonText = ""
-						frame = 2
-					}
-
-					instantTextboxType = {
-						name = "view_factions_text"
-						position = { x = 45 y = 5 }
-						font = "hoi_18mbs"
-						text = "CREATE_FACTION"
-						maxWidth = 143
-						maxHeight = 20
-						fixedsize = yes
-						format = left
-						alwaystransparent = yes
-					}
-
-					iconType = {
-						name = "create_faction_icon"
-						spriteType = "GFX_tension_war_list_major"
-						position = { x = 4 y = -1}
-						alwaystransparent = yes
-					}														
-				}
-				
-				buttonType = {
-					name = "view_factions_button"
-					quadTextureSprite = "GFX_icon_button_32x32"
-					position = { x = 180 y = -1}
-					pdx_tooltip = "VIEW_FACTION"
-				}
-				
-				iconType = {
-					name = "view_faction_icon"
-					spriteType = "GFX_relation_faction"
-					position = { x = 181 y = 1}
-					alwaystransparent = yes
-				}	
-
-				containerWindowType = {
-					name = "original_in_faction"
-					size = { width = 100%% height = 100% }
-
-					instantTextboxType = {
-						name = "faction_name"
-						#position = { x = 105 y = -45 }
-						position = { x = 2 y = 5 }
-						font = "hoi_18mbs"
-						text = "faction"
-						maxWidth = 195
-						maxHeight = 20
-						multiline = no
-						format = left
-					}
-
-					buttonType = {
-						name = "dismantle_faction"
-						#position = { x = 302 y = -50 }
-						position = { x = 199 y = 0 }
-						quadTextureSprite = "GFX_dismantle_faction_button"
-						#buttonFont = "hoi_16mbs"
-						#buttonText = "DIPLOMACY_DISMANTLE_FACTION_TITLE"
-					}
-				}
-
-				containerWindowType = {
-					name = "in_faction"
-					size = { width = 100%% height = 100% }
-
-					buttonType = {
-						name = "open_faction_button"
-						quadTextureSprite = "GFX_factions_button"
-						position = { x = -9 y = -13 }
-						buttonFont = "hoi_16mbs"
-						Orientation = "UPPER_LEFT"
-						frame = 1
-					}
-
-					iconType = {
-						name = "faction_icon"
-						spriteType = "GFX_faction_logo_generic_democratic"
-						position = { x = 3 y = -1}
-						alwaystransparent = yes
-					}
-
-					positionType = {
-						name = "faction_name_position" #position y will be - half the height to keep it centered
-						position = { x = 40 y = 14  }
-					}
-
-					instantTextboxType = {
-						name = "faction_name" 
-						font = "hoi_18mbs"
-						text = ""
-						maxWidth = 138
-						maxHeight = 40
-						fixedsize = yes
-						format = left
-						alwaystransparent = yes
-					}
-				}
+			instantTextboxType = {
+				name = "faction_name"
+				position = { x = 9000 y = 45 }
+				font = "hoi_16mbs"
+				text = "faction"
+				maxWidth = 195
+				maxHeight = 20
+				multiline = no
+				format = left
 			}
+			
+			buttonType = {
+				name = "dismantle_faction"
+				position = { x = 302 y = -5000 }
+				quadTextureSprite = "GFX_dismantle_faction_button"
+				#buttonFont = "hoi_16mbs"
+				#buttonText = "DIPLOMACY_DISMANTLE_FACTION_TITLE"
+			}		
 
 			containerWindowType = {
 				name = "power_balance_button"
@@ -503,51 +436,18 @@ guiTypes = {
 						
 		containerWindowType = {
 			name = "autonomy_progress_view"
-			position = { x = 0 y = 43000 }
-			size = { width = 100%% height = 75 }
+			position = { x = 17000 y = 242 }
+			size = { width = 245 height = 55 }
 			clipping = no
-	
-			background = {
-				name = "Background"		
-				quadTextureSprite ="GFX_tiled_window_1b_border"
-			}
-			containerWindowType = {
-				name = "backgroundwrapper"
-				position = { x = 280 y = 12 }
-				size = { width = 230 height = 50 }
+
 			background = {
 				name = "Background"		
 				quadTextureSprite ="GFX_mini_bg"
 			}
-		}
-		
-			instantTextboxType = {
-			name = "overlord_name"	
-			font = "hoi_16mbs"
-			position = { x = 8000 y = 20 }
-			maxWidth = 180
-			maxHeight = 40
-			fixedsize = yes
-			}	
-
-			buttonType = {
-			name = "autonomy_country_flag"
-			quadTextureSprite ="GFX_flag_small2"
-			position = { x= 20 y = 21 }
-			Orientation = "UPPER_LEFT"
-			}
-
-			iconType ={
-			name ="country_flag_frame"
-			spriteType = "GFX_small_flag_frame_thin2"
-			position = { x= 15 y = 17 }
-			Orientation = "UPPER_LEFT"
-			alwaystransparent = yes
-			}		
 			
 			instantTextboxType = {
 				name = "current_autonomy_name"
-				position = { x = 362 y = 17 }
+				position = { x = 92 y = 8 }
 				font = "hoi_16mbs"
 				text = "autonomy"
 				fixedsize = yes
@@ -555,16 +455,16 @@ guiTypes = {
 				maxHeight = 20		
 				format = center
 			}
-
+			
 			buttonType = {
 				name = "prev_autonomy_level"
-				position = { x = 345 y = 18}
+				position = { x = 75 y = 9 }
 				quadTextureSprite = "GFX_autonomy_level_button"
 			}
 			
 			iconType = {
 				name = "prev_level_glow"
-				position = { x = 333 y = 11 }
+				position = { x = 63 y = 2 }
 				quadTextureSprite = "GFX_ongoing_focus_goal_polview"
 				alwaystransparent = yes				
 				scale = 0.5
@@ -572,26 +472,26 @@ guiTypes = {
 			
 			iconType = {
 				name = "prev_autonomy_level_icon"
-				position = { x = 330 y = 18 }
+				position = { x = 60 y = 9 }
 				quadTextureSprite = "GFX_autonomy_unknown_icon"
 			}
 			
 			iconType = {
 				name = "autonomy_progress"
 				spriteType = "GFX_subject_progressbar"
-				position = { x = 365 y = 38 }
+				position = { x = 95 y = 29 }
 				frame = 100
 			}
 			
 			buttonType = {
 				name = "next_autonomy_level"
-				position = { x = 460 y = 14 }
+				position = { x = 190 y = 5 }
 				quadTextureSprite = "GFX_occupation_policy_button_selected"
 			}
 			
 			iconType = {
 				name = "next_level_glow"
-				position = { x = 449 y = 7 }
+				position = { x = 179 y = -2 }
 				quadTextureSprite = "GFX_ongoing_focus_goal_polview"
 				alwaystransparent = yes				
 				scale = 0.5
@@ -599,14 +499,14 @@ guiTypes = {
 			
 			iconType = {
 				name = "next_autonomy_level_icon"
-				position = { x = 465 y = 18 }
+				position = { x = 195 y = 9 }
 				quadTextureSprite = "GFX_autonomy_unknown_icon"
 				alwaystransparent = yes
 			}
 
 			iconType = {
 				name = "continuous_glow"
-				position = { x = 274 y = 12 }
+				position = { x = 4 y = -2 }
 				quadTextureSprite = "GFX_ongoing_generic_glow_yellow"
 				alwaystransparent = yes				
 				scale = 0.5
@@ -614,7 +514,7 @@ guiTypes = {
 			
 			iconType = {
 				name = "current_autonomy_level_icon"
-				position = { x = 290 y = 19 }
+				position = { x = 20 y = 10 }
 				quadTextureSprite = "GFX_autonomy_unknown_icon"
 			}
 		}
@@ -627,16 +527,16 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "active_goal"
-			position = { x = 179 y = 48 }
-			size = { width = 330 height = 50 }
-			clipping = no
+			position = { x = 253 y = 289 }
+			size = { width = 395 height = 95 }
+			clipping = yes
 						
 			background = {
 				name = "Background"		
 				spriteType ="GFX_pol_goal_bg"
 			}
 			
-			iconType = {
+            iconType = {
 				name = "goals_icon_bg"
 				position = { x = 29000 y = 47 }	
 				centerposition = yes		
@@ -663,7 +563,7 @@ guiTypes = {
 				position = { x = 36 y = 0 }			
 				spriteType = "GFX_pol_goal_bg_over"
 			}
-			
+
 			buttonType = {
 				name = "add_national_goal_button"
 				position = { x = 135 y = 4 }
@@ -735,7 +635,7 @@ guiTypes = {
 				format = center
 				alwaystransparent = yes
 				vertical_alignment = center			
-				text_color_code = b				
+				text_color_code = b	
 			}
 			
 			iconType = {
@@ -749,7 +649,10 @@ guiTypes = {
 				position = { x = 11000 y = 72 }
 				spriteType = "GFX_pol_goal_progress_frame"
 				alwaystransparent = yes
-			}			
+			}		
+			
+			
+			
 		}
 		containerWindowType = {
 			name = "national_spirit"
@@ -766,6 +669,7 @@ guiTypes = {
 				maxHeight = 20
 				alwaystransparent = yes
 			}
+			
 			iconType = {
 				name = "spirit_icon_bg"
 				spriteType = "GFX_spirit_icon_bg"
@@ -779,7 +683,6 @@ guiTypes = {
                 horizontalScrollbar = "bottom_horizontal_slider_2"
                 margin = { top = 0 left = 0 bottom = 0 right = 0 }
 				size = { width = 237 height = 100 }
-				
 				background = {
 					name = "Background"
 					quadTextureSprite ="GFX_tiled_window_transparent"
@@ -802,13 +705,15 @@ guiTypes = {
 					format = "UPPER_LEFT"
 				}
 			}
-			
+
 			iconType = {
 				name = "spiritscroll2_over"
 				spriteType = "GFX_scroll2_over"
 				position = { x=-2 y = 100 }	
 				alwaystransparent = yes	
 			}
+
+			
 		}
 		iconType = {
 			name = "leader"
@@ -833,7 +738,7 @@ guiTypes = {
 			format = center
 			vertical_alignment = center
 		}
-		
+
 		containerWindowType = {
 			name = "secondleader_view"
 			position = { x = 163 y = -15 }
@@ -854,7 +759,6 @@ guiTypes = {
 				#quadTextureSprite ="GFX_tiled_window_1b_border"
 			}
 			clipping = yes
-			
 			gridBoxType = {
 				name = "idea_categories_grid"
 				position = { x = -15 y = 0 }
@@ -863,8 +767,10 @@ guiTypes = {
 				max_slots_horizontal = 1
 				format = "UPPER_LEFT"
 			}
+
+
 		}
-		
+
 		iconType ={
 			name ="politic_ideas_over"
 			spriteType = "GFX_politic_ideas_over"
@@ -914,15 +820,6 @@ guiTypes = {
 			position = { x= 6 y =386 }
 			Orientation = "UPPER_LEFT"
 			frame = 1
-		buttonType = {
-			name = "close_button"
-			position = { x = -42 y = 9 }
-			quadTextureSprite ="GFX_closebutton"
-			buttonFont = "Main_14_black"
-			shortcut = "ESCAPE"
-			Orientation = "UPPER_RIGHT"
-			clicksound = click_close
-			pdx_tooltip = "CLOSE"
 		}
 
 
@@ -964,7 +861,7 @@ guiTypes = {
 			buttonType = {
 				name = "show_subjects_button"
 				position = { x = 0 y = 0 }
-				quadTextureSprite = "GFX_government_button"
+				quadTextureSprite = "GFX_98_government_button"
 				buttonFont = "hoi_16mbs"
 				Orientation = "UPPER_RIGHT"
 			}
@@ -990,8 +887,8 @@ guiTypes = {
 		
 		buttonType = {
 			name = "show_exiles_collaborations_button"
-			position = { x = 19110 y = 390 }
-			quadTextureSprite = "GFX_government_button"
+			position = { x = 478 y = 426 }
+			quadTextureSprite = "GFX_98_government_button"
 			buttonFont = "hoi_16mbs"
 			Orientation = "UPPER_LEFT"
 			format = right
@@ -999,7 +896,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "manage_exiled_collaborations_governments"
-			position = { x = 223 y = 39800 }
+			position = { x = 548 y = 43300 }
 			font = "hoi_16mbs"
 			maxWidth = 130
 			maxHeight = 20
@@ -1007,6 +904,18 @@ guiTypes = {
 			text = "MANAGE_EXILED_GOVERNMENTS"
 			alwaystransparent = yes
 			format = center
+		}
+
+		instantTextboxType = {
+			name = "manage_exiled_collaborations_governments2"
+			position = { x = 548 y = 437 }
+			font = "Youhei"
+			maxWidth = 122
+			maxHeight = 20
+			fixedsize = yes
+			text = "MANAGE_EXILED_GOVERNMENTS2"
+			alwaystransparent = yes
+			#format = center
 		}
 				
 		iconType = {
@@ -1018,7 +927,7 @@ guiTypes = {
 		iconType = {
 			name = "icon_occupied_territories"
 			spriteType = "GFX_icon_occupied_territories"
-			position = { x = 12 y = 391 }
+			position = { x = 479 y = 391 }
 		}
 	}
 	
@@ -1054,7 +963,7 @@ guiTypes = {
 		
 		gridboxtype = {
 			name = "ideas_grid"
-			position = { x = 17 y = 46 }
+			position = { x = 23 y = 46 }
 			size = { width = 100%% height = 100%% }
 			slotsize = { width = 77 height = 64 }
 			max_slots = { x = 6 y = 1 }
@@ -1109,7 +1018,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "ideas"
 			position = { x = 0 y = 50 }
-			size = { width=362 height=100%% }
+			size = { width=362 height=100%% }	
 			
 			containerWindowType = {
 				name = "grid"
@@ -1256,26 +1165,26 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "political_selectable_idea_entry_grid"
-		size = { width = 231 height = 74 }
+		size = { width = 181 height = 75 }
 		clipping = no
 			
 		background = {
 			name = "idea_entry_bg"
-			position = { x = 3 y = 0 }
+			position = { x = 0 y = 0 }
 			spriteType = "GFX_idea_entry_bg_2"
 		}
 			
 		iconType = {
 			name = "icon"
-			position = { x = 42 y = 38 }
+			position = { x = 6 y = 6 }
 			spriteType = "GFX_placeholder_bordered"
-			centerposition = yes
+			#centerposition = yes
 			alwaystransparent = yes
 		}
 
 		iconType = {
 			name = "idea_traits"
-			position = { x = 53 y = 51 }
+			position = { x = 5300 y = 51 }
 			spriteType = "GFX_idea_traits_strip"
 			centerposition = yes
 			alwaystransparent = yes
@@ -1291,31 +1200,33 @@ guiTypes = {
 			instantTextboxType = {
 				name = "name"
 				position = { x = 0 y = 10 }
-				font = "hoi_18mbs"
+				font = "Youhei18"
 				fixedsize = yes			
 				text = ""
 				maxWidth = 150
 				maxHeight = 13
 				format = left
-				alwaystransparent = yes			
+				alwaystransparent = yes		
+				text_color_code = b	
 			}
 
 			instantTextboxType = {
 				name = "traits"
-				position = { x = 0 y = 28 }
-				font = "hoi_16mbs"
+				position = { x = 0 y = 32 }
+				font = "Youheiw"
 				fixedsize = yes			
 				text = ""
 				maxWidth = 140
 				maxHeight = 100%%
 				format = left
-				alwaystransparent = yes			
+				alwaystransparent = yes		
+				text_color_code = b	
 			}
 		}
 		
 		instantTextboxType = {
 			name = "cost"
-			position = { x = 80 y = 47 }
+			position = { x = 8000 y = 47 }
 			font = "hoi_16mbs"
 			text = ""
 			maxWidth = 142
@@ -1326,7 +1237,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "stats"
-			position = { x = 300 y = 32 }
+			position = { x = 30000 y = 32 }
 			font = "hoi_16mbs"
 			text = ""
 			maxWidth = 142
@@ -1343,15 +1254,15 @@ guiTypes = {
 			
 		background = {
 			name = "idea_entry_bg"
-			position = { x = 3 y = 0 }
+			position = { x = 0 y = 0 }
 			spriteType = "GFX_idea_entry_bg_3"
 		}
 			
 		iconType = {
 			name = "icon"
-			position = { x = 42 y = 38 }
+			position = { x = 6 y = 6 }
 			spriteType = "GFX_placeholder_bordered"
-			centerposition = yes
+			#centerposition = yes
 			alwaystransparent = yes
 		}
 
@@ -1372,15 +1283,16 @@ guiTypes = {
 			
 			instantTextboxType = {
 				name = "name"
-				position = { x = 0 y = -13 }
-				font = "hoi_18mbs"
+				position = { x = 50 y = -13 }
+				font = "Youhei18"
 				fixedsize = yes			
 				text = ""
 				maxWidth = 160
 				maxHeight = 100%%
-				format = left
+				format = CENTER
 				vertical_alignment = center
-				alwaystransparent = yes			
+				alwaystransparent = yes		
+				text_color_code = b	
 			}
 
 			instantTextboxType = {
@@ -1398,7 +1310,7 @@ guiTypes = {
 		
 		instantTextboxType = {
 			name = "cost"
-			position = { x = 200 y = 32 }
+			position = { x = 20000 y = 32 }
 			font = "hoi_16mbs"
 			text = ""
 			maxWidth = 142
@@ -1426,19 +1338,19 @@ guiTypes = {
 
 		iconType = {
 			name = "leading_pol_party_bg"
-			position = { x = 60 y = 5 }
+			position = { x = 58000 y = 5 }
 			spriteType = "GFX_leading_pol_party_bg"
 		}		
 		
 		iconType = {
 			name = "color_block_bg"
-			position = { x = 60 y = 2 }
+			position = { x = 61 y = 4 }
 			spriteType = "GFX_pol_party_colour_bg"
 		}
 		
 		iconType = {
 			name = "color_block"
-			position = { x = 64 y = 6 }
+			position = { x = 64 y = 7 }
 			spriteType = "GFX_pol_party_colour"
 		}
 		
@@ -1464,8 +1376,8 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "manage_subjects_window"
-		position = { x = -3596 y = 80 }	
-		show_position = { x = 59937 y = 80 }
+		position = { x = -356 y = 80 }	
+		show_position = { x = 537 y = 80 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
 		animation_time = 300
@@ -1480,8 +1392,8 @@ guiTypes = {
 		
 		containerWindowType = {
 		    name = "subject_items_window"
-		    position = { x = -3596 y = 78 }	
-		    show_position = { x = 29999 y = 37 }
+		    position = { x = -356 y = 78 }	
+		    show_position = { x = 2 y = 37 }
 		    show_animation_type = decelerated
 		    hide_animation_type = accelerated
 			size = { width=548 height=100%% }
@@ -1509,7 +1421,7 @@ guiTypes = {
 		iconType ={
 			name ="manage_occupied_header_bg"
 			spriteType = "GFX_header_bg"
-			position = { x= 99997 y = 5 }
+			position = { x= 7 y = 5 }
 			Orientation = "UPPER_LEFT"
 		}
 		
@@ -1540,7 +1452,7 @@ guiTypes = {
 		
 	containerWindowType = {
 		name = "subject_item"
-		position = { x = 99990 y = 0}
+		position = { x = 0 y = 0}
 		size = { width=494 height=87 }
 		clipping = no
 		
@@ -1577,7 +1489,7 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "autonomy_progress_view"
-			position = { x = 24000 y = 20 }
+			position = { x = 240 y = 20 }
 			size = { width = 255 height = 60 }
 			clipping = no
 			
@@ -1649,8 +1561,8 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "exiles_window"
-		position = { x = -35600 y = 80 }	
-		show_position = { x = 53799 y = 80 }
+		position = { x = -356 y = 80 }	
+		show_position = { x = 537 y = 80 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
 		animation_time = 300
@@ -1665,8 +1577,8 @@ guiTypes = {
 	
 		containerWindowType = {
 			name = "exile_items_window"
-			position = { x = -39956 y = 78 }	
-			show_position = { x = 29999 y = 37 }
+			position = { x = -356 y = 78 }	
+			show_position = { x = 2 y = 37 }
 			show_animation_type = decelerated
 			hide_animation_type = accelerated
 			size = { width=548 height=100%% }
@@ -1724,7 +1636,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "collaboration_item"
-		position = { x = 11110 y = 0 }
+		position = { x = 0 y = 0 }
 		size = { width=494 height=65 }
 		clipping = no
 		
@@ -1803,7 +1715,7 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "exile_item"
-		position = { x = 099999 y = 0 }
+		position = { x = 0 y = 0 }
 		size = { width=494 height=95 }
 		clipping = no
 		
@@ -1900,7 +1812,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "exile_legitimacy_progress_container"
-			position = { x = -29930 y = 4 }
+			position = { x = -230 y = 4 }
 			Orientation = UPPER_RIGHT
 			
 			iconType = {
@@ -2012,8 +1924,8 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "manage_occupied_window"
-		position = { x = -35699 y = 80 }	
-		show_position = { x = 5379 y = 99980 }
+		position = { x = -356 y = 80 }	
+		show_position = { x = 537 y = 80 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
 		animation_time = 300
@@ -2054,12 +1966,11 @@ guiTypes = {
 			maxHeight = 20
 			format = left
 		}
-	}
 		
 	containerWindowType = {
 		name = "occupied_entries_window"
-		position = { x = -35699 y = 78 }	
-		show_position = { x = 29999 y = 99937 }
+		position = { x = -356 y = 78 }	
+		show_position = { x = 2 y = 37 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
 		size = { width=548 height=100%% }
@@ -2081,11 +1992,11 @@ guiTypes = {
 				format = UPPER_LEFT
 			}
 		}
-	
+	}
 	
 	containerWindowType = {
 		name = "occupied_territory_entry"
-		position = { x = 11110 y = 0}
+		position = { x = 0 y = 0}
 		size = { width=494 height=100 }
 		clipping = no
 		

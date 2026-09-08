@@ -18,9 +18,9 @@ scripted_gui = {
 		context_type = player_context
 		window_name = "political_attached2_window"
 		#parent_window_token = selected_country_view_diplomacy
-		#parent_window_name = "secondleader_view"
+		parent_window_name = "secondleader_view"
 		visible = {
-			ALWAYS = NO
+			# ALWAYS = NO
 		}
 		triggers = {
 		}
