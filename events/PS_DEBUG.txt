@@ -1,0 +1,97 @@
+add_namespace = PS_DEBUG
+
+
+
+country_event = {
+	id = PS_DEBUG.1
+	title = PS_DEBUG.1.t
+	desc = PS_DEBUG.1.desc
+	picture = GFX_event_report_PS_DEBUG
+	is_triggered_only = yes
+	fire_only_once = no
+    hidden = no
+	major = no
+    immediate = {
+    }
+	option = {
+		name = "PS_DEBUG.1.a"
+	}
+	option = {
+		name = "PS_DEBUG.1.b"
+	}
+	option = {
+		name = "PS_DEBUG.1.c"
+	}
+	option = {
+		name = "PS_DEBUG.1.d"
+	}
+	option = {
+		name = "PS_DEBUG.1.e"
+	}
+	option = {
+		name = "PS_DEBUG.1.f"
+	}
+}
+country_event = {
+	id = PS_DEBUG.2
+	title = PS_DEBUG.2.t
+	desc = PS_DEBUG.2.desc
+	picture = GFX_event_report_PS_DEBUG
+	is_triggered_only = yes
+	fire_only_once = no
+    hidden = no
+	major = no
+    immediate = {
+    }
+	option = {
+		name = "PS_DEBUG.2.a"
+	}
+	option = {
+		name = "PS_DEBUG.2.b"
+	}
+	option = {
+		name = "PS_DEBUG.2.c"
+	}
+	option = {
+		name = "PS_DEBUG.2.d"
+	}
+	option = {
+		name = "PS_DEBUG.2.e"
+	}
+	option = {
+		name = "PS_DEBUG.2.f"
+	}
+}
+country_event = {
+	id = PS_DEBUG.3
+	title = PS_DEBUG.3.t
+	desc = PS_DEBUG.3.desc
+	picture = GFX_event_report_PS_DEBUG
+	is_triggered_only = yes
+	fire_only_once = no
+    hidden = no
+	major = no
+    immediate = {
+    }
+	option = {
+		name = "PS_DEBUG.3.a"
+	}
+	option = {
+		name = "PS_DEBUG.3.b"
+	}
+}
+news_event = {
+	id = PS_DEBUG.4
+	title = PS_DEBUG.4.t
+	desc = PS_DEBUG.4.desc
+	picture = GFX_event_news_PS_DEBUG
+	is_triggered_only = yes
+	fire_only_once = no
+    hidden = no
+	major = yes
+    immediate = {
+    }
+	option = {
+		name = "PS_DEBUG.4.a"
+	}
+}
