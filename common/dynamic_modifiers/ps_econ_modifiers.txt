@@ -12,7 +12,6 @@ psEcon_pulse = {
 	industry_repair_factor = psEcon_repair
 	production_factory_max_efficiency_factor = psEcon_effCap
 	production_factory_efficiency_gain_factor = psEcon_effGain
-	consumer_goods_factor = psEcon_goods
 	research_speed_factor = psEcon_research
 	stability_weekly = psEcon_stabWeekly
 	war_support_weekly = psEcon_warSupport

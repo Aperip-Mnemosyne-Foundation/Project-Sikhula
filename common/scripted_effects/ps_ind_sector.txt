@@ -1,0 +1,280 @@
+# Ownership stocks. 1 is state, 0 is private. Laws do not move these.
+# psInd_apply writes level effects. psInd_bubblePressure writes the monthly froth term.
+
+psInd_seedDefaults = {
+	set_variable = { psInd_heavyState = 0.40 }
+	set_variable = { psInd_lightState = 0.35 }
+	set_variable = { psInd_techState = 0.30 }
+	set_variable = { psInd_farmState = 0.35 }
+	set_variable = { psInd_energyState = 0.55 }
+}
+
+psInd_seed = {
+	psInd_seedDefaults = yes
+	if = {
+		limit = { original_tag = USA }
+		set_variable = { psInd_heavyState = 0.15 }
+		set_variable = { psInd_lightState = 0.08 }
+		set_variable = { psInd_techState = 0.10 }
+		set_variable = { psInd_farmState = 0.05 }
+		set_variable = { psInd_energyState = 0.22 }
+	}
+	else_if = {
+		limit = { original_tag = GER }
+		set_variable = { psInd_heavyState = 0.22 }
+		set_variable = { psInd_lightState = 0.12 }
+		set_variable = { psInd_techState = 0.14 }
+		set_variable = { psInd_farmState = 0.08 }
+		set_variable = { psInd_energyState = 0.38 }
+	}
+	else_if = {
+		limit = { original_tag = JAP }
+		set_variable = { psInd_heavyState = 0.14 }
+		set_variable = { psInd_lightState = 0.10 }
+		set_variable = { psInd_techState = 0.12 }
+		set_variable = { psInd_farmState = 0.18 }
+		set_variable = { psInd_energyState = 0.28 }
+	}
+	else_if = {
+		limit = { original_tag = PRC }
+		set_variable = { psInd_heavyState = 0.86 }
+		set_variable = { psInd_lightState = 0.58 }
+		set_variable = { psInd_techState = 0.72 }
+		set_variable = { psInd_farmState = 0.48 }
+		set_variable = { psInd_energyState = 0.93 }
+	}
+	else_if = {
+		limit = { original_tag = RAJ }
+		set_variable = { psInd_heavyState = 0.68 }
+		set_variable = { psInd_lightState = 0.42 }
+		set_variable = { psInd_techState = 0.48 }
+		set_variable = { psInd_farmState = 0.18 }
+		set_variable = { psInd_energyState = 0.82 }
+	}
+	else_if = {
+		limit = { original_tag = SOV }
+		set_variable = { psInd_heavyState = 0.52 }
+		set_variable = { psInd_lightState = 0.40 }
+		set_variable = { psInd_techState = 0.62 }
+		set_variable = { psInd_farmState = 0.46 }
+		set_variable = { psInd_energyState = 0.74 }
+	}
+	else_if = {
+		limit = { original_tag = ENG }
+		set_variable = { psInd_heavyState = 0.16 }
+		set_variable = { psInd_lightState = 0.10 }
+		set_variable = { psInd_techState = 0.14 }
+		set_variable = { psInd_farmState = 0.08 }
+		set_variable = { psInd_energyState = 0.28 }
+	}
+	else_if = {
+		limit = { original_tag = FRA }
+		set_variable = { psInd_heavyState = 0.34 }
+		set_variable = { psInd_lightState = 0.18 }
+		set_variable = { psInd_techState = 0.28 }
+		set_variable = { psInd_farmState = 0.12 }
+		set_variable = { psInd_energyState = 0.68 }
+	}
+	else_if = {
+		limit = { original_tag = ITA }
+		set_variable = { psInd_heavyState = 0.28 }
+		set_variable = { psInd_lightState = 0.16 }
+		set_variable = { psInd_techState = 0.20 }
+		set_variable = { psInd_farmState = 0.14 }
+		set_variable = { psInd_energyState = 0.55 }
+	}
+	else_if = {
+		limit = { original_tag = CAN }
+		set_variable = { psInd_heavyState = 0.18 }
+		set_variable = { psInd_lightState = 0.12 }
+		set_variable = { psInd_techState = 0.16 }
+		set_variable = { psInd_farmState = 0.10 }
+		set_variable = { psInd_energyState = 0.30 }
+	}
+	psInd_mirrorPrivate = yes
+}
+
+psInd_mirrorPrivate = {
+	set_variable = { psInd_heavyPrivate = 1 }
+	subtract_from_variable = { psInd_heavyPrivate = psInd_heavyState }
+	set_variable = { psInd_lightPrivate = 1 }
+	subtract_from_variable = { psInd_lightPrivate = psInd_lightState }
+	set_variable = { psInd_techPrivate = 1 }
+	subtract_from_variable = { psInd_techPrivate = psInd_techState }
+	set_variable = { psInd_farmPrivate = 1 }
+	subtract_from_variable = { psInd_farmPrivate = psInd_farmState }
+	set_variable = { psInd_energyPrivate = 1 }
+	subtract_from_variable = { psInd_energyPrivate = psInd_energyState }
+}
+
+psInd_apply = {
+	# Level effects for this month. Private light and tech produce. State heavy and energy build.
+	psInd_mirrorPrivate = yes
+	set_temp_variable = { lightGap = psInd_lightPrivate }
+	subtract_from_temp_variable = { lightGap = 0.50 }
+	multiply_temp_variable = { lightGap = 0.042 }
+	set_temp_variable = { heavyGap = psInd_heavyPrivate }
+	subtract_from_temp_variable = { heavyGap = 0.45 }
+	multiply_temp_variable = { heavyGap = 0.028 }
+	set_temp_variable = { techGap = psInd_techPrivate }
+	subtract_from_temp_variable = { techGap = 0.50 }
+	multiply_temp_variable = { techGap = 0.036 }
+	set_temp_variable = { energyGap = psInd_energyState }
+	subtract_from_temp_variable = { energyGap = 0.40 }
+	multiply_temp_variable = { energyGap = 0.012 }
+	set_temp_variable = { farmDrag = psInd_farmState }
+	multiply_temp_variable = { farmDrag = 0.012 }
+	set_temp_variable = { soften = psInd_heavyState }
+	multiply_temp_variable = { soften = 0.010 }
+	set_temp_variable = { softenLight = psInd_lightState }
+	multiply_temp_variable = { softenLight = 0.006 }
+	add_to_temp_variable = { soften = softenLight }
+	multiply_temp_variable = { soften = psEcon_soePrivilege }
+	set_temp_variable = { factory = lightGap }
+	add_to_temp_variable = { factory = heavyGap }
+	add_to_temp_variable = { factory = techGap }
+	add_to_temp_variable = { factory = energyGap }
+	subtract_from_temp_variable = { factory = farmDrag }
+	add_to_temp_variable = { factory = soften }
+	set_variable = { psInd_factoryAdd = factory }
+
+	set_temp_variable = { build = psInd_heavyState }
+	multiply_temp_variable = { build = 0.036 }
+	set_temp_variable = { energyBuild = psInd_energyState }
+	multiply_temp_variable = { energyBuild = 0.016 }
+	add_to_temp_variable = { build = energyBuild }
+	set_temp_variable = { techBuild = psInd_techPrivate }
+	multiply_temp_variable = { techBuild = 0.010 }
+	subtract_from_temp_variable = { build = techBuild }
+	set_variable = { psInd_buildAdd = build }
+
+	set_temp_variable = { trustScale = psEcon_contractTrust }
+	divide_temp_variable = { trustScale = 0.70 }
+	clamp_temp_variable = { var = trustScale min = 0 max = 1.25 }
+	multiply_temp_variable = { trustScale = 0.50 }
+	add_to_temp_variable = { trustScale = 0.50 }
+	set_temp_variable = { research = psInd_techPrivate }
+	multiply_temp_variable = { research = trustScale }
+	multiply_temp_variable = { research = 0.048 }
+	set_temp_variable = { stateLabs = psInd_techState }
+	multiply_temp_variable = { stateLabs = 0.010 }
+	add_to_temp_variable = { research = stateLabs }
+	set_temp_variable = { heavyLabs = psInd_heavyState }
+	multiply_temp_variable = { heavyLabs = 0.006 }
+	subtract_from_temp_variable = { research = heavyLabs }
+	set_variable = { psInd_researchAdd = research }
+
+	set_temp_variable = { effCap = psInd_techPrivate }
+	multiply_temp_variable = { effCap = 0.024 }
+	set_temp_variable = { heavyEff = psInd_heavyState }
+	multiply_temp_variable = { heavyEff = 0.012 }
+	subtract_from_temp_variable = { effCap = heavyEff }
+	set_variable = { psInd_effCapAdd = effCap }
+	set_temp_variable = { effGain = psInd_lightPrivate }
+	subtract_from_temp_variable = { effGain = 0.50 }
+	multiply_temp_variable = { effGain = 0.030 }
+	set_variable = { psInd_effGainAdd = effGain }
+
+	# State firms hoard labor. The subsidy is a real monthly bill, scaled by the legal privilege.
+	set_temp_variable = { hoard = psInd_heavyState }
+	multiply_temp_variable = { hoard = 0.45 }
+	set_temp_variable = { hoardLight = psInd_lightState }
+	multiply_temp_variable = { hoardLight = 0.25 }
+	add_to_temp_variable = { hoard = hoardLight }
+	set_temp_variable = { hoardEnergy = psInd_energyState }
+	multiply_temp_variable = { hoardEnergy = 0.15 }
+	add_to_temp_variable = { hoard = hoardEnergy }
+	multiply_temp_variable = { hoard = 0.010 }
+	set_variable = { psInd_jobHoard = hoard }
+
+	set_temp_variable = { weight = psInd_heavyState }
+	multiply_temp_variable = { weight = 0.40 }
+	set_temp_variable = { part = psInd_lightState }
+	multiply_temp_variable = { part = 0.25 }
+	add_to_temp_variable = { weight = part }
+	set_temp_variable = { part = psInd_techState }
+	multiply_temp_variable = { part = 0.15 }
+	add_to_temp_variable = { weight = part }
+	set_temp_variable = { part = psInd_farmState }
+	multiply_temp_variable = { part = 0.10 }
+	add_to_temp_variable = { weight = part }
+	set_temp_variable = { part = psInd_energyState }
+	multiply_temp_variable = { part = 0.30 }
+	add_to_temp_variable = { weight = part }
+	set_temp_variable = { privilegeLoad = psEcon_soePrivilege }
+	multiply_temp_variable = { privilegeLoad = 0.60 }
+	add_to_temp_variable = { privilegeLoad = 0.70 }
+	multiply_temp_variable = { weight = privilegeLoad }
+	multiply_temp_variable = { weight = 0.0010 }
+	set_variable = { psInd_fiscalMonth = weight }
+
+	set_temp_variable = { food = psInd_farmPrivate }
+	multiply_temp_variable = { food = 0.045 }
+	set_temp_variable = { ration = psInd_farmState }
+	multiply_temp_variable = { ration = 0.020 }
+	add_to_temp_variable = { food = ration }
+	set_variable = { psInd_foodAdd = food }
+	set_temp_variable = { energy = psInd_energyState }
+	multiply_temp_variable = { energy = 0.050 }
+	set_variable = { psInd_energyAdd = energy }
+
+	set_temp_variable = { exports = psInd_lightPrivate }
+	multiply_temp_variable = { exports = 0.28 }
+	add_to_temp_variable = { exports = 0.50 }
+	set_temp_variable = { techExports = psInd_techPrivate }
+	multiply_temp_variable = { techExports = 0.22 }
+	add_to_temp_variable = { exports = techExports }
+	set_variable = { psInd_exportMix = exports }
+}
+
+psInd_bubblePressure = {
+	# Easy money plus private tech and light industry froths the stock. State heavy and energy lean against it.
+	set_temp_variable = { easy = psEcon_stanceUsed }
+	clamp_temp_variable = { var = easy min = 0 max = 2 }
+	set_temp_variable = { froth = psInd_techPrivate }
+	multiply_temp_variable = { froth = psInd_lightPrivate }
+	multiply_temp_variable = { froth = easy }
+	multiply_temp_variable = { froth = 0.0035 }
+	set_temp_variable = { runup = psEcon_momentum }
+	clamp_temp_variable = { var = runup min = 0 max = 0.04 }
+	multiply_temp_variable = { runup = psInd_techPrivate }
+	multiply_temp_variable = { runup = 0.12 }
+	add_to_temp_variable = { froth = runup }
+	set_temp_variable = { anchor = psInd_heavyState }
+	multiply_temp_variable = { anchor = 0.0012 }
+	subtract_from_temp_variable = { froth = anchor }
+	set_temp_variable = { anchor = psInd_energyState }
+	multiply_temp_variable = { anchor = 0.0008 }
+	subtract_from_temp_variable = { froth = anchor }
+	set_variable = { psInd_bubbleAdd = froth }
+}
+
+psInd_shift = {
+	# psInd_inputSector: 1 heavy, 2 light, 3 tech, 4 farm, 5 energy. Positive step nationalizes.
+	if = {
+		limit = { check_variable = { psInd_inputSector = 1 } }
+		add_to_variable = { psInd_heavyState = psInd_inputStep }
+		clamp_variable = { var = psInd_heavyState min = 0.02 max = 0.98 }
+	}
+	else_if = {
+		limit = { check_variable = { psInd_inputSector = 2 } }
+		add_to_variable = { psInd_lightState = psInd_inputStep }
+		clamp_variable = { var = psInd_lightState min = 0.02 max = 0.98 }
+	}
+	else_if = {
+		limit = { check_variable = { psInd_inputSector = 3 } }
+		add_to_variable = { psInd_techState = psInd_inputStep }
+		clamp_variable = { var = psInd_techState min = 0.02 max = 0.98 }
+	}
+	else_if = {
+		limit = { check_variable = { psInd_inputSector = 4 } }
+		add_to_variable = { psInd_farmState = psInd_inputStep }
+		clamp_variable = { var = psInd_farmState min = 0.02 max = 0.98 }
+	}
+	else_if = {
+		limit = { check_variable = { psInd_inputSector = 5 } }
+		add_to_variable = { psInd_energyState = psInd_inputStep }
+		clamp_variable = { var = psInd_energyState min = 0.02 max = 0.98 }
+	}
+	psEcon_refresh = yes
+}

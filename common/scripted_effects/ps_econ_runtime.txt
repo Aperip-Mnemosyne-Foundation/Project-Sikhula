@@ -1,6 +1,12 @@
 psEcon_publish = {
 	if = {
 		limit = {
+			NOT = { has_dynamic_modifier = { modifier = psLaw_standing } }
+		}
+		add_dynamic_modifier = { modifier = psLaw_standing }
+	}
+	if = {
+		limit = {
 			NOT = { has_dynamic_modifier = { modifier = psEcon_pulse } }
 		}
 		add_dynamic_modifier = { modifier = psEcon_pulse }
@@ -79,6 +85,13 @@ psEcon_neutralOutputs = {
 }
 
 psEcon_refresh = {
+	# Shocks rescore the locked budget. They do not settle a new one.
+	if = {
+		limit = {
+			NOT = { has_dynamic_modifier = { modifier = psLaw_standing } }
+		}
+		add_dynamic_modifier = { modifier = psLaw_standing }
+	}
 	psEcon_readWorld = yes
 	if = {
 		limit = { check_variable = { psEcon_mapPopulation < 0.2 } }
@@ -153,6 +166,12 @@ psEcon_bootstrap = {
 		set_variable = { global.psEcon_goods = 1 }
 	}
 	psEcon_applyProfile = yes
+	if = {
+		limit = {
+			NOT = { has_dynamic_modifier = { modifier = psLaw_standing } }
+		}
+		add_dynamic_modifier = { modifier = psLaw_standing }
+	}
 	psEcon_scanMap = yes
 	psEcon_readWorld = yes
 	if = {
@@ -197,8 +216,11 @@ psEcon_monthly = {
 			psEcon_publish = yes
 		}
 		else = {
+			psEcon_lockBudget = yes
 			psEcon_calculate = yes
 			psEcon_integrate = yes
+			psEcon_settle = yes
+			psEcon_calculate = yes
 			psEcon_publish = yes
 			psEcon_notify = yes
 		}

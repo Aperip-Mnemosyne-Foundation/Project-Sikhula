@@ -1,46 +1,46 @@
 psEcon_readWorld = {
-	# Laws and custom modifiers are inputs. The pulse does not write them back.
+	# Standing laws are evaluated in mtth:. This block only copies the bite.
 	set_variable = { psEcon_atWar = 0 }
 	if = {
 		limit = { has_war = yes }
 		set_variable = { psEcon_atWar = 1 }
 	}
 
-	set_variable = { psEcon_tradeOpen = 0.60 }
-	if = {
-		limit = { has_idea = laws_TR_GEN01 }
-		set_variable = { psEcon_tradeOpen = 0.90 }
-	}
-	else_if = {
-		limit = { has_idea = laws_TR_GEN02 }
-		set_variable = { psEcon_tradeOpen = 0.75 }
-	}
-	else_if = {
-		limit = { has_idea = laws_TR_GEN03 }
-		set_variable = { psEcon_tradeOpen = 0.62 }
-	}
-	else_if = {
-		limit = { has_idea = laws_TR_GEN04 }
-		set_variable = { psEcon_tradeOpen = 0.35 }
-	}
-	else_if = {
-		limit = { has_idea = laws_TR_GEN05 }
-		set_variable = { psEcon_tradeOpen = 0.05 }
-	}
-
-	set_variable = { psEcon_laborPull = 0 }
-	if = {
-		limit = { has_idea = laws_MO_GEN01 }
-		set_variable = { psEcon_laborPull = 0.10 }
-	}
-	else_if = {
-		limit = { has_idea = laws_MO_GEN02 }
-		set_variable = { psEcon_laborPull = 0.05 }
-	}
-	else_if = {
-		limit = { has_idea = laws_MO_GEN03 }
-		set_variable = { psEcon_laborPull = 0.02 }
-	}
+	set_variable = { psEcon_taxEnforce = mtth:psLawMtth_taxEnforce }
+	set_variable = { psLaw_showTax = mtth:psLawMtth_taxTake }
+	set_variable = { psEcon_laborBite = mtth:psLawMtth_laborBite }
+	set_variable = { psLaw_showLabor = psEcon_laborBite }
+	set_variable = { psEcon_tradeLevy = mtth:psLawMtth_tradeLevy }
+	set_variable = { psLaw_showLevy = psEcon_tradeLevy }
+	set_variable = { psEcon_capitalSeal = mtth:psLawMtth_capitalSeal }
+	set_variable = { psLaw_showSeal = psEcon_capitalSeal }
+	set_variable = { psEcon_contractTrust = mtth:psLawMtth_contractTrust }
+	set_variable = { psLaw_showTrust = psEcon_contractTrust }
+	set_variable = { psEcon_soePrivilege = mtth:psLawMtth_soePrivilege }
+	set_variable = { psLaw_showSoe = psEcon_soePrivilege }
+	set_variable = { psLaw_showFactory = mtth:psLawMtth_laborFactory }
+	set_variable = { psLaw_showResearch = mtth:psLawMtth_researchFactor }
+	set_variable = { psLaw_showBuild = mtth:psLawMtth_soeBuild }
+	set_variable = { psLaw_showWeekly = mtth:psLawMtth_stabilityWeekly }
+	clamp_variable = { var = psEcon_tradeOpen min = 0.05 max = 0.95 }
+	set_temp_variable = { liquid = psEcon_forex }
+	divide_temp_variable = { liquid = 3 }
+	clamp_temp_variable = { var = liquid min = 0 max = 1 }
+	set_temp_variable = { locked = 1 }
+	subtract_from_temp_variable = { locked = liquid }
+	multiply_temp_variable = { locked = psEcon_fxPrivilege }
+	set_temp_variable = { access = liquid }
+	add_to_temp_variable = { access = locked }
+	set_variable = { psEcon_fxAccess = access }
+	set_temp_variable = { tradeUsed = psEcon_tradeOpen }
+	multiply_temp_variable = { tradeUsed = access }
+	set_temp_variable = { levyKeep = psEcon_tradeLevy }
+	multiply_temp_variable = { levyKeep = 0.50 }
+	set_temp_variable = { levyScale = 1 }
+	subtract_from_temp_variable = { levyScale = levyKeep }
+	clamp_temp_variable = { var = levyScale min = 0.55 max = 1 }
+	multiply_temp_variable = { tradeUsed = levyScale }
+	set_variable = { psEcon_tradeUsed = tradeUsed }
 
 	set_temp_variable = { raw = modifier@fiscalRevenue_factor }
 	divide_temp_variable = { raw = 100 }

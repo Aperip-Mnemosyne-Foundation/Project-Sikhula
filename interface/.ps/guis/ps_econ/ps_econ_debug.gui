@@ -2,55 +2,97 @@ guiTypes = {
 	containerWindowType = {
 		name = "psEcon_debugWindow"
 		position = { x = 8 y = 4 }
-		size = { width = 500 height = 148 }
+		size = { width = 520 height = 214 }
 		clipping = no
 
 		instantTextboxType = {
 			name = "psEcon_debugLine1"
 			position = { x = 0 y = 0 }
 			font = "Youhei"
+			text_color_code = W
 			text = "psEcon_debugLine1"
-			maxWidth = 490
+			maxWidth = 510
+			maxHeight = 20
 			format = left
 		}
 		instantTextboxType = {
 			name = "psEcon_debugLine2"
 			position = { x = 0 y = 22 }
 			font = "Youhei"
+			text_color_code = W
 			text = "psEcon_debugLine2"
-			maxWidth = 490
+			maxWidth = 510
+			maxHeight = 20
 			format = left
 		}
 		instantTextboxType = {
 			name = "psEcon_debugLine3"
 			position = { x = 0 y = 44 }
 			font = "Youhei"
+			text_color_code = W
 			text = "psEcon_debugLine3"
-			maxWidth = 490
+			maxWidth = 510
+			maxHeight = 20
 			format = left
 		}
 		instantTextboxType = {
 			name = "psEcon_debugLine4"
 			position = { x = 0 y = 66 }
 			font = "Youhei"
+			text_color_code = W
 			text = "psEcon_debugLine4"
-			maxWidth = 490
+			maxWidth = 510
+			maxHeight = 20
 			format = left
 		}
 		instantTextboxType = {
 			name = "psEcon_debugLine5"
 			position = { x = 0 y = 88 }
 			font = "Youhei"
+			text_color_code = W
 			text = "psEcon_debugLine5"
-			maxWidth = 490
+			maxWidth = 510
+			maxHeight = 20
 			format = left
 		}
 		instantTextboxType = {
 			name = "psEcon_debugLine6"
 			position = { x = 0 y = 110 }
 			font = "Youhei"
+			text_color_code = W
 			text = "psEcon_debugLine6"
-			maxWidth = 490
+			maxWidth = 510
+			maxHeight = 20
+			format = left
+		}
+		instantTextboxType = {
+			name = "psEcon_debugLine7"
+			position = { x = 0 y = 132 }
+			font = "Youhei"
+			text_color_code = W
+			text = "psEcon_debugLine7"
+			maxWidth = 510
+			maxHeight = 20
+			format = left
+		}
+		instantTextboxType = {
+			name = "psEcon_debugLine8"
+			position = { x = 0 y = 154 }
+			font = "Youhei"
+			text_color_code = W
+			text = "psEcon_debugLine8"
+			maxWidth = 510
+			maxHeight = 20
+			format = left
+		}
+		instantTextboxType = {
+			name = "psEcon_debugLine9"
+			position = { x = 0 y = 176 }
+			font = "Youhei"
+			text_color_code = W
+			text = "psEcon_debugLine9"
+			maxWidth = 510
+			maxHeight = 20
 			format = left
 		}
 	}

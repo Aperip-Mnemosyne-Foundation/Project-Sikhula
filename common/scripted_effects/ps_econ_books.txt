@@ -1,0 +1,212 @@
+# Treasury, forex, and industry settlement. Levers are copied, then the month is paid, then modifiers move.
+
+psEcon_lockBudget = {
+	# The score uses this locked copy. Moving a lever after the lock waits for the next month.
+	set_variable = { psEcon_taxPaid = psEcon_taxRate }
+	set_variable = { psEcon_spendPaid = psEcon_spendShare }
+	set_variable = { psEcon_stancePaid = psEcon_monetaryStance }
+	set_variable = { psEcon_heavyPaid = psEcon_heavyBias }
+	set_variable = { psEcon_milPaid = psEcon_shareMil }
+	set_variable = { psEcon_eduPaid = psEcon_shareEdu }
+	set_variable = { psEcon_welPaid = psEcon_shareWel }
+	set_variable = { psEcon_invPaid = psEcon_shareInv }
+	set_variable = { psEcon_envPaid = psEcon_shareEnv }
+}
+
+psEcon_quoteCoupon = {
+	# Annual debt service as a share of GDP. The cashier pays one twelfth of it.
+	set_temp_variable = { couponRate = 0.65 }
+	subtract_from_temp_variable = { couponRate = psEcon_marketStock }
+	clamp_temp_variable = { var = couponRate min = 0 max = 1 }
+	multiply_temp_variable = { couponRate = 0.045 }
+	add_to_temp_variable = { couponRate = 0.015 }
+	set_temp_variable = { debtExtra = psEcon_debt }
+	subtract_from_temp_variable = { debtExtra = 1 }
+	clamp_temp_variable = { var = debtExtra min = 0 max = 2 }
+	multiply_temp_variable = { debtExtra = 0.008 }
+	add_to_temp_variable = { couponRate = debtExtra }
+	set_temp_variable = { coupon = psEcon_debt }
+	multiply_temp_variable = { coupon = couponRate }
+	set_variable = { psEcon_coupon = coupon }
+	divide_temp_variable = { coupon = 12 }
+	set_variable = { psEcon_couponMonth = coupon }
+}
+
+psEcon_fundBill = {
+	# psEcon_need and psEcon_cash are already set. Cover cannot fall below 40 percent.
+	set_variable = { psEcon_borrowMonth = 0 }
+	set_variable = { psEcon_printMonth = 0 }
+	set_variable = { psEcon_cover = 1 }
+	if = {
+		limit = { check_variable = { psEcon_need > 0.0000001 } }
+		set_temp_variable = { borrowRoom = psEcon_marketStock }
+		multiply_temp_variable = { borrowRoom = 0.0035 }
+		add_to_temp_variable = { borrowRoom = 0.0025 }
+		set_temp_variable = { printRoom = psEcon_stancePaid }
+		if = {
+			limit = { check_variable = { printRoom < 0 } }
+			set_temp_variable = { printRoom = 0 }
+		}
+		multiply_temp_variable = { printRoom = 0.0025 }
+		set_temp_variable = { short = psEcon_need }
+		subtract_from_temp_variable = { short = psEcon_cash }
+		if = {
+			limit = { check_variable = { short < 0 } }
+			set_temp_variable = { short = 0 }
+		}
+		set_temp_variable = { borrow = short }
+		if = {
+			limit = { check_variable = { borrow > borrowRoom } }
+			set_temp_variable = { borrow = borrowRoom }
+		}
+		subtract_from_temp_variable = { short = borrow }
+		set_temp_variable = { printed = short }
+		if = {
+			limit = { check_variable = { printed > printRoom } }
+			set_temp_variable = { printed = printRoom }
+		}
+		subtract_from_temp_variable = { short = printed }
+		set_temp_variable = { cover = psEcon_need }
+		subtract_from_temp_variable = { cover = short }
+		divide_temp_variable = { cover = psEcon_need }
+		clamp_temp_variable = { var = cover min = 0.40 max = 1 }
+		set_variable = { psEcon_borrowMonth = borrow }
+		set_variable = { psEcon_printMonth = printed }
+		set_variable = { psEcon_cover = cover }
+	}
+}
+
+psEcon_settle = {
+	# Tax cash arrives first. The bill, the coupon, and one project then compete for it.
+	set_variable = { psEcon_taxMonth = psEcon_revenue }
+	divide_variable = { psEcon_taxMonth = 12 }
+	set_variable = { psEcon_billMonth = psEcon_spendQuote }
+	divide_variable = { psEcon_billMonth = 12 }
+
+	psEcon_quoteCoupon = yes
+
+	set_variable = { psEcon_projectDue = 0 }
+	if = {
+		limit = { check_variable = { psEcon_projectLeft > 0 } }
+		set_variable = { psEcon_projectDue = psEcon_projectLeft }
+		if = {
+			limit = { check_variable = { psEcon_projectFlow < psEcon_projectDue } }
+			set_variable = { psEcon_projectDue = psEcon_projectFlow }
+		}
+	}
+
+	set_variable = { psEcon_cash = psEcon_treasury }
+	add_to_variable = { psEcon_cash = psEcon_taxMonth }
+	set_variable = { psEcon_baseNeed = psEcon_billMonth }
+	add_to_variable = { psEcon_baseNeed = psEcon_couponMonth }
+	add_to_variable = { psEcon_baseNeed = psInd_fiscalMonth }
+	set_variable = { psEcon_need = psEcon_baseNeed }
+	add_to_variable = { psEcon_need = psEcon_projectDue }
+	psEcon_fundBill = yes
+	if = {
+		limit = {
+			check_variable = { psEcon_projectDue > 0 }
+			check_variable = { psEcon_cover < 0.80 }
+		}
+		# A stalled project is not appropriated, so it cannot crowd out the operating bill.
+		set_variable = { psEcon_projectLive = 0 }
+		set_variable = { psEcon_need = psEcon_baseNeed }
+		psEcon_fundBill = yes
+	}
+	else_if = {
+		limit = { check_variable = { psEcon_projectDue > 0 } }
+		subtract_from_variable = { psEcon_projectLeft = psEcon_projectDue }
+		clamp_variable = { var = psEcon_projectLeft min = 0 max = 0.20 }
+		set_variable = { psEcon_projectLive = 1 }
+	}
+	else = {
+		set_variable = { psEcon_projectLive = 0 }
+	}
+
+	set_temp_variable = { paid = psEcon_need }
+	multiply_temp_variable = { paid = psEcon_cover }
+	set_temp_variable = { till = psEcon_cash }
+	add_to_temp_variable = { till = psEcon_borrowMonth }
+	add_to_temp_variable = { till = psEcon_printMonth }
+	subtract_from_temp_variable = { till = paid }
+	set_variable = { psEcon_treasury = till }
+	clamp_variable = { var = psEcon_treasury min = 0 max = 0.30 }
+	add_to_variable = { psEcon_debt = psEcon_borrowMonth }
+	clamp_variable = { var = psEcon_debt min = 0 max = 2.2 }
+
+	# Printing raises money against real assets. The inflation gap is scored on the next pass.
+	set_temp_variable = { fxAsset = psEcon_forex }
+	divide_temp_variable = { fxAsset = 4 }
+	clamp_temp_variable = { var = fxAsset min = 0.4 max = 1.6 }
+	multiply_temp_variable = { fxAsset = 0.15 }
+	set_temp_variable = { assets = psEcon_privateCapital }
+	multiply_temp_variable = { assets = 0.55 }
+	add_to_temp_variable = { assets = fxAsset }
+	set_temp_variable = { pubAsset = psEcon_publicCapital }
+	multiply_temp_variable = { pubAsset = 0.30 }
+	add_to_temp_variable = { assets = pubAsset }
+	set_variable = { psEcon_assets = assets }
+	set_temp_variable = { assetFloor = assets }
+	if = {
+		limit = { check_variable = { assetFloor < 0.25 } }
+		set_temp_variable = { assetFloor = 0.25 }
+	}
+	set_temp_variable = { printRatio = psEcon_printMonth }
+	divide_temp_variable = { printRatio = assetFloor }
+	add_to_temp_variable = { printRatio = 1 }
+	multiply_variable = { psEcon_money = printRatio }
+	clamp_variable = { var = psEcon_money min = 0.40 max = 2.50 }
+
+	# Exports follow tradable structure and ownership. Imports are rationed by reserves and the tariff bite.
+	set_temp_variable = { domestic = psEcon_control }
+	multiply_temp_variable = { domestic = 0.25 }
+	add_to_temp_variable = { domestic = 0.75 }
+	multiply_temp_variable = { domestic = psEcon_energy }
+	set_temp_variable = { energyImport = 1.05 }
+	subtract_from_temp_variable = { energyImport = domestic }
+	clamp_temp_variable = { var = energyImport min = 0 max = 2 }
+	set_temp_variable = { foodImport = 1 }
+	subtract_from_temp_variable = { foodImport = psEcon_foodBalance }
+	clamp_temp_variable = { var = foodImport min = 0 max = 2 }
+	set_temp_variable = { oil = global.psEcon_oil }
+	add_to_temp_variable = { oil = psEcon_shockOil }
+	set_temp_variable = { fxSpend = energyImport }
+	multiply_temp_variable = { fxSpend = oil }
+	multiply_temp_variable = { fxSpend = 0.10 }
+	set_temp_variable = { foodFx = foodImport }
+	multiply_temp_variable = { foodFx = global.psEcon_grain }
+	multiply_temp_variable = { foodFx = 0.06 }
+	add_to_temp_variable = { fxSpend = foodFx }
+	multiply_temp_variable = { fxSpend = 0.50 }
+	set_temp_variable = { incomeMix = psEcon_income }
+	divide_temp_variable = { incomeMix = 28 }
+	clamp_temp_variable = { var = incomeMix min = 0.3 max = 1.35 }
+	set_temp_variable = { fxEarn = psEcon_tradeOpen }
+	multiply_temp_variable = { fxEarn = psInd_exportMix }
+	set_temp_variable = { levyKeep = 1 }
+	set_temp_variable = { levyCut = psEcon_tradeLevy }
+	multiply_temp_variable = { levyCut = 0.35 }
+	subtract_from_temp_variable = { levyKeep = levyCut }
+	clamp_temp_variable = { var = levyKeep min = 0.60 max = 1 }
+	multiply_temp_variable = { fxEarn = levyKeep }
+	multiply_temp_variable = { fxEarn = incomeMix }
+	multiply_temp_variable = { fxEarn = 0.024 }
+	set_variable = { psEcon_fxEarn = fxEarn }
+	set_variable = { psEcon_fxSpend = fxSpend }
+	add_to_variable = { psEcon_forex = fxEarn }
+	subtract_from_variable = { psEcon_forex = fxSpend }
+	set_temp_variable = { excess = psEcon_money }
+	divide_temp_variable = { excess = psEcon_assets }
+	subtract_from_temp_variable = { excess = 1 }
+	clamp_temp_variable = { var = excess min = 0 max = 0.25 }
+	set_temp_variable = { flight = 1 }
+	subtract_from_temp_variable = { flight = psEcon_capitalSeal }
+	set_temp_variable = { distrust = 1.15 }
+	subtract_from_temp_variable = { distrust = psEcon_contractTrust }
+	clamp_temp_variable = { var = distrust min = 0.20 max = 1.20 }
+	multiply_temp_variable = { flight = distrust }
+	multiply_temp_variable = { flight = excess }
+	multiply_temp_variable = { flight = 0.020 }
+	subtract_from_variable = { psEcon_forex = flight }
+	clamp_variable = { var = psEcon_forex min = 0.15 max = 16 }
+}

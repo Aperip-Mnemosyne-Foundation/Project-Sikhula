@@ -1,0 +1,207 @@
+# Statutory codes and the support that decides whether they bite.
+# Codes are the law on the books. Support is political backing, not an ownership share.
+
+psLaw_seedDefaults = {
+	set_variable = { psLaw_taxCode = 0.24 }
+	set_variable = { psLaw_taxSupport = 0.50 }
+	set_variable = { psLaw_laborCode = 0.50 }
+	set_variable = { psLaw_laborSupport = 0.50 }
+	set_variable = { psLaw_tariffCode = 0.12 }
+	set_variable = { psLaw_tariffSupport = 0.50 }
+	set_variable = { psLaw_capitalCode = 0.40 }
+	set_variable = { psLaw_capitalSupport = 0.50 }
+	set_variable = { psLaw_contractCode = 0.45 }
+	set_variable = { psLaw_contractSupport = 0.45 }
+	set_variable = { psLaw_soeCode = 0.40 }
+	set_variable = { psLaw_soeSupport = 0.45 }
+}
+
+psLaw_seed = {
+	psLaw_seedDefaults = yes
+	if = {
+		limit = { original_tag = USA }
+		set_variable = { psLaw_taxCode = 0.30 }
+		set_variable = { psLaw_taxSupport = 0.74 }
+		set_variable = { psLaw_laborCode = 0.25 }
+		set_variable = { psLaw_laborSupport = 0.58 }
+		set_variable = { psLaw_tariffCode = 0.04 }
+		set_variable = { psLaw_tariffSupport = 0.45 }
+		set_variable = { psLaw_capitalCode = 0.06 }
+		set_variable = { psLaw_capitalSupport = 0.25 }
+		set_variable = { psLaw_contractCode = 0.84 }
+		set_variable = { psLaw_contractSupport = 0.80 }
+		set_variable = { psLaw_soeCode = 0.10 }
+		set_variable = { psLaw_soeSupport = 0.22 }
+	}
+	else_if = {
+		limit = { original_tag = GER }
+		set_variable = { psLaw_taxCode = 0.42 }
+		set_variable = { psLaw_taxSupport = 0.78 }
+		set_variable = { psLaw_laborCode = 0.70 }
+		set_variable = { psLaw_laborSupport = 0.74 }
+		set_variable = { psLaw_tariffCode = 0.06 }
+		set_variable = { psLaw_tariffSupport = 0.55 }
+		set_variable = { psLaw_capitalCode = 0.12 }
+		set_variable = { psLaw_capitalSupport = 0.40 }
+		set_variable = { psLaw_contractCode = 0.80 }
+		set_variable = { psLaw_contractSupport = 0.76 }
+		set_variable = { psLaw_soeCode = 0.28 }
+		set_variable = { psLaw_soeSupport = 0.42 }
+	}
+	else_if = {
+		limit = { original_tag = JAP }
+		set_variable = { psLaw_taxCode = 0.31 }
+		set_variable = { psLaw_taxSupport = 0.80 }
+		set_variable = { psLaw_laborCode = 0.62 }
+		set_variable = { psLaw_laborSupport = 0.68 }
+		set_variable = { psLaw_tariffCode = 0.05 }
+		set_variable = { psLaw_tariffSupport = 0.50 }
+		set_variable = { psLaw_capitalCode = 0.18 }
+		set_variable = { psLaw_capitalSupport = 0.48 }
+		set_variable = { psLaw_contractCode = 0.76 }
+		set_variable = { psLaw_contractSupport = 0.72 }
+		set_variable = { psLaw_soeCode = 0.22 }
+		set_variable = { psLaw_soeSupport = 0.40 }
+	}
+	else_if = {
+		limit = { original_tag = PRC }
+		set_variable = { psLaw_taxCode = 0.18 }
+		set_variable = { psLaw_taxSupport = 0.58 }
+		set_variable = { psLaw_laborCode = 0.48 }
+		set_variable = { psLaw_laborSupport = 0.62 }
+		set_variable = { psLaw_tariffCode = 0.17 }
+		set_variable = { psLaw_tariffSupport = 0.70 }
+		set_variable = { psLaw_capitalCode = 0.86 }
+		set_variable = { psLaw_capitalSupport = 0.78 }
+		set_variable = { psLaw_contractCode = 0.36 }
+		set_variable = { psLaw_contractSupport = 0.48 }
+		set_variable = { psLaw_soeCode = 0.82 }
+		set_variable = { psLaw_soeSupport = 0.80 }
+	}
+	else_if = {
+		limit = { original_tag = RAJ }
+		set_variable = { psLaw_taxCode = 0.16 }
+		set_variable = { psLaw_taxSupport = 0.42 }
+		set_variable = { psLaw_laborCode = 0.74 }
+		set_variable = { psLaw_laborSupport = 0.36 }
+		set_variable = { psLaw_tariffCode = 0.30 }
+		set_variable = { psLaw_tariffSupport = 0.62 }
+		set_variable = { psLaw_capitalCode = 0.72 }
+		set_variable = { psLaw_capitalSupport = 0.58 }
+		set_variable = { psLaw_contractCode = 0.40 }
+		set_variable = { psLaw_contractSupport = 0.38 }
+		set_variable = { psLaw_soeCode = 0.66 }
+		set_variable = { psLaw_soeSupport = 0.55 }
+	}
+	else_if = {
+		limit = { original_tag = SOV }
+		set_variable = { psLaw_taxCode = 0.26 }
+		set_variable = { psLaw_taxSupport = 0.30 }
+		set_variable = { psLaw_laborCode = 0.58 }
+		set_variable = { psLaw_laborSupport = 0.32 }
+		set_variable = { psLaw_tariffCode = 0.14 }
+		set_variable = { psLaw_tariffSupport = 0.40 }
+		set_variable = { psLaw_capitalCode = 0.48 }
+		set_variable = { psLaw_capitalSupport = 0.34 }
+		set_variable = { psLaw_contractCode = 0.26 }
+		set_variable = { psLaw_contractSupport = 0.30 }
+		set_variable = { psLaw_soeCode = 0.60 }
+		set_variable = { psLaw_soeSupport = 0.42 }
+	}
+	else_if = {
+		limit = { original_tag = ENG }
+		set_variable = { psLaw_taxCode = 0.34 }
+		set_variable = { psLaw_taxSupport = 0.72 }
+		set_variable = { psLaw_laborCode = 0.36 }
+		set_variable = { psLaw_laborSupport = 0.52 }
+		set_variable = { psLaw_tariffCode = 0.05 }
+		set_variable = { psLaw_tariffSupport = 0.48 }
+		set_variable = { psLaw_capitalCode = 0.10 }
+		set_variable = { psLaw_capitalSupport = 0.30 }
+		set_variable = { psLaw_contractCode = 0.82 }
+		set_variable = { psLaw_contractSupport = 0.74 }
+		set_variable = { psLaw_soeCode = 0.16 }
+		set_variable = { psLaw_soeSupport = 0.28 }
+	}
+	else_if = {
+		limit = { original_tag = FRA }
+		set_variable = { psLaw_taxCode = 0.44 }
+		set_variable = { psLaw_taxSupport = 0.73 }
+		set_variable = { psLaw_laborCode = 0.82 }
+		set_variable = { psLaw_laborSupport = 0.71 }
+		set_variable = { psLaw_tariffCode = 0.06 }
+		set_variable = { psLaw_tariffSupport = 0.58 }
+		set_variable = { psLaw_capitalCode = 0.14 }
+		set_variable = { psLaw_capitalSupport = 0.42 }
+		set_variable = { psLaw_contractCode = 0.70 }
+		set_variable = { psLaw_contractSupport = 0.66 }
+		set_variable = { psLaw_soeCode = 0.42 }
+		set_variable = { psLaw_soeSupport = 0.48 }
+	}
+	else_if = {
+		limit = { original_tag = ITA }
+		set_variable = { psLaw_taxCode = 0.40 }
+		set_variable = { psLaw_taxSupport = 0.60 }
+		set_variable = { psLaw_laborCode = 0.72 }
+		set_variable = { psLaw_laborSupport = 0.55 }
+		set_variable = { psLaw_tariffCode = 0.06 }
+		set_variable = { psLaw_tariffSupport = 0.50 }
+		set_variable = { psLaw_capitalCode = 0.16 }
+		set_variable = { psLaw_capitalSupport = 0.38 }
+		set_variable = { psLaw_contractCode = 0.58 }
+		set_variable = { psLaw_contractSupport = 0.52 }
+		set_variable = { psLaw_soeCode = 0.38 }
+		set_variable = { psLaw_soeSupport = 0.45 }
+	}
+	else_if = {
+		limit = { original_tag = CAN }
+		set_variable = { psLaw_taxCode = 0.36 }
+		set_variable = { psLaw_taxSupport = 0.74 }
+		set_variable = { psLaw_laborCode = 0.40 }
+		set_variable = { psLaw_laborSupport = 0.58 }
+		set_variable = { psLaw_tariffCode = 0.05 }
+		set_variable = { psLaw_tariffSupport = 0.42 }
+		set_variable = { psLaw_capitalCode = 0.12 }
+		set_variable = { psLaw_capitalSupport = 0.32 }
+		set_variable = { psLaw_contractCode = 0.78 }
+		set_variable = { psLaw_contractSupport = 0.72 }
+		set_variable = { psLaw_soeCode = 0.20 }
+		set_variable = { psLaw_soeSupport = 0.30 }
+	}
+}
+
+psLaw_shiftSupport = {
+	# psLaw_inputLaw: 1 tax, 2 labor, 3 tariff, 4 capital, 5 contract, 6 state-firm privilege.
+	if = {
+		limit = { check_variable = { psLaw_inputLaw = 1 } }
+		add_to_variable = { psLaw_taxSupport = psLaw_inputStep }
+		clamp_variable = { var = psLaw_taxSupport min = 0.05 max = 0.95 }
+	}
+	else_if = {
+		limit = { check_variable = { psLaw_inputLaw = 2 } }
+		add_to_variable = { psLaw_laborSupport = psLaw_inputStep }
+		clamp_variable = { var = psLaw_laborSupport min = 0.05 max = 0.95 }
+	}
+	else_if = {
+		limit = { check_variable = { psLaw_inputLaw = 3 } }
+		add_to_variable = { psLaw_tariffSupport = psLaw_inputStep }
+		clamp_variable = { var = psLaw_tariffSupport min = 0.05 max = 0.95 }
+	}
+	else_if = {
+		limit = { check_variable = { psLaw_inputLaw = 4 } }
+		add_to_variable = { psLaw_capitalSupport = psLaw_inputStep }
+		clamp_variable = { var = psLaw_capitalSupport min = 0.05 max = 0.95 }
+	}
+	else_if = {
+		limit = { check_variable = { psLaw_inputLaw = 5 } }
+		add_to_variable = { psLaw_contractSupport = psLaw_inputStep }
+		clamp_variable = { var = psLaw_contractSupport min = 0.05 max = 0.95 }
+	}
+	else_if = {
+		limit = { check_variable = { psLaw_inputLaw = 6 } }
+		add_to_variable = { psLaw_soeSupport = psLaw_inputStep }
+		clamp_variable = { var = psLaw_soeSupport min = 0.05 max = 0.95 }
+	}
+	force_update_dynamic_modifier = yes
+	psEcon_refresh = yes
+}

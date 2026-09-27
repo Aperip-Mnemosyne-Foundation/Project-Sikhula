@@ -1,0 +1,237 @@
+# Standing laws. Support changes the bite. Industry ownership is not in this file.
+# A dynamic modifier reads these with mtth:. Nothing here is a drift speed.
+
+psLawMtth_taxEnforce = {
+	# High support means the code on the books is actually collected.
+	base = 0.70
+	modifier = {
+		set_temp_variable = { hold = psLaw_taxSupport }
+		multiply_temp_variable = { hold = 0.30 }
+		add = hold
+	}
+}
+
+psLawMtth_taxTake = {
+	# Effective revenue ratio: statutory code times enforcement. Not the player's monthly tax lever.
+	base = 0
+	modifier = {
+		set_temp_variable = { take = psLaw_taxCode }
+		set_temp_variable = { hold = psLaw_taxSupport }
+		multiply_temp_variable = { hold = 0.30 }
+		add_to_temp_variable = { hold = 0.70 }
+		multiply_temp_variable = { take = hold }
+		add = take
+	}
+}
+
+psLawMtth_laborBite = {
+	# Dismissal protection that courts and unions can enforce. Paper rules with no support do less.
+	base = 0
+	modifier = {
+		set_temp_variable = { bite = psLaw_laborCode }
+		set_temp_variable = { hold = psLaw_laborSupport }
+		multiply_temp_variable = { hold = 0.60 }
+		add_to_temp_variable = { hold = 0.40 }
+		multiply_temp_variable = { bite = hold }
+		add = bite
+	}
+}
+
+psLawMtth_tradeLevy = {
+	# Enforced tariff and non-tariff wedge. This is a price, not an openness speed.
+	base = 0
+	modifier = {
+		set_temp_variable = { levy = psLaw_tariffCode }
+		set_temp_variable = { hold = psLaw_tariffSupport }
+		multiply_temp_variable = { hold = 0.50 }
+		add_to_temp_variable = { hold = 0.50 }
+		multiply_temp_variable = { levy = hold }
+		add = levy
+	}
+}
+
+psLawMtth_capitalSeal = {
+	# How closed the capital account is in practice.
+	base = 0
+	modifier = {
+		set_temp_variable = { seal = psLaw_capitalCode }
+		set_temp_variable = { hold = psLaw_capitalSupport }
+		multiply_temp_variable = { hold = 0.55 }
+		add_to_temp_variable = { hold = 0.45 }
+		multiply_temp_variable = { seal = hold }
+		add = seal
+	}
+}
+
+psLawMtth_contractTrust = {
+	# Chance a private contract is worth more than a bribe.
+	base = 0
+	modifier = {
+		set_temp_variable = { trust = psLaw_contractCode }
+		set_temp_variable = { hold = psLaw_contractSupport }
+		multiply_temp_variable = { hold = 0.50 }
+		add_to_temp_variable = { hold = 0.50 }
+		multiply_temp_variable = { trust = hold }
+		add = trust
+	}
+}
+
+psLawMtth_soePrivilege = {
+	# Legal soft budget and monopoly rights. This does not set who owns the factories.
+	base = 0
+	modifier = {
+		set_temp_variable = { privilege = psLaw_soeCode }
+		set_temp_variable = { hold = psLaw_soeSupport }
+		multiply_temp_variable = { hold = 0.60 }
+		add_to_temp_variable = { hold = 0.40 }
+		multiply_temp_variable = { privilege = hold }
+		add = privilege
+	}
+}
+
+psLawMtth_laborFactory = {
+	# Neutral rigidity is 0.40. Stricter protected labor costs throughput.
+	base = 0
+	modifier = {
+		set_temp_variable = { bite = psLaw_laborCode }
+		set_temp_variable = { hold = psLaw_laborSupport }
+		multiply_temp_variable = { hold = 0.60 }
+		add_to_temp_variable = { hold = 0.40 }
+		multiply_temp_variable = { bite = hold }
+		set_temp_variable = { gap = 0.40 }
+		subtract_from_temp_variable = { gap = bite }
+		multiply_temp_variable = { gap = 0.040 }
+		add = gap
+	}
+}
+
+psLawMtth_laborEffCap = {
+	base = 0
+	modifier = {
+		set_temp_variable = { bite = psLaw_laborCode }
+		set_temp_variable = { hold = psLaw_laborSupport }
+		multiply_temp_variable = { hold = 0.60 }
+		add_to_temp_variable = { hold = 0.40 }
+		multiply_temp_variable = { bite = hold }
+		set_temp_variable = { gap = 0.40 }
+		subtract_from_temp_variable = { gap = bite }
+		multiply_temp_variable = { gap = 0.055 }
+		add = gap
+	}
+}
+
+psLawMtth_laborEffGain = {
+	base = 0
+	modifier = {
+		set_temp_variable = { bite = psLaw_laborCode }
+		set_temp_variable = { hold = psLaw_laborSupport }
+		multiply_temp_variable = { hold = 0.60 }
+		add_to_temp_variable = { hold = 0.40 }
+		multiply_temp_variable = { bite = hold }
+		set_temp_variable = { gap = 0.40 }
+		subtract_from_temp_variable = { gap = bite }
+		multiply_temp_variable = { gap = 0.080 }
+		add = gap
+	}
+}
+
+psLawMtth_laborDraft = {
+	# Protected jobs hold men out of the draft. A loose market releases them.
+	base = 0
+	modifier = {
+		set_temp_variable = { bite = psLaw_laborCode }
+		set_temp_variable = { hold = psLaw_laborSupport }
+		multiply_temp_variable = { hold = 0.60 }
+		add_to_temp_variable = { hold = 0.40 }
+		multiply_temp_variable = { bite = hold }
+		set_temp_variable = { gap = 0.40 }
+		subtract_from_temp_variable = { gap = bite }
+		multiply_temp_variable = { gap = 0.045 }
+		add = gap
+	}
+}
+
+psLawMtth_stabilityWeekly = {
+	# Job security steadies the country. An unloved heavy tax code does the opposite.
+	base = 0
+	modifier = {
+		set_temp_variable = { bite = psLaw_laborCode }
+		set_temp_variable = { hold = psLaw_laborSupport }
+		multiply_temp_variable = { hold = 0.60 }
+		add_to_temp_variable = { hold = 0.40 }
+		multiply_temp_variable = { bite = hold }
+		subtract_from_temp_variable = { bite = 0.40 }
+		multiply_temp_variable = { bite = 0.00040 }
+		set_temp_variable = { gap = psLaw_taxCode }
+		subtract_from_temp_variable = { gap = 0.28 }
+		clamp_temp_variable = { var = gap min = 0 max = 0.40 }
+		set_temp_variable = { resentment = 0.70 }
+		subtract_from_temp_variable = { resentment = psLaw_taxSupport }
+		clamp_temp_variable = { var = resentment min = 0 max = 1 }
+		multiply_temp_variable = { gap = resentment }
+		multiply_temp_variable = { gap = -0.012 }
+		add_to_temp_variable = { bite = gap }
+		add = bite
+	}
+}
+
+psLawMtth_powerFactor = {
+	# A supported tax service has administrative reach. Soft-budget privileges eat political effort.
+	base = 0
+	modifier = {
+		set_temp_variable = { power = psLaw_taxSupport }
+		subtract_from_temp_variable = { power = 0.55 }
+		multiply_temp_variable = { power = 0.040 }
+		set_temp_variable = { privilege = psLaw_soeCode }
+		set_temp_variable = { hold = psLaw_soeSupport }
+		multiply_temp_variable = { hold = 0.60 }
+		add_to_temp_variable = { hold = 0.40 }
+		multiply_temp_variable = { privilege = hold }
+		multiply_temp_variable = { privilege = -0.040 }
+		add_to_temp_variable = { power = privilege }
+		add = power
+	}
+}
+
+psLawMtth_researchFactor = {
+	# Tariffs and capital seals block imported kit. Enforceable contracts help private labs.
+	base = 0
+	modifier = {
+		set_temp_variable = { levy = psLaw_tariffCode }
+		set_temp_variable = { hold = psLaw_tariffSupport }
+		multiply_temp_variable = { hold = 0.50 }
+		add_to_temp_variable = { hold = 0.50 }
+		multiply_temp_variable = { levy = hold }
+		multiply_temp_variable = { levy = -0.045 }
+		set_temp_variable = { seal = psLaw_capitalCode }
+		set_temp_variable = { hold = psLaw_capitalSupport }
+		multiply_temp_variable = { hold = 0.55 }
+		add_to_temp_variable = { hold = 0.45 }
+		multiply_temp_variable = { seal = hold }
+		multiply_temp_variable = { seal = -0.040 }
+		set_temp_variable = { trust = psLaw_contractCode }
+		set_temp_variable = { hold = psLaw_contractSupport }
+		multiply_temp_variable = { hold = 0.50 }
+		add_to_temp_variable = { hold = 0.50 }
+		multiply_temp_variable = { trust = hold }
+		subtract_from_temp_variable = { trust = 0.50 }
+		multiply_temp_variable = { trust = 0.035 }
+		add_to_temp_variable = { levy = seal }
+		add_to_temp_variable = { levy = trust }
+		add = levy
+	}
+}
+
+psLawMtth_soeBuild = {
+	# Permission to order projects. It does not raise the state share of any industry.
+	base = 0
+	modifier = {
+		set_temp_variable = { privilege = psLaw_soeCode }
+		set_temp_variable = { hold = psLaw_soeSupport }
+		multiply_temp_variable = { hold = 0.60 }
+		add_to_temp_variable = { hold = 0.40 }
+		multiply_temp_variable = { privilege = hold }
+		multiply_temp_variable = { privilege = 0.030 }
+		add = privilege
+	}
+}

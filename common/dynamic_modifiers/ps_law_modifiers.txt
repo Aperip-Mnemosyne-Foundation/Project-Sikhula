@@ -1,0 +1,24 @@
+# Standing law. Values are mtth blocks, so a support change bites on the daily refresh.
+# Industry ownership is a separate stock and is not written here.
+psLaw_standing = {
+	enable = { always = yes }
+	remove_trigger = { always = no }
+	icon = GFX_idea_generic_foreign_capital
+
+	psLaw_taxTake = mtth:psLawMtth_taxTake
+	psLaw_taxEnforce = mtth:psLawMtth_taxEnforce
+	psLaw_laborBite = mtth:psLawMtth_laborBite
+	psLaw_tradeLevy = mtth:psLawMtth_tradeLevy
+	psLaw_capitalSeal = mtth:psLawMtth_capitalSeal
+	psLaw_contractTrust = mtth:psLawMtth_contractTrust
+	psLaw_soePrivilege = mtth:psLawMtth_soePrivilege
+
+	industrial_capacity_factory = mtth:psLawMtth_laborFactory
+	production_factory_max_efficiency_factor = mtth:psLawMtth_laborEffCap
+	production_factory_efficiency_gain_factor = mtth:psLawMtth_laborEffGain
+	conscription_factor = mtth:psLawMtth_laborDraft
+	stability_weekly = mtth:psLawMtth_stabilityWeekly
+	political_power_factor = mtth:psLawMtth_powerFactor
+	research_speed_factor = mtth:psLawMtth_researchFactor
+	production_speed_buildings_factor = mtth:psLawMtth_soeBuild
+}

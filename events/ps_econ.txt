@@ -33,9 +33,7 @@ country_event = {
 	}
 	option = {
 		name = ps_econ.2.b
-		set_variable = { psEcon_foodRelief = 0.08 }
-		set_variable = { psEcon_inputStep = 0.01 }
-		psEcon_setSpendShare = yes
+		psEcon_buyGrain = yes
 	}
 }
 

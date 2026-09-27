@@ -310,19 +310,76 @@ psEcon_debugCategory = {
 		icon = GFX_win98_thumbnail
 		allowed = { always = yes }
 		visible = { is_debug = yes }
-		available = { is_debug = yes }
+		available = {
+			is_debug = yes
+			check_variable = { psEcon_treasury > 0.0039 }
+			check_variable = { psEcon_foodRelief < 0.12 }
+		}
 		cost = 0
 		fire_only_once = no
 		days_remove = 0
 		ai_will_do = { factor = 0 }
 		complete_effect = {
-			set_variable = { psEcon_foodRelief = 0.08 }
-			set_variable = { psEcon_inputStep = 0.01 }
-			psEcon_setSpendShare = yes
+			psEcon_buyGrain = yes
 		}
 	}
 
-	psEcon_addFroth = {
+	psEcon_projectWorks = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = {
+			is_debug = yes
+			check_variable = { psEcon_projectLeft < 0.0001 }
+			check_variable = { psEcon_treasury > 0.008 }
+		}
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psEcon_inputKind = 1 }
+			psEcon_startProject = yes
+		}
+	}
+
+	psEcon_projectLabs = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = {
+			is_debug = yes
+			check_variable = { psEcon_projectLeft < 0.0001 }
+			check_variable = { psEcon_treasury > 0.008 }
+		}
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psEcon_inputKind = 2 }
+			psEcon_startProject = yes
+		}
+	}
+
+	psEcon_projectStop = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = {
+			is_debug = yes
+			check_variable = { psEcon_projectLeft > 0 }
+		}
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			psEcon_stopProject = yes
+		}
+	}
+
+	psLaw_taxSupportUp = {
 		icon = GFX_win98_thumbnail
 		allowed = { always = yes }
 		visible = { is_debug = yes }
@@ -332,7 +389,324 @@ psEcon_debugCategory = {
 		days_remove = 0
 		ai_will_do = { factor = 0 }
 		complete_effect = {
-			psEcon_addFroth = yes
+			set_variable = { psLaw_inputLaw = 1 }
+			set_variable = { psLaw_inputStep = 0.10 }
+			psLaw_shiftSupport = yes
+		}
+	}
+	psLaw_taxSupportDown = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psLaw_inputLaw = 1 }
+			set_variable = { psLaw_inputStep = -0.10 }
+			psLaw_shiftSupport = yes
+		}
+	}
+	psLaw_laborSupportUp = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psLaw_inputLaw = 2 }
+			set_variable = { psLaw_inputStep = 0.10 }
+			psLaw_shiftSupport = yes
+		}
+	}
+	psLaw_laborSupportDown = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psLaw_inputLaw = 2 }
+			set_variable = { psLaw_inputStep = -0.10 }
+			psLaw_shiftSupport = yes
+		}
+	}
+	psLaw_capitalSupportUp = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psLaw_inputLaw = 4 }
+			set_variable = { psLaw_inputStep = 0.10 }
+			psLaw_shiftSupport = yes
+		}
+	}
+	psLaw_capitalSupportDown = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psLaw_inputLaw = 4 }
+			set_variable = { psLaw_inputStep = -0.10 }
+			psLaw_shiftSupport = yes
+		}
+	}
+	psLaw_soeSupportUp = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psLaw_inputLaw = 6 }
+			set_variable = { psLaw_inputStep = 0.10 }
+			psLaw_shiftSupport = yes
+		}
+	}
+	psLaw_soeSupportDown = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psLaw_inputLaw = 6 }
+			set_variable = { psLaw_inputStep = -0.10 }
+			psLaw_shiftSupport = yes
+		}
+	}
+	psLaw_tariffSupportUp = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psLaw_inputLaw = 3 }
+			set_variable = { psLaw_inputStep = 0.10 }
+			psLaw_shiftSupport = yes
+		}
+	}
+	psLaw_tariffSupportDown = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psLaw_inputLaw = 3 }
+			set_variable = { psLaw_inputStep = -0.10 }
+			psLaw_shiftSupport = yes
+		}
+	}
+	psLaw_contractSupportUp = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psLaw_inputLaw = 5 }
+			set_variable = { psLaw_inputStep = 0.10 }
+			psLaw_shiftSupport = yes
+		}
+	}
+	psLaw_contractSupportDown = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psLaw_inputLaw = 5 }
+			set_variable = { psLaw_inputStep = -0.10 }
+			psLaw_shiftSupport = yes
+		}
+	}
+	psInd_heavyUp = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psInd_inputSector = 1 }
+			set_variable = { psInd_inputStep = 0.10 }
+			psInd_shift = yes
+		}
+	}
+	psInd_heavyDown = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psInd_inputSector = 1 }
+			set_variable = { psInd_inputStep = -0.10 }
+			psInd_shift = yes
+		}
+	}
+	psInd_lightUp = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psInd_inputSector = 2 }
+			set_variable = { psInd_inputStep = 0.10 }
+			psInd_shift = yes
+		}
+	}
+	psInd_lightDown = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psInd_inputSector = 2 }
+			set_variable = { psInd_inputStep = -0.10 }
+			psInd_shift = yes
+		}
+	}
+	psInd_techUp = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psInd_inputSector = 3 }
+			set_variable = { psInd_inputStep = 0.10 }
+			psInd_shift = yes
+		}
+	}
+	psInd_techDown = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psInd_inputSector = 3 }
+			set_variable = { psInd_inputStep = -0.10 }
+			psInd_shift = yes
+		}
+	}
+	psInd_farmUp = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psInd_inputSector = 4 }
+			set_variable = { psInd_inputStep = 0.10 }
+			psInd_shift = yes
+		}
+	}
+	psInd_farmDown = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psInd_inputSector = 4 }
+			set_variable = { psInd_inputStep = -0.10 }
+			psInd_shift = yes
+		}
+	}
+	psInd_energyUp = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psInd_inputSector = 5 }
+			set_variable = { psInd_inputStep = 0.10 }
+			psInd_shift = yes
+		}
+	}
+	psInd_energyDown = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psInd_inputSector = 5 }
+			set_variable = { psInd_inputStep = -0.10 }
+			psInd_shift = yes
 		}
 	}
 }
