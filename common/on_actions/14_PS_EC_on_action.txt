@@ -1,16 +1,16 @@
 on_actions = {
-    on_daily = {
+	on_startup = {
+		effect = {
+			every_country = {
+				psEcon_bootstrap = yes
+			}
+		}
+	}
+	on_daily = {
 		effect = {
 			if = {
-				limit = {
-					is_ai = no
-				}
-				EC_cre = yes
+				limit = { is_ai = no }
 				EC_ccp = yes
-				EC_cpe = yes
-				EC_cdg = yes
-				EC_ccp2 = yes
-				ECOA_graph = yes
 				refresh_education_piechart = yes
 				DATE_COUNTRY_GET_EFFECTS = yes
 			}
@@ -18,25 +18,16 @@ on_actions = {
 	}
 	on_monthly = {
 		effect = {
+			psEcon_monthly = yes
 			if = {
-				limit = {
-				    is_ai = yes
-				}
-				EC_cre = yes
+				limit = { is_ai = yes }
 				EC_ccp = yes
-				EC_cpe = yes
-				EC_cdg = yes
-				EC_ccp2 = yes
-				ECOA_graph = yes
 				refresh_education_piechart = yes
 			}
 			if = {
-				limit = { 
-					original_tag = ZZZ
-				}
+				limit = { original_tag = ZZZ }
 				date_ECOA = yes
 			}
-			EC_ceg = yes
 		}
 	}
 }

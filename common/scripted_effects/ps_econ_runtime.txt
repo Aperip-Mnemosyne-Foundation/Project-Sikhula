@@ -1,0 +1,206 @@
+psEcon_publish = {
+	if = {
+		limit = {
+			NOT = { has_dynamic_modifier = { modifier = psEcon_pulse } }
+		}
+		add_dynamic_modifier = { modifier = psEcon_pulse }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = ECCP_dynamic_modifiers } }
+		remove_dynamic_modifier = { modifier = ECCP_dynamic_modifiers }
+	}
+}
+
+psEcon_movePrices = {
+	set_temp_variable = { back = 1 }
+	subtract_from_temp_variable = { back = global.psEcon_grain }
+	multiply_temp_variable = { back = 0.04 }
+	add_to_variable = { global.psEcon_grain = back }
+	set_temp_variable = { back = 1 }
+	subtract_from_temp_variable = { back = global.psEcon_oil }
+	multiply_temp_variable = { back = 0.04 }
+	add_to_variable = { global.psEcon_oil = back }
+	set_temp_variable = { back = 1 }
+	subtract_from_temp_variable = { back = global.psEcon_goods }
+	multiply_temp_variable = { back = 0.04 }
+	add_to_variable = { global.psEcon_goods = back }
+	clamp_variable = { var = global.psEcon_grain min = 0.55 max = 1.80 }
+	clamp_variable = { var = global.psEcon_oil min = 0.55 max = 1.80 }
+	clamp_variable = { var = global.psEcon_goods min = 0.55 max = 1.80 }
+	random_list = {
+		96 = { }
+		2 = {
+			add_to_variable = { global.psEcon_grain = 0.12 }
+			news_event = { id = ps_econ_news.1 }
+		}
+		2 = {
+			add_to_variable = { global.psEcon_oil = 0.16 }
+			news_event = { id = ps_econ_news.2 }
+		}
+	}
+}
+
+psEcon_snapMemory = {
+	# Opening month has no fake history. The fast and slow trends start on the first result.
+	set_variable = { psEcon_growthFast = psEcon_growth }
+	set_variable = { psEcon_growthSlow = psEcon_potential }
+	set_temp_variable = { momentum = psEcon_growthFast }
+	subtract_from_temp_variable = { momentum = psEcon_growthSlow }
+	clamp_temp_variable = { var = momentum min = -0.04 max = 0.04 }
+	set_variable = { psEcon_momentum = momentum }
+	set_variable = { psEcon_unemployment = psEcon_uInstant }
+	set_variable = { psEcon_inflationSlow = psEcon_inflation }
+	set_variable = { psEcon_volatility = 0.004 }
+	set_variable = { psEcon_policyNoise = 0 }
+	set_variable = { psEcon_taxPrev = psEcon_taxRate }
+	set_variable = { psEcon_spendPrev = psEcon_spendShare }
+	set_variable = { psEcon_stancePrev = psEcon_monetaryStance }
+}
+
+psEcon_neutralOutputs = {
+	set_variable = { psEcon_factory = 0 }
+	set_variable = { psEcon_build = 0 }
+	set_variable = { psEcon_buildCiv = 0 }
+	set_variable = { psEcon_buildMil = 0 }
+	set_variable = { psEcon_buildDock = 0 }
+	set_variable = { psEcon_buildInfra = 0 }
+	set_variable = { psEcon_repair = 0 }
+	set_variable = { psEcon_goods = 0 }
+	set_variable = { psEcon_research = 0 }
+	set_variable = { psEcon_effCap = 0 }
+	set_variable = { psEcon_effGain = 0 }
+	set_variable = { psEcon_stabWeekly = 0 }
+	set_variable = { psEcon_power = 0 }
+	set_variable = { psEcon_warSupport = 0 }
+	set_variable = { psEcon_conscription = 0 }
+	set_variable = { psEcon_growth = 0 }
+	set_variable = { psEcon_inflation = 0 }
+	set_variable = { psEcon_unemployment = 0 }
+}
+
+psEcon_refresh = {
+	psEcon_readWorld = yes
+	if = {
+		limit = { check_variable = { psEcon_mapPopulation < 0.2 } }
+		psEcon_neutralOutputs = yes
+	}
+	else = {
+		psEcon_calculate = yes
+	}
+	psEcon_publish = yes
+}
+
+psEcon_notify = {
+	if = {
+		limit = {
+			is_ai = no
+			NOT = { has_country_flag = psEcon_silentTick }
+		}
+		if = {
+			limit = {
+				has_country_flag = psEcon_bursting
+				NOT = { has_country_flag = psEcon_toldBurst }
+			}
+			set_country_flag = psEcon_toldBurst
+			country_event = { id = ps_econ.1 }
+		}
+		if = {
+			limit = { NOT = { has_country_flag = psEcon_bursting } }
+			clr_country_flag = psEcon_toldBurst
+		}
+		if = {
+			limit = {
+				check_variable = { psEcon_foodStress > 0.55 }
+				NOT = { has_country_flag = psEcon_toldFood }
+			}
+			set_country_flag = { flag = psEcon_toldFood days = 360 }
+			country_event = { id = ps_econ.2 }
+		}
+		if = {
+			limit = {
+				check_variable = { psEcon_inflation > 0.10 }
+				NOT = { has_country_flag = psEcon_toldInflation }
+			}
+			set_country_flag = { flag = psEcon_toldInflation days = 360 }
+			country_event = { id = ps_econ.3 }
+		}
+		if = {
+			limit = {
+				check_variable = { psEcon_debt > 1.00 }
+				check_variable = { psEcon_marketStock < 0.45 }
+				NOT = { has_country_flag = psEcon_toldDebt }
+			}
+			set_country_flag = { flag = psEcon_toldDebt days = 360 }
+			country_event = { id = ps_econ.4 }
+		}
+		if = {
+			limit = {
+				check_variable = { psEcon_therapyElapsed > 35.5 }
+				check_variable = { psEcon_therapyLeft < 0.5 }
+				NOT = { has_country_flag = psEcon_toldTherapy }
+			}
+			set_country_flag = psEcon_toldTherapy
+			country_event = { id = ps_econ.5 }
+		}
+	}
+}
+
+psEcon_bootstrap = {
+	if = {
+		limit = { NOT = { has_variable = global.psEcon_grain } }
+		set_variable = { global.psEcon_grain = 1 }
+		set_variable = { global.psEcon_oil = 1 }
+		set_variable = { global.psEcon_goods = 1 }
+	}
+	psEcon_applyProfile = yes
+	psEcon_scanMap = yes
+	psEcon_readWorld = yes
+	if = {
+		limit = { check_variable = { psEcon_mapPopulation < 0.2 } }
+		psEcon_neutralOutputs = yes
+	}
+	else = {
+		psEcon_calculate = yes
+		psEcon_snapMemory = yes
+		psEcon_calculate = yes
+	}
+	psEcon_publish = yes
+	set_country_flag = psEcon_ready
+}
+
+psEcon_monthly = {
+	if = {
+		limit = { NOT = { has_country_flag = psEcon_ready } }
+		psEcon_bootstrap = yes
+	}
+	else = {
+		if = {
+			limit = { original_tag = PRC }
+			psEcon_movePrices = yes
+		}
+		add_to_variable = { psEcon_scanWait = 1 }
+		set_temp_variable = { ownedNow = num_owned_states }
+		if = {
+			limit = {
+				OR = {
+					check_variable = { psEcon_scanWait > 11.5 }
+					has_war = yes
+					NOT = { check_variable = { ownedNow = psEcon_ownedSeen } }
+				}
+			}
+			psEcon_scanMap = yes
+		}
+		psEcon_readWorld = yes
+		if = {
+			limit = { check_variable = { psEcon_mapPopulation < 0.2 } }
+			psEcon_neutralOutputs = yes
+			psEcon_publish = yes
+		}
+		else = {
+			psEcon_calculate = yes
+			psEcon_integrate = yes
+			psEcon_publish = yes
+			psEcon_notify = yes
+		}
+	}
+}
