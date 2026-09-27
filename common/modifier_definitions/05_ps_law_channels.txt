@@ -1,0 +1,49 @@
+# Channels published by the standing-law dynamic modifier. The economy reads them. It does not define them.
+psLaw_taxTake = {
+	color_type = neutral
+	value_type = percentage
+	precision = 1
+	category = country
+}
+
+psLaw_taxEnforce = {
+	color_type = neutral
+	value_type = percentage
+	precision = 1
+	category = country
+}
+
+psLaw_laborBite = {
+	color_type = neutral
+	value_type = percentage
+	precision = 1
+	category = country
+}
+
+psLaw_tradeLevy = {
+	color_type = bad
+	value_type = percentage
+	precision = 1
+	category = country
+}
+
+psLaw_capitalSeal = {
+	color_type = neutral
+	value_type = percentage
+	precision = 1
+	category = country
+}
+
+psLaw_contractTrust = {
+	color_type = good
+	value_type = percentage
+	precision = 1
+	category = country
+}
+
+psLaw_soePrivilege = {
+	color_type = neutral
+	value_type = percentage
+	precision = 1
+	category = country
+}

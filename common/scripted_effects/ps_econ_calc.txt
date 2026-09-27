@@ -8,60 +8,60 @@ psEcon_calcBalances = {
 	add_to_temp_variable = { market = psEcon_ideaMarket }
 	clamp_temp_variable = { var = market min = 0.08 max = 0.96 }
 	set_variable = { psEcon_marketNow = market }
-	set_temp_variable = { stance = psEcon_monetaryStance }
+	set_temp_variable = { stance = psEcon_stancePaid }
 	add_to_temp_variable = { stance = psEcon_monetaryAdd }
 	clamp_temp_variable = { var = stance min = -2 max = 2 }
 	set_variable = { psEcon_stanceUsed = stance }
 
-	set_temp_variable = { shareSum = psEcon_shareMil }
-	add_to_temp_variable = { shareSum = psEcon_shareEdu }
-	add_to_temp_variable = { shareSum = psEcon_shareWel }
-	add_to_temp_variable = { shareSum = psEcon_shareInv }
-	add_to_temp_variable = { shareSum = psEcon_shareEnv }
+	set_temp_variable = { shareSum = psEcon_milPaid }
+	add_to_temp_variable = { shareSum = psEcon_eduPaid }
+	add_to_temp_variable = { shareSum = psEcon_welPaid }
+	add_to_temp_variable = { shareSum = psEcon_invPaid }
+	add_to_temp_variable = { shareSum = psEcon_envPaid }
 	if = {
 		limit = { check_variable = { shareSum < 0.01 } }
 		set_temp_variable = { shareSum = 1 }
 	}
-	set_variable = { psEcon_milS = psEcon_shareMil }
+	set_variable = { psEcon_milS = psEcon_milPaid }
 	divide_variable = { psEcon_milS = shareSum }
-	set_variable = { psEcon_eduS = psEcon_shareEdu }
+	set_variable = { psEcon_eduS = psEcon_eduPaid }
 	divide_variable = { psEcon_eduS = shareSum }
-	set_variable = { psEcon_welS = psEcon_shareWel }
+	set_variable = { psEcon_welS = psEcon_welPaid }
 	divide_variable = { psEcon_welS = shareSum }
-	set_variable = { psEcon_invShare = psEcon_shareInv }
+	set_variable = { psEcon_invShare = psEcon_invPaid }
 	divide_variable = { psEcon_invShare = shareSum }
-	set_variable = { psEcon_envS = psEcon_shareEnv }
+	set_variable = { psEcon_envS = psEcon_envPaid }
 	divide_variable = { psEcon_envS = shareSum }
 
-	set_temp_variable = { milF = psEcon_spendShare }
+	set_temp_variable = { milF = psEcon_spendPaid }
 	multiply_temp_variable = { milF = psEcon_milS }
 	add_to_temp_variable = { milF = psEcon_milBase }
 	set_temp_variable = { scale = psEcon_milFac }
 	add_to_temp_variable = { scale = 1 }
 	multiply_temp_variable = { milF = scale }
 	clamp_temp_variable = { var = milF min = 0 max = 0.28 }
-	set_temp_variable = { eduF = psEcon_spendShare }
+	set_temp_variable = { eduF = psEcon_spendPaid }
 	multiply_temp_variable = { eduF = psEcon_eduS }
 	add_to_temp_variable = { eduF = psEcon_eduBase }
 	set_temp_variable = { scale = psEcon_eduFac }
 	add_to_temp_variable = { scale = 1 }
 	multiply_temp_variable = { eduF = scale }
 	clamp_temp_variable = { var = eduF min = 0 max = 0.28 }
-	set_temp_variable = { welF = psEcon_spendShare }
+	set_temp_variable = { welF = psEcon_spendPaid }
 	multiply_temp_variable = { welF = psEcon_welS }
 	add_to_temp_variable = { welF = psEcon_welBase }
 	set_temp_variable = { scale = psEcon_welFac }
 	add_to_temp_variable = { scale = 1 }
 	multiply_temp_variable = { welF = scale }
 	clamp_temp_variable = { var = welF min = 0 max = 0.28 }
-	set_temp_variable = { invF = psEcon_spendShare }
+	set_temp_variable = { invF = psEcon_spendPaid }
 	multiply_temp_variable = { invF = psEcon_invShare }
 	add_to_temp_variable = { invF = psEcon_invBase }
 	set_temp_variable = { scale = psEcon_invFac }
 	add_to_temp_variable = { scale = 1 }
 	multiply_temp_variable = { invF = scale }
 	clamp_temp_variable = { var = invF min = 0 max = 0.28 }
-	set_temp_variable = { envF = psEcon_spendShare }
+	set_temp_variable = { envF = psEcon_spendPaid }
 	multiply_temp_variable = { envF = psEcon_envS }
 	add_to_temp_variable = { envF = psEcon_envBase }
 	set_temp_variable = { scale = psEcon_envFac }
@@ -90,16 +90,27 @@ psEcon_calcBalances = {
 	if = {
 		limit = {
 			check_variable = { psEcon_therapyLeft > 0 }
-			check_variable = { psEcon_spendShare < psEcon_spendNeutral }
+			check_variable = { psEcon_spendPaid < psEcon_spendNeutral }
 		}
 		set_temp_variable = { leaked = psEcon_spendNeutral }
-		subtract_from_temp_variable = { leaked = psEcon_spendShare }
+		subtract_from_temp_variable = { leaked = psEcon_spendPaid }
 		set_temp_variable = { weak = 1 }
 		subtract_from_temp_variable = { weak = gov }
 		multiply_temp_variable = { leaked = weak }
 		multiply_temp_variable = { leaked = 0.55 }
 		add_to_temp_variable = { spendActual = leaked }
 	}
+	# Save the quote before cover. Unpaid budget does not deliver the construction it promised.
+	set_variable = { psEcon_spendQuote = spendActual }
+	set_temp_variable = { cover = psEcon_cover }
+	clamp_temp_variable = { var = cover min = 0.40 max = 1 }
+	multiply_temp_variable = { spendActual = cover }
+	multiply_temp_variable = { govInv = cover }
+	multiply_variable = { psEcon_milS = cover }
+	multiply_variable = { psEcon_eduS = cover }
+	multiply_variable = { psEcon_welS = cover }
+	multiply_variable = { psEcon_invShare = cover }
+	multiply_variable = { psEcon_envS = cover }
 	set_variable = { psEcon_spendActual = spendActual }
 	set_variable = { psEcon_govInv = govInv }
 
@@ -138,6 +149,7 @@ psEcon_calcBalances = {
 	multiply_temp_variable = { foodSupply = shockKeep }
 	# Emergency grain arrives after the harvest shock. It is a stock, not a free harvest.
 	add_to_temp_variable = { foodSupply = psEcon_foodRelief }
+	add_to_temp_variable = { foodSupply = psInd_foodAdd }
 	set_temp_variable = { diet = psEcon_income }
 	divide_temp_variable = { diet = 30 }
 	clamp_temp_variable = { var = diet min = 0 max = 1.2 }
@@ -157,7 +169,7 @@ psEcon_calcBalances = {
 		clamp_temp_variable = { var = roomKeep min = 0.40 max = 1.15 }
 		set_temp_variable = { gap = 1 }
 		subtract_from_temp_variable = { gap = foodBalance }
-		multiply_temp_variable = { gap = psEcon_tradeOpen }
+		multiply_temp_variable = { gap = psEcon_tradeUsed }
 		multiply_temp_variable = { gap = roomKeep }
 		add_to_temp_variable = { foodEffective = gap }
 	}
@@ -175,6 +187,7 @@ psEcon_calcBalances = {
 	multiply_temp_variable = { domestic = 0.25 }
 	add_to_temp_variable = { domestic = 0.75 }
 	multiply_temp_variable = { domestic = psEcon_energy }
+	add_to_temp_variable = { domestic = psInd_energyAdd }
 	set_temp_variable = { importFactor = oilFace }
 	subtract_from_temp_variable = { importFactor = 1 }
 	multiply_temp_variable = { importFactor = 0.35 }
@@ -184,7 +197,7 @@ psEcon_calcBalances = {
 	set_temp_variable = { importNeed = 1.05 }
 	subtract_from_temp_variable = { importNeed = domestic }
 	clamp_temp_variable = { var = importNeed min = 0 max = 2 }
-	multiply_temp_variable = { importNeed = psEcon_tradeOpen }
+	multiply_temp_variable = { importNeed = psEcon_tradeUsed }
 	multiply_temp_variable = { importNeed = importKeep }
 	set_temp_variable = { energyCover = domestic }
 	add_to_temp_variable = { energyCover = importNeed }
@@ -209,7 +222,7 @@ psEcon_calcDemand = {
 	if = {
 		limit = { check_variable = { psEcon_therapyLeft > 0 } }
 		set_temp_variable = { spendCut = psEcon_spendNeutral }
-		subtract_from_temp_variable = { spendCut = psEcon_spendShare }
+		subtract_from_temp_variable = { spendCut = psEcon_spendPaid }
 		divide_temp_variable = { spendCut = 0.08 }
 		clamp_temp_variable = { var = spendCut min = 0 max = 1 }
 		set_temp_variable = { moneyTight = stance }
@@ -277,7 +290,7 @@ psEcon_calcDemand = {
 
 	set_temp_variable = { demand = 0.985 }
 	add_to_temp_variable = { demand = psEcon_demandMood }
-	set_temp_variable = { spendGap = psEcon_spendShare }
+	set_temp_variable = { spendGap = psEcon_spendPaid }
 	subtract_from_temp_variable = { spendGap = psEcon_spendNeutral }
 	multiply_temp_variable = { spendGap = 0.42 }
 	add_to_temp_variable = { demand = spendGap }
@@ -287,13 +300,14 @@ psEcon_calcDemand = {
 	set_temp_variable = { warBit = psEcon_atWar }
 	multiply_temp_variable = { warBit = 0.03 }
 	add_to_temp_variable = { demand = warBit }
-	set_temp_variable = { taxGap = psEcon_taxRate }
+	set_temp_variable = { taxGap = psEcon_taxPaid }
 	subtract_from_temp_variable = { taxGap = psEcon_taxNeutral }
 	multiply_temp_variable = { taxGap = 0.32 }
 	subtract_from_temp_variable = { demand = taxGap }
 	add_to_temp_variable = { demand = psEcon_shockDemand }
-	set_temp_variable = { laborBit = psEcon_laborPull }
-	multiply_temp_variable = { laborBit = 0.04 }
+	set_temp_variable = { laborBit = psEcon_laborBite }
+	subtract_from_temp_variable = { laborBit = 0.35 }
+	multiply_temp_variable = { laborBit = 0.025 }
 	subtract_from_temp_variable = { demand = laborBit }
 	if = {
 		limit = { has_country_flag = psEcon_bursting }
@@ -319,10 +333,18 @@ psEcon_calcDemand = {
 	subtract_from_temp_variable = { eduU = 0.50 }
 	multiply_temp_variable = { eduU = 0.018 }
 	subtract_from_temp_variable = { uInstant = eduU }
-	set_temp_variable = { laborU = psEcon_laborPull }
-	multiply_temp_variable = { laborU = 0.08 }
+	set_temp_variable = { laborU = psEcon_laborBite }
+	subtract_from_temp_variable = { laborU = 0.35 }
+	multiply_temp_variable = { laborU = 0.045 }
 	add_to_temp_variable = { uInstant = laborU }
 	add_to_temp_variable = { uInstant = psEcon_therapyJobs }
+	# State firms hoard labor. The stock lives in the industry file.
+	subtract_from_temp_variable = { uInstant = psInd_jobHoard }
+	set_temp_variable = { welU = psEcon_welS }
+	subtract_from_temp_variable = { welU = 0.22 }
+	clamp_temp_variable = { var = welU min = 0 max = 1 }
+	multiply_temp_variable = { welU = 0.030 }
+	subtract_from_temp_variable = { uInstant = welU }
 	if = {
 		limit = { has_country_flag = psEcon_bursting }
 		set_temp_variable = { burstU = psEcon_bubble }
@@ -520,8 +542,13 @@ psEcon_calcPath = {
 	multiply_temp_variable = { collect = utilCollect }
 	set_temp_variable = { revenue = psEcon_fiscRev }
 	add_to_temp_variable = { revenue = 1 }
-	multiply_temp_variable = { revenue = psEcon_taxRate }
+	multiply_temp_variable = { revenue = psEcon_taxPaid }
 	multiply_temp_variable = { revenue = collect }
+	multiply_temp_variable = { revenue = psEcon_taxEnforce }
+	set_temp_variable = { customs = psEcon_tradeLevy }
+	multiply_temp_variable = { customs = psEcon_tradeOpen }
+	multiply_temp_variable = { customs = 0.035 }
+	add_to_temp_variable = { revenue = customs }
 	set_variable = { psEcon_revenue = revenue }
 	set_temp_variable = { deficit = psEcon_spendActual }
 	subtract_from_temp_variable = { deficit = revenue }
@@ -570,6 +597,30 @@ psEcon_calcPath = {
 	set_temp_variable = { heatInf = heat }
 	multiply_temp_variable = { heatInf = 0.55 }
 	add_to_temp_variable = { infTarget = heatInf }
+	# Money above real assets is a small inflation gap, not a second money printer.
+	set_temp_variable = { fxAsset = psEcon_forex }
+	divide_temp_variable = { fxAsset = 4 }
+	clamp_temp_variable = { var = fxAsset min = 0.4 max = 1.6 }
+	multiply_temp_variable = { fxAsset = 0.15 }
+	set_temp_variable = { assets = psEcon_privateCapital }
+	multiply_temp_variable = { assets = 0.55 }
+	add_to_temp_variable = { assets = fxAsset }
+	set_temp_variable = { pubAsset = psEcon_publicCapital }
+	multiply_temp_variable = { pubAsset = 0.30 }
+	add_to_temp_variable = { assets = pubAsset }
+	set_variable = { psEcon_assets = assets }
+	set_temp_variable = { assetFloor = assets }
+	if = {
+		limit = { check_variable = { assetFloor < 0.25 } }
+		set_temp_variable = { assetFloor = 0.25 }
+	}
+	set_temp_variable = { moneyGap = psEcon_money }
+	divide_temp_variable = { moneyGap = assetFloor }
+	subtract_from_temp_variable = { moneyGap = 1 }
+	set_variable = { psEcon_moneyGap = moneyGap }
+	clamp_temp_variable = { var = moneyGap min = -0.02 max = 0.06 }
+	multiply_temp_variable = { moneyGap = 0.22 }
+	add_to_temp_variable = { infTarget = moneyGap }
 	set_temp_variable = { expect = psEcon_inflation }
 	subtract_from_temp_variable = { expect = psEcon_inflationSlow }
 	multiply_temp_variable = { expect = 0.35 }
@@ -681,6 +732,23 @@ psEcon_calcOutput = {
 		multiply_temp_variable = { bit = 0.030 }
 		add_to_temp_variable = { prod = bit }
 	}
+	# Ownership effects come from the industry file. Contract trust scales private wealth.
+	add_to_temp_variable = { prod = psInd_factoryAdd }
+	set_temp_variable = { trustScale = psEcon_contractTrust }
+	divide_temp_variable = { trustScale = 0.70 }
+	clamp_temp_variable = { var = trustScale min = 0.35 max = 1.15 }
+	multiply_temp_variable = { trustScale = 0.38 }
+	add_to_temp_variable = { trustScale = 0.62 }
+	set_temp_variable = { bit = psEcon_privateCapital }
+	subtract_from_temp_variable = { bit = 0.45 }
+	multiply_temp_variable = { bit = trustScale }
+	multiply_temp_variable = { bit = 0.025 }
+	add_to_temp_variable = { prod = bit }
+	set_temp_variable = { welProd = psEcon_welS }
+	subtract_from_temp_variable = { welProd = 0.34 }
+	clamp_temp_variable = { var = welProd min = 0 max = 1 }
+	multiply_temp_variable = { welProd = 0.012 }
+	subtract_from_temp_variable = { prod = welProd }
 	set_temp_variable = { bit = psEcon_balanceSheet }
 	multiply_temp_variable = { bit = 0.045 }
 	subtract_from_temp_variable = { prod = bit }
@@ -759,6 +827,14 @@ psEcon_calcOutput = {
 		multiply_temp_variable = { bit = 0.040 }
 		add_to_temp_variable = { build = bit }
 	}
+	add_to_temp_variable = { build = psInd_buildAdd }
+	if = {
+		limit = {
+			check_variable = { psEcon_projectLive > 0.5 }
+			check_variable = { psEcon_projectKind = 1 }
+		}
+		add_to_temp_variable = { build = 0.030 }
+	}
 	set_temp_variable = { bit = psEcon_balanceSheet }
 	multiply_temp_variable = { bit = 0.040 }
 	subtract_from_temp_variable = { build = bit }
@@ -771,7 +847,7 @@ psEcon_calcOutput = {
 	set_temp_variable = { buildMil = psEcon_milS }
 	subtract_from_temp_variable = { buildMil = 0.16 }
 	multiply_temp_variable = { buildMil = 0.10 }
-	set_temp_variable = { heavyBit = psEcon_heavyBias }
+	set_temp_variable = { heavyBit = psEcon_heavyPaid }
 	subtract_from_temp_variable = { heavyBit = 0.30 }
 	multiply_temp_variable = { heavyBit = 0.08 }
 	add_to_temp_variable = { buildMil = heavyBit }
@@ -781,17 +857,17 @@ psEcon_calcOutput = {
 	set_temp_variable = { buildCiv = psEcon_invShare }
 	subtract_from_temp_variable = { buildCiv = psEcon_milS }
 	multiply_temp_variable = { buildCiv = 0.12 }
-	set_temp_variable = { heavyCiv = psEcon_heavyBias }
+	set_temp_variable = { heavyCiv = psEcon_heavyPaid }
 	subtract_from_temp_variable = { heavyCiv = 0.30 }
 	multiply_temp_variable = { heavyCiv = 0.05 }
 	subtract_from_temp_variable = { buildCiv = heavyCiv }
 	add_to_temp_variable = { buildCiv = build }
 	clamp_temp_variable = { var = buildCiv min = -0.28 max = 0.22 }
 	set_variable = { psEcon_buildCiv = buildCiv }
-	set_temp_variable = { buildDock = psEcon_tradeOpen }
+	set_temp_variable = { buildDock = psEcon_tradeUsed }
 	subtract_from_temp_variable = { buildDock = 0.60 }
 	multiply_temp_variable = { buildDock = 0.06 }
-	set_temp_variable = { heavyDock = psEcon_heavyBias }
+	set_temp_variable = { heavyDock = psEcon_heavyPaid }
 	subtract_from_temp_variable = { heavyDock = 0.30 }
 	multiply_temp_variable = { heavyDock = 0.04 }
 	add_to_temp_variable = { buildDock = heavyDock }
@@ -822,28 +898,6 @@ psEcon_calcOutput = {
 	clamp_temp_variable = { var = repair min = -0.30 max = 0.20 }
 	set_variable = { psEcon_repair = repair }
 
-	set_temp_variable = { goods = psEcon_welS }
-	subtract_from_temp_variable = { goods = 0.25 }
-	multiply_temp_variable = { goods = 0.035 }
-	set_temp_variable = { bit = psEcon_foodStress }
-	multiply_temp_variable = { bit = 0.045 }
-	add_to_temp_variable = { goods = bit }
-	set_temp_variable = { bit = psEcon_income }
-	divide_temp_variable = { bit = 40 }
-	clamp_temp_variable = { var = bit min = 0 max = 1 }
-	multiply_temp_variable = { bit = 0.012 }
-	add_to_temp_variable = { goods = bit }
-	set_temp_variable = { bit = psEcon_taxRate }
-	subtract_from_temp_variable = { bit = 0.25 }
-	multiply_temp_variable = { bit = 0.020 }
-	subtract_from_temp_variable = { goods = bit }
-	set_temp_variable = { bit = psEcon_uUsed }
-	subtract_from_temp_variable = { bit = 0.08 }
-	clamp_temp_variable = { var = bit min = 0 max = 1 }
-	multiply_temp_variable = { bit = 0.025 }
-	add_to_temp_variable = { goods = bit }
-	clamp_temp_variable = { var = goods min = -0.05 max = 0.10 }
-	set_variable = { psEcon_goods = goods }
 	set_temp_variable = { research = psEcon_education }
 	subtract_from_temp_variable = { research = 0.55 }
 	multiply_temp_variable = { research = 0.045 }
@@ -854,6 +908,14 @@ psEcon_calcOutput = {
 	subtract_from_temp_variable = { bit = 0.55 }
 	multiply_temp_variable = { bit = 0.010 }
 	add_to_temp_variable = { research = bit }
+	add_to_temp_variable = { research = psInd_researchAdd }
+	if = {
+		limit = {
+			check_variable = { psEcon_projectLive > 0.5 }
+			check_variable = { psEcon_projectKind = 2 }
+		}
+		add_to_temp_variable = { research = 0.020 }
+	}
 	clamp_temp_variable = { var = research min = -0.06 max = 0.08 }
 	set_variable = { psEcon_research = research }
 	set_temp_variable = { effCap = psEcon_education }
@@ -866,6 +928,7 @@ psEcon_calcOutput = {
 	set_temp_variable = { bit = psEcon_energyStress }
 	multiply_temp_variable = { bit = 0.04 }
 	subtract_from_temp_variable = { effCap = bit }
+	add_to_temp_variable = { effCap = psInd_effCapAdd }
 	clamp_temp_variable = { var = effCap min = -0.08 max = 0.08 }
 	set_variable = { psEcon_effCap = effCap }
 	set_temp_variable = { effGain = psEcon_education }
@@ -875,6 +938,7 @@ psEcon_calcOutput = {
 	multiply_temp_variable = { bit = 0.20 }
 	clamp_temp_variable = { var = bit min = -0.01 max = 0.01 }
 	add_to_temp_variable = { effGain = bit }
+	add_to_temp_variable = { effGain = psInd_effGainAdd }
 	clamp_temp_variable = { var = effGain min = -0.08 max = 0.08 }
 	set_variable = { psEcon_effGain = effGain }
 	set_temp_variable = { stabWeekly = 0.07 }
@@ -884,6 +948,10 @@ psEcon_calcOutput = {
 	set_temp_variable = { bit = psEcon_stability }
 	subtract_from_temp_variable = { bit = 0.60 }
 	multiply_temp_variable = { bit = 0.00012 }
+	add_to_temp_variable = { stabWeekly = bit }
+	set_temp_variable = { bit = psEcon_welS }
+	subtract_from_temp_variable = { bit = 0.22 }
+	multiply_temp_variable = { bit = 0.00040 }
 	add_to_temp_variable = { stabWeekly = bit }
 	set_temp_variable = { bit = psEcon_foodStress }
 	multiply_temp_variable = { bit = 0.0010 }
@@ -945,8 +1013,10 @@ psEcon_calcOutput = {
 }
 
 psEcon_calculate = {
+	psInd_apply = yes
 	psEcon_calcBalances = yes
 	psEcon_calcDemand = yes
 	psEcon_calcPath = yes
 	psEcon_calcOutput = yes
+	psEcon_quoteCoupon = yes
 }

@@ -2,6 +2,9 @@
 # psEcon_inputStep is a signed fraction, usually 0.02 or -0.02.
 # psEcon_inputBudget: 1 military, 2 education, 3 welfare, 4 investment, 5 environment.
 # psEcon_inputShock: 1 inflation, 2 food, 3 oil, 4 demand.
+# psEcon_inputKind: 1 manufacturing project, 2 technology project.
+# psEcon_inputStatute: 1 trade, 2 labor, 3 state ownership, 4 technology.
+# Budget levers wait for the monthly lock. A shock or a cash purchase may rescore immediately.
 
 psEcon_clampLevers = {
 	clamp_variable = { var = psEcon_taxRate min = 0.10 max = 0.48 }
@@ -55,31 +58,26 @@ psEcon_shiftBudgetShare = {
 	}
 	psEcon_clampLevers = yes
 	psEcon_normalizeShares = yes
-	psEcon_refresh = yes
 }
 
 psEcon_setTaxRate = {
 	add_to_variable = { psEcon_taxRate = psEcon_inputStep }
 	psEcon_clampLevers = yes
-	psEcon_refresh = yes
 }
 
 psEcon_setSpendShare = {
 	add_to_variable = { psEcon_spendShare = psEcon_inputStep }
 	psEcon_clampLevers = yes
-	psEcon_refresh = yes
 }
 
 psEcon_setMonetaryStance = {
 	add_to_variable = { psEcon_monetaryStance = psEcon_inputStep }
 	psEcon_clampLevers = yes
-	psEcon_refresh = yes
 }
 
 psEcon_setHeavyBias = {
 	add_to_variable = { psEcon_heavyBias = psEcon_inputStep }
 	psEcon_clampLevers = yes
-	psEcon_refresh = yes
 }
 
 psEcon_beginTherapy = {
@@ -98,12 +96,10 @@ psEcon_beginTherapy = {
 	add_to_variable = { psEcon_shareInv = 0.06 }
 	psEcon_clampLevers = yes
 	psEcon_normalizeShares = yes
-	psEcon_refresh = yes
 }
 
 psEcon_cancelTherapy = {
 	set_variable = { psEcon_therapyLeft = 0 }
-	psEcon_refresh = yes
 }
 
 psEcon_addShock = {
@@ -138,11 +134,38 @@ psEcon_clearShocks = {
 	psEcon_refresh = yes
 }
 
-psEcon_addFroth = {
-	add_to_variable = { psEcon_bubble = 0.20 }
-	clamp_variable = { var = psEcon_bubble min = 0 max = 0.92 }
+psEcon_buyGrain = {
+	# One cash purchase. It does not raise the standing budget.
+	if = {
+		limit = {
+			check_variable = { psEcon_treasury > 0.0039 }
+			check_variable = { psEcon_foodRelief < 0.12 }
+		}
+		subtract_from_variable = { psEcon_treasury = 0.004 }
+		add_to_variable = { psEcon_foodRelief = 0.08 }
+		clamp_variable = { var = psEcon_foodRelief min = 0 max = 0.16 }
+		psEcon_refresh = yes
+	}
+}
+
+psEcon_startProject = {
+	if = {
+		limit = { check_variable = { psEcon_projectLeft < 0.0001 } }
+		set_variable = { psEcon_projectKind = psEcon_inputKind }
+		set_variable = { psEcon_projectFlow = 0.0015 }
+		set_variable = { psEcon_projectLeft = 0.018 }
+		set_variable = { psEcon_projectLive = 0 }
+	}
+}
+
+psEcon_stopProject = {
+	set_variable = { psEcon_projectLeft = 0 }
+	set_variable = { psEcon_projectFlow = 0 }
+	set_variable = { psEcon_projectKind = 0 }
+	set_variable = { psEcon_projectLive = 0 }
 	psEcon_refresh = yes
 }
+
 
 psEcon_requestTick = {
 	psEcon_monthly = yes

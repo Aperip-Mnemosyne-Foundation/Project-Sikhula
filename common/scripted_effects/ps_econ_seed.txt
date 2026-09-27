@@ -24,7 +24,6 @@ psEcon_applyProfile = {
 		set_variable = { psEcon_friction = 0.004 }
 		set_variable = { psEcon_demandMood = 0.03 }
 		set_variable = { psEcon_tfp = 0.012 }
-		set_variable = { psEcon_bubble = 0.16 }
 		set_variable = { psEcon_balanceSheet = 0 }
 	}
 	else_if = {
@@ -51,7 +50,6 @@ psEcon_applyProfile = {
 		set_variable = { psEcon_friction = 0.045 }
 		set_variable = { psEcon_demandMood = 0 }
 		set_variable = { psEcon_tfp = 0 }
-		set_variable = { psEcon_bubble = 0 }
 		set_variable = { psEcon_balanceSheet = 0 }
 	}
 	else_if = {
@@ -78,7 +76,6 @@ psEcon_applyProfile = {
 		set_variable = { psEcon_friction = 0.008 }
 		set_variable = { psEcon_demandMood = -0.025 }
 		set_variable = { psEcon_tfp = 0 }
-		set_variable = { psEcon_bubble = 0.04 }
 		set_variable = { psEcon_balanceSheet = 0.58 }
 	}
 	else_if = {
@@ -105,7 +102,6 @@ psEcon_applyProfile = {
 		set_variable = { psEcon_friction = 0.012 }
 		set_variable = { psEcon_demandMood = 0.012 }
 		set_variable = { psEcon_tfp = 0 }
-		set_variable = { psEcon_bubble = 0 }
 		set_variable = { psEcon_balanceSheet = 0 }
 	}
 	else_if = {
@@ -132,7 +128,6 @@ psEcon_applyProfile = {
 		set_variable = { psEcon_friction = 0.018 }
 		set_variable = { psEcon_demandMood = 0.008 }
 		set_variable = { psEcon_tfp = 0 }
-		set_variable = { psEcon_bubble = 0 }
 		set_variable = { psEcon_balanceSheet = 0 }
 	}
 	else_if = {
@@ -159,7 +154,6 @@ psEcon_applyProfile = {
 		set_variable = { psEcon_friction = 0.03 }
 		set_variable = { psEcon_demandMood = -0.075 }
 		set_variable = { psEcon_tfp = 0 }
-		set_variable = { psEcon_bubble = 0 }
 		set_variable = { psEcon_balanceSheet = 0 }
 	}
 	else_if = {
@@ -186,7 +180,6 @@ psEcon_applyProfile = {
 		set_variable = { psEcon_friction = 0.015 }
 		set_variable = { psEcon_demandMood = 0.01 }
 		set_variable = { psEcon_tfp = 0.004 }
-		set_variable = { psEcon_bubble = 0.04 }
 		set_variable = { psEcon_balanceSheet = 0 }
 	}
 	else_if = {
@@ -213,7 +206,6 @@ psEcon_applyProfile = {
 		set_variable = { psEcon_friction = 0.04 }
 		set_variable = { psEcon_demandMood = 0 }
 		set_variable = { psEcon_tfp = 0.002 }
-		set_variable = { psEcon_bubble = 0 }
 		set_variable = { psEcon_balanceSheet = 0 }
 	}
 	else_if = {
@@ -240,7 +232,6 @@ psEcon_applyProfile = {
 		set_variable = { psEcon_friction = 0.035 }
 		set_variable = { psEcon_demandMood = -0.005 }
 		set_variable = { psEcon_tfp = 0 }
-		set_variable = { psEcon_bubble = 0 }
 		set_variable = { psEcon_balanceSheet = 0 }
 	}
 	else_if = {
@@ -267,7 +258,6 @@ psEcon_applyProfile = {
 		set_variable = { psEcon_friction = 0.012 }
 		set_variable = { psEcon_demandMood = 0.01 }
 		set_variable = { psEcon_tfp = 0.004 }
-		set_variable = { psEcon_bubble = 0 }
 		set_variable = { psEcon_balanceSheet = 0 }
 	}
 	else = {
@@ -293,7 +283,6 @@ psEcon_applyProfile = {
 		set_variable = { psEcon_friction = 0.015 }
 		set_variable = { psEcon_demandMood = 0 }
 		set_variable = { psEcon_tfp = 0 }
-		set_variable = { psEcon_bubble = 0 }
 		set_variable = { psEcon_balanceSheet = 0 }
 	}
 	set_variable = { psEcon_taxNeutral = psEcon_taxRate }
@@ -318,5 +307,133 @@ psEcon_applyProfile = {
 	set_variable = { psEcon_taxPrev = psEcon_taxRate }
 	set_variable = { psEcon_spendPrev = psEcon_spendShare }
 	set_variable = { psEcon_stancePrev = psEcon_monetaryStance }
+	psEcon_seedLedger = yes
 	clr_country_flag = psEcon_bursting
+}
+
+psEcon_seedLedger = {
+	# 1998 stocks. Bubble and privilege are not player levers.
+	set_variable = { psEcon_bubble = 0.10 }
+	set_variable = { psEcon_cover = 1 }
+	set_variable = { psEcon_money = 1 }
+	set_variable = { psEcon_assets = 1 }
+	set_variable = { psEcon_moneyGap = 0 }
+	set_variable = { psEcon_treasury = 0.02 }
+	set_variable = { psEcon_forex = 2 }
+	set_variable = { psEcon_fxPrivilege = 0 }
+	set_variable = { psEcon_fxAccess = 1 }
+	set_variable = { psEcon_tradeOpen = 0.60 }
+	set_variable = { psEcon_tradeUsed = 0.60 }
+	set_variable = { psEcon_taxEnforce = 0.85 }
+	set_variable = { psEcon_laborBite = 0.40 }
+	set_variable = { psEcon_tradeLevy = 0.06 }
+	set_variable = { psEcon_capitalSeal = 0.30 }
+	set_variable = { psEcon_contractTrust = 0.40 }
+	set_variable = { psEcon_soePrivilege = 0.25 }
+	set_variable = { psEcon_projectLeft = 0 }
+	set_variable = { psEcon_projectFlow = 0 }
+	set_variable = { psEcon_projectKind = 0 }
+	set_variable = { psEcon_projectLive = 0 }
+	set_variable = { psEcon_projectDue = 0 }
+	set_variable = { psEcon_coupon = 0 }
+	set_variable = { psEcon_couponMonth = 0 }
+	set_variable = { psEcon_taxMonth = 0 }
+	set_variable = { psEcon_billMonth = 0 }
+	set_variable = { psEcon_borrowMonth = 0 }
+	set_variable = { psEcon_printMonth = 0 }
+	set_variable = { psEcon_fxEarn = 0 }
+	set_variable = { psEcon_fxSpend = 0 }
+	set_variable = { psEcon_spendQuote = psEcon_spendShare }
+	if = {
+		limit = { original_tag = USA }
+		set_variable = { psEcon_bubble = 0.32 }
+		set_variable = { psEcon_tradeOpen = 0.85 }
+		set_variable = { psEcon_treasury = 0.045 }
+		set_variable = { psEcon_forex = 4 }
+		set_variable = { psEcon_fxPrivilege = 0.48 }
+		set_variable = { psEcon_money = 1.02 }
+	}
+	else_if = {
+		limit = { original_tag = GER }
+		set_variable = { psEcon_bubble = 0.08 }
+		set_variable = { psEcon_tradeOpen = 0.85 }
+		set_variable = { psEcon_treasury = 0.030 }
+		set_variable = { psEcon_forex = 3.2 }
+		set_variable = { psEcon_fxPrivilege = 0.55 }
+		set_variable = { psEcon_money = 1 }
+	}
+	else_if = {
+		limit = { original_tag = JAP }
+		set_variable = { psEcon_bubble = 0.04 }
+		set_variable = { psEcon_tradeOpen = 0.85 }
+		set_variable = { psEcon_treasury = 0.050 }
+		set_variable = { psEcon_forex = 8 }
+		set_variable = { psEcon_fxPrivilege = 0.40 }
+		set_variable = { psEcon_money = 0.96 }
+	}
+	else_if = {
+		limit = { original_tag = PRC }
+		set_variable = { psEcon_bubble = 0.06 }
+		set_variable = { psEcon_tradeOpen = 0.75 }
+		set_variable = { psEcon_treasury = 0.035 }
+		set_variable = { psEcon_forex = 4.5 }
+		set_variable = { psEcon_fxPrivilege = 0.10 }
+		set_variable = { psEcon_money = 1.05 }
+	}
+	else_if = {
+		limit = { original_tag = RAJ }
+		set_variable = { psEcon_bubble = 0.07 }
+		set_variable = { psEcon_tradeOpen = 0.62 }
+		set_variable = { psEcon_treasury = 0.020 }
+		set_variable = { psEcon_forex = 2.4 }
+		set_variable = { psEcon_fxPrivilege = 0.05 }
+		set_variable = { psEcon_money = 1.08 }
+	}
+	else_if = {
+		limit = { original_tag = SOV }
+		set_variable = { psEcon_bubble = 0.44 }
+		set_variable = { psEcon_tradeOpen = 0.55 }
+		set_variable = { psEcon_treasury = 0.012 }
+		set_variable = { psEcon_forex = 1.1 }
+		set_variable = { psEcon_fxPrivilege = 0 }
+		set_variable = { psEcon_money = 1.12 }
+	}
+	else_if = {
+		limit = { original_tag = ENG }
+		set_variable = { psEcon_bubble = 0.14 }
+		set_variable = { psEcon_tradeOpen = 0.80 }
+		set_variable = { psEcon_treasury = 0.025 }
+		set_variable = { psEcon_forex = 2 }
+		set_variable = { psEcon_fxPrivilege = 0.30 }
+	}
+	else_if = {
+		limit = { original_tag = FRA }
+		set_variable = { psEcon_bubble = 0.09 }
+		set_variable = { psEcon_tradeOpen = 0.78 }
+		set_variable = { psEcon_treasury = 0.022 }
+		set_variable = { psEcon_forex = 1.8 }
+		set_variable = { psEcon_fxPrivilege = 0.20 }
+		set_variable = { psEcon_money = 1.02 }
+	}
+	else_if = {
+		limit = { original_tag = ITA }
+		set_variable = { psEcon_bubble = 0.11 }
+		set_variable = { psEcon_tradeOpen = 0.74 }
+		set_variable = { psEcon_treasury = 0.018 }
+		set_variable = { psEcon_forex = 1.5 }
+		set_variable = { psEcon_fxPrivilege = 0.10 }
+		set_variable = { psEcon_money = 1.04 }
+	}
+	else_if = {
+		limit = { original_tag = CAN }
+		set_variable = { psEcon_bubble = 0.12 }
+		set_variable = { psEcon_tradeOpen = 0.86 }
+		set_variable = { psEcon_treasury = 0.028 }
+		set_variable = { psEcon_forex = 1.6 }
+		set_variable = { psEcon_fxPrivilege = 0.50 }
+	}
+	set_variable = { psEcon_tradeUsed = psEcon_tradeOpen }
+	psLaw_seed = yes
+	psInd_seed = yes
+	psEcon_lockBudget = yes
 }
