@@ -1,0 +1,7 @@
+scripted_gui = {
+	psEcon_debugPanel = {
+		context_type = decision_category
+		window_name = "psEcon_debugWindow"
+		visible = { is_debug = yes }
+	}
+}

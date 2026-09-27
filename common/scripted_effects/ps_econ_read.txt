@@ -1,0 +1,136 @@
+psEcon_readWorld = {
+	# Laws and custom modifiers are inputs. The pulse does not write them back.
+	set_variable = { psEcon_atWar = 0 }
+	if = {
+		limit = { has_war = yes }
+		set_variable = { psEcon_atWar = 1 }
+	}
+
+	set_variable = { psEcon_tradeOpen = 0.60 }
+	if = {
+		limit = { has_idea = laws_TR_GEN01 }
+		set_variable = { psEcon_tradeOpen = 0.90 }
+	}
+	else_if = {
+		limit = { has_idea = laws_TR_GEN02 }
+		set_variable = { psEcon_tradeOpen = 0.75 }
+	}
+	else_if = {
+		limit = { has_idea = laws_TR_GEN03 }
+		set_variable = { psEcon_tradeOpen = 0.62 }
+	}
+	else_if = {
+		limit = { has_idea = laws_TR_GEN04 }
+		set_variable = { psEcon_tradeOpen = 0.35 }
+	}
+	else_if = {
+		limit = { has_idea = laws_TR_GEN05 }
+		set_variable = { psEcon_tradeOpen = 0.05 }
+	}
+
+	set_variable = { psEcon_laborPull = 0 }
+	if = {
+		limit = { has_idea = laws_MO_GEN01 }
+		set_variable = { psEcon_laborPull = 0.10 }
+	}
+	else_if = {
+		limit = { has_idea = laws_MO_GEN02 }
+		set_variable = { psEcon_laborPull = 0.05 }
+	}
+	else_if = {
+		limit = { has_idea = laws_MO_GEN03 }
+		set_variable = { psEcon_laborPull = 0.02 }
+	}
+
+	set_temp_variable = { raw = modifier@fiscalRevenue_factor }
+	divide_temp_variable = { raw = 100 }
+	clamp_temp_variable = { var = raw min = -0.30 max = 0.30 }
+	set_variable = { psEcon_fiscRev = raw }
+	set_temp_variable = { raw = modifier@fiscalExpenditure_factor }
+	divide_temp_variable = { raw = 100 }
+	clamp_temp_variable = { var = raw min = -0.30 max = 0.30 }
+	set_variable = { psEcon_fiscExp = raw }
+	set_temp_variable = { raw = modifier@governmentCredibility }
+	clamp_temp_variable = { var = raw min = -0.40 max = 0.40 }
+	set_variable = { psEcon_ideaGov = raw }
+	set_temp_variable = { raw = modifier@economicCredibility }
+	clamp_temp_variable = { var = raw min = -0.40 max = 0.40 }
+	set_variable = { psEcon_ideaMarket = raw }
+	set_temp_variable = { raw = modifier@monetaryValue }
+	clamp_temp_variable = { var = raw min = -2 max = 2 }
+	set_variable = { psEcon_monetaryAdd = raw }
+
+	set_temp_variable = { raw = modifier@militaryExpenditure_baseDaily }
+	clamp_temp_variable = { var = raw min = -0.05 max = 0.05 }
+	set_variable = { psEcon_milBase = raw }
+	set_temp_variable = { raw = modifier@militaryExpenditure_factor }
+	divide_temp_variable = { raw = 100 }
+	clamp_temp_variable = { var = raw min = -0.30 max = 0.30 }
+	set_variable = { psEcon_milFac = raw }
+	set_temp_variable = { raw = modifier@educationExpenditure_baseDaily }
+	clamp_temp_variable = { var = raw min = -0.05 max = 0.05 }
+	set_variable = { psEcon_eduBase = raw }
+	set_temp_variable = { raw = modifier@educationExpenditure_factor }
+	divide_temp_variable = { raw = 100 }
+	clamp_temp_variable = { var = raw min = -0.30 max = 0.30 }
+	set_variable = { psEcon_eduFac = raw }
+	set_temp_variable = { raw = modifier@socialWelfareExpenditure_baseDaily }
+	clamp_temp_variable = { var = raw min = -0.05 max = 0.05 }
+	set_variable = { psEcon_welBase = raw }
+	set_temp_variable = { raw = modifier@socialWelfareExpenditure_factor }
+	divide_temp_variable = { raw = 100 }
+	clamp_temp_variable = { var = raw min = -0.30 max = 0.30 }
+	set_variable = { psEcon_welFac = raw }
+
+	# Investment and environment expenditure use the same contract, even without a separate token yet.
+	set_variable = { psEcon_invBase = 0 }
+	set_variable = { psEcon_invFac = 0 }
+	set_temp_variable = { raw = modifier@environmentalDevelopment_baseDaily }
+	clamp_temp_variable = { var = raw min = -0.02 max = 0.02 }
+	set_variable = { psEcon_envDrift = raw }
+	set_variable = { psEcon_envBase = 0 }
+	set_variable = { psEcon_envFac = 0 }
+
+	# baseDaily 0.01 is one point of the related annual flow. Factors are percentage points.
+	set_temp_variable = { foodBase = modifier@agriculturalDevelopment_baseDaily }
+	set_temp_variable = { extra = modifier@forestryDevelopment_baseDaily }
+	add_to_temp_variable = { foodBase = extra }
+	set_temp_variable = { extra = modifier@fisheriesDevelopment_baseDaily }
+	add_to_temp_variable = { foodBase = extra }
+	set_temp_variable = { extra = modifier@livestockIndustrialDevelopment_baseDaily }
+	add_to_temp_variable = { foodBase = extra }
+	clamp_temp_variable = { var = foodBase min = -0.04 max = 0.04 }
+	set_temp_variable = { foodFac = modifier@agriculturalDevelopment_factor }
+	set_temp_variable = { extra = modifier@forestryDevelopment_factor }
+	add_to_temp_variable = { foodFac = extra }
+	set_temp_variable = { extra = modifier@fisheriesDevelopment_factor }
+	add_to_temp_variable = { foodFac = extra }
+	set_temp_variable = { extra = modifier@livestockIndustrialDevelopment_factor }
+	add_to_temp_variable = { foodFac = extra }
+	divide_temp_variable = { foodFac = 400 }
+	clamp_temp_variable = { var = foodFac min = -0.30 max = 0.30 }
+	add_to_temp_variable = { foodFac = 1 }
+	multiply_temp_variable = { foodBase = foodFac }
+	clamp_temp_variable = { var = foodBase min = -0.06 max = 0.06 }
+	set_variable = { psEcon_chFood = foodBase }
+
+	set_temp_variable = { indBase = modifier@lightIndustrialDevelopment_baseDaily }
+	set_temp_variable = { extra = modifier@heavyIndustrialDevelopment_baseDaily }
+	add_to_temp_variable = { indBase = extra }
+	clamp_temp_variable = { var = indBase min = -0.02 max = 0.02 }
+	set_variable = { psEcon_chIndustry = indBase }
+
+	set_temp_variable = { techBase = modifier@highTechnologyIndustrialDevelopment_baseDaily }
+	set_temp_variable = { techFac = modifier@highTechnologyIndustrialDevelopment_factor }
+	divide_temp_variable = { techFac = 100 }
+	clamp_temp_variable = { var = techFac min = -0.30 max = 0.30 }
+	add_to_temp_variable = { techFac = 1 }
+	multiply_temp_variable = { techBase = techFac }
+	set_temp_variable = { extra = modifier@highTechnologyToints_baseDaily }
+	add_to_temp_variable = { techBase = extra }
+	set_temp_variable = { info = modifier@informatization_level }
+	divide_temp_variable = { info = 5000 }
+	add_to_temp_variable = { techBase = info }
+	clamp_temp_variable = { var = techBase min = -0.02 max = 0.02 }
+	set_variable = { psEcon_chTech = techBase }
+}

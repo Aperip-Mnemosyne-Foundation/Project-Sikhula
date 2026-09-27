@@ -1,51 +1,5 @@
 EC_cre = {
-	#计算实体经济
-	set_variable = {
-		ROOT.ECSB = ROOT.num_of_civilian_factories
-	}
-	set_variable = {
-		ROOT.ECRE = ROOT.ECSB
-	}
-	if = {
-		limit = { 
-			NOT = { has_variable = ROOT.ECPB }
-		}
-		set_variable = {
-			ROOT.ECPB = 0
-		}
-	}
-	if = {
-		limit = { 
-			has_variable = ROOT.ECPB_mem
-		}
-		set_variable = {
-			ROOT.ECPB_cbef = ROOT.ECPB_mem
-		}
-	}
-	else = {
-		set_variable = {
-			ROOT.ECPB_cbef = 0
-		}
-	}
-	subtract_from_variable = {
-		ROOT.ECPB_cbef = ROOT.ECPB
-	}
-	multiply_variable = {
-		ROOT.ECPB_cbef = -1
-	}
-	add_offsite_building = {
-		type = industrial_complex
-		level = ROOT.ECPB_cbef
-	}
-	subtract_from_variable = {
-		ROOT.ECSB = ROOT.ECPB
-	}
-	set_variable = {
-		ROOT.ECPB_mem = ROOT.ECPB
-	}
-	set_variable = {
-		ROOT.ECRE_SHOW = ROOT.ECRE
-	}
+	# Retired. Offsite civilian factories no longer stand in for the economy.
 }
 EC_ccp = {
 	#计算国家人口
@@ -318,48 +272,7 @@ EC_cdg ={
 	round_variable = ROOT.ECDG_SHOW
 }
 EC_ccp2 = {
-	#计算消费品生产量
-	set_variable = {
-		ROOT.ECCP_set_percentage = ROOT.ECCP_current_int
-	}
-	divide_variable = {
-		ROOT.ECCP_set_percentage = 100
-	}
-	set_variable = {
-		ROOT.ECCP_set_fac = ROOT.ECRE
-	}
-	multiply_variable = {
-		ROOT.ECCP_set_fac = ROOT.ECCP_set_percentage
-	}
-	set_variable = {
-		ROOT.ECCP_set = ROOT.ECCP_set_fac
-	}
-	set_variable = {
-		ROOT.ECCP_ccp2_c = ROOT.ECCP_set
-	}
-	if = {
-		limit = {
-			has_variable = ROOT.ECCP_r
-		}
-		multiply_variable = {
-			ROOT.ECCP_ccp2_c = ROOT.ECCP_r
-		}
-	}
-	else = {
-		set_variable = {
-			ROOT.ECCP_r = 1
-		}
-		multiply_variable = {
-			ROOT.ECCP_ccp2_c = ROOT.ECCP_r
-		}
-	}
-	multiply_variable = {
-		ROOT.ECCP_ccp2_c = 400
-	}
-	set_variable = {
-		ROOT.ECCP = ROOT.ECCP_ccp2_c
-	}
-	add_dynamic_modifier = { modifier = ECCP_dynamic_modifiers }
+	# Retired. Consumer-goods occupation is not the industrial hook anymore.
 }
 ECOA_graph = { # 經濟總量曲綫
 	clear_array = ROOT.ECOA_y_label
@@ -713,19 +626,7 @@ DATE_MONTHS_INI = {
 
 
 set_ECCP = {
-	set_variable = { ROOT.ECCP_slider_dot_x = 20 }
-	for_loop_effect = {
-		start = 0
-		end = 101
-		value = val
-		add_to_array = { ROOT.ECCP_slider_buttons = val }
-	}
-	set_variable = { ROOT.ECCP_dot_x = ROOT.ECCP_current_int }
-	multiply_variable = { ROOT.ECCP_dot_x = 2 }
-	add_to_variable = { ROOT.ECCP_dot_x = 20 }
-	set_variable = { ROOT.ECCP_slider_dot_x = ROOT.ECCP_dot_x }
-	EC_ccp2 = yes
-	force_update_dynamic_modifier = yes
+	# Retired slider. Clicks from the old screen must not bring the factory-use modifier back.
 }
 
 refresh_education_piechart = {

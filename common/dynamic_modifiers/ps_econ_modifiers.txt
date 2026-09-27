@@ -1,0 +1,21 @@
+psEcon_pulse = {
+	enable = { always = yes }
+	remove_trigger = { always = no }
+	icon = GFX_idea_generic_build_infrastructure
+
+	# Current output, construction, and the path around them. Caps are applied in the pulse.
+	industrial_capacity_factory = psEcon_factory
+	production_speed_industrial_complex_factor = psEcon_buildCiv
+	production_speed_arms_factory_factor = psEcon_buildMil
+	production_speed_dockyard_factor = psEcon_buildDock
+	production_speed_infrastructure_factor = psEcon_buildInfra
+	industry_repair_factor = psEcon_repair
+	production_factory_max_efficiency_factor = psEcon_effCap
+	production_factory_efficiency_gain_factor = psEcon_effGain
+	consumer_goods_factor = psEcon_goods
+	research_speed_factor = psEcon_research
+	stability_weekly = psEcon_stabWeekly
+	war_support_weekly = psEcon_warSupport
+	political_power_factor = psEcon_power
+	conscription_factor = psEcon_conscription
+}

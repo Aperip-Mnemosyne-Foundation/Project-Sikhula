@@ -1,0 +1,338 @@
+psEcon_debugCategory = {
+
+	psEcon_tickNow = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			psEcon_requestTick = yes
+		}
+	}
+
+	psEcon_tickYear = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			# Twelve silent months, so the path can move without a queue of popups.
+			set_country_flag = psEcon_silentTick
+			for_loop_effect = {
+				start = 0
+				end = 12
+				value = psEcon_loopMonth
+				psEcon_monthly = yes
+			}
+			clr_country_flag = psEcon_silentTick
+		}
+	}
+
+	psEcon_taxUp = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psEcon_inputStep = 0.02 }
+			psEcon_setTaxRate = yes
+		}
+	}
+
+	psEcon_taxDown = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psEcon_inputStep = -0.02 }
+			psEcon_setTaxRate = yes
+		}
+	}
+
+	psEcon_spendUp = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psEcon_inputStep = 0.02 }
+			psEcon_setSpendShare = yes
+		}
+	}
+
+	psEcon_spendDown = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psEcon_inputStep = -0.02 }
+			psEcon_setSpendShare = yes
+		}
+	}
+
+	psEcon_stanceEase = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psEcon_inputStep = 1 }
+			psEcon_setMonetaryStance = yes
+		}
+	}
+
+	psEcon_stanceTight = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psEcon_inputStep = -1 }
+			psEcon_setMonetaryStance = yes
+		}
+	}
+
+	psEcon_heavyUp = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psEcon_inputStep = 0.05 }
+			psEcon_setHeavyBias = yes
+		}
+	}
+
+	psEcon_heavyDown = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psEcon_inputStep = -0.05 }
+			psEcon_setHeavyBias = yes
+		}
+	}
+
+	psEcon_shareInv = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psEcon_inputBudget = 4 }
+			set_variable = { psEcon_inputStep = 0.02 }
+			psEcon_shiftBudgetShare = yes
+		}
+	}
+
+	psEcon_shareWel = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psEcon_inputBudget = 3 }
+			set_variable = { psEcon_inputStep = 0.02 }
+			psEcon_shiftBudgetShare = yes
+		}
+	}
+
+	psEcon_shareMil = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psEcon_inputBudget = 1 }
+			set_variable = { psEcon_inputStep = 0.02 }
+			psEcon_shiftBudgetShare = yes
+		}
+	}
+
+	psEcon_therapyStart = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			psEcon_beginTherapy = yes
+		}
+	}
+
+	psEcon_therapyStop = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			psEcon_cancelTherapy = yes
+		}
+	}
+
+	psEcon_shockFood = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psEcon_inputShock = 2 }
+			psEcon_addShock = yes
+		}
+	}
+
+	psEcon_shockOil = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psEcon_inputShock = 3 }
+			psEcon_addShock = yes
+		}
+	}
+
+	psEcon_shockDemand = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psEcon_inputShock = 4 }
+			psEcon_addShock = yes
+		}
+	}
+
+	psEcon_shockPrices = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psEcon_inputShock = 1 }
+			psEcon_addShock = yes
+		}
+	}
+
+	psEcon_shockClear = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			psEcon_clearShocks = yes
+		}
+	}
+
+	psEcon_foodRelief = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_variable = { psEcon_foodRelief = 0.08 }
+			set_variable = { psEcon_inputStep = 0.01 }
+			psEcon_setSpendShare = yes
+		}
+	}
+
+	psEcon_addFroth = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { is_debug = yes }
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			psEcon_addFroth = yes
+		}
+	}
+}

@@ -82,39 +82,9 @@ recruit_character = PRC_ZhuQi
 recruit_character = PRC_ZhuRongji
 
 # game_start_vars_setting
-  # Ec.
-    set_variable = { ROOT.ECCP_current_int = 60 } # 开局消费品占用比例
-    set_ECCP = yes
-    set_variable = { ROOT.ECPB = 91 } # 开局给民营工厂
-    EC_cre = yes
+	# Population display only. The monthly pulse boots itself on startup.
 	EC_ccp = yes
-	EC_cpe = yes
-	EC_cdg = yes
-	EC_ccp2 = yes
-	EC_ceg = yes
-	
-	# 历史17月经济总量
-	add_to_array = { ROOT.ECOA_numbers = 205 }
-	add_to_array = { ROOT.ECOA_numbers = 220 }
-	add_to_array = { ROOT.ECOA_numbers = 200 }
-	add_to_array = { ROOT.ECOA_numbers = 220 }
-	add_to_array = { ROOT.ECOA_numbers = 200 }
-	add_to_array = { ROOT.ECOA_numbers = 200 }
-	add_to_array = { ROOT.ECOA_numbers = 200 }
-	add_to_array = { ROOT.ECOA_numbers = 200 }
-	add_to_array = { ROOT.ECOA_numbers = 240 }
-	add_to_array = { ROOT.ECOA_numbers = 200 }
-	add_to_array = { ROOT.ECOA_numbers = 200 }
-	add_to_array = { ROOT.ECOA_numbers = 210 }
-	add_to_array = { ROOT.ECOA_numbers = 200 }
-	add_to_array = { ROOT.ECOA_numbers = 200 }
-	add_to_array = { ROOT.ECOA_numbers = 220 }
-	add_to_array = { ROOT.ECOA_numbers = 201 }
-	add_to_array = { ROOT.ECOA_numbers = 207 }
-	ECOA_graph = yes
-	
-	# date_ECOA = yes
-	
+
 	# EDU
 	set_variable = { ROOT.EDUL_ECES = 200000 }
 	set_variable = { ROOT.EDUL_ECEJ = 400000 }

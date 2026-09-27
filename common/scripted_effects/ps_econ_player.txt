@@ -1,0 +1,149 @@
+# Future interface contract. Set the input, then call the effect.
+# psEcon_inputStep is a signed fraction, usually 0.02 or -0.02.
+# psEcon_inputBudget: 1 military, 2 education, 3 welfare, 4 investment, 5 environment.
+# psEcon_inputShock: 1 inflation, 2 food, 3 oil, 4 demand.
+
+psEcon_clampLevers = {
+	clamp_variable = { var = psEcon_taxRate min = 0.10 max = 0.48 }
+	clamp_variable = { var = psEcon_spendShare min = 0.12 max = 0.50 }
+	clamp_variable = { var = psEcon_monetaryStance min = -2 max = 2 }
+	clamp_variable = { var = psEcon_heavyBias min = 0.08 max = 0.70 }
+	clamp_variable = { var = psEcon_shareMil min = 0.04 max = 0.60 }
+	clamp_variable = { var = psEcon_shareEdu min = 0.04 max = 0.60 }
+	clamp_variable = { var = psEcon_shareWel min = 0.04 max = 0.60 }
+	clamp_variable = { var = psEcon_shareInv min = 0.04 max = 0.60 }
+	clamp_variable = { var = psEcon_shareEnv min = 0.04 max = 0.60 }
+}
+
+psEcon_normalizeShares = {
+	set_temp_variable = { shareSum = psEcon_shareMil }
+	add_to_temp_variable = { shareSum = psEcon_shareEdu }
+	add_to_temp_variable = { shareSum = psEcon_shareWel }
+	add_to_temp_variable = { shareSum = psEcon_shareInv }
+	add_to_temp_variable = { shareSum = psEcon_shareEnv }
+	if = {
+		limit = { check_variable = { shareSum < 0.01 } }
+		set_temp_variable = { shareSum = 1 }
+	}
+	divide_variable = { psEcon_shareMil = shareSum }
+	divide_variable = { psEcon_shareEdu = shareSum }
+	divide_variable = { psEcon_shareWel = shareSum }
+	divide_variable = { psEcon_shareInv = shareSum }
+	divide_variable = { psEcon_shareEnv = shareSum }
+}
+
+psEcon_shiftBudgetShare = {
+	if = {
+		limit = { check_variable = { psEcon_inputBudget = 1 } }
+		add_to_variable = { psEcon_shareMil = psEcon_inputStep }
+	}
+	else_if = {
+		limit = { check_variable = { psEcon_inputBudget = 2 } }
+		add_to_variable = { psEcon_shareEdu = psEcon_inputStep }
+	}
+	else_if = {
+		limit = { check_variable = { psEcon_inputBudget = 3 } }
+		add_to_variable = { psEcon_shareWel = psEcon_inputStep }
+	}
+	else_if = {
+		limit = { check_variable = { psEcon_inputBudget = 4 } }
+		add_to_variable = { psEcon_shareInv = psEcon_inputStep }
+	}
+	else_if = {
+		limit = { check_variable = { psEcon_inputBudget = 5 } }
+		add_to_variable = { psEcon_shareEnv = psEcon_inputStep }
+	}
+	psEcon_clampLevers = yes
+	psEcon_normalizeShares = yes
+	psEcon_refresh = yes
+}
+
+psEcon_setTaxRate = {
+	add_to_variable = { psEcon_taxRate = psEcon_inputStep }
+	psEcon_clampLevers = yes
+	psEcon_refresh = yes
+}
+
+psEcon_setSpendShare = {
+	add_to_variable = { psEcon_spendShare = psEcon_inputStep }
+	psEcon_clampLevers = yes
+	psEcon_refresh = yes
+}
+
+psEcon_setMonetaryStance = {
+	add_to_variable = { psEcon_monetaryStance = psEcon_inputStep }
+	psEcon_clampLevers = yes
+	psEcon_refresh = yes
+}
+
+psEcon_setHeavyBias = {
+	add_to_variable = { psEcon_heavyBias = psEcon_inputStep }
+	psEcon_clampLevers = yes
+	psEcon_refresh = yes
+}
+
+psEcon_beginTherapy = {
+	# The button is the package, not a press release. Levers actually move.
+	set_variable = { psEcon_therapyLeft = 36 }
+	set_variable = { psEcon_therapyElapsed = 0 }
+	clr_country_flag = psEcon_toldTherapy
+	set_variable = { psEcon_monetaryStance = -2 }
+	set_temp_variable = { cut = psEcon_spendNeutral }
+	subtract_from_temp_variable = { cut = 0.06 }
+	if = {
+		limit = { check_variable = { psEcon_spendShare > cut } }
+		set_variable = { psEcon_spendShare = cut }
+	}
+	subtract_from_variable = { psEcon_shareWel = 0.06 }
+	add_to_variable = { psEcon_shareInv = 0.06 }
+	psEcon_clampLevers = yes
+	psEcon_normalizeShares = yes
+	psEcon_refresh = yes
+}
+
+psEcon_cancelTherapy = {
+	set_variable = { psEcon_therapyLeft = 0 }
+	psEcon_refresh = yes
+}
+
+psEcon_addShock = {
+	if = {
+		limit = { check_variable = { psEcon_inputShock = 1 } }
+		add_to_variable = { psEcon_shockInflation = 0.02 }
+	}
+	else_if = {
+		limit = { check_variable = { psEcon_inputShock = 2 } }
+		add_to_variable = { psEcon_shockFood = 0.10 }
+	}
+	else_if = {
+		limit = { check_variable = { psEcon_inputShock = 3 } }
+		add_to_variable = { psEcon_shockOil = 0.15 }
+	}
+	else_if = {
+		limit = { check_variable = { psEcon_inputShock = 4 } }
+		add_to_variable = { psEcon_shockDemand = -0.04 }
+	}
+	clamp_variable = { var = psEcon_shockInflation min = -0.05 max = 0.08 }
+	clamp_variable = { var = psEcon_shockFood min = 0 max = 0.35 }
+	clamp_variable = { var = psEcon_shockOil min = 0 max = 0.50 }
+	clamp_variable = { var = psEcon_shockDemand min = -0.10 max = 0.08 }
+	psEcon_refresh = yes
+}
+
+psEcon_clearShocks = {
+	set_variable = { psEcon_shockInflation = 0 }
+	set_variable = { psEcon_shockFood = 0 }
+	set_variable = { psEcon_shockOil = 0 }
+	set_variable = { psEcon_shockDemand = 0 }
+	psEcon_refresh = yes
+}
+
+psEcon_addFroth = {
+	add_to_variable = { psEcon_bubble = 0.20 }
+	clamp_variable = { var = psEcon_bubble min = 0 max = 0.92 }
+	psEcon_refresh = yes
+}
+
+psEcon_requestTick = {
+	psEcon_monthly = yes
+}

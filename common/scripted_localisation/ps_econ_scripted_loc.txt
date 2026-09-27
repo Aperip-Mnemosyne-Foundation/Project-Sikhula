@@ -1,0 +1,10 @@
+defined_text = {
+	name = Get_psEcon_burst
+	text = {
+		trigger = { has_country_flag = psEcon_bursting }
+		localization_key = psEcon_burstYes
+	}
+	text = {
+		localization_key = psEcon_burstNo
+	}
+}

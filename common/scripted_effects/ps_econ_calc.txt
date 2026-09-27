@@ -1,0 +1,952 @@
+psEcon_calcBalances = {
+	# Prices, budget leakage, food, energy, and the shock-therapy package.
+	set_temp_variable = { gov = psEcon_govStock }
+	add_to_temp_variable = { gov = psEcon_ideaGov }
+	clamp_temp_variable = { var = gov min = 0.05 max = 0.95 }
+	set_variable = { psEcon_govNow = gov }
+	set_temp_variable = { market = psEcon_marketStock }
+	add_to_temp_variable = { market = psEcon_ideaMarket }
+	clamp_temp_variable = { var = market min = 0.08 max = 0.96 }
+	set_variable = { psEcon_marketNow = market }
+	set_temp_variable = { stance = psEcon_monetaryStance }
+	add_to_temp_variable = { stance = psEcon_monetaryAdd }
+	clamp_temp_variable = { var = stance min = -2 max = 2 }
+	set_variable = { psEcon_stanceUsed = stance }
+
+	set_temp_variable = { shareSum = psEcon_shareMil }
+	add_to_temp_variable = { shareSum = psEcon_shareEdu }
+	add_to_temp_variable = { shareSum = psEcon_shareWel }
+	add_to_temp_variable = { shareSum = psEcon_shareInv }
+	add_to_temp_variable = { shareSum = psEcon_shareEnv }
+	if = {
+		limit = { check_variable = { shareSum < 0.01 } }
+		set_temp_variable = { shareSum = 1 }
+	}
+	set_variable = { psEcon_milS = psEcon_shareMil }
+	divide_variable = { psEcon_milS = shareSum }
+	set_variable = { psEcon_eduS = psEcon_shareEdu }
+	divide_variable = { psEcon_eduS = shareSum }
+	set_variable = { psEcon_welS = psEcon_shareWel }
+	divide_variable = { psEcon_welS = shareSum }
+	set_variable = { psEcon_invShare = psEcon_shareInv }
+	divide_variable = { psEcon_invShare = shareSum }
+	set_variable = { psEcon_envS = psEcon_shareEnv }
+	divide_variable = { psEcon_envS = shareSum }
+
+	set_temp_variable = { milF = psEcon_spendShare }
+	multiply_temp_variable = { milF = psEcon_milS }
+	add_to_temp_variable = { milF = psEcon_milBase }
+	set_temp_variable = { scale = psEcon_milFac }
+	add_to_temp_variable = { scale = 1 }
+	multiply_temp_variable = { milF = scale }
+	clamp_temp_variable = { var = milF min = 0 max = 0.28 }
+	set_temp_variable = { eduF = psEcon_spendShare }
+	multiply_temp_variable = { eduF = psEcon_eduS }
+	add_to_temp_variable = { eduF = psEcon_eduBase }
+	set_temp_variable = { scale = psEcon_eduFac }
+	add_to_temp_variable = { scale = 1 }
+	multiply_temp_variable = { eduF = scale }
+	clamp_temp_variable = { var = eduF min = 0 max = 0.28 }
+	set_temp_variable = { welF = psEcon_spendShare }
+	multiply_temp_variable = { welF = psEcon_welS }
+	add_to_temp_variable = { welF = psEcon_welBase }
+	set_temp_variable = { scale = psEcon_welFac }
+	add_to_temp_variable = { scale = 1 }
+	multiply_temp_variable = { welF = scale }
+	clamp_temp_variable = { var = welF min = 0 max = 0.28 }
+	set_temp_variable = { invF = psEcon_spendShare }
+	multiply_temp_variable = { invF = psEcon_invShare }
+	add_to_temp_variable = { invF = psEcon_invBase }
+	set_temp_variable = { scale = psEcon_invFac }
+	add_to_temp_variable = { scale = 1 }
+	multiply_temp_variable = { invF = scale }
+	clamp_temp_variable = { var = invF min = 0 max = 0.28 }
+	set_temp_variable = { envF = psEcon_spendShare }
+	multiply_temp_variable = { envF = psEcon_envS }
+	add_to_temp_variable = { envF = psEcon_envBase }
+	set_temp_variable = { scale = psEcon_envFac }
+	add_to_temp_variable = { scale = 1 }
+	multiply_temp_variable = { envF = scale }
+	clamp_temp_variable = { var = envF min = 0 max = 0.28 }
+	set_temp_variable = { useful = milF }
+	add_to_temp_variable = { useful = eduF }
+	add_to_temp_variable = { useful = welF }
+	add_to_temp_variable = { useful = invF }
+	add_to_temp_variable = { useful = envF }
+	set_temp_variable = { warLoad = psEcon_atWar }
+	multiply_temp_variable = { warLoad = 0.12 }
+	add_to_temp_variable = { warLoad = 1 }
+	set_temp_variable = { spendActual = useful }
+	set_temp_variable = { govInv = invF }
+	set_temp_variable = { leak = psEcon_fiscExp }
+	add_to_temp_variable = { leak = 1 }
+	multiply_temp_variable = { spendActual = leak }
+	if = {
+		limit = { check_variable = { psEcon_fiscExp < 0 } }
+		multiply_temp_variable = { govInv = leak }
+	}
+	multiply_temp_variable = { spendActual = warLoad }
+	multiply_temp_variable = { govInv = warLoad }
+	if = {
+		limit = {
+			check_variable = { psEcon_therapyLeft > 0 }
+			check_variable = { psEcon_spendShare < psEcon_spendNeutral }
+		}
+		set_temp_variable = { leaked = psEcon_spendNeutral }
+		subtract_from_temp_variable = { leaked = psEcon_spendShare }
+		set_temp_variable = { weak = 1 }
+		subtract_from_temp_variable = { weak = gov }
+		multiply_temp_variable = { leaked = weak }
+		multiply_temp_variable = { leaked = 0.55 }
+		add_to_temp_variable = { spendActual = leaked }
+	}
+	set_variable = { psEcon_spendActual = spendActual }
+	set_variable = { psEcon_govInv = govInv }
+
+	set_temp_variable = { foodEnd = psEcon_ruralShare }
+	multiply_temp_variable = { foodEnd = 0.55 }
+	add_to_temp_variable = { foodEnd = 0.78 }
+	set_temp_variable = { wasteHit = psEcon_wasteShare }
+	multiply_temp_variable = { wasteHit = 0.50 }
+	subtract_from_temp_variable = { foodEnd = wasteHit }
+	clamp_temp_variable = { var = foodEnd min = 0.50 max = 1.45 }
+	set_temp_variable = { foodSupply = psEcon_environment }
+	multiply_temp_variable = { foodSupply = 0.30 }
+	add_to_temp_variable = { foodSupply = 0.85 }
+	set_temp_variable = { controlBit = psEcon_control }
+	multiply_temp_variable = { controlBit = 0.30 }
+	add_to_temp_variable = { controlBit = 0.70 }
+	multiply_temp_variable = { foodSupply = controlBit }
+	multiply_temp_variable = { foodSupply = foodEnd }
+	set_temp_variable = { warKeep = 1 }
+	set_temp_variable = { warFood = psEcon_atWar }
+	multiply_temp_variable = { warFood = 0.06 }
+	subtract_from_temp_variable = { warKeep = warFood }
+	multiply_temp_variable = { foodSupply = warKeep }
+	set_temp_variable = { foodIdea = psEcon_chFood }
+	add_to_temp_variable = { foodIdea = 1 }
+	multiply_temp_variable = { foodSupply = foodIdea }
+	set_temp_variable = { grainGap = global.psEcon_grain }
+	subtract_from_temp_variable = { grainGap = 1 }
+	clamp_temp_variable = { var = grainGap min = 0 max = 2 }
+	multiply_temp_variable = { grainGap = 0.04 }
+	set_temp_variable = { grainKeep = 1 }
+	subtract_from_temp_variable = { grainKeep = grainGap }
+	multiply_temp_variable = { foodSupply = grainKeep }
+	set_temp_variable = { shockKeep = 1 }
+	subtract_from_temp_variable = { shockKeep = psEcon_shockFood }
+	multiply_temp_variable = { foodSupply = shockKeep }
+	# Emergency grain arrives after the harvest shock. It is a stock, not a free harvest.
+	add_to_temp_variable = { foodSupply = psEcon_foodRelief }
+	set_temp_variable = { diet = psEcon_income }
+	divide_temp_variable = { diet = 30 }
+	clamp_temp_variable = { var = diet min = 0 max = 1.2 }
+	multiply_temp_variable = { diet = 0.08 }
+	add_to_temp_variable = { diet = 0.92 }
+	set_temp_variable = { foodBalance = foodSupply }
+	divide_temp_variable = { foodBalance = diet }
+	set_variable = { psEcon_foodBalance = foodBalance }
+	set_temp_variable = { foodEffective = foodBalance }
+	if = {
+		limit = { check_variable = { foodBalance < 1 } }
+		set_temp_variable = { room = global.psEcon_grain }
+		subtract_from_temp_variable = { room = 1 }
+		multiply_temp_variable = { room = 0.25 }
+		set_temp_variable = { roomKeep = 1.15 }
+		subtract_from_temp_variable = { roomKeep = room }
+		clamp_temp_variable = { var = roomKeep min = 0.40 max = 1.15 }
+		set_temp_variable = { gap = 1 }
+		subtract_from_temp_variable = { gap = foodBalance }
+		multiply_temp_variable = { gap = psEcon_tradeOpen }
+		multiply_temp_variable = { gap = roomKeep }
+		add_to_temp_variable = { foodEffective = gap }
+	}
+	set_temp_variable = { foodStress = 0.98 }
+	subtract_from_temp_variable = { foodStress = foodEffective }
+	divide_temp_variable = { foodStress = 0.20 }
+	clamp_temp_variable = { var = foodStress min = 0 max = 1 }
+	set_variable = { psEcon_foodStress = foodStress }
+	set_variable = { psEcon_foodEffective = foodEffective }
+
+	set_temp_variable = { oilFace = global.psEcon_oil }
+	add_to_temp_variable = { oilFace = psEcon_shockOil }
+	set_variable = { psEcon_oilFace = oilFace }
+	set_temp_variable = { domestic = psEcon_control }
+	multiply_temp_variable = { domestic = 0.25 }
+	add_to_temp_variable = { domestic = 0.75 }
+	multiply_temp_variable = { domestic = psEcon_energy }
+	set_temp_variable = { importFactor = oilFace }
+	subtract_from_temp_variable = { importFactor = 1 }
+	multiply_temp_variable = { importFactor = 0.35 }
+	set_temp_variable = { importKeep = 1.20 }
+	subtract_from_temp_variable = { importKeep = importFactor }
+	clamp_temp_variable = { var = importKeep min = 0.25 max = 1.20 }
+	set_temp_variable = { importNeed = 1.05 }
+	subtract_from_temp_variable = { importNeed = domestic }
+	clamp_temp_variable = { var = importNeed min = 0 max = 2 }
+	multiply_temp_variable = { importNeed = psEcon_tradeOpen }
+	multiply_temp_variable = { importNeed = importKeep }
+	set_temp_variable = { energyCover = domestic }
+	add_to_temp_variable = { energyCover = importNeed }
+	clamp_temp_variable = { var = energyCover min = 0.05 max = 2.2 }
+	set_temp_variable = { energyStress = 0.95 }
+	subtract_from_temp_variable = { energyStress = energyCover }
+	divide_temp_variable = { energyStress = 0.35 }
+	clamp_temp_variable = { var = energyStress min = 0 max = 1 }
+	set_variable = { psEcon_energyCover = energyCover }
+	set_variable = { psEcon_energyStress = energyStress }
+}
+psEcon_calcDemand = {
+	# Shock therapy is a real package: it hurts immediately, and only a capable state gets the recovery.
+	set_temp_variable = { gov = psEcon_govNow }
+	set_temp_variable = { stance = psEcon_stanceUsed }
+	set_variable = { psEcon_therapyPain = 0 }
+	set_variable = { psEcon_therapyChaos = 0 }
+	set_variable = { psEcon_therapyDisinflation = 0 }
+	set_variable = { psEcon_therapyRecovery = 0 }
+	set_variable = { psEcon_therapyDiscipline = 0 }
+	set_variable = { psEcon_therapyJobs = 0 }
+	if = {
+		limit = { check_variable = { psEcon_therapyLeft > 0 } }
+		set_temp_variable = { spendCut = psEcon_spendNeutral }
+		subtract_from_temp_variable = { spendCut = psEcon_spendShare }
+		divide_temp_variable = { spendCut = 0.08 }
+		clamp_temp_variable = { var = spendCut min = 0 max = 1 }
+		set_temp_variable = { moneyTight = stance }
+		multiply_temp_variable = { moneyTight = -1 }
+		divide_temp_variable = { moneyTight = 2 }
+		clamp_temp_variable = { var = moneyTight min = 0 max = 1 }
+		set_temp_variable = { discipline = spendCut }
+		add_to_temp_variable = { discipline = moneyTight }
+		multiply_temp_variable = { discipline = 0.5 }
+		set_variable = { psEcon_therapyDiscipline = discipline }
+		set_temp_variable = { early = 0.25 }
+		if = {
+			limit = { check_variable = { psEcon_therapyElapsed < 12 } }
+			set_temp_variable = { early = 1 }
+		}
+		else_if = {
+			limit = { check_variable = { psEcon_therapyElapsed < 24 } }
+			set_temp_variable = { early = 0.55 }
+		}
+		set_temp_variable = { pain = discipline }
+		multiply_temp_variable = { pain = 0.020 }
+		add_to_temp_variable = { pain = 0.030 }
+		set_temp_variable = { capacityKeep = gov }
+		multiply_temp_variable = { capacityKeep = 0.45 }
+		set_temp_variable = { keep = 1.10 }
+		subtract_from_temp_variable = { keep = capacityKeep }
+		multiply_temp_variable = { pain = keep }
+		multiply_temp_variable = { pain = early }
+		set_variable = { psEcon_therapyPain = pain }
+		set_temp_variable = { weakState = 1 }
+		subtract_from_temp_variable = { weakState = gov }
+		set_temp_variable = { chaos = discipline }
+		add_to_temp_variable = { chaos = 0.35 }
+		multiply_temp_variable = { chaos = weakState }
+		multiply_temp_variable = { chaos = 0.030 }
+		multiply_temp_variable = { chaos = early }
+		set_variable = { psEcon_therapyChaos = chaos }
+		set_temp_variable = { disinflation = discipline }
+		multiply_temp_variable = { disinflation = 0.014 }
+		add_to_temp_variable = { disinflation = 0.004 }
+		multiply_temp_variable = { disinflation = gov }
+		if = {
+			limit = { check_variable = { psEcon_therapyElapsed < 6 } }
+			multiply_temp_variable = { disinflation = 0.35 }
+		}
+		set_variable = { psEcon_therapyDisinflation = disinflation }
+		if = {
+			limit = {
+				check_variable = { psEcon_therapyElapsed > 15.9 }
+				check_variable = { psEcon_inflation < 0.09 }
+				check_variable = { gov > 0.58 }
+				check_variable = { discipline > 0.55 }
+			}
+			set_temp_variable = { recovery = psEcon_therapyElapsed }
+			subtract_from_temp_variable = { recovery = 16 }
+			divide_temp_variable = { recovery = 10 }
+			clamp_temp_variable = { var = recovery min = 0 max = 1 }
+			multiply_temp_variable = { recovery = 0.012 }
+			set_variable = { psEcon_therapyRecovery = recovery }
+		}
+		set_temp_variable = { jobs = pain }
+		multiply_temp_variable = { jobs = 0.85 }
+		set_variable = { psEcon_therapyJobs = jobs }
+	}
+
+	set_temp_variable = { demand = 0.985 }
+	add_to_temp_variable = { demand = psEcon_demandMood }
+	set_temp_variable = { spendGap = psEcon_spendShare }
+	subtract_from_temp_variable = { spendGap = psEcon_spendNeutral }
+	multiply_temp_variable = { spendGap = 0.42 }
+	add_to_temp_variable = { demand = spendGap }
+	set_temp_variable = { stanceBit = psEcon_stanceUsed }
+	multiply_temp_variable = { stanceBit = 0.028 }
+	add_to_temp_variable = { demand = stanceBit }
+	set_temp_variable = { warBit = psEcon_atWar }
+	multiply_temp_variable = { warBit = 0.03 }
+	add_to_temp_variable = { demand = warBit }
+	set_temp_variable = { taxGap = psEcon_taxRate }
+	subtract_from_temp_variable = { taxGap = psEcon_taxNeutral }
+	multiply_temp_variable = { taxGap = 0.32 }
+	subtract_from_temp_variable = { demand = taxGap }
+	add_to_temp_variable = { demand = psEcon_shockDemand }
+	set_temp_variable = { laborBit = psEcon_laborPull }
+	multiply_temp_variable = { laborBit = 0.04 }
+	subtract_from_temp_variable = { demand = laborBit }
+	if = {
+		limit = { has_country_flag = psEcon_bursting }
+		set_temp_variable = { burstDemand = psEcon_bubble }
+		multiply_temp_variable = { burstDemand = 0.028 }
+		add_to_temp_variable = { burstDemand = 0.022 }
+		subtract_from_temp_variable = { demand = burstDemand }
+	}
+	subtract_from_temp_variable = { demand = psEcon_therapyPain }
+	clamp_temp_variable = { var = demand min = 0.84 max = 1.05 }
+	set_variable = { psEcon_util = demand }
+
+	set_temp_variable = { uInstant = 0.040 }
+	add_to_temp_variable = { uInstant = psEcon_friction }
+	set_temp_variable = { ruralU = psEcon_ruralShare }
+	multiply_temp_variable = { ruralU = 0.028 }
+	add_to_temp_variable = { uInstant = ruralU }
+	set_temp_variable = { slack = 0.985 }
+	subtract_from_temp_variable = { slack = psEcon_util }
+	multiply_temp_variable = { slack = 0.42 }
+	add_to_temp_variable = { uInstant = slack }
+	set_temp_variable = { eduU = psEcon_education }
+	subtract_from_temp_variable = { eduU = 0.50 }
+	multiply_temp_variable = { eduU = 0.018 }
+	subtract_from_temp_variable = { uInstant = eduU }
+	set_temp_variable = { laborU = psEcon_laborPull }
+	multiply_temp_variable = { laborU = 0.08 }
+	add_to_temp_variable = { uInstant = laborU }
+	add_to_temp_variable = { uInstant = psEcon_therapyJobs }
+	if = {
+		limit = { has_country_flag = psEcon_bursting }
+		set_temp_variable = { burstU = psEcon_bubble }
+		multiply_temp_variable = { burstU = 0.025 }
+		add_to_temp_variable = { uInstant = burstU }
+	}
+	clamp_temp_variable = { var = uInstant min = 0.025 max = 0.28 }
+	set_variable = { psEcon_uInstant = uInstant }
+	set_variable = { psEcon_uUsed = psEcon_unemployment }
+	if = {
+		limit = { check_variable = { psEcon_uUsed < 0.001 } }
+		set_variable = { psEcon_uUsed = psEcon_uInstant }
+	}
+}
+psEcon_calcPath = {
+	# Potential is the supply trend. Heat, momentum, and volatility are the path around it.
+	set_temp_variable = { poor = 18 }
+	subtract_from_temp_variable = { poor = psEcon_income }
+	divide_temp_variable = { poor = 18 }
+	clamp_temp_variable = { var = poor min = 0 max = 1 }
+	set_variable = { psEcon_poor = poor }
+	set_temp_variable = { potential = 0.020 }
+	add_to_temp_variable = { potential = psEcon_tfp }
+	set_temp_variable = { catchup = psEcon_invShare }
+	add_to_temp_variable = { catchup = 0.40 }
+	multiply_temp_variable = { catchup = poor }
+	multiply_temp_variable = { catchup = 0.062 }
+	add_to_temp_variable = { potential = catchup }
+	set_temp_variable = { eduPot = psEcon_education }
+	subtract_from_temp_variable = { eduPot = 0.55 }
+	multiply_temp_variable = { eduPot = 0.010 }
+	add_to_temp_variable = { potential = eduPot }
+	set_temp_variable = { invPot = psEcon_invShare }
+	subtract_from_temp_variable = { invPot = 0.24 }
+	multiply_temp_variable = { invPot = 0.012 }
+	add_to_temp_variable = { potential = invPot }
+	add_to_temp_variable = { potential = psEcon_chIndustry }
+	add_to_temp_variable = { potential = psEcon_chTech }
+	set_temp_variable = { warPot = psEcon_atWar }
+	multiply_temp_variable = { warPot = 0.025 }
+	subtract_from_temp_variable = { potential = warPot }
+	set_temp_variable = { controlLoss = 1 }
+	subtract_from_temp_variable = { controlLoss = psEcon_control }
+	multiply_temp_variable = { controlLoss = 0.020 }
+	subtract_from_temp_variable = { potential = controlLoss }
+	set_temp_variable = { foodPot = psEcon_foodStress }
+	multiply_temp_variable = { foodPot = 0.028 }
+	subtract_from_temp_variable = { potential = foodPot }
+	set_temp_variable = { energyPot = psEcon_energyStress }
+	multiply_temp_variable = { energyPot = 0.022 }
+	subtract_from_temp_variable = { potential = energyPot }
+	set_temp_variable = { debtPot = psEcon_debt }
+	subtract_from_temp_variable = { debtPot = 1.05 }
+	clamp_temp_variable = { var = debtPot min = 0 max = 2 }
+	multiply_temp_variable = { debtPot = 0.012 }
+	subtract_from_temp_variable = { potential = debtPot }
+	set_temp_variable = { infPot = psEcon_inflation }
+	subtract_from_temp_variable = { infPot = 0.08 }
+	divide_temp_variable = { infPot = 0.16 }
+	clamp_temp_variable = { var = infPot min = 0 max = 1 }
+	multiply_temp_variable = { infPot = 0.05 }
+	subtract_from_temp_variable = { potential = infPot }
+	if = {
+		limit = { check_variable = { psEcon_marketNow < 0.45 } }
+		set_temp_variable = { trustGap = 0.45 }
+		subtract_from_temp_variable = { trustGap = psEcon_marketNow }
+		multiply_temp_variable = { trustGap = 0.04 }
+		subtract_from_temp_variable = { potential = trustGap }
+	}
+	set_temp_variable = { sheetPot = psEcon_balanceSheet }
+	multiply_temp_variable = { sheetPot = 0.010 }
+	subtract_from_temp_variable = { potential = sheetPot }
+	clamp_temp_variable = { var = potential min = -0.03 max = 0.075 }
+	set_variable = { psEcon_potential = potential }
+
+	set_temp_variable = { heat = psEcon_growthFast }
+	subtract_from_temp_variable = { heat = potential }
+	subtract_from_temp_variable = { heat = 0.005 }
+	clamp_temp_variable = { var = heat min = 0 max = 0.045 }
+	if = {
+		limit = {
+			check_variable = { psEcon_util > 1.02 }
+			check_variable = { psEcon_stanceUsed > 0 }
+		}
+		set_temp_variable = { easyHeat = psEcon_stanceUsed }
+		multiply_temp_variable = { easyHeat = 0.003 }
+		add_to_temp_variable = { heat = easyHeat }
+	}
+	clamp_temp_variable = { var = heat min = 0 max = 0.05 }
+	set_variable = { psEcon_heat = heat }
+
+	set_temp_variable = { effectiveVol = psEcon_policyNoise }
+	multiply_temp_variable = { effectiveVol = 0.18 }
+	if = {
+		limit = { check_variable = { psEcon_volatility > effectiveVol } }
+		set_temp_variable = { effectiveVol = psEcon_volatility }
+	}
+	set_variable = { psEcon_effectiveVol = effectiveVol }
+	set_temp_variable = { volPen = effectiveVol }
+	subtract_from_temp_variable = { volPen = 0.004 }
+	divide_temp_variable = { volPen = 0.018 }
+	clamp_temp_variable = { var = volPen min = 0 max = 1 }
+	set_temp_variable = { infPen = psEcon_inflation }
+	subtract_from_temp_variable = { infPen = 0.02 }
+	if = {
+		limit = { check_variable = { infPen < 0 } }
+		multiply_temp_variable = { infPen = -1 }
+	}
+	divide_temp_variable = { infPen = 0.07 }
+	clamp_temp_variable = { var = infPen min = 0 max = 1 }
+	set_temp_variable = { momPen = psEcon_momentum }
+	if = {
+		limit = { check_variable = { momPen < 0 } }
+		multiply_temp_variable = { momPen = -1 }
+	}
+	divide_temp_variable = { momPen = 0.025 }
+	clamp_temp_variable = { var = momPen min = 0 max = 1 }
+	set_temp_variable = { uPen = psEcon_uUsed }
+	subtract_from_temp_variable = { uPen = 0.05 }
+	divide_temp_variable = { uPen = 0.10 }
+	clamp_temp_variable = { var = uPen min = 0 max = 1 }
+	set_temp_variable = { heatPen = heat }
+	divide_temp_variable = { heatPen = 0.03 }
+	clamp_temp_variable = { var = heatPen min = 0 max = 1 }
+	set_temp_variable = { burstPen = 0 }
+	if = {
+		limit = { has_country_flag = psEcon_bursting }
+		set_temp_variable = { burstPen = psEcon_bubble }
+		multiply_temp_variable = { burstPen = 0.18 }
+		add_to_temp_variable = { burstPen = 0.12 }
+	}
+	set_temp_variable = { stability = 1 }
+	set_temp_variable = { pen = volPen }
+	multiply_temp_variable = { pen = 0.34 }
+	subtract_from_temp_variable = { stability = pen }
+	set_temp_variable = { pen = infPen }
+	multiply_temp_variable = { pen = 0.25 }
+	subtract_from_temp_variable = { stability = pen }
+	set_temp_variable = { pen = momPen }
+	multiply_temp_variable = { pen = 0.12 }
+	subtract_from_temp_variable = { stability = pen }
+	set_temp_variable = { pen = uPen }
+	multiply_temp_variable = { pen = 0.16 }
+	subtract_from_temp_variable = { stability = pen }
+	set_temp_variable = { pen = heatPen }
+	multiply_temp_variable = { pen = 0.28 }
+	subtract_from_temp_variable = { stability = pen }
+	subtract_from_temp_variable = { stability = burstPen }
+	clamp_temp_variable = { var = stability min = 0 max = 1 }
+	set_variable = { psEcon_stability = stability }
+
+	set_temp_variable = { cycle = psEcon_util }
+	subtract_from_temp_variable = { cycle = 0.985 }
+	multiply_temp_variable = { cycle = 0.14 }
+	set_temp_variable = { momCycle = psEcon_momentum }
+	multiply_temp_variable = { momCycle = 0.22 }
+	clamp_temp_variable = { var = momCycle min = -0.008 max = 0.005 }
+	add_to_temp_variable = { cycle = momCycle }
+	if = {
+		limit = { has_country_flag = psEcon_bursting }
+		set_temp_variable = { burstCycle = psEcon_bubble }
+		multiply_temp_variable = { burstCycle = 0.018 }
+		add_to_temp_variable = { burstCycle = 0.012 }
+		set_temp_variable = { govDamp = psEcon_govNow }
+		multiply_temp_variable = { govDamp = 0.30 }
+		set_temp_variable = { damp = 1.05 }
+		subtract_from_temp_variable = { damp = govDamp }
+		multiply_temp_variable = { burstCycle = damp }
+		subtract_from_temp_variable = { cycle = burstCycle }
+	}
+	else = {
+		set_temp_variable = { froth = psEcon_bubble }
+		multiply_temp_variable = { froth = 0.008 }
+		add_to_temp_variable = { cycle = froth }
+	}
+	set_temp_variable = { painCycle = psEcon_therapyPain }
+	multiply_temp_variable = { painCycle = 0.70 }
+	subtract_from_temp_variable = { cycle = painCycle }
+	subtract_from_temp_variable = { cycle = psEcon_therapyChaos }
+	add_to_temp_variable = { cycle = psEcon_therapyRecovery }
+	set_temp_variable = { growth = potential }
+	add_to_temp_variable = { growth = cycle }
+	set_temp_variable = { heatDrag = heat }
+	multiply_temp_variable = { heatDrag = 0.30 }
+	subtract_from_temp_variable = { growth = heatDrag }
+	clamp_temp_variable = { var = growth min = -0.08 max = 0.085 }
+	set_variable = { psEcon_growth = growth }
+
+	set_temp_variable = { collect = psEcon_govNow }
+	multiply_temp_variable = { collect = 0.14 }
+	add_to_temp_variable = { collect = 0.86 }
+	set_temp_variable = { utilCollect = psEcon_util }
+	multiply_temp_variable = { utilCollect = 0.06 }
+	add_to_temp_variable = { utilCollect = 0.94 }
+	multiply_temp_variable = { collect = utilCollect }
+	set_temp_variable = { revenue = psEcon_fiscRev }
+	add_to_temp_variable = { revenue = 1 }
+	multiply_temp_variable = { revenue = psEcon_taxRate }
+	multiply_temp_variable = { revenue = collect }
+	set_variable = { psEcon_revenue = revenue }
+	set_temp_variable = { deficit = psEcon_spendActual }
+	subtract_from_temp_variable = { deficit = revenue }
+	set_variable = { psEcon_deficit = deficit }
+
+	set_temp_variable = { infTarget = psEcon_util }
+	subtract_from_temp_variable = { infTarget = 0.99 }
+	multiply_temp_variable = { infTarget = 0.22 }
+	add_to_temp_variable = { infTarget = 0.018 }
+	set_temp_variable = { transmission = psEcon_marketNow }
+	multiply_temp_variable = { transmission = 0.60 }
+	add_to_temp_variable = { transmission = 0.40 }
+	set_temp_variable = { stanceInf = psEcon_stanceUsed }
+	multiply_temp_variable = { stanceInf = transmission }
+	multiply_temp_variable = { stanceInf = 0.007 }
+	add_to_temp_variable = { infTarget = stanceInf }
+	set_temp_variable = { defInf = deficit }
+	subtract_from_temp_variable = { defInf = 0.03 }
+	clamp_temp_variable = { var = defInf min = 0 max = 0.40 }
+	set_temp_variable = { defTrust = 1.20 }
+	subtract_from_temp_variable = { defTrust = psEcon_marketNow }
+	multiply_temp_variable = { defInf = defTrust }
+	multiply_temp_variable = { defInf = 0.18 }
+	add_to_temp_variable = { infTarget = defInf }
+	add_to_temp_variable = { infTarget = psEcon_shockInflation }
+	set_temp_variable = { trustInf = psEcon_marketNow }
+	subtract_from_temp_variable = { trustInf = 0.50 }
+	multiply_temp_variable = { trustInf = 0.008 }
+	subtract_from_temp_variable = { infTarget = trustInf }
+	set_temp_variable = { goodsInf = global.psEcon_goods }
+	subtract_from_temp_variable = { goodsInf = 1 }
+	multiply_temp_variable = { goodsInf = 0.010 }
+	add_to_temp_variable = { infTarget = goodsInf }
+	set_temp_variable = { oilInf = psEcon_oilFace }
+	subtract_from_temp_variable = { oilInf = 1 }
+	clamp_temp_variable = { var = oilInf min = 0 max = 2 }
+	set_temp_variable = { importer = 0 }
+	if = {
+		limit = { check_variable = { psEcon_energy < 1 } }
+		set_temp_variable = { importer = 1 }
+		subtract_from_temp_variable = { importer = psEcon_energy }
+	}
+	multiply_temp_variable = { oilInf = importer }
+	multiply_temp_variable = { oilInf = 0.018 }
+	add_to_temp_variable = { infTarget = oilInf }
+	set_temp_variable = { heatInf = heat }
+	multiply_temp_variable = { heatInf = 0.55 }
+	add_to_temp_variable = { infTarget = heatInf }
+	set_temp_variable = { expect = psEcon_inflation }
+	subtract_from_temp_variable = { expect = psEcon_inflationSlow }
+	multiply_temp_variable = { expect = 0.35 }
+	clamp_temp_variable = { var = expect min = -0.01 max = 0.01 }
+	add_to_temp_variable = { infTarget = expect }
+	set_temp_variable = { chaosInf = psEcon_therapyChaos }
+	multiply_temp_variable = { chaosInf = 0.70 }
+	add_to_temp_variable = { infTarget = chaosInf }
+	subtract_from_temp_variable = { infTarget = psEcon_therapyDisinflation }
+	set_temp_variable = { stick = psEcon_marketNow }
+	multiply_temp_variable = { stick = 0.55 }
+	set_temp_variable = { stickKeep = 0.72 }
+	subtract_from_temp_variable = { stickKeep = stick }
+	clamp_temp_variable = { var = stickKeep min = 0.15 max = 0.70 }
+	set_temp_variable = { fresh = 1 }
+	subtract_from_temp_variable = { fresh = stickKeep }
+	multiply_temp_variable = { infTarget = fresh }
+	set_temp_variable = { remembered = psEcon_inflation }
+	multiply_temp_variable = { remembered = stickKeep }
+	add_to_temp_variable = { infTarget = remembered }
+	clamp_temp_variable = { var = infTarget min = -0.01 max = 0.40 }
+	set_variable = { psEcon_infTarget = infTarget }
+}
+psEcon_calcOutput = {
+	# Factory output and construction are the gameplay result, not a sidebar number.
+	set_temp_variable = { premium = psEcon_income }
+	subtract_from_temp_variable = { premium = 14 }
+	divide_temp_variable = { premium = 900 }
+	clamp_temp_variable = { var = premium min = -0.03 max = 0.035 }
+	set_temp_variable = { prod = 0.995 }
+	add_to_temp_variable = { prod = premium }
+	set_temp_variable = { bit = psEcon_privateCapital }
+	subtract_from_temp_variable = { bit = 0.85 }
+	multiply_temp_variable = { bit = 0.025 }
+	add_to_temp_variable = { prod = bit }
+	set_temp_variable = { bit = psEcon_education }
+	subtract_from_temp_variable = { bit = 0.62 }
+	multiply_temp_variable = { bit = 0.018 }
+	add_to_temp_variable = { prod = bit }
+	set_temp_variable = { bit = psEcon_energyCover }
+	clamp_temp_variable = { var = bit min = 0 max = 1.15 }
+	subtract_from_temp_variable = { bit = 0.95 }
+	multiply_temp_variable = { bit = 0.016 }
+	add_to_temp_variable = { prod = bit }
+	set_temp_variable = { bit = psEcon_util }
+	subtract_from_temp_variable = { bit = 0.98 }
+	multiply_temp_variable = { bit = 0.045 }
+	add_to_temp_variable = { prod = bit }
+	set_temp_variable = { bit = psEcon_foodStress }
+	multiply_temp_variable = { bit = 0.07 }
+	subtract_from_temp_variable = { prod = bit }
+	set_temp_variable = { bit = psEcon_energyStress }
+	multiply_temp_variable = { bit = 0.09 }
+	subtract_from_temp_variable = { prod = bit }
+	set_temp_variable = { bit = psEcon_atWar }
+	multiply_temp_variable = { bit = 0.05 }
+	subtract_from_temp_variable = { prod = bit }
+	set_temp_variable = { bit = psEcon_inflation }
+	subtract_from_temp_variable = { bit = 0.06 }
+	divide_temp_variable = { bit = 0.12 }
+	clamp_temp_variable = { var = bit min = 0 max = 1 }
+	multiply_temp_variable = { bit = 0.045 }
+	subtract_from_temp_variable = { prod = bit }
+	set_temp_variable = { bit = psEcon_chIndustry }
+	add_to_temp_variable = { bit = psEcon_chTech }
+	clamp_temp_variable = { var = bit min = -0.02 max = 0.03 }
+	add_to_temp_variable = { prod = bit }
+	set_temp_variable = { bit = psEcon_fiscExp }
+	clamp_temp_variable = { var = bit min = 0 max = 0.30 }
+	multiply_temp_variable = { bit = 0.05 }
+	subtract_from_temp_variable = { prod = bit }
+	set_temp_variable = { bit = psEcon_stability }
+	subtract_from_temp_variable = { bit = 0.60 }
+	multiply_temp_variable = { bit = 0.020 }
+	add_to_temp_variable = { prod = bit }
+	set_temp_variable = { bit = psEcon_heat }
+	multiply_temp_variable = { bit = 0.22 }
+	subtract_from_temp_variable = { prod = bit }
+	set_temp_variable = { bit = psEcon_momentum }
+	multiply_temp_variable = { bit = 0.40 }
+	clamp_temp_variable = { var = bit min = -0.012 max = 0.006 }
+	add_to_temp_variable = { prod = bit }
+	set_temp_variable = { bit = psEcon_effectiveVol }
+	subtract_from_temp_variable = { bit = 0.008 }
+	clamp_temp_variable = { var = bit min = 0 max = 1 }
+	multiply_temp_variable = { bit = 0.50 }
+	subtract_from_temp_variable = { prod = bit }
+	set_temp_variable = { bit = psEcon_policyNoise }
+	divide_temp_variable = { bit = 0.05 }
+	clamp_temp_variable = { var = bit min = 0 max = 1 }
+	multiply_temp_variable = { bit = 0.022 }
+	subtract_from_temp_variable = { prod = bit }
+	set_temp_variable = { bit = psEcon_uUsed }
+	subtract_from_temp_variable = { bit = 0.08 }
+	clamp_temp_variable = { var = bit min = 0 max = 1 }
+	multiply_temp_variable = { bit = 0.04 }
+	subtract_from_temp_variable = { prod = bit }
+	if = {
+		limit = { has_country_flag = psEcon_bursting }
+		set_temp_variable = { bit = 1 }
+		subtract_from_temp_variable = { bit = psEcon_govNow }
+		multiply_temp_variable = { bit = 0.03 }
+		add_to_temp_variable = { bit = 0.045 }
+		multiply_temp_variable = { bit = psEcon_bubble }
+		subtract_from_temp_variable = { prod = bit }
+	}
+	else = {
+		set_temp_variable = { bit = psEcon_bubble }
+		multiply_temp_variable = { bit = 0.030 }
+		add_to_temp_variable = { prod = bit }
+	}
+	set_temp_variable = { bit = psEcon_balanceSheet }
+	multiply_temp_variable = { bit = 0.045 }
+	subtract_from_temp_variable = { prod = bit }
+	set_temp_variable = { bit = psEcon_therapyPain }
+	multiply_temp_variable = { bit = 0.40 }
+	subtract_from_temp_variable = { prod = bit }
+	subtract_from_temp_variable = { prod = 1 }
+	clamp_temp_variable = { var = prod min = -0.18 max = 0.12 }
+	set_variable = { psEcon_factory = prod }
+
+	set_temp_variable = { debtPain = psEcon_debt }
+	subtract_from_temp_variable = { debtPain = 1 }
+	divide_temp_variable = { debtPain = 0.80 }
+	clamp_temp_variable = { var = debtPain min = 0 max = 1 }
+	set_temp_variable = { build = psEcon_govInv }
+	subtract_from_temp_variable = { build = 0.050 }
+	multiply_temp_variable = { build = 1.05 }
+	add_to_temp_variable = { build = 0.004 }
+	set_temp_variable = { bit = psEcon_publicCapital }
+	subtract_from_temp_variable = { bit = 0.60 }
+	multiply_temp_variable = { bit = 0.04 }
+	add_to_temp_variable = { build = bit }
+	set_temp_variable = { bit = psEcon_poor }
+	multiply_temp_variable = { bit = 0.035 }
+	add_to_temp_variable = { build = bit }
+	set_temp_variable = { bit = psEcon_util }
+	subtract_from_temp_variable = { bit = 0.985 }
+	multiply_temp_variable = { bit = 0.025 }
+	add_to_temp_variable = { build = bit }
+	set_temp_variable = { bit = psEcon_stanceUsed }
+	multiply_temp_variable = { bit = 0.010 }
+	add_to_temp_variable = { build = bit }
+	set_temp_variable = { bit = psEcon_foodStress }
+	multiply_temp_variable = { bit = 0.08 }
+	subtract_from_temp_variable = { build = bit }
+	set_temp_variable = { bit = psEcon_energyStress }
+	multiply_temp_variable = { bit = 0.10 }
+	subtract_from_temp_variable = { build = bit }
+	set_temp_variable = { bit = psEcon_atWar }
+	multiply_temp_variable = { bit = 0.06 }
+	subtract_from_temp_variable = { build = bit }
+	set_temp_variable = { bit = debtPain }
+	multiply_temp_variable = { bit = 0.12 }
+	subtract_from_temp_variable = { build = bit }
+	set_temp_variable = { bit = psEcon_deficit }
+	clamp_temp_variable = { var = bit min = 0 max = 0.10 }
+	multiply_temp_variable = { bit = 0.40 }
+	subtract_from_temp_variable = { build = bit }
+	set_temp_variable = { bit = psEcon_chIndustry }
+	clamp_temp_variable = { var = bit min = -0.02 max = 0.02 }
+	add_to_temp_variable = { build = bit }
+	set_temp_variable = { bit = psEcon_stability }
+	subtract_from_temp_variable = { bit = 0.55 }
+	multiply_temp_variable = { bit = 0.028 }
+	add_to_temp_variable = { build = bit }
+	set_temp_variable = { bit = psEcon_heat }
+	multiply_temp_variable = { bit = 0.28 }
+	subtract_from_temp_variable = { build = bit }
+	set_temp_variable = { bit = psEcon_momentum }
+	multiply_temp_variable = { bit = 0.50 }
+	clamp_temp_variable = { var = bit min = -0.018 max = 0.010 }
+	add_to_temp_variable = { build = bit }
+	set_temp_variable = { bit = psEcon_effectiveVol }
+	subtract_from_temp_variable = { bit = 0.008 }
+	clamp_temp_variable = { var = bit min = 0 max = 1 }
+	multiply_temp_variable = { bit = 0.35 }
+	subtract_from_temp_variable = { build = bit }
+	if = {
+		limit = { has_country_flag = psEcon_bursting }
+		set_temp_variable = { bit = psEcon_bubble }
+		multiply_temp_variable = { bit = 0.08 }
+		subtract_from_temp_variable = { build = bit }
+	}
+	else = {
+		set_temp_variable = { bit = psEcon_bubble }
+		multiply_temp_variable = { bit = 0.040 }
+		add_to_temp_variable = { build = bit }
+	}
+	set_temp_variable = { bit = psEcon_balanceSheet }
+	multiply_temp_variable = { bit = 0.040 }
+	subtract_from_temp_variable = { build = bit }
+	set_temp_variable = { bit = psEcon_therapyPain }
+	multiply_temp_variable = { bit = 0.30 }
+	subtract_from_temp_variable = { build = bit }
+	clamp_temp_variable = { var = build min = -0.25 max = 0.18 }
+	set_variable = { psEcon_build = build }
+
+	set_temp_variable = { buildMil = psEcon_milS }
+	subtract_from_temp_variable = { buildMil = 0.16 }
+	multiply_temp_variable = { buildMil = 0.10 }
+	set_temp_variable = { heavyBit = psEcon_heavyBias }
+	subtract_from_temp_variable = { heavyBit = 0.30 }
+	multiply_temp_variable = { heavyBit = 0.08 }
+	add_to_temp_variable = { buildMil = heavyBit }
+	add_to_temp_variable = { buildMil = build }
+	clamp_temp_variable = { var = buildMil min = -0.28 max = 0.22 }
+	set_variable = { psEcon_buildMil = buildMil }
+	set_temp_variable = { buildCiv = psEcon_invShare }
+	subtract_from_temp_variable = { buildCiv = psEcon_milS }
+	multiply_temp_variable = { buildCiv = 0.12 }
+	set_temp_variable = { heavyCiv = psEcon_heavyBias }
+	subtract_from_temp_variable = { heavyCiv = 0.30 }
+	multiply_temp_variable = { heavyCiv = 0.05 }
+	subtract_from_temp_variable = { buildCiv = heavyCiv }
+	add_to_temp_variable = { buildCiv = build }
+	clamp_temp_variable = { var = buildCiv min = -0.28 max = 0.22 }
+	set_variable = { psEcon_buildCiv = buildCiv }
+	set_temp_variable = { buildDock = psEcon_tradeOpen }
+	subtract_from_temp_variable = { buildDock = 0.60 }
+	multiply_temp_variable = { buildDock = 0.06 }
+	set_temp_variable = { heavyDock = psEcon_heavyBias }
+	subtract_from_temp_variable = { heavyDock = 0.30 }
+	multiply_temp_variable = { heavyDock = 0.04 }
+	add_to_temp_variable = { buildDock = heavyDock }
+	add_to_temp_variable = { buildDock = build }
+	clamp_temp_variable = { var = buildDock min = -0.28 max = 0.22 }
+	set_variable = { psEcon_buildDock = buildDock }
+	set_temp_variable = { buildInfra = psEcon_publicCapital }
+	subtract_from_temp_variable = { buildInfra = 0.55 }
+	multiply_temp_variable = { buildInfra = 0.03 }
+	set_temp_variable = { heatInfra = psEcon_heat }
+	multiply_temp_variable = { heatInfra = 0.04 }
+	subtract_from_temp_variable = { buildInfra = heatInfra }
+	add_to_temp_variable = { buildInfra = build }
+	clamp_temp_variable = { var = buildInfra min = -0.28 max = 0.22 }
+	set_variable = { psEcon_buildInfra = buildInfra }
+	set_temp_variable = { repair = build }
+	multiply_temp_variable = { repair = 0.65 }
+	set_temp_variable = { bit = psEcon_energyStress }
+	multiply_temp_variable = { bit = 0.08 }
+	subtract_from_temp_variable = { repair = bit }
+	set_temp_variable = { bit = psEcon_atWar }
+	multiply_temp_variable = { bit = 0.04 }
+	subtract_from_temp_variable = { repair = bit }
+	set_temp_variable = { bit = psEcon_stability }
+	subtract_from_temp_variable = { bit = 0.5 }
+	multiply_temp_variable = { bit = 0.02 }
+	add_to_temp_variable = { repair = bit }
+	clamp_temp_variable = { var = repair min = -0.30 max = 0.20 }
+	set_variable = { psEcon_repair = repair }
+
+	set_temp_variable = { goods = psEcon_welS }
+	subtract_from_temp_variable = { goods = 0.25 }
+	multiply_temp_variable = { goods = 0.035 }
+	set_temp_variable = { bit = psEcon_foodStress }
+	multiply_temp_variable = { bit = 0.045 }
+	add_to_temp_variable = { goods = bit }
+	set_temp_variable = { bit = psEcon_income }
+	divide_temp_variable = { bit = 40 }
+	clamp_temp_variable = { var = bit min = 0 max = 1 }
+	multiply_temp_variable = { bit = 0.012 }
+	add_to_temp_variable = { goods = bit }
+	set_temp_variable = { bit = psEcon_taxRate }
+	subtract_from_temp_variable = { bit = 0.25 }
+	multiply_temp_variable = { bit = 0.020 }
+	subtract_from_temp_variable = { goods = bit }
+	set_temp_variable = { bit = psEcon_uUsed }
+	subtract_from_temp_variable = { bit = 0.08 }
+	clamp_temp_variable = { var = bit min = 0 max = 1 }
+	multiply_temp_variable = { bit = 0.025 }
+	add_to_temp_variable = { goods = bit }
+	clamp_temp_variable = { var = goods min = -0.05 max = 0.10 }
+	set_variable = { psEcon_goods = goods }
+	set_temp_variable = { research = psEcon_education }
+	subtract_from_temp_variable = { research = 0.55 }
+	multiply_temp_variable = { research = 0.045 }
+	set_temp_variable = { bit = psEcon_chTech }
+	clamp_temp_variable = { var = bit min = -0.015 max = 0.015 }
+	add_to_temp_variable = { research = bit }
+	set_temp_variable = { bit = psEcon_stability }
+	subtract_from_temp_variable = { bit = 0.55 }
+	multiply_temp_variable = { bit = 0.010 }
+	add_to_temp_variable = { research = bit }
+	clamp_temp_variable = { var = research min = -0.06 max = 0.08 }
+	set_variable = { psEcon_research = research }
+	set_temp_variable = { effCap = psEcon_education }
+	subtract_from_temp_variable = { effCap = 0.55 }
+	multiply_temp_variable = { effCap = 0.035 }
+	set_temp_variable = { bit = psEcon_stability }
+	subtract_from_temp_variable = { bit = 0.55 }
+	multiply_temp_variable = { bit = 0.025 }
+	add_to_temp_variable = { effCap = bit }
+	set_temp_variable = { bit = psEcon_energyStress }
+	multiply_temp_variable = { bit = 0.04 }
+	subtract_from_temp_variable = { effCap = bit }
+	clamp_temp_variable = { var = effCap min = -0.08 max = 0.08 }
+	set_variable = { psEcon_effCap = effCap }
+	set_temp_variable = { effGain = psEcon_education }
+	subtract_from_temp_variable = { effGain = 0.55 }
+	multiply_temp_variable = { effGain = 0.040 }
+	set_temp_variable = { bit = psEcon_momentum }
+	multiply_temp_variable = { bit = 0.20 }
+	clamp_temp_variable = { var = bit min = -0.01 max = 0.01 }
+	add_to_temp_variable = { effGain = bit }
+	clamp_temp_variable = { var = effGain min = -0.08 max = 0.08 }
+	set_variable = { psEcon_effGain = effGain }
+	set_temp_variable = { stabWeekly = 0.07 }
+	subtract_from_temp_variable = { stabWeekly = psEcon_uUsed }
+	divide_temp_variable = { stabWeekly = 0.07 }
+	multiply_temp_variable = { stabWeekly = 0.00028 }
+	set_temp_variable = { bit = psEcon_stability }
+	subtract_from_temp_variable = { bit = 0.60 }
+	multiply_temp_variable = { bit = 0.00012 }
+	add_to_temp_variable = { stabWeekly = bit }
+	set_temp_variable = { bit = psEcon_foodStress }
+	multiply_temp_variable = { bit = 0.0010 }
+	subtract_from_temp_variable = { stabWeekly = bit }
+	set_temp_variable = { bit = psEcon_energyStress }
+	multiply_temp_variable = { bit = 0.0006 }
+	subtract_from_temp_variable = { stabWeekly = bit }
+	set_temp_variable = { bit = psEcon_inflation }
+	subtract_from_temp_variable = { bit = 0.06 }
+	divide_temp_variable = { bit = 0.10 }
+	clamp_temp_variable = { var = bit min = 0 max = 1 }
+	multiply_temp_variable = { bit = 0.0008 }
+	subtract_from_temp_variable = { stabWeekly = bit }
+	if = {
+		limit = { has_country_flag = psEcon_bursting }
+		subtract_from_temp_variable = { stabWeekly = 0.0005 }
+	}
+	clamp_temp_variable = { var = stabWeekly min = -0.0025 max = 0.0008 }
+	set_variable = { psEcon_stabWeekly = stabWeekly }
+	set_temp_variable = { power = psEcon_govNow }
+	subtract_from_temp_variable = { power = 0.60 }
+	multiply_temp_variable = { power = 0.10 }
+	set_temp_variable = { bit = psEcon_foodStress }
+	multiply_temp_variable = { bit = 0.08 }
+	subtract_from_temp_variable = { power = bit }
+	set_temp_variable = { bit = psEcon_energyStress }
+	multiply_temp_variable = { bit = 0.05 }
+	subtract_from_temp_variable = { power = bit }
+	set_temp_variable = { bit = psEcon_stability }
+	subtract_from_temp_variable = { bit = 0.6 }
+	multiply_temp_variable = { bit = 0.03 }
+	add_to_temp_variable = { power = bit }
+	if = {
+		limit = { has_country_flag = psEcon_bursting }
+		subtract_from_temp_variable = { power = 0.04 }
+	}
+	clamp_temp_variable = { var = power min = -0.18 max = 0.08 }
+	set_variable = { psEcon_power = power }
+	set_temp_variable = { warSupport = psEcon_uUsed }
+	subtract_from_temp_variable = { warSupport = 0.08 }
+	clamp_temp_variable = { var = warSupport min = 0 max = 0.20 }
+	divide_temp_variable = { warSupport = 0.08 }
+	multiply_temp_variable = { warSupport = -0.0002 }
+	if = {
+		limit = { has_country_flag = psEcon_bursting }
+		subtract_from_temp_variable = { warSupport = 0.00015 }
+	}
+	clamp_temp_variable = { var = warSupport min = -0.0004 max = 0.0002 }
+	set_variable = { psEcon_warSupport = warSupport }
+	set_temp_variable = { draft = psEcon_uUsed }
+	subtract_from_temp_variable = { draft = 0.06 }
+	clamp_temp_variable = { var = draft min = 0 max = 0.30 }
+	multiply_temp_variable = { draft = 0.12 }
+	set_temp_variable = { bit = psEcon_foodStress }
+	multiply_temp_variable = { bit = 0.08 }
+	subtract_from_temp_variable = { draft = bit }
+	clamp_temp_variable = { var = draft min = -0.05 max = 0.08 }
+	set_variable = { psEcon_conscription = draft }
+}
+
+psEcon_calculate = {
+	psEcon_calcBalances = yes
+	psEcon_calcDemand = yes
+	psEcon_calcPath = yes
+	psEcon_calcOutput = yes
+}

@@ -1,0 +1,290 @@
+psEcon_integrate = {
+	# Stocks move after the month is scored, so a trend cannot rewrite its own cause.
+	set_temp_variable = { gap = psEcon_uInstant }
+	subtract_from_temp_variable = { gap = psEcon_unemployment }
+	multiply_temp_variable = { gap = 0.18 }
+	add_to_variable = { psEcon_unemployment = gap }
+	clamp_variable = { var = psEcon_unemployment min = 0.025 max = 0.28 }
+
+	set_temp_variable = { infSpeed = psEcon_marketStock }
+	multiply_temp_variable = { infSpeed = 0.09 }
+	add_to_temp_variable = { infSpeed = 0.035 }
+	set_temp_variable = { infGap = psEcon_infTarget }
+	subtract_from_temp_variable = { infGap = psEcon_inflation }
+	multiply_temp_variable = { infGap = infSpeed }
+	add_to_variable = { psEcon_inflation = infGap }
+	clamp_variable = { var = psEcon_inflation min = -0.01 max = 0.35 }
+	set_temp_variable = { priceBit = psEcon_inflation }
+	divide_temp_variable = { priceBit = 12 }
+	add_to_temp_variable = { priceBit = 1 }
+	multiply_variable = { psEcon_priceLevel = priceBit }
+	set_temp_variable = { incomeBit = psEcon_growth }
+	divide_temp_variable = { incomeBit = 12 }
+	add_to_temp_variable = { incomeBit = 1 }
+	multiply_variable = { psEcon_income = incomeBit }
+	clamp_variable = { var = psEcon_income min = 0.6 max = 48 }
+
+	set_temp_variable = { debtFlow = psEcon_debt }
+	multiply_temp_variable = { debtFlow = psEcon_growth }
+	set_temp_variable = { debtInf = psEcon_debt }
+	multiply_temp_variable = { debtInf = psEcon_inflation }
+	multiply_temp_variable = { debtInf = 0.45 }
+	set_temp_variable = { debtAdd = psEcon_deficit }
+	subtract_from_temp_variable = { debtAdd = debtFlow }
+	subtract_from_temp_variable = { debtAdd = debtInf }
+	divide_temp_variable = { debtAdd = 12 }
+	add_to_variable = { psEcon_debt = debtAdd }
+	clamp_variable = { var = psEcon_debt min = 0 max = 2.2 }
+
+	set_temp_variable = { quality = psEcon_heat }
+	multiply_temp_variable = { quality = 1.6 }
+	set_temp_variable = { sheetQ = psEcon_balanceSheet }
+	multiply_temp_variable = { sheetQ = 0.35 }
+	add_to_temp_variable = { quality = sheetQ }
+	set_temp_variable = { qualityKeep = 1 }
+	subtract_from_temp_variable = { qualityKeep = quality }
+	clamp_temp_variable = { var = qualityKeep min = 0.35 max = 1.05 }
+	set_temp_variable = { net = psEcon_invShare }
+	divide_temp_variable = { net = 0.25 }
+	multiply_temp_variable = { net = psEcon_util }
+	multiply_temp_variable = { net = 0.020 }
+	subtract_from_temp_variable = { net = 0.016 }
+	add_to_temp_variable = { net = psEcon_chIndustry }
+	multiply_temp_variable = { net = qualityKeep }
+	divide_temp_variable = { net = 12 }
+	add_to_variable = { psEcon_privateCapital = net }
+	clamp_variable = { var = psEcon_privateCapital min = 0.15 max = 1.80 }
+
+	set_temp_variable = { pubNet = psEcon_spendShare }
+	divide_temp_variable = { pubNet = 0.30 }
+	set_temp_variable = { invPub = psEcon_invShare }
+	add_to_temp_variable = { invPub = 0.5 }
+	multiply_temp_variable = { pubNet = invPub }
+	multiply_temp_variable = { pubNet = 0.010 }
+	subtract_from_temp_variable = { pubNet = 0.007 }
+	divide_temp_variable = { pubNet = 12 }
+	add_to_variable = { psEcon_publicCapital = pubNet }
+	clamp_variable = { var = psEcon_publicCapital min = 0.20 max = 1.20 }
+	set_temp_variable = { eduNet = psEcon_eduS }
+	divide_temp_variable = { eduNet = 0.16 }
+	set_temp_variable = { spendEdu = psEcon_spendShare }
+	divide_temp_variable = { spendEdu = 0.22 }
+	multiply_temp_variable = { eduNet = spendEdu }
+	multiply_temp_variable = { eduNet = 0.006 }
+	subtract_from_temp_variable = { eduNet = 0.0025 }
+	set_temp_variable = { warEdu = psEcon_atWar }
+	multiply_temp_variable = { warEdu = 0.004 }
+	subtract_from_temp_variable = { eduNet = warEdu }
+	divide_temp_variable = { eduNet = 12 }
+	add_to_variable = { psEcon_education = eduNet }
+	clamp_variable = { var = psEcon_education min = 0.15 max = 0.92 }
+	set_temp_variable = { envStep = psEcon_envDrift }
+	divide_temp_variable = { envStep = 12 }
+	add_to_variable = { psEcon_environment = envStep }
+	clamp_variable = { var = psEcon_environment min = 0.15 max = 0.95 }
+
+	set_temp_variable = { govT = 0.80 }
+	set_temp_variable = { bit = psEcon_unemployment }
+	subtract_from_temp_variable = { bit = 0.05 }
+	clamp_temp_variable = { var = bit min = 0 max = 1 }
+	multiply_temp_variable = { bit = 1.4 }
+	subtract_from_temp_variable = { govT = bit }
+	set_temp_variable = { bit = psEcon_inflation }
+	subtract_from_temp_variable = { bit = 0.03 }
+	clamp_temp_variable = { var = bit min = 0 max = 1 }
+	multiply_temp_variable = { bit = 0.9 }
+	subtract_from_temp_variable = { govT = bit }
+	set_temp_variable = { bit = psEcon_deficit }
+	subtract_from_temp_variable = { bit = 0.02 }
+	clamp_temp_variable = { var = bit min = 0 max = 1 }
+	multiply_temp_variable = { bit = 0.6 }
+	subtract_from_temp_variable = { govT = bit }
+	set_temp_variable = { bit = psEcon_foodStress }
+	multiply_temp_variable = { bit = 0.18 }
+	subtract_from_temp_variable = { govT = bit }
+	if = {
+		limit = { has_country_flag = psEcon_bursting }
+		subtract_from_temp_variable = { govT = 0.10 }
+	}
+	clamp_temp_variable = { var = govT min = 0.20 max = 0.90 }
+	set_temp_variable = { govMove = govT }
+	subtract_from_temp_variable = { govMove = psEcon_govStock }
+	multiply_temp_variable = { govMove = 0.035 }
+	add_to_variable = { psEcon_govStock = govMove }
+	clamp_variable = { var = psEcon_govStock min = 0.15 max = 0.95 }
+
+	set_temp_variable = { mktT = psEcon_stability }
+	subtract_from_temp_variable = { mktT = 0.6 }
+	multiply_temp_variable = { mktT = 0.08 }
+	add_to_temp_variable = { mktT = 0.84 }
+	set_temp_variable = { bit = psEcon_momentum }
+	clamp_temp_variable = { var = bit min = -0.02 max = 0.02 }
+	add_to_temp_variable = { mktT = bit }
+	set_temp_variable = { bit = psEcon_volatility }
+	subtract_from_temp_variable = { bit = 0.01 }
+	clamp_temp_variable = { var = bit min = 0 max = 1 }
+	multiply_temp_variable = { bit = 4.0 }
+	subtract_from_temp_variable = { mktT = bit }
+	set_temp_variable = { bit = psEcon_debt }
+	subtract_from_temp_variable = { bit = 0.90 }
+	clamp_temp_variable = { var = bit min = 0 max = 2 }
+	multiply_temp_variable = { bit = 0.22 }
+	subtract_from_temp_variable = { mktT = bit }
+	set_temp_variable = { bit = psEcon_inflation }
+	subtract_from_temp_variable = { bit = 0.04 }
+	divide_temp_variable = { bit = 0.18 }
+	clamp_temp_variable = { var = bit min = 0 max = 1 }
+	multiply_temp_variable = { bit = 1.10 }
+	subtract_from_temp_variable = { mktT = bit }
+	set_temp_variable = { bit = psEcon_atWar }
+	multiply_temp_variable = { bit = 0.18 }
+	subtract_from_temp_variable = { mktT = bit }
+	set_temp_variable = { bit = psEcon_deficit }
+	subtract_from_temp_variable = { bit = 0.04 }
+	clamp_temp_variable = { var = bit min = 0 max = 1 }
+	multiply_temp_variable = { bit = 0.12 }
+	subtract_from_temp_variable = { mktT = bit }
+	set_temp_variable = { bit = psEcon_balanceSheet }
+	multiply_temp_variable = { bit = 0.20 }
+	subtract_from_temp_variable = { mktT = bit }
+	if = {
+		limit = { has_country_flag = psEcon_bursting }
+		subtract_from_temp_variable = { mktT = 0.15 }
+	}
+	if = {
+		limit = { check_variable = { psEcon_therapyRecovery > 0 } }
+		add_to_temp_variable = { mktT = 0.08 }
+	}
+	clamp_temp_variable = { var = mktT min = 0.12 max = 0.94 }
+	set_temp_variable = { mktMove = mktT }
+	subtract_from_temp_variable = { mktMove = psEcon_marketStock }
+	multiply_temp_variable = { mktMove = 0.03 }
+	add_to_variable = { psEcon_marketStock = mktMove }
+	clamp_variable = { var = psEcon_marketStock min = 0.10 max = 0.96 }
+
+	set_temp_variable = { surprise = psEcon_growth }
+	subtract_from_temp_variable = { surprise = psEcon_growthSlow }
+	if = {
+		limit = { check_variable = { surprise < 0 } }
+		multiply_temp_variable = { surprise = -1 }
+	}
+	set_temp_variable = { volMove = surprise }
+	subtract_from_temp_variable = { volMove = psEcon_volatility }
+	multiply_temp_variable = { volMove = 0.10 }
+	add_to_variable = { psEcon_volatility = volMove }
+	clamp_variable = { var = psEcon_volatility min = 0 max = 0.06 }
+	set_temp_variable = { fastMove = psEcon_growth }
+	subtract_from_temp_variable = { fastMove = psEcon_growthFast }
+	multiply_temp_variable = { fastMove = 0.22 }
+	add_to_variable = { psEcon_growthFast = fastMove }
+	set_temp_variable = { slowMove = psEcon_growth }
+	subtract_from_temp_variable = { slowMove = psEcon_growthSlow }
+	multiply_temp_variable = { slowMove = 0.06 }
+	add_to_variable = { psEcon_growthSlow = slowMove }
+	set_temp_variable = { momentum = psEcon_growthFast }
+	subtract_from_temp_variable = { momentum = psEcon_growthSlow }
+	clamp_temp_variable = { var = momentum min = -0.04 max = 0.04 }
+	set_variable = { psEcon_momentum = momentum }
+	set_temp_variable = { slowInf = psEcon_inflation }
+	subtract_from_temp_variable = { slowInf = psEcon_inflationSlow }
+	multiply_temp_variable = { slowInf = 0.08 }
+	add_to_variable = { psEcon_inflationSlow = slowInf }
+
+	set_temp_variable = { pressure = psEcon_heat }
+	multiply_temp_variable = { pressure = 0.85 }
+	set_temp_variable = { bit = psEcon_stanceUsed }
+	clamp_temp_variable = { var = bit min = 0 max = 2 }
+	multiply_temp_variable = { bit = 0.003 }
+	add_to_temp_variable = { pressure = bit }
+	set_temp_variable = { bit = psEcon_demandMood }
+	subtract_from_temp_variable = { bit = 0.012 }
+	clamp_temp_variable = { var = bit min = 0 max = 0.2 }
+	multiply_temp_variable = { bit = 0.18 }
+	add_to_temp_variable = { pressure = bit }
+	set_temp_variable = { bit = psEcon_momentum }
+	clamp_temp_variable = { var = bit min = 0 max = 0.04 }
+	multiply_temp_variable = { bit = 0.40 }
+	add_to_temp_variable = { pressure = bit }
+	set_temp_variable = { bit = psEcon_util }
+	subtract_from_temp_variable = { bit = 1 }
+	clamp_temp_variable = { var = bit min = 0 max = 0.2 }
+	multiply_temp_variable = { bit = 0.10 }
+	add_to_temp_variable = { pressure = bit }
+	set_temp_variable = { bit = psEcon_stability }
+	multiply_temp_variable = { bit = 0.0032 }
+	subtract_from_temp_variable = { pressure = bit }
+	subtract_from_temp_variable = { pressure = 0.0018 }
+	if = {
+		limit = { NOT = { has_country_flag = psEcon_bursting } }
+		add_to_variable = { psEcon_bubble = pressure }
+		clamp_variable = { var = psEcon_bubble min = 0 max = 0.92 }
+		if = {
+			limit = {
+				OR = {
+					check_variable = { psEcon_bubble > 0.82 }
+					AND = {
+						check_variable = { psEcon_bubble > 0.50 }
+						OR = {
+							check_variable = { psEcon_stanceUsed < -0.99 }
+							check_variable = { psEcon_momentum < -0.004 }
+						}
+					}
+				}
+			}
+			set_country_flag = psEcon_bursting
+		}
+	}
+	else = {
+		subtract_from_variable = { psEcon_bubble = 0.028 }
+		clamp_variable = { var = psEcon_bubble min = 0 max = 0.92 }
+		add_to_variable = { psEcon_balanceSheet = 0.012 }
+		clamp_variable = { var = psEcon_balanceSheet min = 0 max = 1 }
+		if = {
+			limit = { check_variable = { psEcon_bubble < 0.0501 } }
+			clr_country_flag = psEcon_bursting
+		}
+	}
+	subtract_from_variable = { psEcon_balanceSheet = 0.007 }
+	clamp_variable = { var = psEcon_balanceSheet min = 0 max = 1 }
+	if = {
+		limit = { check_variable = { psEcon_therapyLeft > 0 } }
+		subtract_from_variable = { psEcon_therapyLeft = 1 }
+		add_to_variable = { psEcon_therapyElapsed = 1 }
+	}
+
+	set_temp_variable = { shock = psEcon_taxRate }
+	subtract_from_temp_variable = { shock = psEcon_taxPrev }
+	if = {
+		limit = { check_variable = { shock < 0 } }
+		multiply_temp_variable = { shock = -1 }
+	}
+	set_temp_variable = { spendShock = psEcon_spendShare }
+	subtract_from_temp_variable = { spendShock = psEcon_spendPrev }
+	if = {
+		limit = { check_variable = { spendShock < 0 } }
+		multiply_temp_variable = { spendShock = -1 }
+	}
+	add_to_temp_variable = { shock = spendShock }
+	set_temp_variable = { stanceShock = psEcon_monetaryStance }
+	subtract_from_temp_variable = { stanceShock = psEcon_stancePrev }
+	if = {
+		limit = { check_variable = { stanceShock < 0 } }
+		multiply_temp_variable = { stanceShock = -1 }
+	}
+	multiply_temp_variable = { stanceShock = 0.02 }
+	add_to_temp_variable = { shock = stanceShock }
+	set_temp_variable = { noiseMove = shock }
+	subtract_from_temp_variable = { noiseMove = psEcon_policyNoise }
+	multiply_temp_variable = { noiseMove = 0.40 }
+	add_to_variable = { psEcon_policyNoise = noiseMove }
+	clamp_variable = { var = psEcon_policyNoise min = 0 max = 0.20 }
+	set_variable = { psEcon_taxPrev = psEcon_taxRate }
+	set_variable = { psEcon_spendPrev = psEcon_spendShare }
+	set_variable = { psEcon_stancePrev = psEcon_monetaryStance }
+	multiply_variable = { psEcon_foodRelief = 0.75 }
+	clamp_variable = { var = psEcon_foodRelief min = 0 max = 0.16 }
+	multiply_variable = { psEcon_shockFood = 0.86 }
+	multiply_variable = { psEcon_shockOil = 0.86 }
+	multiply_variable = { psEcon_shockDemand = 0.86 }
+	multiply_variable = { psEcon_shockInflation = 0.86 }
+}

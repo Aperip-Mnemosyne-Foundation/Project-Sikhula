@@ -1,0 +1,9 @@
+psEcon_debugCategory = {
+	icon = GFX_win98_thumbnail
+	picture = GFX_decision_cat_picture_generic_economy
+	scripted_gui = psEcon_debugPanel
+	allowed = { always = yes }
+	visible = { is_debug = yes }
+	visible_when_empty = yes
+	priority = 12000
+}

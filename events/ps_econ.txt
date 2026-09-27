@@ -1,0 +1,117 @@
+add_namespace = ps_econ
+add_namespace = ps_econ_news
+
+# Fired by the monthly pulse. The numbers have already moved; the choice is the policy response.
+country_event = {
+	id = ps_econ.1
+	title = ps_econ.1.t
+	desc = ps_econ.1.d
+	picture = GFX_event_report_PS_DEBUG
+	is_triggered_only = yes
+
+	option = {
+		name = ps_econ.1.a
+	}
+	option = {
+		name = ps_econ.1.b
+		set_variable = { psEcon_inputStep = 0.02 }
+		psEcon_setSpendShare = yes
+		set_variable = { psEcon_inputStep = 1 }
+		psEcon_setMonetaryStance = yes
+	}
+}
+
+country_event = {
+	id = ps_econ.2
+	title = ps_econ.2.t
+	desc = ps_econ.2.d
+	picture = GFX_event_report_PS_DEBUG
+	is_triggered_only = yes
+
+	option = {
+		name = ps_econ.2.a
+	}
+	option = {
+		name = ps_econ.2.b
+		set_variable = { psEcon_foodRelief = 0.08 }
+		set_variable = { psEcon_inputStep = 0.01 }
+		psEcon_setSpendShare = yes
+	}
+}
+
+country_event = {
+	id = ps_econ.3
+	title = ps_econ.3.t
+	desc = ps_econ.3.d
+	picture = GFX_event_report_PS_DEBUG
+	is_triggered_only = yes
+
+	option = {
+		name = ps_econ.3.a
+	}
+	option = {
+		name = ps_econ.3.b
+		set_variable = { psEcon_inputStep = -1 }
+		psEcon_setMonetaryStance = yes
+	}
+}
+
+country_event = {
+	id = ps_econ.4
+	title = ps_econ.4.t
+	desc = ps_econ.4.d
+	picture = GFX_event_report_PS_DEBUG
+	is_triggered_only = yes
+
+	option = {
+		name = ps_econ.4.a
+	}
+	option = {
+		name = ps_econ.4.b
+		set_variable = { psEcon_inputStep = -0.02 }
+		psEcon_setSpendShare = yes
+	}
+}
+
+country_event = {
+	id = ps_econ.5
+	title = ps_econ.5.t
+	desc = ps_econ.5.d
+	picture = GFX_event_report_PS_DEBUG
+	is_triggered_only = yes
+
+	option = {
+		name = ps_econ.5.a
+	}
+	option = {
+		name = ps_econ.5.b
+		set_variable = { psEcon_inputStep = 0.02 }
+		psEcon_setSpendShare = yes
+	}
+}
+
+news_event = {
+	id = ps_econ_news.1
+	title = ps_econ_news.1.t
+	desc = ps_econ_news.1.d
+	picture = GFX_event_news_1
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = ps_econ_news.1.a
+	}
+}
+
+news_event = {
+	id = ps_econ_news.2
+	title = ps_econ_news.2.t
+	desc = ps_econ_news.2.d
+	picture = GFX_event_news_1
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = ps_econ_news.2.a
+	}
+}
