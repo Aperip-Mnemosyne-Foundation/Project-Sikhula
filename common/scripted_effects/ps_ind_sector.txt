@@ -1,99 +1,18 @@
 # Ownership stocks. 1 is state, 0 is private. Laws do not move these.
-# psInd_apply writes level effects. psInd_bubblePressure writes the monthly froth term.
+# Opening shares are history data. psInd_apply writes this month's level effects.
 
-psInd_seedDefaults = {
-	set_variable = { psInd_heavyState = 0.40 }
-	set_variable = { psInd_lightState = 0.35 }
-	set_variable = { psInd_techState = 0.30 }
-	set_variable = { psInd_farmState = 0.35 }
-	set_variable = { psInd_energyState = 0.55 }
-}
-
-psInd_seed = {
-	psInd_seedDefaults = yes
+psInd_fallback = {
 	if = {
-		limit = { original_tag = USA }
-		set_variable = { psInd_heavyState = 0.15 }
-		set_variable = { psInd_lightState = 0.08 }
-		set_variable = { psInd_techState = 0.10 }
-		set_variable = { psInd_farmState = 0.05 }
-		set_variable = { psInd_energyState = 0.22 }
-	}
-	else_if = {
-		limit = { original_tag = GER }
-		set_variable = { psInd_heavyState = 0.22 }
-		set_variable = { psInd_lightState = 0.12 }
-		set_variable = { psInd_techState = 0.14 }
-		set_variable = { psInd_farmState = 0.08 }
-		set_variable = { psInd_energyState = 0.38 }
-	}
-	else_if = {
-		limit = { original_tag = JAP }
-		set_variable = { psInd_heavyState = 0.14 }
-		set_variable = { psInd_lightState = 0.10 }
-		set_variable = { psInd_techState = 0.12 }
-		set_variable = { psInd_farmState = 0.18 }
-		set_variable = { psInd_energyState = 0.28 }
-	}
-	else_if = {
-		limit = { original_tag = PRC }
-		set_variable = { psInd_heavyState = 0.86 }
-		set_variable = { psInd_lightState = 0.58 }
-		set_variable = { psInd_techState = 0.72 }
-		set_variable = { psInd_farmState = 0.48 }
-		set_variable = { psInd_energyState = 0.93 }
-	}
-	else_if = {
-		limit = { original_tag = RAJ }
-		set_variable = { psInd_heavyState = 0.68 }
-		set_variable = { psInd_lightState = 0.42 }
-		set_variable = { psInd_techState = 0.48 }
-		set_variable = { psInd_farmState = 0.18 }
-		set_variable = { psInd_energyState = 0.82 }
-	}
-	else_if = {
-		limit = { original_tag = SOV }
-		set_variable = { psInd_heavyState = 0.52 }
-		set_variable = { psInd_lightState = 0.40 }
-		set_variable = { psInd_techState = 0.62 }
-		set_variable = { psInd_farmState = 0.46 }
-		set_variable = { psInd_energyState = 0.74 }
-	}
-	else_if = {
-		limit = { original_tag = ENG }
-		set_variable = { psInd_heavyState = 0.16 }
-		set_variable = { psInd_lightState = 0.10 }
-		set_variable = { psInd_techState = 0.14 }
-		set_variable = { psInd_farmState = 0.08 }
-		set_variable = { psInd_energyState = 0.28 }
-	}
-	else_if = {
-		limit = { original_tag = FRA }
-		set_variable = { psInd_heavyState = 0.34 }
-		set_variable = { psInd_lightState = 0.18 }
-		set_variable = { psInd_techState = 0.28 }
-		set_variable = { psInd_farmState = 0.12 }
-		set_variable = { psInd_energyState = 0.68 }
-	}
-	else_if = {
-		limit = { original_tag = ITA }
-		set_variable = { psInd_heavyState = 0.28 }
-		set_variable = { psInd_lightState = 0.16 }
-		set_variable = { psInd_techState = 0.20 }
-		set_variable = { psInd_farmState = 0.14 }
+		limit = { NOT = { has_variable = psInd_heavyState } }
+		set_variable = { psInd_heavyState = 0.40 }
+		set_variable = { psInd_lightState = 0.35 }
+		set_variable = { psInd_techState = 0.30 }
+		set_variable = { psInd_farmState = 0.35 }
 		set_variable = { psInd_energyState = 0.55 }
 	}
-	else_if = {
-		limit = { original_tag = CAN }
-		set_variable = { psInd_heavyState = 0.18 }
-		set_variable = { psInd_lightState = 0.12 }
-		set_variable = { psInd_techState = 0.16 }
-		set_variable = { psInd_farmState = 0.10 }
-		set_variable = { psInd_energyState = 0.30 }
-	}
-	psInd_mirrorPrivate = yes
 }
 
+# Private share is the part the state does not hold.
 psInd_mirrorPrivate = {
 	set_variable = { psInd_heavyPrivate = 1 }
 	subtract_from_variable = { psInd_heavyPrivate = psInd_heavyState }
@@ -107,8 +26,8 @@ psInd_mirrorPrivate = {
 	subtract_from_variable = { psInd_energyPrivate = psInd_energyState }
 }
 
+# Level effects for this month. Private light and tech produce. State heavy and energy build.
 psInd_apply = {
-	# Level effects for this month. Private light and tech produce. State heavy and energy build.
 	psInd_mirrorPrivate = yes
 	set_temp_variable = { lightGap = psInd_lightPrivate }
 	subtract_from_temp_variable = { lightGap = 0.50 }
@@ -227,8 +146,8 @@ psInd_apply = {
 	set_variable = { psInd_exportMix = exports }
 }
 
+# Easy money plus private tech and light industry froths the stock. State heavy and energy lean against it.
 psInd_bubblePressure = {
-	# Easy money plus private tech and light industry froths the stock. State heavy and energy lean against it.
 	set_temp_variable = { easy = psEcon_stanceUsed }
 	clamp_temp_variable = { var = easy min = 0 max = 2 }
 	set_temp_variable = { froth = psInd_techPrivate }
@@ -249,8 +168,8 @@ psInd_bubblePressure = {
 	set_variable = { psInd_bubbleAdd = froth }
 }
 
+# psInd_inputSector: 1 heavy, 2 light, 3 tech, 4 farm, 5 energy. Positive step nationalizes.
 psInd_shift = {
-	# psInd_inputSector: 1 heavy, 2 light, 3 tech, 4 farm, 5 energy. Positive step nationalizes.
 	if = {
 		limit = { check_variable = { psInd_inputSector = 1 } }
 		add_to_variable = { psInd_heavyState = psInd_inputStep }
