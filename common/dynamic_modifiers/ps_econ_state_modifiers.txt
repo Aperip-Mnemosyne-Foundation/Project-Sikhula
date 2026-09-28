@@ -1,0 +1,14 @@
+# Province pulse. Development, happiness, and occupation change construction on that land.
+
+psEcon_stateLiving = {
+	enable = { always = yes }
+	remove_trigger = { always = no }
+	icon = GFX_idea_generic_build_infrastructure
+
+	# Local stocks. The country pulse does not know which province is building.
+	state_production_speed_buildings_factor = psEcon_stateBuild
+	local_building_slots_factor = psEcon_stateSlots
+	local_manpower = psEcon_stateManpower
+	resistance_target = psEcon_stateResistance
+	compliance_gain = psEcon_stateCompliance
+}

@@ -1,3 +1,6 @@
+# Startup, the monthly close, and the modifiers that carry the score into the game.
+
+# Attach the standing laws and the country pulse. Drop the retired factory sink if it is still on the tag.
 psEcon_publish = {
 	if = {
 		limit = {
@@ -17,6 +20,7 @@ psEcon_publish = {
 	}
 }
 
+# Grain, oil, and goods drift back toward 1. Only PRC calls this, so the world moves once a month.
 psEcon_movePrices = {
 	set_temp_variable = { back = 1 }
 	subtract_from_temp_variable = { back = global.psEcon_grain }
@@ -46,8 +50,8 @@ psEcon_movePrices = {
 	}
 }
 
+# Opening month has no fake history. The fast and slow trends start on the first result.
 psEcon_snapMemory = {
-	# Opening month has no fake history. The fast and slow trends start on the first result.
 	set_variable = { psEcon_growthFast = psEcon_growth }
 	set_variable = { psEcon_growthSlow = psEcon_potential }
 	set_temp_variable = { momentum = psEcon_growthFast }
@@ -63,6 +67,7 @@ psEcon_snapMemory = {
 	set_variable = { psEcon_stancePrev = psEcon_monetaryStance }
 }
 
+# A tag with almost no people gets zeros, so an empty modifier does not invent an economy.
 psEcon_neutralOutputs = {
 	set_variable = { psEcon_factory = 0 }
 	set_variable = { psEcon_build = 0 }
@@ -84,8 +89,8 @@ psEcon_neutralOutputs = {
 	set_variable = { psEcon_unemployment = 0 }
 }
 
+# Shocks rescore the locked budget. They do not settle a new one.
 psEcon_refresh = {
-	# Shocks rescore the locked budget. They do not settle a new one.
 	if = {
 		limit = {
 			NOT = { has_dynamic_modifier = { modifier = psLaw_standing } }
@@ -103,6 +108,7 @@ psEcon_refresh = {
 	psEcon_publish = yes
 }
 
+# Tell the player once when a bubble bursts, food fails, inflation runs, debt breaks, or shock therapy ends.
 psEcon_notify = {
 	if = {
 		limit = {
@@ -158,6 +164,7 @@ psEcon_notify = {
 	}
 }
 
+# First tick. Fill missing history, sum the land held now, and publish modifiers before a month may settle.
 psEcon_bootstrap = {
 	if = {
 		limit = { NOT = { has_variable = global.psEcon_grain } }
@@ -172,7 +179,7 @@ psEcon_bootstrap = {
 		}
 		add_dynamic_modifier = { modifier = psLaw_standing }
 	}
-	psEcon_scanMap = yes
+	psEcon_aggregateStates = yes
 	psEcon_readWorld = yes
 	if = {
 		limit = { check_variable = { psEcon_mapPopulation < 0.2 } }
@@ -187,6 +194,7 @@ psEcon_bootstrap = {
 	set_country_flag = psEcon_ready
 }
 
+# Close the books for the land held now, grow those states, then score again so the modifier matches the new map.
 psEcon_monthly = {
 	if = {
 		limit = { NOT = { has_country_flag = psEcon_ready } }
@@ -197,18 +205,8 @@ psEcon_monthly = {
 			limit = { original_tag = PRC }
 			psEcon_movePrices = yes
 		}
-		add_to_variable = { psEcon_scanWait = 1 }
-		set_temp_variable = { ownedNow = num_owned_states }
-		if = {
-			limit = {
-				OR = {
-					check_variable = { psEcon_scanWait > 11.5 }
-					has_war = yes
-					NOT = { check_variable = { ownedNow = psEcon_ownedSeen } }
-				}
-			}
-			psEcon_scanMap = yes
-		}
+		# Territory can change hands between ticks. Score this month from the land held now.
+		psEcon_aggregateStates = yes
 		psEcon_readWorld = yes
 		if = {
 			limit = { check_variable = { psEcon_mapPopulation < 0.2 } }
@@ -220,6 +218,8 @@ psEcon_monthly = {
 			psEcon_calculate = yes
 			psEcon_integrate = yes
 			psEcon_settle = yes
+			psEcon_growStates = yes
+			psEcon_aggregateStates = yes
 			psEcon_calculate = yes
 			psEcon_publish = yes
 			psEcon_notify = yes

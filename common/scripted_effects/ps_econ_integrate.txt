@@ -1,3 +1,5 @@
+# After the score. Stocks ease toward this month, then the path memory moves.
+
 psEcon_integrate = {
 	# Stocks move after the month is scored, so a trend cannot rewrite its own cause.
 	set_temp_variable = { gap = psEcon_uInstant }
@@ -18,11 +20,7 @@ psEcon_integrate = {
 	divide_temp_variable = { priceBit = 12 }
 	add_to_temp_variable = { priceBit = 1 }
 	multiply_variable = { psEcon_priceLevel = priceBit }
-	set_temp_variable = { incomeBit = psEcon_growth }
-	divide_temp_variable = { incomeBit = 12 }
-	add_to_temp_variable = { incomeBit = 1 }
-	multiply_variable = { psEcon_income = incomeBit }
-	clamp_variable = { var = psEcon_income min = 0.6 max = 48 }
+	# Income is no longer a tag stock. psEcon_growStates writes this growth onto each controlled state.
 
 	set_temp_variable = { debtFlow = psEcon_debt }
 	multiply_temp_variable = { debtFlow = psEcon_growth }

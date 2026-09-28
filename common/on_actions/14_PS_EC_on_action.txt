@@ -1,12 +1,18 @@
+# Economy clock. Startup fills missing stocks, and the books close monthly.
 on_actions = {
 	on_startup = {
+		# Every state gets a stock, then every tag builds its books from history or the fallback.
 		effect = {
+			every_state = {
+				psEcon_ensureState = yes
+			}
 			every_country = {
 				psEcon_bootstrap = yes
 			}
 		}
 	}
 	on_daily = {
+		# The player refreshes the old population readout. AI does that on the monthly tick.
 		effect = {
 			if = {
 				limit = { is_ai = no }
@@ -17,6 +23,7 @@ on_actions = {
 		}
 	}
 	on_monthly = {
+		# Score, pay, and grow the land held this month. AI refreshes the old readout here instead of daily.
 		effect = {
 			psEcon_monthly = yes
 			if = {

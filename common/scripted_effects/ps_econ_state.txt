@@ -1,0 +1,286 @@
+# Land stocks. GDP per capita, development and happiness stay on the state when the owner changes.
+# The country file only sums the states it currently controls. One monthly pass, no daily province loop.
+
+psEcon_ensureState = {
+	if = {
+		limit = { NOT = { has_variable = psEcon_stateGdpPc } }
+		set_variable = { psEcon_stateGdpPc = 4 }
+		set_variable = { psEcon_stateDev = 0.35 }
+		set_variable = { psEcon_stateHappy = 0.45 }
+		set_variable = { psEcon_stateRural = 0.40 }
+		set_variable = { psEcon_stateWaste = 0 }
+		set_variable = { psEcon_stateOccupied = 0 }
+		set_variable = { psEcon_stateWasOccupied = 0 }
+		set_variable = { psEcon_stateResistance = 0 }
+		set_variable = { psEcon_stateCompliance = 0 }
+	}
+	# History writes the stocks. These companions are only filled when that history is absent.
+	if = {
+		limit = { NOT = { has_variable = psEcon_stateOccupied } }
+		set_variable = { psEcon_stateOccupied = 0 }
+	}
+	if = {
+		limit = { NOT = { has_variable = psEcon_stateWasOccupied } }
+		set_variable = { psEcon_stateWasOccupied = 0 }
+	}
+	if = {
+		limit = { NOT = { has_variable = psEcon_stateResistance } }
+		set_variable = { psEcon_stateResistance = 0 }
+	}
+	if = {
+		limit = { NOT = { has_variable = psEcon_stateCompliance } }
+		set_variable = { psEcon_stateCompliance = 0 }
+	}
+	if = {
+		limit = { NOT = { has_variable = psEcon_stateRural } }
+		set_variable = { psEcon_stateRural = 0.40 }
+	}
+	if = {
+		limit = { NOT = { has_variable = psEcon_stateWaste } }
+		set_variable = { psEcon_stateWaste = 0 }
+	}
+	psEcon_refreshStateMods = yes
+	if = {
+		limit = {
+			NOT = { has_dynamic_modifier = { modifier = psEcon_stateLiving } }
+		}
+		add_dynamic_modifier = { modifier = psEcon_stateLiving }
+	}
+}
+
+# Spread around this country's own average, so a poor country is not punished twice.
+psEcon_refreshStateMods = {
+	# A small level term remains: a richer average really does build a bit faster.
+	# Occupation is written by the monthly grow pass and must not be cleared here.
+	set_temp_variable = { ref = 0.50 }
+	if = {
+		limit = { check_variable = { psEcon_stateDevRef > 0.05 } }
+		set_temp_variable = { ref = psEcon_stateDevRef }
+	}
+	set_temp_variable = { build = psEcon_stateDev }
+	subtract_from_temp_variable = { build = ref }
+	multiply_temp_variable = { build = 0.45 }
+	set_temp_variable = { level = ref }
+	subtract_from_temp_variable = { level = 0.55 }
+	multiply_temp_variable = { level = 0.08 }
+	add_to_temp_variable = { build = level }
+	clamp_temp_variable = { var = build min = -0.12 max = 0.14 }
+	set_variable = { psEcon_stateBuild = build }
+	set_temp_variable = { slots = psEcon_stateDev }
+	subtract_from_temp_variable = { slots = ref }
+	multiply_temp_variable = { slots = 0.20 }
+	clamp_temp_variable = { var = slots min = -0.08 max = 0.10 }
+	set_variable = { psEcon_stateSlots = slots }
+	set_temp_variable = { hands = psEcon_stateHappy }
+	subtract_from_temp_variable = { hands = 0.50 }
+	multiply_temp_variable = { hands = 0.10 }
+	clamp_temp_variable = { var = hands min = -0.06 max = 0.06 }
+	set_variable = { psEcon_stateManpower = hands }
+}
+
+# One province program, for a focus or a debug button. The caller pays if it should cost money.
+psEcon_developState = {
+	add_to_variable = { psEcon_stateDev = 0.035 }
+	clamp_variable = { var = psEcon_stateDev min = 0.12 max = 0.96 }
+	add_to_variable = { psEcon_stateHappy = -0.02 }
+	clamp_variable = { var = psEcon_stateHappy min = 0.15 max = 0.88 }
+	psEcon_refreshStateMods = yes
+}
+
+# Raises the poor owned provinces together. Refused when the treasury cannot prepay it.
+psEcon_developInterior = {
+	if = {
+		limit = { check_variable = { psEcon_treasury > 0.0049 } }
+		add_to_variable = { psEcon_treasury = -0.005 }
+		every_owned_state = {
+			limit = {
+				check_variable = { psEcon_stateDev < 0.48 }
+				is_controlled_by = PREV
+			}
+			add_to_variable = { psEcon_stateDev = 0.012 }
+			clamp_variable = { var = psEcon_stateDev min = 0.12 max = 0.96 }
+			psEcon_refreshStateMods = yes
+		}
+	}
+}
+
+# Remember the poorest and richest controlled state for the debug line.
+psEcon_noteStateSpan = {
+	if = {
+		limit = { check_variable = { psEcon_stateGdpPc < PREV.psEcon_stateGdpPcLow } }
+		set_temp_variable = { span = psEcon_stateGdpPc }
+		set_variable = { PREV.psEcon_stateGdpPcLow = span }
+	}
+	if = {
+		limit = { check_variable = { psEcon_stateGdpPc > PREV.psEcon_stateGdpPcHigh } }
+		set_temp_variable = { span = psEcon_stateGdpPc }
+		set_variable = { PREV.psEcon_stateGdpPcHigh = span }
+	}
+}
+
+# Previous month's national growth, tilted by how developed this land is. The tilt averages out.
+psEcon_growStates = {
+	every_controlled_state = {
+		set_temp_variable = { local = psEcon_stateDev }
+		subtract_from_temp_variable = { local = PREV.psEcon_stateDevAvg }
+		multiply_temp_variable = { local = 0.45 }
+		add_to_temp_variable = { local = 1 }
+		clamp_temp_variable = { var = local min = 0.40 max = 1.60 }
+		set_temp_variable = { heldBefore = psEcon_stateWasOccupied }
+		set_variable = { psEcon_stateOccupied = 0 }
+		if = {
+			limit = { NOT = { is_owned_by = PREV } }
+			set_variable = { psEcon_stateOccupied = 1 }
+			# Applied after the clamp, or the floor would put occupation back near a normal month.
+			multiply_temp_variable = { local = 0.35 }
+			multiply_variable = { psEcon_stateGdpPc = 0.997 }
+			add_to_variable = { psEcon_stateHappy = -0.012 }
+			# The month a province changes hands is a seizure, not a normal occupation month.
+			if = {
+				limit = { check_variable = { heldBefore < 0.5 } }
+				multiply_variable = { psEcon_stateGdpPc = 0.96 }
+				add_to_variable = { psEcon_stateHappy = -0.06 }
+			}
+		}
+		set_temp_variable = { bit = PREV.psEcon_growth }
+		divide_temp_variable = { bit = 12 }
+		multiply_temp_variable = { bit = local }
+		add_to_temp_variable = { bit = 1 }
+		multiply_variable = { psEcon_stateGdpPc = bit }
+		clamp_variable = { var = psEcon_stateGdpPc min = 0.35 max = 70 }
+
+		# Target stays proportional to this month's average, so poor countries keep their spread.
+		set_temp_variable = { rel = psEcon_stateGdpPc }
+		divide_temp_variable = { rel = PREV.psEcon_income }
+		clamp_temp_variable = { var = rel min = 0.35 max = 2.20 }
+		set_temp_variable = { devTarget = PREV.psEcon_stateDevAvg }
+		multiply_temp_variable = { devTarget = rel }
+		clamp_temp_variable = { var = devTarget min = 0.12 max = 0.96 }
+		set_temp_variable = { devGap = devTarget }
+		subtract_from_temp_variable = { devGap = psEcon_stateDev }
+		multiply_temp_variable = { devGap = 0.008 }
+		add_to_variable = { psEcon_stateDev = devGap }
+		clamp_variable = { var = psEcon_stateDev min = 0.12 max = 0.96 }
+
+		if = {
+			limit = { check_variable = { psEcon_stateOccupied < 0.5 } }
+			set_temp_variable = { happyTarget = psEcon_stateDev }
+			multiply_temp_variable = { happyTarget = 0.34 }
+			add_to_temp_variable = { happyTarget = 0.38 }
+			set_temp_variable = { happyGap = happyTarget }
+			subtract_from_temp_variable = { happyGap = psEcon_stateHappy }
+			multiply_temp_variable = { happyGap = 0.04 }
+			add_to_variable = { psEcon_stateHappy = happyGap }
+		}
+		clamp_variable = { var = psEcon_stateHappy min = 0.15 max = 0.88 }
+
+		if = {
+			limit = { check_variable = { psEcon_stateOccupied > 0.5 } }
+			set_temp_variable = { resist = 0.55 }
+			subtract_from_temp_variable = { resist = psEcon_stateHappy }
+			multiply_temp_variable = { resist = 0.45 }
+			add_to_temp_variable = { resist = 0.18 }
+			clamp_temp_variable = { var = resist min = 0.05 max = 0.70 }
+			set_variable = { psEcon_stateResistance = resist }
+			set_temp_variable = { comply = psEcon_stateHappy }
+			multiply_temp_variable = { comply = 0.025 }
+			set_variable = { psEcon_stateCompliance = comply }
+		}
+		else = {
+			set_variable = { psEcon_stateResistance = 0 }
+			set_variable = { psEcon_stateCompliance = 0 }
+		}
+		set_variable = { psEcon_stateWasOccupied = psEcon_stateOccupied }
+	}
+}
+
+# Controlled land is the tax base, including occupation. Owned-but-lost land is not.
+psEcon_aggregateStates = {
+	set_variable = { psEcon_gdpMass = 0 }
+	set_variable = { psEcon_popK = 0 }
+	set_variable = { psEcon_devMass = 0 }
+	set_variable = { psEcon_happyMass = 0 }
+	set_variable = { psEcon_mapRuralK = 0 }
+	set_variable = { psEcon_mapWasteK = 0 }
+	set_variable = { psEcon_controlledCount = 0 }
+	set_variable = { psEcon_ownedHeld = 0 }
+	set_variable = { psEcon_stateGdpPcLow = 999 }
+	set_variable = { psEcon_stateGdpPcHigh = 0 }
+	set_variable = { psEcon_ownedSeen = num_owned_states }
+
+	every_controlled_state = {
+		psEcon_ensureState = yes
+		set_temp_variable = { popK = state_population_k }
+		if = {
+			limit = { check_variable = { popK < 0.001 } }
+			set_temp_variable = { popK = 0.001 }
+		}
+		set_temp_variable = { mass = psEcon_stateGdpPc }
+		multiply_temp_variable = { mass = popK }
+		add_to_variable = { PREV.psEcon_gdpMass = mass }
+		add_to_variable = { PREV.psEcon_popK = popK }
+		set_temp_variable = { part = psEcon_stateDev }
+		multiply_temp_variable = { part = popK }
+		add_to_variable = { PREV.psEcon_devMass = part }
+		set_temp_variable = { part = psEcon_stateHappy }
+		multiply_temp_variable = { part = popK }
+		add_to_variable = { PREV.psEcon_happyMass = part }
+		set_temp_variable = { part = popK }
+		multiply_temp_variable = { part = psEcon_stateRural }
+		add_to_variable = { PREV.psEcon_mapRuralK = part }
+		set_temp_variable = { part = popK }
+		multiply_temp_variable = { part = psEcon_stateWaste }
+		add_to_variable = { PREV.psEcon_mapWasteK = part }
+		add_to_variable = { PREV.psEcon_controlledCount = 1 }
+		if = {
+			limit = { is_owned_by = PREV }
+			add_to_variable = { PREV.psEcon_ownedHeld = 1 }
+		}
+		set_variable = { psEcon_stateGdp = mass }
+		divide_variable = { psEcon_stateGdp = 1000 }
+		psEcon_refreshStateMods = yes
+		psEcon_noteStateSpan = yes
+	}
+
+	set_variable = { psEcon_mapPopulation = psEcon_popK }
+	divide_variable = { psEcon_mapPopulation = 1000 }
+	set_variable = { psEcon_gdpBillion = psEcon_gdpMass }
+	divide_variable = { psEcon_gdpBillion = 1000 }
+	if = {
+		limit = { check_variable = { psEcon_popK > 1 } }
+		set_variable = { psEcon_income = psEcon_gdpMass }
+		divide_variable = { psEcon_income = psEcon_popK }
+		set_variable = { psEcon_stateDevAvg = psEcon_devMass }
+		divide_variable = { psEcon_stateDevAvg = psEcon_popK }
+		set_variable = { psEcon_stateHappyAvg = psEcon_happyMass }
+		divide_variable = { psEcon_stateHappyAvg = psEcon_popK }
+		set_variable = { psEcon_ruralShare = psEcon_mapRuralK }
+		divide_variable = { psEcon_ruralShare = psEcon_popK }
+		set_variable = { psEcon_wasteShare = psEcon_mapWasteK }
+		divide_variable = { psEcon_wasteShare = psEcon_popK }
+	}
+	else = {
+		set_variable = { psEcon_income = 0.6 }
+		set_variable = { psEcon_stateDevAvg = 0.30 }
+		set_variable = { psEcon_stateHappyAvg = 0.40 }
+		set_variable = { psEcon_ruralShare = 0.50 }
+		set_variable = { psEcon_wasteShare = 0 }
+		set_variable = { psEcon_stateGdpPcLow = 0 }
+		set_variable = { psEcon_stateGdpPcHigh = 0 }
+	}
+	clamp_variable = { var = psEcon_income min = 0.6 max = 48 }
+	set_variable = { psEcon_control = psEcon_ownedHeld }
+	if = {
+		limit = { check_variable = { psEcon_ownedSeen > 0 } }
+		divide_variable = { psEcon_control = psEcon_ownedSeen }
+	}
+	else = {
+		set_variable = { psEcon_control = 1 }
+	}
+	clamp_variable = { var = psEcon_control min = 0.20 max = 1 }
+	set_variable = { psEcon_stateCount = psEcon_controlledCount }
+	every_controlled_state = {
+		set_variable = { psEcon_stateDevRef = PREV.psEcon_stateDevAvg }
+		psEcon_refreshStateMods = yes
+	}
+}
