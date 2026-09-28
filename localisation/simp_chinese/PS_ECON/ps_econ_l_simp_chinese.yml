@@ -1,6 +1,6 @@
 ﻿l_simp_chinese:
  psEcon_debugCategory: "经济脉冲"
- psEcon_debugCategory_desc: "调试用月度账本。税和开支要到月结才改产能。地图建筑不参与计算。"
+ psEcon_debugCategory_desc: "调试用月度账本。税和开支要到月结才改产能。人均产出跟着控制的地块走，建筑数量不参与。"
  psEcon_debugLine1: "§W人均 [?psEcon_income|1] 千美元  增长 [?psEcon_growth|%1]  潜能 [?psEcon_potential|%1]  过热 [?psEcon_heat|%2]"
  psEcon_debugLine2: "§W通胀 [?psEcon_inflation|%1]  失业 [?psEcon_unemployment|%1]  债务 [?psEcon_debt|%0]  赤字 [?psEcon_deficit|%1]  利息 [?psEcon_coupon|%1]"
  psEcon_debugLine3: "§W路径稳定 [?psEcon_stability|%0]  动能 [?psEcon_momentum|%2]  泡沫 [?psEcon_bubble|%0]  [Get_psEcon_burst]  伤痕 [?psEcon_balanceSheet|%0]"
@@ -141,3 +141,8 @@
  ps_econ_news.2.t: "油价跳动"
  ps_econ_news.2.d: "国际油价跳了一截。能源靠进口的国家，产能、建设和物价会一起感到这一下。"
  ps_econ_news.2.a: "知道了"
+ psEcon_debugLine10: "§W国土  发展 [?psEcon_stateDevAvg|%0]  幸福 [?psEcon_stateHappyAvg|%0]  人均低 [?psEcon_stateGdpPcLow|1]  高 [?psEcon_stateGdpPcHigh|1]  总量 [?psEcon_gdpBillion|0]十亿"
+ psEcon_developCapital: "开发首都地区"
+ psEcon_developCapital_desc: "从国库支付全年产出的0.1%，提高首都的发展指数。当地建设变快，幸福短暂下降。下一次月结前，调试行会先重算。"
+ psEcon_developInterior: "开发落后地区"
+ psEcon_developInterior_desc: "从国库预付全年产出的0.5%，抬高本国仍控制、发展指数低于0.48的地块。九十天内不能再拨一次。"

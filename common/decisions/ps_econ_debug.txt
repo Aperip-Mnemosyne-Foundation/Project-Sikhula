@@ -709,4 +709,43 @@ psEcon_debugCategory = {
 			psInd_shift = yes
 		}
 	}
+	psEcon_developCapital = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = {
+			is_debug = yes
+			check_variable = { psEcon_treasury > 0.0009 }
+		}
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			add_to_variable = { psEcon_treasury = -0.001 }
+			capital_scope = {
+				psEcon_developState = yes
+			}
+			psEcon_aggregateStates = yes
+		}
+	}
+	psEcon_developInterior = {
+		icon = GFX_win98_thumbnail
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = {
+			is_debug = yes
+			NOT = { has_country_flag = psEcon_developingInterior }
+			check_variable = { psEcon_treasury > 0.0049 }
+		}
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			set_country_flag = { flag = psEcon_developingInterior days = 90 }
+			psEcon_developInterior = yes
+			psEcon_aggregateStates = yes
+		}
+	}
 }
