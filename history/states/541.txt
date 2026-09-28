@@ -24,7 +24,7 @@ state={
 		victory_points = { 4879 5 }		#Windhoek
 		victory_points = { 12519 3 }	#Rundu
 		victory_points = { 10978 2 }	#Walvis Bay
-		victory_points = { 2229 2 }		#Lüderitz
+		victory_points = { 2229 2 }		#LÃ¼deritz
 	}
 
 	provinces={
