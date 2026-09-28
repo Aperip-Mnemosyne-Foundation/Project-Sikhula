@@ -1,8 +1,10 @@
+# Legacy population chart and calendar. None of this feeds the monthly economy.
+
 EC_cre = {
 	# Retired. Offsite civilian factories no longer stand in for the economy.
 }
+# Scale the country population into the figure shown on the old screen.
 EC_ccp = {
-	#计算国家人口
 	set_variable = {
 		ROOT.ECTP = ROOT.max_manpower_k
 	}
@@ -62,8 +64,8 @@ EC_ccp = {
 		}
 	}
 }
+# Per-capita figure for that old screen. It is not the state GDP average.
 EC_cpe = {
-	#计算人均经济
 	set_variable = {
 		ROOT.ECRE_c1 = ROOT.ECRE
 	}
@@ -143,8 +145,8 @@ EC_cpe = {
 		ROOT.EC_PE = ROOT.ECRE_c1
 	}
 }
+# Monthly change in the old per-capita figure, kept as a short history.
 EC_ceg = {
-	#计算经济增长速度（人均）（每月计算)
 	if = {
 		limit = { 
 			check_variable = {
@@ -231,8 +233,8 @@ EC_ceg = {
 		value = ROOT.ECEG
 	}
 }
+# Consumer-goods demand figure for the retired screen. The economy does not read it.
 EC_cdg ={
-	#消费品需求计算
 	set_variable = {
 		ROOT.ECTP_cdg = ROOT.ECTP
 	}
@@ -271,10 +273,11 @@ EC_cdg ={
 	}
 	round_variable = ROOT.ECDG_SHOW
 }
+# Retired. Consumer-goods occupation is not the industrial hook anymore.
 EC_ccp2 = {
-	# Retired. Consumer-goods occupation is not the industrial hook anymore.
 }
-ECOA_graph = { # 經濟總量曲綫
+# Build the frame list for the old total-output sparkline.
+ECOA_graph = {
 	clear_array = ROOT.ECOA_y_label
 	set_variable = { ROOT.ECOA_min = ROOT.ECOA_numbers^0 }
 	set_variable = { ROOT.ECOA_max = ROOT.ECOA_numbers^0 }
@@ -367,7 +370,8 @@ ECOA_graph = { # 經濟總量曲綫
 	
 }
 
-date_ECOA = { # 這個是用來記錄時間的
+# Advance the global month counter used by that sparkline.
+date_ECOA = {
 	if = {
 		limit = {
             NOT = {
@@ -566,6 +570,7 @@ date_ECOA = { # 這個是用來記錄時間的
 	
 }
 
+# Copy the global month frames onto the country that owns the chart.
 DATE_COUNTRY_GET_EFFECTS = {
 	set_variable = {
 		ROOT.ECOA_M1 = global.ECOA_M1
@@ -583,6 +588,7 @@ DATE_COUNTRY_GET_EFFECTS = {
 		ROOT.ECOA_M5 = global.ECOA_M5
 	}
 }
+# Starting month frames for the sparkline axis.
 DATE_MONTHS_INI = {
 	set_variable = {
 		ROOT.ECOA_M1 = 8
@@ -625,10 +631,11 @@ DATE_MONTHS_INI = {
 
 
 
+# Retired slider. Clicks from the old screen must not bring the factory-use modifier back.
 set_ECCP = {
-	# Retired slider. Clicks from the old screen must not bring the factory-use modifier back.
 }
 
+# Stack the education shares into the pie frames on the old screen.
 refresh_education_piechart = {
 	clear_variable = ROOT.pie_chart_var_ECEN
 	clear_variable = ROOT.pie_chart_var_ECES
