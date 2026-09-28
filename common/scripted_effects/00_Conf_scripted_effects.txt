@@ -1,3 +1,6 @@
+# Debug password. The digit array is folded into one number before the entered code is checked.
+
+# Fold ConfPasswordArray into global.ConfPassword. Index 0 is only the length.
 reckon_conf = {
     clr_global_flag = conf_right
 	clr_global_flag = conf_wrong
@@ -31,6 +34,7 @@ reckon_conf = {
 		add_to_variable = { global.ConfPasswordClickTimes = 2 }
 	}
 }
+# First load seeds the array with 9 so an empty password does not lock the screen.
 conf_ini = {
     if = {
 	    limit = {
@@ -43,6 +47,7 @@ conf_ini = {
 		set_global_flag = conf_ini_n
 	}
 }
+# Keep the seed 9 at the front, and put it back if a rebuild dropped it.
 check_conf_ini = {
     for_each_loop = {
         array = global.ConfPasswordArray
