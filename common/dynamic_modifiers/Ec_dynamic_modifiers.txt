@@ -1,3 +1,5 @@
+# Retired civilian-factory sink. Startup removes any copy still attached to a country.
+
 ECCP_dynamic_modifiers = {
 	# Retired. Any leftover copy is removed and no longer occupies civilian factories.
 	enable = { always = no }

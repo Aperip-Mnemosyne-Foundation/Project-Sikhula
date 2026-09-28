@@ -13,8 +13,8 @@ psEcon_lockBudget = {
 	set_variable = { psEcon_envPaid = psEcon_shareEnv }
 }
 
+# Annual debt service as a share of GDP. The cashier pays one twelfth of it.
 psEcon_quoteCoupon = {
-	# Annual debt service as a share of GDP. The cashier pays one twelfth of it.
 	set_temp_variable = { couponRate = 0.65 }
 	subtract_from_temp_variable = { couponRate = psEcon_marketStock }
 	clamp_temp_variable = { var = couponRate min = 0 max = 1 }
@@ -32,8 +32,8 @@ psEcon_quoteCoupon = {
 	set_variable = { psEcon_couponMonth = coupon }
 }
 
+# psEcon_need and psEcon_cash are already set. Cover cannot fall below 40 percent.
 psEcon_fundBill = {
-	# psEcon_need and psEcon_cash are already set. Cover cannot fall below 40 percent.
 	set_variable = { psEcon_borrowMonth = 0 }
 	set_variable = { psEcon_printMonth = 0 }
 	set_variable = { psEcon_cover = 1 }
@@ -76,8 +76,8 @@ psEcon_fundBill = {
 	}
 }
 
+# Tax cash arrives first. The bill, the coupon, and one project then compete for it.
 psEcon_settle = {
-	# Tax cash arrives first. The bill, the coupon, and one project then compete for it.
 	set_variable = { psEcon_taxMonth = psEcon_revenue }
 	divide_variable = { psEcon_taxMonth = 12 }
 	set_variable = { psEcon_billMonth = psEcon_spendQuote }

@@ -13,6 +13,7 @@ psLaw_standing = {
 	psLaw_contractTrust = mtth:psLawMtth_contractTrust
 	psLaw_soePrivilege = mtth:psLawMtth_soePrivilege
 
+	# The tokens above are copied into the economy. The factors below are what the country feels.
 	industrial_capacity_factory = mtth:psLawMtth_laborFactory
 	production_factory_max_efficiency_factor = mtth:psLawMtth_laborEffCap
 	production_factory_efficiency_gain_factor = mtth:psLawMtth_laborEffGain
