@@ -9,6 +9,14 @@ state = {
 	}
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 5.7618 }
+		set_variable = { psEcon_stateDev = 0.3978 }
+		set_variable = { psEcon_stateHappy = 0.5032 }
+		set_variable = { psEcon_stateGdp = 45.1204 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = IRQ
 		add_core_of = IRQ
 		victory_points = { 2097 25 }

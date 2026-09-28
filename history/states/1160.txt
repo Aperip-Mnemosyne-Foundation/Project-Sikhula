@@ -8,6 +8,14 @@ state={
 	buildings_max_level_factor=1.000
 	state_category = large_town
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 2.1081 }
+		set_variable = { psEcon_stateDev = 0.2355 }
+		set_variable = { psEcon_stateHappy = 0.4211 }
+		set_variable = { psEcon_stateGdp = 1.108 }
+		set_variable = { psEcon_stateRural = 0.22 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = PRC
 		add_core_of = PRC
 		add_core_of = SIK

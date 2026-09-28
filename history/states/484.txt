@@ -5,6 +5,14 @@ state = {
 	state_category = town
 	
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 3.7853 }
+		set_variable = { psEcon_stateDev = 0.2418 }
+		set_variable = { psEcon_stateHappy = 0.4192 }
+		set_variable = { psEcon_stateGdp = 15.5533 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = MEX
 		victory_points = { 12736 2 } #Cabo San Lucas
 		buildings = {

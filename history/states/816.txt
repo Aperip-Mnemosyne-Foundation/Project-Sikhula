@@ -7,7 +7,15 @@ state={
 		oil=9
 		steel=12
 	}
-	history = { 
+	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 5.1323 }
+		set_variable = { psEcon_stateDev = 0.3481 }
+		set_variable = { psEcon_stateHappy = 0.4764 }
+		set_variable = { psEcon_stateGdp = 101.6211 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+ 
 		owner = MAL
 		add_core_of = MAL
 		buildings = {

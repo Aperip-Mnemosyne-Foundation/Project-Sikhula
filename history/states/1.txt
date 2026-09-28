@@ -5,6 +5,14 @@ state = {
 	state_category = large_town
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 19.0277 }
+		set_variable = { psEcon_stateDev = 0.5065 }
+		set_variable = { psEcon_stateHappy = 0.5225 }
+		set_variable = { psEcon_stateGdp = 6.144 }
+		set_variable = { psEcon_stateRural = 0.22 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = FRA
 		add_core_of = FRA
 		add_core_of = COR

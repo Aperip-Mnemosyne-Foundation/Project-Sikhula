@@ -2,6 +2,14 @@ state={
 	id=1284
 	name="STATE_1284"
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 6.0952 }
+		set_variable = { psEcon_stateDev = 0.3296 }
+		set_variable = { psEcon_stateHappy = 0.4624 }
+		set_variable = { psEcon_stateGdp = 13.8322 }
+		set_variable = { psEcon_stateRural = 0.22 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = SOV
 		add_core_of = SOV
 		victory_points = { 3668 5 }

@@ -7,6 +7,14 @@ state={
 	}
 
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 5.8824 }
+		set_variable = { psEcon_stateDev = 0.4073 }
+		set_variable = { psEcon_stateHappy = 0.5083 }
+		set_variable = { psEcon_stateGdp = 102.3535 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = ARG
 		buildings = {
 			infrastructure = 5

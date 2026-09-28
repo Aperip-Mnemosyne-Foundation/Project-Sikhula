@@ -9,6 +9,14 @@ state={
 	}
 
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 4.0062 }
+		set_variable = { psEcon_stateDev = 0.2593 }
+		set_variable = { psEcon_stateHappy = 0.4286 }
+		set_variable = { psEcon_stateGdp = 30.2025 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = SAF
 		add_core_of = SAF
 		buildings = {

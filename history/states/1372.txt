@@ -5,6 +5,14 @@ state={
 		1510 1622 7428 7465 7497 7574 10401 12241 12375 12420 12480 12490
 	}
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 1.4314 }
+		set_variable = { psEcon_stateDev = 0.1993 }
+		set_variable = { psEcon_stateHappy = 0.4021 }
+		set_variable = { psEcon_stateGdp = 42.1414 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = RAJ
 		add_core_of = RAJ
 		buildings = {

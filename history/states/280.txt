@@ -5,6 +5,14 @@ state = {
 	state_category = rural
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 2.9341 }
+		set_variable = { psEcon_stateDev = 0.1747 }
+		set_variable = { psEcon_stateHappy = 0.3831 }
+		set_variable = { psEcon_stateGdp = 6.2202 }
+		set_variable = { psEcon_stateRural = 0.85 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = BRA
 		add_core_of = BRA
 		buildings = {

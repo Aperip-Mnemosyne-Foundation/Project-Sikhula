@@ -4,6 +4,14 @@ state={
 	name="STATE_822"
 
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 4.0864 }
+		set_variable = { psEcon_stateDev = 0.2656 }
+		set_variable = { psEcon_stateHappy = 0.432 }
+		set_variable = { psEcon_stateGdp = 5.8845 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = KYR
 		add_core_of = KYR
 		buildings = {

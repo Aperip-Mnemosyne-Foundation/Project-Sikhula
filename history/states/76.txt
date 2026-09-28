@@ -8,6 +8,14 @@ state={
 		713 727 746 3696 3709 6711 6714 6731 9672 9685 9687 9704 11676 
 	}
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 4.9716 }
+		set_variable = { psEcon_stateDev = 0.3354 }
+		set_variable = { psEcon_stateHappy = 0.4696 }
+		set_variable = { psEcon_stateGdp = 15.7693 }
+		set_variable = { psEcon_stateRural = 0.22 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = ROM
 		add_core_of = ROM
 		victory_points = { 6711 5 }

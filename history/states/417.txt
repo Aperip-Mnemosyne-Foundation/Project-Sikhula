@@ -6,6 +6,14 @@ state={
 	state_category = large_city
 
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 5.8725 }
+		set_variable = { psEcon_stateDev = 0.4065 }
+		set_variable = { psEcon_stateHappy = 0.5079 }
+		set_variable = { psEcon_stateGdp = 23.9042 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = PER
 		buildings = {
 			infrastructure = 2

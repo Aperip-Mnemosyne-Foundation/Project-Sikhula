@@ -9,6 +9,14 @@ state = {
 	}
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 4.4768 }
+		set_variable = { psEcon_stateDev = 0.2964 }
+		set_variable = { psEcon_stateHappy = 0.4486 }
+		set_variable = { psEcon_stateGdp = 7.0109 }
+		set_variable = { psEcon_stateRural = 0.22 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = SPR
 		add_core_of = SPR
 		victory_points = { 11707 3 }

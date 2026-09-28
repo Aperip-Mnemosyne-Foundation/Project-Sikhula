@@ -7,6 +7,14 @@ state={
 	}
 
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 5.08 }
+		set_variable = { psEcon_stateDev = 0.344 }
+		set_variable = { psEcon_stateHappy = 0.4742 }
+		set_variable = { psEcon_stateGdp = 10.5219 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = BOS
 		add_core_of = BOS
 		victory_points = {

@@ -2,6 +2,14 @@ state={
 	id=1000
 	name="STATE_1000"
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 28.9078 }
+		set_variable = { psEcon_stateDev = 0.6826 }
+		set_variable = { psEcon_stateHappy = 0.5929 }
+		set_variable = { psEcon_stateGdp = 23.1992 }
+		set_variable = { psEcon_stateRural = 0.22 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = USA
 		add_core_of = USA
 		victory_points = { 13563 20 }	#Louisville

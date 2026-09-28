@@ -7,6 +7,14 @@ state={
 	}
 
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 3.769 }
+		set_variable = { psEcon_stateDev = 0.2405 }
+		set_variable = { psEcon_stateHappy = 0.4185 }
+		set_variable = { psEcon_stateGdp = 0.0501 }
+		set_variable = { psEcon_stateRural = 0.85 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = SYR
 		add_core_of = SYR
 		victory_points = { 10383 1 }	#Al-Tanf

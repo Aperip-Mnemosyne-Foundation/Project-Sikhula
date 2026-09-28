@@ -7,6 +7,14 @@ state={
 	state_category = town
 	
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 6.9884 }
+		set_variable = { psEcon_stateDev = 0.4945 }
+		set_variable = { psEcon_stateHappy = 0.5553 }
+		set_variable = { psEcon_stateGdp = 1.3027 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = HRL
 		
 		victory_points = { 1130 3 }

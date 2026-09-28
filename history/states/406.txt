@@ -8,6 +8,14 @@ state={
 	}
 
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 4.292 }
+		set_variable = { psEcon_stateDev = 0.2818 }
+		set_variable = { psEcon_stateHappy = 0.4407 }
+		set_variable = { psEcon_stateGdp = 3.0054 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = KAZ
 		victory_points = {
 			3618 1 

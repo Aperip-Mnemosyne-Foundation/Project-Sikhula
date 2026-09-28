@@ -2,6 +2,14 @@ state={
 	id=924
 	name="STATE_924"
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 5.1025 }
+		set_variable = { psEcon_stateDev = 0.3458 }
+		set_variable = { psEcon_stateHappy = 0.4752 }
+		set_variable = { psEcon_stateGdp = 11.8055 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = YEM
 		add_core_of = HOU
 		add_core_of = YEM

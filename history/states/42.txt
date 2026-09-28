@@ -9,6 +9,14 @@ state = {
 	}
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 21.1059 }
+		set_variable = { psEcon_stateDev = 0.5494 }
+		set_variable = { psEcon_stateHappy = 0.5403 }
+		set_variable = { psEcon_stateGdp = 106.1148 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = GER
 		add_core_of = GER
 		victory_points = { 3558 5 } #Kaiserslautern

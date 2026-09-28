@@ -2,6 +2,14 @@ state={
 	id=1033
 	name="STATE_1033"
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 4.5657 }
+		set_variable = { psEcon_stateDev = 0.3034 }
+		set_variable = { psEcon_stateHappy = 0.4524 }
+		set_variable = { psEcon_stateGdp = 10.202 }
+		set_variable = { psEcon_stateRural = 0.7 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = SYR
 		add_core_of = SYR
 		victory_points = { 4486 1 }

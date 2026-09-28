@@ -7,6 +7,14 @@ state={
 	}
 
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 4.2467 }
+		set_variable = { psEcon_stateDev = 0.2782 }
+		set_variable = { psEcon_stateHappy = 0.4388 }
+		set_variable = { psEcon_stateGdp = 2.6754 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = ISR
 		add_core_of = ISR
 		add_core_of = PAL

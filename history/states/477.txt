@@ -12,6 +12,14 @@ state={
 	}
 
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 4.0945 }
+		set_variable = { psEcon_stateDev = 0.2662 }
+		set_variable = { psEcon_stateHappy = 0.4323 }
+		set_variable = { psEcon_stateGdp = 54.5861 }
+		set_variable = { psEcon_stateRural = 0.22 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = MEX
 		buildings = {
 			infrastructure = 2

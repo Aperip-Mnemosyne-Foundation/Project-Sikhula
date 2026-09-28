@@ -5,6 +5,14 @@ state={
 	state_category = small_island
 	history=
 	{
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 12.7191 }
+		set_variable = { psEcon_stateDev = 0.2796 }
+		set_variable = { psEcon_stateHappy = 0.4165 }
+		set_variable = { psEcon_stateGdp = 0.0326 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = JAP
 		add_core_of = JAP
 		buildings = {

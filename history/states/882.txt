@@ -6,6 +6,14 @@ state={
 		7979 13222 13223 13225 13226 
 	}
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 4.3835 }
+		set_variable = { psEcon_stateDev = 0.289 }
+		set_variable = { psEcon_stateHappy = 0.4446 }
+		set_variable = { psEcon_stateGdp = 2.236 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = MOR
 		add_claim_by = MOR
 		add_core_of = WES

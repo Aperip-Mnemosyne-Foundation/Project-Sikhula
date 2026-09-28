@@ -7,6 +7,14 @@ state={
 	state_category = town
 	
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 3.7211 }
+		set_variable = { psEcon_stateDev = 0.2368 }
+		set_variable = { psEcon_stateHappy = 0.4165 }
+		set_variable = { psEcon_stateGdp = 19.7366 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = MEX
 		victory_points = { 10765 10 } #Hermosillo
 		victory_points = { 4977 4 } #Ciudad Obregon

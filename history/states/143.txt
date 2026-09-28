@@ -10,6 +10,14 @@ state = {
 	}
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 4.204 }
+		set_variable = { psEcon_stateDev = 0.2749 }
+		set_variable = { psEcon_stateHappy = 0.437 }
+		set_variable = { psEcon_stateGdp = 1.8497 }
+		set_variable = { psEcon_stateRural = 0.22 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = NOR
 		add_core_of = NOR
 		victory_points = { 3022 20 }	#Trondheim

@@ -5,6 +5,14 @@ state = {
 	state_category = large_town
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 30.9904 }
+		set_variable = { psEcon_stateDev = 0.7418 }
+		set_variable = { psEcon_stateHappy = 0.6193 }
+		set_variable = { psEcon_stateGdp = 8.8041 }
+		set_variable = { psEcon_stateRural = 0.22 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = USA
 		add_core_of = USA
 		victory_points = { 12699 2 }	#St George

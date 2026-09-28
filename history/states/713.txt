@@ -4,6 +4,14 @@ state = {
 	manpower = 96
 	state_category = tiny_island
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 10.5038 }
+		set_variable = { psEcon_stateDev = 0.2299 }
+		set_variable = { psEcon_stateHappy = 0.395 }
+		set_variable = { psEcon_stateGdp = 0.001 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = FRA
 		buildings = {
 			infrastructure = 1

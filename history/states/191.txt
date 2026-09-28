@@ -5,6 +5,14 @@ state = {
 	state_category = town
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 4.2858 }
+		set_variable = { psEcon_stateDev = 0.2813 }
+		set_variable = { psEcon_stateHappy = 0.4405 }
+		set_variable = { psEcon_stateGdp = 1.7416 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = EST
 		add_core_of = EST
 		victory_points = { 3174 1 } #Pärnu

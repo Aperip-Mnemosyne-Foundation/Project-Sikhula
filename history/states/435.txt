@@ -8,6 +8,14 @@ state={
 	}
 
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 1.5329 }
+		set_variable = { psEcon_stateDev = 0.2168 }
+		set_variable = { psEcon_stateHappy = 0.4121 }
+		set_variable = { psEcon_stateGdp = 83.8108 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = RAJ
 		add_core_of = RAJ
 		victory_points = {

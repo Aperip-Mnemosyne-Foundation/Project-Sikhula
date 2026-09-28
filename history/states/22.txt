@@ -5,6 +5,14 @@ state = {
 	state_category = large_town
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 20.1392 }
+		set_variable = { psEcon_stateDev = 0.5426 }
+		set_variable = { psEcon_stateHappy = 0.5392 }
+		set_variable = { psEcon_stateGdp = 54.1987 }
+		set_variable = { psEcon_stateRural = 0.22 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = FRA
 		add_core_of = FRA
 		victory_points = { 9898 1 } #Montpellier

@@ -5,6 +5,14 @@ state = {
 	state_category = village
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 4.5293 }
+		set_variable = { psEcon_stateDev = 0.3005 }
+		set_variable = { psEcon_stateHappy = 0.4508 }
+		set_variable = { psEcon_stateGdp = 7.2152 }
+		set_variable = { psEcon_stateRural = 0.7 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = SYR
 		add_core_of = SYR
 		victory_points = { 1056 5 }		#Al-Hamah

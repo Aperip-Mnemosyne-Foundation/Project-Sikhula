@@ -8,6 +8,14 @@ state={
 		steel = 1
 	}
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 5.2553 }
+		set_variable = { psEcon_stateDev = 0.3578 }
+		set_variable = { psEcon_stateHappy = 0.4817 }
+		set_variable = { psEcon_stateGdp = 255.698 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = VIN
 		add_core_of = VIN
 		victory_points = { 4401 20 }

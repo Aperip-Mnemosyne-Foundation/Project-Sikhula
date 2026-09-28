@@ -9,6 +9,14 @@ state = {
 	}
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 4.5356 }
+		set_variable = { psEcon_stateDev = 0.301 }
+		set_variable = { psEcon_stateHappy = 0.4511 }
+		set_variable = { psEcon_stateGdp = 6.7309 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = SWI
 		add_core_of = SWI
 		victory_points = { 6666 20 } #Geneva

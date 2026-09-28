@@ -7,6 +7,14 @@ state={
 	}
 
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 4.2019 }
+		set_variable = { psEcon_stateDev = 0.2747 }
+		set_variable = { psEcon_stateHappy = 0.4369 }
+		set_variable = { psEcon_stateGdp = 8.6392 }
+		set_variable = { psEcon_stateRural = 0.22 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = PLD
 		add_core_of = PLD
 		buildings = {

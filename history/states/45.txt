@@ -5,6 +5,14 @@ state = {
 	state_category = town
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 4.5567 }
+		set_variable = { psEcon_stateDev = 0.3027 }
+		set_variable = { psEcon_stateHappy = 0.452 }
+		set_variable = { psEcon_stateGdp = 7.9706 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = SER
 		add_core_of = SER
 		victory_points = { 3617 20 } #Novi Sad

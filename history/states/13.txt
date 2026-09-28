@@ -10,6 +10,14 @@ state = {
 	}
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 5.2418 }
+		set_variable = { psEcon_stateDev = 0.3567 }
+		set_variable = { psEcon_stateHappy = 0.4811 }
+		set_variable = { psEcon_stateGdp = 4.1596 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = EST
 		add_core_of = EST
 		victory_points = { 3152 5 } #Tallinn

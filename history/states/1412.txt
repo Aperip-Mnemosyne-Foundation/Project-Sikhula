@@ -5,6 +5,14 @@ state={
 		10085 14229 1054 14227 12060
 	}
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 3.2208 }
+		set_variable = { psEcon_stateDev = 0.1973 }
+		set_variable = { psEcon_stateHappy = 0.3952 }
+		set_variable = { psEcon_stateGdp = 10.7353 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = KOR
 		add_core_of = KOR
 		add_claim_by = PRK

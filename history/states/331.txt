@@ -10,6 +10,14 @@ state = {
 	}
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 20.1925 }
+		set_variable = { psEcon_stateDev = 0.4983 }
+		set_variable = { psEcon_stateHappy = 0.5151 }
+		set_variable = { psEcon_stateGdp = 10.2276 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = CAN
 		add_core_of = CAN
 		victory_points = { 12505 3 }	#St Johns

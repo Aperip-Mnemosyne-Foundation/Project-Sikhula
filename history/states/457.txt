@@ -11,6 +11,14 @@ state=
 	state_category = rural
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 2.5295 }
+		set_variable = { psEcon_stateDev = 0.1433 }
+		set_variable = { psEcon_stateHappy = 0.3661 }
+		set_variable = { psEcon_stateGdp = 3.471 }
+		set_variable = { psEcon_stateRural = 0.85 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = EGY
 		add_core_of = EGY
 		buildings = {

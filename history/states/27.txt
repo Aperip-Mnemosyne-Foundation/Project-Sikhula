@@ -5,6 +5,14 @@ state = {
 	state_category = large_suburb
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 22.4962 }
+		set_variable = { psEcon_stateDev = 0.6191 }
+		set_variable = { psEcon_stateHappy = 0.5745 }
+		set_variable = { psEcon_stateGdp = 39.8362 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = FRA
 		add_core_of = FRA
 		victory_points = { 3652 5 } #Dijon

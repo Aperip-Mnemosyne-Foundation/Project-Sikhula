@@ -5,6 +5,14 @@ state = {
 	state_category = megalopolis
 
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 27.7924 }
+		set_variable = { psEcon_stateDev = 0.7735 }
+		set_variable = { psEcon_stateHappy = 0.644 }
+		set_variable = { psEcon_stateGdp = 356.4182 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = ENG
 		add_core_of = ENG
 		victory_points = { 6103 50 }	#London

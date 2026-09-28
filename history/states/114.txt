@@ -9,6 +9,14 @@ state = {
 	}
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 18.7974 }
+		set_variable = { psEcon_stateDev = 0.5185 }
+		set_variable = { psEcon_stateHappy = 0.5297 }
+		set_variable = { psEcon_stateGdp = 29.136 }
+		set_variable = { psEcon_stateRural = 0.22 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = ITA
 		add_core_of = ITA
 		victory_points = { 11773 3 }

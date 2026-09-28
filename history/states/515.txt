@@ -4,6 +4,14 @@ state={
 	name="STATE_515"
 
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 2.414 }
+		set_variable = { psEcon_stateDev = 0.1336 }
+		set_variable = { psEcon_stateHappy = 0.361 }
+		set_variable = { psEcon_stateGdp = 3.5793 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 1 }
+
 		owner = CHA
 		add_core_of = CHA
 		buildings = {

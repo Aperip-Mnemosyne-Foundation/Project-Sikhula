@@ -12,6 +12,14 @@ state={
 		aluminium = 5
 	}
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 3.8269 }
+		set_variable = { psEcon_stateDev = 0.2451 }
+		set_variable = { psEcon_stateHappy = 0.421 }
+		set_variable = { psEcon_stateGdp = 1.5885 }
+		set_variable = { psEcon_stateRural = 0.7 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = MON
 		add_core_of = MON
 		add_claim_by = CHI

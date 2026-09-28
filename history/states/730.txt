@@ -5,6 +5,14 @@ state={
 	state_category = tiny_island
 
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 10.407 }
+		set_variable = { psEcon_stateDev = 0.2267 }
+		set_variable = { psEcon_stateHappy = 0.3936 }
+		set_variable = { psEcon_stateGdp = 0.0357 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = FRA
 		add_core_of = FRA
 		buildings = {

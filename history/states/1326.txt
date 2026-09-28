@@ -5,6 +5,14 @@ state={
 	state_category = town
 
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 3.9119 }
+		set_variable = { psEcon_stateDev = 0.2518 }
+		set_variable = { psEcon_stateHappy = 0.4246 }
+		set_variable = { psEcon_stateGdp = 25.2081 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = PER
 		add_core_of = PER
 		victory_points = { 5029 20 } #mashhad

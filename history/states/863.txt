@@ -5,6 +5,14 @@ state={
 		4941 14541 14538 14539
 	}
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 3.5231 }
+		set_variable = { psEcon_stateDev = 0.2211 }
+		set_variable = { psEcon_stateHappy = 0.4081 }
+		set_variable = { psEcon_stateGdp = 15.7494 }
+		set_variable = { psEcon_stateRural = 0.85 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = COG
 		add_core_of = M23
 		buildings = {

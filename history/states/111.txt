@@ -9,6 +9,14 @@ state = {
 	}
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 5.1233 }
+		set_variable = { psEcon_stateDev = 0.3474 }
+		set_variable = { psEcon_stateHappy = 0.4761 }
+		set_variable = { psEcon_stateGdp = 18.8036 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = FIN
 		add_core_of = FIN
 		victory_points = { 3083 20 }	#Turku

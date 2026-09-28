@@ -5,6 +5,14 @@ state = {
 	state_category = large_town
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 6.0319 }
+		set_variable = { psEcon_stateDev = 0.3256 }
+		set_variable = { psEcon_stateHappy = 0.4603 }
+		set_variable = { psEcon_stateGdp = 11.0029 }
+		set_variable = { psEcon_stateRural = 0.22 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = SOV
 		add_core_of = SOV
 		buildings = {

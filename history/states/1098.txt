@@ -5,6 +5,14 @@ state = {
 	state_category = town
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 27.9923 }
+		set_variable = { psEcon_stateDev = 0.6565 }
+		set_variable = { psEcon_stateHappy = 0.5813 }
+		set_variable = { psEcon_stateGdp = 2.7879 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = USA
 		add_core_of = USA
 		victory_points = { 12399 20 }		#Groom Lake

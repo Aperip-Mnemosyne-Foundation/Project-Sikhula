@@ -4,6 +4,14 @@ state={
 	name="STATE_1297"
 
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 3.4128 }
+		set_variable = { psEcon_stateDev = 0.2124 }
+		set_variable = { psEcon_stateHappy = 0.4034 }
+		set_variable = { psEcon_stateGdp = 3.8462 }
+		set_variable = { psEcon_stateRural = 0.7 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = ETH
 		victory_points = { 14164 1 }
 		buildings = {

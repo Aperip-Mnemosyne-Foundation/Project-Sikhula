@@ -2,6 +2,14 @@ state={
 	id=790
 	name="STATE_790"
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 2.9671 }
+		set_variable = { psEcon_stateDev = 0.1773 }
+		set_variable = { psEcon_stateHappy = 0.3845 }
+		set_variable = { psEcon_stateGdp = 1.1579 }
+		set_variable = { psEcon_stateRural = 0.85 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = AZR
 		add_core_of = AZR
 		

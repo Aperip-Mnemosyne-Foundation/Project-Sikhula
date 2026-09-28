@@ -7,6 +7,14 @@ state = {
 	state_category = large_city
 
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 37.6282 }
+		set_variable = { psEcon_stateDev = 0.9307 }
+		set_variable = { psEcon_stateHappy = 0.7033 }
+		set_variable = { psEcon_stateGdp = 35.2476 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = USA
 		victory_points = { 11975 6 }#Savannah
 		buildings = {

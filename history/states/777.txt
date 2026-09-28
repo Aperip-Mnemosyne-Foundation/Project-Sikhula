@@ -3,6 +3,14 @@ state={
 	name="STATE_777"
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 3.0598 }
+		set_variable = { psEcon_stateDev = 0.1846 }
+		set_variable = { psEcon_stateHappy = 0.3884 }
+		set_variable = { psEcon_stateGdp = 20.0437 }
+		set_variable = { psEcon_stateRural = 0.85 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = GHA
 		add_core_of = GHA
 		buildings = {

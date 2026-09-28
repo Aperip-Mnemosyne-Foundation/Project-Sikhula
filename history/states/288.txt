@@ -9,6 +9,14 @@ state = {
 	}
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 6.093 }
+		set_variable = { psEcon_stateDev = 0.4239 }
+		set_variable = { psEcon_stateHappy = 0.5172 }
+		set_variable = { psEcon_stateGdp = 37.6851 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = BRM
 		victory_points = { 1330 7 }
 		victory_points = { 7254 1 }

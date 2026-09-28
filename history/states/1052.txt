@@ -3,6 +3,14 @@ state={
 	name="STATE_1052"
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 4.5745 }
+		set_variable = { psEcon_stateDev = 0.3041 }
+		set_variable = { psEcon_stateHappy = 0.4527 }
+		set_variable = { psEcon_stateGdp = 10.1246 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = AFG
 		add_core_of = AFG
 		add_core_of = AFG

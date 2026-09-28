@@ -9,6 +9,14 @@ state = {
 	}
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 4.9438 }
+		set_variable = { psEcon_stateDev = 0.3332 }
+		set_variable = { psEcon_stateHappy = 0.4684 }
+		set_variable = { psEcon_stateGdp = 77.1236 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = ECU
 		add_core_of = ECU
 		victory_points = { 12798 5 }

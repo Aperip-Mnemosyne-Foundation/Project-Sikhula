@@ -5,6 +5,14 @@ state = {
 	state_category = village
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 3.513 }
+		set_variable = { psEcon_stateDev = 0.2204 }
+		set_variable = { psEcon_stateHappy = 0.4076 }
+		set_variable = { psEcon_stateGdp = 56.2755 }
+		set_variable = { psEcon_stateRural = 0.7 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = ETH
 		add_core_of = ETH
 		victory_points = { 4954 5 }

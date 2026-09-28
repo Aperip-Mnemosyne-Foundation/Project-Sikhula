@@ -5,6 +5,14 @@ state={
 	state_category = town
 
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 18.6149 }
+		set_variable = { psEcon_stateDev = 0.4931 }
+		set_variable = { psEcon_stateHappy = 0.5164 }
+		set_variable = { psEcon_stateGdp = 16.893 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = FRA
 		add_core_of = FRA
 		victory_points = { 778 2 }		#Annecy
