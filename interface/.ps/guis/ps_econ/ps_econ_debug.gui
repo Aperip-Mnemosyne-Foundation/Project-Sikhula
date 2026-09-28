@@ -2,7 +2,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "psEcon_debugWindow"
 		position = { x = 8 y = 4 }
-		size = { width = 520 height = 214 }
+		size = { width = 520 height = 236 }
 		clipping = no
 
 		instantTextboxType = {
@@ -91,6 +91,16 @@ guiTypes = {
 			font = "Youhei"
 			text_color_code = W
 			text = "psEcon_debugLine9"
+			maxWidth = 510
+			maxHeight = 20
+			format = left
+		}
+		instantTextboxType = {
+			name = "psEcon_debugLine10"
+			position = { x = 0 y = 198 }
+			font = "Youhei"
+			text_color_code = W
+			text = "psEcon_debugLine10"
 			maxWidth = 510
 			maxHeight = 20
 			format = left
