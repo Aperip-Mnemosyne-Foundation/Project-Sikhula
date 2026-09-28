@@ -1,3 +1,5 @@
+# Country pulse. The monthly close writes these variables, and the modifier applies them every day.
+
 psEcon_pulse = {
 	enable = { always = yes }
 	remove_trigger = { always = no }

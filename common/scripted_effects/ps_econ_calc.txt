@@ -1,3 +1,5 @@
+# Monthly score. These effects only write variables. psEcon_publish is what reaches the game.
+
 psEcon_calcBalances = {
 	# Prices, budget leakage, food, energy, and the shock-therapy package.
 	set_temp_variable = { gov = psEcon_govStock }
@@ -209,8 +211,8 @@ psEcon_calcBalances = {
 	set_variable = { psEcon_energyCover = energyCover }
 	set_variable = { psEcon_energyStress = energyStress }
 }
+# Shock therapy is a real package: it hurts immediately, and only a capable state gets the recovery.
 psEcon_calcDemand = {
-	# Shock therapy is a real package: it hurts immediately, and only a capable state gets the recovery.
 	set_temp_variable = { gov = psEcon_govNow }
 	set_temp_variable = { stance = psEcon_stanceUsed }
 	set_variable = { psEcon_therapyPain = 0 }
@@ -359,8 +361,8 @@ psEcon_calcDemand = {
 		set_variable = { psEcon_uUsed = psEcon_uInstant }
 	}
 }
+# Potential is the supply trend. Heat, momentum, and volatility are the path around it.
 psEcon_calcPath = {
-	# Potential is the supply trend. Heat, momentum, and volatility are the path around it.
 	set_temp_variable = { poor = 18 }
 	subtract_from_temp_variable = { poor = psEcon_income }
 	divide_temp_variable = { poor = 18 }
@@ -644,8 +646,8 @@ psEcon_calcPath = {
 	clamp_temp_variable = { var = infTarget min = -0.01 max = 0.40 }
 	set_variable = { psEcon_infTarget = infTarget }
 }
+# Factory output and construction are the gameplay result, not a sidebar number.
 psEcon_calcOutput = {
-	# Factory output and construction are the gameplay result, not a sidebar number.
 	set_temp_variable = { premium = psEcon_income }
 	subtract_from_temp_variable = { premium = 14 }
 	divide_temp_variable = { premium = 900 }
@@ -1012,6 +1014,7 @@ psEcon_calcOutput = {
 	set_variable = { psEcon_conscription = draft }
 }
 
+# Run ownership, balances, demand, the growth path, and then the gameplay outputs.
 psEcon_calculate = {
 	psInd_apply = yes
 	psEcon_calcBalances = yes

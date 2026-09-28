@@ -1,5 +1,7 @@
+# World prices and standing laws, copied into plain variables for the rest of the month.
+
+# Standing laws are evaluated in mtth:. This block only copies the bite.
 psEcon_readWorld = {
-	# Standing laws are evaluated in mtth:. This block only copies the bite.
 	set_variable = { psEcon_atWar = 0 }
 	if = {
 		limit = { has_war = yes }

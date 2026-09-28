@@ -18,6 +18,7 @@ psEcon_clampLevers = {
 	clamp_variable = { var = psEcon_shareEnv min = 0.04 max = 0.60 }
 }
 
+# The five budget shares are portions of one purse, so they are scaled back to 1.
 psEcon_normalizeShares = {
 	set_temp_variable = { shareSum = psEcon_shareMil }
 	add_to_temp_variable = { shareSum = psEcon_shareEdu }
@@ -35,6 +36,7 @@ psEcon_normalizeShares = {
 	divide_variable = { psEcon_shareEnv = shareSum }
 }
 
+# psEcon_inputBudget picks the share. psEcon_inputStep is the signed move, usually 0.02.
 psEcon_shiftBudgetShare = {
 	if = {
 		limit = { check_variable = { psEcon_inputBudget = 1 } }
@@ -60,28 +62,32 @@ psEcon_shiftBudgetShare = {
 	psEcon_normalizeShares = yes
 }
 
+# Player tax lever. It is clamped now and only paid at the next monthly lock.
 psEcon_setTaxRate = {
 	add_to_variable = { psEcon_taxRate = psEcon_inputStep }
 	psEcon_clampLevers = yes
 }
 
+# Player spend lever. It is clamped now and only paid at the next monthly lock.
 psEcon_setSpendShare = {
 	add_to_variable = { psEcon_spendShare = psEcon_inputStep }
 	psEcon_clampLevers = yes
 }
 
+# Player money lever, from tight to loose. It is clamped now and paid at the next lock.
 psEcon_setMonetaryStance = {
 	add_to_variable = { psEcon_monetaryStance = psEcon_inputStep }
 	psEcon_clampLevers = yes
 }
 
+# Player heavy-industry bias. It is clamped now and paid at the next monthly lock.
 psEcon_setHeavyBias = {
 	add_to_variable = { psEcon_heavyBias = psEcon_inputStep }
 	psEcon_clampLevers = yes
 }
 
+# The button is the package, not a press release. Levers actually move.
 psEcon_beginTherapy = {
-	# The button is the package, not a press release. Levers actually move.
 	set_variable = { psEcon_therapyLeft = 36 }
 	set_variable = { psEcon_therapyElapsed = 0 }
 	clr_country_flag = psEcon_toldTherapy
@@ -98,10 +104,12 @@ psEcon_beginTherapy = {
 	psEcon_normalizeShares = yes
 }
 
+# End shock therapy early. The levers stay where the package already moved them.
 psEcon_cancelTherapy = {
 	set_variable = { psEcon_therapyLeft = 0 }
 }
 
+# psEcon_inputShock: 1 inflation, 2 food, 3 oil, 4 demand. The month rescores immediately.
 psEcon_addShock = {
 	if = {
 		limit = { check_variable = { psEcon_inputShock = 1 } }
@@ -126,6 +134,7 @@ psEcon_addShock = {
 	psEcon_refresh = yes
 }
 
+# Wipe the four shocks and rescore. The budget levers are left where they are.
 psEcon_clearShocks = {
 	set_variable = { psEcon_shockInflation = 0 }
 	set_variable = { psEcon_shockFood = 0 }
@@ -134,8 +143,8 @@ psEcon_clearShocks = {
 	psEcon_refresh = yes
 }
 
+# One cash purchase. It does not raise the standing budget.
 psEcon_buyGrain = {
-	# One cash purchase. It does not raise the standing budget.
 	if = {
 		limit = {
 			check_variable = { psEcon_treasury > 0.0039 }
@@ -148,6 +157,7 @@ psEcon_buyGrain = {
 	}
 }
 
+# One project at a time. Kind 1 is manufacturing, kind 2 is technology. The cashier pays it monthly.
 psEcon_startProject = {
 	if = {
 		limit = { check_variable = { psEcon_projectLeft < 0.0001 } }
@@ -158,6 +168,7 @@ psEcon_startProject = {
 	}
 }
 
+# Drop the unpaid balance. Money already paid is not returned.
 psEcon_stopProject = {
 	set_variable = { psEcon_projectLeft = 0 }
 	set_variable = { psEcon_projectFlow = 0 }
@@ -167,6 +178,7 @@ psEcon_stopProject = {
 }
 
 
+# Interface and debug hook for an immediate monthly close.
 psEcon_requestTick = {
 	psEcon_monthly = yes
 }
