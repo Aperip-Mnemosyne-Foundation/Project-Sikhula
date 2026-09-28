@@ -3,6 +3,14 @@ state={
 	name="STATE_774"
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 3.4079 }
+		set_variable = { psEcon_stateDev = 0.2121 }
+		set_variable = { psEcon_stateHappy = 0.4032 }
+		set_variable = { psEcon_stateGdp = 6.9862 }
+		set_variable = { psEcon_stateRural = 0.85 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = GNA
 		add_core_of = GNA
 		victory_points = { 5039 2 }

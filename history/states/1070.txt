@@ -5,6 +5,14 @@ state = {
 	state_category = city
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 38.5667 }
+		set_variable = { psEcon_stateDev = 0.9574 }
+		set_variable = { psEcon_stateHappy = 0.7152 }
+		set_variable = { psEcon_stateGdp = 43.2719 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = USA
 		add_core_of = USA
 		victory_points = { 3823 25 }	#Richmond

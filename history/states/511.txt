@@ -7,6 +7,14 @@ state={
 	}
 
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 3.8319 }
+		set_variable = { psEcon_stateDev = 0.2455 }
+		set_variable = { psEcon_stateHappy = 0.4212 }
+		set_variable = { psEcon_stateGdp = 11.8416 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = ARG
 		victory_points = { 7500 5 }
 		victory_points = { 12942 5 }

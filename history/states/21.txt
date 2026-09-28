@@ -5,6 +5,14 @@ state = {
 	state_category = city
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 24.0368 }
+		set_variable = { psEcon_stateDev = 0.6691 }
+		set_variable = { psEcon_stateHappy = 0.5975 }
+		set_variable = { psEcon_stateGdp = 49.5254 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = FRA
 		add_core_of = FRA
 		victory_points = { 911 2 } #Toulon

@@ -5,6 +5,14 @@ state = {
 	state_category = village
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 3.6182 }
+		set_variable = { psEcon_stateDev = 0.2286 }
+		set_variable = { psEcon_stateHappy = 0.4121 }
+		set_variable = { psEcon_stateGdp = 8.6122 }
+		set_variable = { psEcon_stateRural = 0.7 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = IRQ
 		add_core_of = IRQ
 		victory_points = { 10876 5 }

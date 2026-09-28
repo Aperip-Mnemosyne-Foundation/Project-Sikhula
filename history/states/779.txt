@@ -2,6 +2,14 @@ state={
 	id=779
 	name="STATE_779"
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 4.8 }
+		set_variable = { psEcon_stateDev = 0.3219 }
+		set_variable = { psEcon_stateHappy = 0.4623 }
+		set_variable = { psEcon_stateGdp = 8.106 }
+		set_variable = { psEcon_stateRural = 0.7 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = CPC
 		add_core_of = CAR
 		add_core_of = CPC

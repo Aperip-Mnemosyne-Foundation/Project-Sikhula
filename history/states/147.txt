@@ -8,7 +8,15 @@ state = {
 		tungsten = 1
 	}
 	
-	history = {	
+	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 3.8424 }
+		set_variable = { psEcon_stateDev = 0.185 }
+		set_variable = { psEcon_stateHappy = 0.3863 }
+		set_variable = { psEcon_stateGdp = 0.2773 }
+		set_variable = { psEcon_stateRural = 0.75 }
+		set_variable = { psEcon_stateWaste = 0 }
+	
 		owner = SOV
 		add_core_of = SOV
 		buildings = {

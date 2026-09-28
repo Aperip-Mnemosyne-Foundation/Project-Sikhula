@@ -2,6 +2,14 @@ state={
 	id=1034
 	name="STATE_1034"
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 5.4107 }
+		set_variable = { psEcon_stateDev = 0.3701 }
+		set_variable = { psEcon_stateHappy = 0.4883 }
+		set_variable = { psEcon_stateGdp = 12.5166 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = SYR
 		add_core_of = SYR
 		victory_points = { 13651 20 }	#Aleppo

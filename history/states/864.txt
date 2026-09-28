@@ -8,6 +8,14 @@ state={
 		tungsten = 4
 	}
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 3.5789 }
+		set_variable = { psEcon_stateDev = 0.2255 }
+		set_variable = { psEcon_stateHappy = 0.4104 }
+		set_variable = { psEcon_stateGdp = 4.4406 }
+		set_variable = { psEcon_stateRural = 0.85 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = COG
 		add_core_of = COG
 		victory_points = { 10766 2 }

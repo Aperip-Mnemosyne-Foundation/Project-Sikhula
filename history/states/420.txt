@@ -4,6 +4,14 @@ state={
 	name="STATE_420" #Shomal
 
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 4.3094 }
+		set_variable = { psEcon_stateDev = 0.2832 }
+		set_variable = { psEcon_stateHappy = 0.4415 }
+		set_variable = { psEcon_stateGdp = 26.4027 }
+		set_variable = { psEcon_stateRural = 0.22 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = PER
 		buildings = {
 			infrastructure = 3

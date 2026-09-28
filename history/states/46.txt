@@ -9,6 +9,14 @@ state = {
 	}
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 5.6009 }
+		set_variable = { psEcon_stateDev = 0.3851 }
+		set_variable = { psEcon_stateHappy = 0.4963 }
+		set_variable = { psEcon_stateGdp = 19.8875 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = ROM
 		add_core_of = ROM
 		victory_points = { 3663 5 } #Ploiesti

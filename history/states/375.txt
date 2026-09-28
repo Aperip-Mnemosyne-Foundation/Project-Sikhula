@@ -11,6 +11,14 @@ state = {
 	}
 
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 28.2368 }
+		set_variable = { psEcon_stateDev = 0.6635 }
+		set_variable = { psEcon_stateHappy = 0.5844 }
+		set_variable = { psEcon_stateGdp = 48.3289 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = USA
 		victory_points = { 1500 3 } #Beaumont
 		victory_points = { 6968 5 } #Longview

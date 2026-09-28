@@ -6,6 +6,14 @@ state={
 	}
 
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 6.1121 }
+		set_variable = { psEcon_stateDev = 0.4254 }
+		set_variable = { psEcon_stateHappy = 0.5181 }
+		set_variable = { psEcon_stateGdp = 1.2224 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = KOS
 		add_core_of = SER
 		victory_points = { 14400 2 } #Mitrovica

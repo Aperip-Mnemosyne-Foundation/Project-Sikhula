@@ -5,6 +5,14 @@ state={
 		14907 
 	}
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 3.7878 }
+		set_variable = { psEcon_stateDev = 0.242 }
+		set_variable = { psEcon_stateHappy = 0.4193 }
+		set_variable = { psEcon_stateGdp = 0.3788 }
+		set_variable = { psEcon_stateRural = 0.7 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = BRM
 		add_core_of = WAT
 		add_core_of = BRM

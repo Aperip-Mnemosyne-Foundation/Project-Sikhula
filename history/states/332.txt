@@ -5,6 +5,14 @@ state = {
 	state_category = rural
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 15.4149 }
+		set_variable = { psEcon_stateDev = 0.3515 }
+		set_variable = { psEcon_stateHappy = 0.4485 }
+		set_variable = { psEcon_stateGdp = 0.4442 }
+		set_variable = { psEcon_stateRural = 0.85 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = CAN
 		add_core_of = CAN
 		victory_points = { 1785 2 }	#Labrador City

@@ -5,6 +5,14 @@ state = {
 	state_category = town
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 26.1991 }
+		set_variable = { psEcon_stateDev = 0.6055 }
+		set_variable = { psEcon_stateHappy = 0.5586 }
+		set_variable = { psEcon_stateGdp = 39.2855 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = USA
 		add_core_of = USA
 		victory_points = { 13884 20 }	#Salt Lake City

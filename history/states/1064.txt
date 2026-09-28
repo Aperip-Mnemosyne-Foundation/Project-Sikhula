@@ -5,6 +5,14 @@ state = {
 	state_category = town
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 4.1736 }
+		set_variable = { psEcon_stateDev = 0.2725 }
+		set_variable = { psEcon_stateHappy = 0.4357 }
+		set_variable = { psEcon_stateGdp = 2.4923 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = SAU
 		add_core_of = SAU
 		victory_points = { 2057 3 }

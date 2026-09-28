@@ -6,6 +6,14 @@ state=
 	manpower=11532
 	history=
 	{
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 2.2642 }
+		set_variable = { psEcon_stateDev = 0.1218 }
+		set_variable = { psEcon_stateHappy = 0.3546 }
+		set_variable = { psEcon_stateGdp = 0.0261 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = ECU
 		buildings = {
 			infrastructure = 1

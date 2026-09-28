@@ -5,6 +5,14 @@ state = {
 	state_category = town
 
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 4.1144 }
+		set_variable = { psEcon_stateDev = 0.2678 }
+		set_variable = { psEcon_stateHappy = 0.4332 }
+		set_variable = { psEcon_stateGdp = 1.157 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = BUL
 		add_core_of = BUL
 		add_claim_by = ROM

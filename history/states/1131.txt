@@ -4,6 +4,14 @@ state={
 	name="STATE_1131"
 
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 1.0777 }
+		set_variable = { psEcon_stateDev = 0.1382 }
+		set_variable = { psEcon_stateHappy = 0.3675 }
+		set_variable = { psEcon_stateGdp = 0.2347 }
+		set_variable = { psEcon_stateRural = 0.85 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = RAJ
 		add_core_of = PAK
 		add_core_of = RAJ

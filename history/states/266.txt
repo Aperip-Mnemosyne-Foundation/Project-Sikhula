@@ -10,6 +10,14 @@ state = {
 	}
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 5.4767 }
+		set_variable = { psEcon_stateDev = 0.3753 }
+		set_variable = { psEcon_stateHappy = 0.4911 }
+		set_variable = { psEcon_stateGdp = 81.4724 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = PER
 		add_core_of = PER
 		victory_points = { 10837 30 } #tehran

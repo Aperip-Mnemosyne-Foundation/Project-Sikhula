@@ -4,6 +4,14 @@ state={
 	name="STATE_562"
 
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 3.6954 }
+		set_variable = { psEcon_stateDev = 0.1756 }
+		set_variable = { psEcon_stateHappy = 0.3814 }
+		set_variable = { psEcon_stateGdp = 0.5802 }
+		set_variable = { psEcon_stateRural = 0.75 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = SOV
 		buildings = {
 			infrastructure = 1

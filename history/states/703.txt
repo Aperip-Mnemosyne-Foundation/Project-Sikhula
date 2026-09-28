@@ -4,6 +4,14 @@ state={
 	manpower=458
 	state_category = pastoral
 	history= {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 11.9058 }
+		set_variable = { psEcon_stateDev = 0.2662 }
+		set_variable = { psEcon_stateHappy = 0.4112 }
+		set_variable = { psEcon_stateGdp = 0.0055 }
+		set_variable = { psEcon_stateRural = 0.75 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = ENG
 		buildings = {
 			infrastructure = 1

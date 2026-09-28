@@ -5,6 +5,14 @@ state = {
 	state_category = conurbation
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 3.0211 }
+		set_variable = { psEcon_stateDev = 0.3591 }
+		set_variable = { psEcon_stateHappy = 0.4904 }
+		set_variable = { psEcon_stateGdp = 21.8568 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = PRC
 		add_core_of = PRC
 		add_claim_by = CHI

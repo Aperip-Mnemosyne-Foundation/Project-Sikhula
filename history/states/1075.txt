@@ -5,6 +5,14 @@ state = {
 	state_category = large_town
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 31.2048 }
+		set_variable = { psEcon_stateDev = 0.7479 }
+		set_variable = { psEcon_stateHappy = 0.622 }
+		set_variable = { psEcon_stateGdp = 20.3478 }
+		set_variable = { psEcon_stateRural = 0.22 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = USA
 		add_core_of = USA
 		victory_points = { 7420 5 }#Traverse City

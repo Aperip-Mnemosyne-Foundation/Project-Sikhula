@@ -2,6 +2,14 @@ state={
 	id=803
 	name="STATE_803"
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 4.3579 }
+		set_variable = { psEcon_stateDev = 0.287 }
+		set_variable = { psEcon_stateHappy = 0.4435 }
+		set_variable = { psEcon_stateGdp = 4.5758 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = TMS
 		add_core_of = TMS
 		buildings = {

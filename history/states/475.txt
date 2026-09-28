@@ -11,6 +11,14 @@ state={
 	}
 
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 2.9605 }
+		set_variable = { psEcon_stateDev = 0.1768 }
+		set_variable = { psEcon_stateHappy = 0.3842 }
+		set_variable = { psEcon_stateGdp = 9.1951 }
+		set_variable = { psEcon_stateRural = 0.85 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 	victory_points = { 1900 1 } #Tuxtla Gutierrez
 		owner = MEX
 		buildings = {

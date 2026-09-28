@@ -5,6 +5,14 @@ state = {
 	state_category = suburb
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 33.4801 }
+		set_variable = { psEcon_stateDev = 0.8126 }
+		set_variable = { psEcon_stateHappy = 0.6508 }
+		set_variable = { psEcon_stateGdp = 47.3668 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = USA
 		add_core_of = USA
 		buildings = {

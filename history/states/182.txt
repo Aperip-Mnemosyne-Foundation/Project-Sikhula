@@ -5,6 +5,14 @@ state = {
 	state_category = town
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 3.791 }
+		set_variable = { psEcon_stateDev = 0.2423 }
+		set_variable = { psEcon_stateHappy = 0.4195 }
+		set_variable = { psEcon_stateGdp = 1.4705 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = GRE
 		add_core_of = GRE
 		victory_points = { 9940 1 }

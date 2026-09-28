@@ -7,6 +7,14 @@ state={
 	state_category = wasteland
 
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 2.241 }
+		set_variable = { psEcon_stateDev = 0.12 }
+		set_variable = { psEcon_stateHappy = 0.3536 }
+		set_variable = { psEcon_stateGdp = 0.012 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 1 }
+
 		owner = PER
 		buildings = {
 			infrastructure = 1

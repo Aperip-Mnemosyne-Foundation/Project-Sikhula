@@ -9,6 +9,14 @@
 		}
 		
 		history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 6.5991 }
+		set_variable = { psEcon_stateDev = 0.362 }
+		set_variable = { psEcon_stateHappy = 0.4794 }
+		set_variable = { psEcon_stateGdp = 12.6289 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 			owner = SOV
 			add_claim_by = UKR
 			add_core_of = SOV

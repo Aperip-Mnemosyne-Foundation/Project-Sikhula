@@ -5,6 +5,14 @@ state={
 		oil=148
 	}
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 2.3708 }
+		set_variable = { psEcon_stateDev = 0.1302 }
+		set_variable = { psEcon_stateHappy = 0.3591 }
+		set_variable = { psEcon_stateGdp = 0.8298 }
+		set_variable = { psEcon_stateRural = 0.75 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = ANG
 		add_core_of = ANG
 		buildings = {

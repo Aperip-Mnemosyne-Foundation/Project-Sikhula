@@ -2,6 +2,14 @@ state={
 	id=1287
 	name="STATE_1287"
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 4.3454 }
+		set_variable = { psEcon_stateDev = 0.2861 }
+		set_variable = { psEcon_stateHappy = 0.443 }
+		set_variable = { psEcon_stateGdp = 3.1714 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = MLI
 		add_core_of = MLI
 		victory_points = { 5101 5 }

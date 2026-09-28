@@ -9,6 +9,14 @@ state = {
 	}
 
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 18.483 }
+		set_variable = { psEcon_stateDev = 0.4667 }
+		set_variable = { psEcon_stateHappy = 0.5024 }
+		set_variable = { psEcon_stateGdp = 11.2048 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = GER
 		add_core_of = GER
 		victory_points = { 9388 3 } #Stralsund

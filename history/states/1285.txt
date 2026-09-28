@@ -2,6 +2,14 @@ state={
 	id=1285
 	name="STATE_1285"
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 5.9686 }
+		set_variable = { psEcon_stateDev = 0.4141 }
+		set_variable = { psEcon_stateHappy = 0.512 }
+		set_variable = { psEcon_stateGdp = 17.3988 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = UKR
 		add_core_of = UKR
 		victory_points = { 525 25 }

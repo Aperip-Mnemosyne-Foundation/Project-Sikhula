@@ -10,6 +10,14 @@ state = {
 	}
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 22.4605 }
+		set_variable = { psEcon_stateDev = 0.6032 }
+		set_variable = { psEcon_stateHappy = 0.5658 }
+		set_variable = { psEcon_stateGdp = 32.155 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = ENG
 		add_core_of = ENG
 		add_core_of = SCO

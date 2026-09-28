@@ -8,7 +8,15 @@ state={
 		steel=10
 	}
 	
-	history = { 
+	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 4.3629 }
+		set_variable = { psEcon_stateDev = 0.2874 }
+		set_variable = { psEcon_stateHappy = 0.4437 }
+		set_variable = { psEcon_stateGdp = 19.634 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+ 
 		owner = MAL
 		add_core_of = MAL
 		victory_points = { 7342 10 }

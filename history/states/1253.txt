@@ -2,6 +2,14 @@ state={
 	id=1253
 	name="STATE_1253"
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 26.2263 }
+		set_variable = { psEcon_stateDev = 0.6063 }
+		set_variable = { psEcon_stateHappy = 0.559 }
+		set_variable = { psEcon_stateGdp = 24.5491 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = USA
 		add_core_of = USA
 		victory_points = { 10526 2 } #Eau Claire

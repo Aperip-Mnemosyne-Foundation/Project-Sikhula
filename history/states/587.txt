@@ -4,6 +4,14 @@ state={
 	name="STATE_587"
 
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 4.2746 }
+		set_variable = { psEcon_stateDev = 0.2804 }
+		set_variable = { psEcon_stateHappy = 0.44 }
+		set_variable = { psEcon_stateGdp = 9.5336 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = UZB
 		add_core_of = UZB
 		victory_points = { 1614 3 }

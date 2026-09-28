@@ -2,6 +2,14 @@ state={
 	id=786
 	name="STATE_786"
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 17.4416 }
+		set_variable = { psEcon_stateDev = 0.4734 }
+		set_variable = { psEcon_stateHappy = 0.5088 }
+		set_variable = { psEcon_stateGdp = 6.5013 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = ITA
 		
 		buildings = {

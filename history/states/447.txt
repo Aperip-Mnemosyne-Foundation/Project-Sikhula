@@ -11,6 +11,14 @@ state={
 	}
 
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 5.1593 }
+		set_variable = { psEcon_stateDev = 0.3513 }
+		set_variable = { psEcon_stateHappy = 0.478 }
+		set_variable = { psEcon_stateGdp = 86.9822 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = EGY
 		add_core_of = EGY
 		victory_points = { 4076 30 }

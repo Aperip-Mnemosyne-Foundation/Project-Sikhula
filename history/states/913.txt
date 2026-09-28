@@ -6,6 +6,14 @@ state={
 	state_category = pastoral
 
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 2.5298 }
+		set_variable = { psEcon_stateDev = 0.1428 }
+		set_variable = { psEcon_stateHappy = 0.3659 }
+		set_variable = { psEcon_stateGdp = 1.5384 }
+		set_variable = { psEcon_stateRural = 0.75 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = PER
 		buildings = {
 			infrastructure = 2

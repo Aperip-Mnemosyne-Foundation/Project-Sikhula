@@ -10,6 +10,14 @@ state = {
 	}
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 18.1824 }
+		set_variable = { psEcon_stateDev = 0.4791 }
+		set_variable = { psEcon_stateHappy = 0.5099 }
+		set_variable = { psEcon_stateGdp = 4.37 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = FRA
 		add_core_of = FRA
 		add_core_of = CAY

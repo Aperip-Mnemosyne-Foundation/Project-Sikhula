@@ -5,6 +5,14 @@ state={
 	state_category = rural
 
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 3.8343 }
+		set_variable = { psEcon_stateDev = 0.2457 }
+		set_variable = { psEcon_stateHappy = 0.4213 }
+		set_variable = { psEcon_stateGdp = 0.6978 }
+		set_variable = { psEcon_stateRural = 0.85 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = EQG
 		buildings = {
 			infrastructure = 1

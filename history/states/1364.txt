@@ -7,6 +7,14 @@ state={
 	}
 
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 5.331 }
+		set_variable = { psEcon_stateDev = 0.3638 }
+		set_variable = { psEcon_stateHappy = 0.4849 }
+		set_variable = { psEcon_stateGdp = 6.4631 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = BEL
 		add_core_of = BEL
 		victory_points = { 516 25 } #Brussels

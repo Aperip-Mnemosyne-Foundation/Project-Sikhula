@@ -2,6 +2,14 @@ state={
 	id=1012
 	name="STATE_1012"
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 31.3638 }
+		set_variable = { psEcon_stateDev = 0.7524 }
+		set_variable = { psEcon_stateHappy = 0.624 }
+		set_variable = { psEcon_stateGdp = 25.0868 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = USA
 		add_core_of = ALA
 		add_core_of = USA

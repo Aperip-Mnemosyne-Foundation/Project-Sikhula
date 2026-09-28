@@ -5,6 +5,14 @@ state = {
 	state_category = large_town
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 4.8 }
+		set_variable = { psEcon_stateDev = 0.3219 }
+		set_variable = { psEcon_stateHappy = 0.4623 }
+		set_variable = { psEcon_stateGdp = 3.5612 }
+		set_variable = { psEcon_stateRural = 0.22 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = BHU
 		add_core_of = BHU
 		victory_points = { 8010 3 }

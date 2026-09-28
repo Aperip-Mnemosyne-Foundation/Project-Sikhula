@@ -9,6 +9,14 @@ state = {
 	}
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 22.4056 }
+		set_variable = { psEcon_stateDev = 0.6161 }
+		set_variable = { psEcon_stateHappy = 0.5731 }
+		set_variable = { psEcon_stateGdp = 72.1931 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = FRA
 		add_core_of = FRA
 		victory_points = { 9434 5 } #Le Havre

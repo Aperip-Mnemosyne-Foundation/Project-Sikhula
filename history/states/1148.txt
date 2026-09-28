@@ -5,6 +5,14 @@ state = {
 	state_category = large_city
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 4.8112 }
+		set_variable = { psEcon_stateDev = 0.3228 }
+		set_variable = { psEcon_stateHappy = 0.4628 }
+		set_variable = { psEcon_stateGdp = 32.0465 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = CHI
 		add_core_of = CHI
 		add_claim_by = PRC

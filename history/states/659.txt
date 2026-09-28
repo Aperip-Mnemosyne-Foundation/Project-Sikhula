@@ -11,6 +11,14 @@ state={
 	}
 
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 3.7288 }
+		set_variable = { psEcon_stateDev = 0.2374 }
+		set_variable = { psEcon_stateHappy = 0.4168 }
+		set_variable = { psEcon_stateGdp = 5.386 }
+		set_variable = { psEcon_stateRural = 0.85 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = YEM
 		add_core_of = HOU
 		add_core_of = AAS

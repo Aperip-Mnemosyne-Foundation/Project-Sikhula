@@ -5,6 +5,14 @@ state = {
 	state_category = town
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 3.7249 }
+		set_variable = { psEcon_stateDev = 0.2371 }
+		set_variable = { psEcon_stateHappy = 0.4166 }
+		set_variable = { psEcon_stateGdp = 11.9792 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = MEX
 		add_core_of = MEX
 		victory_points = { 8057 7 } #Culiacan

@@ -5,6 +5,14 @@ state = {
 	state_category = suburb
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 4.7474 }
+		set_variable = { psEcon_stateDev = 0.3177 }
+		set_variable = { psEcon_stateHappy = 0.4601 }
+		set_variable = { psEcon_stateGdp = 9.3964 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = SPR
 		add_core_of = SPR
 		victory_points = { 6906 20 }	#Valencia

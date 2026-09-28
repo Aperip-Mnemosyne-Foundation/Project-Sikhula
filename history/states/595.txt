@@ -9,6 +9,14 @@ state={
 	}
 
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 2.5437 }
+		set_variable = { psEcon_stateDev = 0.2945 }
+		set_variable = { psEcon_stateHappy = 0.4542 }
+		set_variable = { psEcon_stateGdp = 32.3449 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = PRC
 		add_core_of = PRC
 		add_claim_by = CHI

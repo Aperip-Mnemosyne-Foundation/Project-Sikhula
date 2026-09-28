@@ -10,6 +10,14 @@ state={
 	}
 	
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 2.8984 }
+		set_variable = { psEcon_stateDev = 0.1719 }
+		set_variable = { psEcon_stateHappy = 0.3815 }
+		set_variable = { psEcon_stateGdp = 3.0895 }
+		set_variable = { psEcon_stateRural = 0.75 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = LBA
 		add_core_of = HRL
 		add_core_of = LBA

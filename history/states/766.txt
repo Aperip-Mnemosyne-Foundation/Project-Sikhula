@@ -3,6 +3,14 @@ state={
 	name="STATE_766"
 
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 2.4928 }
+		set_variable = { psEcon_stateDev = 0.1399 }
+		set_variable = { psEcon_stateHappy = 0.3643 }
+		set_variable = { psEcon_stateGdp = 8.7255 }
+		set_variable = { psEcon_stateRural = 0.85 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = NGA
 		add_core_of = NGA
 		victory_points = { 4997 6 }

@@ -5,6 +5,14 @@ state = {
 	state_category = city
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 24.92 }
+		set_variable = { psEcon_stateDev = 0.6977 }
+		set_variable = { psEcon_stateHappy = 0.6107 }
+		set_variable = { psEcon_stateGdp = 147.0356 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = FRA
 		add_core_of = FRA
 		victory_points = { 575 5 } #Dunkerque

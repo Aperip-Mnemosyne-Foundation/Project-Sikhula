@@ -7,6 +7,14 @@ state={
 	state_category = large_suburb
 	
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 5.4959 }
+		set_variable = { psEcon_stateDev = 0.3768 }
+		set_variable = { psEcon_stateHappy = 0.4919 }
+		set_variable = { psEcon_stateGdp = 16.0071 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = LBA
 		
 		victory_points = { 1149 15 }

@@ -2,6 +2,14 @@ state={
 	id=1002
 	name="STATE_1002"
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 27.1229 }
+		set_variable = { psEcon_stateDev = 0.6318 }
+		set_variable = { psEcon_stateHappy = 0.5703 }
+		set_variable = { psEcon_stateGdp = 6.9567 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = USA
 		add_core_of = USA
 		victory_points = { 13559 3 }#Owensboro

@@ -7,6 +7,14 @@ state={
 	provinces = { 13230 }
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 2.6383 }
+		set_variable = { psEcon_stateDev = 0.1513 }
+		set_variable = { psEcon_stateHappy = 0.3705 }
+		set_variable = { psEcon_stateGdp = 0.2216 }
+		set_variable = { psEcon_stateRural = 0.75 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = SPR
 		add_claim_by = SPR
 		add_core_of = MOR

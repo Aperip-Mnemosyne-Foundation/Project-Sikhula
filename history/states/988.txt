@@ -2,6 +2,14 @@ state={
 	id=988
 	name="STATE_988"
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 28.8073 }
+		set_variable = { psEcon_stateDev = 0.6797 }
+		set_variable = { psEcon_stateHappy = 0.5916 }
+		set_variable = { psEcon_stateGdp = 0.4677 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = USA
 		add_core_of = USA
 		add_core_of = NMX

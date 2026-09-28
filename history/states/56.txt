@@ -11,6 +11,14 @@ state = {
 	}
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 21.9359 }
+		set_variable = { psEcon_stateDev = 0.5756 }
+		set_variable = { psEcon_stateHappy = 0.5522 }
+		set_variable = { psEcon_stateGdp = 69.2838 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = GER
 		add_core_of = GER
 		victory_points = { 241 1 } #Wilhelmshaven

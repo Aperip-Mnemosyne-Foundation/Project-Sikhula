@@ -6,6 +6,14 @@ state={
 	state_category = town
 
 	history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 18.4124 }
+		set_variable = { psEcon_stateDev = 0.474 }
+		set_variable = { psEcon_stateHappy = 0.5065 }
+		set_variable = { psEcon_stateGdp = 1.6755 }
+		set_variable = { psEcon_stateRural = 0.35 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = ENG
 		buildings = {
 			infrastructure = 3

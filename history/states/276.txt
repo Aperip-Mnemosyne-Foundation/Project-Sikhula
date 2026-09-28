@@ -10,6 +10,14 @@ state = {
 	}
 	
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 30.7303 }
+		set_variable = { psEcon_stateDev = 0.822 }
+		set_variable = { psEcon_stateHappy = 0.662 }
+		set_variable = { psEcon_stateGdp = 425.7069 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = CAN
 		add_core_of = CAN
 		victory_points = { 722 3 }	#London

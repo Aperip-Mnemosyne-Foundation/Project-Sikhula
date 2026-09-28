@@ -2,6 +2,14 @@ state={
 	id=1025
 	name="STATE_1025"
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 29.6734 }
+		set_variable = { psEcon_stateDev = 0.7043 }
+		set_variable = { psEcon_stateHappy = 0.6026 }
+		set_variable = { psEcon_stateGdp = 16.9551 }
+		set_variable = { psEcon_stateRural = 0.22 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = USA
 		add_core_of = STC
 		add_core_of = USA

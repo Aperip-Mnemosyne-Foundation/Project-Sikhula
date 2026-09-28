@@ -2,6 +2,14 @@ state={
 	id=28
 	name="STATE_28"
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 22.8812 }
+		set_variable = { psEcon_stateDev = 0.6316 }
+		set_variable = { psEcon_stateHappy = 0.5802 }
+		set_variable = { psEcon_stateGdp = 53.7666 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = FRA
 		add_core_of = FRA
 		victory_points = { 11516 5 } #Nancy

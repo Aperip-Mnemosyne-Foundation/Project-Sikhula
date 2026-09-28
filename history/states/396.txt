@@ -6,6 +6,14 @@ state = {
 	state_category = large_town
 
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 29.8878 }
+		set_variable = { psEcon_stateDev = 0.7104 }
+		set_variable = { psEcon_stateHappy = 0.6053 }
+		set_variable = { psEcon_stateGdp = 84.2386 }
+		set_variable = { psEcon_stateRural = 0.22 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = USA
 		victory_points = { 870 1 } #Fort Wayne
 		victory_points = { 4437 1 } #Lafayette

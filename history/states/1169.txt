@@ -9,6 +9,14 @@
 		buildings_max_level_factor=1.000
 		state_category=wasteland
 		history={
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 3.2451 }
+		set_variable = { psEcon_stateDev = 0.1992 }
+		set_variable = { psEcon_stateHappy = 0.3963 }
+		set_variable = { psEcon_stateGdp = 0.0471 }
+		set_variable = { psEcon_stateRural = 0 }
+		set_variable = { psEcon_stateWaste = 1 }
+
 			owner = HRL
 			add_core_of = LBA
 			add_core_of = HRL

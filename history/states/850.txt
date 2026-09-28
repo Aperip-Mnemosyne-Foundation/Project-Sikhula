@@ -5,6 +5,14 @@ state={
 		11574 
 	}
 	history = {
+		# psEcon state seed. These stocks move with the land.
+		set_variable = { psEcon_stateGdpPc = 3.2031 }
+		set_variable = { psEcon_stateDev = 0.1959 }
+		set_variable = { psEcon_stateHappy = 0.3945 }
+		set_variable = { psEcon_stateGdp = 0.2979 }
+		set_variable = { psEcon_stateRural = 0.75 }
+		set_variable = { psEcon_stateWaste = 0 }
+
 		owner = BOS
 		add_core_of = BOS
 		add_core_of = SRP
