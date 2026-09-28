@@ -1,0 +1,112 @@
+# Daily law support. Events should call psLaw_bump* instead of editing the stock by hand.
+# A day moves support by about a ten-thousandth. A national event is allowed to move it by points.
+
+psLaw_driftDaily = {
+	if = {
+		limit = {
+			has_variable = psLaw_laborSupport
+			has_variable = psEcon_unemployment
+		}
+		# Kept jobs and a real welfare budget slowly make labor law easier to defend.
+		if = {
+			limit = {
+				check_variable = { psEcon_shareWel > 0.28 }
+				check_variable = { psEcon_unemployment < 0.08 }
+			}
+			add_to_variable = { psLaw_laborSupport = 0.00012 }
+		}
+		# A slack labor market raises the demand for protection and sours the taxman.
+		if = {
+			limit = { check_variable = { psEcon_unemployment > 0.10 } }
+			add_to_variable = { psLaw_laborSupport = 0.00010 }
+			add_to_variable = { psLaw_taxSupport = -0.00008 }
+		}
+		if = {
+			limit = { check_variable = { psEcon_growth < 0 } }
+			add_to_variable = { psLaw_taxSupport = -0.00010 }
+			add_to_variable = { psLaw_contractSupport = -0.00006 }
+		}
+		if = {
+			limit = { has_country_flag = psEcon_bursting }
+			add_to_variable = { psLaw_contractSupport = -0.00020 }
+			add_to_variable = { psLaw_taxSupport = -0.00008 }
+		}
+		if = {
+			limit = {
+				check_variable = { psEcon_growth > 0.015 }
+				check_variable = { psEcon_govStock > 0.60 }
+				check_variable = { psEcon_inflation < 0.06 }
+			}
+			add_to_variable = { psLaw_taxSupport = 0.00006 }
+			add_to_variable = { psLaw_contractSupport = 0.00004 }
+		}
+		# Thin reserves and a slump make protection, capital controls and state jobs easier to defend.
+		if = {
+			limit = { check_variable = { psEcon_forex < 1.5 } }
+			add_to_variable = { psLaw_tariffSupport = 0.00008 }
+			add_to_variable = { psLaw_capitalSupport = 0.00006 }
+		}
+		if = {
+			limit = { check_variable = { psEcon_inflation > 0.08 } }
+			add_to_variable = { psLaw_capitalSupport = 0.00010 }
+			add_to_variable = { psLaw_contractSupport = -0.00005 }
+		}
+		if = {
+			limit = { check_variable = { psEcon_growth < 0 } }
+			add_to_variable = { psLaw_soeSupport = 0.00008 }
+			add_to_variable = { psLaw_tariffSupport = 0.00006 }
+		}
+		# A fat reserve and a calm labor market slowly take that demand away.
+		if = {
+			limit = {
+				check_variable = { psEcon_unemployment < 0.06 }
+				check_variable = { psEcon_growth > 0.01 }
+				check_variable = { psEcon_forex > 3 }
+			}
+			add_to_variable = { psLaw_tariffSupport = -0.00005 }
+			add_to_variable = { psLaw_capitalSupport = -0.00004 }
+		}
+		clamp_variable = { var = psLaw_laborSupport min = 0.05 max = 0.95 }
+		clamp_variable = { var = psLaw_taxSupport min = 0.05 max = 0.95 }
+		clamp_variable = { var = psLaw_contractSupport min = 0.05 max = 0.95 }
+		clamp_variable = { var = psLaw_tariffSupport min = 0.05 max = 0.95 }
+		clamp_variable = { var = psLaw_capitalSupport min = 0.05 max = 0.95 }
+		clamp_variable = { var = psLaw_soeSupport min = 0.05 max = 0.95 }
+	}
+}
+
+# Event hook. Set psLaw_inputStep, then call this. Positive support makes the statute bite harder.
+psLaw_bumpTax = {
+	set_variable = { psLaw_inputLaw = 1 }
+	psLaw_shiftSupport = yes
+}
+
+# Event hook for labor-law support. Set psLaw_inputStep first.
+psLaw_bumpLabor = {
+	set_variable = { psLaw_inputLaw = 2 }
+	psLaw_shiftSupport = yes
+}
+
+# Event hook for tariff support. Set psLaw_inputStep first.
+psLaw_bumpTariff = {
+	set_variable = { psLaw_inputLaw = 3 }
+	psLaw_shiftSupport = yes
+}
+
+# Event hook for capital-control support. Set psLaw_inputStep first.
+psLaw_bumpCapital = {
+	set_variable = { psLaw_inputLaw = 4 }
+	psLaw_shiftSupport = yes
+}
+
+# Event hook for contract-law support. Set psLaw_inputStep first.
+psLaw_bumpContract = {
+	set_variable = { psLaw_inputLaw = 5 }
+	psLaw_shiftSupport = yes
+}
+
+# Event hook for state-firm privilege support. Set psLaw_inputStep first.
+psLaw_bumpSoe = {
+	set_variable = { psLaw_inputLaw = 6 }
+	psLaw_shiftSupport = yes
+}
