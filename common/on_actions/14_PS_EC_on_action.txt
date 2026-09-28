@@ -1,4 +1,4 @@
-# Economy clock. Startup fills missing stocks, and the books close monthly.
+# Economy clock. Startup fills missing stocks, support drifts daily, and the books close monthly.
 on_actions = {
 	on_startup = {
 		# Every state gets a stock, then every tag builds its books from history or the fallback.
@@ -12,8 +12,12 @@ on_actions = {
 		}
 	}
 	on_daily = {
-		# The player refreshes the old population readout. AI does that on the monthly tick.
+		# Law support moves by a fraction of a point. The player also refreshes the old population readout.
 		effect = {
+			if = {
+				limit = { has_country_flag = psEcon_ready }
+				psLaw_driftDaily = yes
+			}
 			if = {
 				limit = { is_ai = no }
 				EC_ccp = yes
