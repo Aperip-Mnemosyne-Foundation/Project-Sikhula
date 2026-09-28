@@ -1,268 +1,11 @@
-psEcon_applyProfile = {
-	# 1998 stocks are authored. Map buildings are not an income source.
+# Opening numbers live in history/countries and history/states.
+# This file only fills a tag that never received a history block, then the bookkeeping zeros.
+
+psEcon_fallbackCountry = {
 	if = {
-		limit = { original_tag = USA }
-		set_variable = { psEcon_income = 32.4 }
-		set_variable = { psEcon_taxRate = 0.3 }
-		set_variable = { psEcon_spendShare = 0.3 }
-		set_variable = { psEcon_monetaryStance = 0 }
-		set_variable = { psEcon_heavyBias = 0.22 }
-		set_variable = { psEcon_shareMil = 0.16 }
-		set_variable = { psEcon_shareEdu = 0.17 }
-		set_variable = { psEcon_shareWel = 0.32 }
-		set_variable = { psEcon_shareInv = 0.28 }
-		set_variable = { psEcon_shareEnv = 0.07 }
-		set_variable = { psEcon_privateCapital = 1.15 }
-		set_variable = { psEcon_publicCapital = 0.84 }
-		set_variable = { psEcon_education = 0.84 }
-		set_variable = { psEcon_environment = 0.64 }
-		set_variable = { psEcon_energy = 0.85 }
-		set_variable = { psEcon_debt = 0.62 }
-		set_variable = { psEcon_govStock = 0.78 }
-		set_variable = { psEcon_marketStock = 0.88 }
-		set_variable = { psEcon_inflation = 0.016 }
-		set_variable = { psEcon_friction = 0.004 }
-		set_variable = { psEcon_demandMood = 0.03 }
-		set_variable = { psEcon_tfp = 0.012 }
-		set_variable = { psEcon_balanceSheet = 0 }
-	}
-	else_if = {
-		limit = { original_tag = GER }
-		set_variable = { psEcon_income = 24.6 }
-		set_variable = { psEcon_taxRate = 0.42 }
-		set_variable = { psEcon_spendShare = 0.45 }
-		set_variable = { psEcon_monetaryStance = 0 }
-		set_variable = { psEcon_heavyBias = 0.3 }
-		set_variable = { psEcon_shareMil = 0.08 }
-		set_variable = { psEcon_shareEdu = 0.14 }
-		set_variable = { psEcon_shareWel = 0.44 }
-		set_variable = { psEcon_shareInv = 0.24 }
-		set_variable = { psEcon_shareEnv = 0.1 }
-		set_variable = { psEcon_privateCapital = 1.02 }
-		set_variable = { psEcon_publicCapital = 0.8 }
-		set_variable = { psEcon_education = 0.78 }
-		set_variable = { psEcon_environment = 0.72 }
-		set_variable = { psEcon_energy = 0.55 }
-		set_variable = { psEcon_debt = 0.58 }
-		set_variable = { psEcon_govStock = 0.76 }
-		set_variable = { psEcon_marketStock = 0.84 }
-		set_variable = { psEcon_inflation = 0.008 }
-		set_variable = { psEcon_friction = 0.045 }
-		set_variable = { psEcon_demandMood = 0 }
-		set_variable = { psEcon_tfp = 0 }
-		set_variable = { psEcon_balanceSheet = 0 }
-	}
-	else_if = {
-		limit = { original_tag = JAP }
-		set_variable = { psEcon_income = 25.2 }
-		set_variable = { psEcon_taxRate = 0.31 }
-		set_variable = { psEcon_spendShare = 0.36 }
-		set_variable = { psEcon_monetaryStance = 0 }
-		set_variable = { psEcon_heavyBias = 0.36 }
-		set_variable = { psEcon_shareMil = 0.06 }
-		set_variable = { psEcon_shareEdu = 0.12 }
-		set_variable = { psEcon_shareWel = 0.4 }
-		set_variable = { psEcon_shareInv = 0.34 }
-		set_variable = { psEcon_shareEnv = 0.08 }
-		set_variable = { psEcon_privateCapital = 1.08 }
-		set_variable = { psEcon_publicCapital = 0.72 }
-		set_variable = { psEcon_education = 0.86 }
-		set_variable = { psEcon_environment = 0.66 }
-		set_variable = { psEcon_energy = 0.32 }
-		set_variable = { psEcon_debt = 1.08 }
-		set_variable = { psEcon_govStock = 0.7 }
-		set_variable = { psEcon_marketStock = 0.72 }
-		set_variable = { psEcon_inflation = 0.006 }
-		set_variable = { psEcon_friction = 0.008 }
-		set_variable = { psEcon_demandMood = -0.025 }
-		set_variable = { psEcon_tfp = 0 }
-		set_variable = { psEcon_balanceSheet = 0.58 }
-	}
-	else_if = {
-		limit = { original_tag = PRC }
-		set_variable = { psEcon_income = 2.45 }
-		set_variable = { psEcon_taxRate = 0.18 }
-		set_variable = { psEcon_spendShare = 0.21 }
-		set_variable = { psEcon_monetaryStance = 0 }
-		set_variable = { psEcon_heavyBias = 0.55 }
-		set_variable = { psEcon_shareMil = 0.18 }
-		set_variable = { psEcon_shareEdu = 0.14 }
-		set_variable = { psEcon_shareWel = 0.16 }
-		set_variable = { psEcon_shareInv = 0.44 }
-		set_variable = { psEcon_shareEnv = 0.08 }
-		set_variable = { psEcon_privateCapital = 0.38 }
-		set_variable = { psEcon_publicCapital = 0.62 }
-		set_variable = { psEcon_education = 0.42 }
-		set_variable = { psEcon_environment = 0.46 }
-		set_variable = { psEcon_energy = 0.9 }
-		set_variable = { psEcon_debt = 0.2 }
-		set_variable = { psEcon_govStock = 0.66 }
-		set_variable = { psEcon_marketStock = 0.58 }
-		set_variable = { psEcon_inflation = 0.005 }
-		set_variable = { psEcon_friction = 0.012 }
-		set_variable = { psEcon_demandMood = 0.012 }
-		set_variable = { psEcon_tfp = 0 }
-		set_variable = { psEcon_balanceSheet = 0 }
-	}
-	else_if = {
-		limit = { original_tag = RAJ }
-		set_variable = { psEcon_income = 1.85 }
-		set_variable = { psEcon_taxRate = 0.16 }
-		set_variable = { psEcon_spendShare = 0.18 }
-		set_variable = { psEcon_monetaryStance = 0 }
-		set_variable = { psEcon_heavyBias = 0.32 }
-		set_variable = { psEcon_shareMil = 0.16 }
-		set_variable = { psEcon_shareEdu = 0.12 }
-		set_variable = { psEcon_shareWel = 0.18 }
-		set_variable = { psEcon_shareInv = 0.38 }
-		set_variable = { psEcon_shareEnv = 0.16 }
-		set_variable = { psEcon_privateCapital = 0.28 }
-		set_variable = { psEcon_publicCapital = 0.36 }
-		set_variable = { psEcon_education = 0.32 }
-		set_variable = { psEcon_environment = 0.42 }
-		set_variable = { psEcon_energy = 0.7 }
-		set_variable = { psEcon_debt = 0.28 }
-		set_variable = { psEcon_govStock = 0.5 }
-		set_variable = { psEcon_marketStock = 0.46 }
-		set_variable = { psEcon_inflation = 0.08 }
-		set_variable = { psEcon_friction = 0.018 }
-		set_variable = { psEcon_demandMood = 0.008 }
-		set_variable = { psEcon_tfp = 0 }
-		set_variable = { psEcon_balanceSheet = 0 }
-	}
-	else_if = {
-		limit = { original_tag = SOV }
-		set_variable = { psEcon_income = 6.4 }
-		set_variable = { psEcon_taxRate = 0.26 }
-		set_variable = { psEcon_spendShare = 0.32 }
-		set_variable = { psEcon_monetaryStance = 0 }
-		set_variable = { psEcon_heavyBias = 0.48 }
-		set_variable = { psEcon_shareMil = 0.22 }
-		set_variable = { psEcon_shareEdu = 0.08 }
-		set_variable = { psEcon_shareWel = 0.28 }
-		set_variable = { psEcon_shareInv = 0.32 }
-		set_variable = { psEcon_shareEnv = 0.1 }
-		set_variable = { psEcon_privateCapital = 0.48 }
-		set_variable = { psEcon_publicCapital = 0.46 }
-		set_variable = { psEcon_education = 0.68 }
-		set_variable = { psEcon_environment = 0.38 }
-		set_variable = { psEcon_energy = 2.1 }
-		set_variable = { psEcon_debt = 0.75 }
-		set_variable = { psEcon_govStock = 0.34 }
-		set_variable = { psEcon_marketStock = 0.28 }
-		set_variable = { psEcon_inflation = 0.27 }
-		set_variable = { psEcon_friction = 0.03 }
-		set_variable = { psEcon_demandMood = -0.075 }
-		set_variable = { psEcon_tfp = 0 }
-		set_variable = { psEcon_balanceSheet = 0 }
-	}
-	else_if = {
-		limit = { original_tag = ENG }
-		set_variable = { psEcon_income = 23.8 }
-		set_variable = { psEcon_taxRate = 0.35 }
-		set_variable = { psEcon_spendShare = 0.39 }
-		set_variable = { psEcon_monetaryStance = 0 }
-		set_variable = { psEcon_heavyBias = 0.24 }
-		set_variable = { psEcon_shareMil = 0.12 }
-		set_variable = { psEcon_shareEdu = 0.15 }
-		set_variable = { psEcon_shareWel = 0.36 }
-		set_variable = { psEcon_shareInv = 0.28 }
-		set_variable = { psEcon_shareEnv = 0.09 }
-		set_variable = { psEcon_privateCapital = 1.0 }
-		set_variable = { psEcon_publicCapital = 0.78 }
-		set_variable = { psEcon_education = 0.78 }
-		set_variable = { psEcon_environment = 0.66 }
-		set_variable = { psEcon_energy = 0.95 }
-		set_variable = { psEcon_debt = 0.48 }
-		set_variable = { psEcon_govStock = 0.74 }
-		set_variable = { psEcon_marketStock = 0.82 }
-		set_variable = { psEcon_inflation = 0.018 }
-		set_variable = { psEcon_friction = 0.015 }
-		set_variable = { psEcon_demandMood = 0.01 }
-		set_variable = { psEcon_tfp = 0.004 }
-		set_variable = { psEcon_balanceSheet = 0 }
-	}
-	else_if = {
-		limit = { original_tag = FRA }
-		set_variable = { psEcon_income = 22.8 }
-		set_variable = { psEcon_taxRate = 0.44 }
-		set_variable = { psEcon_spendShare = 0.5 }
-		set_variable = { psEcon_monetaryStance = 0 }
-		set_variable = { psEcon_heavyBias = 0.26 }
-		set_variable = { psEcon_shareMil = 0.1 }
-		set_variable = { psEcon_shareEdu = 0.15 }
-		set_variable = { psEcon_shareWel = 0.42 }
-		set_variable = { psEcon_shareInv = 0.22 }
-		set_variable = { psEcon_shareEnv = 0.11 }
-		set_variable = { psEcon_privateCapital = 0.98 }
-		set_variable = { psEcon_publicCapital = 0.8 }
-		set_variable = { psEcon_education = 0.76 }
-		set_variable = { psEcon_environment = 0.68 }
-		set_variable = { psEcon_energy = 0.4 }
-		set_variable = { psEcon_debt = 0.62 }
-		set_variable = { psEcon_govStock = 0.7 }
-		set_variable = { psEcon_marketStock = 0.78 }
-		set_variable = { psEcon_inflation = 0.008 }
-		set_variable = { psEcon_friction = 0.04 }
-		set_variable = { psEcon_demandMood = 0 }
-		set_variable = { psEcon_tfp = 0.002 }
-		set_variable = { psEcon_balanceSheet = 0 }
-	}
-	else_if = {
-		limit = { original_tag = ITA }
-		set_variable = { psEcon_income = 21.4 }
-		set_variable = { psEcon_taxRate = 0.42 }
-		set_variable = { psEcon_spendShare = 0.48 }
-		set_variable = { psEcon_monetaryStance = 0 }
-		set_variable = { psEcon_heavyBias = 0.3 }
-		set_variable = { psEcon_shareMil = 0.1 }
-		set_variable = { psEcon_shareEdu = 0.12 }
-		set_variable = { psEcon_shareWel = 0.4 }
-		set_variable = { psEcon_shareInv = 0.26 }
-		set_variable = { psEcon_shareEnv = 0.12 }
-		set_variable = { psEcon_privateCapital = 0.92 }
-		set_variable = { psEcon_publicCapital = 0.7 }
-		set_variable = { psEcon_education = 0.7 }
-		set_variable = { psEcon_environment = 0.6 }
-		set_variable = { psEcon_energy = 0.35 }
-		set_variable = { psEcon_debt = 1.1 }
-		set_variable = { psEcon_govStock = 0.62 }
-		set_variable = { psEcon_marketStock = 0.7 }
-		set_variable = { psEcon_inflation = 0.02 }
-		set_variable = { psEcon_friction = 0.035 }
-		set_variable = { psEcon_demandMood = -0.005 }
-		set_variable = { psEcon_tfp = 0 }
-		set_variable = { psEcon_balanceSheet = 0 }
-	}
-	else_if = {
-		limit = { original_tag = CAN }
-		set_variable = { psEcon_income = 26.5 }
-		set_variable = { psEcon_taxRate = 0.36 }
-		set_variable = { psEcon_spendShare = 0.4 }
-		set_variable = { psEcon_monetaryStance = 0 }
-		set_variable = { psEcon_heavyBias = 0.28 }
-		set_variable = { psEcon_shareMil = 0.08 }
-		set_variable = { psEcon_shareEdu = 0.16 }
-		set_variable = { psEcon_shareWel = 0.34 }
-		set_variable = { psEcon_shareInv = 0.32 }
-		set_variable = { psEcon_shareEnv = 0.1 }
-		set_variable = { psEcon_privateCapital = 1.05 }
-		set_variable = { psEcon_publicCapital = 0.76 }
-		set_variable = { psEcon_education = 0.82 }
-		set_variable = { psEcon_environment = 0.7 }
-		set_variable = { psEcon_energy = 1.5 }
-		set_variable = { psEcon_debt = 0.9 }
-		set_variable = { psEcon_govStock = 0.76 }
-		set_variable = { psEcon_marketStock = 0.84 }
-		set_variable = { psEcon_inflation = 0.012 }
-		set_variable = { psEcon_friction = 0.012 }
-		set_variable = { psEcon_demandMood = 0.01 }
-		set_variable = { psEcon_tfp = 0.004 }
-		set_variable = { psEcon_balanceSheet = 0 }
-	}
-	else = {
+		limit = { NOT = { has_variable = psEcon_taxRate } }
 		set_variable = { psEcon_income = 4.8 }
-		set_variable = { psEcon_taxRate = 0.2 }
+		set_variable = { psEcon_taxRate = 0.20 }
 		set_variable = { psEcon_spendShare = 0.22 }
 		set_variable = { psEcon_monetaryStance = 0 }
 		set_variable = { psEcon_heavyBias = 0.28 }
@@ -272,8 +15,8 @@ psEcon_applyProfile = {
 		set_variable = { psEcon_shareInv = 0.36 }
 		set_variable = { psEcon_shareEnv = 0.14 }
 		set_variable = { psEcon_privateCapital = 0.42 }
-		set_variable = { psEcon_publicCapital = 0.4 }
-		set_variable = { psEcon_education = 0.4 }
+		set_variable = { psEcon_publicCapital = 0.40 }
+		set_variable = { psEcon_education = 0.40 }
 		set_variable = { psEcon_environment = 0.46 }
 		set_variable = { psEcon_energy = 0.45 }
 		set_variable = { psEcon_debt = 0.45 }
@@ -284,156 +27,158 @@ psEcon_applyProfile = {
 		set_variable = { psEcon_demandMood = 0 }
 		set_variable = { psEcon_tfp = 0 }
 		set_variable = { psEcon_balanceSheet = 0 }
+		set_variable = { psEcon_taxNeutral = 0.20 }
+		set_variable = { psEcon_spendNeutral = 0.22 }
+		set_variable = { psEcon_bubble = 0.10 }
+		set_variable = { psEcon_treasury = 0.02 }
+		set_variable = { psEcon_forex = 2 }
+		set_variable = { psEcon_fxPrivilege = 0 }
+		set_variable = { psEcon_money = 1 }
+		set_variable = { psEcon_tradeOpen = 0.60 }
 	}
-	set_variable = { psEcon_taxNeutral = psEcon_taxRate }
-	set_variable = { psEcon_spendNeutral = psEcon_spendShare }
-	set_variable = { psEcon_priceLevel = 1 }
-	set_variable = { psEcon_unemployment = 0.05 }
-	set_variable = { psEcon_growthFast = 0.02 }
-	set_variable = { psEcon_growthSlow = 0.02 }
-	set_variable = { psEcon_momentum = 0 }
-	set_variable = { psEcon_volatility = 0.004 }
-	set_variable = { psEcon_inflationSlow = psEcon_inflation }
-	set_variable = { psEcon_policyNoise = 0 }
-	set_variable = { psEcon_heat = 0 }
-	set_variable = { psEcon_stability = 0.8 }
-	set_variable = { psEcon_therapyLeft = 0 }
-	set_variable = { psEcon_therapyElapsed = 0 }
-	set_variable = { psEcon_shockFood = 0 }
-	set_variable = { psEcon_shockOil = 0 }
-	set_variable = { psEcon_shockDemand = 0 }
-	set_variable = { psEcon_shockInflation = 0 }
-	set_variable = { psEcon_foodRelief = 0 }
-	set_variable = { psEcon_taxPrev = psEcon_taxRate }
-	set_variable = { psEcon_spendPrev = psEcon_spendShare }
-	set_variable = { psEcon_stancePrev = psEcon_monetaryStance }
-	psEcon_seedLedger = yes
-	clr_country_flag = psEcon_bursting
 }
 
-psEcon_seedLedger = {
-	# 1998 stocks. Bubble and privilege are not player levers.
-	set_variable = { psEcon_bubble = 0.10 }
-	set_variable = { psEcon_cover = 1 }
-	set_variable = { psEcon_money = 1 }
-	set_variable = { psEcon_assets = 1 }
-	set_variable = { psEcon_moneyGap = 0 }
-	set_variable = { psEcon_treasury = 0.02 }
-	set_variable = { psEcon_forex = 2 }
-	set_variable = { psEcon_fxPrivilege = 0 }
-	set_variable = { psEcon_fxAccess = 1 }
-	set_variable = { psEcon_tradeOpen = 0.60 }
-	set_variable = { psEcon_tradeUsed = 0.60 }
-	set_variable = { psEcon_taxEnforce = 0.85 }
-	set_variable = { psEcon_laborBite = 0.40 }
-	set_variable = { psEcon_tradeLevy = 0.06 }
-	set_variable = { psEcon_capitalSeal = 0.30 }
-	set_variable = { psEcon_contractTrust = 0.40 }
-	set_variable = { psEcon_soePrivilege = 0.25 }
-	set_variable = { psEcon_projectLeft = 0 }
-	set_variable = { psEcon_projectFlow = 0 }
-	set_variable = { psEcon_projectKind = 0 }
-	set_variable = { psEcon_projectLive = 0 }
-	set_variable = { psEcon_projectDue = 0 }
-	set_variable = { psEcon_coupon = 0 }
-	set_variable = { psEcon_couponMonth = 0 }
-	set_variable = { psEcon_taxMonth = 0 }
-	set_variable = { psEcon_billMonth = 0 }
-	set_variable = { psEcon_borrowMonth = 0 }
-	set_variable = { psEcon_printMonth = 0 }
-	set_variable = { psEcon_fxEarn = 0 }
-	set_variable = { psEcon_fxSpend = 0 }
-	set_variable = { psEcon_spendQuote = psEcon_spendShare }
+# Bookkeeping history does not have to repeat. A value that already exists is left alone.
+psEcon_ensureRuntime = {
 	if = {
-		limit = { original_tag = USA }
-		set_variable = { psEcon_bubble = 0.32 }
-		set_variable = { psEcon_tradeOpen = 0.85 }
-		set_variable = { psEcon_treasury = 0.045 }
-		set_variable = { psEcon_forex = 4 }
-		set_variable = { psEcon_fxPrivilege = 0.48 }
-		set_variable = { psEcon_money = 1.02 }
+		limit = { NOT = { has_variable = psEcon_taxNeutral } }
+		set_variable = { psEcon_taxNeutral = psEcon_taxRate }
 	}
-	else_if = {
-		limit = { original_tag = GER }
-		set_variable = { psEcon_bubble = 0.08 }
-		set_variable = { psEcon_tradeOpen = 0.85 }
-		set_variable = { psEcon_treasury = 0.030 }
-		set_variable = { psEcon_forex = 3.2 }
-		set_variable = { psEcon_fxPrivilege = 0.55 }
-		set_variable = { psEcon_money = 1 }
+	if = {
+		limit = { NOT = { has_variable = psEcon_spendNeutral } }
+		set_variable = { psEcon_spendNeutral = psEcon_spendShare }
 	}
-	else_if = {
-		limit = { original_tag = JAP }
-		set_variable = { psEcon_bubble = 0.04 }
-		set_variable = { psEcon_tradeOpen = 0.85 }
-		set_variable = { psEcon_treasury = 0.050 }
-		set_variable = { psEcon_forex = 8 }
-		set_variable = { psEcon_fxPrivilege = 0.40 }
-		set_variable = { psEcon_money = 0.96 }
+	if = {
+		limit = { NOT = { has_variable = psEcon_priceLevel } }
+		set_variable = { psEcon_priceLevel = 1 }
 	}
-	else_if = {
-		limit = { original_tag = PRC }
-		set_variable = { psEcon_bubble = 0.06 }
-		set_variable = { psEcon_tradeOpen = 0.75 }
-		set_variable = { psEcon_treasury = 0.035 }
-		set_variable = { psEcon_forex = 4.5 }
-		set_variable = { psEcon_fxPrivilege = 0.10 }
-		set_variable = { psEcon_money = 1.05 }
+	if = {
+		limit = { NOT = { has_variable = psEcon_unemployment } }
+		set_variable = { psEcon_unemployment = 0.05 }
 	}
-	else_if = {
-		limit = { original_tag = RAJ }
-		set_variable = { psEcon_bubble = 0.07 }
-		set_variable = { psEcon_tradeOpen = 0.62 }
-		set_variable = { psEcon_treasury = 0.020 }
-		set_variable = { psEcon_forex = 2.4 }
-		set_variable = { psEcon_fxPrivilege = 0.05 }
-		set_variable = { psEcon_money = 1.08 }
+	if = {
+		limit = { NOT = { has_variable = psEcon_growthFast } }
+		set_variable = { psEcon_growthFast = 0.02 }
 	}
-	else_if = {
-		limit = { original_tag = SOV }
-		set_variable = { psEcon_bubble = 0.44 }
-		set_variable = { psEcon_tradeOpen = 0.55 }
-		set_variable = { psEcon_treasury = 0.012 }
-		set_variable = { psEcon_forex = 1.1 }
-		set_variable = { psEcon_fxPrivilege = 0 }
-		set_variable = { psEcon_money = 1.12 }
+	if = {
+		limit = { NOT = { has_variable = psEcon_growthSlow } }
+		set_variable = { psEcon_growthSlow = 0.02 }
 	}
-	else_if = {
-		limit = { original_tag = ENG }
-		set_variable = { psEcon_bubble = 0.14 }
-		set_variable = { psEcon_tradeOpen = 0.80 }
-		set_variable = { psEcon_treasury = 0.025 }
-		set_variable = { psEcon_forex = 2 }
-		set_variable = { psEcon_fxPrivilege = 0.30 }
+	if = {
+		limit = { NOT = { has_variable = psEcon_momentum } }
+		set_variable = { psEcon_momentum = 0 }
 	}
-	else_if = {
-		limit = { original_tag = FRA }
-		set_variable = { psEcon_bubble = 0.09 }
-		set_variable = { psEcon_tradeOpen = 0.78 }
-		set_variable = { psEcon_treasury = 0.022 }
-		set_variable = { psEcon_forex = 1.8 }
-		set_variable = { psEcon_fxPrivilege = 0.20 }
-		set_variable = { psEcon_money = 1.02 }
+	if = {
+		limit = { NOT = { has_variable = psEcon_volatility } }
+		set_variable = { psEcon_volatility = 0.004 }
 	}
-	else_if = {
-		limit = { original_tag = ITA }
-		set_variable = { psEcon_bubble = 0.11 }
-		set_variable = { psEcon_tradeOpen = 0.74 }
-		set_variable = { psEcon_treasury = 0.018 }
-		set_variable = { psEcon_forex = 1.5 }
-		set_variable = { psEcon_fxPrivilege = 0.10 }
-		set_variable = { psEcon_money = 1.04 }
+	if = {
+		limit = { NOT = { has_variable = psEcon_inflationSlow } }
+		set_variable = { psEcon_inflationSlow = psEcon_inflation }
 	}
-	else_if = {
-		limit = { original_tag = CAN }
-		set_variable = { psEcon_bubble = 0.12 }
-		set_variable = { psEcon_tradeOpen = 0.86 }
-		set_variable = { psEcon_treasury = 0.028 }
-		set_variable = { psEcon_forex = 1.6 }
-		set_variable = { psEcon_fxPrivilege = 0.50 }
+	if = {
+		limit = { NOT = { has_variable = psEcon_policyNoise } }
+		set_variable = { psEcon_policyNoise = 0 }
 	}
-	set_variable = { psEcon_tradeUsed = psEcon_tradeOpen }
-	psLaw_seed = yes
-	psInd_seed = yes
+	if = {
+		limit = { NOT = { has_variable = psEcon_heat } }
+		set_variable = { psEcon_heat = 0 }
+	}
+	if = {
+		limit = { NOT = { has_variable = psEcon_stability } }
+		set_variable = { psEcon_stability = 0.8 }
+	}
+	if = {
+		limit = { NOT = { has_variable = psEcon_therapyLeft } }
+		set_variable = { psEcon_therapyLeft = 0 }
+	}
+	if = {
+		limit = { NOT = { has_variable = psEcon_therapyElapsed } }
+		set_variable = { psEcon_therapyElapsed = 0 }
+	}
+	if = {
+		limit = { NOT = { has_variable = psEcon_shockFood } }
+		set_variable = { psEcon_shockFood = 0 }
+	}
+	if = {
+		limit = { NOT = { has_variable = psEcon_shockOil } }
+		set_variable = { psEcon_shockOil = 0 }
+	}
+	if = {
+		limit = { NOT = { has_variable = psEcon_shockDemand } }
+		set_variable = { psEcon_shockDemand = 0 }
+	}
+	if = {
+		limit = { NOT = { has_variable = psEcon_shockInflation } }
+		set_variable = { psEcon_shockInflation = 0 }
+	}
+	if = {
+		limit = { NOT = { has_variable = psEcon_foodRelief } }
+		set_variable = { psEcon_foodRelief = 0 }
+	}
+	if = {
+		limit = { NOT = { has_variable = psEcon_taxPrev } }
+		set_variable = { psEcon_taxPrev = psEcon_taxRate }
+	}
+	if = {
+		limit = { NOT = { has_variable = psEcon_spendPrev } }
+		set_variable = { psEcon_spendPrev = psEcon_spendShare }
+	}
+	if = {
+		limit = { NOT = { has_variable = psEcon_stancePrev } }
+		set_variable = { psEcon_stancePrev = psEcon_monetaryStance }
+	}
+	if = {
+		limit = { NOT = { has_variable = psEcon_cover } }
+		set_variable = { psEcon_cover = 1 }
+	}
+	if = {
+		limit = { NOT = { has_variable = psEcon_assets } }
+		set_variable = { psEcon_assets = 1 }
+	}
+	if = {
+		limit = { NOT = { has_variable = psEcon_moneyGap } }
+		set_variable = { psEcon_moneyGap = 0 }
+	}
+	if = {
+		limit = { NOT = { has_variable = psEcon_tradeUsed } }
+		set_variable = { psEcon_tradeUsed = psEcon_tradeOpen }
+	}
+	if = {
+		limit = { NOT = { has_variable = psEcon_projectLeft } }
+		set_variable = { psEcon_projectLeft = 0 }
+	}
+	if = {
+		limit = { NOT = { has_variable = psEcon_projectFlow } }
+		set_variable = { psEcon_projectFlow = 0 }
+	}
+	if = {
+		limit = { NOT = { has_variable = psEcon_projectKind } }
+		set_variable = { psEcon_projectKind = 0 }
+	}
+	if = {
+		limit = { NOT = { has_variable = psEcon_projectLive } }
+		set_variable = { psEcon_projectLive = 0 }
+	}
+	if = {
+		limit = { NOT = { has_variable = psEcon_coupon } }
+		set_variable = { psEcon_coupon = 0 }
+	}
+	if = {
+		limit = { NOT = { has_variable = psEcon_stateDevAvg } }
+		set_variable = { psEcon_stateDevAvg = 0.45 }
+	}
+	if = {
+		limit = { NOT = { has_variable = psEcon_stateHappyAvg } }
+		set_variable = { psEcon_stateHappyAvg = 0.50 }
+	}
+}
+
+# History first, then the generic fallback, then a locked copy of the levers.
+psEcon_applyProfile = {
+	psEcon_fallbackCountry = yes
+	psLaw_fallback = yes
+	psInd_fallback = yes
+	psEcon_ensureRuntime = yes
 	psEcon_lockBudget = yes
 }
